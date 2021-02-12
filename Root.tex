@@ -13,7 +13,7 @@
 	\author{Russo Alessandro, Antonelli Tommaso, Berselli Gregorio}
     \maketitle
 \begin{abstract}
-    Le notazioni utilizzate in questo schema sono $\vec{x}$ per rappresntare un generico array x, dim indica sempre una dimensione, xCode indica un codice di root inerente a x, opt indice sempre la stringa di caratteri che ROOT interpreta come opzioni.
+    Le notazioni utilizzate in questo schema sono $\vec{x}$ per rappresntare un generico array x, dim indica sempre una dimensione, xCode indica un codice di root inerente a x, opt indica sempre la stringa di caratteri che ROOT interpreta come opzioni, i indica un indice (o una quantità indicizzabile), n indica sempre un intero.
 \end{abstract}
 \section{Istogrammi}
     \colorbox{LightGray}{TH1F(”name",”Title”, nBins, xmin, xmax)} Dichiarazione di un istogramma 1D
@@ -84,7 +84,8 @@
         \item \colorbox{LightGray}{SetFillColor(colorCode)}
     \end{itemize}
 \section{Funzioni}
-    \colorbox{LightGray}{TF1("name", "function“, xmin, xmax)} nella funzione i parametri vanno indicati con [i]\\
+    \colorbox{LightGray}{TF1("name", "function", xmin, xmax)} nella funzione i parametri vanno indicati con [i]\\
+    NB: per funzioni definite a tratti "function" = "F*(rangeF) + G*(rangeG)* ..."
     Metodi:
     \begin{itemize}
         \item \colorbox{LightGray}{Draw()}
@@ -115,8 +116,10 @@
         \item \colorbox{LightGray}{GetNDF()}
         \item \colorbox{LightGray}{GetParameter(i)} valore del parametro i-esimo
         \item \colorbox{LightGray}{GetParError(i)}
-        \item \colorbox{LightGray}{GetParameters(par)} mette nell'array par i parametri
-        \item \colorbox{LightGray}{GetParErrors(epar)}
+        \item \colorbox{LightGray}{GetParameters($\vec{par}$)} mette in $\vec{par}$ i parametri
+        \item \colorbox{LightGray}{GetParErrors($\vec{epar}$)}
+        \item \colorbox{LightGray}{GetCorrelationMatrix()} stampabile tramite Print()
+        \item \colorbox{LightGray}{GetCovarianceMatrix()} stampabile tramite Print()
     \end{itemize}
 \section{Random}
     \colorbox{LightGray}{gRandom->SetSeed()} per inizializzare la generazione
@@ -131,7 +134,7 @@
         \item \colorbox{LightGray}{Integer(i)} uniforme intera in [0, i-1]
         \item \colorbox{LightGray}{Landau(moda, $\sigma$)}
         \item \colorbox{LightGray}{f1->GetRandom()} genera un valore casuale dalla funzione f1
-        \item \colorbox{LightGray}{FillRandom("function", n)} filla l'oggetto con n elementi della function 
+        \item \colorbox{LightGray}{FillRandom("name", n)} filla l'oggetto con n elementi della funzione "name"
     \end{itemize}
 \section{Canvas}
     \colorbox{LightGray}{TCanvas("name", "title", "width", "height")}
@@ -142,7 +145,7 @@
         \item \colorbox{LightGray}{Print("name.extension")} stampa la canvas su file
     \end{itemize}
     Legenda:
-    \colorbox{LightGray}{TLegend(x1, y1, x2, y2,“name”)}
+    \colorbox{LightGray}{TLegend(x1, y1, x2, y2,"name")}
     Metodi:
     \begin{itemize}
         \item \colorbox{LightGray}{SetFillColor(n)}
@@ -213,11 +216,15 @@
     \subsection{Risoluzione o Smearing}
         \subsubsection{A valore fisso}
         \begin{verbatim}
-            for(Int_t i=0;i<nGen;i++)h[0]->Fill(gRandom->Gaus(fixedValue,res));
+            for(Int_t i=0;i<nGen;i++){
+                h[0]->Fill(gRandom->Gaus(fixedValue, res));
+            }
         \end{verbatim}
         \subsubsection{Con una distribuzione}
         \begin{verbatim}
-            for(Int_t i=0;i<nGen;i++)h[1]->Fill(gRandom->Gaus(distribution,res));
+            for(Int_t i=0;i<nGen;i++){
+                h[1]->Fill(gRandom->Gaus(distribution, res));
+            }
         \end{verbatim}
     \subsection{Efficienza}
         \subsubsection{Costante}
@@ -228,13 +235,15 @@
             if(y<0.7){h1->Fill(x)}
         \end{verbatim}
         \subsubsection{Variabile}
-        Si utilizza la funzione con il quale varia e il metodo Eval(x)
-        Es:
+        Si utilizza la funzione con il quale varia e il metodo Eval(x)\\
+        Es:\\
         \begin{verbatim}
-            TF1 *eff=new TF1(“eff”, funzione, min, max);  [Es: funzione=0.2*x]
+            TF1 *eff = new TF1(“eff”, "function", min, max);
             x=gRandom->Gaus(mean, sigma);\\
             y=gRandom->Rndm();\\
-            if(y<eff->Eval(x)){h1->Fill(x)}
+            if(y < eff->Eval(x)) {
+                h1->Fill(x)
+            }
         \end{verbatim}
         \subsubsection{Istogramma dell'efficienza}
         \begin{verbatim}
