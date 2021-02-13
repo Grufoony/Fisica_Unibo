@@ -60,10 +60,10 @@
         \item \colorbox{LightGray}{Add(const *h1, const *h2, c1, c2, "opt")} esegue la somma c1*h1+c2*h2
     \end{itemize}
 \section{Grafici}
-    \colorbox{LightGray}{TGraph (npoints, $\vec{x}$, $\vec{y}$)}\\
-    \colorbox{LightGray}{TGraph (filename,*format="\%lg \%lg", "opt")} da file\\
-    \colorbox{LightGray}{TGraphErrors (n, x, y, ex, ey)} grafico con barre errore\\
-    \colorbox{LightGray}{TGraphErrors (filename, format="\%lg \%lg \%lg \%lg", "opt")}\\
+    \colorbox{LightGray}{TGraph(npoints, $\vec{x}$, $\vec{y}$)}\\
+    \colorbox{LightGray}{TGraph(filename,*format="\%lg \%lg", "opt")} da file\\
+    \colorbox{LightGray}{TGraphErrors(n, x, y, ex, ey)} grafico con barre errore\\
+    \colorbox{LightGray}{TGraphErrors(filename, format="\%lg \%lg \%lg \%lg", "opt")}\\
     Metodi:
     \begin{itemize}
         \item \colorbox{LightGray}{Draw("opt")} metodo per disegnare (A-disegna gli assi, P-disegna il marker dei punti, E-disegna barre errore)
@@ -85,14 +85,17 @@
     \end{itemize}
 \section{Funzioni}
     \colorbox{LightGray}{TF1("name", "function", xmin, xmax)} nella funzione i parametri vanno indicati con [i]\\
-    NB: per funzioni definite a tratti "function" = "F*(rangeF) + G*(rangeG)* ..."
+    NB: per funzioni definite a tratti, siano f(x) e g(x) funzioni generiche
+    \begin{verbatim}
+        "function" = "f(x)*(x>=a && x<b) + g(x)*(x>=b && x<c) + ..."
+    \end{verbatim}
     Metodi:
     \begin{itemize}
         \item \colorbox{LightGray}{Draw()}
         \item \colorbox{LightGray}{SetParameter(i,value)} setta il valore value al parametro iesimo
         \item \colorbox{LightGray}{SetParameters(value1, value2, ..., valuen)} setta il valore value i al parametro i
         \item \colorbox{LightGray}{SetParLimits(i, xmin, xmax)} definisce il range del parametro i
-        \item \colorbox{LightGray}{Eval (x)} ti da f(x)
+        \item \colorbox{LightGray}{Eval(x)} ti da f(x)
         \item \colorbox{LightGray}{Integral(a, b)} integrale della funzione nel range [a,b]
         \item \colorbox{LightGray}{DrawDerivative()} grafica la derivata prima
         \item \colorbox{LightGray}{DrawIntegral()} grafica l’integrale
