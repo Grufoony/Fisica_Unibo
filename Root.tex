@@ -1,0 +1,268 @@
+  
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{LightGray}{gray}{0.85}
+
+\begin{document}
+	\title{Guida esame ROOT}
+	\author{Russo Alessandro, Antonelli Tommaso, Berselli Gregorio}
+    \maketitle
+\begin{abstract}
+    Le notazioni utilizzate in questo schema sono $\vec{x}$ per rappresntare un generico array x, dim indica sempre una dimensione, xCode indica un codice di root inerente a x, opt indica sempre la stringa di caratteri che ROOT interpreta come opzioni, i indica un indice (o una quantità indicizzabile), n indica sempre un intero.
+\end{abstract}
+\section{Istogrammi}
+    \colorbox{LightGray}{TH1F(”name",”Title”, nBins, xmin, xmax)} Dichiarazione di un istogramma 1D
+    Metodi utili:
+    \begin{itemize}
+        \item \colorbox{LightGray}{Fill(x)} o \colorbox{LightGray}{Fill(x,noccorrenze)} fill del bin x 
+        \item \colorbox{LightGray}{Draw("opt")} per disegnare il grafico (E-barre errore, P-solo punti, SAME-sul grafico precedente)
+        \item \colorbox{LightGray}{GetMean()}
+        \item \colorbox{LightGray}{GetMeanError()}
+        \item \colorbox{LightGray}{GetRMS()} radice della varianza
+        \item \colorbox{LightGray}{GetRMSError()}
+        \item \colorbox{LightGray}{GetMaximum()} o \colorbox{LightGray}{GetMinimum()}
+        \item \colorbox{LightGray}{GetEntries()} numero di ingressi inseriti
+        \item \colorbox{LightGray}{Integral()} come GetEntries ma non tiene conto dei pesi assegnati
+        \item \colorbox{LightGray}{Integral(bin1, bin2)} integrale tra bin1 e bin2
+        \item \colorbox{LightGray}{GetIntegral()} l'array dei conteggi cumulativi
+        \item \colorbox{LightGray}{Sumw2()} imposta la somma in quadratura degli errori
+    \end{itemize}
+    Metodi dei bin:
+    \begin{itemize}
+        \item \colorbox{LightGray}{GetMaximumBin()} indice del bin contenente il valore massimo
+        \item \colorbox{LightGray}{GetBinCenter(ibin)} centro del bin
+        \item \colorbox{LightGray}{GetBinContent(ibin)} numero di elementi contenuti nel bin
+        \item \colorbox{LightGray}{GetBinContent(0)} numero di UNDERFLOW
+        \item \colorbox{LightGray}{GetBinContent(nbin+1)} numero di OVERFLOW
+        \item \colorbox{LightGray}{GetBinError(ibin)}
+        \item \colorbox{LightGray}{SetBinContent(ibin, val)} in y prende il valore val
+    \end{itemize}
+    Estetica:
+    \begin{itemize}
+        \item \colorbox{LightGray}{SetMarkerStyle(markerCode)}
+        \item \colorbox{LightGray}{SetMarkerSize(dim)} setta la dimensione del marker a dim
+        \item \colorbox{LightGray}{SetFillColor(colorCode)}
+        \item \colorbox{LightGray}{SetLineColor(colorCode)}
+        \item \colorbox{LightGray}{GetXaxis()->SetTitle("name")} setta il titolo dell'asse x (analogo per y)
+        \item \colorbox{LightGray}{GetYaxis()->SetTitleOffset(dim)} offset del titolo
+        \item \colorbox{LightGray}{GetYaxis()->SetTitleSize(dim)} dimensione carattere titolo
+        \item \colorbox{LightGray}{SetLineWidth(dim)} spessore linea
+    \end{itemize}
+    Operazioni (sia h1 un istogramma):
+    \begin{itemize}
+        \item \colorbox{LightGray}{n*h1} prodotto per lo scalare n
+        \item \colorbox{LightGray}{Divide(const *h1, const *h2, c1, c2, "opt")} esegue la divisione (c1*h1)/(c2*h2)
+        \item \colorbox{LightGray}{Add(const *h1, const *h2, c1, c2, "opt")} esegue la somma c1*h1+c2*h2
+    \end{itemize}
+\section{Grafici}
+    \colorbox{LightGray}{TGraph(npoints, $\vec{x}$, $\vec{y}$)}\\
+    \colorbox{LightGray}{TGraph(filename,*format="\%lg \%lg", "opt")} da file\\
+    \colorbox{LightGray}{TGraphErrors(n, x, y, ex, ey)} grafico con barre errore\\
+    \colorbox{LightGray}{TGraphErrors(filename, format="\%lg \%lg \%lg \%lg", "opt")}\\
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{Draw("opt")} metodo per disegnare (A-disegna gli assi, P-disegna il marker dei punti, E-disegna barre errore)
+        \item \colorbox{LightGray}{SetPoint(i, x, y)} inserisce il punto (x,y) nella posizione i
+        \item \colorbox{LightGray}{GetPoint(i, x, y)} assegna alle variabili (x,y) i valori del punto i
+        \item \colorbox{LightGray}{GetX()} returna $\vec{x}$ (analogo per y)
+        \item \colorbox{LightGray}{GetN()} returna il numero dei punti
+        \item \colorbox{LightGray}{Integral()} returna l'area sotto il grafico
+        \item \colorbox{LightGray}{GetCorrelationFactor()}
+        \item \colorbox{LightGray}{GetCovariance()}
+    \end{itemize}
+    Estetica:
+    \begin{itemize}
+        \item \colorbox{LightGray}{SetTitle("title", "titleaxisX", "titleaxisY")}
+        \item \colorbox{LightGray}{SetMarkerStyle(markerCode)}
+        \item \colorbox{LightGray}{SetMarkerColor(colorCode)}
+        \item \colorbox{LightGray}{SetLineColor(colorCode)}
+        \item \colorbox{LightGray}{SetFillColor(colorCode)}
+    \end{itemize}
+\section{Funzioni}
+    \colorbox{LightGray}{TF1("name", "function", xmin, xmax)} nella funzione i parametri vanno indicati con [i]\\
+    NB: per funzioni definite a tratti, siano f(x) e g(x) funzioni generiche
+    \begin{verbatim}
+        "function" = "f(x)*(x>=a && x<b) + g(x)*(x>=b && x<c) + ..."
+    \end{verbatim}
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{Draw()}
+        \item \colorbox{LightGray}{SetParameter(i,value)} setta il valore value al parametro iesimo
+        \item \colorbox{LightGray}{SetParameters(value1, value2, ..., valuen)} setta il valore value i al parametro i
+        \item \colorbox{LightGray}{SetParLimits(i, xmin, xmax)} definisce il range del parametro i
+        \item \colorbox{LightGray}{Eval(x)} ti da f(x)
+        \item \colorbox{LightGray}{Integral(a, b)} integrale della funzione nel range [a,b]
+        \item \colorbox{LightGray}{DrawDerivative()} grafica la derivata prima
+        \item \colorbox{LightGray}{DrawIntegral()} grafica l’integrale
+        \item \colorbox{LightGray}{Derivative(x)} o \colorbox{LightGray}{Derivative2(x)} o \colorbox{LightGray}{Derivative3(x)} calcola derivate
+    \end{itemize}
+\section{Fitting}
+    Metodo \colorbox{LightGray}{Fit("name", "opt")} valido per più classi. Funzioni predefinite "gaus" "expo" "poln"
+    OptFit:
+    \begin{itemize}
+        \item "R": usa il range della funzione (di default usa il range dell'istogramma)
+        \item "L": usa il metodo della massima verosimiglianza (default con chi-quadro)
+        \item "Q": stampa il minimo necessario dei risultati del fit
+        \item "V": stampa tutto quello che riesce dei risultati del fit
+        \item "S": ritorna risultati utili del fit
+    \end{itemize}
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{gStyle->SetOptFit(optCode)} visualizza le info del fit
+        \item \colorbox{LightGray}{GetFunction(“f”)} restituisce la funzione utilizzata nel fit (va utilizzata su un oggetto fittato)
+        \item \colorbox{LightGray}{GetChisquare()}
+        \item \colorbox{LightGray}{GetNDF()}
+        \item \colorbox{LightGray}{GetParameter(i)} valore del parametro i-esimo
+        \item \colorbox{LightGray}{GetParError(i)}
+        \item \colorbox{LightGray}{GetParameters($\vec{par}$)} mette in $\vec{par}$ i parametri
+        \item \colorbox{LightGray}{GetParErrors($\vec{epar}$)}
+        \item \colorbox{LightGray}{GetCorrelationMatrix()} stampabile tramite Print()
+        \item \colorbox{LightGray}{GetCovarianceMatrix()} stampabile tramite Print()
+    \end{itemize}
+\section{Random}
+    \colorbox{LightGray}{gRandom->SetSeed()} per inizializzare la generazione
+    Distribuzioni predefinite:
+    \begin{itemize}
+        \item \colorbox{LightGray}{Uniform(a, b)} uniforme in [a, b]
+        \item \colorbox{LightGray}{Rndm()} uniforme in [0, 1]
+        \item \colorbox{LightGray}{Gaus($\mu$, $\sigma$)}
+        \item \colorbox{LightGray}{Poisson($\mu$)}
+        \item \colorbox{LightGray}{Binomial(ntot, prob)}
+        \item \colorbox{LightGray}{Exp($\tau$)}
+        \item \colorbox{LightGray}{Integer(i)} uniforme intera in [0, i-1]
+        \item \colorbox{LightGray}{Landau(moda, $\sigma$)}
+        \item \colorbox{LightGray}{f1->GetRandom()} genera un valore casuale dalla funzione f1
+        \item \colorbox{LightGray}{FillRandom("name", n)} filla l'oggetto con n elementi della funzione "name"
+    \end{itemize}
+\section{Canvas}
+    \colorbox{LightGray}{TCanvas("name", "title", "width", "height")}
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{Divide(i, j)} divide la canvas in i*j pad
+        \item \colorbox{LightGray}{cd(i)} seleziona la pad i
+        \item \colorbox{LightGray}{Print("name.extension")} stampa la canvas su file
+    \end{itemize}
+    Legenda:
+    \colorbox{LightGray}{TLegend(x1, y1, x2, y2,"name")}
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{SetFillColor(n)}
+        \item \colorbox{LightGray}{AddEntry(obj,"description")} associa a obj una linea con descrizione
+        \item \colorbox{LightGray}{Draw("SAME")} disegna la legenda sullo stesso grafico
+    \end{itemize}
+\section{List}
+    \colorbox{LightGray}{TList()}\\
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{Add(obj)} con obj qualunque oggetto di root (TH1F, TF1, ...)
+        \item \colorbox{LightGray}{At(i)} returna l'elemento i-esimo della lista. NB: l'oggetto returna sempre un TObject, al momento dell'utilizzo specificarne il tipo con un $static_cast<type>$
+        \item \colorbox{LightGray}{Print()} stampa a schermo la lista
+        \item \colorbox{LightGray}{At(i)->InheritsFrom("type")} restituisce 1 se l'elemento i-esimo è di tipo type, 0 altrimenti
+    \end{itemize}
+\section{ROOT Files}
+    \colorbox{LightGray}{TFile("name", "opt")}
+    Options:
+    \begin{itemize}
+        \item \colorbox{LightGray}{NEW} o \colorbox{LightGray}{CREATE} crea un nuovo file aperto in lettura, se già esiste non si apre
+        \item \colorbox{LightGray}{RECREATE} come CREATE ma se il file esiste lo sovrascrive
+        \item \colorbox{LightGray}{UPDATE} apre un file esistente in scrittura, se non esiste lo crea
+        \item \colorbox{LightGray}{READ} apre un file esistente in lettura (default)
+    \end{itemize}
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{TObject->Write()} scrive sul file il TObject
+        \item \colorbox{LightGray}{Get("name")} returna l'oggetto salvato di nome "name"
+        \item \colorbox{LightGray}{Close()} chiude il file. Fondamentale inserirlo per evitare problemi
+    \end{itemize}
+\section{Benchmark}
+    Metodi:
+    \begin{itemize}
+        \item \colorbox{LightGray}{gBenchmark->Start("name")} inizia un processo "name"
+        \item \colorbox{LightGray}{gBenchmark->Print("name")} stampa le tempistiche in quel momento
+        \item \colorbox{LightGray}{gBenchmark->Show("name")} interrompe il processo e ne stampa le tempistiche
+        \item \colorbox{LightGray}{gBenchmark->Stop("name")} interrompe il processo "name"
+    \end{itemize}
+\section{Appendice}
+    \subsection{Esempio lettura da file}
+    \begin{verbatim}
+        ifstream in;
+        in.open("maxwell.dat"); [nome del file]
+        Float_t x,y;
+        while (1) {
+        in >> x >> y;
+        if (!in.good()) break;
+        h1->Fill(y);
+        }
+        in.close();
+    \end{verbatim}
+    \subsection{Scrivere una classe su un ROOT File}
+    In “MyClass.h”
+    Mettere inheritance: public TObject
+    Chiamare macro in fondo (prima della chiusura delle parentesi:  ClassDef(MyClass, 1))
+    Es:
+    \begin{verbatim}
+        class MyClass: public TObject {
+        ...
+        ClassDef(MyClass, 1)
+        In “MyClass.cxx”
+        Chiamare macro in fondo: ClassImp(MyClass)
+        Se hai fatto questo poi per scriverla sul file: [con A oggetto di MyClass]
+        1) TFile *file = new TFile("test.root","recreate");
+        2) A.Write("A");
+        3) file->Close();
+    \end{verbatim}
+    \subsection{Risoluzione o Smearing}
+        \subsubsection{A valore fisso}
+        \begin{verbatim}
+            for(Int_t i=0;i<nGen;i++){
+                h[0]->Fill(gRandom->Gaus(fixedValue, res));
+            }
+        \end{verbatim}
+        \subsubsection{Con una distribuzione}
+        \begin{verbatim}
+            for(Int_t i=0;i<nGen;i++){
+                h[1]->Fill(gRandom->Gaus(distribution, res));
+            }
+        \end{verbatim}
+    \subsection{Efficienza}
+        \subsubsection{Costante}
+        \begin{verbatim}
+            Es: (efficenza del 70\%)
+            x=gRandom->Gaus(mean, sigma);
+            y=gRandom->Rndm();
+            if(y<0.7){h1->Fill(x)}
+        \end{verbatim}
+        \subsubsection{Variabile}
+        Si utilizza la funzione con il quale varia e il metodo Eval(x)\\
+        Es:\\
+        \begin{verbatim}
+            TF1 *eff = new TF1(“eff”, "function", min, max);
+            x=gRandom->Gaus(mean, sigma);\\
+            y=gRandom->Rndm();\\
+            if(y < eff->Eval(x)) {
+                h1->Fill(x)
+            }
+        \end{verbatim}
+        \subsubsection{Istogramma dell'efficienza}
+        \begin{verbatim}
+            TH1F *hEff=new Th1F(*hTot); [hTot istogramma con tutte le x(non solo quelle scartate)]
+            hEff->Divide(h1, hTot, 1, 1, “B”); [h1 istogramma con solo le x accettate]
+        \end{verbatim}
+    \subsection{Compilazione}
+        \subsubsection{da ROOT}
+        \begin{verbatim}
+            .L macro.cpp oppure root [0] gROOT->LoadMacro(“macro.cpp”)
+            macro() [per eseguire]
+        \end{verbatim}
+        \subsubsection{da SHELL}
+        \begin{verbatim}
+            g++ -o ExampleMacro .exe macro.cpp `root-config --cflags --libs`
+            ./macro.exe [per eseguire]  [IMPORTANTE: la macro deve contenere un main()]
+        \end{verbatim}
+
+\end{document}
