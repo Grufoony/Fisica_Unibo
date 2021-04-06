@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+	\title{Formulario meccanica analitica}
+	\author{Grufoony}
+    \maketitle
+    \section{Flusso di fase}
+        Sia dato un potenziale V(x):
+        \begin{itemize}
+            \item Punto di equilibrio: $V'(x)=0$
+            \item Stabilità: $V''(x_A)>0 \Rightarrow$ Oscillatore armonico di periodo (piccole oscillazioni) $T=\frac{2\pi}{\omega}$
+            \item Instabilità: $V''(x_B)<0 \Rightarrow$ Osicllatore iperbolico con separatrici $p=\pm\sqrt{km}(x-x)$
+            \item Costante $k=\lvert V''(x) \rvert \Rightarrow \omega^2=\frac{k}{m}(x-x_B)$
+        \end{itemize}
+    \section{Lagrangiana}
+        \begin{itemize}
+            \item Lagrangiana $\mathcal{L}=\mathcal{T}-V$
+            \item Velocità $v=\dot{x}\hat{x}+x\vec{\omega}\wedge\hat{x}$
+            \item Energia cinetica: $\mathcal{T}=\frac{mv^2}{2}$
+            \item Integrali del moto:
+                \begin{equation}
+                    \begin{cases}
+                    p_\theta=\frac{\partial{\mathcal{L}}}{\partial{\dot{\theta}}}=mr^2\dot{\theta}\\
+                    H=\mathcal{T}+V
+                    \end{cases}
+                \end{equation}
+            \item Potenziale efficace: $V_{eff}(r)=\frac{p_\theta^2}{2mr^2}+V(r) \Rightarrow H=\frac{p^2}{2m}+V_{eff}(r)$ con $p=m\dot{r}=\frac{\partial{\mathcal{L}}}{\partial{\dot{r}}}$
+        \end{itemize}
+\end{document}
