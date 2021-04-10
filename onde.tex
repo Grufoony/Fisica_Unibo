@@ -9,6 +9,8 @@
 \usepackage{amsfonts}
 \newcommand*{\field}[1]{\mathbb{#1}}
 
+\usepackage{geometry}
+\geometry{a4paper, top=1.5cm, bottom=2cm, left=2cm, right=2cm}
 
 \begin{document}
 	\title{Formulario Fenomeni Ondulatori}
@@ -153,8 +155,27 @@
  	$\delta p=Z \frac{\partial \xi}{\partial t}$ Relazione causa-effetto fra passaggio dell'onda e variazione di pressione
  	\item $I=\langle\frac{\mathcal{P}}{S}\rangle=\langle Z(\frac{\partial \xi}{\partial t})^2\rangle$ Intensità dell'onda acustica (attenzione ha udm diversa da onda su corda)
  	\item $\beta_s =10\log_{10}\frac{I}{I_0}$ Livello sonoro in deciBel
- 	
- 	%fine lezione 15
+ 	\item Interferenza per onde con stesso $\omega$ (\textit{Onde coerenti}); ampiezze $A_1$, $A_2$; seconda onda sfasata di $\varphi_0$\\ \\
+ 	$\xi(x,t)=\xi_1(x,t)+\xi_2(x,t)=\Re(Ae^{i\varphi_0}e^{i(kx-\omega t)})$\\
+ 	con $A=|A_1+A_2 e^{i\varphi_0}|=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\varphi_0}$\\
+ 	$2A_1A_2\cos\varphi_0$ \hspace{0.4cm} Termine d'interferenza\\
+ 	$I=I_1+I_2+2\sqrt{I_1I_2}\cos\varphi_0$ \hspace{0.4cm} Intensità onda risultante
+ 	\item Battimenti\\
+ 	Onde con stessa ampiezza ($A$); pulsazioni simili ($\omega_1 \approx \omega_2$); numeri d'onda simili ($k_1 \approx k_2$)\\
+ 	$\Delta k = \frac{k_2-k_1}{2} \hspace{0.6cm} \Delta \omega = \frac{\omega_2 - \omega_1}{2} \hspace{0.6cm} k_0 = \frac{k_2+k_1}{2} \hspace{0.6cm} \omega_0 = \frac{\omega_2 + \omega_1}{2}$\\
+ 	$\xi(x,t)=2A\cos(\Delta k x-\Delta \omega t)\cos(k_0 x-\omega_0t)$\\
+ 	$2A\cos(\Delta k x-\Delta \omega t)$ \hspace{0.4cm} Componente \textit{modulante}\\
+ 	$\cos(k_0 x-\omega_0t)$ \hspace{0.4cm} Componente \textit{portante}\\
+ 	$v_f=\frac{\omega_0}{k_0}$ \hspace{0.4cm} Velocità di fase\\
+ 	$v_g=\frac{\Delta \omega}{\Delta k} =\frac{d\omega}{dk}$ \hspace{0.4cm} Velocità di gruppo\\
+ 	Per mezzi non dispersivi $v_f=v_g$; per mezzi dispersivi $v_f\neq v_g$ (generalmente osserviamo $v_g<v_f$)
+ 	\item Effetto doppler (S sorgente, R ricevente; in avvicinamento)\\ 
+ 	$f_R=f_m(1+\frac{v_R}{v_m})=f_S\frac{1+\frac{v_R}{v_m}}{1-\frac{v_S}{v_m}}=f_S \frac{v_m + v_R}{v_m-v_S}$ \\
+ 	(dove $v_m$ velocità onda nel mezzo)
+ 	\item Generalizzazione in  3D\\
+ 	$\nabla^2 \xi(\overrightarrow{r},t)=\frac{1}{v^2}\frac{\partial^2 \xi(\overrightarrow{r},t)}{\partial t^2}$ D'Alembert\\
+ 	$\xi(\overrightarrow{r},t)=f(\hat{u}  \cdot \overrightarrow{r}-vt)$ Onde piane\\
+ 	$\xi(\overrightarrow{r},t)=A\cos(k\hat{u}\cdot \overrightarrow{r}-\omega t)$ Onde armoniche piane (vale principio sovrapposizione)
  	
  \end{itemize}	
 
