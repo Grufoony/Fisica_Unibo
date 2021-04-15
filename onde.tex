@@ -90,7 +90,8 @@
 		$x(t)=\frac{F_0}{\beta \omega_0}\sin\Omega t$ in quadratura di fase con la forzante\\ %non sono sicuro dell'omega a denominatore
 		\item $Z_m=\frac{f(t)}{\dot{z}(t)}$ Impedenza meccanica
 		\item $R(\Omega)=\frac{(\gamma \Omega)^2}{(\omega^2_0-\Omega^2)^2+(\gamma \Omega)^2}$ Funzione di risposta
-		\item $Q=\frac{\omega_0}{\gamma}$ Fattore di qualità
+		\item $Q=\frac{\omega_0}{\gamma}$ Fattore di qualità\\
+		RLC serie $Q = \frac{1}{R} \sqrt{\frac{L}{C}}$,\hspace{5mm} RLC parallelo $Q = R \sqrt\frac{C}{L}$
 		\item $x(t)= \frac{F_0/m}{\sqrt{(\omega_0^2 -\Omega^2)^2 + (\gamma \Omega)^2}} \cos(\Omega t-\delta) = |A| \cos(\Omega t -\delta)=A_{el} \cos \Omega t + A_{ass} \sin\Omega t$\\
 		$A_{el}(\Omega)=\frac{F_0 (\omega_0^2-\Omega^2)}{m[(\omega_0^2-\Omega^2)^2+(\gamma \Omega)^2]}$ Ampiezza elastica\\
 		$A_{ass}(\Omega)=\frac{F_0 \gamma \Omega}{m[(\omega_0^2-\Omega^2)^2+(\gamma \Omega)^2]}$ Ampiezza assorbitiva\\
@@ -175,7 +176,15 @@
  	\item Generalizzazione in  3D\\
  	$\nabla^2 \xi(\overrightarrow{r},t)=\frac{1}{v^2}\frac{\partial^2 \xi(\overrightarrow{r},t)}{\partial t^2}$ D'Alembert\\
  	$\xi(\overrightarrow{r},t)=f(\hat{u}  \cdot \overrightarrow{r}-vt)$ Onde piane\\
- 	$\xi(\overrightarrow{r},t)=A\cos(k\hat{u}\cdot \overrightarrow{r}-\omega t)$ Onde armoniche piane (vale principio sovrapposizione)
+ 	$\xi(\overrightarrow{r},t)=A\cos(k\hat{u}\cdot \overrightarrow{r}-\omega t)$ Onde armoniche piane (vale principio sovrapposizione)\\
+ 	$\overrightarrow{k}=k \hat{u}$ Vettore d'onda
+ 	$k=\frac{\omega}{v}$ Numero d'onda
+ 	\item Onde sferiche (passaggio alla rappresentazione polare) $(x,y,z,t)\rightarrow(r,\theta,\varphi,t)$\\
+ 	$\xi(\overrightarrow{r},t)=\xi(r,\theta,\varphi,t)=\frac{f(r\mp vt)}{r}Y^m_l(\theta, \varphi)$\\
+ 	$f(r-vt)=A\cos (kr-\omega t+\alpha)$ Onde armoniche sferiche\\
+ 	Periodicità temporale $T_p =\frac{2\pi}{\omega}$\\
+ 	Periodicità spaziale scala con $\frac{1}{r}$, abbiamo pseudoperiodo $\lambda = \frac{2\pi}{k}$\\
+ 	
  	
  \end{itemize}	
 
