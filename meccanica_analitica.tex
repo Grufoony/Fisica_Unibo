@@ -10,15 +10,16 @@
 	\title{Formulario meccanica analitica}
 	\author{Grufoony}
     \maketitle
-    \section{Flusso di fase}
+    \section{Problemi 1}
         Sia dato un potenziale V(x):
         \begin{itemize}
             \item Punto di equilibrio: $V'(x)=0$
             \item Stabilità: $V''(x_A)>0 \Rightarrow$ Oscillatore armonico di periodo (piccole oscillazioni) $T=\frac{2\pi}{\omega}$
             \item Instabilità: $V''(x_B)<0 \Rightarrow$ Oscillatore iperbolico con separatrici $p=\pm\sqrt{km}(x-x)$
             \item Costante $k=\lvert V''(x) \rvert \Rightarrow \omega^2=\frac{k}{m}(x-x_B)$
+            \item Reazione vincolare $\vec{R_V}=m\ddot{x}-\vec{F}$
         \end{itemize}
-    \section{Lagrangiana}
+    \section{Problemi 2}
         \begin{itemize}
             \item Lagrangiana $\mathcal{L}=\mathcal{T}-V$
             \item Velocità $v=\dot{x}\hat{x}+x\vec{\omega}\wedge\hat{x}$
@@ -31,5 +32,13 @@
                     \end{cases}
                 \end{equation}
             \item Potenziale efficace: $V_{eff}(r)=\frac{p_\theta^2}{2mr^2}+V(r) \Rightarrow H=\frac{p^2}{2m}+V_{eff}(r)$ con $p=m\dot{r}=\frac{\partial{\mathcal{L}}}{\partial{\dot{r}}}$
+            \item Orbite circolari $\frac{dV_{eff}}{dr}(r_c)=0$
+            \item Priodo orbite circolari $T=\frac{2\pi}{\dot{\theta}}$
+            \item Angolo tra apocentro e pericentro $\Delta\theta=\frac{\pi}{\sqrt{\frac{d^2V_{eff}}{dr^2}(r_c)}}$ \\
+                    N.B.: spesso conviene un cambio di variabili $u=r^{-1}$ \\
+                    N.B.2: stiamo calcolando il limite per orbite con energia che tende a 0 ed è quindi lecito riscalare E
         \end{itemize}
+        \section{Problemi 3}
+
+        \section{Problemi 4}
 \end{document}
