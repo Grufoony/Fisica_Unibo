@@ -5,9 +5,7 @@
 \usepackage{bookmark}
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 \usepackage{hyperref}
-
-\usepackage{amsmath} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareMathOperator \erf{erf} %%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
 
 \begin{document}
 	\title{Formulario Relatività Ristretta}
@@ -90,5 +88,16 @@
                     \vec{B_\perp'}=\gamma(\vec{B}-\frac{\vec{V}\wedge\vec{E}}{c^2})_\perp
                 \end{cases}$$
         \end{itemize}
-	
+	\section{Il fantastico mondo di Minkowski}
+        \begin{itemize}
+            \item $ds^2=dx^2+dy^2+dz^2-c^2dt^2$ spazio di Minkowski
+            \item $x^\mu=(ct,x,y,z)=(ct,\vec{r})$ quadrivettore posizione
+            \item $ds^2=g_{\mu\nu}dx^\mu d x^\nu$ notazione tensoriale, con $g_{\mu\nu}$ tensore metrico
+            \item $x_\mu=g_{\mu\nu}x^\nu$
+            \item $v^\mu=(\gamma c, \gamma v_x, \gamma v_y, \gamma v_z)=(\gamma c, \gamma\vec{v})$ quadrivettore velocità
+            \item $a^\mu=\gamma(\dot{\gamma}c, \dot{\gamma}\vec{v}+\gamma\vec{a})$ quadrivettore accelerazione
+            \item $a^\mu=(0, \vec{\alpha})$ accelerazione propria
+            \item $p^\mu=m_0v^\mu=(\gamma m_0c, \gamma m_0\vec{v})$ quadrivettore impulso (ogni componente si conserva separatamente)
+            \item $f^\mu=\frac{dp^\mu}{d\tau}=\left(\frac{\gamma}{c}\vec{F}\cdot\vec{v}, \gamma\vec{F}$ quadrivettore forza
+        \end{itemize}
 \end{document}
