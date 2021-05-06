@@ -1,0 +1,94 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{hyperref}
+
+\usepackage{amsmath} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator \erf{erf} %%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\title{Formulario Relatività Ristretta}
+	\author{Grufoony}
+	\maketitle
+    \begin{abstract}
+        Se non diversamente specificato, i due sistemi di riferimento sono prei tali per cui S sia fermo e S' si muova a velocità $\vec{V}=V\hat{x}$.
+        c indica sempre la velocità della luce. Le grandezze $x_0$ indicano misurazioni effettuate nel sdr con il corpo a riposo.
+    \end{abstract}
+    \section{Cinematica relativistica}
+        \begin{itemize}
+            \item $\beta=\frac{v}{c}$
+            \item $\gamma=\frac{1}{\sqrt{1-\beta^2}}$
+            \item $L(v)=\frac{L_0}{\gamma}$ contrazione di Lorentz-FitzGerald
+            \item $m(v)=\gamma m_0$ ipotesi di Lorentz sulla massa
+            \item $t'=\gamma t$ dilatazione dei tempi
+            \item Trasformazioni di Lorentz:\\
+                $$\begin{cases}
+                    x'=\gamma(x-Vt)\\
+                    y'=y\\
+                    z'=z\\
+                    t'=\gamma\left(t-\frac{V}{c^2}t\right)
+                \end{cases}$$
+            \item Trasformazioni di Lorentz (velocità):\\
+                $$\begin{cases}
+                    u_x'=\frac{u_x-V}{1-\frac{u_xV}{c^2}}\\
+                    u_y'=\frac{u_y}{\gamma\left(1-\frac{u_yV}{c^2}\right)}\\
+                    u_z'=\frac{u_z}{\gamma\left(1-\frac{u_zV}{c^2}\right)}
+                \end{cases}$$
+            \item Trasformazioni di Lorentz (accelerazioni):\\
+                $$\begin{cases}
+                    a_x'=\frac{a_x}{\gamma^3\left(1-\frac{u_xV}{c^2}\right)^3}\\
+                    a_y'=\frac{a_y}{\gamma^2\left(1-\frac{u_xV}{c^2}\right)^2}+\frac{\frac{u_yV}{c^2}}{\gamma^2\left(1-\frac{u_xV}{c^2}\right)^3}a_x\\
+                    a_z'=\frac{a_z}{\gamma^2\left(1-\frac{u_xV}{c^2}\right)^2}+\frac{\frac{u_zV}{c^2}}{\gamma^2\left(1-\frac{u_xV}{c^2}\right)^3}a_x
+                \end{cases}$$
+            \item $\nu=\nu_0\frac{\sqrt{1-\beta^2}}{1+\beta\cos{\theta}}$ effetto Doppler
+        \end{itemize}
+    \section{Dinamica Relativistica}
+        \begin{itemize}
+            \item $\vec{p}=m(v)\vec{v}=\gamma m_0\vec{v}$ impulso relativistico
+            \item $E(v)=\mathcal{T}+m_0c^2$ energia relativistica
+            \item $E^2=m_0^2c^4+p^2c^2$
+            \item $\vec{p}=\frac{E}{c^2}\vec{v}$
+            \item In un sistema di N particelle valgono:\\
+                $$\begin{cases}
+                    \sum_{i=1}^{N}E_i=E_{TOT}\\
+                    \sum_{i=1}^{N}\vec{p}_i=\vec{p}_{TOT}
+                \end{cases}$$
+            \item Per un fotone $m_0=0\Rightarrow E=\frac{h}{\nu}=\frac{hc}{\lambda}; p=\frac{E}{c}=\frac{h}{\lambda}$ 
+            \item Trasformazioni dell'impulso:\\
+                $$\begin{cases}
+                    p_x'=\gamma\left(p_x-\frac{\beta}{c}E\right)\\
+                    p_y'=p_y\\
+                    p_z'=p_z\\
+                    E'=\gamma(E-c\beta p_x)
+                \end{cases}$$
+            \item $\vec{F}=\frac{d}{dt}(\gamma m_0\vec{v})$ Forza
+            \item $\vec{F}=F_\perp+F_\|=m_0\gamma\vec{a}+m_0\gamma^3\left(\vec{a}\cdot\frac{\vec{v}}{c}\right)\frac{\vec{v}}{c}$
+            \item Trasformazioni della forza:\\
+                $$\begin{cases}
+                    F_x'=F_x-\frac{Vu_y}{c^2\left(1-\frac{Vu_y}{c^2}\right)}F_y-\frac{Vu_z}{c^2\left(1-\frac{Vu_z}{c^2}\right)}F_z\\
+                    F_y'=\frac{F_y}{\gamma\left(1-\frac{Vu_x}{c^2}\right)}\\
+                    F_z'=\frac{F_z}{\gamma\left(1-\frac{Vu_x}{c^2}\right)}
+                \end{cases}$$
+            \item $\Delta\lambda=\lambda'-\lambda=\frac{h}{m_0c}(1-\cos{\theta})$ effetto Compton
+            \item $\omega_c=\frac{qB}{m_0\gamma}$ frequenza angolare di ciclotrone
+            \item $r_c=\gamma\frac{m_0{v_0}_y}{qB}$ raggio di ciclotrone
+        \end{itemize}
+    \section{Elettromagnetismo}
+        \begin{itemize}
+            \item Maxwelliaml:\\
+                $$\begin{cases}
+                    \vec{E'}=\gamma\vec{E}-(\gamma-1)\frac{\vec{V}}{V^2}(\vec{V}\cdot\vec{E})+\gamma(\vec{V}\wedge\vec{B})\\
+                    \vec{B'}=\gamma\vec{B}-(\gamma-1)\frac{\vec{V}}{V^2}(\vec{V}\cdot\vec{B})+\frac{\gamma}{c^2}(\vec{V}\wedge\vec{E})
+                \end{cases}$$\\
+                $$\begin{cases}
+                    \vec{E_\|'}=\vec{E'}\\
+                    \vec{E_\perp'}=\gamma(\vec{E}+\vec{V}\wedge\vec{B})_\perp\\
+                    \vec{B_\|'}=\vec{B'}\\
+                    \vec{B_\perp'}=\gamma(\vec{B}-\frac{\vec{V}\wedge\vec{E}}{c^2})_\perp
+                \end{cases}$$
+        \end{itemize}
+	
+\end{document}

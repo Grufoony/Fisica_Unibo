@@ -11,4 +11,7 @@ all:
 	xelatex onde.tex
 	rm onde.aux
 	rm onde.log
+	xelatex fisica_relativistica.tex
+	rm fisica_relativistica.aux
+	rm fisica_relativistica.log
 	clear
