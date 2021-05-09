@@ -17,4 +17,7 @@ all:
         xelatex analisi_1.tex
         rm analisi_1.aux
         rm analisi_1.log
-	clear
+        xelatex analisi_2.tex
+        rm analisi_2.aux	
+        rm analisi_2.log
+        clear
