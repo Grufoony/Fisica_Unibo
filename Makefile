@@ -14,4 +14,7 @@ all:
 	xelatex fisica_relativistica.tex
 	rm fisica_relativistica.aux
 	rm fisica_relativistica.log
+        xelatex analisi_1.tex
+        rm analisi_1.aux
+        rm analisi_1.log
 	clear
