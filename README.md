@@ -1,6 +1,6 @@
 # Fisica_UNIBO
 ## Installazione
-Se siete su windows basta scaricare una release e compilare con un qualsiasi programma per scrivere in latex.
+Se siete su windows basta scaricare una release.
 Su ubuntu basta eseguire i comandi:
 
     $   git clone https://github.com/Grufoony/Fisica_UNIBO
