@@ -14,7 +14,10 @@ all:
 	xelatex fisica_relativistica.tex
 	rm fisica_relativistica.aux
 	rm fisica_relativistica.log
-	xelatex elenco_teoremi_analisi_2.tex
-        rm elenco_teoremi_analisi_2.aux
-        rm elenco_teoremi_analisi_2.log
+        xelatex analisi_1.tex
+        rm analisi_1.aux
+        rm analisi_1.log
+        xelatex analisi_2.tex
+        rm analisi_2.aux	
+        rm analisi_2.log
         clear
