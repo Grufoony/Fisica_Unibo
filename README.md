@@ -7,5 +7,5 @@ Su ubuntu basta clonare la repository:
 
 ## Regole base
 * è possibile contribuire alla repository eseguendone un fork e, successivamente, una pull request con le modifiche
-* i file ammessi sono unicamente di tipo .tex, salvo immagini
+* sono richiesti sia i file .tex, sia i pdf già compilati (oltre ad eventuali immagini se allegate)
 * nei formulari cercare di essere più sintetici possibili in quanto in alcuni esami potrebbero essere ammessi
