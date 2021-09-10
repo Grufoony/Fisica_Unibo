@@ -1,0 +1,773 @@
+%PREAMBULO 
+
+\documentclass[a4paper, titlepage]{report}%definizione obbligatoria tipo di documento con opzioni a scelta
+\usepackage[T1]{fontenc}                %codifica caratteri e font utilizzati
+\usepackage[utf8]{inputenc}             %codifica del protocollo
+\usepackage[english, italian]{babel}    %lingue utilizzate, italiano quella principale perchè l'ultima delle elencate
+
+\usepackage{esvect}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{emptypage}       %elimina le facciate blank
+\usepackage{hyperref}        %definisce i collegamenti ipertestuali e Web
+\usepackage{indentfirst}
+\usepackage{amsmath}         %pacchetto per linguaggio matematico
+\usepackage{amssymb}         %pacchetto per linguaggio matematico
+\usepackage{amsthm} 
+\usepackage{physics}         %tre stili predefiniti per gli enunciati
+
+\usepackage{booktabs, caption} %pacchetti per le tabelle
+\usepackage{graphicx} %pacchetto per le figure
+\graphicspath{ {./images/} }
+\usepackage{wrapfig}
+%Definisco gli stili per  teoremi, definizioni, ecc
+
+\theoremstyle{definition} %inizializzo definizioni                
+\newtheorem{definizione}{Definizione}[chapter]  %[chapter]-->numerazione della def con riferimento al capitolo
+\theoremstyle{plain}
+\newtheorem*{legge}{Legge Fisica}
+\theoremstyle{plain}
+\newtheorem{proposizione}{Proposizione}[chapter]
+\theoremstyle{remark}
+\newtheorem*{osservazione}{Osservazione}
+\theoremstyle{remark}
+\newtheorem*{nota}{Nota}
+\theoremstyle{plain}
+\newtheorem*{criterio}{Criterio}
+\theoremstyle{plain}
+\newtheorem*{serie}{Serie notevole}
+\theoremstyle{plain}
+\newtheorem*{integrale}{Integrale notevole}
+\theoremstyle{plain}
+\newtheorem*{integrali}{Integrali notevoli}
+\theoremstyle{plain}
+\newtheorem*{tecnica}{Tecnica di integrazione}
+
+
+\usepackage[vmargin=2.5cm,hmargin=2cm]{geometry}
+
+
+
+\renewcommand{\v}[1]{\mathbf{\hat{#1}}} 
+%%VERSORE
+\renewcommand{\vec}[1]{\vv{\bm{#1}}}   
+%%VETTORE BOLD E CON ARROW
+\newcommand{\Norm}[1]{ \left\lVert {\vv{\bm{#1}}} \right\rVert}
+%%%NORMA DI UN VETTORE
+
+
+\begin{document}
+
+    \title{Foglio per esame scritto di Analisi 1}
+    \author{Niccolò Zanotti}
+    \maketitle
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% SUCCESSIONI %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Successioni in $\mathbb{R}$}
+%%%%%%%%%%%%  RAPPORTO  %%%%%%%%%
+\begin{criterio}{Del rapporto}
+
+    Sia ${\{ a_n \}}$ una successione in $\mathbb{R^+}$, ed esista
+     $\lim_{n \to \infty} \frac{a_{n+1}}{a_n}$. Allora se 
+     \begin{enumerate}
+         \item $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} < 1$,
+               allora $a_n \rightarrow 0$;
+        \item $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} > 1$,
+        allora $a_n \rightarrow +\infty$;
+     \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{criterio}{}
+    
+    Siano $\alpha,\beta \in \mathbb{R^+}$ e sia ${\{ a_n \}}$ 
+    una successione in $\mathbb{R}$. Allora se
+\[
+    \alpha \leq a_n \leq \beta \quad \forall n \in \mathbb{N}  
+    \Longrightarrow \sqrt[n]{a_n} \rightarrow 1 \text{ per }
+     n \rightarrow +\infty
+\]
+Inoltre se
+\[
+    a_n \rightarrow \lambda \in \mathbb{R^+} \Longrightarrow 
+    \sqrt[n]{a_n} \rightarrow 1
+\]
+\end{criterio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%Es 18 obrecht%%%%%%%%
+\begin{criterio}{}
+    
+    Sia $\{a_n\}$ una successione in $\mathbb{R}$. Allora se
+\[
+     a_n \rightarrow \lambda \in \bar{R} \Longrightarrow 
+     \frac{a_1+a_2+ ... + a_n}{n} \rightarrow \lambda  
+\]
+%%%%%%%%%%%%%%%
+%%%%%%18 ii obrecht%%%%
+%%%%%%%%%%%%%%
+\begin{criterio}
+    
+    Sia $\{a_n\}$ una successione in $\mathbb{R}$. Allora se
+\[
+     a_{n+1}-a_n \rightarrow \lambda \in \bar{R} \Longrightarrow 
+     \frac{a_n}{n} \rightarrow \lambda       
+\]
+%%%%%%%%%%%%%%%%
+%%%%es 18 iii obrecht
+%%%%%%%%%%%%%%%%%
+\begin{criterio}
+    
+    Sia $\{a_n\}$ una successione in $\mathbb{R^+}$. Allora se
+\[
+     \frac{a_{n+1}}{a_n} \rightarrow \lambda \in \bar{R} \Longrightarrow
+     \sqrt[n]{a_n} \rightarrow \lambda    
+\]
+
+\end{criterio}
+    
+\end{criterio}
+
+
+\end{criterio}
+
+   
+
+\end{criterio}
+
+\paragraph*{Approssimazione di Stirling}
+\[
+     n! \sim n^n e^{-n} \sqrt{2 \pi n}    
+\]
+\[
+       log(n!) = nlog(n) -n + \frac{1}{2} log(n) + log(\sqrt{2 \pi}) + o(1)
+\]
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% SERIE %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Serie numeriche in $\mathbb{R}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%% GEOMETRICA %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\begin{serie}{Geometrica}
+\[
+        \sum_{n=0}^{\infty}c^n
+        \begin{cases}
+            \text{converge} \quad se \ \abs*{c}<1 ,
+            \quad s_n= \frac{1}{1-c}\\
+            \text{diverge}  \quad  se \ c \geq  1 \\
+            \text{indeterminata} \quad se \ c \leq -1 \\
+        \end{cases}   
+\]
+\end{serie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%ARMONICA GEN %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{serie}{Armonica Generalizzata}
+\[
+            \sum_{n=1}^{\infty} \frac{1}{n^{\alpha}}
+            \begin{cases}
+                \text{converge} \quad se \ \alpha > 1 \\
+                \text{diverge}  \quad  se \ \alpha \leq  1 \\
+            \end{cases}  
+            \alpha \in \mathbb{R}  
+\]
+\end{serie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%SERIE DI ABEL O ARMONICA GEN 
+%%%%%%%%%%%DI TIPO 2%%%%%%%%%%%%%%
+\begin{serie}{Di Abel o Armonica Generalizzata di tipo $2$}
+
+\[
+    \sum_{n=2}^{\infty} \frac{1}{n^{\alpha}\log^{\beta}(n)}
+    \begin{cases}
+        \text{converge} \quad se \ \alpha > 1 \ \land \forall \beta \\
+        \text{converge} \quad se \ \alpha > 1 \ \lor
+        \alpha = 1 \ \land \beta > 1 \\
+        \text{diverge}  \quad  se \ \alpha < 1 \ \lor \alpha = 1
+        \ \land \beta \leq 1  \\
+    \end{cases} 
+    \alpha,\beta \in \mathbb{R} 
+\]
+
+\end{serie}
+
+
+%%%%%%%%%%%%%%
+%%CONFRONTO%%%%
+%%%%%%%%%%%%%%
+\begin{criterio}{Del confronto}
+
+    Siano $\sum_{}^{}a_k $ e $\sum_{}^{}b_k $ due serie a termini
+    in $\mathbb{R^+}$ tali che
+\[
+    0 \leq a_n \leq b_n \quad \forall n \in \mathbb{N}    
+\]
+Allora:
+       \begin{enumerate}
+    \item $\sum_{}^{}b_k$ convergente $\Longrightarrow \sum_{}^{}a_k $ 
+         convergente;
+    \item $\sum_{}^{}a_k$ divergente $\Longrightarrow \sum_{}^{}b_k $ 
+    divergente.
+    
+       \end{enumerate} 
+\end{criterio}
+%%%%%%%%%%%%%%%%%%%
+%%%%%ASINTOTICO%%%%
+%%%%%%%%%%%%%%%%%%
+\begin{criterio}{Del confronto asintontico}
+
+    Siano $\sum_{}^{}a_k $ e $\sum_{}^{}b_k $ due serie a termini
+    in $\mathbb{R^+}$. Allora se
+\[
+      a_n \sim b_n \Longrightarrow a_n \ e \  b_n \quad 
+       \text{hanno lo stesso carattere}  
+\]
+\end{criterio}
+%%%%%%%%%%%%%%%%%%
+%%%%%%RADICE%%%%%
+%%%%%%%%%%%%%%%%%%
+\begin{criterio}{Della radice}
+
+    Sia $\sum_{}^{}a_n$ una serie a termini in $\mathbb{R}_0^+$. Allora se esiste
+     $\lim_{n \to \infty} \sqrt[n]{a_n} = \lambda$
+   \begin{enumerate}
+    \item $\lambda > 1 \Longrightarrow a_n $ convergente;
+    \item $\lambda < 1 \Longrightarrow a_n $ divergente;
+   \end{enumerate}
+
+\end{criterio}
+%%%%%%%%%%%%%%%%%%
+%%%%%%LEIBNIZ%%%%%
+%%%%%%%%%%%%%%%%%%
+\begin{criterio}{Di Leibniz}
+
+    Sia $\sum_{}^{}(-1)^na_n$ una serie a termini di segno alterno. Allora se
+  \begin{enumerate}
+    \item $a_{n+1}<a_n$ ($a_n $ è definitivamente decrescente);
+    \item $a_n \rightarrow 0$ ($a_n$ è infinitesima);
+  \end{enumerate}
+    
+  la serie è convergente.
+\end{criterio}
+%%%%%%%%%%%%%%%%%%
+%%%%%%CAUCHY%%%%%
+%%%%%%%%%%%%%%%%%%
+\begin{criterio}{Di condensazione(Cauchy)}
+
+    Sia $\{a_n\}$ una successione a termini in $\mathbb{R}^+$.Allora se
+  \begin{enumerate}
+    \item $a_{n+1}<a_n$ ($a_n $ è definitivamente decrescente);
+    \item $a_n \rightarrow 0$ ($a_n$ è infinitesima);
+  \end{enumerate}
+\[
+    \sum_{}^{}a_n \quad \text{converge}  \Longleftrightarrow \sum_{}^{}2^na_{2^n} 
+    \quad \text{converge}.
+\]
+\end{criterio}
+%%%%%%%%%%%%%%%%%
+%%%%%%%RAPPORTO%%
+%%%%%%%%%%%%%%%%%
+\begin{criterio}{Del rapporto}
+    
+    Sia $\sum_{}^{}a_n$ una serie a termini in $\mathbb{R}^+$ tale che
+    esista $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = \lambda$.
+    Allora se 
+    \begin{enumerate}
+        \item $\lambda>1 \Longrightarrow $ la serie non è convergente;
+        \item $\lambda<1 \Longrightarrow $ la serie è convergente.
+    \end{enumerate}
+\end{criterio}
+%%%%%%%%%%%%%%%%%%
+%%%%%% RAABE %%%%%
+%%%%%%%%%%%%%%%%%%
+\begin{criterio}{Di Raabe}
+    
+    Sia $\sum_{}^{}a_n$ una serie a termini in $\mathbb{R}^+$ tale che
+\[
+        \frac{a_{n+1}}{a_n} = 1 - \frac{\alpha}{n} + o(\frac{1}{n}) 
+        \quad , \alpha \in \mathbb{R} \quad per \ n \rightarrow +\infty
+\]
+
+    Allora se 
+    \begin{enumerate}
+        \item $\alpha>1 \Longrightarrow $ la serie è convergente;
+        \item $\alpha<1 \Longrightarrow $ la serie non è convergente.
+    \end{enumerate}
+\end{criterio}
+%%%%%%%%%%%%%%%
+%%%%DIRICHLET %%
+%%%%%%%%%%%%%%%
+\begin{criterio}{Di Dirichlet}
+    
+    Siano $\{\alpha_n\}$ una successione in $\mathbb{C}$ e $\{ \beta_n\}$ una successione in $\mathbb{R}^+$ tali che
+    \begin{enumerate}
+        \item $\sum_{}^{}\alpha_n$ è limitata;
+        \item $\{ \beta_n\}$ è monotona descrescente ed infinitesima.
+    \end{enumerate}
+
+    Allora la serie $\sum_{}^{}\alpha_n\beta_n$ è convergente.
+\end{criterio}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% TAYLOR %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Sviluppi di MacLaurin delle principali funzioni}
+\paragraph*{Resto in forma di Peano}
+\[
+  e^x = \sum_{k = 0}^{\infty}\frac{x^k}{k!} =
+        1 + x + \frac{x^2}{2}+ \frac{x^3}{3!} +
+        ... + \frac{x^n}{n!}+o(x^n)
+\]
+\[
+   sin(x) = \sum_{k = 0}^{\infty} \frac{(-1)^kx^{2k+1}}{(2k+1)!} =
+   x - \frac{x^3}{3!}+ \frac{x^5}{5!} +
+   ... + \frac{x^{2n+1}}{n!}+o(x^{2n+2})
+\]
+\[
+    cos(x)=\sum_{k = 0}^{\infty}\frac{(-1)^kx^{2k}}{(2k)!} =
+    1 - \frac{x^2}{2}+ \frac{x^4}{4!} +
+    ... + \frac{(-1)^{n}x^{2n}}{n!}+o(x^{2n+1})
+\]
+\[
+   tg(x)= x + \frac{x^3}{3} + \frac{2}{15}x^5+o(x^6) 
+   \text{   \quad per   }\abs*{x}< \frac{\pi}{2}
+\]
+\[
+   arctg(x)= \sum_{k = 0}^{\infty} \frac{(-1)^kx^{2k+1}}{2k+1}
+    = x - \frac{x^3}{3} + \frac{x^5}{5}-\frac{x^7}{7} + ... +
+    \frac{(-1)^nx^{2n+1}}{2n+1} + o(x^{2n+2})
+\]
+\[
+   arcsin(x)= \sum_{k = 0}^{\infty} \frac{(2k)! \ x^{2k+1}}{2^{2k}(k!)^2
+    (2k+1)} = x + \frac{x^3}{6} + \frac{3x^5}{40}+\frac{5x^7}{112} + ... +
+    \frac{(2n)! \ x^{2n+1}}{2^{2n}(n!)^2(2n+1)} + o(x^{2n+1})
+     \ \ \text{  per} \ \abs*{x}<1 
+\]
+\[
+    sinh(x)=\sum_{k = 0}^{\infty}\frac{x^{2k+1}}{(2k+1)!} =
+    x + \frac{x^3}{3!} + \frac{x^5}{5!} +
+    ... + \frac{x^{2n+1}}{n!}+o(x^{2n+2}) 
+\]
+\[
+   cosh(x)=\sum_{k = 0}^{\infty}\frac{x^{2k}}{(2k)!} =
+    1 + \frac{x^2}{2}+ \frac{x^4}{4!} +
+    ... + \frac{x^{2n}}{n!}+o(x^{2n+1})
+\]   
+\[
+   log(1+x) =  \sum_{k = 0}^{\infty}\frac{(-1)^{k+1}x^{k}}{k} =
+   x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} +
+   ... + \frac{(-1)^{n+1}x^{n}}{n}+o(x^n)  \text{  per}\abs*{x}<1 
+\]
+\[
+   (1+x)^{\alpha} =  \sum_{k = 0}^{\infty}\binom{\alpha}{k}  x^k =
+   1 + \alpha x + \frac{\alpha(\alpha -1)}{2}x^2 + \frac{\alpha(\alpha -1)
+   (\alpha -2)}{3!}x^3 +... + \binom{\alpha}{n}x^n+o(x^n) 
+    \text{  per}\abs*{x}<1 
+\]
+\[
+   \sqrt{1+x}=(1+x)^{1/2} =  \sum_{k = 0}^{\infty}\binom{\alpha}{k}  x^k =
+   1 + \frac{x}{2} - \frac{x^2}{8} + \frac{1}{16}x^3 +... + 
+   \binom{\frac{1}{2}}{n}x^n+o(x^n) 
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   RESTO PER WITH BIG OH NOTATION
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{Resto in forma O(·) utile per serie numeriche}
+\[
+  e^x = \sum_{k = 0}^{\infty}\frac{x^k}{k!} =
+        1 + x + \frac{x^2}{2}+ \frac{x^3}{3!} +
+        ... + \frac{x^n}{n!}+O(x^{n+1})
+\]
+\[
+   sin(x) = \sum_{k = 0}^{\infty} \frac{(-1)^kx^{2k+1}}{(2k+1)!} =
+   x - \frac{x^3}{3!}+ \frac{x^5}{5!} +
+   ... + \frac{x^{2n+1}}{n!}+O(x^{2n+3})
+\]
+\[
+    cos(x)=\sum_{k = 0}^{\infty}\frac{(-1)^kx^{2k}}{(2k)!} =
+    1 - \frac{x^2}{2}+ \frac{x^4}{4!} +
+    ... + \frac{(-1)^{n}x^{2n}}{n!}+O(x^{2n+2})
+\]
+\[
+   tg(x)= x + \frac{x^3}{3} + \frac{2}{15}x^5+O(x^7) 
+   \text{   \quad per   }\abs*{x}< \frac{\pi}{2}
+\]
+\[
+   arctg(x)= \sum_{k = 0}^{\infty} \frac{(-1)^kx^{2k+1}}{2k+1}
+    = x - \frac{x^3}{3} + \frac{x^5}{5}-\frac{x^7}{7} + ... +
+    \frac{(-1)^nx^{2n+1}}{2n+1} + O(x^{2n+3})
+\]
+\[
+   arcsin(x)= \sum_{k = 0}^{\infty} \frac{(2k)! \ x^{2k+1}}{2^{2k}(k!)^2
+    (2k+1)} = x + \frac{x^3}{6} + \frac{3x^5}{40}+\frac{5x^7}{112} + ... +
+    \frac{(2n)! \ x^{2n+1}}{2^{2n}(n!)^2(2n+1)} + O(x^{2n+2})
+    \ \ \text{  per}\abs*{x}<1 
+\]
+\[
+    sinh(x)=\sum_{k = 0}^{\infty}\frac{x^{2k+1}}{(2k+1)!} =
+    x + \frac{x^3}{3!} + \frac{x^5}{5!} +
+    ... + \frac{x^{2n+1}}{n!}+O(x^{2n+3}) 
+\]
+\[
+   cosh(x)=\sum_{k = 0}^{\infty}\frac{x^{2k}}{(2k)!} =
+    1 + \frac{x^2}{2}+ \frac{x^4}{4!} +
+    ... + \frac{x^{2n}}{n!}+O(x^{2n+2})
+\]   
+\[
+   log(1+x) =  \sum_{k = 0}^{\infty}\frac{(-1)^{k+1}x^{k}}{k} =
+   x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} +
+   ... + \frac{(-1)^{n+1}x^{n}}{n}+O(x^{n+1})  \text{  per}\ \abs*{x}<1 
+\]
+\[
+   (1+x)^{\alpha} =  \sum_{k = 0}^{\infty}\binom{\alpha}{k}  x^k =
+   1 + \alpha x + \frac{\alpha(\alpha -1)}{2}x^2 + \frac{\alpha(\alpha -1)
+   (\alpha -2)}{3!}x^3 +... + \binom{\alpha}{n}x^n+O(x^{n+1}) 
+    \text{  per}\abs*{x}<1 
+\]
+\[
+   \sqrt{1+x}=(1+x)^{1/2} =  \sum_{k = 0}^{\infty}\binom{\alpha}{k}  x^k =
+   1 + \frac{x}{2} - \frac{x^2}{8} + \frac{1}{16}x^3 +... + 
+   \binom{\frac{1}{2}}{n}x^n+O(x^{n+1}) 
+\]
+
+\section*{Integrali in $\mathbb{R}$}
+
+
+\begin{integrale}{Per integrazione di funzioni razionali}
+
+\[
+    \int_{}^{} \frac{dx}{(ax+b)^2+c^2} \, = \frac{1}{bc} arctg(\frac{ax+b}{c}) + c
+\]
+\end{integrale}
+\begin{integrali}{Funzioni goniometriche al quadrato}
+\[
+    \int_{}^{} \sin[2](x) \,dx = \frac{x-\sin(x)\cos(x)}{2}   
+\]
+\[
+    \int_{}^{} \cos[2](x) \, dx = \frac{x+\sin(x)\cos(x)}{2}   
+\]
+
+\end{integrali}
+\begin{integrale}{dalle sostituzioni iperboliche}
+    
+    \[
+        \int_{}^{} \frac{1}{\sqrt{x^2+ a^2}} \,dx = 
+        log(x+ \sqrt{x^2+a^2}) + C = Sett \,sinh(\frac{x}{a}) + C
+    \]
+
+\end{integrale}
+\begin{integrali}{Delle funzioni iperboliche}
+    
+    \[
+        \int_{}^{} sinh \, cx \, dx = \frac{1}{c} cosh \, cx
+        \qquad         
+        \int_{}^{} cosh \, cx \, dx = \frac{1}{c} sinh \, cx
+    \]
+    \[
+        \int_{}^{} sinh^2 \, cx \, dx = \frac{1}{4c} sinh \, 2cx -\frac{x}{2}
+        \qquad
+        \int_{}^{} cosh^2 \, cx \, dx = \frac{1}{4c} sinh \, 2cx +\frac{x}{2}
+    \]
+    \[
+        \int_{}^{} \frac{dx}{sinh \, cx} = \frac{1}{c} log(tanh(\frac{cx}{2}))
+        \quad o \quad 
+        \int_{}^{} \frac{dx}{sinh \, cx} = \frac{1}{c} log(\frac{cosh \, cx -1}{cosh \, cx -1})
+    \]
+    \[
+        \int_{}^{} \frac{dx}{cosh \, cx} = \frac{2}{c} arctg(e^{cx})  
+    \]
+
+\end{integrali}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% SENO COSENO GRADO 1 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tecnica}{Funzioni razionali composte da funzioni goniometriche di grado 1}
+   
+    Integrali del tipo:
+\[
+     \int_{}^{} R(sinx,cosx) \,dx         
+\]
+si razionalizzano con la sostituzione $t = tg(\frac{x}{2})$ e si sfruttano le formule parametriche
+di sinx e cosx:
+\[
+    cosx = \frac{1-tg^2(\frac{x}{2})}{1+tg^2(\frac{x}{2})}    
+    \qquad sinx = \frac{2tg(\frac{x}{2})}{1+tg^2(\frac{x}{2})}
+\]
+\[
+  t = tg(\frac{x}{2}) \quad \rightarrow \quad cosx = \frac{1-t^2}{1+t^2} \quad sinx = \frac{2t}{1+t^2}
+  \quad x = 2 arctg(t) \quad dx = \frac{2dt}{t^2 +1}
+\]
+Riconducendosi ad un integrale del tipo:
+\[
+    \int_{}^{} R(\frac{2t}{1+t^2},\frac{1-t^2}{1+t^2}) \,\frac{2dt}{t^2+1}  
+\]
+\end{tecnica}
+
+
+\begin{tecnica}{Funzioni razionali composte da funzioni goniometriche di grado 2}
+   
+    Integrali del tipo:
+\[
+     \int_{}^{} R(sin^2x,cos^2x,sinxcosx) \,dx         
+\]
+si razionalizzano con la sostituzione $t = tg(x)$ e si sfruttano le formule parametriche
+:
+\[
+  t = tg(x) \quad \rightarrow \quad cos^2x = \frac{1}{1+t^2} \quad sin^2x = \frac{t^2}{1+t^2}
+  \quad sinxcosx = \frac{t}{1+t^2} \quad dx = \frac{dt}{1+t^2}
+\]
+Riconducendosi ad un integrale del tipo:
+\[
+    \int_{}^{} R(\frac{t^2}{1+t^2},\frac{1}{1+t^2},\frac{t}{1+t^2}) \,\frac{dt}{t^2+1}  
+\]
+\end{tecnica}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{tecnica}{}
+
+
+    Integrali del tipo
+\[
+    \int_{}^{} \sqrt{a^2-x^2}\,dx
+\]
+si risolvono con la sostituzione
+\[
+   x = a \sin(t) \rightarrow t = \arcsin(x) \quad dx = \cos(t) dt
+\]
+\end{tecnica}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% SOSTITUZIONI IPERBOLICHE 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tecnica}{Sostituzioni iperboliche:1}
+
+    Integrali del tipo 
+    \[
+        \int_{}^{} R(x, \sqrt{x^2+a^2}) \,dx         
+    \]
+    si razionalizzano con la sostituzione $x = asinh(t)$, per cui:
+    \[
+        x = asinh(t) \ \  dx = a cosh(t) \quad  \rightarrow \quad 
+        \sqrt{x^2+a^2} = a cosh(t) 
+    \]
+
+\end{tecnica}
+\begin{tecnica}{Sostituzioni iperboliche:2}
+
+    Integrali del tipo 
+    \[
+        \int_{}^{} R(x, \sqrt{x^2 - a^2}) \,dx         
+    \]
+    si razionalizzano con la sostituzione $x = acosh(t)$, per cui:
+    \[
+        x = a cosh(t) \ \  dx = a sinh(t) \quad  \rightarrow \quad 
+        \sqrt{x^2 - a^2} = a sinh(t) 
+    \]
+\end{tecnica}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% FUNZIONI TRASCENDENTI 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tecnica}{Funzioni razionali trascendenti}
+
+   Integrali del tipo 
+\[
+    \int_{}^{} R(e^{ax}) \,dx         
+\]
+si razionalizzano con la sostituzione $e^{ax} = t$.
+    
+\end{tecnica}
+%%%%%%%%%%%%%%%%%%%%
+% IRRAZIONALI 1
+%%%%%%%%%%%%%%%%%%%
+\begin{tecnica}{Integrazione di funzioni irrazionale tipo 1}
+    
+    Integrali del tipo 
+    \[
+        \int_{}^{} R(x,(\frac{ax+b}{cx+d})^{r_1},
+        (\frac{ax+b}{cx+d})^{r_2},...,
+        (\frac{ax+b}{cx+d})^{r_n}) \,dx  
+        \qquad r_1,r_2,...,r_n \in \mathbb{Q}      
+    \]
+dove R è una funzione razionale, si integrano tramite la sostituzione
+\[
+   t^N = \frac{ax+b}{cx+d}    
+\]
+dove N è il minimo comune multiplo dei denominatori dei numeri
+ $r_1,r_2,...,r_n$. \\
+Esempio:
+\[
+    \int_{}^{} \frac{1+\sqrt{\frac{x+1}{x+2}}}{1- \sqrt[3]{
+     \frac{x+1}{x+2}}}\, dx , \qquad \frac{x+1}{x+2} = t^6
+\]
+\end{tecnica}
+%%%%%%%%%%%%%%%%%%%
+% SOSTITUZIONI DI EULER %%%
+%%%%%%%%%%%%%%%%%
+\begin{tecnica}{Sostituzioni di Euler}
+    
+    Integrali del tipo 
+    \[
+        \int_{}^{} R(x,(\sqrt{ax^2+bx+c}) \, dx      
+    \]
+dove R è una funzione razionale. Le sostituzioni dipendono dai tre casi:
+\begin{description}
+    \item[$a>0$] 
+    \[
+      x = \frac{at^2}{b-2at} \ , \quad \sqrt{ax^2+bx+c} = -\sqrt{a}\frac{at^2-bt+c}
+      {b-2at} \ , \quad dx = -2a\frac{at^2-bt+c}{(b-2at)^2}dt
+    \] 
+    \[
+       -2a \int_{}^{} R(\frac{at^2}{b-2at}  ,  -\sqrt{a}(\frac{at^2-bt+c}{b-2at}))
+       \, dt    
+    \] \\
+    Esempio: 
+    \[
+    \int_{}^{} \frac{1+\sqrt{x^2+3x}}{2-\sqrt{x^2+3x}} \, dx , \qquad x = \frac{t^2}{3-2t}
+    \Longrightarrow -2\int_{}^{} \frac{(t^2-3t)(3+t-t^2)}{(3-2t)^2(t^2-7t+6)} \, dt
+    \]
+
+    \item[$a<0$]
+    \[
+    x = \frac{1}{2a}(\alpha \frac{1-t^2}{1+t^2}-b) \ , \ \alpha = \sqrt{b^2-4ac}  
+    \ , \ dx = \frac{-2\alpha t dt}{\alpha(t^2+1)^2}  
+    \]
+    \[
+        \Longrightarrow
+       - \int_{}^{} R(\frac{1}{2a}(\alpha \frac{1-t^2}{1+t^2}-b), 
+       \frac{t\alpha }{\sqrt{-a}(1+t^2)}) \cdot \frac{2\alpha t}{\alpha(t^2+1)^2}
+       \, dt
+    \] \\ Esempio:
+    \[
+    \int_{}^{} \frac{\sqrt{2x-x^2}+x}{2-\sqrt{2x-x^2}} \, dx
+     \quad a = -1,b = 2, c= 0, \alpha = 2 \longrightarrow x = 1- \frac{1-t^2}
+     {1+t^2} = \frac{2t^2}{1+t^2}   
+    \]
+    \[
+      \Longrightarrow \int_{}^{} \frac{4t^2(1+t)}{(t-1)^2(1+t^2)^2}\,dt    
+    \]
+     
+    \item[$a=0$] L'integrale rientra nel caso trattato dalla tecnica precedente
+    (funzioni irrazionali di tipo 1).  
+\end{description}
+
+\end{tecnica}
+
+\section*{Equazioni differenziali}
+
+\paragraph*{Lineari del I ordine}
+     \subparagraph*{Omogenee}
+Equazioni nella forma:
+     \[
+          x'(t) + a(t)y(t) = 0  
+     \]
+hanno un integrale generale del tipo 
+\[
+      y = ce^{-A(t)}   \quad dove \ A(t) = \int_{}^{}a(t)dt    
+\]
+
+    
+     \subparagraph*{Non omogenee}
+Equazioni nella forma:
+\[
+     x'(t) + a(t)x(t) =  f(t) 
+\]
+dove se $a(t) = 0$ l'equazioni differenziale è lineare, hanno una
+soluzione particolare $x_p$
+\[
+       x_p = e^{-A(t)}(\int_{}^{}e^{A(t)}f(t)dt)
+       \quad dove \ A(t) = \int_{}^{}a(t)dt
+\]
+per cui l'integrale generale è
+\[
+    x(t)= ce^{-A(t)} + e^{-A(t)}(\int_{}^{}e^{A(t)}f(t)dt) =
+    e^{-A(t)}(c + (\int_{}^{}e^{A(t)}f(t)dt))
+\]
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% 2 ordine 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{II ordine}
+\subparagraph*{Omogenee}
+Equazioni nella forma:
+\[
+     ax''(t) + bx'(t) + cx(t)= 0
+\]
+L'insieme delle soluzioni è uno spazio vettoriale di dimensione
+2. Per cui la soluzione generale sarà
+\[
+     x(t)= c_1 x_1(t) + c_2x_2(t)    
+\]
+dove $x_1(t)$ e $x_2(t)$ sono basi dello spazio delle soluzioni e 
+$c_1,c_2$ sono parametri liberi. \\
+Si trovano le soluzioni dell'equazione caratteristica in $\mathbb{C}$:
+\[
+     az^2 + bz +c = 0    
+\]
+Si hanno tre casi:
+\begin{enumerate}
+    \item[$\lambda_1 \neq \lambda_2$] 
+    $\rightarrow x(t)= c_1e^{\lambda_1 t}+ c_2e^{\lambda_2 t}$ |
+    Base: $e^{\lambda_1 t},e^{\lambda_2 t}$
+    \item[$\lambda_1 = \lambda_2$] 
+    $\rightarrow x(t)= c_1e^{\lambda t}+ c_2te^{\lambda t}$ |
+    Base: $e^{\lambda t}, te^{\lambda t}$
+    \item[$\lambda_{1,2} = \alpha \pm i\beta$] 
+    $\rightarrow x(t)= c_1e^{\alpha t}cos(\beta t)+ c_2
+    e^{\alpha t}sin(\beta t)$ |
+    Base: $e^{\alpha t}cos(\beta t),e^{\alpha t}sin(\beta t)$ 
+\end{enumerate}
+
+\subparagraph*{Non omogenee:Variazione delle costanti}
+Equazioni nella forma:
+\[
+     ax''(t) + bx'(t) + cx(t)= f(t)
+\]
+1)Si determina la soluzione generale dell'omogenea associata:
+\[
+     x_0(t) = c_1 x_1(t) + c_2x_2(t)    
+\]
+2) Si trova una soluzione particolare nella forma
+\[
+     x_p(t) = c_1(t) x_1(t) + c_2(t) x_2(t)    
+\]
+Dal seguente sistema si ricavano le espressioni di $c'_1(t), c'_2(t)$:
+\[
+   \begin{cases}
+    c_1'(t) x_1(t) + c_2'(t) x_2(t) = 0 
+    \\
+    c_1'(t) x_1'(t) + c_2'(t) x_2'(t) = f(t)
+   \end{cases}    
+\]
+per poi trovare $c_1(t), c_2(t)$ integrando:
+\[
+    c_1(t) = \int_{}^{} c'_1(t) \, dt \qquad c_2(t) = \int_{}^{} c'_2(t) \,dt
+\]
+3)La soluzione generale è
+\[
+      x(t)= x_0(t) + x_p(t)    
+\]
+
+\end{document}
