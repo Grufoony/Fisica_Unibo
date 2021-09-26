@@ -6,5 +6,5 @@ all:
 	xelatex ./source/fisica_relativistica.tex
 	xelatex ./source/analisi_1.tex
 	xelatex ./source/analisi_2.tex
-        xelatex ./source/foglio_esame_analisi1.tex
+    xelatex ./source/foglio_esame_analisi1.tex
 	clear
