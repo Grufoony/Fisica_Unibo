@@ -1,0 +1,60 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definizione}[section]
+\theoremstyle{theroem}
+\newtheorem{theorem}{Teorema}[section]
+
+\begin{document}
+	\title{Appunti dal corso Introduzione ai Sistemi Complessi}
+	\author{Grufoony}
+	\maketitle
+	\section{Sistema Complesso}
+		\begin{definition}
+			\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro.
+		\end{definition}
+		Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia studiando prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
+		Un'osservazione importante che va effettuata è che un sistema complesso \textbf{prevede}, non descrive.
+		Alcune delle proprietà principali sono:
+		\begin{itemize}
+			\item \textbf{complessità}: presenza di molti d.o.f. (molti sottosistemi)
+			\item \textbf{proprietà emergenti}: derivano dal grande numero di sottosistemi. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
+			\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
+		\end{itemize}
+	\section{Distribuzioni}
+		Vediamo ora una serie di distribuzioni e teoremi ad esse legati che ci aiuteranno nell'analisi dei sistemi.
+		\begin{definition}\hfill
+			\begin{itemize}
+				\item Gaussiana\\	$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+				\item Esponenziale\\	$\rho(x)=\frac{1}{k}e^{-\frac{x}{k}}$
+				\item Potenza\\		$\rho(x)\propto\frac{1}{x^a}$, con $a>0$
+			\end{itemize}
+		\end{definition}
+		\begin{definition}
+			Momenti di una distribuzione:\\
+			$<x^k>=\int_{-\infty}^{+\infty}x^k\rho(x)dx$
+		\end{definition}
+		\begin{theorem}
+			Invarianza di scala:\\
+			se $\rho(x)\propto\frac{1}{x^a}$ allora posto $y=\lambda x$ si ha $\rho(y)=\frac{\lambda^a}{x^a}\propto\frac{1}{y^a}$
+		\end{theorem}
+		\begin{theorem}
+			Limite centrale:\\
+			Siano ${x_k}$ variabili casuali indipendenti, allora:\\
+			$\lim_{N\to\infty}z=\frac{1}{\sqrt{N}}\sum_{k=1}^{N}x_k=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{z^2}{2\sigma^2}}$
+		\end{theorem}
+		Ora possiamo dare una definizione di probabilità:
+		\begin{definition} Probabilità:\\
+			$p(x\in[a,b])=\int_{a}^{b}\rho(x)dx$
+		\end{definition}
+		\begin{definition} Probabilità cumulata:\\
+			$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
+		\end{definition}
+    
+\end{document}
