@@ -66,8 +66,26 @@
 			\item \textbf{periodico}, dove ho i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
 			\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti i soggetti.
 		\end{itemize}
-		Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\hfill
+		Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\\
 		Nella maggior parte dei sistemi non tutti i soggetti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
-		
+		\subsection{Random Walk 1D}
+			Il modello più basilare di sistema complesso è sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
+			Sia $p=\frac{1}{2}$ la probabilità di muoversi verso destra (quindi anche a sinistra) di un passo $\Delta x$. Si hanno:
+			\begin{itemize}
+				\item \{R\}: $p(t+\Delta t)=x(t)+\Delta x$
+				\item \{L\}: $p(t+\Delta t)=x(t)-\Delta x$
+			\end{itemize}
+			Dopo \textit{n} passi si ha quindi $p(n\Delta t)=x_0+\sum_k\xi_k\Delta x$ con $\xi(t)=\pm 1$.
+			Inoltre si può verificare che $<\xi_k>=0$, $<\xi_k^2>=1$, $<\xi_k\xi_h>=<\xi_k><\xi_h>, k\neq h$.
+			Per il teorema del limite centrale si ha:
+			$\sum_k^n\xi_k\Delta x=\sqrt{n\Delta t}\left(\frac{1}{\sqrt{n}}\sum_k^n\xi_k\right)\frac{\Delta x}{\sqrt{\Delta t}}=\frac{1}{\sqrt{2\pi Dt}}e^{-\frac{z^2}{2Dt}}$, con $z$ variabile gaussiana.
+			Introducendo il concetto di diffusione:\\
+			\begin{definition}
+				Diffusione. $D=\frac{\Delta x^2}{\Delta t}$
+			\end{definition}
+			si può descrivere l'evoluzione del sistema come $x(t)=x_0+z\sqrt{Dt}$
+			Si utilizza $\sqrt{n}$ per normalizzare in quanto è l'unico esponente non divergente.
+			La varianza della gaussiana cresce nel tempo, infatti calcolando i momenti della distribuzione si trova $<x(t)>=x_0$, $<(x(t)-x_0)^2>=Dt$.
+			Se la topologia del sistema fosse una circonferenza (e non una retta), si avrebbe un rilassamento esponenziale a una situazione stazionaria.
 
 \end{document}
