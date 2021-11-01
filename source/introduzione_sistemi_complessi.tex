@@ -6,9 +6,8 @@
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 
-\theoremstyle{definition}
+\theoremstyle{theorem}
 \newtheorem{definition}{Definizione}[section]
-\theoremstyle{theroem}
 \newtheorem{theorem}{Teorema}[section]
 
 \begin{document}
@@ -56,5 +55,19 @@
 		\begin{definition} Probabilità cumulata:\\
 			$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
 		\end{definition}
-    
+	\section{Costruzione di un modello}
+		Punto fondamentale di un sistema complesso è costruire un modello matematico che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
+		La prima cosa da definire è l'\textit{ambiente} in cui ci troviamo. Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
+		Altro punto fondamentale è definire \textit{spazio e tempo}. Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi è preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
+		Una volta definito lo spazio bisogna poi decidere le condizioni al contorno, ossia il comportamento ai bordi. 
+		Posso a questo punto avere \textit{barriere} di tre tipi:
+		\begin{itemize}
+			\item \textbf{riflettenti}, dove ho un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattività delle pareti}.
+			\item \textbf{periodico}, dove ho i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
+			\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti i soggetti.
+		\end{itemize}
+		Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\hfill
+		Nella maggior parte dei sistemi non tutti i soggetti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
+		
+
 \end{document}
