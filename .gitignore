@@ -1,3 +1,4 @@
+#latex compilation files
 *.txt
 *.log
 *.aux
