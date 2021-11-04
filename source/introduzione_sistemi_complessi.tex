@@ -87,5 +87,53 @@
 			Si utilizza $\sqrt{n}$ per normalizzare in quanto è l'unico esponente non divergente.
 			La varianza della gaussiana cresce nel tempo, infatti calcolando i momenti della distribuzione si trova $<x(t)>=x_0$, $<(x(t)-x_0)^2>=Dt$.
 			Se la topologia del sistema fosse una circonferenza (e non una retta), si avrebbe un rilassamento esponenziale a una situazione stazionaria.
+		\subsection{Random Walk 2D}
+			Volendo espandere il modello di random walk ad uno spazio 2D si nota subito come, essendo ogni asse indipendente dall'altro, si possa semplicemente comporre due gaussiane:\\
+			\begin{equation}
+				(x,y)\simeq\frac{1}{2\pi\Delta t}e^{-\frac{x^2+y^2}{2\Delta t}}=\rho(x,y,t)
+			\end{equation}
+			Dove la diffusione segue la definizione precedente ed è la stessa in tutte le direzioni.
+			La funzione $\rho(x,y,t)$ rappresnta di fatto la probabilità che la il soggetto in analisi si trovi in un volume $\Delta x\Delta y$.
+			Si può riscrivere la relazione precedente in coorfinate polari ottenendo:
+			\begin{equation}
+				\rho(r,\theta,t)=\frac{r}{2\pi\Delta t}e^{-\frac{r^2}{2\Delta t}}
+			\end{equation}
+			studiando più semplicemente l'allontanamento dall'origine.
+			In particolare, l'allontanamento medio risulta:
+			\begin{equation}
+				<r>=\int_0^\infty\rho(r,\theta,t)rdr=\sqrt{\frac{\pi}{2}\Delta t}
+			\end{equation}
+			e la densità diminuisce quindi esponenzialmente.
+		\subsection{Modello Economico}
+			Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
+			Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
+			Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.
+			\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla povertà.
+			Il sistema ha quindi i seguenti limiti:
+			\begin{equation}
+				\begin{cases}
+					\sum_kn_k=N\\
+					n_k\geq 0
+				\end{cases}
+			\end{equation}
+			con \textit{N} costante, quindi non si ha creazione/distruzione di denaro.
+			La probabilità di trovare un individuo con n soldi è:
+			\begin{equation}
+				p(n)=\frac{\binom{M+N-2-n}{M-2}}{\binom{M+N-1}{N-1}}
+			\end{equation}
+			e, ponendo $\overline{n}=\frac{N}{M}$, si può calcolare:
+			\begin{equation}
+				\lim_{M\to\infty}\frac{1}{\overline{n}}=\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{\frac{n}{\bar{n}}}
+			\end{equation}
+			quindi la probabilità segue un decadimento esponenziale.\\
+			Il modello prevede quindi:
+			\begin{itemize}
+				\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
+				\item esiste un tempo in cui un povero diventa ricco (e viceversa)
+				\item simile alla distribuzione di energia di Maxwell-Boltzmann
+				\item se chi è ricco pagasse di più si otterrebbe una curva a campana
+			\end{itemize}
+			Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
+
 
 \end{document}
