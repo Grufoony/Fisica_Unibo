@@ -18,4 +18,4 @@ Scaricandoli si possono evadere alcuni problemi con la visualizzazione di alcuni
 Contiene i codici sorgente LaTeX dei PDF in prima pagina.
 
 ### utils
-Contiene complementi ad alcuni corsi, ad esempio mini-codici python.
+Contiene complementi ad alcuni corsi, ad esempio scripts python.
