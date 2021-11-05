@@ -125,7 +125,7 @@
 			\begin{equation}
 				\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
 			\end{equation}
-			quindi la probabilità segue un decadimento esponenziale.\\
+			quindi la probabilità segue una decrescita esponenziale.\\
 			Il modello prevede quindi:
 			\begin{itemize}
 				\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
@@ -134,6 +134,37 @@
 				\item se chi è ricco pagasse di più si otterrebbe una curva a campana
 			\end{itemize}
 			Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
-
+		\subsection{Modello Economico Evoluto}
+			Per adattare il modello precedente alla realtà si introduce una microdinamica sugli scambi di denaro.\\
+			Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. All'equilibrio si deve avere:
+			\begin{equation}
+				\pi_+(n-1)p(n-1)+\pi_-(n+1)p(n+1)=\pi_+(n)p(n)+\pi_-(n)p(n)
+			\end{equation}
+			e in particolare è verificato il \textit{bilancio dettagliato}:
+			\begin{equation}
+				\pi_+(n-1)p(n-1)\pi_+(n)p(n)=0
+			\end{equation}
+			Si possono ora ipotizzare le seguenti dipendenze:
+			\begin{equation}
+				\begin{cases}
+					\pi_+(n-1)-\pi_-(n)\simeq a\\
+					\frac{\pi_+(n-1)+\pi_-(n)}{2}\simeq bn
+				\end{cases}
+			\end{equation}
+			Sviluppando con Taylor ed effettuando qualche calcolo si può procedere:
+			\begin{equation}
+				ap(n)+\frac{\partial}{\partial n}(bn)p(n)=0
+			\end{equation}
+			\begin{equation}
+				-\frac{a}{bn}=\frac{1}{(nb)p(n)}\frac{\partial}{\partial n}(bn)p(n)
+			\end{equation}
+			\begin{equation}
+				-\frac{a}{b}\ln(n)=\ln(bn)p(n) + const
+			\end{equation}
+			In conclusione:
+			\begin{equation}
+				p(n)\propto\frac{1}{b}\frac{1}{n^{\frac{a}{b}+1}}
+			\end{equation}
+			e si ottiene l'andamento a potenza.
 
 \end{document}
