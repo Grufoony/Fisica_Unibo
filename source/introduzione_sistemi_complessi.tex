@@ -55,6 +55,37 @@
 		\begin{definition} Probabilità cumulata:\\
 			$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
 		\end{definition}
+	\section{Informazione ed entropia}
+		\begin{definition}
+			Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
+		\end{definition}
+		Considerando una sequenza (\textit{codifica}) $\{x_k\}_1^N$ si può assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
+		Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
+		\begin{definition}
+			$-\ln(x)$ informazione portata dal carattere $x$
+		\end{definition}
+		\begin{definition}
+			$S=-\sum_kp(x_k)\ln(p(x_k))$ entropia di informazione (informazione media portata dale variabili $x_k$)
+		\end{definition}
+		Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
+		Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza.
+		Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
+		\begin{theorem}
+			legge dei grandi numeri\\
+			Siano A e B due eventi distinti (osservati N volte), allora si ha che $\lim_{N\to\infty}\frac{p(AB)}{p(A)}=p(B/A)$
+		\end{theorem}
+		Per capire la sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
+		L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
+		\begin{definition}
+			$p_{ij}=p(x_j/x_i)$ matrice stocastica
+		\end{definition}
+		La matrice stocastica ha per definizione le seguenti proprietà:
+		\begin{itemize}
+			\item $0\leq p_{ij}\leq 1$
+			\item $\sum_jp_{ij}=1$
+		\end{itemize}
+
+
 	\section{Costruzione di un modello}
 		Punto fondamentale di un sistema complesso è costruire un modello matematico che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
 		La prima cosa da definire è l'\textit{ambiente} in cui ci troviamo. Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
@@ -166,5 +197,37 @@
 				p(n)\propto\frac{1}{b}\frac{1}{n^{\frac{a}{b}+1}}
 			\end{equation}
 			e si ottiene l'andamento a potenza.
+		\subsection{La rovina di un giocatore}
+			Consideriamo un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
+			Il gioco finisce ai "bordi" per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
+			Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
+			Come nel modello economico evoluto si ha:
+			\begin{equation}
+				P_M(k)=pP_M(k+1)+qP_M(k-1)
+			\end{equation}
+			con i vincoli
+			\begin{equation}
+				\begin{cases}
+					P_M(0)=0\\
+					P_M(M)=1
+				\end{cases}
+			\end{equation}
+			Ragionando per induzione si ottiene:
+			\begin{equation}
+				P_M(k+1)-P_M(k)=\frac{q}{p}\left[P_M(k)-P_M(k-1)\right]=\left(\frac{q}{p}\right)^kP_M(1)
+			\end{equation}
+			\begin{equation}
+				P_M(k)=\frac{1-\left(\frac{q}{p}\right)^k}{1-\left(\frac{q}{p}\right)^M}
+			\end{equation}
+			Ponendo ora $p>q$,
+			\begin{equation}
+				P_\infty(k)=1-\left(\frac{q}{p}\right)^k
+			\end{equation}
+			In particolare, considerando un gioco equo, si può notare come $P_M(k)=\frac{k}{M}$ e quindi:
+			\begin{itemize}
+				\item il gioco è alla pari solo se $k\simeq M$
+				\item la probabilità di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
+				\item contro un casinò ($M\to\infty$) la probabilità di vincita è evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
+			\end{itemize}
 
 \end{document}
