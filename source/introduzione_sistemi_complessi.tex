@@ -126,7 +126,7 @@
 		Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
 		Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto borwniano}.\\
 		In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
-		Sono stati effettuati studi sui linguaggi, che premiano finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
+		Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 4
 	\section{Networks e problemi di trasporto}
 		\begin{theorem}
@@ -313,7 +313,29 @@
 			Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
 			Un'utile applicazione dei modelli di Markov si trova nel linguaggio (verbi) e in biologia (DNA).
 		\subsection{Penney's game}
-			DA AGGIUNGERE
+			Si prenda una moneta e la si lanci all'infinito.
+			Si vuole scommettere con un'altra persona su una terna di uscite consecutive dai lanci e ci si chiede come si possa vincere più facilmente.
+			Analizzando attentamente il problema si può notare come l'uscita delle sequenze non sia casuale ma segua un percorso ben preciso: l'unica sequenza casuale è quella data dalle prime tre uscite.
+			In questo modo risulta abbastanza semplice fregare l' avversario: facendolo scegliere per primo, è sempre possibile scegliere una sequenza più probabile della sua.\\
+			Eseguendo i calcoli si nota subito come la probabilità stazionaria del sistema sia data da $\left(\frac{1}{2}\right)^3=\frac{1}{8}=12.5\%$.
+			Scegliendo per secondi si vince sempre a meno che la sequenza dell'avversario non esca dai primi tre lanci, quindi eseguendo i calcoli sulle probabilità si ottiene la seguente tabella:
+			\begin{center}
+				\begin{tabular}{ |c|c|c|c| } 
+					\hline
+					1st player's choice& 2nd player's choice & 2nd player's winning chance\\
+					\hline
+					\emph{HH}H & \textbf{T}\emph{HH} & 87.5\% \\
+					\emph{HH}T & \textbf{T}\emph{HH} & 75.0\% \\
+					\emph{HT}H & \textbf{H}\emph{HT} & 66.7\% \\
+					\emph{HT}T & \textbf{H}\emph{HT} & 66.7\% \\
+					\emph{TH}H & \textbf{T}\emph{TH} & 66.7\% \\
+					\emph{TH}T & \textbf{T}\emph{TH} & 66.7\% \\
+					\emph{TT}H & \textbf{H}\emph{TT} & 75.0\% \\
+					\emph{TT}T & \textbf{H}\emph{TT} & 87.5\% \\
+					\hline
+				\end{tabular}
+			\end{center}
+
 		\subsection{Random Walk non omogenea}
 			Si consideri ora una random walk 1D con probabilità non uniforme in un reticolo di passo $\Delta x$.
 			Sia $\epsilon$ un parametro e si definiscano le probabilità:
@@ -324,7 +346,7 @@
 				\end{cases}
 			\end{equation}
 			Si può verificare facilmente come le probabilità siano ben definite.
-			Il sistema tende a muoversi più velocemente nel verso positivo delle \textit{x} e più lentamente nel verso opposto: vi è quindi un equilibrio locale (ogni nodo è identico).
+			Il sistema tende a muoversi più velocemente nel verso positivo delle \textit{x} e più lentamente nel verso opposto, assomigliando a una scatola con aria a diversa temperatura: vi è quindi un equilibrio locale (ogni nodo è identico).
 			Si può osservare come:
 			\begin{equation}
 				\begin{split}
@@ -332,4 +354,25 @@
 					<\Delta x^2>&=(4\Delta x^2)(p_{++}+p_{--})+\Delta x^2(p_++p_-)=\left(\frac{5}{2}+\frac{3}{2}\epsilon x\right)\Delta x^2
 				\end{split}
 			\end{equation}
+			Ogni passo ho un \textit{enemble} differente, quindi lo spazio non è omogeneo.
+			Ponendo $T(x)=<\Delta x^2>$ come funzione corrispondente alla temperatura fisica, si ottiene un gradiente costante:
+			\begin{equation}
+				\frac{dT}{dx}=\frac{3}{2}\epsilon\Delta x^2
+			\end{equation}
+			Questo gradiente si ritrova spesso in natura, ad esempio i batteri variano la velocità di movimento (casuale) dei loro flagelli seguendo un gradiente di cibo.
+			Per essere apprezzabile la variazione di temperatura deve essere tale che $\Delta T=\frac{\partial T}{\partial x}\Delta x\propto\Delta x^3$ e in un limite continuo si ottiene:
+			\begin{equation}
+				\begin{split}
+					\frac{\partial p}{\partial t}&=\frac{1}{2}\frac{\partial p}{\partial x}T(x)\frac{\partial p}{\partial x}p(x,t)\\
+					\frac{d<x>}{dt}&=\frac{1}{2}\int x\frac{\partial p}{\partial x}T(x)\frac{\partial p}{\partial x}p(x,t)>0\quad \frac{\partial T}{\partial x}>0
+				\end{split}
+			\end{equation}
+			Andando a calcolare media e mediana del sistema si nota come:
+			\begin{equation}
+				\begin{split}
+					\int xp(x,t)dx&>0\\
+					-\int_{-L}^0p(x,t)dx&+\int_0^Lp(x,t)dx<0
+				\end{split}
+			\end{equation}
+			In conclusione la maggior parte delle particelle si trova nella zona fredda ($x<0$), come vuole la fisica, ma la media della distribuzione si trova nella zona calda ($x>0$)
 \end{document}
