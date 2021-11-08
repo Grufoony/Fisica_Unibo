@@ -14,6 +14,7 @@
 	\title{Appunti dal corso Introduzione ai Sistemi Complessi}
 	\author{Grufoony}
 	\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 1
 	\section{Sistema Complesso}
 		\begin{definition}
 			\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro.
@@ -26,6 +27,7 @@
 			\item \textbf{proprietà emergenti}: derivano dal grande numero di sottosistemi. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
 			\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
 		\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 2		
 	\section{Distribuzioni}
 		Vediamo ora una serie di distribuzioni e teoremi ad esse legati che ci aiuteranno nell'analisi dei sistemi.
 		\begin{definition}\hfill
@@ -55,6 +57,7 @@
 		\begin{definition} Probabilità cumulata:\\
 			$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
 		\end{definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 3	
 	\section{Informazione ed entropia}
 		\begin{definition}
 			Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
@@ -63,6 +66,10 @@
 		Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
 		\begin{definition}
 			$-\ln(x)$ informazione portata dal carattere $x$
+		\end{definition}
+		\begin{definition}
+			Probabilità stazionaria\\
+			La probabilità stazionaria è il numero di volte che questo evento accade in una sequenza.
 		\end{definition}
 		\begin{definition}
 			$S=-\sum_kp(x_k)\ln(p(x_k))$ entropia di informazione (informazione media portata dale variabili $x_k$)
@@ -85,6 +92,7 @@
 			\item $0\leq p_{ij}\leq 1$
 			\item $\sum_jp_{ij}=1$
 		\end{itemize}
+		Questa matrice è molto importante, essento intrinsecamente legata alla probabilità condizionata, ed è alla base di ogni problema di trasporto.
 		Si consideri ora una sequenza infinita e sia $p_i$ la probabilità di avere l'elemento $x_i$ in quella posizione.
 		Qual è la probabilità $p_j$ di avere l'elemento successivo?
 		Sia \textit{n} il numero di passi per arrivare in posizione \textit{i}, allora:
@@ -112,16 +120,26 @@
 		\begin{equation}
 			S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
 		\end{equation}
-		Questa entropia fornisce un'importante risultato sulla reversibilità del processo:
+		Nei linguaggi l'aggiunta di un carattere non cambia di molto l'entropia (per fortuna, altrimenti sarebbe molto difficile parlarsi).
+		Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
 		se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
 		Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
-		Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto borwniano}.
-		\begin{definition}
-			Struttura di catena.\\
-			Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
-		\end{definition}
+		Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto borwniano}.\\
+		In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
+		Sono stati effettuati studi sui linguaggi, che premiano finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 4
+	\section{Networks e problemi di trasporto}
+		\begin{theorem}
+			Un grafico random ha un numero esponenziale di LOOP rispetto ai nodi.
+		\end{theorem}
+		Corollario: si creano delle \textit{correnti}.
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO N
 	\section{Costruzione di un modello}
 		Punto fondamentale di un sistema complesso è costruire un modello matematico che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
 		La prima cosa da definire è l'\textit{ambiente} in cui ci troviamo. Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
@@ -203,7 +221,12 @@
 			Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
 		\subsection{Modello Economico Evoluto}
 			Per adattare il modello precedente alla realtà si introduce una microdinamica sugli scambi di denaro.\\
-			Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. All'equilibrio si deve avere:
+			Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. Il sistema possiede una \textit{struttura di catena}:
+			\begin{definition}
+				Struttura di catena.\\
+				Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
+			\end{definition}
+			A causa di questa struttura, all'equilibrio si deve avere:
 			\begin{equation}
 				\pi_+(n-1)p(n-1)+\pi_-(n+1)p(n+1)=\pi_+(n)p(n)+\pi_-(n)p(n)
 			\end{equation}
@@ -225,7 +248,7 @@
 					ap(n)+\frac{\partial}{\partial n}(bn)p(n)\simeq 0
 				\end{split}
 			\end{equation}
-			Si possono notare ora le seguenti dipendenze:
+			Si possono notare ora le seguenti dipendenze, introducendo la coppia di parametri costanti \textit{(a, b)}:
 			\begin{equation}
 				\begin{cases}
 					\pi_+(n-1)-\pi_-(n)\simeq a\\
@@ -243,7 +266,7 @@
 			\end{equation}
 			si ottiene esattamente l'andamento a potenza ricercato.
 		\subsection{La rovina di un giocatore}
-			Consideriamo un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
+			Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
 			Il gioco finisce ai "bordi" per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
 			Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
 			Come nel modello economico evoluto si ha:
@@ -274,5 +297,39 @@
 				\item la probabilità di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
 				\item contro un casinò ($M\to\infty$) la probabilità di vincita è evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
 			\end{itemize}
-			
+		\subsection{Broken Stick Model/Modello di Markov}
+			Si consideri un segmento di lunghezza unitaria nel quale viene inserito casualmente un punto $x_1\in[0,1]$ secondo una distribuzione uniforme.
+			Si scarti ora il segmeno $[0,x_1]$ e si iteri il processo per \textit{N} volte: si tratta di un processo ricorsivo con memoria del passato.
+			Essendo la distribuzione di probabilità uniforme risulta ovvio come $<x>=\frac{1}{2}$ quindi è possibile riscalare il tutto con una variabile $y\rightarrow\frac{y}{2}$
+			Definita la densità $\rho$ del sistema si può scrivere:
+			\begin{equation}
+				\begin{split}
+					\rho_{N+1}\left(\frac{y}{2}\right)\frac{dy}{2}&=\rho_N(y)dy\\
+					\Rightarrow\lim_{N\to\infty}\rho_N(y)&\propto\frac{1}{y}
+				\end{split}
+			\end{equation}
+			Il risultato è una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
+			Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non posso più riattaccarlo.
+			Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
+			Un'utile applicazione dei modelli di Markov si trova nel linguaggio (verbi) e in biologia (DNA).
+		\subsection{Penney's game}
+			DA AGGIUNGERE
+		\subsection{Random Walk non omogenea}
+			Si consideri ora una random walk 1D con probabilità non uniforme in un reticolo di passo $\Delta x$.
+			Sia $\epsilon$ un parametro e si definiscano le probabilità:
+			\begin{equation}
+				\begin{cases}
+					p_{++}=p_{--}=\frac{1}{4}(1+\epsilon x)\quad x\geq 0\quad\Rightarrow x\rightarrow x\pm 2\Delta x\\
+					p_+=p_-=\frac{1}{4}(1-\epsilon x)\quad x<0\quad\Rightarrow x\rightarrow x\pm \Delta x
+				\end{cases}
+			\end{equation}
+			Si può verificare facilmente come le probabilità siano ben definite.
+			Il sistema tende a muoversi più velocemente nel verso positivo delle \textit{x} e più lentamente nel verso opposto: vi è quindi un equilibrio locale (ogni nodo è identico).
+			Si può osservare come:
+			\begin{equation}
+				\begin{split}
+					<\Delta x>&=0\\
+					<\Delta x^2>&=(4\Delta x^2)(p_{++}+p_{--})+\Delta x^2(p_++p_-)=\left(\frac{5}{2}+\frac{3}{2}\epsilon x\right)\Delta x^2
+				\end{split}
+			\end{equation}
 \end{document}
