@@ -72,7 +72,8 @@
 		Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
 		\begin{theorem}
 			legge dei grandi numeri\\
-			Siano A e B due eventi distinti (osservati N volte), allora si ha che $\lim_{N\to\infty}\frac{p(AB)}{p(A)}=p(B/A)$
+			Siano A e B due eventi distinti (osservati N volte), allora si ha che\\
+			$\lim_{N\to\infty}\frac{p(AB)}{p(A)}=p(B/A)$
 		\end{theorem}
 		Per capire la sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
 		L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
@@ -84,6 +85,41 @@
 			\item $0\leq p_{ij}\leq 1$
 			\item $\sum_jp_{ij}=1$
 		\end{itemize}
+		Si consideri ora una sequenza infinita e sia $p_i$ la probabilità di avere l'elemento $x_i$ in quella posizione.
+		Qual è la probabilità $p_j$ di avere l'elemento successivo?
+		Sia \textit{n} il numero di passi per arrivare in posizione \textit{i}, allora:
+		\begin{equation}
+			p_j^{n+1}=\sum_ip_{ij}p_j^n
+		\end{equation}
+		Risulta quindi utile il seguente teorema:
+		\begin{theorem}
+			Esiste un autovettore con autovalore $\lambda_0=1$, ossia\\
+			$p_j^s=\sum_ip_{ij}p_j^s$
+		\end{theorem}
+		Corollari:
+		\begin{itemize}
+			\item è un vettore stazionario situato nel primo quadrante
+			\item gli iperpiani sono invarianti per $p_{ij}$
+			\item $\lambda_i<1\quad\forall i\neq 0$
+			\item $p_j^{n+1}=\sum_ip_{ij}p_j^n=1\Leftrightarrow\sum_ip_i^n=1$
+		\end{itemize}
+		A questo punto si può calcolare come cambi l'entropia di informazione di una catena aggiungendo un carattere.
+		\begin{definition}
+			Proprietà di Markov (di tempo presente)\\
+			$P(\{x_1,...,x_{n+1}\})=P(x_{n+1}/Px_n)P(\{x_1,...,x_{n}\})$
+		\end{definition}
+		Si può quindi scrivere l'entropia dell'(N+1)esimo passo come:
+		\begin{equation}
+			S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
+		\end{equation}
+		Questa entropia fornisce un'importante risultato sulla reversibilità del processo:
+		se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
+		Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
+		Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto borwniano}.
+		\begin{definition}
+			Struttura di catena.\\
+			Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
+		\end{definition}
 
 
 	\section{Costruzione di un modello}
@@ -138,7 +174,7 @@
 		\subsection{Modello Economico}
 			Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
 			Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
-			Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.
+			Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.\\
 			\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla povertà.
 			Il sistema ha quindi i seguenti limiti:
 			\begin{equation}
@@ -156,7 +192,7 @@
 			\begin{equation}
 				\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
 			\end{equation}
-			quindi la probabilità segue una decrescita esponenziale.\\
+			quindi la probabilità decresce esponenzialmente.\\
 			Il modello prevede quindi:
 			\begin{itemize}
 				\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
@@ -173,30 +209,39 @@
 			\end{equation}
 			e in particolare è verificato il \textit{bilancio dettagliato}:
 			\begin{equation}
-				\pi_+(n-1)p(n-1)\pi_+(n)p(n)=0
+				\pi_+(n-1)p(n-1)=\pi_-(n)p(n)\quad \forall n\geq 1
 			\end{equation}
-			Si possono ora ipotizzare le seguenti dipendenze:
+			Normalizzata la distribuzione è possibile iterare il tutto:
+			\begin{equation}
+				p(n)=\prod_{k=1}^n\frac{\pi_+(k-1)}{1pi_-(k)}p(0)
+			\end{equation}
+			Riscrivendo un maniera più comoda il bilancio dettagliato, si può poi procedere:
+			\begin{equation}
+				\pi_+(n-\frac{1}{2})p(n-\frac{1}{2})=\pi_-(n+\frac{1}{2})p(n+\frac{1}{2})
+			\end{equation}
+			\begin{equation}
+				\begin{split}
+					[\pi_+(n)-\pi_-(n)]p(n)-\frac{1}{2}\frac{\partial}{\partial n}[\pi_+(n)-\pi_-(n)]p(n)\simeq 0\\
+					ap(n)+\frac{\partial}{\partial n}(bn)p(n)\simeq 0
+				\end{split}
+			\end{equation}
+			Si possono notare ora le seguenti dipendenze:
 			\begin{equation}
 				\begin{cases}
 					\pi_+(n-1)-\pi_-(n)\simeq a\\
-					\frac{\pi_+(n-1)+\pi_-(n)}{2}\simeq bn
+					\pi_+(n)\simeq bn-\frac{a}{2}\\
+					\pi_-(n)\simeq bn+\frac{a}{2}
 				\end{cases}
 			\end{equation}
-			Sviluppando con Taylor ed effettuando qualche calcolo si può procedere:
+			Cercando ora l'andamento di $p(n)$:
 			\begin{equation}
-				ap(n)+\frac{\partial}{\partial n}(bn)p(n)=0
+				\begin{split}
+					p(n)-p(n-1)&=\left(\frac{bn-\frac{a}{2}}{bn+\frac{a}{2}}-1\right)p(n-1)\\
+					\frac{dp}{dn}&=-\frac{a}{bn}p(n-1)\\
+					\Rightarrow\lim_{n\to\infty}p(n)&\propto n^{-\frac{a}{b}}
+				\end{split}
 			\end{equation}
-			\begin{equation}
-				-\frac{a}{bn}=\frac{1}{(nb)p(n)}\frac{\partial}{\partial n}(bn)p(n)
-			\end{equation}
-			\begin{equation}
-				-\frac{a}{b}\ln(n)=\ln(bn)p(n) + const
-			\end{equation}
-			In conclusione:
-			\begin{equation}
-				p(n)\propto\frac{1}{b}\frac{1}{n^{\frac{a}{b}+1}}
-			\end{equation}
-			e si ottiene l'andamento a potenza.
+			si ottiene esattamente l'andamento a potenza ricercato.
 		\subsection{La rovina di un giocatore}
 			Consideriamo un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
 			Il gioco finisce ai "bordi" per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
@@ -229,5 +274,5 @@
 				\item la probabilità di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
 				\item contro un casinò ($M\to\infty$) la probabilità di vincita è evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
 			\end{itemize}
-
+			
 \end{document}
