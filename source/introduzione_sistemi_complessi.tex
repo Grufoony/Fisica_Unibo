@@ -448,6 +448,21 @@
 				\end{split}
 			\end{equation}
 			In conclusione la maggior parte delle particelle si trova nella zona fredda ($x<0$), come vuole la fisica, ma la media della distribuzione si trova nella zona calda ($x>0$)
-			
+	\section{Modelli di Trasporto}
+		Consideriamo due punti ($A$ e $B$) di un generico spazio e colleghiamoli con un canale immaginario, facendo riferimento alla Fig.1, possiamo definire il flusso $\Phi_{A \rightarrow B}$ di una quantità fisica trasportata nell'unità di tempo tra i due punti.
+		\begin{figure}[ht!]
+    			\centering
+    			\begin{tikzpicture}
+  				\Vertex[label=$A$, color=white]{A}
+  				\Vertex[label=$B$,color=white,x=2.5,y=0]{B}
+  				\Edge[Direct, lw=0.5pt, label=$\Phi_{A \rightarrow B}$](A)(B)
+			\end{tikzpicture}
+    			\caption{Caption}
+		\end{figure}
+		Definiamo $V_{A/B}$ una certa proprietà del nodo $A/B$, questa proprietà ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
+		\begin{equation}
+    			\Phi_{A \rightarrow B} \ R = V_A - V_B
+		\end{equation} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
+		Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
 			
 \end{document}
