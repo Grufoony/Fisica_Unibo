@@ -467,5 +467,19 @@
     			\Phi_{A \rightarrow B} \ R = V_A - V_B
 		\end{equation} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
 		Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
-			
+		\begin{figure}[ht!]
+    			\centering
+    			\begin{tikzpicture}
+ 				\Vertex[label=$A$, color=white]{A}
+  				\Vertex[label=$B$,color=white,x=1,y=1]{B}
+  				\Vertex[label=$C$,color=white,x=-1,y=1]{C}
+  				\Vertex[label=$D$,color=white,x=0,y=1]{D}
+  				\Vertex[label=$S$,color=white,x=0,y=-1]{S}
+  				\Edge[Direct, lw=0.5pt](A)(B)
+  				\Edge[Direct, lw=0.5pt](A)(C)
+  				\Edge[Direct, lw=0.5pt](A)(D)
+  				\Edge[Direct, lw=0.5pt](S)(A)
+			\end{tikzpicture}
+    			\caption{Caption}
+		\end{figure}
 \end{document}
