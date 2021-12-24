@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, a4paper]{book}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[main=italian]{babel}
@@ -8,8 +8,8 @@
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{tikz-network}
-\usepackage[pdftex]{graphics,graphicx,color}
-\usepackage{braket}
+%\usepackage[pdftex]{graphics,graphicx,color}
+%\usepackage{braket}
 
 \theoremstyle{theorem}
 \newtheorem{definition}{Definizione}[section]
@@ -19,10 +19,11 @@
 	\title{Appunti dal corso Introduzione ai Sistemi Complessi}
 	\author{Grufoony}
 	\maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 1
-	\section{Sistema Complesso}
+	\tableofcontents
+	\chapter{Introduzione} %CAPITOLO 1
+		\section{Sistema Complesso}
 		\begin{definition}
-			\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro.
+			\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro, chiamati agenti.
 		\end{definition}
 		Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia studiando prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
 		Un'osservazione importante che va effettuata è che un sistema complesso \textbf{prevede}, non descrive.
@@ -32,387 +33,70 @@
 			\item \textbf{proprietà emergenti}: derivano dal grande numero di sottosistemi. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
 			\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
 		\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 2		
-	\section{Distribuzioni}
-		Vediamo ora una serie di distribuzioni e teoremi ad esse legati che ci aiuteranno nell'analisi dei sistemi.
-		\begin{definition}\hfill
+		
+		\section{Costruzione di un modello}
+		Punto fondamentale di un sistema complesso è costruire un modello che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
+		Si possono distinguere due tipologie di modelli, le quali verranno ora analizzate.
+		\subsection{Modelli ad agente}
+			La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno stduio di tipo bottom-up (dal particolare al generale).
+			Assunzione fondamentale è di avere piena conoscenza sui comportamenti dei singoli agenti e sull'ambiente in cui questi si relazionano.
+			Una volta \emph{formalizzati} matematicamente i comportamenti dei singoli è possibile procedere con una \emph{simulazione}, la quale fornirà una possibile evoluzione del sistema.
+			È essenziale notare come in questo caso il risultato ottenuto sia solamente uno dei tanti possibili: bisognerà quindi effettuare la simulazione numerose volte e mediare sui risultati ottenuti.
+			Riguardo la costruzione del modello, la prima cosa da definire è l'\textit{ambiente} in cui ci si trova. 
+			Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
+			Altro punto fondamentale è definire \textit{spazio e tempo}. 
+			Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi è preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
+			Una volta definito lo spazio bisogna poi decidere le condizioni al contorno, ossia il comportamento ai bordi. 
+			Si possono avere \textit{barriere} di tre tipi:
 			\begin{itemize}
-				\item Gaussiana\\	$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
-				\item Esponenziale\\	$\rho(x)=\frac{1}{k}e^{-\frac{x}{k}}$
-				\item Potenza\\		$\rho(x)\propto\frac{1}{x^a}$, con $a>0$
+				\item \textbf{riflettenti}, dove si ha un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattività delle pareti}.
+				\item \textbf{periodico}, dove si hanno i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
+				\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti gli agenti.
 			\end{itemize}
-		\end{definition}
-		\begin{definition}
-			Momenti di una distribuzione:\\
-			$<x^k>=\int_{-\infty}^{+\infty}x^k\rho(x)dx$
-		\end{definition}
-		\begin{theorem}
-			Invarianza di scala:\\
-			se $\rho(x)\propto\frac{1}{x^a}$ allora posto $y=\lambda x$ si ha $\rho(y)=\frac{\lambda^a}{x^a}\propto\frac{1}{y^a}$
-		\end{theorem}
-		\begin{theorem}
-			Limite centrale:\\
-			Siano ${x_k}$ variabili casuali indipendenti, allora:\\
-			$\lim_{N\to\infty}z=\frac{1}{\sqrt{N}}\sum_{k=1}^{N}x_k=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{z^2}{2\sigma^2}}$
-		\end{theorem}
-		Ora possiamo dare una definizione di probabilità:
-		\begin{definition} Probabilità:\\
-			$p(x\in[a,b])=\int_{a}^{b}\rho(x)dx$
-		\end{definition}
-		\begin{definition} Probabilità cumulata:\\
-			$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
-		\end{definition}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 3	
-	\section{Informazione ed entropia}
-		\begin{definition}
-			Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
-		\end{definition}
-		Considerando una sequenza (\textit{codifica}) $\{x_k\}_1^N$ si può assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
-		Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
-		\begin{definition}
-			$-\ln(x)$ informazione portata dal carattere $x$
-		\end{definition}
-		\begin{definition}
-			Probabilità stazionaria\\
-			La probabilità stazionaria è il numero di volte che questo evento accade in una sequenza.
-		\end{definition}
-		\begin{definition}
-			$S=-\sum_kp(x_k)\ln(p(x_k))$ entropia di informazione (informazione media portata dale variabili $x_k$)
-		\end{definition}
-		Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
-		Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza.
-		Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
-		\begin{theorem}
-			legge dei grandi numeri\\
-			Siano A e B due eventi distinti (osservati N volte), allora si ha che\\
-			$\lim_{N\to\infty}\frac{p(AB)}{p(A)}=p(B/A)$
-		\end{theorem}
-		Per capire la sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
-		L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
-		\begin{definition}
-			$p_{ij}=p(x_j/x_i)$ matrice stocastica
-		\end{definition}
-		La matrice stocastica ha per definizione le seguenti proprietà:
-		\begin{itemize}
-			\item $0\leq p_{ij}\leq 1$
-			\item $\sum_jp_{ij}=1$
-		\end{itemize}
-		Questa matrice è molto importante, essento intrinsecamente legata alla probabilità condizionata, ed è alla base di ogni problema di trasporto.
-		Si consideri ora una sequenza infinita e sia $p_i$ la probabilità di avere l'elemento $x_i$ in quella posizione.
-		Qual è la probabilità $p_j$ di avere l'elemento successivo?
-		Sia \textit{n} il numero di passi per arrivare in posizione \textit{i}, allora:
-		\begin{equation}
-			p_j^{n+1}=\sum_ip_{ij}p_j^n
-		\end{equation}
-		Risulta quindi utile il seguente teorema:
-		\begin{theorem}
-			Esiste un autovettore con autovalore $\lambda_0=1$, ossia\\
-			$p_j^s=\sum_ip_{ij}p_j^s$
-		\end{theorem}
-		Corollari:
-		\begin{itemize}
-			\item è un vettore stazionario situato nel primo quadrante
-			\item gli iperpiani sono invarianti per $p_{ij}$
-			\item $\lambda_i<1\quad\forall i\neq 0$
-			\item $p_j^{n+1}=\sum_ip_{ij}p_j^n=1\Leftrightarrow\sum_ip_i^n=1$
-		\end{itemize}
-		A questo punto si può calcolare come cambi l'entropia di informazione di una catena aggiungendo un carattere.
-		\begin{definition}
-			Proprietà di Markov (di tempo presente)\\
-			$P(\{x_1,...,x_{n+1}\})=P(x_{n+1}/Px_n)P(\{x_1,...,x_{n}\})$
-		\end{definition}
-		Si può quindi scrivere l'entropia dell'(N+1)esimo passo come:
-		\begin{equation}
-			S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
-		\end{equation}
-		Nei linguaggi l'aggiunta di un carattere non cambia di molto l'entropia (per fortuna, altrimenti sarebbe molto difficile parlarsi).
-		Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
-		se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
-		Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
-		Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto borwniano}.\\
-		In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
-		Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO 4
-	\section{Networks e problemi di trasporto}
-		\begin{theorem}
-			Un grafico random ha un numero esponenziale di LOOP rispetto ai nodi.
-		\end{theorem}
-		Corollario: si creano delle \textit{correnti}.
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CAPITOLO N
-	\section{Costruzione di un modello}
-		Punto fondamentale di un sistema complesso è costruire un modello matematico che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
-		La prima cosa da definire è l'\textit{ambiente} in cui ci troviamo. Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
-		Altro punto fondamentale è definire \textit{spazio e tempo}. Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi è preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
-		Una volta definito lo spazio bisogna poi decidere le condizioni al contorno, ossia il comportamento ai bordi. 
-		Posso a questo punto avere \textit{barriere} di tre tipi:
-		\begin{itemize}
-			\item \textbf{riflettenti}, dove ho un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattività delle pareti}.
-			\item \textbf{periodico}, dove ho i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
-			\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti i soggetti.
-		\end{itemize}
-		Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\\
-		Nella maggior parte dei sistemi non tutti i soggetti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
-		\subsection{Random Walk 1D}
-			Il modello più basilare di sistema complesso è sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
-			Sia $p=\frac{1}{2}$ la probabilità di muoversi verso destra (quindi anche a sinistra) di un passo $\Delta x$. Si hanno:
-			\begin{itemize}
-				\item \{R\}: $p(t+\Delta t)=x(t)+\Delta x$
-				\item \{L\}: $p(t+\Delta t)=x(t)-\Delta x$
-			\end{itemize}
-			Dopo \textit{n} passi si ha quindi $p(n\Delta t)=x_0+\sum_k\xi_k\Delta x$ con $\xi(t)=\pm 1$.
-			Inoltre si può verificare che $<\xi_k>=0$, $<\xi_k^2>=1$, $<\xi_k\xi_h>=<\xi_k><\xi_h>, k\neq h$.
-			Per il teorema del limite centrale si ha:
-			$\sum_k^n\xi_k\Delta x=\sqrt{n\Delta t}\left(\frac{1}{\sqrt{n}}\sum_k^n\xi_k\right)\frac{\Delta x}{\sqrt{\Delta t}}=\frac{1}{\sqrt{2\pi Dt}}e^{-\frac{z^2}{2Dt}}$, con $z$ variabile gaussiana.
-			Introducendo il concetto di diffusione:\\
-			\begin{definition}
-				Diffusione. $D=\frac{\Delta x^2}{\Delta t}$
-			\end{definition}
-			si può descrivere l'evoluzione del sistema come $x(t)=x_0+z\sqrt{Dt}$
-			Si utilizza $\sqrt{n}$ per normalizzare in quanto è l'unico esponente non divergente.
-			La varianza della gaussiana cresce nel tempo, infatti calcolando i momenti della distribuzione si trova $<x(t)>=x_0$, $<(x(t)-x_0)^2>=Dt$.
-			Se la topologia del sistema fosse una circonferenza (e non una retta), si avrebbe un rilassamento esponenziale a una situazione stazionaria.
-		\subsection{Random Walk 2D}
-			Volendo espandere il modello di random walk ad uno spazio 2D si nota subito come, essendo ogni asse indipendente dall'altro, si possa semplicemente comporre due gaussiane:\\
-			\begin{equation}
-				(x,y)\simeq\frac{1}{2\pi\Delta t}e^{-\frac{x^2+y^2}{2\Delta t}}=\rho(x,y,t)
-			\end{equation}
-			Dove la diffusione segue la definizione precedente ed è la stessa in tutte le direzioni.
-			La funzione $\rho(x,y,t)$ rappresnta di fatto la probabilità che la il soggetto in analisi si trovi in un volume $\Delta x\Delta y$.
-			Si può riscrivere la relazione precedente in coorfinate polari ottenendo:
-			\begin{equation}
-				\rho(r,\theta,t)=\frac{r}{2\pi\Delta t}e^{-\frac{r^2}{2\Delta t}}
-			\end{equation}
-			studiando più semplicemente l'allontanamento dall'origine.
-			In particolare, l'allontanamento medio risulta:
-			\begin{equation}
-				<r>=\int_0^\infty\rho(r,\theta,t)rdr=\sqrt{\frac{\pi}{2}\Delta t}
-			\end{equation}
-			e la densità diminuisce quindi esponenzialmente.
-		\subsection{Modello Economico}
-			Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
-			Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
-			Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.\\
-			\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla povertà.
-			Il sistema ha quindi i seguenti limiti:
-			\begin{equation}
-				\begin{cases}
-					\sum_kn_k=N\\
-					n_k\geq 0
-				\end{cases}
-			\end{equation}
-			con \textit{N} costante, quindi non si ha creazione/distruzione di denaro.
-			La probabilità di trovare un individuo con n soldi è:
-			\begin{equation}
-				p(n)=\frac{\binom{M+N-2-n}{M-2}}{\binom{M+N-1}{N-1}}
-			\end{equation}
-			e, ponendo $\overline{n}=\frac{N}{M}$, si può calcolare:
-			\begin{equation}
-				\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
-			\end{equation}
-			quindi la probabilità decresce esponenzialmente.\\
-			Il modello prevede quindi:
-			\begin{itemize}
-				\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
-				\item esiste un tempo in cui un povero diventa ricco (e viceversa)
-				\item simile alla distribuzione di energia di Maxwell-Boltzmann
-				\item se chi è ricco pagasse di più si otterrebbe una curva a campana
-			\end{itemize}
-			Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
-		\subsection{Modello Economico Evoluto}
-			Per adattare il modello precedente alla realtà si introduce una microdinamica sugli scambi di denaro.\\
-			Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. Il sistema possiede una \textit{struttura di catena}:
-			\begin{definition}
-				Struttura di catena.\\
-				Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
-			\end{definition}
-			A causa di questa struttura, all'equilibrio si deve avere:
-			\begin{equation}
-				\pi_+(n-1)p(n-1)+\pi_-(n+1)p(n+1)=\pi_+(n)p(n)+\pi_-(n)p(n)
-			\end{equation}
-			e in particolare è verificato il \textit{bilancio dettagliato}:
-			\begin{equation}
-				\pi_+(n-1)p(n-1)=\pi_-(n)p(n)\quad \forall n\geq 1
-			\end{equation}
-			Normalizzata la distribuzione è possibile iterare il tutto:
-			\begin{equation}
-				p(n)=\prod_{k=1}^n\frac{\pi_+(k-1)}{1pi_-(k)}p(0)
-			\end{equation}
-			Riscrivendo un maniera più comoda il bilancio dettagliato, si può poi procedere:
-			\begin{equation}
-				\pi_+(n-\frac{1}{2})p(n-\frac{1}{2})=\pi_-(n+\frac{1}{2})p(n+\frac{1}{2})
-			\end{equation}
-			\begin{equation}
-				\begin{split}
-					[\pi_+(n)-\pi_-(n)]p(n)-\frac{1}{2}\frac{\partial}{\partial n}[\pi_+(n)-\pi_-(n)]p(n)\simeq 0\\
-					ap(n)+\frac{\partial}{\partial n}(bn)p(n)\simeq 0
-				\end{split}
-			\end{equation}
-			Si possono notare ora le seguenti dipendenze, introducendo la coppia di parametri costanti \textit{(a, b)}:
-			\begin{equation}
-				\begin{cases}
-					\pi_+(n-1)-\pi_-(n)\simeq a\\
-					\pi_+(n)\simeq bn-\frac{a}{2}\\
-					\pi_-(n)\simeq bn+\frac{a}{2}
-				\end{cases}
-			\end{equation}
-			Cercando ora l'andamento di $p(n)$:
-			\begin{equation}
-				\begin{split}
-					p(n)-p(n-1)&=\left(\frac{bn-\frac{a}{2}}{bn+\frac{a}{2}}-1\right)p(n-1)\\
-					\frac{dp}{dn}&=-\frac{a}{bn}p(n-1)\\
-					\Rightarrow\lim_{n\to\infty}p(n)&\propto n^{-\frac{a}{b}}
-				\end{split}
-			\end{equation}
-			si ottiene esattamente l'andamento a potenza ricercato.
-		\subsection{La rovina di un giocatore}
-			Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
-			Il gioco finisce ai "bordi" per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
-			Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
-			Come nel modello economico evoluto si ha:
-			\begin{equation}
-				P_M(k)=pP_M(k+1)+qP_M(k-1)
-			\end{equation}
-			con i vincoli
-			\begin{equation}
-				\begin{cases}
-					P_M(0)=0\\
-					P_M(M)=1
-				\end{cases}
-			\end{equation}
-			Ragionando per induzione si ottiene:
-			\begin{equation}
-				P_M(k+1)-P_M(k)=\frac{q}{p}\left[P_M(k)-P_M(k-1)\right]=\left(\frac{q}{p}\right)^kP_M(1)
-			\end{equation}
-			\begin{equation}
-				P_M(k)=\frac{1-\left(\frac{q}{p}\right)^k}{1-\left(\frac{q}{p}\right)^M}
-			\end{equation}
-			Ponendo ora $p>q$,
-			\begin{equation}
-				P_\infty(k)=1-\left(\frac{q}{p}\right)^k
-			\end{equation}
-			In particolare, considerando un gioco equo, si può notare come $P_M(k)=\frac{k}{M}$ e quindi:
-			\begin{itemize}
-				\item il gioco è alla pari solo se $k\simeq M$
-				\item la probabilità di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
-				\item contro un casinò ($M\to\infty$) la probabilità di vincita è evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
-			\end{itemize}
-		\subsection{Broken Stick Model/Modello di Markov}
-			Si consideri un segmento di lunghezza unitaria nel quale viene inserito casualmente un punto $x_1\in[0,1]$ secondo una distribuzione uniforme.
-			Si scarti ora il segmeno $[0,x_1]$ e si iteri il processo per \textit{N} volte: si tratta di un processo ricorsivo con memoria del passato.
-			Essendo la distribuzione di probabilità uniforme risulta ovvio come $<x>=\frac{1}{2}$ quindi è possibile riscalare il tutto con una variabile $y\rightarrow\frac{y}{2}$
-			Definita la densità $\rho$ del sistema si può scrivere:
-			\begin{equation}
-				\begin{split}
-					\rho_{N+1}\left(\frac{y}{2}\right)\frac{dy}{2}&=\rho_N(y)dy\\
-					\Rightarrow\lim_{N\to\infty}\rho_N(y)&\propto\frac{1}{y}
-				\end{split}
-			\end{equation}
-			Il risultato è una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
-			Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non posso più riattaccarlo.
-			Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
-			Un'utile applicazione dei modelli di Markov si trova nel linguaggio (verbi) e in biologia (DNA).
-		\subsection{Penney's game}
-			Si prenda una moneta e la si lanci all'infinito.
-			Si vuole scommettere con un'altra persona su una terna di uscite consecutive dai lanci e ci si chiede come si possa vincere più facilmente.
-			Analizzando attentamente il problema si può notare come l'uscita delle sequenze non sia casuale ma segua un percorso ben preciso: l'unica sequenza casuale è quella data dalle prime tre uscite.
-						
-			\begin{figure}
-				\centering
-				\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-				\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-				%uncomment if require: \path (0,180); %set diagram left start at 0, and has height of 180
-
-				%Straight Lines [id:da6422687951145654] 
-				\draw    (44,65) -- (85,32) -- (90,28) ;
-				\draw [shift={(91,27)}, rotate = 501.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da7705936405819056] 
-				\draw    (94,137) -- (40.53,92.28) ;
-				\draw [shift={(39,91)}, rotate = 399.90999999999997] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da6670914365776015] 
-				\draw    (120,90) -- (120,121) ;
-				\draw [shift={(120,123)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da5676959026170221] 
-				\draw    (119,32) -- (119,63) ;
-				\draw [shift={(119,65)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da6639824453006449] 
-				\draw    (137,22) -- (172,22) ;
-				\draw [shift={(174,22)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da07868476619961107] 
-				\draw    (179,138) -- (140,138) ;
-				\draw [shift={(138,138)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da2178688499902217] 
-				\draw    (178,77) -- (139,77) ;
-				\draw [shift={(137,77)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da6042868291237622] 
-				\draw    (139,84) -- (175,84) ;
-				\draw [shift={(177,84)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da3451851868864586] 
-				\draw    (218,21) -- (274.42,64.77) ;
-				\draw [shift={(276,66)}, rotate = 217.81] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da5761550996457687] 
-				\draw    (275,95) -- (223.51,139.69) ;
-				\draw [shift={(222,141)}, rotate = 319.03999999999996] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da9885549593906195] 
-				\draw    (197,128) -- (197,89) ;
-				\draw [shift={(197,87)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Straight Lines [id:da6638039461895064] 
-				\draw    (198,70) -- (198,31) ;
-				\draw [shift={(198,29)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Curve Lines [id:da8915331259906252] 
-				\draw    (100,130) .. controls (60.42,98.3) and (61.96,64.68) .. (100.81,34.9) ;
-				\draw [shift={(102,34)}, rotate = 503.13] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-				%Curve Lines [id:da07525012510942974] 
-				\draw    (213,29) .. controls (259.53,59.69) and (261.96,88.42) .. (219.31,127.8) ;
-				\draw [shift={(218,129)}, rotate = 317.73] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-
-				% Text Node
-				\draw (20,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {HHH};
-				% Text Node
-				\draw (100,15) node [anchor=north west][inner sep=0.75pt]   [align=left] {HHT};
-				% Text Node
-				\draw (100,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {HTH};
-				% Text Node
-				\draw (100,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {THH};
-				% Text Node
-				\draw (180,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {THT};
-				% Text Node
-				\draw (260,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {TTT};
-				% Text Node
-				\draw (180,15) node [anchor=north west][inner sep=0.75pt]   [align=left] {HTT};
-				% Text Node
-				\draw (180,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {TTH};
-
-				\end{tikzpicture}
-				\caption{Schema del gioco di Penney}
-				\label{Penney's scheme}
-			\end{figure}
-			In questo modo risulta abbastanza semplice fregare l' avversario: facendolo scegliere per primo, è sempre possibile scegliere una sequenza più probabile della sua.\\
-			Eseguendo i calcoli si nota subito come la probabilità stazionaria del sistema sia data da $\left(\frac{1}{2}\right)^3=\frac{1}{8}=12.5\%$.
-			Scegliendo per secondi si vince sempre a meno che la sequenza dell'avversario non esca dai primi tre lanci, quindi eseguendo i calcoli sulle probabilità si ottiene la seguente tabella:
-			\begin{center}
-				\begin{tabular}{ |c|c|c|c| } 
-					\hline
-					1st player's choice& 2nd player's choice & 2nd player's winning chance\\
-					\hline
-					\emph{HH}H & \textbf{T}\emph{HH} & 87.5\% \\
-					\emph{HH}T & \textbf{T}\emph{HH} & 75.0\% \\
-					\emph{HT}H & \textbf{H}\emph{HT} & 66.7\% \\
-					\emph{HT}T & \textbf{H}\emph{HT} & 66.7\% \\
-					\emph{TH}H & \textbf{T}\emph{TH} & 66.7\% \\
-					\emph{TH}T & \textbf{T}\emph{TH} & 66.7\% \\
-					\emph{TT}H & \textbf{H}\emph{TT} & 75.0\% \\
-					\emph{TT}T & \textbf{H}\emph{TT} & 87.5\% \\
-					\hline
-				\end{tabular}
-			\end{center}
-
-		\subsection{Random Walk non omogenea}
+			Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\\
+			Nella maggior parte dei sistemi non tutti gli agenti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
+		\subsection{Modelli a equazioni}
+			La seconda ed ultima tipologia di sistema complesso è data dai \emph{modelli a equazioni}, ossia quei modelli in cui si effettua uno stduio di tipo top-down (dal generale al particolare).
+			In questo caso si assume di non avere conoscenza sui singoli agenti ma di possedere informazioni di carattere puramente macroscopico, dette \emph{osservabili} del sistema.
+			
+		\section{Esempi}
+			\subsection{Random Walk 1D}
+				Il modello più basilare di sistema complesso è sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
+				Sia $p=\frac{1}{2}$ la probabilità di muoversi verso destra (quindi anche a sinistra) di un passo $\Delta x$. Si hanno:
+				\begin{itemize}
+					\item \{R\}: $p(t+\Delta t)=x(t)+\Delta x$
+					\item \{L\}: $p(t+\Delta t)=x(t)-\Delta x$
+				\end{itemize}
+				Dopo \textit{n} passi si ha quindi $p(n\Delta t)=x_0+\sum_k\xi_k\Delta x$ con $\xi(t)=\pm 1$.
+				Inoltre si può verificare che $<\xi_k>=0$, $<\xi_k^2>=1$, $<\xi_k\xi_h>=<\xi_k><\xi_h>, k\neq h$.
+				Per il teorema del limite centrale si ha:
+				$\sum_k^n\xi_k\Delta x=\sqrt{n\Delta t}\left(\frac{1}{\sqrt{n}}\sum_k^n\xi_k\right)\frac{\Delta x}{\sqrt{\Delta t}}=\frac{1}{\sqrt{2\pi Dt}}e^{-\frac{z^2}{2Dt}}$, con $z$ variabile gaussiana.
+				Introducendo il concetto di diffusione:\\
+				\begin{definition}
+					Diffusione. $D=\frac{\Delta x^2}{\Delta t}$
+				\end{definition}
+				si può descrivere l'evoluzione del sistema come $x(t)=x_0+z\sqrt{Dt}$
+				Si utilizza $\sqrt{n}$ per normalizzare in quanto è l'unico esponente non divergente.
+				La varianza della gaussiana cresce nel tempo, infatti calcolando i momenti della distribuzione si trova $<x(t)>=x_0$, $<(x(t)-x_0)^2>=Dt$.
+				Se la topologia del sistema fosse una circonferenza (e non una retta), si avrebbe un rilassamento esponenziale a una situazione stazionaria.
+			\subsection{Random Walk 2D}
+				Volendo espandere il modello di random walk ad uno spazio 2D si nota subito come, essendo ogni asse indipendente dall'altro, si possa semplicemente comporre due gaussiane:\\
+				\begin{equation}
+					(x,y)\simeq\frac{1}{2\pi\Delta t}e^{-\frac{x^2+y^2}{2\Delta t}}=\rho(x,y,t)
+				\end{equation}
+				Dove la diffusione segue la definizione precedente ed è la stessa in tutte le direzioni.
+				La funzione $\rho(x,y,t)$ rappresnta di fatto la probabilità che la il soggetto in analisi si trovi in un volume $\Delta x\Delta y$.
+				Si può riscrivere la relazione precedente in coorfinate polari ottenendo:
+				\begin{equation}
+					\rho(r,\theta,t)=\frac{r}{2\pi\Delta t}e^{-\frac{r^2}{2\Delta t}}
+				\end{equation}
+				studiando più semplicemente l'allontanamento dall'origine.
+				In particolare, l'allontanamento medio risulta:
+				\begin{equation}
+					<r>=\int_0^\infty\rho(r,\theta,t)rdr=\sqrt{\frac{\pi}{2}\Delta t}
+				\end{equation}
+				e la densità diminuisce quindi esponenzialmente.
+			\subsection{Random Walk non omogenea}
 			Si consideri ora una random walk 1D con probabilità non uniforme in un reticolo di passo $\Delta x$.
 			Sia $\epsilon$ un parametro e si definiscano le probabilità:
 			\begin{equation}
@@ -451,35 +135,384 @@
 				\end{split}
 			\end{equation}
 			In conclusione la maggior parte delle particelle si trova nella zona fredda ($x<0$), come vuole la fisica, ma la media della distribuzione si trova nella zona calda ($x>0$)
-	\section{Modelli di Trasporto}
-		Consideriamo due punti ($A$ e $B$) di un generico spazio e colleghiamoli con un canale immaginario, facendo riferimento alla Fig.1, possiamo definire il flusso $\Phi_{A \rightarrow B}$ di una quantità fisica trasportata nell'unità di tempo tra i due punti.
-		\begin{figure}[ht!]
-    			\centering
-    			\begin{tikzpicture}
-  				\Vertex[label=$A$, color=white]{A}
-  				\Vertex[label=$B$,color=white,x=2.5,y=0]{B}
-  				\Edge[Direct, lw=0.5pt, label=$\Phi_{A \rightarrow B}$](A)(B)
-			\end{tikzpicture}
-    			\caption{}
-		\end{figure}
-		Definiamo $V_{A/B}$ una certa proprietà del nodo $A/B$, questa proprietà ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
-		\begin{equation}
-    			\Phi_{A \rightarrow B} \ R = V_A - V_B
-		\end{equation} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
-		Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
-		\begin{figure}[ht!]
-    			\centering
-    			\begin{tikzpicture}
- 					\Vertex[label=$A$, color=white]{A}
-  					\Vertex[label=$B$,color=white,x=1,y=1]{B}
-  					\Vertex[label=$C$,color=white,x=-1,y=1]{C}
-  					\Vertex[label=$D$,color=white,x=0,y=1]{D}
-  					\Vertex[label=$S$,color=white,x=0,y=-1]{S}
-  					\Edge[Direct, lw=0.5pt](A)(B)
-  					\Edge[Direct, lw=0.5pt](A)(C)
-  					\Edge[Direct, lw=0.5pt](A)(D)
-  					\Edge[Direct, lw=0.5pt](S)(A)
+			\subsection{Modello economico}
+				Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
+				Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
+				Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.\\
+				\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla povertà.
+				Il sistema ha quindi i seguenti limiti:
+				\begin{equation}
+					\begin{cases}
+						\sum_kn_k=N\\
+						n_k\geq 0
+					\end{cases}
+				\end{equation}
+				con \textit{N} costante, quindi non si ha creazione/distruzione di denaro.
+				La probabilità di trovare un individuo con n soldi è:
+				\begin{equation}
+					p(n)=\frac{\binom{M+N-2-n}{M-2}}{\binom{M+N-1}{N-1}}
+				\end{equation}
+				e, ponendo $\overline{n}=\frac{N}{M}$, si può calcolare:
+				\begin{equation}
+					\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
+				\end{equation}
+				quindi la probabilità decresce esponenzialmente.\\
+				Il modello prevede quindi:
+				\begin{itemize}
+					\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
+					\item esiste un tempo in cui un povero diventa ricco (e viceversa)
+					\item simile alla distribuzione di energia di Maxwell-Boltzmann
+					\item se chi è ricco pagasse di più si otterrebbe una curva a campana
+				\end{itemize}
+				Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
+			\subsection{Modello economico evoluto}
+				Per adattare il modello precedente alla realtà si introduce una microdinamica sugli scambi di denaro.\\
+				Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. Il sistema possiede una \textit{struttura di catena}:
+				\begin{definition}
+					Struttura di catena.\\
+					Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
+				\end{definition}
+				A causa di questa struttura, all'equilibrio si deve avere:
+				\begin{equation}
+					\pi_+(n-1)p(n-1)+\pi_-(n+1)p(n+1)=\pi_+(n)p(n)+\pi_-(n)p(n)
+				\end{equation}
+				e in particolare è verificato il \textit{bilancio dettagliato}:
+				\begin{equation}
+					\pi_+(n-1)p(n-1)=\pi_-(n)p(n)\quad \forall n\geq 1
+				\end{equation}
+				Normalizzata la distribuzione è possibile iterare il tutto:
+				\begin{equation}
+					p(n)=\prod_{k=1}^n\frac{\pi_+(k-1)}{1pi_-(k)}p(0)
+				\end{equation}
+				Riscrivendo un maniera più comoda il bilancio dettagliato, si può poi procedere:
+				\begin{equation}
+					\pi_+(n-\frac{1}{2})p(n-\frac{1}{2})=\pi_-(n+\frac{1}{2})p(n+\frac{1}{2})
+				\end{equation}
+				\begin{equation}
+					\begin{split}
+						[\pi_+(n)-\pi_-(n)]p(n)-\frac{1}{2}\frac{\partial}{\partial n}[\pi_+(n)-\pi_-(n)]p(n)\simeq 0\\
+						ap(n)+\frac{\partial}{\partial n}(bn)p(n)\simeq 0
+					\end{split}
+				\end{equation}
+				Si possono notare ora le seguenti dipendenze, introducendo la coppia di parametri costanti \textit{(a, b)}:
+				\begin{equation}
+					\begin{cases}
+						\pi_+(n-1)-\pi_-(n)\simeq a\\
+						\pi_+(n)\simeq bn-\frac{a}{2}\\
+						\pi_-(n)\simeq bn+\frac{a}{2}
+					\end{cases}
+				\end{equation}
+				Cercando ora l'andamento di $p(n)$:
+				\begin{equation}
+					\begin{split}
+						p(n)-p(n-1)&=\left(\frac{bn-\frac{a}{2}}{bn+\frac{a}{2}}-1\right)p(n-1)\\
+						\frac{dp}{dn}&=-\frac{a}{bn}p(n-1)\\
+						\Rightarrow\lim_{n\to\infty}p(n)&\propto n^{-\frac{a}{b}}
+					\end{split}
+				\end{equation}
+				si ottiene esattamente l'andamento a potenza ricercato.
+			\subsection{La rovina di un giocatore}
+				Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
+				Il gioco finisce ai "bordi" per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
+				Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
+				Come nel modello economico evoluto si ha:
+				\begin{equation}
+					P_M(k)=pP_M(k+1)+qP_M(k-1)
+				\end{equation}
+				con i vincoli
+				\begin{equation}
+					\begin{cases}
+						P_M(0)=0\\
+						P_M(M)=1
+					\end{cases}
+				\end{equation}
+				Ragionando per induzione si ottiene:
+				\begin{equation}
+					P_M(k+1)-P_M(k)=\frac{q}{p}\left[P_M(k)-P_M(k-1)\right]=\left(\frac{q}{p}\right)^kP_M(1)
+				\end{equation}
+				\begin{equation}
+					P_M(k)=\frac{1-\left(\frac{q}{p}\right)^k}{1-\left(\frac{q}{p}\right)^M}
+				\end{equation}
+				Ponendo ora $p>q$,
+				\begin{equation}
+					P_\infty(k)=1-\left(\frac{q}{p}\right)^k
+				\end{equation}
+				In particolare, considerando un gioco equo, si può notare come $P_M(k)=\frac{k}{M}$ e quindi:
+				\begin{itemize}
+					\item il gioco è alla pari solo se $k\simeq M$
+					\item la probabilità di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
+					\item contro un casinò ($M\to\infty$) la probabilità di vincita è evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
+				\end{itemize}
+	
+	\chapter{Entropia e Informazione} %CAPITOLO 2
+		\section{Distribuzioni}
+		Vediamo ora una serie di distribuzioni e teoremi ad esse legati che ci aiuteranno nell'analisi dei sistemi.
+		\begin{definition}\hfill
+			\begin{itemize}
+				\item Gaussiana\\	$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+				\item Esponenziale\\	$\rho(x)=\frac{1}{k}e^{-\frac{x}{k}}$
+				\item Potenza\\		$\rho(x)\propto\frac{1}{x^a}$, con $a>0$
+			\end{itemize}
+		\end{definition}
+		\begin{definition}
+			Momenti di una distribuzione:\\
+			$<x^k>=\int_{-\infty}^{+\infty}x^k\rho(x)dx$
+		\end{definition}
+		\begin{theorem}
+			Invarianza di scala:\\
+			se $\rho(x)\propto\frac{1}{x^a}$ allora posto $y=\lambda x$ si ha $\rho(y)=\frac{\lambda^a}{x^a}\propto\frac{1}{y^a}$
+		\end{theorem}
+		\begin{theorem}
+			Limite centrale:\\
+			Siano ${x_k}$ variabili casuali indipendenti, allora:\\
+			$\lim_{N\to\infty}z=\frac{1}{\sqrt{N}}\sum_{k=1}^{N}x_k=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{z^2}{2\sigma^2}}$
+		\end{theorem}
+		
+		\section{Probabilità}
+			Data una distribuzione di probabilità $\rho(x)$ normalizzata è possibule procedere con le seguenti definizioni:
+			\begin{definition} Probabilità:\\
+				$p(x\in[a,b])=\int_{a}^{b}\rho(x)dx$
+			\end{definition}
+			\begin{definition} Probabilità cumulata:\\
+				$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
+			\end{definition}
+			\begin{definition}
+				Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
+			\end{definition}
+			Considerando una sequenza (\textit{codifica}) $\{x_k\}_1^N$ si può assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
+			Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
+			\begin{definition}
+				$-\ln(x)$ informazione portata dal carattere $x$
+			\end{definition}
+			\begin{definition}
+				Probabilità stazionaria\\
+				La probabilità stazionaria è il numero di volte che questo evento accade in una sequenza.
+			\end{definition}
+			\begin{definition}
+				$S=-\sum_kp(x_k)\ln(p(x_k))$ entropia di informazione (informazione media portata dale variabili $x_k$)
+			\end{definition}
+			Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
+			Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza.
+			Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
+			\begin{theorem}
+				legge dei grandi numeri\\
+				Siano A e B due eventi distinti (osservati N volte), allora si ha che\\
+				$\lim_{N\to\infty}\frac{p(AB)}{p(A)}=p(B/A)$
+			\end{theorem}
+
+			\subsection{Matrice stocastica}
+				Per capire la sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
+				L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
+				\begin{definition}
+					$p_{ij}=p(x_j/x_i)$ matrice stocastica
+				\end{definition}
+				La matrice stocastica ha per definizione le seguenti proprietà:
+				\begin{itemize}
+					\item $0\leq p_{ij}\leq 1$
+					\item $\sum_jp_{ij}=1$
+				\end{itemize}
+				Questa matrice è molto importante, essento intrinsecamente legata alla probabilità condizionata, ed è alla base di ogni problema di trasporto.
+				Si consideri ora una sequenza infinita e sia $p_i$ la probabilità di avere l'elemento $x_i$ in quella posizione.
+				Qual è la probabilità $p_j$ di avere l'elemento successivo?
+				Sia \textit{n} il numero di passi per arrivare in posizione \textit{i}, allora:
+				\begin{equation}
+					p_j^{n+1}=\sum_ip_{ij}p_j^n
+				\end{equation}
+				Risulta quindi utile il seguente teorema:
+				\begin{theorem}
+					Esiste un autovettore con autovalore $\lambda_0=1$, ossia\\
+					$p_j^s=\sum_ip_{ij}p_j^s$
+				\end{theorem}
+				Corollari:
+				\begin{itemize}
+					\item è un vettore stazionario situato nel primo quadrante
+					\item gli iperpiani sono invarianti per $p_{ij}$
+					\item $\lambda_i<1\quad\forall i\neq 0$
+					\item $p_j^{n+1}=\sum_ip_{ij}p_j^n=1\Leftrightarrow\sum_ip_i^n=1$
+				\end{itemize}
+		
+		\section{Teoria di Markov}
+			A questo punto si può calcolare come cambi l'entropia di informazione di una catena aggiungendo un carattere.
+			\begin{definition}
+				Proprietà di Markov (di tempo presente)\\
+				$P(\{x_1,...,x_{n+1}\})=P(x_{n+1}/Px_n)P(\{x_1,...,x_{n}\})$
+			\end{definition}
+			Si può quindi scrivere l'entropia dell'(N+1)esimo passo come:
+			\begin{equation}
+				S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
+			\end{equation}
+			Nei linguaggi l'aggiunta di un carattere non cambia di molto l'entropia (per fortuna, altrimenti sarebbe molto difficile parlarsi).
+			Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
+			se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
+			Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
+			Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto borwniano}.\\
+			In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
+			Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
+		
+		\section{Esempi}
+			\subsection{Broken Stick Model/Modello di Markov}
+				Si consideri un segmento di lunghezza unitaria nel quale viene inserito casualmente un punto $x_1\in[0,1]$ secondo una distribuzione uniforme.
+				Si scarti ora il segmeno $[0,x_1]$ e si iteri il processo per \textit{N} volte: si tratta di un processo ricorsivo con memoria del passato.
+				Essendo la distribuzione di probabilità uniforme risulta ovvio come $<x>=\frac{1}{2}$ quindi è possibile riscalare il tutto con una variabile $y\rightarrow\frac{y}{2}$
+				Definita la densità $\rho$ del sistema si può scrivere:
+				\begin{equation}
+					\begin{split}
+						\rho_{N+1}\left(\frac{y}{2}\right)\frac{dy}{2}&=\rho_N(y)dy\\
+						\Rightarrow\lim_{N\to\infty}\rho_N(y)&\propto\frac{1}{y}
+					\end{split}
+				\end{equation}
+				Il risultato è una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
+				Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non posso più riattaccarlo.
+				Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
+				Un'utile applicazione dei modelli di Markov si trova nel linguaggio (verbi) e in biologia (DNA).
+			\subsection{Penney's game}
+				Si prenda una moneta e la si lanci all'infinito.
+				Si vuole scommettere con un'altra persona su una terna di uscite consecutive dai lanci e ci si chiede come si possa vincere più facilmente.
+				Analizzando attentamente il problema si può notare come l'uscita delle sequenze non sia casuale ma segua un percorso ben preciso: l'unica sequenza casuale è quella data dalle prime tre uscite.
+							
+				\begin{figure}
+					\centering
+					\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+					\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+					%uncomment if require: \path (0,180); %set diagram left start at 0, and has height of 180
+
+					%Straight Lines [id:da6422687951145654] 
+					\draw    (44,65) -- (85,32) -- (90,28) ;
+					\draw [shift={(91,27)}, rotate = 501.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da7705936405819056] 
+					\draw    (94,137) -- (40.53,92.28) ;
+					\draw [shift={(39,91)}, rotate = 399.90999999999997] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da6670914365776015] 
+					\draw    (120,90) -- (120,121) ;
+					\draw [shift={(120,123)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da5676959026170221] 
+					\draw    (119,32) -- (119,63) ;
+					\draw [shift={(119,65)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da6639824453006449] 
+					\draw    (137,22) -- (172,22) ;
+					\draw [shift={(174,22)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da07868476619961107] 
+					\draw    (179,138) -- (140,138) ;
+					\draw [shift={(138,138)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da2178688499902217] 
+					\draw    (178,77) -- (139,77) ;
+					\draw [shift={(137,77)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da6042868291237622] 
+					\draw    (139,84) -- (175,84) ;
+					\draw [shift={(177,84)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da3451851868864586] 
+					\draw    (218,21) -- (274.42,64.77) ;
+					\draw [shift={(276,66)}, rotate = 217.81] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da5761550996457687] 
+					\draw    (275,95) -- (223.51,139.69) ;
+					\draw [shift={(222,141)}, rotate = 319.03999999999996] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da9885549593906195] 
+					\draw    (197,128) -- (197,89) ;
+					\draw [shift={(197,87)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da6638039461895064] 
+					\draw    (198,70) -- (198,31) ;
+					\draw [shift={(198,29)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Curve Lines [id:da8915331259906252] 
+					\draw    (100,130) .. controls (60.42,98.3) and (61.96,64.68) .. (100.81,34.9) ;
+					\draw [shift={(102,34)}, rotate = 503.13] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Curve Lines [id:da07525012510942974] 
+					\draw    (213,29) .. controls (259.53,59.69) and (261.96,88.42) .. (219.31,127.8) ;
+					\draw [shift={(218,129)}, rotate = 317.73] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+					% Text Node
+					\draw (20,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {HHH};
+					% Text Node
+					\draw (100,15) node [anchor=north west][inner sep=0.75pt]   [align=left] {HHT};
+					% Text Node
+					\draw (100,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {HTH};
+					% Text Node
+					\draw (100,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {THH};
+					% Text Node
+					\draw (180,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {THT};
+					% Text Node
+					\draw (260,70) node [anchor=north west][inner sep=0.75pt]   [align=left] {TTT};
+					% Text Node
+					\draw (180,15) node [anchor=north west][inner sep=0.75pt]   [align=left] {HTT};
+					% Text Node
+					\draw (180,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {TTH};
+
+					\end{tikzpicture}
+					\caption{Schema del gioco di Penney}
+					\label{Penney's scheme}
+				\end{figure}
+				In questo modo risulta abbastanza semplice fregare l' avversario: facendolo scegliere per primo, è sempre possibile scegliere una sequenza più probabile della sua.\\
+				Eseguendo i calcoli si nota subito come la probabilità stazionaria del sistema sia data da $\left(\frac{1}{2}\right)^3=\frac{1}{8}=12.5\%$.
+				Scegliendo per secondi si vince sempre a meno che la sequenza dell'avversario non esca dai primi tre lanci, quindi eseguendo i calcoli sulle probabilità si ottiene la seguente tabella:
+				\begin{center}
+					\begin{tabular}{ |c|c|c|c| } 
+						\hline
+						1st player's choice& 2nd player's choice & 2nd player's winning chance\\
+						\hline
+						\emph{HH}H & \textbf{T}\emph{HH} & 87.5\% \\
+						\emph{HH}T & \textbf{T}\emph{HH} & 75.0\% \\
+						\emph{HT}H & \textbf{H}\emph{HT} & 66.7\% \\
+						\emph{HT}T & \textbf{H}\emph{HT} & 66.7\% \\
+						\emph{TH}H & \textbf{T}\emph{TH} & 66.7\% \\
+						\emph{TH}T & \textbf{T}\emph{TH} & 66.7\% \\
+						\emph{TT}H & \textbf{H}\emph{TT} & 75.0\% \\
+						\emph{TT}T & \textbf{H}\emph{TT} & 87.5\% \\
+						\hline
+					\end{tabular}
+				\end{center}
+
+	\chapter{Modelli di trasporto} %CAPITOLO 3
+		\section{Teoria}
+			Consideriamo due punti ($A$ e $B$) di un generico spazio e colleghiamoli con un canale immaginario, facendo riferimento alla Fig.1, possiamo definire il flusso $\Phi_{A \rightarrow B}$ di una quantità fisica trasportata nell'unità di tempo tra i due punti.
+			\begin{figure}[ht!]
+					\centering
+					\begin{tikzpicture}
+					\Vertex[label=$A$, color=white]{A}
+					\Vertex[label=$B$,color=white,x=2.5,y=0]{B}
+					\Edge[Direct, lw=0.5pt, label=$\Phi_{A \rightarrow B}$](A)(B)
 				\end{tikzpicture}
-    			\caption{}
-		\end{figure}
+					\caption{}
+			\end{figure}
+			Definiamo $V_{A/B}$ una certa proprietà del nodo $A/B$, questa proprietà ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
+			\begin{equation}
+					\Phi_{A \rightarrow B} \ R = V_A - V_B
+			\end{equation} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
+			Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
+			\begin{figure}[ht!]
+					\centering
+					\begin{tikzpicture}
+						\Vertex[label=$A$, color=white]{A}
+						\Vertex[label=$B$,color=white,x=1,y=1]{B}
+						\Vertex[label=$C$,color=white,x=-1,y=1]{C}
+						\Vertex[label=$D$,color=white,x=0,y=1]{D}
+						\Vertex[label=$S$,color=white,x=0,y=-1]{S}
+						\Edge[Direct, lw=0.5pt](A)(B)
+						\Edge[Direct, lw=0.5pt](A)(C)
+						\Edge[Direct, lw=0.5pt](A)(D)
+						\Edge[Direct, lw=0.5pt](S)(A)
+					\end{tikzpicture}
+					\caption{}
+			\end{figure}
+		
+		\section{Esempi}
+			
+		
+	
+	
+	\chapter{Teoria del controllo} %CAPITOLO 4
+		\section{Teoria}
+
+		\section{Esempi}
+	
+	\chapter{Altre applicazioni} %CAPITOLO 5
+		\section{Teoria}
+
+		\section{Esempi}
+
+
+	% \section{Networks e problemi di trasporto}
+	% 	\begin{theorem}
+	% 		Un grafico random ha un numero esponenziale di LOOP rispetto ai nodi.
+	% 	\end{theorem}
+	% 	Corollario: si creano delle \textit{correnti}.
+		
 \end{document}
