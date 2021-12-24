@@ -583,21 +583,21 @@
 				Utilizzando la meccanica lagrangiana:
 				\begin{equation}
 					\begin{cases}
-						x_{O}=x_{C}+lsin\theta\\
-						y_{O}=lcos\theta
+						x_{O}=x_{C}+l\sin\theta\\
+						y_{O}=l\cos\theta
 					\end{cases}
 				\end{equation}
 				\begin{equation}
 					\begin{cases}
-						\dot{x}_O=\dot{x}_{C}+l\dot{\theta}cos\theta\\
-						\dot{y}_{O}=l\dot{\theta}sin\theta
+						\dot{x}_O=\dot{x}_{C}+l\dot{\theta}\cos\theta\\
+						\dot{y}_{O}=l\dot{\theta}\sin\theta
 					\end{cases}
 				\end{equation}
 				La lagrangiana del sistema si può scrivere come:
 				\begin{equation}
-					\mathcal{L}=\frac{m}{2}\left( \left( \dot{x}_{C}+l\dot{\theta}cos\theta \right)^2 + l^2\dot{\theta}^2sin^2\theta \right) - mglcos\theta \simeq \frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta}cos\theta \right) - mglcos\theta
+					\mathcal{L}=\frac{m}{2}\left( \left( \dot{x}_{C}+l\dot{\theta}\cos\theta \right)^2 + l^2\dot{\theta}^2\sin^2\theta \right) - mgl\cos\theta \simeq \frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta}\cos\theta \right) - mgl\cos\theta
 				\end{equation}
-				alle piccole oscillazioni ($\theta\simeq 0$ e $mglcos\theta\simeq -mgl\frac{\theta^2}{2}$):
+				alle piccole oscillazioni ($\theta\simeq 0$ e $mgl\cos\theta\simeq -mgl\frac{\theta^2}{2}$):
 				\begin{equation}
 					\mathcal{L}_{PO}=\frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta} \right) + mgl\frac{\theta^2}{2}
 				\end{equation}
@@ -608,11 +608,11 @@
 				Riconosciuta la forzante, per semplicità si pone $\ddot{x}_C=\pm a(t)$ costante.
 				La soluzione non è omogenea:
 				\begin{equation}
-					\theta(t)=\left( \theta_{0} -\frac{a(t)}{g} \right)cosh(\omega t) + \frac{\dot{\theta}_0}{\omega}sinh(\omega t) +\frac{a(t)}{g}
+					\theta(t)=\left( \theta_{0} -\frac{a(t)}{g} \right)\cosh\omega t + \frac{\dot{\theta}_0}{\omega}\sinh\omega t +\frac{a(t)}{g}
 				\end{equation}
 				Assumendo ora $\theta_0\simeq 0$ e $\dot{\theta}_0\neq 0$ e che il pendolo si stabilizzi in un tempo $T$ si ha la soluzione stabile:
 				\begin{equation}
-					\theta(T)=Ccosh(\omega T) + Csinh(\omega T) \simeq Ce^{-\omega T}
+					\theta(T)=C\cosh\omega T + C\sinh\omega T \simeq Ce^{-\omega T}
 				\end{equation}
 				Si può ora ricavare la condizione richiesta:
 				\begin{equation}
@@ -620,11 +620,11 @@
 				\end{equation}
 				Andando a imporla si ottiene:
 				\begin{equation}
-					-\frac{a}{g}cosh(\omega T) + \frac{\dot{\theta}(T)}{\omega}sinh(\omega T) + \frac{a}{g} = \frac{a}{g}sinh(\omega T) - \frac{\dot{\theta}(T)}{\omega}cosh(\omega T)
+					-\frac{a}{g}\cosh\omega T + \frac{\dot{\theta}(T)}{\omega}\sinh\omega T + \frac{a}{g} = \frac{a}{g}\sinh\omega T - \frac{\dot{\theta}(T)}{\omega}\cosh\omega T
 				\end{equation}
 				Da cui si può ricavare il periodo di stabilità:
 				\begin{equation}
-					T=\frac{1}{\omega}ln\frac{\frac{a}{g}}{\frac{a}{g}-\frac{\dot{\theta}(T)}{\omega}}
+					T=\frac{1}{\omega}\ln\frac{\frac{a}{g}}{\frac{a}{g}-\frac{\dot{\theta}(T)}{\omega}}
 				\end{equation}
 				Un'osservazione importante riguarda la \emph{condizione critica} del sistema, ove esso non risulta più controllabile, che si ha quando $\dot{\theta}_0=\frac{a\omega}{g}$.
 			\subsection{Marriage Model/Modello relazionale}
