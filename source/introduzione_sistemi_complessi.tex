@@ -16,9 +16,36 @@
 \newtheorem{theorem}{Teorema}[section]
 
 \begin{document}
-	\title{Appunti dal corso Introduzione ai Sistemi Complessi}
-	\author{Grufoony}
-	\maketitle
+	\begin{titlepage}
+		\centering % Center everything on the title page
+		\scshape % Use small caps for all text on the title page
+		\vspace*{1.5\baselineskip} % White space at the top of the page
+		% ===================
+		% Title Section
+		% ===================
+		
+		
+		
+		\rule{13cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
+		\rule{13cm}{0.4pt} % Thin horizontal rule
+		
+		\vspace{0.75\baselineskip} % Whitespace above the title
+		% ========== Title ===============
+		{ \Huge Introduzione alla Fisica\\
+		\vspace{4mm}
+		dei Sistemi Complessi \\ }
+		% ======================================
+		\vspace{0.75\baselineskip} % Whitespace below the title
+		\rule{13cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
+		\rule{13cm}{1.6pt} % Thick horizontal rule
+		
+		\vspace{1.75\baselineskip} % Whitespace after the title block
+		% =================
+		% Information
+		% =================
+		{}
+		\vfill
+	\end{titlepage}
 	\tableofcontents
 	\chapter{Introduzione} %CAPITOLO 1
 		\section{Sistema Complesso}
@@ -33,6 +60,11 @@
 			\item \textbf{proprietà emergenti}: derivano dal grande numero di sottosistemi. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
 			\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
 		\end{itemize}
+		Ogni sistema complesso fornisce un \emph{feedback} rispetto alle condizioni inziali che sono fornite.
+		In particolare, si parla di \emph{feedback positivo} se le condizioni iniziali portano il sistema a "esplodere", ossia ad allontanarsi inesorabilmente dall'origine, mentre si parla di \emph{feedback negativo} quando dopo un certo periodo di tempo il sistema ritorna alle condizioni iniziali.
+		\begin{definition}
+			Un sistema a feedback negativo è detto in equilibrio dinamico.
+		\end{definition}
 		
 		\section{Costruzione di un modello}
 		Punto fondamentale di un sistema complesso è costruire un modello che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
@@ -58,7 +90,10 @@
 		\subsection{Modelli a equazioni}
 			La seconda ed ultima tipologia di sistema complesso è data dai \emph{modelli a equazioni}, ossia quei modelli in cui si effettua uno stduio di tipo top-down (dal generale al particolare).
 			In questo caso si assume di non avere conoscenza sui singoli agenti ma di possedere informazioni di carattere puramente macroscopico, dette \emph{osservabili} del sistema.
-			
+			Tipicamente, gli osservabili sono legati tra di loro tramite equazioni differenziali le quali, una volta integrate, forniscono un'evoluzione del sistema nel tempo.
+			In questo caso il risultato ottenuto rappresenta già una media di tutti i risultati possibili: le fluttuazioni del sistema provocheranno quindi uno scostamento da questo valore.
+			Ovviamente, più tempo si farà evolvere il sistema, più rilevante sarà l'effetto delle fluttuazioni e meno preciso sarà il risultato della previsione.
+
 		\section{Esempi}
 			\subsection{Random Walk 1D}
 				Il modello più basilare di sistema complesso è sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
@@ -494,15 +529,113 @@
 			\end{figure}
 		
 		\section{Esempi}
-			
+
 		
 	
 	
 	\chapter{Teoria del controllo} %CAPITOLO 4
 		\section{Teoria}
+			La \emph{teoria del controllo} è quella branca della fisica che studia come controllare i sistemi dinamici.
+			L'obiettivo principale è quello di creare un \emph{controllo}, ossia un modello/algoritmo, in grado di portare un sistema dinamico in un determinato stato dato uno stato iniziale (in input).
+			\begin{definition}
+				Il modello è detto ottimale quando si è raggiunto un buon livello di stabilità, minimizzando i riratdi e gli errori.
+			\end{definition}
+			Il dispositivo che gestisce il sistema dinamico è detto \emph{controllore} e va selezionato accuratamente in base alle richieste del sistema da gestire.
+			Formalmente il controllo viene immesso nel sistema attraverso una forzante che, aggiunta alla lagrangiana, permette lo studio e l'ottimizzazione del problema.
+			Per maggiori informazioni sulla meccanica analitica è possibile consultare gli appunti delle lezioni al link \url{https://github.com/Grufoony/Fisica_UNIBO/blob/main/Appunti_meccanica_analitica.pdf}.
 
 		\section{Esempi}
-	
+			\subsection{Pendolo rovesciato}
+				L'esempio più classico di sistema controllabile è dato dal pendolo rovesciato.
+				\begin{figure}
+					\centering
+						\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+					\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+						%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+						%Shape: Axis 2D [id:dp3368840244616125] 
+						\draw  (85,261) -- (358,261)(112.3,54) -- (112.3,284) (351,256) -- (358,261) -- (351,266) (107.3,61) -- (112.3,54) -- (117.3,61)  ;
+						%Straight Lines [id:da9817096320288043] 
+						\draw    (301,111) -- (210,261) ;
+						%Straight Lines [id:da06758975743465334] 
+						\draw  [dash pattern={on 4.5pt off 4.5pt}]  (210,109) -- (210,261) ;
+						%Straight Lines [id:da2034168201391482] 
+						\draw    (210,209) -- (231.29,221.96) ;
+						\draw [shift={(233,223)}, rotate = 211.33] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+						%Shape: Circle [id:dp9770248165887236] 
+						\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (204.5,261) .. controls (204.5,257.96) and (206.96,255.5) .. (210,255.5) .. controls (213.04,255.5) and (215.5,257.96) .. (215.5,261) .. controls (215.5,264.04) and (213.04,266.5) .. (210,266.5) .. controls (206.96,266.5) and (204.5,264.04) .. (204.5,261) -- cycle ;
+						%Shape: Circle [id:dp8368022401757067] 
+						\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,111) .. controls (295.5,107.96) and (297.96,105.5) .. (301,105.5) .. controls (304.04,105.5) and (306.5,107.96) .. (306.5,111) .. controls (306.5,114.04) and (304.04,116.5) .. (301,116.5) .. controls (297.96,116.5) and (295.5,114.04) .. (295.5,111) -- cycle ;
+		
+						% Text Node
+						\draw (122,127) node [anchor=north west][inner sep=0.75pt]   [align=left] {$ $};
+						% Text Node
+						\draw (222,190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \theta $};
+						% Text Node
+						\draw (201,268) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{C}$};
+						% Text Node
+						\draw (308,88) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{O}$};
+						\end{tikzpicture}
+					\caption{Pendolo rovesciato}
+					\label{figure:pendolo}
+				\end{figure}
+				Siano $x_{C}(t)$ la coordinata del controllore, $x_{O}(t)$ la coordinata del pendolo di lunghezza $l$ e $\theta$ l'angolo formato da esso con la verticale.
+				Utilizzando la meccanica lagrangiana:
+				\begin{equation}
+					\begin{cases}
+						x_{O}=x_{C}+lsin\theta\\
+						y_{O}=lcos\theta
+					\end{cases}
+				\end{equation}
+				\begin{equation}
+					\begin{cases}
+						\dot{x}_O=\dot{x}_{C}+l\dot{\theta}cos\theta\\
+						\dot{y}_{O}=l\dot{\theta}sin\theta
+					\end{cases}
+				\end{equation}
+				La lagrangiana del sistema si può scrivere come:
+				\begin{equation}
+					\mathcal{L}=\frac{m}{2}\left( \left( \dot{x}_{C}+l\dot{\theta}cos\theta \right)^2 + l^2\dot{\theta}^2sin^2\theta \right) - mglcos\theta \simeq \frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta}cos\theta \right) - mglcos\theta
+				\end{equation}
+				alle piccole oscillazioni ($\theta\simeq 0$ e $mglcos\theta\simeq -mgl\frac{\theta^2}{2}$):
+				\begin{equation}
+					\mathcal{L}_{PO}=\frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta} \right) + mgl\frac{\theta^2}{2}
+				\end{equation}
+				L'equazione del moto risulta infine:
+				\begin{equation}
+					\ddot{\theta}=\frac{g}{l}\theta - \frac{\ddot{x}_C}{l}
+				\end{equation}
+				Riconosciuta la forzante, per semplicità si pone $\ddot{x}_C=\pm a(t)$ costante.
+				La soluzione non è omogenea:
+				\begin{equation}
+					\theta(t)=\left( \theta_{0} -\frac{a(t)}{g} \right)cosh(\omega t) + \frac{\dot{\theta}_0}{\omega}sinh(\omega t) +\frac{a(t)}{g}
+				\end{equation}
+				Assumendo ora $\theta_0\simeq 0$ e $\dot{\theta}_0\neq 0$ e che il pendolo si stabilizzi in un tempo $T$ si ha la soluzione stabile:
+				\begin{equation}
+					\theta(T)=Ccosh(\omega T) + Csinh(\omega T) \simeq Ce^{-\omega T}
+				\end{equation}
+				Si può ora ricavare la condizione richiesta:
+				\begin{equation}
+					C=\theta(T)=-\frac{\dot{\theta}(T)}{\omega}
+				\end{equation}
+				Andando a imporla si ottiene:
+				\begin{equation}
+					-\frac{a}{g}cosh(\omega T) + \frac{\dot{\theta}(T)}{\omega}sinh(\omega T) + \frac{a}{g} = \frac{a}{g}sinh(\omega T) - \frac{\dot{\theta}(T)}{\omega}cosh(\omega T)
+				\end{equation}
+				Da cui si può ricavare il periodo di stabilità:
+				\begin{equation}
+					T=\frac{1}{\omega}ln\frac{\frac{a}{g}}{\frac{a}{g}-\frac{\dot{\theta}(T)}{\omega}}
+				\end{equation}
+				Un'osservazione importante riguarda la \emph{condizione critica} del sistema, ove esso non risulta più controllabile, che si ha quando $\dot{\theta}_0=\frac{a\omega}{g}$.
+
+
+
+
+
+			\subsection{Marriage Model/Modello relazionale}
+
+
+
 	\chapter{Altre applicazioni} %CAPITOLO 5
 		\section{Teoria}
 
