@@ -8,8 +8,8 @@
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{tikz-network}
-%\usepackage[pdftex]{graphics,graphicx,color}
-%\usepackage{braket}
+\usepackage{float}
+\floatplacement{figure}{H}
 
 \theoremstyle{theorem}
 \newtheorem{definition}{Definizione}[section]
@@ -534,7 +534,7 @@
 	
 	
 	\chapter{Teoria del controllo} %CAPITOLO 4
-		\section{Teoria}
+		\section{Approccio generale}
 			La \emph{teoria del controllo} è quella branca della fisica che studia come controllare i sistemi dinamici.
 			L'obiettivo principale è quello di creare un \emph{controllo}, ossia un modello/algoritmo, in grado di portare un sistema dinamico in un determinato stato dato uno stato iniziale (in input).
 			\begin{definition}
@@ -628,7 +628,142 @@
 				\end{equation}
 				Un'osservazione importante riguarda la \emph{condizione critica} del sistema, ove esso non risulta più controllabile, che si ha quando $\dot{\theta}_0=\frac{a\omega}{g}$.
 			\subsection{Marriage Model/Modello relazionale}
+				Si supponga ora di voler controllare una relazione con un'altra persona, che tipo di relazione conviene studiare?
+				La scrittrice Anna Karenina sembra fornire una soluzione al problema, constatando che \emph{tutte le relazioni felici sono uguali ma ogni relazione infelice lo è a modo suo}.
+				Sia ora $x(t)$ il grado di felicità nella relazione che, per semplicità si assume positivo ($x(t)\in\mathbb{R}^{+}$) in accordo con l'ipotesi della Karenina
+				L'equazione che descrive la relazione sarà del tipo:
+				\begin{equation}
+					\dot{x}=-rx(t)+ac(t)
+				\end{equation}
+				in cui riconosciamo la funzione \emph{costo} $c(t)$ della relazione (ove per costo si intende uscire a cena, fare un regalo, ecc...) e il parametro $r$, ossia quanto la felicità tenda a diminuire.
+				La relazione giungerà al termine una volta arrivati ad un valore minimo della felicità, che verrà denotato come $x_{m}$.
+				\\Per rafforzare il modello si introducono ora due potenziali:
+				\begin{itemize}
+					\item $U(x)$, \emph{utility potential}, il quale indica quanto funziona la coppia.
+						Esso deve essere tale che $U'(x)>0$ ma $U''(x)<0$, in quanto troppa felicità tende a saturare la relazione;
+					\item $D(c)$, \emph{disutility potential}, il quale tiene conto dello sforzo eseguito.
+						Più il costo del mantenimento della relazione aumenta, più essa tende a fallire (non ne vale la pena).
+						Ovviamente $D(c)$ deve avere un minimo, dato che esiste uno sforzo considerato accettabile per mantenere la relazione;
+				\end{itemize}
+				Si può ora definire il funzionale di soddisfazione come:
+				\begin{equation}
+					W(c)=\int_{0}^{\infty}e^{-\lambda t}\left[U\left(x(t)\right)-D\left(c(t)\right)\right]dt
+				\end{equation}
+				dove il coefficiente $\lambda^{-1}$ rappresenta la scala di memoria del sistema.
+				\\Per ottimizzare il problema si deve avere
+				\begin{equation}
+					\delta\dot{x}=-r\delta x+a\delta c
+				\end{equation}
+				e quindi la variazione infinitesima del funzionale
+				\begin{equation}
+					\delta W(c)=\int_{0}^{\infty}e^{-\lambda t}\left[U'(x)'\delta x-D'(c)\delta c\right]dt=\int_{0}^{\infty}e^{-\lambda t}\left[U'(x)'\delta x-D'(c)\frac{\delta\dot{x}+r\delta x}{a}\right]dt
+				\end{equation}
+				Integrando per parti:
+				\begin{equation}
+					-\int e^{-\lambda t}D'(c)\frac{\delta\dot{x}}{a}dt=-\left[ e^{-\lambda t}D'(c)\frac{\delta x}{a} \right]_{0}^{\infty} + \int_{0}^{\infty}\frac{d}{dt}\left[\frac{e^{-\lambda t}D'(c)\delta x}{a}\right]dt
+				\end{equation}
+				e quindi
+				\begin{equation}
+					\delta W=\int_{0}^{\infty}\left\{ e^{-\lambda t}U'(x)+\frac{d}{dt}\left[\frac{e^{-\lambda t}D'(c)}{a}\right]-\frac{e^{-\lambda t}D'(c)r}{a} \right\}\delta xdt
+				\end{equation}
+				Essendo $\delta x$ arbitrario
+				\begin{equation}
+					D''\left(c(t)\right)\frac{dc}{dt}=(r+\lambda)D'(c)-aU'(x)
+				\end{equation}
+				\\Si assumano ora, per esempio, i seguenti potenziali
+				\begin{equation}
+					\begin{cases}
+						U(x)=U_{\infty}\left(1-e^{-\alpha x}\right)\\
+						D(c)=c\left(c-2c_{0}\right)
+					\end{cases}
+				\end{equation}
+				che forniscono il seguente sistema (equilibrio instabile):
+				\begin{equation}
+					\begin{cases}
+						\dot{x}=-rx+ac\\
+						\dot{c}=(r+\lambda)(c-c_{0})-\alpha\frac{e^{-\alpha x}}{2}
+					\end{cases}
+				\end{equation}
+				\begin{figure}[H]
+					\centering
+					\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
+					\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+					%uncomment if require: \path (0,341); %set diagram left start at 0, and has height of 341
+
+					%Shape: Axis 2D [id:dp3368840244616125] 
+					\draw  (57,269.8) -- (396,269.8)(90.9,16) -- (90.9,298) (389,264.8) -- (396,269.8) -- (389,274.8) (85.9,23) -- (90.9,16) -- (95.9,23)  ;
+					%Straight Lines [id:da3652200107960064] 
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (91,40) -- (400,41) ;
+					%Straight Lines [id:da5006530252551029] 
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (120,40) -- (121,271) ;
+					%Straight Lines [id:da8026254906595234] 
+					\draw    (132,51) -- (230.59,149.59) ;
+					\draw [shift={(232,151)}, rotate = 225] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da13202518334193436] 
+					\draw    (232,151) -- (329.59,52.42) ;
+					\draw [shift={(331,51)}, rotate = 134.71] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da12999604842472334] 
+					\draw    (232,151) -- (132.42,249.59) ;
+					\draw [shift={(131,251)}, rotate = 315.29] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da6286757540841101] 
+					\draw    (329,251) -- (233.39,152.44) ;
+					\draw [shift={(232,151)}, rotate = 45.87] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da6186409744974593] 
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (331,90) -- (331,218) ;
+					\draw [shift={(331,220)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Straight Lines [id:da17147537985002903] 
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (131,219) -- (131.98,92) ;
+					\draw [shift={(132,90)}, rotate = 90.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Curve Lines [id:da625223071951815] 
+					\draw    (132,90) .. controls (191.7,96.97) and (225.66,180.16) .. (132.42,218.43) ;
+					\draw [shift={(131,219)}, rotate = 338.2] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Curve Lines [id:da4439025038344766] 
+					\draw    (331,220) .. controls (245.43,195.12) and (252.92,96) .. (329.84,90.08) ;
+					\draw [shift={(331,90)}, rotate = 176.33] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Curve Lines [id:da7044254609861651] 
+					\draw    (170,51) .. controls (170,117.33) and (294.47,110.15) .. (298.9,54.7) ;
+					\draw [shift={(299,53)}, rotate = 92.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+					%Curve Lines [id:da4584745322280377] 
+					\draw    (302,250) .. controls (302,182.34) and (163.4,181.01) .. (161.03,248.97) ;
+					\draw [shift={(161,250)}, rotate = 270.83] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+					% Text Node
+					\draw (122,127) node [anchor=north west][inner sep=0.75pt]   [align=left] {$ $};
+					% Text Node
+					\draw (44,169) node [anchor=north west][inner sep=0.75pt]  [rotate=-270] [align=left] {costo};
+					% Text Node
+					\draw (203,285) node [anchor=north west][inner sep=0.75pt]   [align=left] {felicità};
+					% Text Node
+					\draw (47,29) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle c_{m}{}_{a}{}_{x}$};
+					% Text Node
+					\draw (112,275) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{m}$};
+					% Text Node
+					\draw (333,73) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A'$};
+					% Text Node
+					\draw (338,209) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A$};
+					% Text Node
+					\draw (123,223) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle B'$};
+					% Text Node
+					\draw (126,67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle B$};
+					% Text Node
+					\draw (190,139) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \gamma _{B}$};
+					% Text Node
+					\draw (245,138) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \gamma _{A}$};
+
+
+					\end{tikzpicture}
+					\caption{Orbite relazionali.}
+					\label{figure:orbite}
+				\end{figure}
+				Le orbite risultanti sono riportate in Fig.(\ref{figure:orbite}), dove si possono distinguere due strategie:
+				\begin{itemize}
+					\item STRATEGIA A: si segue un'orbita $\gamma_{A}$ dai punti $A\rightarrow A'$ poi si fa una decrescita discontinua lungo una $c(t)$ da $A'\rightarrow A$.
+						Sostanzialmente si spende molto per la relazione (nei termini visti in precedenza) poi, una volta divenuto intollerabile il costo, si fa una bella litigata e si ricomincia il ciclo;
+					\item STRATEGIA B: si segue un'orbita $\gamma_{B}$ dai punti $B\rightarrow B'$ poi si fa una crescita discontinua lungo una $c(t)$ da $B'\rightarrow B$.
+						In questo caso si lascia andare la relazione senza apportare sufficiente sforzo poi, ad un passo dalla rottura, si rimedia il tutto con un gesto importante (alto costo) per ristabilire l'orbita.
+				\end{itemize}
+				In entrambi i casi bisogna, tuttavia, prestare parecchia attenzione una volta raggiunti i minimi: se lungo la $\gamma_{A}$ si fa una litigata troppo pesante o lungo la $\gamma_{B}$ si trascura troppo la relazione, si rischia di finire fuori orbita (quindi fuori equilibrio) e far così fallire la relazione (il che è \emph{no buono}, n.d.r.).
 
 
 	\chapter{Altre applicazioni} %CAPITOLO 5
