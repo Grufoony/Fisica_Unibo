@@ -385,6 +385,19 @@
 			Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
 		
 		\section{Esempi}
+			\subsection{Entropia di una mano di carte}
+				Supponiamo di possedere un mazzo di $N$ carte differenti e di pescare da esso $k$ carte.
+				Per calcolare l'entropia di informazione associata alla mano pescata, bisogna innanzitutto calcolare la probabilità di una mano singola.
+				Le combinazioni di $k$ carte di un mazzo di $N$ carte sono date dal coefficiente binomiale:
+				\begin{equation}
+					C=\binom{N}{k}=\frac{N!}{k!(N-k)!}
+				\end{equation}
+				Assumendo che il mazzo non sia truccato, quindi che ogni estrazione sia equiprobabile, la probabilità di ogni singola mano è $p_{i}=\frac{1}{C}$.
+				L'entropia di informazione (o di Shannon) associata ad essa è quindi 
+				\begin{equation}
+					S=-k_{S}\sum_{i=1}^{C}p_{i}\ln{p_{i}}=-k_{S}C\left(\frac{1}{C}\ln{\frac{1}{C}}\right)=k_{S}\ln{\frac{N!}{k!(N-k)!}}
+				\end{equation}
+				con $k_{S}=\frac{1}{\ln2}$ costante di Shannon.
 			\subsection{Broken Stick Model/Modello di Markov}
 				Si consideri un segmento di lunghezza unitaria nel quale viene inserito casualmente un punto $x_1\in[0,1]$ secondo una distribuzione uniforme.
 				Si scarti ora il segmeno $[0,x_1]$ e si iteri il processo per \textit{N} volte: si tratta di un processo ricorsivo con memoria del passato.
@@ -397,7 +410,7 @@
 					\end{split}
 				\end{equation}
 				Il risultato è una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
-				Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non posso più riattaccarlo.
+				Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non è possibile riattaccarlo.
 				Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
 				Un'utile applicazione dei modelli di Markov si trova nel linguaggio (verbi) e in biologia (DNA).
 			\subsection{Penney's game}
@@ -630,12 +643,12 @@
 			\subsection{Marriage Model/Modello relazionale}
 				Si supponga ora di voler controllare una relazione con un'altra persona, che tipo di relazione conviene studiare?
 				La scrittrice Anna Karenina sembra fornire una soluzione al problema, constatando che \emph{tutte le relazioni felici sono uguali ma ogni relazione infelice lo è a modo suo}.
-				Sia ora $x(t)$ il grado di felicità nella relazione che, per semplicità si assume positivo ($x(t)\in\mathbb{R}^{+}$) in accordo con l'ipotesi della Karenina
+				Sia ora $x(t)$ il grado di felicità nella relazione che, per semplicità si assume positivo ($x(t)\in\mathbb{R}^{+}$) in accordo con l'ipotesi della Karenina.
 				L'equazione che descrive la relazione sarà del tipo:
 				\begin{equation}
 					\dot{x}=-rx(t)+ac(t)
 				\end{equation}
-				in cui riconosciamo la funzione \emph{costo} $c(t)$ della relazione (ove per costo si intende uscire a cena, fare un regalo, ecc...) e il parametro $r$, ossia quanto la felicità tenda a diminuire.
+				in cui riconosciamo la funzione \emph{costo} $c(t)$ della relazione (ove per costo si intende uscire a cena, fare un regalo, ecc...),il parametro $r$ (quanto la felicità tenda a diminuire) e il parametro $a$ (amplificazione del costo).
 				La relazione giungerà al termine una volta arrivati ad un valore minimo della felicità, che verrà denotato come $x_{m}$.
 				\\Per rafforzare il modello si introducono ora due potenziali:
 				\begin{itemize}
