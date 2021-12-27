@@ -51,50 +51,99 @@
 	\tableofcontents
 	\chapter{Introduzione} %CAPITOLO 1
 		\section{Sistema Complesso}
-		\begin{definition}
-			\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro, chiamati agenti.
-		\end{definition}
-		Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia studiando prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
-		Un'osservazione importante che va effettuata è che un sistema complesso \textbf{prevede}, non descrive.
-		Alcune delle proprietà principali sono:
-		\begin{itemize}
-			\item \textbf{complessità}: presenza di molti d.o.f. (molti sottosistemi)
-			\item \textbf{proprietà emergenti}: derivano dal grande numero di sottosistemi. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
-			\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
-		\end{itemize}
-		Ogni sistema complesso fornisce un \emph{feedback} rispetto alle condizioni inziali che sono fornite.
-		In particolare, si parla di \emph{feedback positivo} se le condizioni iniziali portano il sistema a "esplodere", ossia ad allontanarsi inesorabilmente dall'origine, mentre si parla di \emph{feedback negativo} quando dopo un certo periodo di tempo il sistema ritorna alle condizioni iniziali.
-		\begin{definition}
-			Un sistema a feedback negativo è detto in equilibrio dinamico.
-		\end{definition}
+			\begin{definition}
+				\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro, chiamati agenti.
+			\end{definition}
+			Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia ssi studiano prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
+			Un'osservazione importante che va effettuata è che un sistema complesso \textbf{prevede}, non descrive.
+			\begin{definition}
+				Lo spazio degli stati dinamici del sistema è detto spazio delle fasi.
+			\end{definition}
+			\begin{definition}
+				I gradi di libertà di un sistema sono dati da $\# d.o.f.=\frac{dimensione dello spazio}{2}$
+			\end{definition}
+			Per un numero elevato di gradi di libertà è possibile utilizzare l'approccio della meccanica statistica.
+			Alcune delle proprietà principali dei sistemi complessi sono:
+			\begin{itemize}
+				\item \textbf{complessità}: presenza di molti d.o.f. (molti agenti)
+				\item \textbf{proprietà emergenti}: derivano dal grande numero di agenti. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
+				\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
+			\end{itemize}
+			La complessità dei sistemi fa si che per definirne uno stato occorra molta \emph{informazione}.
+			Ogni sistema complesso fornisce un \emph{feedback} rispetto alle condizioni inziali che sono fornite.
+			In particolare, si parla di \emph{feedback positivo} se le condizioni iniziali portano il sistema a "esplodere", ossia ad allontanarsi inesorabilmente dall'origine, mentre si parla di \emph{feedback negativo} quando dopo un certo periodo di tempo il sistema ritorna alle condizioni iniziali.
+			\begin{definition}
+				Un sistema a feedback negativo è detto in equilibrio dinamico.
+			\end{definition}
+		
+		\section{Teoria di Ljapunov}
+			In un sistema classico, una volta scritta la lagrangiana (o hamiltoniana) del sistema e ottenute le \emph{equazioni del moto}, è cosa fatta determinarne l'evoluzione nel tempo (traiettorie).
+			Nei sistemi complessi, tuttavia, non è possibile utilizzare un approccio deterministico: si parla infatti di \emph{caos deterministico}.
+			Questo caos è causato soprattutto dalle fluttuazioni intrinseche dei sistemi complessi, le quali li rendono particolamente sensibili alle condizioni iniziali.
+			Si consideri sistema alle condizioni iniziali $x_{0}$.
+			Dopo un tempo $t$, si troverà naturalmente il sistema in una posizione $x(t)$ determinata dalle condizioni iniziali.
+			Si assuma ora la presenza di fluttuazioni sulle condizioni iniziali $x_{0}+\delta_{0}$: il sistema evolverà ora come $x(t)+\delta(t)$.
+			La teoria vuole che le fluttuazioni seguano l'andamento
+			\begin{equation}
+				\delta(t)\simeq\delta_{0}e^{\lambda t}
+			\end{equation}
+			dove il coefficiente $\lambda$ è detto \emph{esponente di Ljapunov}.
+			Il calcolo di questo parametro non è banale, pertanto non verrà dimostrato ma solo riportato.
+			\begin{theorem}
+				$\lambda=\lim_{\delta\to0,t\to\infty}\frac{1}{t}\ln\left\lVert \Phi^{t}(x+\delta)-\Phi^{t}(x) \right\rVert$
+			\end{theorem}
+			Nonostante il calcolo precedente possa spaventare, nella maggior parte dei casi si può utilizzare l'approssimazione $\lambda\simeq\frac{1}{t}\sum_{k}\ln\frac{\delta_{k}}{\delta_{0}}$, dove $k$ indicizza una traslazione temporale $\Delta t$. 
+			Per comprendere i limiti dell'approssimazione precedente si può notare come $\delta_{0}e^{\lambda t}=o(1)$, quindi $\ln\delta_{0}+\lambda t=0$.
+			\begin{definition}
+				$t=-\frac{\ln\delta_{0}}{\lambda}$ tempo di predittività del modello	
+			\end{definition}
+			Si può notare come:
+			\begin{itemize}
+				\item l'esponente di Ljapunov è una proprietà dell'orbita, non del punto, ed è quindi necessario interagire su tempi lunghi;
+				\item un'alta sensibiltà alle condizioni iniziali implica una scarsa predittività;
+				\item per $\lambda>>1$ è possibile utilizzare l'approccio statistico;
+				\item le proprietà sono locali (ma non così tanto locali).
+			\end{itemize}
+			Non è possibile conoscere a priori il segno di $\lambda$.
+			Il \emph{caos deterministico}, ovviamente, si ottiene solo se $\lambda>0$ (l'esponenziale esplode) in un insieme a misura finita.
+			Ne consegue che le orbite debbano espandersi rimanendo limitate, fenomeno noto come \emph{stretching-folding}, e quindi la conservazione di una misura (volume).
+			\begin{theorem}
+				di Poincarè (del ritorno)
+				\\Un sistema dinamico che conserva i volumi su un compatto ritorna arbitrariamente vicino alle condizioni iniziali (feedback negativo).
+			\end{theorem}
 		
 		\section{Costruzione di un modello}
-		Punto fondamentale di un sistema complesso è costruire un modello che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
-		Si possono distinguere due tipologie di modelli, le quali verranno ora analizzate.
-		\subsection{Modelli ad agente}
-			La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno stduio di tipo bottom-up (dal particolare al generale).
-			Assunzione fondamentale è di avere piena conoscenza sui comportamenti dei singoli agenti e sull'ambiente in cui questi si relazionano.
-			Una volta \emph{formalizzati} matematicamente i comportamenti dei singoli è possibile procedere con una \emph{simulazione}, la quale fornirà una possibile evoluzione del sistema.
-			È essenziale notare come in questo caso il risultato ottenuto sia solamente uno dei tanti possibili: bisognerà quindi effettuare la simulazione numerose volte e mediare sui risultati ottenuti.
-			Riguardo la costruzione del modello, la prima cosa da definire è l'\textit{ambiente} in cui ci si trova. 
-			Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
-			Altro punto fondamentale è definire \textit{spazio e tempo}. 
-			Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi è preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
-			Una volta definito lo spazio bisogna poi decidere le condizioni al contorno, ossia il comportamento ai bordi. 
-			Si possono avere \textit{barriere} di tre tipi:
+			Punto fondamentale di un sistema complesso è costruire un modello che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
+			Innanzitutto, per prevedere un sistema occorre:
 			\begin{itemize}
-				\item \textbf{riflettenti}, dove si ha un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattività delle pareti}.
-				\item \textbf{periodico}, dove si hanno i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
-				\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti gli agenti.
+				\item un modello (matematico) per l'evoluzione;
+				\item una conoscenza dello stato presente (o passato) del sistema \emph{sufficiente} ad inizializzare il modello;
 			\end{itemize}
-			Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\\
-			Nella maggior parte dei sistemi non tutti gli agenti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
-		\subsection{Modelli a equazioni}
-			La seconda ed ultima tipologia di sistema complesso è data dai \emph{modelli a equazioni}, ossia quei modelli in cui si effettua uno stduio di tipo top-down (dal generale al particolare).
-			In questo caso si assume di non avere conoscenza sui singoli agenti ma di possedere informazioni di carattere puramente macroscopico, dette \emph{osservabili} del sistema.
-			Tipicamente, gli osservabili sono legati tra di loro tramite equazioni differenziali le quali, una volta integrate, forniscono un'evoluzione del sistema nel tempo.
-			In questo caso il risultato ottenuto rappresenta già una media di tutti i risultati possibili: le fluttuazioni del sistema provocheranno quindi uno scostamento da questo valore.
-			Ovviamente, più tempo si farà evolvere il sistema, più rilevante sarà l'effetto delle fluttuazioni e meno preciso sarà il risultato della previsione.
+			Si possono distinguere due tipologie di modelli, le quali verranno ora analizzate.
+			\subsection{Modelli ad agente}
+				La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno stduio di tipo bottom-up (dal particolare al generale).
+				Assunzione fondamentale è di avere piena conoscenza sui comportamenti dei singoli agenti e sull'ambiente in cui questi si relazionano.
+				Una volta \emph{formalizzati} matematicamente i comportamenti dei singoli è possibile procedere con una \emph{simulazione}, la quale fornirà una possibile evoluzione del sistema.
+				È essenziale notare come in questo caso il risultato ottenuto sia solamente uno dei tanti possibili: bisognerà quindi effettuare la simulazione numerose volte e mediare sui risultati ottenuti.
+				Riguardo la costruzione del modello, la prima cosa da definire è l'\textit{ambiente} in cui ci si trova. 
+				Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
+				Altro punto fondamentale è definire \textit{spazio e tempo}. 
+				Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi è preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
+				Una volta definito lo spazio bisogna poi decidere le condizioni al contorno, ossia il comportamento ai bordi. 
+				Si possono avere \textit{barriere} di tre tipi:
+				\begin{itemize}
+					\item \textbf{riflettenti}, dove si ha un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattività delle pareti}.
+					\item \textbf{periodico}, dove si hanno i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
+					\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti gli agenti.
+				\end{itemize}
+				Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\\
+				Nella maggior parte dei sistemi non tutti gli agenti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
+			\subsection{Modelli a equazioni}
+				La seconda ed ultima tipologia di sistema complesso è data dai \emph{modelli a equazioni}, ossia quei modelli in cui si effettua uno stduio di tipo top-down (dal generale al particolare).
+				In questo caso si assume di non avere conoscenza sui singoli agenti ma di possedere informazioni di carattere puramente macroscopico, dette \emph{osservabili} del sistema.
+				Tipicamente, gli osservabili sono legati tra di loro tramite equazioni differenziali le quali, una volta integrate, forniscono un'evoluzione del sistema nel tempo.
+				In questo caso il risultato ottenuto rappresenta già una media di tutti i risultati possibili: le fluttuazioni del sistema provocheranno quindi uno scostamento da questo valore.
+				Ovviamente, più tempo si farà evolvere il sistema, più rilevante sarà l'effetto delle fluttuazioni e meno preciso sarà il risultato della previsione.
 
 		\section{Esempi}
 			\subsection{Random Walk 1D}
@@ -171,7 +220,85 @@
 					-\int_{-L}^0p(x,t)dx&+\int_0^Lp(x,t)dx<0
 				\end{split}
 			\end{equation}
-			In conclusione la maggior parte delle particelle si trova nella zona fredda ($x<0$), come vuole la fisica, ma la media della distribuzione si trova nella zona calda ($x>0$)
+			In conclusione la maggior parte delle particelle si trova nella zona fredda ($x<0$), come vuole la fisica, ma la media della distribuzione si trova nella zona calda ($x>0$).
+			\subsection{Dinamica generica di interazione}
+				Consideriamo di avrere $n_{0}$ individui iniziali su una griglia (spazio discretizzato) che si muovono seguendo una Random Walk 2D e soggetti alle seguenti restrizioni:
+				\begin{itemize}
+					\item se un individuo ha spazio sufficiente, si riproduce in un tempo $\Delta t$, allora si deve avere $\Delta n(t)\propto n(t)$;
+					\item se due individui competono per lo stesso spazio, uno dei due soccombe con una certa probabilità $p$, il che implica $\Delta n(t)\propto -n^{2}(t)$;
+				\end{itemize}
+				Si osservi come il termine $n^{2}(t)$ conti il numero di coppie.
+				Definita la scala di tempo $\Delta t$, in un modello continuo si deve avere (teoria del campo medio):
+				\begin{equation}
+					n(t+\Delta t)=n(t)+\left(an(t)-bn^{2}(t)\right)\Delta t
+				\end{equation}
+				con $a$ parametro di riproduzione e $\frac{b}{a}$ competizione nella popolazione (dato dall'ambiente).
+				Imponendo l'equilibrio
+				\begin{equation}
+					\dot{n}(t)=an(t)\left(1-\frac{b}{a}n(t)\right)=0
+				\end{equation}
+				si ottengono i punti critici $n=0$, instabile, e $n=\frac{a}{b}$ stabile.
+				La soluzione al sistema è quindi del tipo
+				\begin{equation}
+					\frac{an_{0}}{\left(a-bn_{0}\right)e^{-at}+bn_{0}}
+				\end{equation}
+				e la funzione logistica del sistema è
+				\begin{equation}
+					f(t)=\frac{1-e^{-t}}{1+e^{-t}}=\tanh\frac{t}{2}
+				\end{equation}
+			\subsection{Catmap}
+				Consideriamo un gatto su un toro (ciambella) in gradi di muoversi secondo la:
+				\begin{equation}
+					\left(
+					\begin{matrix}
+						x_{n} \\
+						y_{n} 
+					\end{matrix}
+					\right)=
+					\left(
+					\begin{matrix}
+						2 & 1\\
+						1 & 1 
+					\end{matrix}
+					\right)
+					\left(
+					\begin{matrix}
+						x_{n-1} \\
+						y_{n-1} 
+					\end{matrix}
+					\right)
+				\end{equation}
+				Risulta ovvio come
+				\begin{equation}
+					\det
+					\left(
+						\begin{matrix}
+							2 & 1\\
+							1 & 1 
+						\end{matrix}
+					\right)=1
+				\end{equation}
+				quindi si conservino le aree.
+				Calcolo degli autovalori:
+				\begin{equation}
+					\det
+					\left(
+						\begin{matrix}
+							2-\lambda & 1\\
+							1 & 1-\lambda
+						\end{matrix}
+					\right)=\lambda^{2}-3\lambda+1=0
+				\end{equation}
+				e si ottengono
+				\begin{equation}
+					\begin{cases}
+						\lambda_{\pm}=\frac{3\pm\sqrt{5}}{2}\\
+						\lambda_{+}\lambda_{-}=1
+					\end{cases}
+				\end{equation}
+				Il sistema dilata densamente lungo la direzione $v_{+}$ dell'autovettore $\lambda_{+}>1$.
+				Dato un vettore iniziale $x_{0}$, $(x_{0}\cdot v_{t})\lambda_{t}^{n} \Rightarrow \ln\lambda_{t}$ è l'esponenziale di Ljapunov.
+				Problema: data una distribuzione di punti $\rho_{0}$, cosa succede a $\rho_{0}(T^{n}x)$?
 			\subsection{Modello economico}
 				Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
 				Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
@@ -250,7 +377,7 @@
 				si ottiene esattamente l'andamento a potenza ricercato.
 			\subsection{La rovina di un giocatore}
 				Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
-				Il gioco finisce ai "bordi" per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
+				Il gioco finisce ai ``bordi'' per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
 				Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
 				Come nel modello economico evoluto si ha:
 				\begin{equation}
