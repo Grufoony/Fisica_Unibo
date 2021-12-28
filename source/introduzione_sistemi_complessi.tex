@@ -166,6 +166,11 @@
 				Si utilizza $\sqrt{n}$ per normalizzare in quanto è l'unico esponente non divergente.
 				La varianza della gaussiana cresce nel tempo, infatti calcolando i momenti della distribuzione si trova $<x(t)>=x_0$, $<(x(t)-x_0)^2>=Dt$.
 				Se la topologia del sistema fosse una circonferenza (e non una retta), si avrebbe un rilassamento esponenziale a una situazione stazionaria.
+				\\Definito un intervallo $-L,L$ sulla retta, la probabilità che il punto vi sca dopo un tempo $t$ è data da:
+				\begin{equation}
+					P(\left\lvert x\right\rvert >L)=1-\int_{-L}^{L}\frac{1}{\sqrt{2\pi Dt}}e^{-\frac{x^2}{2Dt}}dx
+				\end{equation}
+				Si può facilmente notare come raddoppiando la distanza $L$ il tempo $t$ quadruplichi.
 			\subsection{Random Walk 2D}
 				Volendo espandere il modello di random walk ad uno spazio 2D si nota subito come, essendo ogni asse indipendente dall'altro, si possa semplicemente comporre due gaussiane:\\
 				\begin{equation}
@@ -406,7 +411,7 @@
 				si ottiene esattamente l'andamento a potenza ricercato.
 			\subsection{La rovina di un giocatore}
 				Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
-				Il gioco finisce ai ``bordi'' per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
+				Il gioco finisce ai ``bordi'' (barriera assorbente) per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
 				Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
 				Come nel modello economico evoluto si ha:
 				\begin{equation}
