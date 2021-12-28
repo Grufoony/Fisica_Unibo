@@ -482,24 +482,35 @@
 			\begin{definition}
 				$-\ln(x)$ informazione portata dal carattere $x$
 			\end{definition}
+			Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
+			Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza.
 			\begin{definition}
 				Probabilità stazionaria\\
 				La probabilità stazionaria è il numero di volte che questo evento accade in una sequenza.
 			\end{definition}
-			\begin{definition}
-				$S=-\sum_kp(x_k)\ln(p(x_k))$ entropia di informazione (informazione media portata dale variabili $x_k$)
-			\end{definition}
-			Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
-			Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza.
-			Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
 			\begin{theorem}
 				legge dei grandi numeri\\
 				Siano A e B due eventi distinti (osservati N volte), allora si ha che\\
 				$\lim_{N\to\infty}\frac{p(AB)}{p(A)}=p(B/A)$
 			\end{theorem}
+			\subsection{Ranking distribution}
+				\begin{definition}
+					Sia $x$ una variabile aleatoria con un sample $\{x_{1},\ldots,x_{n}\}$ di osservazioni ordinate tali che $x_{1}\geq x_{2}\geq\ldots$.
+					Allora $x_{j}=f(j)$ è detta ranking distribution.
+				\end{definition}
+				Solitamente tale distribuzione è normalizzata in modo che $y_{j}=\frac{x_{j}}{x_{1}}$.
+				Per definizione la frequenza di un evento è $\frac{j}{n}$, quindi la distribuzione cumulata risulta
+				\begin{equation}
+					F(x_{j})=1-\frac{j}{n}=1-\frac{J(x_{j})}{n}
+				\end{equation}
+				con $J(x_{j}$ inverso del ranking.
+				La funzione di distribuzione sarà quindi
+				\begin{equation}
+					p(x)=-\frac{1}{n}\frac{dJ}{dx}
+				\end{equation}
 
 			\subsection{Matrice stocastica}
-				Per capire la sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
+				Per capire una sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
 				L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
 				\begin{definition}
 					$p_{ij}=p(x_j/x_i)$ matrice stocastica
@@ -528,6 +539,34 @@
 					\item $\lambda_i<1\quad\forall i\neq 0$
 					\item $p_j^{n+1}=\sum_ip_{ij}p_j^n=1\Leftrightarrow\sum_ip_i^n=1$
 				\end{itemize}
+		
+		\section{Entropia}
+			Si supponga di voler calcolare l'incertezza di una distribuzione di probabilità $p_{1},\ldots,p_{n}$ per gli eventi $\{x_{1},\ldots,x_{n}\}$.
+			Si assuma:
+			\begin{itemize}
+				\item $H(p_{1},\ldots,p_{n})$ continua;
+				\item se $p_{j}=\frac{1}{n}$ allora $H(\frac{1}{n},\ldots,\frac{1}{n})$ è monotona crescente;
+				\item Dati gli eventi composti $y_{1}=\{x_{1},\ldots,x_{m}\}$, $y_{2}=\{x_{m+1},\ldots,x_{m+k}\}$ con probabilità $P(y_{i}/x_{i})=\frac{p_{i}}{w_{i}}$, allora 
+					\\$H(p_{1},\ldots,p_{n})=H(w_{1},\ldots,w_{n})+w_{1}H\left(\frac{p_{1}}{w_{1}},\ldots,\frac{p_{m}}{w_{1}}\right)+w_{2}H\left(\frac{p_{2}}{w_{2}},\ldots,\frac{p_{m}}{w_{2}}\right)+\ldots$;
+			\end{itemize}
+			La soluzione è del tipo $H(p_{1},\ldots,p_{n})=-k_{s}\sum_{i}p_{i}\ln(p_{i})$ dove si definisce
+			\begin{definition}
+				$S=-k_{s}\sum_{i}p(x_i)\ln p(x_i)$ entropia di informazione (di Shannon)
+				\label{equation:entropia}
+			\end{definition}
+			con $k_{s}=\frac{1}{\ln2}$ costante di Shannon.
+			Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
+			Si può notare come $H(p_{1},\ldots,p_{n})$ sia massima per $p_{j}=\frac{1}{n}$.
+			Fissato $\bar{x}=\sum_{j}x_{j}p_{j}$, l'entropia è massimizzabile utilizzando i moltiplicatori di lagrange:
+			\begin{equation}
+				\delta H=-\sum_{i}\delta p(x_i)\ln p(x_i)+\lambda\sum_{j}x_{j}\delta p_{j}
+			\end{equation}
+			il che implica $-\ln p_{j}+\lambda x_{j}=0$, con soluzione
+			\begin{equation}
+				p_{j}=\frac{e^{\lambda x_{j}}}{\sum_{j}e^{\lambda x_{j}}}
+			\end{equation}
+			con $\lambda\simeq -\frac{1}{\bar{x}}$ (risultato fondamentale della meccanica statistica).
+			La distribuzione è quindi esponenziale, con $p_{j}\propto e^{-\frac{x_{j}}{\bar{x}}}$.
 		
 		\section{Teoria di Markov}
 			A questo punto si può calcolare come cambi l'entropia di informazione di una catena aggiungendo un carattere.
@@ -566,7 +605,7 @@
 				e la misura invariante risulta quindi una distribuzione uniforme nell'intervallo $[0,1]$.
 				Da qui la probabilità $\lim_{n\to\infty}P(7)=\log8-\log7$.
 			\subsection{Entropia di una mano di carte}
-				Supponiamo di possedere un mazzo di $N$ carte differenti e di pescare da esso $k$ carte.
+				Supponiamo di possedere un mazzo di $N$ carte differenti e di pescare da esso $k\leq N$ carte.
 				Per calcolare l'entropia di informazione associata alla mano pescata, bisogna innanzitutto calcolare la probabilità di una mano singola.
 				Le combinazioni di $k$ carte di un mazzo di $N$ carte sono date dal coefficiente binomiale:
 				\begin{equation}
