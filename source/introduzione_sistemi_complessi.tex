@@ -110,6 +110,7 @@
 			\begin{theorem}
 				di Poincarè (del ritorno)
 				\\Un sistema dinamico che conserva i volumi su un compatto ritorna arbitrariamente vicino alle condizioni iniziali (feedback negativo).
+				\label{theorem:poincare}
 			\end{theorem}
 		
 		\section{Costruzione di un modello}
@@ -247,7 +248,7 @@
 					f(t)=\frac{1-e^{-t}}{1+e^{-t}}=\tanh\frac{t}{2}
 				\end{equation}
 			\subsection{Catmap}
-				Consideriamo un gatto su un toro (ciambella) in gradi di muoversi secondo la:
+				Consideriamo un gatto su un toro $\Pi^{2}$ (ciambella) in gradi di muoversi secondo la:
 				\begin{equation}
 					\left(
 					\begin{matrix}
@@ -299,6 +300,34 @@
 				Il sistema dilata densamente lungo la direzione $v_{+}$ dell'autovettore $\lambda_{+}>1$.
 				Dato un vettore iniziale $x_{0}$, $(x_{0}\cdot v_{t})\lambda_{t}^{n} \Rightarrow \ln\lambda_{t}$ è l'esponenziale di Ljapunov.
 				Problema: data una distribuzione di punti $\rho_{0}$, cosa succede a $\rho_{0}(T^{n}x)$?
+				\\Per definizione, data una distribuzione $\rho(x)$, questa deve essere normalizzata $\int_{\Pi^{2}}\rho(x)dx=1$.
+				L'equazione di continuità permette di imporre la conservazione del numero di particelle:
+				\begin{equation}
+					\rho(x,n)=\rho_{0}\left(T^{-n}x\right)\left\lvert\frac{\partial T^{-n}}{\partial x}\right\rvert 
+				\end{equation}
+				in cui si riconosce $\left\lvert\frac{\partial T^{-n}}{\partial x}\right\rvert=
+				\det
+				\left(
+					\begin{matrix}
+						2 & 1\\
+						1 & 1 
+					\end{matrix}
+				\right)=1$, quindi $\rho_{0}\left(T^{n}x\right)$ evolve in una distribuzione di particelle.
+				Si può ora constatare che, se $I(x)$ è un osservabile del sistema, vale la relazione:
+				\begin{equation}
+					<I>(n)=\int I(x)\rho(x,n)dx
+				\end{equation}
+				La teoria suggerisce l'esistenza di una distribuzione invariante $\rho_{s}\left(T^{-n}x\right)=\rho_{s}$.
+				Sia ora $\chi_{A}(x)$ la funzione caratteristica del dell'insieme $A$, e $\rho_{0}(y)=\frac{\chi_{A}(y)}{m(A)}$, $I(x)=\chi_{B}(x)$.
+				L'integrale precedente diviene:
+				\begin{equation}
+					\begin{split}
+						<I>(n)=\int\chi_{B}(x)\frac{\chi_{A}T^{-n}x}{m(A)}dx&=\int_{B}\frac{\chi_{A}T^{-n}x}{m(A)}dx=\\
+						=\frac{1}{m(A)}\int_{T^{B}}\chi_{A}(y)dy&=\frac{1}{m(A)}m(A)m(B)=m(B)\\
+						m(B)&=\int\chi_{B}(x)\rho_{s}(x)dx
+					\end{split}
+				\end{equation}
+				e si è così dimostrato il teorema \ref{theorem:poincare}.
 			\subsection{Modello economico}
 				Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
 				Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
@@ -514,6 +543,23 @@
 			Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
 		
 		\section{Esempi}
+			\subsection{Utilizzo della misura invariante}
+				Sia $x_{n}=2^{n}$ un numero, con $n \geq 1$.
+				Qual è la probabilità che esso abbia un $7$ come prima cifra?
+				\\Supponendo $2^{n}=7.\cdots\times 10^{k}$, allora $\log{2^{n}}=\log{7.\cdots}+k$.
+				Si consideri ora la dinamica
+				\begin{equation}
+					y_{n+1}=y_{n}+\log2\mod1
+					\label{equation:cifre}
+				\end{equation}
+				che rappresenta sostanzialmente una traslazione nell'intervallo $[0,1]$.
+				In questo caso l'esponente di Ljapunov è nullo in quanto non vi è espansione.
+				Iterando la \ref{equation:cifre} si ottiene
+				\begin{equation}
+					y_{n}=y_{0}+n\log2\mod1
+				\end{equation}
+				e la misura invariante risulta quindi una distribuzione uniforme nell'intervallo $[0,1]$.
+				Da qui la probabilità $P(7)=\log8-\log7$.
 			\subsection{Entropia di una mano di carte}
 				Supponiamo di possedere un mazzo di $N$ carte differenti e di pescare da esso $k$ carte.
 				Per calcolare l'entropia di informazione associata alla mano pescata, bisogna innanzitutto calcolare la probabilità di una mano singola.
