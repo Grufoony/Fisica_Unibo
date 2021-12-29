@@ -84,9 +84,9 @@
 			Dopo un tempo $t$, si troverà naturalmente il sistema in una posizione $x(t)$ determinata dalle condizioni iniziali.
 			Si assuma ora la presenza di fluttuazioni sulle condizioni iniziali $x_{0}+\delta_{0}$: il sistema evolverà ora come $x(t)+\delta(t)$.
 			La teoria vuole che le fluttuazioni seguano l'andamento
-			\begin{equation}
+			\begin{equation*}
 				\delta(t)\simeq\delta_{0}e^{\lambda t}
-			\end{equation}
+			\end{equation*}
 			dove il coefficiente $\lambda$ è detto \emph{esponente di Ljapunov}.
 			Il calcolo di questo parametro non è banale, pertanto non verrà dimostrato ma solo riportato.
 			\begin{theorem}
@@ -173,59 +173,59 @@
 				Si può facilmente notare come raddoppiando la distanza $L$ il tempo $t$ quadruplichi.
 			\subsection{Random Walk 2D}
 				Volendo espandere il modello di random walk ad uno spazio 2D si nota subito come, essendo ogni asse indipendente dall'altro, si possa semplicemente comporre due gaussiane:\\
-				\begin{equation}
+				\begin{equation*}
 					(x,y)\simeq\frac{1}{2\pi\Delta t}e^{-\frac{x^2+y^2}{2\Delta t}}=\rho(x,y,t)
-				\end{equation}
+				\end{equation*}
 				Dove la diffusione segue la definizione precedente ed è la stessa in tutte le direzioni.
 				La funzione $\rho(x,y,t)$ rappresnta di fatto la probabilità che la il soggetto in analisi si trovi in un volume $\Delta x\Delta y$.
 				Si può riscrivere la relazione precedente in coorfinate polari ottenendo:
-				\begin{equation}
+				\begin{equation*}
 					\rho(r,\theta,t)=\frac{r}{2\pi\Delta t}e^{-\frac{r^2}{2\Delta t}}
-				\end{equation}
+				\end{equation*}
 				studiando più semplicemente l'allontanamento dall'origine.
 				In particolare, l'allontanamento medio risulta:
-				\begin{equation}
+				\begin{equation*}
 					<r>=\int_0^\infty\rho(r,\theta,t)rdr=\sqrt{\frac{\pi}{2}\Delta t}
-				\end{equation}
+				\end{equation*}
 				e la densità diminuisce quindi esponenzialmente.
 			\subsection{Random Walk non omogenea}
 			Si consideri ora una random walk 1D con probabilità non uniforme in un reticolo di passo $\Delta x$.
 			Sia $\epsilon$ un parametro e si definiscano le probabilità:
-			\begin{equation}
+			\begin{equation*}
 				\begin{cases}
 					p_{++}=p_{--}=\frac{1}{4}(1+\epsilon x)\quad x\geq 0\quad\Rightarrow x\rightarrow x\pm 2\Delta x\\
 					p_+=p_-=\frac{1}{4}(1-\epsilon x)\quad x<0\quad\Rightarrow x\rightarrow x\pm \Delta x
 				\end{cases}
-			\end{equation}
+			\end{equation*}
 			Si può verificare facilmente come le probabilità siano ben definite.
 			Il sistema tende a muoversi più velocemente nel verso positivo delle \textit{x} e più lentamente nel verso opposto, assomigliando a una scatola con aria a diversa temperatura: vi è quindi un equilibrio locale (ogni nodo è identico).
 			Si può osservare come:
-			\begin{equation}
+			\begin{equation*}
 				\begin{split}
 					<\Delta x>&=0\\
 					<\Delta x^2>&=(4\Delta x^2)(p_{++}+p_{--})+\Delta x^2(p_++p_-)=\left(\frac{5}{2}+\frac{3}{2}\epsilon x\right)\Delta x^2
 				\end{split}
-			\end{equation}
+			\end{equation*}
 			Ogni passo ho un \textit{enemble} differente, quindi lo spazio non è omogeneo.
 			Ponendo $T(x)=<\Delta x^2>$ come funzione corrispondente alla temperatura fisica, si ottiene un gradiente costante:
-			\begin{equation}
+			\begin{equation*}
 				\frac{dT}{dx}=\frac{3}{2}\epsilon\Delta x^2
-			\end{equation}
+			\end{equation*}
 			Questo gradiente si ritrova spesso in natura, ad esempio i batteri variano la velocità di movimento (casuale) dei loro flagelli seguendo un gradiente di cibo.
 			Per essere apprezzabile la variazione di temperatura deve essere tale che $\Delta T=\frac{\partial T}{\partial x}\Delta x\propto\Delta x^3$ e in un limite continuo si ottiene:
-			\begin{equation}
+			\begin{equation*}
 				\begin{split}
 					\frac{\partial p}{\partial t}&=\frac{1}{2}\frac{\partial p}{\partial x}T(x)\frac{\partial p}{\partial x}p(x,t)\\
 					\frac{d<x>}{dt}&=\frac{1}{2}\int x\frac{\partial p}{\partial x}T(x)\frac{\partial p}{\partial x}p(x,t)>0\quad \frac{\partial T}{\partial x}>0
 				\end{split}
-			\end{equation}
+			\end{equation*}
 			Andando a calcolare media e mediana del sistema si nota come:
-			\begin{equation}
+			\begin{equation*}
 				\begin{split}
 					\int xp(x,t)dx&>0\\
 					-\int_{-L}^0p(x,t)dx&+\int_0^Lp(x,t)dx<0
 				\end{split}
-			\end{equation}
+			\end{equation*}
 			In conclusione la maggior parte delle particelle si trova nella zona fredda ($x<0$), come vuole la fisica, ma la media della distribuzione si trova nella zona calda ($x>0$).
 			\subsection{Dinamica generica di interazione}
 				Consideriamo di avrere $n_{0}$ individui iniziali su una griglia (spazio discretizzato) che si muovono seguendo una Random Walk 2D e soggetti alle seguenti restrizioni:
@@ -235,18 +235,18 @@
 				\end{itemize}
 				Si osservi come il termine $n^{2}(t)$ conti il numero di coppie.
 				Definita la scala di tempo $\Delta t$, in un modello continuo si deve avere (teoria del campo medio):
-				\begin{equation}
+				\begin{equation*}
 					n(t+\Delta t)=n(t)+\left(an(t)-bn^{2}(t)\right)\Delta t
-				\end{equation}
+				\end{equation*}
 				con $a$ parametro di riproduzione e $\frac{b}{a}$ competizione nella popolazione (dato dall'ambiente).
 				Imponendo l'equilibrio
-				\begin{equation}
+				\begin{equation*}
 					\dot{n}(t)=an(t)\left(1-\frac{b}{a}n(t)\right)=0
-				\end{equation}
+				\end{equation*}
 				si ottengono i punti critici $n=0$, instabile, e $n=\frac{a}{b}$ stabile.
 				La soluzione al sistema è quindi del tipo
 				\begin{equation}
-					\frac{an_{0}}{\left(a-bn_{0}\right)e^{-at}+bn_{0}}
+					n(t)=\frac{an_{0}}{\left(a-bn_{0}\right)e^{-at}+bn_{0}}
 				\end{equation}
 				e la funzione logistica del sistema è
 				\begin{equation}
@@ -254,7 +254,7 @@
 				\end{equation}
 			\subsection{Catmap}
 				Consideriamo un gatto su un toro $\Pi^{2}$ (ciambella) in gradi di muoversi secondo la:
-				\begin{equation}
+				\begin{equation*}
 					\left(
 					\begin{matrix}
 						x_{n} \\
@@ -273,9 +273,9 @@
 						y_{n-1} 
 					\end{matrix}
 					\right)
-				\end{equation}
+				\end{equation*}
 				Risulta ovvio come
-				\begin{equation}
+				\begin{equation*}
 					\det
 					\left(
 						\begin{matrix}
@@ -283,10 +283,10 @@
 							1 & 1 
 						\end{matrix}
 					\right)=1
-				\end{equation}
+				\end{equation*}
 				quindi si conservino le aree.
 				Calcolo degli autovalori:
-				\begin{equation}
+				\begin{equation*}
 					\det
 					\left(
 						\begin{matrix}
@@ -294,22 +294,22 @@
 							1 & 1-\lambda
 						\end{matrix}
 					\right)=\lambda^{2}-3\lambda+1=0
-				\end{equation}
+				\end{equation*}
 				e si ottengono
-				\begin{equation}
+				\begin{equation*}
 					\begin{cases}
 						\lambda_{\pm}=\frac{3\pm\sqrt{5}}{2}\\
 						\lambda_{+}\lambda_{-}=1
 					\end{cases}
-				\end{equation}
+				\end{equation*}
 				Il sistema dilata densamente lungo la direzione $v_{+}$ dell'autovettore $\lambda_{+}>1$.
 				Dato un vettore iniziale $x_{0}$, $(x_{0}\cdot v_{t})\lambda_{t}^{n} \Rightarrow \ln\lambda_{t}$ è l'esponenziale di Ljapunov.
 				Problema: data una distribuzione di punti $\rho_{0}$, cosa succede a $\rho_{0}(T^{n}x)$?
 				\\Per definizione, data una distribuzione $\rho(x)$, questa deve essere normalizzata $\int_{\Pi^{2}}\rho(x)dx=1$.
 				L'equazione di continuità permette di imporre la conservazione del numero di particelle:
-				\begin{equation}
+				\begin{equation*}
 					\rho(x,n)=\rho_{0}\left(T^{-n}x\right)\left\lvert\frac{\partial T^{-n}}{\partial x}\right\rvert 
-				\end{equation}
+				\end{equation*}
 				in cui si riconosce $\left\lvert\frac{\partial T^{-n}}{\partial x}\right\rvert=
 				\det
 				\left(
@@ -319,9 +319,9 @@
 					\end{matrix}
 				\right)=1$, quindi $\rho_{0}\left(T^{n}x\right)$ evolve in una distribuzione di particelle.
 				Si può ora constatare che, se $I(x)$ è un osservabile del sistema, vale la relazione:
-				\begin{equation}
+				\begin{equation*}
 					<I>(n)=\int I(x)\rho(x,n)dx
-				\end{equation}
+				\end{equation*}
 				La teoria suggerisce l'esistenza di una distribuzione invariante $\rho_{s}\left(T^{-n}x\right)=\rho_{s}$.
 				Sia ora $\chi_{A}(x)$ la funzione caratteristica del dell'insieme $A$, e $\rho_{0}(y)=\frac{\chi_{A}(y)}{m(A)}$, $I(x)=\chi_{B}(x)$.
 				L'integrale precedente diviene:
@@ -339,17 +339,17 @@
 				Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.\\
 				\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla povertà.
 				Il sistema ha quindi i seguenti limiti:
-				\begin{equation}
+				\begin{equation*}
 					\begin{cases}
 						\sum_kn_k=N\\
 						n_k\geq 0
 					\end{cases}
-				\end{equation}
+				\end{equation*}
 				con \textit{N} costante, quindi non si ha creazione/distruzione di denaro.
 				La probabilità di trovare un individuo con n soldi è:
-				\begin{equation}
+				\begin{equation*}
 					p(n)=\frac{\binom{M+N-2-n}{M-2}}{\binom{M+N-1}{N-1}}
-				\end{equation}
+				\end{equation*}
 				e, ponendo $\overline{n}=\frac{N}{M}$, si può calcolare:
 				\begin{equation}
 					\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
@@ -371,35 +371,35 @@
 					Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
 				\end{definition}
 				A causa di questa struttura, all'equilibrio si deve avere:
-				\begin{equation}
+				\begin{equation*}
 					\pi_+(n-1)p(n-1)+\pi_-(n+1)p(n+1)=\pi_+(n)p(n)+\pi_-(n)p(n)
-				\end{equation}
+				\end{equation*}
 				e in particolare è verificato il \textit{bilancio dettagliato}:
 				\begin{equation}
 					\pi_+(n-1)p(n-1)=\pi_-(n)p(n)\quad \forall n\geq 1
 				\end{equation}
 				Normalizzata la distribuzione è possibile iterare il tutto:
-				\begin{equation}
+				\begin{equation*}
 					p(n)=\prod_{k=1}^n\frac{\pi_+(k-1)}{1pi_-(k)}p(0)
-				\end{equation}
+				\end{equation*}
 				Riscrivendo un maniera più comoda il bilancio dettagliato, si può poi procedere:
-				\begin{equation}
+				\begin{equation*}
 					\pi_+(n-\frac{1}{2})p(n-\frac{1}{2})=\pi_-(n+\frac{1}{2})p(n+\frac{1}{2})
-				\end{equation}
-				\begin{equation}
+				\end{equation*}
+				\begin{equation*}
 					\begin{split}
 						[\pi_+(n)-\pi_-(n)]p(n)-\frac{1}{2}\frac{\partial}{\partial n}[\pi_+(n)-\pi_-(n)]p(n)\simeq 0\\
 						ap(n)+\frac{\partial}{\partial n}(bn)p(n)\simeq 0
 					\end{split}
-				\end{equation}
+				\end{equation*}
 				Si possono notare ora le seguenti dipendenze, introducendo la coppia di parametri costanti \textit{(a, b)}:
-				\begin{equation}
+				\begin{equation*}
 					\begin{cases}
 						\pi_+(n-1)-\pi_-(n)\simeq a\\
 						\pi_+(n)\simeq bn-\frac{a}{2}\\
 						\pi_-(n)\simeq bn+\frac{a}{2}
 					\end{cases}
-				\end{equation}
+				\end{equation*}
 				Cercando ora l'andamento di $p(n)$:
 				\begin{equation}
 					\begin{split}
@@ -414,24 +414,24 @@
 				Il gioco finisce ai ``bordi'' (barriera assorbente) per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
 				Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
 				Come nel modello economico evoluto si ha:
-				\begin{equation}
+				\begin{equation*}
 					P_M(k)=pP_M(k+1)+qP_M(k-1)
-				\end{equation}
+				\end{equation*}
 				con i vincoli
-				\begin{equation}
+				\begin{equation*}
 					\begin{cases}
 						P_M(0)=0\\
 						P_M(M)=1
 					\end{cases}
-				\end{equation}
+				\end{equation*}
 				Ragionando per induzione si ottiene:
-				\begin{equation}
+				\begin{equation*}
 					P_M(k+1)-P_M(k)=\frac{q}{p}\left[P_M(k)-P_M(k-1)\right]=\left(\frac{q}{p}\right)^kP_M(1)
-				\end{equation}
+				\end{equation*}
 				\begin{equation}
 					P_M(k)=\frac{1-\left(\frac{q}{p}\right)^k}{1-\left(\frac{q}{p}\right)^M}
 				\end{equation}
-				Ponendo ora $p>q$,
+				Inoltre,
 				\begin{equation}
 					P_\infty(k)=1-\left(\frac{q}{p}\right)^k
 				\end{equation}
@@ -475,18 +475,8 @@
 				$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
 			\end{definition}
 			\begin{definition}
-				Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
-			\end{definition}
-			Considerando una sequenza (\textit{codifica}) $\{x_k\}_1^N$ si può assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
-			Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
-			\begin{definition}
-				$-\ln(x)$ informazione portata dal carattere $x$
-			\end{definition}
-			Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
-			Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza.
-			\begin{definition}
 				Probabilità stazionaria\\
-				La probabilità stazionaria è il numero di volte che questo evento accade in una sequenza.
+				La probabilità stazionaria è il numero di volte che un evento accade in una sequenza.
 			\end{definition}
 			\begin{theorem}
 				legge dei grandi numeri\\
@@ -508,9 +498,60 @@
 				\begin{equation}
 					p(x)=-\frac{1}{n}\frac{dJ}{dx}
 				\end{equation}
-
+		
+		\section{Entropia}
+			Si supponga di voler calcolare l'incertezza di una distribuzione di probabilità $p_{1},\ldots,p_{n}$ per gli eventi $\{x_{1},\ldots,x_{n}\}$.
+			Si assuma:
+			\begin{itemize}
+				\item $H(p_{1},\ldots,p_{n})$ continua;
+				\item se $p_{j}=\frac{1}{n}$ allora $H(\frac{1}{n},\ldots,\frac{1}{n})$ è monotona crescente;
+				\item Dati gli eventi composti $y_{1}=\{x_{1},\ldots,x_{m}\}$, $y_{2}=\{x_{m+1},\ldots,x_{m+k}\}$ con probabilità $P(y_{i}/x_{i})=\frac{p_{i}}{w_{i}}$, allora 
+					\\$H(p_{1},\ldots,p_{n})=H(w_{1},\ldots,w_{n})+w_{1}H\left(\frac{p_{1}}{w_{1}},\ldots,\frac{p_{m}}{w_{1}}\right)+w_{2}H\left(\frac{p_{2}}{w_{2}},\ldots,\frac{p_{m}}{w_{2}}\right)+\ldots$;
+			\end{itemize}
+			La soluzione è del tipo $H(p_{1},\ldots,p_{n})=-k_{s}\sum_{i}p_{i}\ln(p_{i})$ dove si definisce
+			\begin{definition}
+				$S=-k_{s}\sum_{i}p(x_i)\ln p(x_i)$ entropia di informazione (di Shannon)
+				\label{equation:entropia}
+			\end{definition}
+			con $k_{s}=\frac{1}{\ln2}$ costante di Shannon.
+			Si può notare come $H(p_{1},\ldots,p_{n})$ sia massima per $p_{j}=\frac{1}{n}$.
+			Fissato $\bar{x}=\sum_{j}x_{j}p_{j}$, l'entropia è massimizzabile utilizzando i moltiplicatori di lagrange:
+			\begin{equation*}
+				\delta H=-\sum_{i}\delta p(x_i)\ln p(x_i)+\lambda\sum_{j}x_{j}\delta p_{j}=0
+			\end{equation*}
+			il che implica $-\ln p_{j}+\lambda x_{j}=0$, con soluzione
+			\begin{equation}
+				p_{j}=\frac{e^{\lambda x_{j}}}{\sum_{j}e^{\lambda x_{j}}}
+			\end{equation}
+			con $\lambda\simeq -\frac{1}{\bar{x}}$ (risultato fondamentale della meccanica statistica).
+			La distribuzione è quindi esponenziale, con $p_{j}\propto e^{-\frac{x_{j}}{\bar{x}}}$.
+		
+		\section{Informazione}
+			\begin{definition}
+				Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
+			\end{definition}
+			Si consideri una sequenza (\textit{codifica}) $\{x_k\}_1^N$: si può assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
+			Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
+			\begin{definition}
+				Data una codifica, si definisce $-\ln(x)$ l'informazione portata dal carattere $x$
+			\end{definition}
+			Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
+			Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza (da qui il fattore $\ln2$ dell'entropia di Shannon).
+			L'equazione \ref{equation:entropia} rappresenta quindi l'informazione media portata da un singolo carattere.
+			Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
+			Data l'indipendenza dei caratteri, si può scrivere l'entropia di una coppia come
+			\begin{equation*}
+				\begin{split}
+					S\left(P_{2}\left(\{x_{k_{1}},x_{k_{2}}\}\right)\right)&=-\sum_{k_{1},k_{2}}P_{2}\left(\{x_{k_{1}},x_{k_{2}}\}\right)\ln{P_{2}\left(\{x_{k_{1}},x_{k_{2}}\}\right)}=\\
+					&=-\sum_{k_{1}}P\left(x_{k_{1}}\right)\ln{P\left(x_{k_{1}}\right)}\sum_{k_{2}}P\left(x_{k_{2}}\right)\ln{P\left(x_{k_{2}}\right)}
+				\end{split}
+			\end{equation*}
+			Iterando il ragionamento si giunge alla conclusione che l'entropia di Shannon misura l'aumento di informazione data dall'aggiunta di un carattere.
 			\subsection{Matrice stocastica}
-				Per capire una sequenza bisogna conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
+				Si è analizzato finora il caso di caratteri indipendenti gli uni dagli altri.
+				Tuttavia, per comprendere una sequenza bisogna, in generale, conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
+				Formalmente, ciò vorrebbe dire che, dati due eventi A e B, $P\left(\{AB\}\right)=P\left(B/A\right)P(A)\neq P(A)P(B)$.
+				Si può facilmente osservare come $\lim_{N\to\infty}\frac{P\left(\{AB\}\right)}{P(A)}=P\left(B/A\right)$, dove $N$ rappresenta il numero totale di eventi.
 				L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
 				\begin{definition}
 					$p_{ij}=p(x_j/x_i)$ matrice stocastica
@@ -534,57 +575,36 @@
 				\end{theorem}
 				Corollari:
 				\begin{itemize}
-					\item è un vettore stazionario situato nel primo quadrante
-					\item gli iperpiani sono invarianti per $p_{ij}$
+					\item $p_j^s$ è un vettore stazionario situato nel primo quadrante
+					\item l'iperpiano $\sum_{i,j}p_{ij}v_i=\sum_iv_i=0$ sono invarianti per $p_{ij}$
 					\item $\lambda_i<1\quad\forall i\neq 0$
 					\item $p_j^{n+1}=\sum_ip_{ij}p_j^n=1\Leftrightarrow\sum_ip_i^n=1$
 				\end{itemize}
-		
-		\section{Entropia}
-			Si supponga di voler calcolare l'incertezza di una distribuzione di probabilità $p_{1},\ldots,p_{n}$ per gli eventi $\{x_{1},\ldots,x_{n}\}$.
-			Si assuma:
-			\begin{itemize}
-				\item $H(p_{1},\ldots,p_{n})$ continua;
-				\item se $p_{j}=\frac{1}{n}$ allora $H(\frac{1}{n},\ldots,\frac{1}{n})$ è monotona crescente;
-				\item Dati gli eventi composti $y_{1}=\{x_{1},\ldots,x_{m}\}$, $y_{2}=\{x_{m+1},\ldots,x_{m+k}\}$ con probabilità $P(y_{i}/x_{i})=\frac{p_{i}}{w_{i}}$, allora 
-					\\$H(p_{1},\ldots,p_{n})=H(w_{1},\ldots,w_{n})+w_{1}H\left(\frac{p_{1}}{w_{1}},\ldots,\frac{p_{m}}{w_{1}}\right)+w_{2}H\left(\frac{p_{2}}{w_{2}},\ldots,\frac{p_{m}}{w_{2}}\right)+\ldots$;
-			\end{itemize}
-			La soluzione è del tipo $H(p_{1},\ldots,p_{n})=-k_{s}\sum_{i}p_{i}\ln(p_{i})$ dove si definisce
-			\begin{definition}
-				$S=-k_{s}\sum_{i}p(x_i)\ln p(x_i)$ entropia di informazione (di Shannon)
-				\label{equation:entropia}
-			\end{definition}
-			con $k_{s}=\frac{1}{\ln2}$ costante di Shannon.
-			Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
-			Si può notare come $H(p_{1},\ldots,p_{n})$ sia massima per $p_{j}=\frac{1}{n}$.
-			Fissato $\bar{x}=\sum_{j}x_{j}p_{j}$, l'entropia è massimizzabile utilizzando i moltiplicatori di lagrange:
-			\begin{equation}
-				\delta H=-\sum_{i}\delta p(x_i)\ln p(x_i)+\lambda\sum_{j}x_{j}\delta p_{j}
-			\end{equation}
-			il che implica $-\ln p_{j}+\lambda x_{j}=0$, con soluzione
-			\begin{equation}
-				p_{j}=\frac{e^{\lambda x_{j}}}{\sum_{j}e^{\lambda x_{j}}}
-			\end{equation}
-			con $\lambda\simeq -\frac{1}{\bar{x}}$ (risultato fondamentale della meccanica statistica).
-			La distribuzione è quindi esponenziale, con $p_{j}\propto e^{-\frac{x_{j}}{\bar{x}}}$.
-		
-		\section{Teoria di Markov}
-			A questo punto si può calcolare come cambi l'entropia di informazione di una catena aggiungendo un carattere.
-			\begin{definition}
-				Proprietà di Markov (di tempo presente)\\
-				$P(\{x_1,...,x_{n+1}\})=P(x_{n+1}/Px_n)P(\{x_1,...,x_{n}\})$
-			\end{definition}
-			Si può quindi scrivere l'entropia dell'(N+1)esimo passo come:
-			\begin{equation}
-				S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
-			\end{equation}
-			Nei linguaggi l'aggiunta di un carattere non cambia di molto l'entropia (per fortuna, altrimenti sarebbe molto difficile parlarsi).
-			Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
-			se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
-			Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
-			Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto browniano}.\\
-			In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
-			Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
+			\subsection{Teoria di Markov}
+				A questo punto si può calcolare come cambi quantitativamente l'informazione di una catena aggiungendo un carattere.
+				\begin{definition}
+					Proprietà di Markov (di tempo presente)\\
+					$P(\{x_1,...,x_{n+1}\})=P(x_{n+1}/Px_n)P(\{x_1,...,x_{n}\})$
+				\end{definition}
+				Si può quindi calcolare l'entropia dell'(N+1)esimo passo
+				\begin{equation*}
+					\begin{split}
+						S_{N+1}&=-\sum P\left(\{x_{1}\ldots x_{N+1}\}\right)\ln P\left(\{x_{1}\ldots x_{N+1}\}\right)=\\
+						&=-\sum P\left(\{x_{N+1}/x_{N}\}\right)P\left(\{x_{1}\ldots x_{N+1}\}\right)\left[\ln P\left(\{x_{N+1}/x_{N}\}\right)\ln P\left(\{x_{1}\ldots x_{N+1}\}\right)\right]=\\
+						&=-\sum P\left(\{x_{1}\ldots x_{N}\}\right)\ln P\left(\{x_{1}\ldots x_{N}\}\right)-\sum_{i,j}p_j^sP\left(x_i/x_j\right)\ln P\left(x_i/x_j\right)
+					\end{split}
+				\end{equation*}
+				ottenendo, nel limite $N>>1$, l'espressione: 
+				\begin{equation}
+					S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
+				\end{equation}
+				Nei linguaggi l'aggiunta di un carattere non cambia di molto l'entropia (per fortuna, altrimenti sarebbe molto difficile parlarsi, ndr).
+				Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
+				se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
+				Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
+				Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto browniano}.\\
+				In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
+				Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
 		
 		\section{Esempi}
 			\subsection{Utilizzo della misura invariante}
@@ -599,9 +619,9 @@
 				che rappresenta sostanzialmente una traslazione nell'intervallo $[0,1]$.
 				In questo caso l'esponente di Ljapunov è nullo in quanto non vi è espansione.
 				Iterando la \ref{equation:cifre} si ottiene
-				\begin{equation}
+				\begin{equation*}
 					y_{n}=y_{0}+n\log2\mod1
-				\end{equation}
+				\end{equation*}
 				e la misura invariante risulta quindi una distribuzione uniforme nell'intervallo $[0,1]$.
 				Da qui la probabilità $\lim_{n\to\infty}P(7)=\log8-\log7$.
 			\subsection{Entropia di una mano di carte}
@@ -613,21 +633,21 @@
 				\end{equation}
 				Assumendo che il mazzo non sia truccato, quindi che ogni estrazione sia equiprobabile, la probabilità di ogni singola mano è $p_{i}=\frac{1}{C}$.
 				L'entropia di informazione (o di Shannon) associata ad essa è quindi 
-				\begin{equation}
+				\begin{equation*}
 					S=-k_{S}\sum_{i=1}^{C}p_{i}\ln{p_{i}}=-k_{S}C\left(\frac{1}{C}\ln{\frac{1}{C}}\right)=k_{S}\ln{\frac{N!}{k!(N-k)!}}
-				\end{equation}
+				\end{equation*}
 				con $k_{S}=\frac{1}{\ln2}$ costante di Shannon.
 			\subsection{Broken Stick Model/Modello di Markov}
 				Si consideri un segmento di lunghezza unitaria nel quale viene inserito casualmente un punto $x_1\in[0,1]$ secondo una distribuzione uniforme.
 				Si scarti ora il segmeno $[0,x_1]$ e si iteri il processo per \textit{N} volte: si tratta di un processo ricorsivo con memoria del passato.
 				Essendo la distribuzione di probabilità uniforme risulta ovvio come $<x>=\frac{1}{2}$ quindi è possibile riscalare il tutto con una variabile $y\rightarrow\frac{y}{2}$
 				Definita la densità $\rho$ del sistema si può scrivere:
-				\begin{equation}
+				\begin{equation*}
 					\begin{split}
 						\rho_{N+1}\left(\frac{y}{2}\right)\frac{dy}{2}&=\rho_N(y)dy\\
 						\Rightarrow\lim_{N\to\infty}\rho_N(y)&\propto\frac{1}{y}
 					\end{split}
-				\end{equation}
+				\end{equation*}
 				Il risultato è una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
 				Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non è possibile riattaccarlo.
 				Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
@@ -740,9 +760,9 @@
 					\caption{}
 			\end{figure}
 			Definiamo $V_{A/B}$ una certa proprietà del nodo $A/B$, questa proprietà ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
-			\begin{equation}
+			\begin{equation*}
 					\Phi_{A \rightarrow B} \ R = V_A - V_B
-			\end{equation} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
+			\end{equation*} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
 			Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
 			\begin{figure}[ht!]
 					\centering
@@ -813,47 +833,47 @@
 				\end{figure}
 				Siano $x_{C}(t)$ la coordinata del controllore, $x_{O}(t)$ la coordinata del pendolo di lunghezza $l$ e $\theta$ l'angolo formato da esso con la verticale.
 				Utilizzando la meccanica lagrangiana:
-				\begin{equation}
+				\begin{equation*}
 					\begin{cases}
 						x_{O}=x_{C}+l\sin\theta\\
 						y_{O}=l\cos\theta
 					\end{cases}
-				\end{equation}
-				\begin{equation}
+				\end{equation*}
+				\begin{equation*}
 					\begin{cases}
 						\dot{x}_O=\dot{x}_{C}+l\dot{\theta}\cos\theta\\
 						\dot{y}_{O}=l\dot{\theta}\sin\theta
 					\end{cases}
-				\end{equation}
+				\end{equation*}
 				La lagrangiana del sistema si può scrivere come:
-				\begin{equation}
+				\begin{equation*}
 					\mathcal{L}=\frac{m}{2}\left( \left( \dot{x}_{C}+l\dot{\theta}\cos\theta \right)^2 + l^2\dot{\theta}^2\sin^2\theta \right) - mgl\cos\theta \simeq \frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta}\cos\theta \right) - mgl\cos\theta
-				\end{equation}
+				\end{equation*}
 				alle piccole oscillazioni ($\theta\simeq 0$ e $mgl\cos\theta\simeq -mgl\frac{\theta^2}{2}$):
-				\begin{equation}
+				\begin{equation*}
 					\mathcal{L}_{PO}=\frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta} \right) + mgl\frac{\theta^2}{2}
-				\end{equation}
+				\end{equation*}
 				L'equazione del moto risulta infine:
 				\begin{equation}
 					\ddot{\theta}=\frac{g}{l}\theta - \frac{\ddot{x}_C}{l}
 				\end{equation}
 				Riconosciuta la forzante, per semplicità si pone $\ddot{x}_C=\pm a(t)$ costante.
 				La soluzione non è omogenea:
-				\begin{equation}
+				\begin{equation*}
 					\theta(t)=\left( \theta_{0} -\frac{a(t)}{g} \right)\cosh\omega t + \frac{\dot{\theta}_0}{\omega}\sinh\omega t +\frac{a(t)}{g}
-				\end{equation}
+				\end{equation*}
 				Assumendo ora $\theta_0\simeq 0$ e $\dot{\theta}_0\neq 0$ e che il pendolo si stabilizzi in un tempo $T$ si ha la soluzione stabile:
-				\begin{equation}
+				\begin{equation*}
 					\theta(T)=C\cosh\omega T + C\sinh\omega T \simeq Ce^{-\omega T}
-				\end{equation}
+				\end{equation*}
 				Si può ora ricavare la condizione richiesta:
 				\begin{equation}
 					C=\theta(T)=-\frac{\dot{\theta}(T)}{\omega}
 				\end{equation}
 				Andando a imporla si ottiene:
-				\begin{equation}
+				\begin{equation*}
 					-\frac{a}{g}\cosh\omega T + \frac{\dot{\theta}(T)}{\omega}\sinh\omega T + \frac{a}{g} = \frac{a}{g}\sinh\omega T - \frac{\dot{\theta}(T)}{\omega}\cosh\omega T
-				\end{equation}
+				\end{equation*}
 				Da cui si può ricavare il periodo di stabilità:
 				\begin{equation}
 					T=\frac{1}{\omega}\ln\frac{\frac{a}{g}}{\frac{a}{g}-\frac{\dot{\theta}(T)}{\omega}}
@@ -878,30 +898,30 @@
 						Ovviamente $D(c)$ deve avere un minimo, dato che esiste uno sforzo considerato accettabile per mantenere la relazione;
 				\end{itemize}
 				Si può ora definire il funzionale di soddisfazione come:
-				\begin{equation}
+				\begin{equation*}
 					W(c)=\int_{0}^{\infty}e^{-\lambda t}\left[U\left(x(t)\right)-D\left(c(t)\right)\right]dt
-				\end{equation}
+				\end{equation*}
 				dove il coefficiente $\lambda^{-1}$ rappresenta la scala di memoria del sistema.
 				\\Per ottimizzare il problema si deve avere
-				\begin{equation}
+				\begin{equation*}
 					\delta\dot{x}=-r\delta x+a\delta c
-				\end{equation}
+				\end{equation*}
 				e quindi la variazione infinitesima del funzionale
-				\begin{equation}
+				\begin{equation*}
 					\delta W(c)=\int_{0}^{\infty}e^{-\lambda t}\left[U'(x)'\delta x-D'(c)\delta c\right]dt=\int_{0}^{\infty}e^{-\lambda t}\left[U'(x)'\delta x-D'(c)\frac{\delta\dot{x}+r\delta x}{a}\right]dt
-				\end{equation}
+				\end{equation*}
 				Integrando per parti:
-				\begin{equation}
+				\begin{equation*}
 					-\int e^{-\lambda t}D'(c)\frac{\delta\dot{x}}{a}dt=-\left[ e^{-\lambda t}D'(c)\frac{\delta x}{a} \right]_{0}^{\infty} + \int_{0}^{\infty}\frac{d}{dt}\left[\frac{e^{-\lambda t}D'(c)\delta x}{a}\right]dt
-				\end{equation}
+				\end{equation*}
 				e quindi
-				\begin{equation}
+				\begin{equation*}
 					\delta W=\int_{0}^{\infty}\left\{ e^{-\lambda t}U'(x)+\frac{d}{dt}\left[\frac{e^{-\lambda t}D'(c)}{a}\right]-\frac{e^{-\lambda t}D'(c)r}{a} \right\}\delta xdt
-				\end{equation}
+				\end{equation*}
 				Essendo $\delta x$ arbitrario
-				\begin{equation}
+				\begin{equation*}
 					D''\left(c(t)\right)\frac{dc}{dt}=(r+\lambda)D'(c)-aU'(x)
-				\end{equation}
+				\end{equation*}
 				\\Si assumano ora, per esempio, i seguenti potenziali
 				\begin{equation}
 					\begin{cases}
