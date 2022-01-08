@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{hyperref}
+
+\usepackage{amsmath} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator \erf{erf} %%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\title{Formulario Fisica della Materia}
+	\author{Grufoony}
+	\maketitle
+
+    \section{Insieme microcanonico}
+        \begin{itemize}
+            \item $S=k_B\ln\Omega$ entropia di Boltzmann
+        \end{itemize}
+
+    \section{Insieme canonico}
+        \begin{itemize}
+            \item $Z_1=\sum_s e^{-\beta\epsilon_s}$ funzione di partizione (particella singola)
+            \item $Z=(Z_1)^N$ funzione di partizione (N particelle distinguibili)
+            \item $Z=\frac{(Z_1)^N}{N!}$ funzione di partizione (N particelle indistinguibili)
+            \item $F=-k_BT\ln{Z}$ energia libera di Helmoltz
+            \item $\left\langle E \right\rangle = \frac{\partial\ln{Z}}{\partial\beta}$ energia media
+        \end{itemize}
+
+    \section{Insieme gran canonico}
+        \begin{itemize}
+            \item $\mu=\frac{\partial F}{\partial N}|_{T,V}=-T\frac{\partial S}{\partial N}|_{U,V}$ potenziale chimico
+            \item $\Xi=\sum_Ne^{\beta\mu N}Z(N)$ funzione di partizione gran canonica
+            \item $\Phi=k_BT\ln\Xi$ gran potenziale
+        \end{itemize}
+
+    \section{Cose cinetiche}
+        \begin{itemize}
+            \item $f(v)=\sqrt{\frac{m}{2\pi k_BT}}e^{-\frac{m}{2k_BT}v^2}$ distribuzione velocità di Maxwell-Boltzmann
+        \end{itemize}
+
+    \section{Cose quantistiche}
+        \begin{itemize}
+            \item $n_Q=\left(\frac{mk_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}$ concentrazione quantistica
+            \item $\epsilon_j=\hbar\omega\left(j+\frac{1}{2}\right)$ energia oscillatore armonico quantistico
+        \end{itemize}
+
+    \section{Cose termodinamiche}
+        \begin{itemize}
+            \item $S=-\frac{\partial F}{\partial T}|_{N,V}$ entropia
+            \item $C_V=\frac{\partial U}{\partial T}|_{V}$ capacità termica
+            \item $P=-\frac{\partial U}{\partial V}|_{N,S}=-\frac{\partial F}{\partial V}|_{N,T}=T\frac{\partial S}{\partial V}|_{N,U}$ pressione
+            \item $S=\frac{\partial\Phi}{\partial T}|_{\mu, V}$
+            \item $P=\frac{\partial\Phi}{\partial V}|_{U,T}$
+            \item $\left\langle N \right\rangle=\frac{\partial\Phi}{\partial\mu}|_{V,T}$
+        \end{itemize}
+
+    \section{Cose matematiche}
+        \begin{itemize}
+            \item $\lim_{N>>1}{N!}\simeq\sqrt{2\pi N}N^Ne^{-N}$ approssimazione di Stirling
+            \item $\int_{-\infty}^{\infty}x^2e^{-\alpha x^2}=\frac{1}{2}\sqrt{\frac{\pi}{\alpha^3}}$
+            \item $\sum_{n=0}^\infty ne^{-an}=\frac{e^a}{(e^a-1)^2}$
+        \end{itemize}
+
+\end{document}
