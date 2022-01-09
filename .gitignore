@@ -7,3 +7,4 @@
 *.toc
 *latexmk
 *.lot
+*.out
