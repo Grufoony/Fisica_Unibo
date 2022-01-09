@@ -6,9 +6,6 @@
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 \usepackage{hyperref}
 
-\usepackage{amsmath} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareMathOperator \erf{erf} %%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 	\title{Formulario Fisica della Materia}
 	\author{Grufoony}
@@ -21,6 +18,7 @@
 
     \section{Insieme canonico}
         \begin{itemize}
+            \item $\beta=\frac{1}{k_BT}$
             \item $Z_1=\sum_s e^{-\beta\epsilon_s}$ funzione di partizione (particella singola)
             \item $Z=(Z_1)^N$ funzione di partizione (N particelle distinguibili)
             \item $Z=\frac{(Z_1)^N}{N!}$ funzione di partizione (N particelle indistinguibili)
@@ -30,6 +28,7 @@
 
     \section{Insieme gran canonico}
         \begin{itemize}
+            \item $\gamma=-\beta\mu$
             \item $\mu=\frac{\partial F}{\partial N}|_{T,V}=-T\frac{\partial S}{\partial N}|_{U,V}$ potenziale chimico
             \item $\Xi=\sum_Ne^{\beta\mu N}Z(N)$ funzione di partizione gran canonica
             \item $\Phi=k_BT\ln\Xi$ gran potenziale
@@ -44,6 +43,12 @@
         \begin{itemize}
             \item $n_Q=\left(\frac{mk_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}$ concentrazione quantistica
             \item $\epsilon_j=\hbar\omega\left(j+\frac{1}{2}\right)$ energia oscillatore armonico quantistico
+            \item $\left\langle n_s \right\rangle_f=\frac{1}{e^{\beta(\epsilon_s-\mu)}+1}$ distribuzione di Fermi-Dirac
+            \item $\left\langle n_s \right\rangle_f=\frac{1}{e^{\beta(\epsilon_s-\mu)}-1}$ distribuzione di Bose-Einstein
+            \item $\epsilon_F=\frac{\hbar^2}{2m}\left(\frac{6\pi^2n}{g_s}\right)^{\frac{2}{3}}$ energia di Fermi
+            \item $\mu(T)\approx\epsilon_F\left(1-\frac{\pi^2}{12}\frac{T^2}{T_0^2}\right)$
+            \item $Vu(\omega)d\omega=\frac{V\hbar}{\pi^2c^3}\frac{\omega^3}{e^{\beta\hbar\omega}-1}d\omega$ equazione di Plank per il corpo nero
+            \item $Vu_{RJ}(\omega)d\omega=k_BTg(\omega)d\omega$ approssimazione di Rayleigh-Jeans per le basse frequenze
         \end{itemize}
 
     \section{Cose termodinamiche}
@@ -58,9 +63,13 @@
 
     \section{Cose matematiche}
         \begin{itemize}
-            \item $\lim_{N>>1}{N!}\simeq\sqrt{2\pi N}N^Ne^{-N}$ approssimazione di Stirling
-            \item $\int_{-\infty}^{\infty}x^2e^{-\alpha x^2}=\frac{1}{2}\sqrt{\frac{\pi}{\alpha^3}}$
+            \item $N!\simeq\sqrt{2\pi N}N^Ne^{-N}$ approssimazione di Stirling ($N>>1$)
+            \item $\int_{-\infty}^{\infty}e^{-\alpha x^2}=\sqrt{\frac{\pi}{\alpha}}$ integrale gaussiano
+            \item $\frac{d}{d\alpha}\int f(x,\alpha)dx=\int\frac{\delta f}{\delta\alpha}dx$ trucco di Feynman
             \item $\sum_{n=0}^\infty ne^{-an}=\frac{e^a}{(e^a-1)^2}$
+            \item $\Gamma(n+1)=\int_0^\infty t^{n}e^{-t}dt=n!$ funzione gamma
+            \item $I\approx\int_0^\mu k(\epsilon)d\epsilon+\frac{\pi^2}{6}(k_BT)^2k'(\mu)+o(T^4)$ espansione di Sommerfeld
+            \item $\zeta(s)=\sum_{n=1}^\infty\frac{1}{n^s}$ funzione zeta di Riemann
         \end{itemize}
 
 \end{document}
