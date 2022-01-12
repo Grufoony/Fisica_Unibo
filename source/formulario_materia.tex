@@ -61,7 +61,10 @@
         \begin{itemize}
             \item $g(E)=\frac{g_s}{4\pi}\left(\frac{2m}{\hbar^2}\right)^{\frac{3}{2}}V\sqrt{E}$ occupazione media per lv energetico (3D)
             \item $\epsilon_j=\hbar\omega\left(j+\frac{1}{2}\right)$ energia oscillatore armonico quantistico
+            \item $\left\langle n_s \right\rangle=e^{\beta(\mu-\epsilon_s)}$ distribuzione di Maxwell-Boltzmann
+            \item $\Xi_f=\prod_s\left[1+e^{\beta(\mu-\epsilon_s)}\right]$
             \item $\left\langle n_s \right\rangle_f=\frac{1}{e^{\beta(\epsilon_s-\mu)}+1}$ distribuzione di Fermi-Dirac
+            \item $\Xi_b=\prod_s\left[\frac{1}{1-e^{\beta(\mu-\epsilon_s)}}\right]$
             \item $\left\langle n_s \right\rangle_b=\frac{1}{e^{\beta(\epsilon_s-\mu)}-1}$ distribuzione di Bose-Einstein
             \item $Vu(\omega)d\omega=\frac{V\hbar}{\pi^2c^3}\frac{\omega^3}{e^{\beta\hbar\omega}-1}d\omega$ equazione di Planck per il corpo nero
             \item $Vu_{RJ}(\omega)d\omega=k_BTg(\omega)d\omega$ approssimazione di Rayleigh-Jeans per le basse frequenze
@@ -90,17 +93,25 @@
         \begin{itemize}
             \item $u=\frac{\pi^2}{15}\frac{(k_BT)^4}{(\hbar c)^3}$
             \item $P=\frac{u}{3}$
+            \item $\mu=0$
+            \item $G=0$
+            \item $s=\frac{4}{3}\frac{u}{T}$
+            \item $H=\frac{4}{3}U$
+            \item $F=-\frac{U}{3}$
+            \item $n=\left(\frac{2k_B^3\zeta(3)}{\pi^2c^3\hbar^3}\right)T^3$
         \end{itemize}
 
     \section{Cose termodinamiche}
         \begin{itemize}
-            \item $U=TS-PV+\mu N$
+            \item $U=TS-PV+\mu N$ energia interna
             \item $dU=TdS-PdV+\mu dN$
             \item $d\mu=-\frac{S}{N}dT+\frac{V}{N}dP$ relazione di Gibbs-Duhem
-            \item $F=U-TS$
+            \item $F=U-TS$ energia libera di Helmoltz
             \item $dF=-SdT-PdV+\mu dN$
-            \item $H=U+PV$
+            \item $H=U+PV$ entalpia
             \item $dH=TdS+VdP+\mu dN$
+            \item $G=F+PV=H-TS=U-TS+PV$ energia libera di Gibbs
+            \item $dG=-SdT+VdP+\mu dN$
             \item $dU=TdS-PdV$ equazione di Maxwell
             \item $\Phi=\mu N-F$
             \item $S=-\frac{\partial F}{\partial T}|_{N,V}$ entropia
@@ -121,6 +132,7 @@
             \item $I\approx\int_0^\mu k(\epsilon)d\epsilon+\frac{\pi^2}{6}(k_BT)^2k'(\mu)+o(T^4)$ espansione di Sommerfeld
             \item $\zeta(s)=\sum_{n=1}^\infty\frac{1}{n^s}$ funzione zeta di Riemann
             \item $\int_0^\infty\frac{x^n}{e^x-1}dx=\Gamma(n+1)\zeta(n+1)$
+            \item $\left\langle y(\epsilon) \right\rangle=\int_0^\infty g(\epsilon)y(\epsilon)f(\epsilon)d\epsilon$
         \end{itemize}
 
 \end{document}
