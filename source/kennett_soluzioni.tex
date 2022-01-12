@@ -12,47 +12,76 @@
 	\author{Grufoony\\\url{https://github.com/Grufoony/Fisica_UNIBO}}
 	\maketitle
 
-    \section{Esercizio 9.5}
-    (a) Mostrare che la funzione di partizione gran canonica per la radiazione di corpo nero assume la forma
-    \begin{equation}
-        \Xi=\prod_s\frac{1}{1-e^{-\beta\epsilon_s}}
-        \label{equation:9.5a}
-    \end{equation}
-    \\
-    \\
-    La radiazione di corpo nero è costituita da fotoni, ossia bosoni.
-    Dalla teoria (vista in classe) è nota la funzione di partizione gran canonica bosonica:
-    \begin{equation*}
-        \Xi_b=\prod_s\frac{1}{1-e^{\beta(\mu-\epsilon_s})}
-    \end{equation*}
-    Osservando ora come si possano aggiungere/rimuovere fotoni ad un corpo nero senza alcun costo energetico ($\mu=0$) la \ref{equation:9.5a} diviene ovvia.
-    \\
-    \\
-    (b) Usando l'equazione \ref{equation:9.5a} oppure in altro modo si dimostri che l'entropia per unità di volume della radiazione di corpo nero a temperatura $T$ assume la forma
-    \begin{equation}
-        s=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
-    \end{equation}
-    \\
-    \\
-    Richiamiamo ora l'energia per unità di volume della radiazione di corpo nero (eq. 9.20 Kennett)
-    \begin{equation*}
-        u=\frac{\pi^2}{15}\frac{(k_BT)^4}{(\hbar c)^3}
-    \end{equation*}
-    e anche la sua pressione (eq. 9.29 Kennett)
-    \begin{equation*}
-        P=\frac{u}{3}
-    \end{equation*}
-    \\
-    Richiamando ora la relazione termodinamica
-    \begin{equation}
-        U=TS-PV-\mu N
-    \end{equation}
-    ponendo $\mu=0$ (vedi punto a) e dividendo per il volume $V$, si ottiene
-    \begin{equation*}
-        s=\frac{u+P}{T}
-    \end{equation*}
-    che unita alle precedenti conclude la dimostrazione
-    \begin{equation*}
-        s=s=\frac{u+\frac{u}{3}}{T}=\frac{4}{3}\frac{u}{T}=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
-    \end{equation*}
+    \section*{Esercizio 9.5}
+        (a) Mostrare che la funzione di partizione gran canonica per la radiazione di corpo nero assume la forma
+        \begin{equation}
+            \Xi=\prod_s\frac{1}{1-e^{-\beta\epsilon_s}}
+            \label{equation:9.5a}
+        \end{equation}
+        \\
+        \\
+        La radiazione di corpo nero è costituita da fotoni, ossia bosoni.
+        Dalla teoria (vista in classe) è nota la funzione di partizione gran canonica bosonica:
+        \begin{equation*}
+            \Xi_b=\prod_s\frac{1}{1-e^{\beta(\mu-\epsilon_s})}
+        \end{equation*}
+        Osservando ora come si possano aggiungere/rimuovere fotoni ad un corpo nero senza alcun costo energetico ($\mu=0$) la \ref{equation:9.5a} diviene ovvia.
+        \\
+        \\
+        (b) Usando l'equazione \ref{equation:9.5a} oppure in altro modo si dimostri che l'entropia per unità di volume della radiazione di corpo nero a temperatura $T$ assume la forma
+        \begin{equation}
+            s=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
+        \end{equation}
+        \\
+        \\
+        Richiamiamo ora l'energia per unità di volume della radiazione di corpo nero (eq. 9.20 Kennett)
+        \begin{equation*}
+            u=\frac{\pi^2}{15}\frac{(k_BT)^4}{(\hbar c)^3}
+        \end{equation*}
+        e anche la sua pressione (eq. 9.29 Kennett)
+        \begin{equation*}
+            P=\frac{u}{3}
+        \end{equation*}
+        \\
+        Richiamando ora la relazione termodinamica
+        \begin{equation}
+            U=TS-PV-\mu N
+        \end{equation}
+        ponendo $\mu=0$ (vedi punto a) e dividendo per il volume $V$, si ottiene
+        \begin{equation*}
+            s=\frac{u+P}{T}
+        \end{equation*}
+        che unita alle precedenti conclude la dimostrazione
+        \begin{equation*}
+            s=s=\frac{u+\frac{u}{3}}{T}=\frac{4}{3}\frac{u}{T}=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
+        \end{equation*}
+
+    \section*{Esercizio 9.9}
+        Calcolare la temperatura critica per un BEC in 2 dimensioni.
+        \\
+        \\
+        Richiamiamo ora la densità degli stati 2D calcolata in precedenza:
+        \begin{equation*}
+            g(\epsilon)=g_s\frac{m}{2\pi\hbar^2}L^2
+        \end{equation*}
+        Possiamo calcolare il numero medio di particelle con la classica formula
+        \begin{equation*}
+            N=\int_0^\infty g(\epsilon)f(\epsilon)d\epsilon
+        \end{equation*}
+        la quale, posto $n=\frac{N}{L^2}$ diventa
+        \begin{equation*}
+            n=g_s\frac{m}{2\pi\hbar^2}\int_0^\infty \frac{1}{e^{\beta(\epsilon-\mu)}-1}d\epsilon
+        \end{equation*}
+        Per la temperatura critica si ha $e^{\beta_0}>>1$ e si può approssimare
+        \begin{equation*}
+            n\approx g_s\frac{m}{2\pi\hbar^2}\int_0^\infty e^{-\beta(\epsilon-\mu)}d\epsilon
+        \end{equation*}
+        la cui soluzione è
+        \begin{equation*}
+            n=g_s\frac{mk_B}{2\pi\hbar^2}T_0
+        \end{equation*}
+        Invertendo l'equazione precedente si ottiene la relazione desiderata
+        \begin{equation*}
+            T_0=\frac{2\pi\hbar^2}{mk_B}\frac{n}{g_s}
+        \end{equation*}
 \end{document}
