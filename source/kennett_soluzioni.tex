@@ -34,7 +34,55 @@
             \end{split}
         \end{equation*}
 
-
+    \section*{Esercizio 6.4}
+        Calcolare $U$ e $C_V$ per un sistema a due livelli popolato da bosoni.
+        \\
+        \\
+        Dalla teoria è nota la
+        \begin{equation*}
+            \Xi_b=\prod_s\left[\frac{1}{1-e^{\beta(\mu-\epsilon_s)}}\right]
+        \end{equation*}
+        Assumiamo i due livelli energetici come
+        \begin{equation*}
+            \begin{cases}
+                \epsilon_0=0\\
+                \epsilon_1=\epsilon
+            \end{cases}
+        \end{equation*}
+        e in questo caso la funzione di partizione gran canonica diviene
+        \begin{equation*}
+            \Xi=\frac{1}{(1-e^{\beta\mu})(1-e^{\beta(\mu-\epsilon)})}
+        \end{equation*}
+        Dalla definizione di energia interna si può utilizzare il trucco di Feynman
+        \begin{equation*}
+            \begin{split}
+                U&=\frac{1}{\Xi}\sum_{N=0}^\infty\sum_{s}^Ns\epsilon e^{\beta(N\mu-\epsilon)}=\\
+                &=-\frac{1}{\Xi}\frac{\epsilon}{\beta}\sum_{N=0}^\infty\sum_{s}^N\frac{\partial}{\partial\epsilon}e^{\beta(N\mu-\epsilon)}=\\
+                &=-\frac{1}{\Xi}\frac{\epsilon}{\beta}\frac{\partial}{\partial\epsilon}\sum_{N=0}^\infty\sum_{s}^Ne^{\beta(N\mu-\epsilon)}=\\
+                &=-\frac{1}{\Xi}\frac{\epsilon}{\beta}\frac{\partial\Xi}{\partial\epsilon}=\\
+                &=-\frac{\epsilon}{\beta}\frac{\partial\ln\Xi}{\partial\epsilon}\\
+            \end{split}
+        \end{equation*}
+        Possiamo ora calcolare l'energia interna
+        \begin{equation*}
+            \begin{split}
+                U&=-\frac{\epsilon}{\beta}\frac{\partial\ln\Xi}{\partial\epsilon}=\\
+                &=\frac{\epsilon}{\beta}\frac{\partial\ln(1-e^{\beta\mu})(1-e^{\beta(\mu-\epsilon)})}{\partial\epsilon}=\\
+                &=\frac{\epsilon}{\beta}\frac{\partial\ln(1-e^{\beta(\mu-\epsilon)})}{\partial\epsilon}=\\
+                &=\frac{\epsilon}{\beta}\frac{\beta e^{\beta(\mu-\epsilon)}}{(1-e^{\beta(\mu-\epsilon)})}=\\
+                &=\epsilon\frac{e^{\beta(\mu-\epsilon)}}{(1-e^{\beta(\mu-\epsilon)})}=\\
+                &=\frac{\epsilon}{e^{\beta(\epsilon-\mu)}-1}
+            \end{split}
+        \end{equation*}
+        \\
+        Per la capacità termica è sufficiente utilizzare la relazione
+        \begin{equation*}
+            \begin{split}
+                C_V&=\frac{\partial U}{\partial T}=\\
+                &=-\frac{\epsilon}{(e^{\beta(\epsilon-\mu)}-1)^2}\frac{\epsilon-\mu}{k_B}\left(-\frac{1}{T^2}\right)e^{\beta(\epsilon-\mu)}=\\
+                &=\frac{k_B\beta^2\epsilon(\epsilon-\mu)}{(e^{\beta(\epsilon-\mu)}-1)(1-e^{\beta(\mu-\epsilon)})}
+            \end{split}
+        \end{equation*}
 
     \section*{Esercizio 9.5}
         (a) Mostrare che la funzione di partizione gran canonica per la radiazione di corpo nero assume la forma
