@@ -12,6 +12,30 @@
 	\author{Grufoony\\\url{https://github.com/Grufoony/Fisica_UNIBO}}
 	\maketitle
 
+    \section*{Ricavare Sackur-Tetrode}
+        Per un gas perfetto è nota la
+        \begin{equation*}
+            F=Nk_BT\left[\ln\left(\frac{n}{n_Q}\right)-1\right]
+        \end{equation*}
+        Per calcolare l'entropia è sufficiente utilizzare la relazione
+        \begin{equation*}
+            S=-\frac{\partial F}{\partial T}
+        \end{equation*}
+        ricordandosi che la concentrazione quantistica è definita
+        \begin{equation*}
+            n_Q=\left(\frac{mk_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}
+        \end{equation*}
+        Svolgendo i calcoli
+        \begin{equation*}
+            \begin{split}
+                S&=-\left\{Nk_B\left[\ln\left(\frac{n}{n_Q}\right)-1\right]-Nk_BT\frac{1}{n_Q}\left(\frac{mk_B}{2\pi\hbar^2}\right)^{\frac{3}{2}}\frac{3}{2}T^{\frac{1}{2}}\right\}\\
+                &=-\left\{Nk_B\left[\ln\left(\frac{n}{n_Q}\right)-1-\frac{3}{2}\right]\right\}=\\
+                &=Nk_B\left[\ln\left(\frac{n_Q}{n}\right)+\frac{5}{2}\right]
+            \end{split}
+        \end{equation*}
+
+
+
     \section*{Esercizio 9.5}
         (a) Mostrare che la funzione di partizione gran canonica per la radiazione di corpo nero assume la forma
         \begin{equation}
