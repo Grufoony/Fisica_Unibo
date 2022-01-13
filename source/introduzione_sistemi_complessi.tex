@@ -5,11 +5,13 @@
 \usepackage{bookmark}
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{pgfplots}
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{tikz-network}
 \usepackage{float}
 \floatplacement{figure}{H}
+\pgfplotsset{compat = newest}
 
 \theoremstyle{theorem}
 \newtheorem{definition}{Definizione}[section]
@@ -355,6 +357,25 @@
 					\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
 				\end{equation}
 				quindi la probabilità decresce esponenzialmente.\\
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}
+						\begin{axis}[
+							xmin = 0, xmax = 6,
+							ymin = 0, ymax = 1.1,
+							samples = 200,
+							smooth,
+							thick,
+							xlabel = {$n$},
+							ylabel = {$p(n)$},]
+							\addplot[
+								domain = -2:6,
+							] {e^(-x)};
+						\end{axis}
+					\end{tikzpicture}
+					\caption{\emph{Andamento esponenziale.}}
+					\label{figure:modello_economico}
+				\end{figure}
 				Il modello prevede quindi:
 				\begin{itemize}
 					\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
@@ -408,7 +429,26 @@
 						\Rightarrow\lim_{n\to\infty}p(n)&\propto n^{-\frac{a}{b}}
 					\end{split}
 				\end{equation}
-				si ottiene esattamente l'andamento a potenza ricercato.
+				si ottiene esattamente l'andamento a potenza ricercato.\\
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}
+						\begin{axis}[
+							xmin = 0, xmax = 6,
+							ymin = 0, ymax = 6,
+							samples = 200,
+							smooth,
+							thick,
+							xlabel = {$n$},
+							ylabel = {$p(n)$},]
+							\addplot[
+								domain = -2:6,
+							] {1/x};
+						\end{axis}
+					\end{tikzpicture}
+					\caption{\emph{Andamento a potenza.}}
+					\label{figure:modello_economico_evoluto}
+				\end{figure}
 			\subsection{La rovina di un giocatore}
 				Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
 				Il gioco finisce ai ``bordi'' (barriera assorbente) per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
