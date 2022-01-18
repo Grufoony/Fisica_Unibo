@@ -1,0 +1,475 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{tikz-network}
+\usepackage{float}
+ 
+\pgfplotsset{compat = newest}
+
+\begin{document}
+	\title{Soluzioni esercizi Fisica della Materia}
+	\author{Grufoony\\\url{https://github.com/Grufoony/Fisica_UNIBO}}
+	\maketitle
+
+    \section*{Ricavare Sackur-Tetrode}
+        Per un gas perfetto è nota la
+        \begin{equation*}
+            F=Nk_BT\left[\ln\left(\frac{n}{n_Q}\right)-1\right]
+        \end{equation*}
+        Per calcolare l'entropia è sufficiente utilizzare la relazione
+        \begin{equation*}
+            S=-\frac{\partial F}{\partial T}
+        \end{equation*}
+        ricordandosi che la concentrazione quantistica è definita
+        \begin{equation*}
+            n_Q=\left(\frac{mk_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}
+        \end{equation*}
+        Svolgendo i calcoli
+        \begin{equation*}
+            \begin{split}
+                S&=-\left\{Nk_B\left[\ln\left(\frac{n}{n_Q}\right)-1\right]-Nk_BT\frac{1}{n_Q}\left(\frac{mk_B}{2\pi\hbar^2}\right)^{\frac{3}{2}}\frac{3}{2}T^{\frac{1}{2}}\right\}\\
+                &=-\left\{Nk_B\left[\ln\left(\frac{n}{n_Q}\right)-1-\frac{3}{2}\right]\right\}=\\
+                &=Nk_B\left[\ln\left(\frac{n_Q}{n}\right)+\frac{5}{2}\right]
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 2,
+                    ymin = -7, ymax = 5,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$T$},
+                    ylabel = {$\frac{S}{Nk_B}$},]
+                    \addplot[
+                        domain = -2:2,
+                    ] {5/2*(ln(x)+1)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+    \section*{Integrale di Bose}
+        \begin{equation*}
+            \begin{split}
+                I=\int_0^\infty\frac{x^n}{e^x-1}dx&=\int_0^\infty\frac{x^ne^{-x}}{1-e^{-x}}dx=\\
+                &=\int_0^\infty x^ne^{-x}\sum_{k=0}^\infty e^{-kx}dx=\\
+                &=\sum_{k=0}^\infty\int_0^\infty x^ne^{-x(k+1)}dx
+            \end{split}
+        \end{equation*}
+        Ponendo ora $h=k+1$ e $y=hx$ e  si ottiene
+        \begin{equation*}
+            \begin{split}
+                I&=\sum_{h=1}^\infty\int_0^\infty \frac{y^n}{h^{n+1}}e^{-y}dy=\\
+                &=\sum_{h=1}^\infty\frac{1}{h^{n+1}}\int_0^\infty y^ne^{-y}dy=\\
+                &=\zeta(n+1)\Gamma(n+1)
+            \end{split}
+        \end{equation*}
+
+    \section*{Esercizio 4.17 (Kennett)}
+        Considerare un sistema di spin non interagenti, ciascuno con energia $\epsilon=-s\mu B$, con $s=\pm 1$.
+        Trovare l'energia libera di Helmholtz per un sistema di $N$ spin in un solido.
+        \\
+        \\
+        Cominciamo con lo scrivere la funzione di partizione di unaparticella singola
+        \begin{equation*}
+            Z_1=e^{\beta\mu B}+e^{-\beta\mu B}=2\cosh(\beta\mu B)
+        \end{equation*}
+        Trovandoci in un solido gli spin sono disposti a reticolo, quindi distinguibili.
+        L'energia libera di Helmholtz è
+        \begin{equation*}
+            F=-k_BT\ln(Z_1^N)=-Nk_BT\ln[2\cosh(\beta\mu B)]
+        \end{equation*}
+        \\
+        \\
+        (a) Sapendo che la magnetizzazione si può esprimere come $M=-\frac{1}{\mu}\frac{\partial F}{\partial B}$, trovare la magnetizzazione per spin $m$.
+        \\
+        \\
+        Avendo già l'energia di Helmholtz possiamo procedere con il calcolo
+        \begin{equation*}
+            \begin{split}
+                M&=-\frac{1}{\mu}\frac{\partial F}{\partial B}=\frac{Nk_BT}{\mu}\frac{\partial\ln[2\cosh(\beta\mu B)]}{\partial B}\\
+                m&=\frac{k_BT}{\mu}\frac{2\sinh(\beta\mu B)\beta\mu}{2\cosh(\beta\mu B)}=\tanh(\beta\mu B)
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = -3, xmax = 3,
+                    ymin = -1.1, ymax = 1.1,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$\beta\mu B$},
+                    ylabel = {$m$},]
+                    \addplot[
+                        domain = -3:3,
+                    ] {tanh(x)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+        (b) Trovare la capacità termica a campo magnetico costante e verificare la presenza di un'anomalia di Schottky.
+        \\
+        \\
+        Per il calcolo useremo questa volta la funzione di partizione
+        \begin{equation*}
+            \begin{split}
+                C_V&=\frac{\partial U}{\partial T}=-\frac{\partial}{\partial T}\frac{\partial \ln(Z_1^N)}{\partial \beta}=\\
+                &=-N\frac{\partial}{\partial T}\frac{\partial \ln(2\cosh(\beta\mu B))}{\partial \beta}=\\
+                &=-N\frac{\partial}{\partial T}\frac{2\sinh(\beta\mu B)\mu B}{2\cosh(\beta\mu B)}=-N\mu B\frac{\partial}{\partial T}\tanh(\beta\mu B)=\\
+                &=-N\mu B\frac{(-\mu B)}{k_BT^2\cosh^2(\beta\mu B)}=Nk_B\frac{(\beta\mu B)^2}{\cosh^2(\beta\mu B)}\\
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 5,
+                    ymin = 0, ymax = 0.5,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$\beta\mu B$},
+                    ylabel = {$\frac{C_V}{Nk_B}$},]
+                    \addplot[
+                        domain = 0:5,
+                    ] {x^2/cosh(x)^2};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+    
+    \section*{Esercizio 5.4 (Kennett)}
+        La pressione sul monte Everest è $P_{Ev}=\frac{1}{3}P_{atm}$ con $P_{atm}=101.3kPa$ e la temperatura è $T_{Ev}\simeq 243K$.
+        Calcolare il libero cammino medio.
+        \\
+        \\
+        Dalla teoria è nota la formula per il libero cammino medio
+        \begin{equation*}
+            l=\frac{1}{n\pi d^2}
+        \end{equation*}
+        Dato che sempre di aria si tratta (sia sull'Everest che al livello del mare) e che non sappiamo $d$, risulta più comodo trovare
+        \begin{equation*}
+            \frac{l_{Ev}}{l_{atm}}=\frac{n_{atm}}{n_{Ev}}
+        \end{equation*}
+        Essendo l'aria in buona approssimazione un gas perfetto si può scrivere la densità come $n=\frac{P}{k_BT}$ e, inserendo il tutto nella relazione precedente (assumendo $T_{atm}\simeq300K$)
+        \begin{equation*}
+            \frac{l_{Ev}}{l_{atm}}=\frac{T_{Ev}P_{atm}}{T_{atm}P_{Ev}}=3\frac{T_{Ev}}{T_{atm}}=2.67
+        \end{equation*}
+        Dalla teoria è noto $l_{atm}\simeq 1\mu m$ quindi $l_{Ev}\simeq 2.67\mu m$
+
+    \section*{Esercizio 5.5 (Kennett)}
+        Nello spazio intersetllare sono presenti giganti nubi di idrogeno molecolare (lunghezza di legame $0.74\times 10^{-10}m$).
+        Sapendo che la massa di una nube è $m\sim 4\times 10^{45}kg$, il diametro è $D\sim 1.42\times 10^{18}m$ e la temperatura è $T\sim 10K$ calcolare il libero cammino medio e il tempo di collisione medio.
+        \\
+        \\
+        Calcolando il volume della nube
+        \begin{equation*}
+            V=\frac{4}{3}\pi\left(\frac{D}{2}\right)^3=\frac{\pi}{6}D^3
+        \end{equation*}
+        e il numero di molecole $N=\frac{A}{2N_A}$ si ottiene
+        \begin{equation*}
+            l=\frac{V}{N\pi d^2}=\frac{D^3}{3N_Ad^2}=7.24\times 10^{11}m
+        \end{equation*}
+        Il tempo di collisione analogamente è
+        \begin{equation*}
+            \tau=\sqrt{\frac{m}{3k_BT}}l=l\sqrt{\frac{A}{3N_Ak_BT}}=6.48\times 10^{10}s
+        \end{equation*}
+
+    \section*{Esercizio 6.4 (Kennett)}
+        Calcolare $U$ e $C_V$ per un sistema a due livelli popolato da bosoni.
+        \\
+        \\
+        Dalla teoria è nota la
+        \begin{equation*}
+            \Xi_b=\prod_s\left[\frac{1}{1-e^{\beta(\mu-\epsilon_s)}}\right]
+        \end{equation*}
+        Assumiamo i due livelli energetici come
+        \begin{equation*}
+            \begin{cases}
+                \epsilon_0=0\\
+                \epsilon_1=\epsilon
+            \end{cases}
+        \end{equation*}
+        e in questo caso la funzione di partizione gran canonica diviene
+        \begin{equation*}
+            \Xi=\frac{1}{(1-e^{\beta\mu})(1-e^{\beta(\mu-\epsilon)})}
+        \end{equation*}
+        Dalla definizione di energia interna si può utilizzare il trucco di Feynman
+        \begin{equation*}
+            \begin{split}
+                U&=\frac{1}{\Xi}\sum_{N=0}^\infty\sum_{s}^Ns\epsilon e^{\beta(N\mu-s\epsilon)}=\\
+                &=-\frac{1}{\Xi}\frac{\epsilon}{\beta}\sum_{N=0}^\infty\sum_{s}^N\frac{\partial}{\partial\epsilon}e^{\beta(N\mu-s\epsilon)}=\\
+                &=-\frac{1}{\Xi}\frac{\epsilon}{\beta}\frac{\partial}{\partial\epsilon}\sum_{N=0}^\infty\sum_{s}^Ne^{\beta(N\mu-s\epsilon)}=\\
+                &=-\frac{1}{\Xi}\frac{\epsilon}{\beta}\frac{\partial\Xi}{\partial\epsilon}=\\
+                &=-\frac{\epsilon}{\beta}\frac{\partial\ln\Xi}{\partial\epsilon}\\
+            \end{split}
+        \end{equation*}
+        Possiamo ora calcolare l'energia interna
+        \begin{equation*}
+            \begin{split}
+                U&=-\frac{\epsilon}{\beta}\frac{\partial\ln\Xi}{\partial\epsilon}=\\
+                &=\frac{\epsilon}{\beta}\frac{\partial\ln(1-e^{\beta\mu})(1-e^{\beta(\mu-\epsilon)})}{\partial\epsilon}=\\
+                &=\frac{\epsilon}{\beta}\frac{\partial\ln(1-e^{\beta(\mu-\epsilon)})}{\partial\epsilon}=\\
+                &=\frac{\epsilon}{\beta}\frac{\beta e^{\beta(\mu-\epsilon)}}{(1-e^{\beta(\mu-\epsilon)})}=\\
+                &=\epsilon\frac{e^{\beta(\mu-\epsilon)}}{(1-e^{\beta(\mu-\epsilon)})}=\\
+                &=\frac{\epsilon}{e^{\beta(\epsilon-\mu)}-1}
+            \end{split}
+        \end{equation*}
+        \\
+        Per la capacità termica è sufficiente utilizzare la relazione
+        \begin{equation*}
+            \begin{split}
+                C_V&=\frac{\partial U}{\partial T}=\\
+                &=-\frac{\epsilon}{(e^{\beta(\epsilon-\mu)}-1)^2}\frac{\epsilon-\mu}{k_B}\left(-\frac{1}{T^2}\right)e^{\beta(\epsilon-\mu)}=\\
+                &=\frac{k_B\beta^2\epsilon(\epsilon-\mu)}{(e^{\beta(\epsilon-\mu)}-1)(1-e^{\beta(\mu-\epsilon)})}
+            \end{split}
+        \end{equation*}
+
+    \section*{Esercizio 9.5 (Kennett)}
+        (a) Mostrare che la funzione di partizione gran canonica per la radiazione di corpo nero assume la forma
+        \begin{equation}
+            \Xi=\prod_s\frac{1}{1-e^{-\beta\epsilon_s}}
+            \label{equation:9.5a}
+        \end{equation}
+        \\
+        \\
+        La radiazione di corpo nero è costituita da fotoni, ossia bosoni.
+        Dalla teoria (vista in classe) è nota la funzione di partizione gran canonica bosonica:
+        \begin{equation*}
+            \Xi_b=\prod_s\frac{1}{1-e^{\beta(\mu-\epsilon_s})}
+        \end{equation*}
+        Osservando ora come si possano aggiungere/rimuovere fotoni ad un corpo nero senza alcun costo energetico ($\mu=0$) la \ref{equation:9.5a} diviene ovvia.
+        \\
+        \\
+        (b) Usando l'equazione \ref{equation:9.5a} oppure in altro modo si dimostri che l'entropia per unità di volume della radiazione di corpo nero a temperatura $T$ assume la forma
+        \begin{equation}
+            s=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
+        \end{equation}
+        \\
+        \\
+        Richiamiamo ora l'energia per unità di volume della radiazione di corpo nero (eq. 9.20 Kennett)
+        \begin{equation*}
+            u=\frac{\pi^2}{15}\frac{(k_BT)^4}{(\hbar c)^3}
+        \end{equation*}
+        e anche la sua pressione (eq. 9.29 Kennett)
+        \begin{equation*}
+            P=\frac{u}{3}
+        \end{equation*}
+        \\
+        Richiamando ora la relazione termodinamica
+        \begin{equation}
+            U=TS-PV-\mu N
+        \end{equation}
+        ponendo $\mu=0$ (vedi punto a) e dividendo per il volume $V$, si ottiene
+        \begin{equation*}
+            s=\frac{u+P}{T}
+        \end{equation*}
+        che unita alle precedenti conclude la dimostrazione
+        \begin{equation*}
+            s=s=\frac{u+\frac{u}{3}}{T}=\frac{4}{3}\frac{u}{T}=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
+        \end{equation*}
+
+    \section*{Esercizio 9.9 (Kennett)}
+        Calcolare la temperatura critica per un BEC in 2 dimensioni.
+        \\
+        \\
+        Richiamiamo ora la densità degli stati 2D calcolata in precedenza:
+        \begin{equation*}
+            g(\epsilon)=g_s\frac{m}{2\pi\hbar^2}L^2
+        \end{equation*}
+        Possiamo calcolare il numero medio di particelle con la classica formula
+        \begin{equation*}
+            N=\int_0^\infty g(\epsilon)f(\epsilon)d\epsilon
+        \end{equation*}
+        la quale, posto $n=\frac{N}{L^2}$ diventa
+        \begin{equation*}
+            n=g_s\frac{m}{2\pi\hbar^2}\int_0^\infty \frac{1}{e^{\beta(\epsilon-\mu)}-1}d\epsilon
+        \end{equation*}
+        Per la temperatura critica si ha $e^{\beta_0}>>1$ e si può approssimare
+        \begin{equation*}
+            n\approx g_s\frac{m}{2\pi\hbar^2}\int_0^\infty e^{-\beta(\epsilon-\mu)}d\epsilon
+        \end{equation*}
+        la cui soluzione è
+        \begin{equation*}
+            n=g_s\frac{mk_B}{2\pi\hbar^2}T_0
+        \end{equation*}
+        Invertendo l'equazione precedente si ottiene la relazione desiderata
+        \begin{equation*}
+            T_0=\frac{2\pi\hbar^2}{mk_B}\frac{n}{g_s}
+        \end{equation*}
+
+    \section*{Esercizio 1 (esame del 13/01/2022)}
+        (a) Calcolare la capacitá termica $C_V$ per un sistema di $N$ oscillatori armonici distinguibili, ciascuno con energia $\epsilon_s=\left(n+\frac{1}{2}\right)\hbar\omega$ studiandone i limiti a basse ($k_BT<<\hbar\omega$) e alte ($k_BT>>\hbar\omega$) temperature.
+        \\
+        \\
+        Si può subito calcolare la funzione di partizione dalla definizione
+        \begin{equation*}
+            \begin{split}
+                Z_1&=\sum_se^{-\beta\epsilon_s}=\sum_{n=0}^\infty e^{-\beta\hbar\omega\left(n+\frac{1}{2}\right)}=\\
+                &=e^{-\beta\frac{\hbar\omega}{2}}\sum_{n=0}^\infty e^{-\beta\hbar\omega n}=-\frac{e^{-\beta\frac{\hbar\omega}{2}}}{e^{-\beta\hbar\omega}-1}\\
+                &=\frac{e^{-\beta\frac{\hbar\omega}{2}}}{1-e^{-\beta\hbar\omega}}=\frac{e^{\beta\frac{\hbar\omega}{2}}}{e^{\beta\hbar\omega}-1}
+            \end{split}
+        \end{equation*}
+        Richiamiamo ora la formula per l'energia interna
+        \begin{equation*}
+            \begin{split}
+                U&=-\frac{\partial\ln(Z_1^N)}{\partial\beta}=-N\frac{\partial}{\partial\beta}\left[\ln(e^{\beta\frac{\hbar\omega}{2}})-\ln(e^{\beta\hbar\omega}-1)\right]=\\
+                &=-N\frac{\partial}{\partial\beta}\left[\beta\frac{\hbar\omega}{2}-\ln(e^{\beta\hbar\omega}-1)\right]=\\
+                &=-N\left[\frac{\hbar\omega}{2}-\frac{\hbar\omega e^{\beta\hbar\omega}}{e^{\beta\hbar\omega}-1}\right]=\\
+                &=-N\hbar\omega\left[\frac{1}{2}-\frac{e^{\beta\hbar\omega}}{e^{\beta\hbar\omega}-1}\right]=\\
+                &=N\hbar\omega\left[\frac{1}{1-e^{-\beta\hbar\omega}}-\frac{1}{2}\right]
+            \end{split}
+        \end{equation*}
+        Da qui è possibile ricavare la capacità termica
+        \begin{equation*}
+            \begin{split}
+                C_V&=\frac{\partial U}{\partial T}=N\hbar\omega\frac{\partial}{\partial T}\left[\frac{1}{1-e^{-\beta\hbar\omega}}-\frac{1}{2}\right]=\\
+                &=N\hbar\omega\frac{\left(-\frac{\hbar\omega}{k_B}\right)\left(-\frac{1}{T^2}\right)(-e^{-\beta\hbar\omega})}{(1-e^{-\beta\hbar\omega})^2}=\\
+                &=-\frac{Nk_B(\beta\hbar\omega)^2(e^{-\beta\hbar\omega})}{(1-e^{-\beta\hbar\omega})^2}=\\
+                &=\frac{Nk_B(\beta\hbar\omega)^2}{(e^{\beta\hbar\omega}-1)(1-e^{-\beta\hbar\omega})}
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 10,
+                    ymin = 0, ymax = 1.1,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$\beta\hbar\omega$},
+                    ylabel = {$\frac{C_V}{Nk_B}$},]
+                    \addplot[
+                        domain = -2:10,
+                    ] {x^2*1/(e^x-1)*1/(1-e^(-x))};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+        (b) Paragonare graficamente il risultato ottenuto con il caso del sistema a due livelli (con energie $\epsilon_1=-\frac{\hbar\omega}{3}$ e $\epsilon_2=\frac{\hbar\omega}{3}$) evidenziandone analogie e differenze.
+        \\
+        \\
+        Analogamente a prima
+        \begin{equation*}
+            Z_1=e^{\beta\frac{\hbar\omega}{3}}+e^{-\beta\frac{\hbar\omega}{3}}=2\cosh\beta\frac{\hbar\omega}{3}
+        \end{equation*}
+        L'energia interna viene
+        \begin{equation*}
+            U=-N\frac{\hbar\omega}{3}\tanh\beta\frac{\hbar\omega}{3}
+        \end{equation*}
+        e di conseguenza la capacità termica
+        \begin{equation*}
+            C_V=Nk_B\frac{\left(\beta\frac{\hbar\omega}{3}\right)^2}{\cosh^2\beta\frac{\hbar\omega}{3}}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 8,
+                    ymin = 0, ymax = 0.6,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$\beta\hbar\omega$},
+                    ylabel = {$\frac{C_V}{Nk_B}$},]
+                    \addplot[
+                        domain = -2:10,
+                    ] {x^2*1/cosh(x)^2};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+        (c) \emph{Opzionale} Interpretare l'andamento alle alte T attraverso il teorema dell'equipartizione dell'energia.
+        \\
+        \\
+        Avendo $N$ oscillatori armonici con 2 gradi di libertà quadratici ciascuno con contributo $\frac{1}{2}k_BT$ ritroviamo la capacità termica a $Nk_B$.
+
+    \section*{Esercizio 2 (esame del 13/01/2022)}
+        (a) Calcolare l'entropia $S$ per un sistema di $N$ oscillatori armonici distinguibili, spiegando perché allo zero assoluto ($T = 0$) $S = 0$ e studiandone l'andamento (e la dipendenza da $T$) alle alte $T$.
+        \\
+        \\
+        Dalla teoria usiamo la formula dell'entropia
+        \begin{equation*}
+            \begin{split}
+                S&=-\frac{\partial F}{\partial T}=Nk_B\frac{\partial}{\partial T}T\left[\ln e^{\beta\frac{\hbar\omega}{2}}-\ln (e^{\beta\hbar\omega}-1)\right]=\\
+                &=Nk_B\frac{\partial}{\partial T}T\left[\beta\frac{\hbar\omega}{2}-\ln (e^{\beta\hbar\omega}-1)\right]=\\
+                &=-Nk_B\frac{\partial}{\partial T}\left[T\ln (e^{\beta\hbar\omega}-1)\right]=\\
+                &=-Nk_B\left[\ln (e^{\beta\hbar\omega}-1)+T\frac{\left(\frac{\hbar\omega}{k_B}\right)\left(-\frac{1}{T^2}\right)(e^{\beta\hbar\omega})}{e^{\beta\hbar\omega}-1}\right]=\\
+                &=Nk_B\left[\frac{\beta\hbar\omega}{1-e^{-\beta\hbar\omega}}-\ln (e^{\beta\hbar\omega}-1)\right]             
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 30,
+                    ymin = -0.1, ymax = 3,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$T$},
+                    ylabel = {$\frac{S}{Nk_B}$},]
+                    \addplot[
+                        domain = -2:30,
+                    ] {1/x*1/1-e^(-1/x)-ln(e^(1/x)-1)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+        Per $T = 0$, $S = 0$ in quanto avendo tutte le particelle allo stesso livello energetico ho solo una disposizione possibile $S=k\ln\Omega=k\ln 1=0$.
+        \\
+        \\
+        (b) \emph{Opzionale} Stimare il numero di stati occupati ad alte temperature.
+        \\
+        \\
+        Non avendo restrizioni sul numero di oscillatori per livello energetico possiamo considerare questi come bosoni.
+        Dalla teoria l'occupazione dei bosoni è data dalla
+        \begin{equation*}
+            \left\langle n_s \right\rangle_b=\frac{1}{e^{\beta\epsilon_s}-1}
+        \end{equation*}
+        Inserendo nella formula precedente l'espressione dell'energia fornita nell'esercizio 1 e facendo il limite per alte temperature si trova
+        \begin{equation*}
+            \begin{split}
+                \left\langle n_s \right\rangle&=\frac{1}{e^{\beta\hbar\omega\left(s+\frac{1}{2}\right)}-1}\approx\frac{1}{1+\beta\hbar\omega\left(s+\frac{1}{2}\right)-1}=\\
+                &=\frac{1}{\beta\hbar\omega\left(s+\frac{1}{2}\right)}=\frac{k_BT}{\hbar\omega\left(s+\frac{1}{2}\right)}
+            \end{split}
+        \end{equation*}
+        \\
+        \\
+        (c) Paragonare graficamente il risultato ottenuto con il caso di un gas di molecole diatomiche.
+        Per il calcolo dell'entropia del gas di molecole diatomiche considerare solo i contributi dovuti al moto traslazionale ($Z_t$) e rotazionale ($Z_r$), considerando che per temperature superiori alla temperatura caratteristica del moto rotazionale $\theta_r$ la funzione $Z_r$ si puó approssimare a $\frac{T}{\theta_r}$.
+        \\
+        \\
+        Ricaviamo innanzitutto la funzione di partizione
+        \begin{equation*}
+            Z=Z_tZ_r=n_QV\frac{T}{\theta_r}
+        \end{equation*}
+        Analogamente al punto precedente
+        \begin{equation*}
+            \begin{split}
+                S&=-\frac{\partial F}{\partial T}\approx Nk_B\frac{\partial}{\partial T}\left[T\left(\ln n_QV\frac{T}{\theta_r}-\ln(N) +1\right)\right]=\\
+                &=Nk_B\frac{\partial}{\partial T}\left[T\left(\ln\frac{n_Q}{n}+\ln\frac{T}{\theta_r}+1\right)\right]=\\
+                &=Nk_B\left(\ln\frac{n_Q}{n}+\ln\frac{T}{\theta_r}+1\right)+Nk_BT\left(\frac{3}{2}\frac{1}{T}+\frac{1}{T}\right)=\\
+                &=Nk_B\left(\ln\frac{n_Q}{n}+\ln\frac{T}{\theta_r}+\frac{7}{2}\right)
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 2,
+                    ymin = -7, ymax = 10,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$T$},
+                    ylabel = {$\frac{S}{Nk_B}$},]
+                    \addplot[
+                        domain = -2:2,
+                    ] {3/2*ln(x)+ln(x)+7/2};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+    \end{document}
