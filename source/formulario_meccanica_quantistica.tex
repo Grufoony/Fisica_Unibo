@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+
+\begin{document}
+	\title{Formulario Meccanica Quantistica}
+	\author{Grufoony\\\url{https://github.com/Grufoony/Fisica_UNIBO}}
+	\maketitle
+
+    \section{Formule dalla teoria}
+        \begin{itemize}
+            \item $f_e(e)de=\frac{2}{\sqrt{\pi}(k_BT)^\frac{3}{2}}e^{-\frac{e}{k_BT}}e^{\frac{1}{2}}de$ distribuzione energia di Maxwell
+            \item $S=Nk_B\left[\ln T +\ln\frac{2\pi k_B}{\omega}+1\right]$ entropia gas di oscillatori armonici
+            \item $z_\omega^{CN}=\alpha_\omega^{CN}z_\omega^{x}$ legge di Kirchhoff
+            \item $P=\frac{u}{3}$ equazione di stato corpo nero CN
+            \item $z=\int_0^\infty d\omega z_\omega=\sigma T^4$ legge di Stefan-Boltzmann
+            \item $u_\omega=\frac{\hbar^2}{\pi^2c^3}\frac{\omega^3}{e^{\beta\hbar\omega}-1}$ legge di Planck
+            \item Relazioni di Plank-Einstein:
+                    \begin{equation*}
+                        \begin{cases}
+                            w=\hbar\omega\\
+                            \vec{p}=\hbar\vec{k}
+                        \end{cases}
+                    \end{equation*}
+            \item $\lambda_{dB}=\frac{h}{p}$ lunghezza d'onda di deBroglie
+            \item $\Delta\lambda_f=2\lambda_C\sin^2\frac{\theta}{2}$ legge di Compton
+            \item $\lambda_{n,m}=R\left(\frac{1}{n^2}-\frac{1}{m^2}\right)$ formula di Rydberg per l'idrogeno ($n<m$)
+            \item $\lambda_{a,b,n,m}=R\left(\frac{1}{(n+a)^2}-\frac{1}{(m+b)^2}\right)$ formula di Rydberg per il sodio
+            \item $R=\frac{m_ec\alpha^2}{4\pi\gamma\hbar}$ costante di Rydberg
+        \end{itemize}
+    
+    \section{Atomo di Bohr}
+        \begin{itemize}
+            \item $l_n=n\hbar$ momento angolare
+            \item $r_B=\frac{\hbar^2}{m_ee^e}$ raggio di Bohr
+            \item $\alpha=\frac{e^2}{\hbar c}\simeq\frac{1}{137}$ costante di struttura fine
+            \item $r_n=\frac{\gamma r_Bn^2}{Z}$ con $\gamma\sim 1$
+            \item $\omega_n=\frac{m_ec^2\alpha^2Z^2}{2\hbar n^3}$
+            \item $w_n=-\frac{m_ec^2\alpha^2Z^2}{2\gamma n^2}$
+            \item $\frac{d\vec{\mu}}{dt}=\vec{\omega_L}\times\vec{\mu}$
+            \item $\vec{\omega_L}=\frac{e\vec{B}}{2m_ec}$ frequenza angolare di Larmor
+        \end{itemize}
+    
+    \section{Onde}
+        \begin{itemize}
+            \item $\nabla^2\psi-\frac{n^2}{c^2}\frac{\partial^2}{\partial t^2}\psi=0$ equazione classica delle onde
+            \item $(\vec{\nabla}\psi_{c0})^2-k^2n^2=0$ equazione eikonale
+            \item $\vec{\nabla}\cdot(a_{c0}^2\vec{\nabla}\psi_{c0})$ equazione di trasporto
+            \item $S_c(t,\vec{x})=\int_0^t dt'\left[\vec{p}\cdot\frac{d\vec{q}}{dt}-\frac{p^2}{2m}-U(\vec{q})\right]$ funzione di Hamilton
+            \item $\vec{p}_c=\vec{\nabla}S_c$
+        \end{itemize}
+
+\end{document}
