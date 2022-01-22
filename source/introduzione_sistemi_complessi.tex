@@ -122,6 +122,32 @@
 				\item un modello (matematico) per l'evoluzione;
 				\item una conoscenza dello stato presente (o passato) del sistema \emph{sufficiente} ad inizializzare il modello;
 			\end{itemize}
+			\begin{figure}[H]
+				\centering
+				\begin{tikzpicture}
+				\node[ellipse, draw, align=center] (a) at (0,4) {Problema di\\interesse};
+				\node[ellipse, draw, align=center] (b) at (4,4) {Osservazioni\\sprimentali};
+				\node[ellipse, draw, align=center] (c) at (6.1,2) {Modello di\\teoria};
+				\node[ellipse, draw, align=center] (d) at (1.9,2) {Predizioni};
+				\node[ellipse, draw, align=center] (e) at (11,2) {Caratteristiche\\universali};
+				\node[ellipse, draw, align=center] (f) at (6.1,0) {Parametri di\\controllo};
+				\node[ellipse, draw, align=center] (g) at (1.9,0) {Diversi scenari\\non compatibili};
+				\draw [->] (a) -- (b);
+				\draw [->] (b) -- (c);
+				\draw [->] (c) -- (d);
+				\draw [->] (d) -- (b);
+				\draw [->] (c) -- (e);
+				\draw [->] (c) -- (f);
+				\draw [->] (g) -- (d);
+				\end{tikzpicture}
+				\caption{\emph{Schema operativo}}
+				\label{figure:schema_operativo}
+			\end{figure}
+			In Fig.(\ref{figure:schema_operativo}) è presente lo schema operativo della creazione di un modello.
+			Il punto di partenza è sempre un problema, la cui osservazione sperimentale fornisce i dati sui quali costruire un modello di teoria .
+			Con esso è poi possibile eseguire delle predizioni da confrontare con i dati sperimentale per comprenderne l'affidabilità e gli eventuali scenari incompatibili.
+			Ovviamente un buon modello teorico deve avere dei parametri manipolabili (di controllo) e caratteristiche valide universalmente.
+			\\
 			Si possono distinguere due tipologie di modelli, le quali verranno ora analizzate.
 			\subsection{Modelli ad agente}
 				La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno stduio di tipo bottom-up (dal particolare al generale).
@@ -147,6 +173,92 @@
 				Tipicamente, gli osservabili sono legati tra di loro tramite equazioni differenziali le quali, una volta integrate, forniscono un'evoluzione del sistema nel tempo.
 				In questo caso il risultato ottenuto rappresenta già una media di tutti i risultati possibili: le fluttuazioni del sistema provocheranno quindi uno scostamento da questo valore.
 				Ovviamente, più tempo si farà evolvere il sistema, più rilevante sarà l'effetto delle fluttuazioni e meno preciso sarà il risultato della previsione.
+
+		\section{Distribuzioni}
+		Per l'analisi matematica dei sistemi è utile definire le funzioni di distribuzione, le quali sono indicatori della frequenza di evvnimento di un fenomeno.
+		\begin{definition}
+			Gaussiana\\$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+		\end{definition}
+		\begin{figure}[H]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin = -3, xmax = 3,
+					ymin = 0, ymax = 1.1,
+					samples = 200,
+					smooth,
+					thick,
+					xlabel = {$x$},
+					ylabel = {$\rho(x)$},]
+					\addplot[
+						domain = -3:3,
+					] {e^(-x^2)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{\emph{Gaussiana.}}
+			\label{figure:gaussiana}
+		\end{figure}
+		La gaussiana, riportata in Fig. (\ref{figure:gaussiana}), è nota come la distribuzione degli errori ed è tra le più importanti funzioni della fisica.
+		Caratteristica principale è la sua discesa molto veloce superata una distanza pari a $\sigma$ dal valore medio.
+		\begin{definition}
+			Esponenziale\\$\rho(x)=\frac{1}{k}e^{-\frac{x}{k}}$
+		\end{definition}
+		\begin{figure}[H]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin = 0, xmax = 5,
+					ymin = 0, ymax = 1.1,
+					samples = 200,
+					smooth,
+					thick,
+					xlabel = {$x$},
+					ylabel = {$\rho(x)$},]
+					\addplot[
+						domain = 0:5,
+					] {e^(-x)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{\emph{Esponenziale.}}
+			\label{figure:esponenziale}
+		\end{figure}
+		L'esponenziale, riportato in Fig. (\ref{figure:esponenziale}), è la distribuzione emergente dalla meccanica statistica (fattori di Boltzmann).
+		\begin{definition}
+			Potenza\\$\rho(x)\propto\frac{1}{x^a}$, con $a>0$
+		\end{definition}
+		\begin{figure}[H]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin = 0, xmax = 5,
+					ymin = 0, ymax = 5,
+					samples = 200,
+					smooth,
+					thick,
+					xlabel = {$x$},
+					ylabel = {$\rho(x)$},]
+					\addplot[
+						domain = 0.1:5,
+					] {x^(-2)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{\emph{Potenza.}}
+			\label{figure:potenza}
+		\end{figure}
+		La potenza, riportata in Fig. (\ref{figure:potenza}), è una distribuzione che possiede un'importanate proprietà, detta \emph{invarianza di scala}.
+		\begin{theorem}
+			Invarianza di scala:\\
+			se $\rho(x)\propto\frac{1}{x^a}$ allora posto $y=\lambda x$ si ha $\rho(y)=\frac{\lambda^a}{x^a}\propto\frac{1}{y^a}$
+		\end{theorem}
+		\begin{definition}
+			Momenti di una distribuzione:\\
+			$<x^k>=\int_{-\infty}^{+\infty}x^k\rho(x)dx$
+		\end{definition}
+		\begin{theorem}
+			Limite centrale:\\
+			Siano ${x_k}$ variabili casuali indipendenti, allora:\\
+			$\lim_{N\to\infty}z=\frac{1}{\sqrt{N}}\sum_{k=1}^{N}x_k=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{z^2}{2\sigma^2}}$
+		\end{theorem}
 
 		\section{Esempi}
 			\subsection{Random Walk 1D}
@@ -306,8 +418,31 @@
 				\end{equation*}
 				Il sistema dilata densamente lungo la direzione $v_{+}$ dell'autovettore $\lambda_{+}>1$.
 				Dato un vettore iniziale $x_{0}$, $(x_{0}\cdot v_{t})\lambda_{t}^{n} \Rightarrow \ln\lambda_{t}$ è l'esponenziale di Ljapunov.
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}
+						\begin{axis}[
+							xmin = 0, xmax = 1,
+							ymin = 0, ymax = 1,
+							smooth,
+							thick,
+							xlabel = {$x$},
+							ylabel = {$y$},]
+							\addplot [red, only marks, mark=*, samples=1000, domain=0:1, mark size=0.75] {rnd};
+							\draw [fill=black] (0.4,0.4) rectangle (0.6,0.6);
+							\draw [fill=green] (0.9,0.7) rectangle (1,0.9);
+							\draw [fill=green] (0,0.7) rectangle (0.1,0.9);
+						\end{axis}
+					\end{tikzpicture}
+					\caption{\emph{Catmap.}}
+					\label{figure:catmap}
+				\end{figure}
+				In Fig.(\ref{figure:catmap}) è rappresentata un'applicazione della catmap su un insieme di punti.
+				Si può notare come una volta fatto evolvere il sistema partendo dall'area nera, questo non ritorni nella condizione iniziale applicando la trasformazione inversa (area verde).
+				\\
 				Problema: data una distribuzione di punti $\rho_{0}$, cosa succede a $\rho_{0}(T^{n}x)$?
-				\\Per definizione, data una distribuzione $\rho(x)$, questa deve essere normalizzata $\int_{\Pi^{2}}\rho(x)dx=1$.
+				\\
+				Per definizione, data una distribuzione $\rho(x)$, questa deve essere normalizzata $\int_{\Pi^{2}}\rho(x)dx=1$.
 				L'equazione di continuità permette di imporre la conservazione del numero di particelle:
 				\begin{equation*}
 					\rho(x,n)=\rho_{0}\left(T^{-n}x\right)\left\lvert\frac{\partial T^{-n}}{\partial x}\right\rvert 
@@ -384,6 +519,8 @@
 					\item se chi è ricco pagasse di più si otterrebbe una curva a campana
 				\end{itemize}
 				Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
+				Pur non trovando riscontro nella realtà, si è appena dimostrato stocasticamente il fattore di Boltzmann $e^{-\beta\epsilon}$.
+				Si può quindi pensare il denaro come un'\emph{energia interna} al singolo mentre la probabilità di scambio rappresenta la \emph{temperatura statistica} del sistema.
 			\subsection{Modello economico evoluto}
 				Per adattare il modello precedente alla realtà si introduce una microdinamica sugli scambi di denaro.\\
 				Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. Il sistema possiede una \textit{struttura di catena}:
@@ -442,8 +579,8 @@
 							xlabel = {$n$},
 							ylabel = {$p(n)$},]
 							\addplot[
-								domain = -2:6,
-							] {1/x};
+								domain = 0.1:6,
+							] {1/(x^2)};
 						\end{axis}
 					\end{tikzpicture}
 					\caption{\emph{Andamento a potenza.}}
@@ -483,31 +620,10 @@
 				\end{itemize}
 	
 	\chapter{Entropia e Informazione} %CAPITOLO 2
-		\section{Distribuzioni}
-		Vediamo ora una serie di distribuzioni e teoremi ad esse legati che ci aiuteranno nell'analisi dei sistemi.
-		\begin{definition}\hfill
-			\begin{itemize}
-				\item Gaussiana\\	$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
-				\item Esponenziale\\	$\rho(x)=\frac{1}{k}e^{-\frac{x}{k}}$
-				\item Potenza\\		$\rho(x)\propto\frac{1}{x^a}$, con $a>0$
-			\end{itemize}
-		\end{definition}
-		\begin{definition}
-			Momenti di una distribuzione:\\
-			$<x^k>=\int_{-\infty}^{+\infty}x^k\rho(x)dx$
-		\end{definition}
-		\begin{theorem}
-			Invarianza di scala:\\
-			se $\rho(x)\propto\frac{1}{x^a}$ allora posto $y=\lambda x$ si ha $\rho(y)=\frac{\lambda^a}{x^a}\propto\frac{1}{y^a}$
-		\end{theorem}
-		\begin{theorem}
-			Limite centrale:\\
-			Siano ${x_k}$ variabili casuali indipendenti, allora:\\
-			$\lim_{N\to\infty}z=\frac{1}{\sqrt{N}}\sum_{k=1}^{N}x_k=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{z^2}{2\sigma^2}}$
-		\end{theorem}
+		
 		
 		\section{Probabilità}
-			Data una distribuzione di probabilità $\rho(x)$ normalizzata è possibule procedere con le seguenti definizioni:
+			Data una distribuzione di probabilità $\rho(x)$ normalizzata (integrale sul dominio uguale a $1$) è possibile procedere con le seguenti definizioni:
 			\begin{definition} Probabilità:\\
 				$p(x\in[a,b])=\int_{a}^{b}\rho(x)dx$
 			\end{definition}
@@ -642,7 +758,55 @@
 				Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
 				se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
 				Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
-				Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto browniano}.\\
+				Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto browniano}.
+				Un esempio grafico puoò essere rappresentato dalla Fig.(\ref{figure:esempio_markov}).
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}[>=latex,every node/.style={draw,circle,minimum width={3em},node distance=6em}]
+					\node (a) {A};
+					\node [below left of=a] (b) {B}; 
+					\node [below right of=a] (c) {C};  
+					\draw [<->] (a) -- (b);
+					\draw [<->] (b) -- (c);
+					\draw [<->] (c) -- (a);
+					\end{tikzpicture}
+					\caption{\emph{Grafo di esempio reversibilità.}}
+					\label{figure:esempio_markov}
+				\end{figure}
+				Associando la matrice
+				\begin{equation*}
+					\Pi_{ij} = 
+						\begin{pmatrix}
+							0 & \frac{1}{2} & \frac{1}{2} \\
+							\frac{1}{2} & 0 & \frac{1}{2} \\
+							\frac{1}{2} & \frac{1}{2} & 0 
+						\end{pmatrix}
+				\end{equation*}
+				si ha eguale probabilità di transizione in ogni direzione ammessa dal grafo.
+				L'evoluzione temporale è data da
+				\begin{equation*}
+					p_i^{n+1}=\sum_j\Pi_{ij}p_j^n
+				\end{equation*}
+				e si verifica facilmente che il sistema è reversibile con distribuzione stazionaria
+				\begin{equation*}
+					\lim_{n\to\infty}p^n=\left(\frac{1}{3},\frac{1}{3},\frac{1}{3}\right)
+				\end{equation*}
+				Considerando invece la matrice
+				\begin{equation*}
+					\Pi_{ij} = 
+						\begin{pmatrix}
+							0 & \frac{1}{3} & \frac{2}{3} \\
+							\frac{2}{3} & 0 & \frac{1}{3} \\
+							\frac{1}{3} & \frac{2}{3} & 0 
+						\end{pmatrix}
+				\end{equation*}
+				si aumenta la probabilità di percorrere il triangolo in senso antiorario.
+				Essendo la distrubuzione stazionaria identica al caso precedente si può studiare la reversibilità con il bilancio dettagliato:
+				\begin{equation*}
+					\pi_{13}p_3^s = \frac{2}{3} \frac{1}{3} \neq \frac{1}{3}\frac{1}{3} = \pi_{31}p_1^s
+				\end{equation*}
+				Secondo Onsager, la distribuzione stazionaria corrisponde all'equilibrio quindi, analizzando le fluttuazioni è possibile capire se il sistema sia reversibile o meno.
+				\\
 				In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
 				Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
 		
