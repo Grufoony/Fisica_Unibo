@@ -222,7 +222,22 @@
                 &=\frac{\epsilon}{e^{\beta(\epsilon-\mu)}-1}
             \end{split}
         \end{equation*}
-        \\
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 2,
+                    ymin = -0.1, ymax = 2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$T$},
+                    ylabel = {$\frac{U}{\epsilon}$},]
+                    \addplot[
+                        domain = 0:2,
+                    ] {1/(e^(1/x)-1)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
         Per la capacità termica è sufficiente utilizzare la relazione
         \begin{equation*}
             \begin{split}
@@ -231,6 +246,22 @@
                 &=\frac{k_B\beta^2\epsilon(\epsilon-\mu)}{(e^{\beta(\epsilon-\mu)}-1)(1-e^{\beta(\mu-\epsilon)})}
             \end{split}
         \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 2,
+                    ymin = -0.1, ymax = 1.1,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$T$},
+                    ylabel = {$\frac{C_V}{k_B\epsilon}$},]
+                    \addplot[
+                        domain = 0:2,
+                    ] {1/(x^2)*1/(e^(1/x)-1)*1/(1-e^(-1/x))};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
 
     \section*{Esercizio 9.5 (Kennett)}
         (a) Mostrare che la funzione di partizione gran canonica per la radiazione di corpo nero assume la forma
