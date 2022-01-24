@@ -1,0 +1,197 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[main=italian, english]{babel}
+\usepackage{bookmark}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{tikz-network}
+\usepackage{float}
+ 
+\pgfplotsset{compat = newest}
+
+\begin{document}
+	\title{Soluzioni esercizi Meccanica Quantistica}
+	\author{Grufoony\\\url{https://github.com/Grufoony/Fisica_UNIBO}}
+	\maketitle
+
+    \section*{Esercizio 1 (esame del 09/01/2017)}
+        Una molecola di idrogeno ionizzata pu`o essere descritta come un sistema unidimensionale formato da un singolo elettrone soggetto al potenziale
+        \begin{equation*}
+            U(x)=-\frac{\hbar^2\Omega}{m}\left[\delta(x-a)+\delta(x+a)\right]
+        \end{equation*}
+        ove $a>0$ è la semidistanza dei due protoni pensati fissi e $\Omega>0$ ha le dimensioni di una lunghezza inversa.
+        Trovare gli autovalori e le autofunzioni dell'energia dello spettro discreto.
+        \\
+        \\
+        Scriviamo subito l'equazione di Schroedinger
+        \begin{equation*}
+            \frac{d^2}{dx^2}\Phi+\left\{k^2-2\Omega\left[\delta(x-a)+\delta(x+a)\right]\right\}\Phi=0
+        \end{equation*}
+        La soluzione è nota
+        \begin{equation*}
+            \Phi^\pm(x)=
+            \begin{cases}
+                A^\pm e^{ikx}+B^\pm e^{-ikx}\quad x<-a\\
+                C^\pm e^{ikx}+D^\pm e^{-ikx}\quad -a<x<a\\
+                E^\pm e^{ikx}+F^\pm e^{-ikx}\quad a<x
+            \end{cases}
+        \end{equation*}
+        Notiamo che il potenziale ha partità definita $U(-x)=U(x)$ allora possiamo imporre la condizione $\Phi^\pm(-x)=\pm\Phi^\pm(x)$, ottenendo
+        \begin{equation*}
+            \begin{cases}
+                E^\pm=\pm A^\pm\\
+                F^\pm=\pm B^\pm\\
+                D^\pm=\pm C^\pm
+            \end{cases}
+        \end{equation*}
+        La funzione assume ora la forma più semplice
+        \begin{equation*}
+            \Phi^\pm(x)=
+            \begin{cases}
+                C^\pm \left(e^{ik\left\lvert x\right\rvert }\pm e^{-ik\left\lvert x\right\rvert }\right)\quad \left\lvert x\right\rvert<a\\
+                \sigma_\pm(x)\left[A^\pm e^{ik\left\lvert x\right\rvert }+B^\pm e^{-ik\left\lvert x\right\rvert }\right]\quad a<\left\lvert x\right\rvert
+            \end{cases}
+        \end{equation*}
+        Notiamo però che la funzione d'onda non può esplodere all'infinito, quindi necessariamente si avrà $A^\pm=0$ e, riscalando $B^\pm=B^\pm e^{ika}$
+        \begin{equation*}
+            \Phi^\pm(x)=
+            \begin{cases}
+                C^\pm \left(e^{ik\left\lvert x\right\rvert }\pm e^{-ik\left\lvert x\right\rvert }\right)\quad \left\lvert x\right\rvert<a\\
+                \sigma_\pm(x)B^\pm e^{-ik(\left\lvert x\right\rvert-a)}\quad a<\left\lvert x\right\rvert
+            \end{cases}
+        \end{equation*}
+        Ora imponiamo la continuità della funzione e della sua derivata 
+        \begin{equation}
+            \begin{cases}
+                \sigma_\pm(x)B^\pm=C^\pm \left(e^{ika}\pm e^{-ika}\right)\\
+                -\sigma_\pm(x)B^\pm-C^\pm \left(e^{ika}\mp e^{-ika}\right)=\frac{2i\Omega}{k}\sigma_\pm(x)B^\pm
+            \end{cases}
+        \end{equation}
+        Si può riscrivere il tutto nella forma
+        \begin{equation}
+            \begin{cases}
+                \sigma_\pm(x)B^\pm=C^\pm \left(e^{ika}\pm e^{-ika}\right)\\
+                \sigma_\pm(x)B^\pm\left(1+\frac{2i\Omega}{k}\right)=C^\pm \left(e^{-ika}\mp e^{ika}\right)
+            \end{cases}
+        \end{equation}
+        Dividendo la seconda per la prima si ottiene
+        \begin{equation*}
+            \frac{e^{-ika}\mp e^{ika}}{e^{ika}\pm e^{-ika}}=1+\frac{2i\Omega}{k}
+        \end{equation*}
+        Le soluzioni in k per le due parità sono
+        \begin{equation}
+            \begin{cases}
+                \tanh(ika)=-\frac{2i\Omega+k}{k}\\
+                \tanh(ika)=\frac{k}{2i\Omega+k}
+            \end{cases}
+        \end{equation}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = -10, xmax = 10,
+                    ymin = 0, ymax =2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$\Phi^+(x)$},]
+                    \addplot[
+                        domain = -4:4,
+                    ] {0.05*cosh(x)};
+                    \addplot[
+                        domain = 4:10,
+                    ] {1.4*e^(-x+4)};
+                    \addplot[
+                        domain = -10:-4,
+                    ] {1.4*e^(+x+4)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = -10, xmax = 10,
+                    ymin = -2, ymax =2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$\Phi^-(x)$},]
+                    \addplot[
+                        domain = -4:4,
+                    ] {0.05*sinh(x)};
+                    \addplot[
+                        domain = 4:10,
+                    ] {1.4*e^(-x+4)};
+                    \addplot[
+                        domain = -10:-4,
+                    ] {-1.4*e^(+x+4)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+        
+
+    % \section*{Esercizio 2 (esame del 08/09/2017)}
+        % Usando l'approssimazione di Born, calcolare la sezione d'urto differenziale e totale per la diffusione dal potenziale centrale
+        % \begin{equation*}
+        %     U(r)=\frac{U_0}{1+\frac{r^2}{R^2}}
+        % \end{equation*}
+        % ove $U_0\neq 0$ e $R > 0$ sono costanti con le dimensioni di un'energia e di una lunghezza rispettivamente.
+        % \\
+        % \\
+        % Dalla teoria è nota la sezione d'urto differenziale
+        % \begin{equation*}
+        %     \frac{d\sigma_k(\theta)}{d\Omega}=\left(\frac{2m}{\hbar^2}\right)^2\left[\frac{1}{q}\int_0^\infty r\sin(qr)U(r)dr\right]^2
+        % \end{equation*}
+        % Risolviamo prima l'integrale ponendo $x=\frac{r}{R}$ e considerando $q>0$:
+        % \begin{equation*}
+        %     \begin{split}
+        %         \int_0^\infty r\sin(qr)U(r)dr&=\int_0^\infty \frac{Rx\sin(qRx)U_0}{1+x^2}Rdx=\\
+        %         &=R^2U_0\int_0^\infty \frac{x\sin(qRx)}{1+x^2}dx=\\
+        %         &=R^2U_0\Im \left\{\int_0^\infty \frac{xe^{iqRx}}{1+x^2}dx\right\}=\\
+        %         &=\frac{R^2U_0}{2}\Im \left\{\int_{-\infty}^\infty \frac{xe^{iqRx}}{1+x^2}dx\right\}=\\
+        %         &=\frac{R^2U_0}{2}\Im \left\{2\pi i\frac{ze^{iqRz}}{2z}|_{z=i}\right\}=\\
+        %         &=\frac{R^2U_0}{2}\Im \left\{\pi ie^{qR}\right\}=\\
+        %         &=\frac{\pi R^2U_0}{2}e^{qR}
+        %     \end{split}
+        % \end{equation*}
+        % \begin{center}
+        %     \begin{tikzpicture}
+        %         \begin{axis}[
+        %             xmin = -5, xmax = 5,
+        %             ymin = -5, ymax = 5,
+        %             samples = 200,
+        %             smooth,
+        %             thick,
+        %             xlabel = {$Re$},
+        %             ylabel = {$Im$},]
+        %             \draw [black,-stealth]
+        %             (-4,0)
+        %             -- % = line-to
+        %             ++ % = calculate a vector sum
+        %             (axis direction cs:8,0);
+                    
+        %             \draw [black] (1,0) circle [radius=2];
+
+        %             \addplot [only marks,mark=*]
+        %                 coordinates { (0,1) };
+        %                 % label = {$i$}
+        %         \end{axis}
+        %     \end{tikzpicture}
+        % \end{center}
+        % Considerando anche il caso in cui $q<0$ si nota facilmente come:
+        % \begin{equation*}
+        %     \int_0^\infty r\sin(qr)U(r)dr=\frac{\pi R^2U_0}{2}e^{\left\lvert q\right\rvert R}
+        % \end{equation*}
+        % Quindi la sezione d'urto differenziale diviene
+        % \begin{equation*}
+        %     \frac{d\sigma_k(\theta)}{d\Omega}=\left(\frac{m\pi R^2U_0}{\hbar^2}\right)^2\frac{e^{2\left\lvert q\right\rvert R}}{q^2}
+        % \end{equation*}
+
+        
+    \end{document}
