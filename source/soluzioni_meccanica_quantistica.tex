@@ -20,7 +20,7 @@
 	\maketitle
 
     \section*{Esercizio 1 (esame del 09/01/2017)}
-        Una molecola di idrogeno ionizzata pu`o essere descritta come un sistema unidimensionale formato da un singolo elettrone soggetto al potenziale
+        Una molecola di idrogeno ionizzata può essere descritta come un sistema unidimensionale formato da un singolo elettrone soggetto al potenziale
         \begin{equation*}
             U(x)=-\frac{\hbar^2\Omega}{m}\left[\delta(x-a)+\delta(x+a)\right]
         \end{equation*}
@@ -136,6 +136,61 @@
             \end{tikzpicture}
         \end{center}
         
+    \section*{Esercizio 1 (esame del 03/07/2017)}
+    Una particlella è confinata in una regione sferica di raggio $R$ ed è soggetta ad un campo di forza centrale con potenziale
+    \begin{equation*}
+        U(r)=
+        \begin{cases}
+            0,\quad\quad 0\leq r\leq\frac{R}{2}\\
+            U_0\quad\quad \frac{R}{2}<r\leq R
+        \end{cases}
+        \quad\quad U_0\neq 0
+    \end{equation*}
+    ove $U_0 > 0$ è una costante con le dimensioni di un'energia. Calcolare gli autovalori e le autofunzioni dell'energia della particella.
+    Suggerimento: Derivare ma non tentare di risolvere l'equazione agli autovalori trascendente.
+    \\
+    \\
+    Scriviamo subito l'equazione di Schroedinger radiale
+    \begin{equation*}
+        \frac{d^2\chi}{dr^2}+\left[k^2-\frac{l(l-1)}{r^2}-\frac{2m}{\hbar^2}U(r)\right]\chi=0
+    \end{equation*}
+    la cui soluzione è
+    \begin{equation*}
+        \chi(r)=
+        \begin{cases}
+            Akrj_l(kr)+Bkrn_l(kr)\quad\quad 0\leq r\leq\frac{R}{2}\\
+            Ck'rj_l(k'r)+Dk'rn_l(k'r)\quad\quad \frac{R}{2}<r\leq R
+        \end{cases}
+    \end{equation*}
+    con $k'^2=k^2-\frac{2m}{\hbar^2}U_0$
+    Condizione al bordo $\chi(0)=0$ quindi $B=0$.
+    Continuità della funzione
+    \begin{equation*}
+        Ak\frac{R}{2}j_l(k\frac{R}{2})=Ck'\frac{R}{2}j_l(k'\frac{R}{2})+Dk'\frac{R}{2}n_l(k'\frac{R}{2})
+    \end{equation*}
+    Ponendo $x_k=\frac{kR}{2}$, $x_{k'}=\frac{k'R}{2}$, $C=En_l(2x_{k'})$ e $D=-Ej_l(2x_{k'})$ si ottiene
+    \begin{equation*}
+        \chi(r)=
+        \begin{cases}
+            Akrj_l(kr)\quad\quad 0\leq r\leq\frac{R}{2}\\
+            Ek'r\left[n_l(2x_{k'})j_l(k'r)-j_l(2x_{k'})n_l(k'r)\right]\quad\quad \frac{R}{2}<r\leq R
+        \end{cases}
+    \end{equation*}
+    Continuità della derivata
+    \begin{equation*}
+        \begin{split}
+            A\left\{x_kj_l(x_k)+x_k^2j_l'(x_k)\right\}&=E\left\{n_l(2x_{k'})\left[x_{k'}j_l(x_{k'})+x_{k'}^2j_l'(x_{k'})\right]-j_l(2x_{k'})\left[x_{k'}n_l(x_{k'})+x_{k'}^2n_l'(x_{k'})\right]\right\}\\
+            Ax_k^2j_l'(x_k)&=E\left[n_l(2x_{k'})x_{k'}^2j_l'(x_{k'})-j_l(2x_{k'})x_{k'}^2n_l'(x_{k'})\right]
+        \end{split}
+    \end{equation*}
+    I $k$ sono forniti quindi dal sistema di equazioni (risolvibile)
+    \begin{equation*}
+        \begin{cases}
+            Ax_kj_l(x_k)&=E\left[n_l(2x_{k'})x_{k'}j_l(x_{k'})-j_l(2x_{k'})x_{k'}n_l(x_{k'})\right]\\
+            Ax_k^2j_l'(x_k)&=E\left[n_l(2x_{k'})x_{k'}^2j_l'(x_{k'})-j_l(2x_{k'})x_{k'}^2n_l'(x_{k'})\right]
+        \end{cases}
+    \end{equation*}
+
 
     % \section*{Esercizio 2 (esame del 08/09/2017)}
         % Usando l'approssimazione di Born, calcolare la sezione d'urto differenziale e totale per la diffusione dal potenziale centrale
@@ -194,5 +249,76 @@
         %     \frac{d\sigma_k(\theta)}{d\Omega}=\left(\frac{m\pi R^2U_0}{\hbar^2}\right)^2\frac{e^{2\left\lvert q\right\rvert R}}{q^2}
         % \end{equation*}
 
+    \section*{Esercizio 1 (esame del 15/01/2018)}
+        Una particella di massa $m$ è confinata nello semispazio unidimensionale $x\geq0$ ed è soggetta al potenziale
+        \begin{equation*}
+            U(x)=\frac{\hbar^2}{m}\Omega\delta(x-a)
+        \end{equation*}
+        ove $a>0$ e $\Omega\neq0$ sono costanti con le dimensioni di una lunghezza ed una lunghezza inversa, rispettivamente. 
+        Trovare gli autovalori e le autofunzioni della energia.
+        \\
+        \\
+        Scriviamo subito l'equazione di Schroedinger
+        \begin{equation*}
+            \frac{d^2}{dx^2}\Phi+\left\{k^2+2\Omega\delta(x-a)\right\}\Phi=0
+        \end{equation*}
+        La soluzione generica è
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                A\sin(kx)+B\cos(kx)\quad 0<x<a\\
+                C\sin(kx)+D\cos(kx)\quad a<x
+            \end{cases}
+        \end{equation*}
+        Condizioni al bordo $\Phi(0)=0$ quindi $B=0$.
+        Imponiamo ora la continuità
+        \begin{equation*}
+            \begin{cases}
+                A\sin(ka)=C\sin(ka)+D\cos(ka)\\
+                Ck\cos(ka)-Dk\sin(ka)-Ak\cos(ka)=2\Omega A\sin(ka)
+            \end{cases}
+        \end{equation*}
+        Facendo qualche conto si ottiene
+        \begin{equation*}
+            \begin{cases}
+                A=C+D\cot(ka)\\
+                Ck-Dk\tan(ka)-Ak=2\Omega A\tan(ka)
+            \end{cases}
+        \end{equation*}
+        I $k_n$ sono definiti quindi dall'equazione
+        \begin{equation*}
+            \frac{Dk}{2\Omega}=-\frac{C\tan(ka)+D}{\tan(ka)+\cot(ka)}
+        \end{equation*}
+        e i livelli energetici sono dati da
+        \begin{equation*}
+            w_n=\frac{\hbar^2}{2m}k_n^2
+        \end{equation*}
+        La funzione d'onda è infine
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                \left[C+D\cot(ka)\right]\sin(kx)\quad 0<x<a\\
+                C\sin(kx)+D\cos(kx)\quad a<x
+            \end{cases}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 5,
+                    ymin = -2, ymax =2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$\Phi(x)$},]
+                    \addplot[
+                        domain = 0:1,
+                    ] {(1+cot(deg(1)))*sin(deg(x))};
+                    \addplot[
+                        domain = 1:5,
+                    ] {sin(deg(x))+cos(deg(x))};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
         
     \end{document}
