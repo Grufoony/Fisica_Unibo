@@ -30,7 +30,7 @@
         \\
         Scriviamo subito l'equazione di Schroedinger
         \begin{equation*}
-            \frac{d^2}{dx^2}\Phi+\left\{k^2-2\Omega\left[\delta(x-a)+\delta(x+a)\right]\right\}\Phi=0
+            \frac{d^2\Phi}{dx^2}+\left\{k^2-2\Omega\left[\delta(x-a)+\delta(x+a)\right]\right\}\Phi=0
         \end{equation*}
         La soluzione è nota
         \begin{equation*}
@@ -136,6 +136,91 @@
             \end{tikzpicture}
         \end{center}
         
+    \section*{Esercizio 1 (esame del 19/06/2017)}
+        Trovare gli autovalori e le auofunzioni dell'energia di una particelle unidimensionale confinata nell'intervallo $0\leq x\leq a$ e soggetta al potenziale
+        \begin{equation*}
+            U(x)=
+            \begin{cases}
+                0\quad\quad 0\leq x <\frac{a}{2}\\
+                U_0\quad\quad \frac{a}{2}\leq x \leq a
+            \end{cases}
+        \end{equation*}
+        ove $U_0\neq 0$ è una costante con le dimensioni dell'energia.
+        \\
+        Suggerimento: Non tentare di risolvere l'equazione trascendente degli autovalori.
+        \\
+        \\
+        Scriviamo subito l'equazione di Schroedinger
+        \begin{equation*}
+            \frac{d^2\Phi}{dx^2}+\left[k^2-\frac{2m}{\hbar^2}U(x)\right]\Phi=0
+        \end{equation*}
+        la cui soluzione generale è (con $k'^2=k^2-\frac{2m}{\hbar^2}U_0$)
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                A\sin(kx)+B\cos(kx)\quad 0\leq x <\frac{a}{2}\\
+                C\sin(k'x)+D\cos(k'x)\quad \frac{a}{2}\leq x \leq a
+            \end{cases}
+        \end{equation*}
+        e notiamo che $U_0<0$ è un caso analogo a $U_0>0$ specchiato per $x=\frac{a}{2}$, quindi tratteremo solo il secondo caso dato che il primo avrà la stessa soluzione.
+        Condizione al bordo $\Phi(0)=0$ che implica $B=0$.
+        Condizione al bordo $\Phi(a)=0$ che implica $C\sin(k'a)+D\cos(k'a)=0$.
+        Poniamo quindi
+        \begin{equation*}
+            \begin{cases}
+                C=E\cos(k'a)\\
+                D=-E\sin(k'a)
+            \end{cases}
+        \end{equation*}
+        e possiamo riscrivere la soluzione come
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                A\sin(kx)\quad 0\leq x <\frac{a}{2}\\
+                E\sin[k'(x-a)]\quad \frac{a}{2}\leq x \leq a
+            \end{cases}
+        \end{equation*}
+        Continuità della funzione (ponendo $x_k=\frac{ka}{2}$ e $x_{k'}=\frac{k'a}{2}$):
+        \begin{equation*}
+            A\sin(x_k)=-E\sin(x_{k'})
+        \end{equation*}
+        Continuità della derivata:
+        \begin{equation*}
+            Ax_k\cos(x_k)=Ex_{k'}\cos(x_{k'})
+        \end{equation*}
+        Dividendo la prima per la seconda si trova l'equazione agli autovalori
+        \begin{equation*}
+            \frac{\tan(x_k)}{x_k}=-\frac{\tan(x_{k'})}{x_{k'}}
+        \end{equation*}
+        che fornisce valori $k_n$ per lo spettro discreto $w_n=\frac{\hbar^2}{2m}k_n^2$, come previsto dal TSS.
+        La soluzione è quindi (con un $k_n$ qualsiasi)
+        \begin{equation*}
+            \Phi_n(x)=
+            \begin{cases}
+                -E\frac{\sin(x_{k_n'})}{\sin(x_{k_n})}\sin(k_nx)\quad 0\leq x <\frac{a}{2}\\
+                E\sin[k_n'(x-a)]\quad \frac{a}{2}\leq x \leq a
+            \end{cases}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 2.5,
+                    ymin = -1.5, ymax =1.5,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$\Phi(x)$},]
+                    \addplot[
+                        domain = 0:1.2,
+                    ] {-sin(deg(1.5*2.5/2))/sin(deg(3.5*2.5/2))*sin(deg(1.5*x))};
+                    \addplot[
+                        domain = 1.2:2.5,
+                    ] {sin(deg(3.5*(x-2.5)))};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
     \section*{Esercizio 1 (esame del 03/07/2017)}
     Una particlella è confinata in una regione sferica di raggio $R$ ed è soggetta ad un campo di forza centrale con potenziale
     \begin{equation*}
@@ -190,7 +275,6 @@
             Ax_k^2j_l'(x_k)&=E\left[n_l(2x_{k'})x_{k'}^2j_l'(x_{k'})-j_l(2x_{k'})x_{k'}^2n_l'(x_{k'})\right]
         \end{cases}
     \end{equation*}
-
 
     % \section*{Esercizio 2 (esame del 08/09/2017)}
         % Usando l'approssimazione di Born, calcolare la sezione d'urto differenziale e totale per la diffusione dal potenziale centrale
@@ -321,4 +405,65 @@
             \end{tikzpicture}
         \end{center}
         
+    \section*{Esercizio 2 (esame del 18/06/2019)}
+        Trovare le espressioni dei coefficienti di riflessione e trasmissione della barriera di potenziale unidimensionale
+        \begin{equation*}
+            U8x)=\frac{\hbar^2}{m}\Omega\left[\delta(x)-\delta(x-a)\right]
+        \end{equation*}
+        ove $a > 0$ e $\Omega > 0$ sono costanti con le dimensioni di una lunghezza ed una lunghezza inversa, rispettivamente.
+        \\
+        \\
+        Supponiamo una soluzione del tipo
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                e^{ikx}+r_ke^{-ikx} \quad\quad x<0\\
+                Ae^{ikx}+Be^{-ikx} \quad\quad 0<x<a\\
+                t_ke^{ik(x-a)} \quad\quad a<x
+            \end{cases}
+        \end{equation*}
+        Impongo la continuità della funzione
+        \begin{equation*}
+            \begin{split}
+                1+r_k&=A+B\\
+                Ae^{ika}+Be^{-ika}&=t_k
+            \end{split}
+        \end{equation*}
+        e la continuità della derivata prima
+        \begin{equation*}
+            \begin{split}
+                ik(A-B)-ik(1-r_k)&=2\Omega(1+r_k)\\
+                ikt_k-ik(Ae^{ika}-Be^{-ika})&=-2\Omega t_k
+            \end{split}
+        \end{equation*}
+        Usando le precedenti relazioni è possibile ricavare i coefficienti
+        \begin{equation*}
+            \begin{split}
+                r_k&=\frac{\Omega-ikB}{ik-\Omega}\\
+                t_k&=-ik\frac{B}{\Omega}e^{-ika}
+            \end{split}
+        \end{equation*}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 3,
+                    ymin = 0, ymax =1,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$k$},
+                    ylabel = {$R_k(blue)$, $T_k(red)$},]
+                    \addplot[
+                        domain = 0:3,
+                        color = blue,
+                    ] {(0.5^2+0.2^2*x^2)/(0.5^2+x^2)};
+                    \addplot[
+                        domain = 0:3,
+                        color = red,
+                    ] {(1-0.2^2)/(0.5^2+x^2)*x^2};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+
     \end{document}
