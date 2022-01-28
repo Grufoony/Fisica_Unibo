@@ -599,28 +599,28 @@
             \Phi(x)=
             \begin{cases}
                 A\sin(k'x)+B\cos(k'x) \quad\quad 0<x<a\\
-                Ce^{ikx}+De^{-ikx} \quad\quad a<x
+                Ce^{ik(x-a)}+De^{-ik(x-a)} \quad\quad a<x
             \end{cases}
         \end{equation*}
         La funzione deve annullarsi nell'origine, quindi $B=0$.
         Imponiamo ora la continuità della funzione
         \begin{equation*}
-            A\sin(k'a)=Ce^{ika}+De^{-ika}
+            A\sin(k'a)=C+D
         \end{equation*}
         e della derivata
         \begin{equation*}
-            ik(Ce^{ika}-De^{-ika})-Ak'\cos(k'a)=2\Omega A\sin(k'a)
+            ik(C-D)-Ak'\cos(k'a)=2\Omega A\sin(k'a)
         \end{equation*}
         Da cui si ricava l'equazione agli autovalori
         \begin{equation*}
-            ik\left[1-\frac{2D}{A}\frac{e^{-ika}}{\sin(k'a)}\right]-2\Omega=k'\cot(k'a)
+            ik\left[1-\frac{2D}{A}\frac{1}{\sin(k'a)}\right]-2\Omega=k'\cot(k'a)
         \end{equation*}
         che fornisce le soluzioni per lo spettro continuo $w\geq 0$.
         \begin{equation*}
             \Phi(x)=
             \begin{cases}
-                \frac{Ce^{ika}+De^{-ika}}{A\sin(k'a)}\sin(k'x) \quad\quad 0<x<a\\
-                Ce^{ikx}+De^{-ikx} \quad\quad a<x
+                \frac{C+D}{\sin(k'a)}\sin(k'x) \quad\quad 0<x<a\\
+                Ce^{ik(x-a)}+De^{-ik(x-a)} \quad\quad a<x
             \end{cases}
         \end{equation*}
         Poniamoci ora nel caso $w<0$, ossia quando $k=i\tilde{k}$.
@@ -632,8 +632,8 @@
         \begin{equation*}
             \Phi(x)=
             \begin{cases}
-                \frac{Ce^{ika}}{A\sin(k'a)}\sin(k'x) \quad\quad 0<x<a\\
-                Ce^{ikx} \quad\quad a<x
+                \frac{C}{\sin(k'a)}\sin(k'x) \quad\quad 0<x<a\\
+                Ce^{-\tilde{k}(x-a)} \quad\quad a<x
             \end{cases}
         \end{equation*}
 
