@@ -89,7 +89,7 @@
                 \sigma_\pm(x)\left[A^\pm e^{ik\left\lvert x\right\rvert }+B^\pm e^{-ik\left\lvert x\right\rvert }\right]\quad a<\left\lvert x\right\rvert
             \end{cases}
         \end{equation*}
-        Notiamo però che la funzione d'onda non può esplodere all'infinito, quindi necessariamente si avrà $A^\pm=0$ e, riscalando $B^\pm=B^\pm e^{ika}$
+        Notiamo però che lo spettro discreto si avrà per $w<0$, quindi $k=i\tilde{k}$, ma la funzione d'onda non può esplodere all'infinito, quindi necessariamente si avrà $A^\pm=0$ e, riscalando $B^\pm=B^\pm e^{ika}$
         \begin{equation*}
             \Phi^\pm(x)=
             \begin{cases}
@@ -122,7 +122,14 @@
                 \tanh(ika)=\frac{k}{2i\Omega+k}
             \end{cases}
         \end{equation}
-        Ogni equazione mi fornisce una soluzione quindi, posto $\tilde{k}=ik$, ho due soli livelli energetici corrispondenti ai valori di $\tilde{k}^\pm_0$.
+        Scrivendo il tutto in funzione di $\tilde{k}$
+        \begin{equation}
+            \begin{cases}
+                \tanh(\tilde{k}a)=\frac{2\Omega+\tilde{k}}{\tilde{k}}\\
+                \tanh(\tilde{k}a)=-\frac{\tilde{k}}{2\Omega+\tilde{k}}
+            \end{cases}
+        \end{equation}
+        Ogni equazione mi fornisce una soluzione unica quindi ho due soli livelli energetici corrispondenti ai valori di $\tilde{k}^\pm_0$.
         \begin{center}
             \begin{tikzpicture}
                 \begin{axis}[
