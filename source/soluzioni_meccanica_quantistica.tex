@@ -11,6 +11,7 @@
 \usepackage{caption}
 \usepackage{tikz-network}
 \usepackage{float}
+\usepackage{float}
  
 \pgfplotsset{compat = newest}
 
@@ -26,8 +27,39 @@
         \end{equation*}
         ove $a>0$ è la semidistanza dei due protoni pensati fissi e $\Omega>0$ ha le dimensioni di una lunghezza inversa.
         Trovare gli autovalori e le autofunzioni dell'energia dello spettro discreto.
-        \\
-        \\
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = -2, xmax = 2,
+                    ymin = -1.2, ymax =1.2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = -2:-1,
+                    ] {0};
+                    \draw[black,-stealth]
+                    (axis cs:-1,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,-1);
+                    \addplot[
+                        domain = -1:1,
+                    ] {0};
+                    \draw[black,-stealth]
+                    (axis cs:1,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,-1);
+                    \addplot[
+                        domain = 1:2,
+                    ] {0};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
         Scriviamo subito l'equazione di Schroedinger
         \begin{equation*}
             \frac{d^2\Phi}{dx^2}+\left\{k^2-2\Omega\left[\delta(x-a)+\delta(x+a)\right]\right\}\Phi=0
@@ -146,7 +178,31 @@
             \end{cases}
         \end{equation*}
         ove $U_0\neq 0$ è una costante con le dimensioni dell'energia.
-        \\
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 2,
+                    ymin = -1.2, ymax =1.2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = 1:2,
+                        color = blue,
+                    ] {1};
+                    \addplot[
+                        domain = 1:2,
+                        color = red,
+                    ] {-1};
+                    \addplot[
+                        domain = 0:1,
+                    ] {0};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
         Suggerimento: Non tentare di risolvere l'equazione trascendente degli autovalori.
         \\
         \\
@@ -162,7 +218,6 @@
                 C\sin(k'x)+D\cos(k'x)\quad \frac{a}{2}\leq x \leq a
             \end{cases}
         \end{equation*}
-        e notiamo che $U_0<0$ è un caso analogo a $U_0>0$ specchiato per $x=\frac{a}{2}$, quindi tratteremo solo il secondo caso dato che il primo avrà la stessa soluzione.
         Condizione al bordo $\Phi(0)=0$ che implica $B=0$.
         Condizione al bordo $\Phi(a)=0$ che implica $C\sin(k'a)+D\cos(k'a)=0$.
         Poniamo quindi
@@ -201,7 +256,8 @@
                 E\sin[k_n'(x-a)]\quad \frac{a}{2}\leq x \leq a
             \end{cases}
         \end{equation*}
-        \begin{center}
+        \begin{figure}[H]
+            \centering
             \begin{tikzpicture}
                 \begin{axis}[
                     xmin = 0, xmax = 2.5,
@@ -219,7 +275,14 @@
                     ] {sin(deg(3.5*(x-2.5)))};
                 \end{axis}
             \end{tikzpicture}
-        \end{center}
+        \end{figure}
+        Nel caso in cui si abbia $U_0<0$, $k'=i\tilde{k}'$ immaginario puro (con $\tilde{k}\in\mathbb{R}$) per $E+U_0<0$.
+        L'equazione agli autovalori diventa quindi
+        \begin{equation*}
+            \frac{\tan(x_k)}{x_k}=-\frac{\tanh(x_{\tilde{k}'})}{x_{\tilde{k}'}}
+        \end{equation*}
+        L'equazione è trascendente e possiamo ordinare le soluzioni $k_n$ anche in questo caso (spettro discreto non degenere).
+        In entrambi i casi si avrà uno spettro continuo non degenere per $E\pm U_0\geq 0$.
 
     \section*{Esercizio 1 (esame del 03/07/2017)}
     Una particlella è confinata in una regione sferica di raggio $R$ ed è soggetta ad un campo di forza centrale con potenziale
