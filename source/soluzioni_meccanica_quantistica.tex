@@ -403,8 +403,38 @@
         \end{equation*}
         ove $a>0$ e $\Omega\neq0$ sono costanti con le dimensioni di una lunghezza ed una lunghezza inversa, rispettivamente. 
         Trovare gli autovalori e le autofunzioni della energia.
-        \\
-        \\
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 4,
+                    ymin = -1.2, ymax =1.2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = 0:2,
+                        color = purple,
+                    ] {0};
+                    \draw[blue,-stealth]
+                    (axis cs:2,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,1);
+                    \draw[red,-stealth]
+                    (axis cs:2,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,-1);
+                    \addplot[
+                        domain = 2:4,
+                        color = purple,
+                    ] {0};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
         Scriviamo subito l'equazione di Schroedinger
         \begin{equation*}
             \frac{d^2}{dx^2}\Phi+\left\{k^2+2\Omega\delta(x-a)\right\}\Phi=0
@@ -414,64 +444,49 @@
             \Phi(x)=
             \begin{cases}
                 A\sin(kx)+B\cos(kx)\quad 0<x<a\\
-                C\sin(kx)+D\cos(kx)\quad a<x
+                Ce^{ikx}+De^{-ikx}\quad a<x
             \end{cases}
         \end{equation*}
         Condizioni al bordo $\Phi(0)=0$ quindi $B=0$.
         Imponiamo ora la continuità
         \begin{equation*}
             \begin{cases}
-                A\sin(ka)=C\sin(ka)+D\cos(ka)\\
-                Ck\cos(ka)-Dk\sin(ka)-Ak\cos(ka)=2\Omega A\sin(ka)
+                A\sin(ka)=Ce^{ika}+De^{-ika}\\
+                ik\left[Ce^{ika}-De^{-ika}\right]-Ak\cos(ka)=2\Omega A\sin(ka)
             \end{cases}
         \end{equation*}
-        Facendo qualche conto si ottiene
+        Facendo qualche conto si ottiene l'equazione agli autovalori ($\Omega>0$)
         \begin{equation*}
-            \begin{cases}
-                A=C+D\cot(ka)\\
-                Ck-Dk\tan(ka)-Ak=2\Omega A\tan(ka)
-            \end{cases}
+            k\left\{-\cot(ka)+i\left[1-\frac{2De^{-ika}}{A\sin(ka)}\right]\right\}=2\Omega
         \end{equation*}
-        I $k_n$ sono definiti quindi dall'equazione
-        \begin{equation*}
-            \frac{Dk}{2\Omega}=-\frac{C\tan(ka)+D}{\tan(ka)+\cot(ka)}
-        \end{equation*}
-        e i livelli energetici sono dati da
-        \begin{equation*}
-            w_n=\frac{\hbar^2}{2m}k_n^2
-        \end{equation*}
-        La funzione d'onda è infine
+        Che fornisce valori continui di $k$ come previsto dal TSS (spettro continuo non degenere).
         \begin{equation*}
             \Phi(x)=
             \begin{cases}
-                \left[C+D\cot(ka)\right]\sin(kx)\quad 0<x<a\\
-                C\sin(kx)+D\cos(kx)\quad a<x
+                \frac{Ce^{ika}+De^{-ika}}{\sin(ka)}\sin(kx)\quad 0<x<a\\
+                Ce^{ikx}+De^{-ikx}\quad a<x
             \end{cases}
         \end{equation*}
-        \begin{center}
-            \begin{tikzpicture}
-                \begin{axis}[
-                    xmin = 0, xmax = 5,
-                    ymin = -2, ymax =2,
-                    samples = 200,
-                    smooth,
-                    thick,
-                    xlabel = {$x$},
-                    ylabel = {$\Phi(x)$},]
-                    \addplot[
-                        domain = 0:1,
-                    ] {(1+cot(deg(1)))*sin(deg(x))};
-                    \addplot[
-                        domain = 1:5,
-                    ] {sin(deg(x))+cos(deg(x))};
-                \end{axis}
-            \end{tikzpicture}
-        \end{center}
+        Considerando ora il caso in cui $\Omega<0$ notiamo che è possibile avere $w<0$ quindi $k=i\tilde{k}$.
+        La funzione d'onda deve essere limitata all'infinito quindi necessariamente si deve avere $D=0$.
+        L'equazione agli autovalori diviene
+        \begin{equation*}
+            \tilde{k}\left[\coth(\tilde{k}a)+1\right]=-2\Omega
+        \end{equation*}
+        trascendente, che fornisce la serie di valori discreti $\tilde{k}_n$.
+        Lo spettro energetico in questo caso è discreto non degenere per $w<0$ e continuo non degenere altrimenti, come previsto dal TSS.
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                \frac{Ce^{ika}}{\sin(ka)}\sin(kx)\quad 0<x<a\\
+                Ce^{ikx}\quad a<x
+            \end{cases}
+        \end{equation*}
         
     \section*{Esercizio 2 (esame del 18/06/2019)}
         Trovare le espressioni dei coefficienti di riflessione e trasmissione della barriera di potenziale unidimensionale
         \begin{equation*}
-            U8x)=\frac{\hbar^2}{m}\Omega\left[\delta(x)-\delta(x-a)\right]
+            U(x)=\frac{\hbar^2}{m}\Omega\left[\delta(x)-\delta(x-a)\right]
         \end{equation*}
         ove $a > 0$ e $\Omega > 0$ sono costanti con le dimensioni di una lunghezza ed una lunghezza inversa, rispettivamente.
         \\
