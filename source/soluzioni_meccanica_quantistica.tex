@@ -550,5 +550,92 @@
             \end{tikzpicture}
         \end{center}
 
+    \section*{Esercizio 1 (esame del 08/01/2020)}
+        Trovare gli autovalori ed autofunzioni dell'energia di una particella confinata nella regione unidimensionale $0<x<\infty$ e soggetta al potenziale
+        \begin{equation*}
+            U(x)=\frac{\hbar^2}{m}\Omega\delta(x-a)+U_0(x)
+        \end{equation*}
+        con
+        \begin{equation*}
+            U_0(x)=
+            \begin{cases}
+                U_0 \quad\quad 0<x<a\\
+                0 \quad\quad a<x
+            \end{cases}
+        \end{equation*}
+        ove $a > 0$, $\Omega < 0$ and $U_0 < 0$ sono costanti con le dimensioni di una lunghezza, lunghezza inversa ed energia, rispettivamente.
+        Suggerimento: Non tentare di risolvere l'equazione trascendente degli autovalori.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 4,
+                    ymin = -1.2, ymax =1.2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = 0:2,
+                    ] {-0.8};
+                    \addplot[
+                        domain = 2:4,
+                    ] {0};
+                    \draw[black,-stealth]
+                    (axis cs:2,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,-1);
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
+        Scriviamo l'equazione di Schroedinger
+        \begin{equation*}
+            \frac{d^2\Phi}{dx^2}+\left(k^2-2\Omega\delta(x-a)-\frac{2m}{\hbar^2}U(x)\right)\Phi=0
+        \end{equation*}
+        e supponiamo una soluzione generale del tipo (con $k'^2=k^2-\frac{2m}{\hbar^2}U_0$)
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                A\sin(k'x)+B\cos(k'x) \quad\quad 0<x<a\\
+                Ce^{ikx}+De^{-ikx} \quad\quad a<x
+            \end{cases}
+        \end{equation*}
+        La funzione deve annullarsi nell'origine, quindi $B=0$.
+        Imponiamo ora la continuità della funzione
+        \begin{equation*}
+            A\sin(k'a)=Ce^{ika}+De^{-ika}
+        \end{equation*}
+        e della derivata
+        \begin{equation*}
+            ik(Ce^{ika}-De^{-ika})-Ak'\cos(k'a)=2\Omega A\sin(k'a)
+        \end{equation*}
+        Da cui si ricava l'equazione agli autovalori
+        \begin{equation*}
+            ik\left[1-\frac{2D}{A}\frac{e^{-ika}}{\sin(k'a)}\right]-2\Omega=k'\cot(k'a)
+        \end{equation*}
+        che fornisce le soluzioni per lo spettro continuo $w\geq 0$.
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                \frac{Ce^{ika}+De^{-ika}}{A\sin(k'a)}\sin(k'x) \quad\quad 0<x<a\\
+                Ce^{ikx}+De^{-ikx} \quad\quad a<x
+            \end{cases}
+        \end{equation*}
+        Poniamoci ora nel caso $w<0$, ossia quando $k=i\tilde{k}$.
+        L'equazione agli autovalori diventa
+        \begin{equation*}
+            k'\cot(k'a)=-2\Omega-\tilde{k}
+        \end{equation*}
+        che, essendo trascendente, fornisce soluzioni discrete $\tilde{k}_n$ come previsto dal TSS.
+        \begin{equation*}
+            \Phi(x)=
+            \begin{cases}
+                \frac{Ce^{ika}}{A\sin(k'a)}\sin(k'x) \quad\quad 0<x<a\\
+                Ce^{ikx} \quad\quad a<x
+            \end{cases}
+        \end{equation*}
+
 
     \end{document}
