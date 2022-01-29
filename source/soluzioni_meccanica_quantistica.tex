@@ -637,5 +637,66 @@
             \end{cases}
         \end{equation*}
 
+    \section*{Esercizio 1 (esame del 08/11/2019)}
+        Una particlella è soggetta ad un campo di forza centrale di tipo armonico
+        \begin{equation*}
+            U(r)=\frac{U_0}{2a^2}r^2
+        \end{equation*}
+        ove $U_0 > 0$ e $a$ sono costanti con le dimensioni di un'energia e una lunghezza, rispettivamente.
+        Calcolare gli autovalori e le autofunzioni dell'energia per il numero quantico orbitale $l = 0$.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 4,
+                    ymin = 0, ymax =4,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = 0.1:4,
+                    ] {0.5/(x^2)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
+        L'equazione di Schroedinger diventa
+        \begin{equation*}
+            \frac{d^2\chi}{dr^2}+\left(k^2-\frac{2m}{\hbar^2}\frac{U_0}{2a^2}r^2\right)\chi=0
+        \end{equation*}
+        conviene porre $l=\sqrt{\frac{\hbar a}{\sqrt{mU_0}}}$, $k^2l^2=2n+1$ e $x=\frac{r}{l}$ ottenendo
+        \begin{equation*}
+            \frac{d^2\chi}{dx^2}+(2n+1-x^2)\chi=0
+        \end{equation*}
+        Studiamo l'equazione asintotica per $x\to\infty$
+        \begin{equation*}
+            \frac{d^2\chi_{as}}{dx^2}-x^2\chi_{as}=0
+        \end{equation*}
+        che ha come soluzione
+        \begin{equation*}
+            \chi_{as}(x)\simeq e^{-\frac{x^2}{2}}
+        \end{equation*}
+        La soluzione generale sarà un'equazione del tipo
+        \begin{equation*}
+            \chi(x)\simeq e^{-\frac{x^2}{2}}H(x)
+        \end{equation*}
+        dove $H(x)$ è determinata dalla
+        \begin{equation*}
+            \frac{d^2H}{dx^2}-2x\frac{dH}{dx}+2nH=0
+        \end{equation*}
+        ed è quindi un polinomio di Hermite
+        \begin{equation*}
+            H_n(x)=(-1)^2e^{x^2}\frac{d^n}{dx^n}e^{-x^2}
+        \end{equation*}
+        Notiamo ora che la nostra funzione d'onda deve annullarsi in zero, quindi necessariamente si deve avere $n$ dispari.
+        Conviene ora riscalare $n\to 2n+1$ e scrivere le autofunzioni energetiche
+        \begin{equation*}
+            \chi(r)=Ae^{-\frac{r^2}{2l^2}}H_{2n+1}\left(\frac{r}{l}\right)
+        \end{equation*}
+        Gli autovalori dell'energia saranno quindi
+        \begin{equation*}
+            w_{2n+1}=\sqrt{\frac{U_0}{m}}\frac{\hbar}{a}\left(2n+\frac{3}{2}\right)
+        \end{equation*}
 
     \end{document}
