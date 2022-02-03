@@ -32,31 +32,25 @@
             \begin{tikzpicture}
                 \begin{axis}[
                     xmin = -2, xmax = 2,
-                    ymin = -1.2, ymax =1.2,
+                    ymin = -1.2, ymax = 1.2,
                     samples = 200,
                     smooth,
                     thick,
                     xlabel = {$x$},
                     ylabel = {$U(x)$},]
                     \addplot[
-                        domain = -2:-1,
+                        domain = -2:2,
                     ] {0};
                     \draw[black,-stealth]
                     (axis cs:-1,0)
                     -- % = line-to
                     ++ % = calculate a vector sum
                     (axis direction cs:0,-1);
-                    \addplot[
-                        domain = -1:1,
-                    ] {0};
                     \draw[black,-stealth]
                     (axis cs:1,0)
                     -- % = line-to
                     ++ % = calculate a vector sum
                     (axis direction cs:0,-1);
-                    \addplot[
-                        domain = 1:2,
-                    ] {0};
                 \end{axis}
             \end{tikzpicture}
         \end{figure}
@@ -89,6 +83,14 @@
                 \sigma_\pm(x)\left[A^\pm e^{ik\left\lvert x\right\rvert }+B^\pm e^{-ik\left\lvert x\right\rvert }\right]\quad a<\left\lvert x\right\rvert
             \end{cases}
         \end{equation*}
+        con
+        \begin{equation*}
+            \sigma_\pm(x)=
+            \begin{cases}
+                1\quad x>0\\
+                \pm 1\quad x<0
+            \end{cases}
+        \end{equation*}
         Notiamo però che lo spettro discreto si avrà per $w<0$, quindi $k=i\tilde{k}$, ma la funzione d'onda non può esplodere all'infinito, quindi necessariamente si avrà $A^\pm=0$ e, riscalando $B^\pm=B^\pm e^{ika}$
         \begin{equation*}
             \Phi^\pm(x)=
@@ -98,37 +100,37 @@
             \end{cases}
         \end{equation*}
         Ora imponiamo la continuità della funzione e della sua derivata 
-        \begin{equation}
+        \begin{equation*}
             \begin{cases}
                 \sigma_\pm(x)B^\pm=C^\pm \left(e^{ika}\pm e^{-ika}\right)\\
                 -\sigma_\pm(x)B^\pm-C^\pm \left(e^{ika}\mp e^{-ika}\right)=\frac{2i\Omega}{k}\sigma_\pm(x)B^\pm
             \end{cases}
-        \end{equation}
+        \end{equation*}
         Si può riscrivere il tutto nella forma
-        \begin{equation}
+        \begin{equation*}
             \begin{cases}
                 \sigma_\pm(x)B^\pm=C^\pm \left(e^{ika}\pm e^{-ika}\right)\\
                 \sigma_\pm(x)B^\pm\left(1+\frac{2i\Omega}{k}\right)=C^\pm \left(e^{-ika}\mp e^{ika}\right)
             \end{cases}
-        \end{equation}
+        \end{equation*}
         Dividendo la seconda per la prima si ottiene
         \begin{equation*}
             \frac{e^{-ika}\mp e^{ika}}{e^{ika}\pm e^{-ika}}=1+\frac{2i\Omega}{k}
         \end{equation*}
         Le soluzioni in k per le due parità sono
-        \begin{equation}
+        \begin{equation*}
             \begin{cases}
                 \tanh(ika)=-\frac{2i\Omega+k}{k}\\
                 \tanh(ika)=\frac{k}{2i\Omega+k}
             \end{cases}
-        \end{equation}
+        \end{equation*}
         Scrivendo il tutto in funzione di $\tilde{k}$
-        \begin{equation}
+        \begin{equation*}
             \begin{cases}
                 \tanh(\tilde{k}a)=\frac{2\Omega+\tilde{k}}{\tilde{k}}\\
                 \tanh(\tilde{k}a)=-\frac{\tilde{k}}{2\Omega+\tilde{k}}
             \end{cases}
-        \end{equation}
+        \end{equation*}
         Ogni equazione mi fornisce una soluzione unica quindi ho due soli livelli energetici corrispondenti ai valori di $\tilde{k}^\pm_0$.
         \begin{center}
             \begin{tikzpicture}
@@ -176,7 +178,7 @@
         \end{center}
         
     \section*{Esercizio 1 (esame del 19/06/2017)}
-        Trovare gli autovalori e le auofunzioni dell'energia di una particelle unidimensionale confinata nell'intervallo $0\leq x\leq a$ e soggetta al potenziale
+        Trovare gli autovalori e le autofunzioni dell'energia di una particelle unidimensionale confinata nell'intervallo $0\leq x\leq a$ e soggetta al potenziale
         \begin{equation*}
             U(x)=
             \begin{cases}
@@ -283,10 +285,10 @@
                 \end{axis}
             \end{tikzpicture}
         \end{figure}
-        Nel caso in cui si abbia $U_0<0$, $k'=i\tilde{k}'$ immaginario puro (con $\tilde{k}\in\mathbb{R}$) per $E+U_0<0$.
+        Nel caso in cui si abbia $U_0<0$, $k=i\tilde{k}$ immaginario puro (con $\tilde{k}\in\mathbb{R}$) per $w<0$.
         L'equazione agli autovalori diventa quindi
         \begin{equation*}
-            \frac{\tan(x_k)}{x_k}=-\frac{\tanh(x_{\tilde{k}'})}{x_{\tilde{k}'}}
+            \frac{\tan(x_{\tilde{k}})}{x_{\tilde{k}}}=-\frac{\tanh(x_{k'})}{x_{k'}}
         \end{equation*}
         L'equazione è trascendente e possiamo ordinare le soluzioni $k_n$ anche in questo caso (spettro discreto non degenere).
         In entrambi i casi si avrà uno spettro continuo non degenere per $E\pm U_0\geq 0$.
@@ -305,6 +307,7 @@
     Suggerimento: Derivare ma non tentare di risolvere l'equazione agli autovalori trascendente.
     \\
     \\
+    Per il TSS notiamo subito come tutto lo spettro energetico sia discreto non degenere.\\
     Scriviamo subito l'equazione di Schroedinger radiale
     \begin{equation*}
         \frac{d^2\chi}{dr^2}+\left[k^2-\frac{l(l-1)}{r^2}-\frac{2m}{\hbar^2}U(r)\right]\chi=0
@@ -323,7 +326,7 @@
     \begin{equation*}
         Ak\frac{R}{2}j_l(k\frac{R}{2})=Ck'\frac{R}{2}j_l(k'\frac{R}{2})+Dk'\frac{R}{2}n_l(k'\frac{R}{2})
     \end{equation*}
-    Ponendo $x_k=\frac{kR}{2}$, $x_{k'}=\frac{k'R}{2}$, $C=En_l(2x_{k'})$ e $D=-Ej_l(2x_{k'})$ si ottiene
+    Ponendo $x_k=\frac{kR}{2}$, $x_{k'}=\frac{k'R}{2}$, $C=En_l(2x_{k'})$ e $D=-Ej_l(2x_{k'})$ si ottengono le autofunzioni energetiche
     \begin{equation*}
         \chi(r)=
         \begin{cases}
@@ -338,70 +341,14 @@
             Ax_k^2j_l'(x_k)&=E\left[n_l(2x_{k'})x_{k'}^2j_l'(x_{k'})-j_l(2x_{k'})x_{k'}^2n_l'(x_{k'})\right]
         \end{split}
     \end{equation*}
-    I $k$ sono forniti quindi dal sistema di equazioni (risolvibile)
+    I $k_n$ sono forniti quindi dal sistema di equazioni (risolvibile)
     \begin{equation*}
         \begin{cases}
             Ax_kj_l(x_k)&=E\left[n_l(2x_{k'})x_{k'}j_l(x_{k'})-j_l(2x_{k'})x_{k'}n_l(x_{k'})\right]\\
             Ax_k^2j_l'(x_k)&=E\left[n_l(2x_{k'})x_{k'}^2j_l'(x_{k'})-j_l(2x_{k'})x_{k'}^2n_l'(x_{k'})\right]
         \end{cases}
     \end{equation*}
-
-    % \section*{Esercizio 2 (esame del 08/09/2017)}
-        % Usando l'approssimazione di Born, calcolare la sezione d'urto differenziale e totale per la diffusione dal potenziale centrale
-        % \begin{equation*}
-        %     U(r)=\frac{U_0}{1+\frac{r^2}{R^2}}
-        % \end{equation*}
-        % ove $U_0\neq 0$ e $R > 0$ sono costanti con le dimensioni di un'energia e di una lunghezza rispettivamente.
-        % \\
-        % \\
-        % Dalla teoria è nota la sezione d'urto differenziale
-        % \begin{equation*}
-        %     \frac{d\sigma_k(\theta)}{d\Omega}=\left(\frac{2m}{\hbar^2}\right)^2\left[\frac{1}{q}\int_0^\infty r\sin(qr)U(r)dr\right]^2
-        % \end{equation*}
-        % Risolviamo prima l'integrale ponendo $x=\frac{r}{R}$ e considerando $q>0$:
-        % \begin{equation*}
-        %     \begin{split}
-        %         \int_0^\infty r\sin(qr)U(r)dr&=\int_0^\infty \frac{Rx\sin(qRx)U_0}{1+x^2}Rdx=\\
-        %         &=R^2U_0\int_0^\infty \frac{x\sin(qRx)}{1+x^2}dx=\\
-        %         &=R^2U_0\Im \left\{\int_0^\infty \frac{xe^{iqRx}}{1+x^2}dx\right\}=\\
-        %         &=\frac{R^2U_0}{2}\Im \left\{\int_{-\infty}^\infty \frac{xe^{iqRx}}{1+x^2}dx\right\}=\\
-        %         &=\frac{R^2U_0}{2}\Im \left\{2\pi i\frac{ze^{iqRz}}{2z}|_{z=i}\right\}=\\
-        %         &=\frac{R^2U_0}{2}\Im \left\{\pi ie^{qR}\right\}=\\
-        %         &=\frac{\pi R^2U_0}{2}e^{qR}
-        %     \end{split}
-        % \end{equation*}
-        % \begin{center}
-        %     \begin{tikzpicture}
-        %         \begin{axis}[
-        %             xmin = -5, xmax = 5,
-        %             ymin = -5, ymax = 5,
-        %             samples = 200,
-        %             smooth,
-        %             thick,
-        %             xlabel = {$Re$},
-        %             ylabel = {$Im$},]
-        %             \draw [black,-stealth]
-        %             (-4,0)
-        %             -- % = line-to
-        %             ++ % = calculate a vector sum
-        %             (axis direction cs:8,0);
-                    
-        %             \draw [black] (1,0) circle [radius=2];
-
-        %             \addplot [only marks,mark=*]
-        %                 coordinates { (0,1) };
-        %                 % label = {$i$}
-        %         \end{axis}
-        %     \end{tikzpicture}
-        % \end{center}
-        % Considerando anche il caso in cui $q<0$ si nota facilmente come:
-        % \begin{equation*}
-        %     \int_0^\infty r\sin(qr)U(r)dr=\frac{\pi R^2U_0}{2}e^{\left\lvert q\right\rvert R}
-        % \end{equation*}
-        % Quindi la sezione d'urto differenziale diviene
-        % \begin{equation*}
-        %     \frac{d\sigma_k(\theta)}{d\Omega}=\left(\frac{m\pi R^2U_0}{\hbar^2}\right)^2\frac{e^{2\left\lvert q\right\rvert R}}{q^2}
-        % \end{equation*}
+    quindi gli autovalori dell'energia sono semplicemente $w_n=\frac{\hbar^2}{2m}k_n^2$.
 
     \section*{Esercizio 1 (esame del 15/01/2018)}
         Una particella di massa $m$ è confinata nello semispazio unidimensionale $x\geq0$ ed è soggetta al potenziale
@@ -480,15 +427,17 @@
         \begin{equation*}
             \tilde{k}\left[\coth(\tilde{k}a)+1\right]=-2\Omega
         \end{equation*}
-        trascendente, che fornisce la serie di valori discreti $\tilde{k}_n$.
-        Lo spettro energetico in questo caso è discreto non degenere per $w<0$ e continuo non degenere altrimenti, come previsto dal TSS.
+        trascendente, che fornisce l'unico valore discreto $\tilde{k}$.
+        Lo spettro energetico in questo caso è discreto non degenere per $w<0$ (con un unico livello) e continuo non degenere altrimenti, come previsto dal TSS.\\
+        L'autofunzione energetica nello spettro discreto è
         \begin{equation*}
-            \Phi(x)=
+            \Phi_{\tilde{k}}(x)=
             \begin{cases}
-                \frac{Ce^{ika}}{\sin(ka)}\sin(kx)\quad 0<x<a\\
-                Ce^{ikx}\quad a<x
+                \frac{Ce^{-\tilde{k}a}}{\sinh(\tilde{k}a)}\sinh(\tilde{k}x)\quad 0<x<a\\
+                Ce^{-\tilde{k}x}\quad a<x
             \end{cases}
         \end{equation*}
+        con corrispondente autovalore $w_{\tilde{k}}=\frac{\hbar^2}{2m}\tilde{k}^2$.
         
     \section*{Esercizio 2 (esame del 18/06/2019)}
         Trovare le espressioni dei coefficienti di riflessione e trasmissione della barriera di potenziale unidimensionale
@@ -496,8 +445,36 @@
             U(x)=\frac{\hbar^2}{m}\Omega\left[\delta(x)-\delta(x-a)\right]
         \end{equation*}
         ove $a > 0$ e $\Omega > 0$ sono costanti con le dimensioni di una lunghezza ed una lunghezza inversa, rispettivamente.
-        \\
-        \\
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = -1, xmax = 3,
+                    ymin = -1.2, ymax = 1.2,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = -1:3,
+                    ] {0};
+                    \draw[black,-stealth]
+                    (axis cs:0,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,1);
+                    \draw[black,-stealth]
+                    (axis cs:2,0)
+                    -- % = line-to
+                    ++ % = calculate a vector sum
+                    (axis direction cs:0,-1);
+                    \addplot[
+                        domain = 1:2,
+                    ] {0};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
         Supponiamo una soluzione del tipo
         \begin{equation*}
             \Phi(x)=
@@ -549,6 +526,68 @@
                 \end{axis}
             \end{tikzpicture}
         \end{center}
+
+    \section*{Esercizio 1 (esame del 08/11/2019)}
+        Una particlella è soggetta ad un campo di forza centrale di tipo armonico
+        \begin{equation*}
+            U(r)=\frac{U_0}{2a^2}r^2
+        \end{equation*}
+        ove $U_0 > 0$ e $a$ sono costanti con le dimensioni di un'energia e una lunghezza, rispettivamente.
+        Calcolare gli autovalori e le autofunzioni dell'energia per il numero quantico orbitale $l = 0$.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = 0, xmax = 4,
+                    ymin = 0, ymax =4,
+                    samples = 200,
+                    smooth,
+                    thick,
+                    xlabel = {$x$},
+                    ylabel = {$U(x)$},]
+                    \addplot[
+                        domain = 0.1:4,
+                    ] {0.5/(x^2)};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
+        L'equazione di Schroedinger diventa
+        \begin{equation*}
+            \frac{d^2\chi}{dr^2}+\left(k^2-\frac{2m}{\hbar^2}\frac{U_0}{2a^2}r^2\right)\chi=0
+        \end{equation*}
+        conviene porre $l=\sqrt{\frac{\hbar a}{\sqrt{mU_0}}}$, $k^2l^2=2n+1$ e $x=\frac{r}{l}$ ottenendo
+        \begin{equation*}
+            \frac{d^2\chi}{dx^2}+(2n+1-x^2)\chi=0
+        \end{equation*}
+        Studiamo l'equazione asintotica per $x\to\infty$
+        \begin{equation*}
+            \frac{d^2\chi_{as}}{dx^2}-x^2\chi_{as}=0
+        \end{equation*}
+        che ha come soluzione
+        \begin{equation*}
+            \chi_{as}(x)\simeq e^{-\frac{x^2}{2}}
+        \end{equation*}
+        La soluzione generale sarà un'equazione del tipo
+        \begin{equation*}
+            \chi(x)\simeq e^{-\frac{x^2}{2}}H(x)
+        \end{equation*}
+        dove $H(x)$ è determinata dalla
+        \begin{equation*}
+            \frac{d^2H}{dx^2}-2x\frac{dH}{dx}+2nH=0
+        \end{equation*}
+        ed è quindi un polinomio di Hermite
+        \begin{equation*}
+            H_n(x)=(-1)^2e^{x^2}\frac{d^n}{dx^n}e^{-x^2}
+        \end{equation*}
+        Notiamo ora che la nostra funzione d'onda deve annullarsi in zero, quindi necessariamente si deve avere $n$ dispari.
+        Conviene ora riscalare $n\to 2n+1$ e scrivere le autofunzioni energetiche
+        \begin{equation*}
+            \chi(r)=Ae^{-\frac{r^2}{2l^2}}H_{2n+1}\left(\frac{r}{l}\right)
+        \end{equation*}
+        Gli autovalori dell'energia saranno quindi
+        \begin{equation*}
+            w_{2n+1}=\sqrt{\frac{U_0}{m}}\frac{\hbar}{a}\left(2n+\frac{3}{2}\right)
+        \end{equation*}
 
     \section*{Esercizio 1 (esame del 08/01/2020)}
         Trovare gli autovalori ed autofunzioni dell'energia di una particella confinata nella regione unidimensionale $0<x<\infty$ e soggetta al potenziale
@@ -637,66 +676,62 @@
             \end{cases}
         \end{equation*}
 
-    \section*{Esercizio 1 (esame del 08/11/2019)}
-        Una particlella è soggetta ad un campo di forza centrale di tipo armonico
+    \section*{Esercizio 1 (esame del 14/01/2022)}
+        Una particella è confinata in un intervallo spaziale di raggio $R$ ed è soggetta ad un campo di forza centrale con potenziale
         \begin{equation*}
-            U(r)=\frac{U_0}{2a^2}r^2
+            U(r)=\frac{\hbar^2}{m}\Omega\delta(r-\frac{R}{2})
         \end{equation*}
-        ove $U_0 > 0$ e $a$ sono costanti con le dimensioni di un'energia e una lunghezza, rispettivamente.
-        Calcolare gli autovalori e le autofunzioni dell'energia per il numero quantico orbitale $l = 0$.
-        \begin{figure}[H]
-            \centering
-            \begin{tikzpicture}
-                \begin{axis}[
-                    xmin = 0, xmax = 4,
-                    ymin = 0, ymax =4,
-                    samples = 200,
-                    smooth,
-                    thick,
-                    xlabel = {$x$},
-                    ylabel = {$U(x)$},]
-                    \addplot[
-                        domain = 0.1:4,
-                    ] {0.5/(x^2)};
-                \end{axis}
-            \end{tikzpicture}
-        \end{figure}
-        L'equazione di Schroedinger diventa
+        dove $\Omega\neq 0$ è una costante con le dimensioni di una lunghezza inversa.
+        Calcolare gli autovalori e le autofunzioni dell'energia della particella.
+        \\
+        \\
+        Equazione di Schroedinger
         \begin{equation*}
-            \frac{d^2\chi}{dr^2}+\left(k^2-\frac{2m}{\hbar^2}\frac{U_0}{2a^2}r^2\right)\chi=0
+            \frac{d^2\chi}{dr^2}+\left(k^2-\frac{l(l+1)}{r^2}-2\Omega\delta(r-R)\right)\chi=0
         \end{equation*}
-        conviene porre $l=\sqrt{\frac{\hbar a}{\sqrt{mU_0}}}$, $k^2l^2=2n+1$ e $x=\frac{r}{l}$ ottenendo
+        con soluzione generica
         \begin{equation*}
-            \frac{d^2\chi}{dx^2}+(2n+1-x^2)\chi=0
+            \chi(r)=
+            \begin{cases}
+                Akrj_l(kr)+Bkrn_l(kr)\quad\quad 0\leq r<\frac{R}{2}\\
+                Ckrj_l(kr)+Dkrn_l(kr)\quad\quad \frac{R}{2}<r\leq R
+            \end{cases}
         \end{equation*}
-        Studiamo l'equazione asintotica per $x\to\infty$
+        Poniamo ora $x=\frac{kR}{2}$.
+        Condizione al contorno $\chi(0)=0$ implica $B=0$.
+        Condizione al contorno $\chi(R)=0$ implica $Cj_l(2x)+Dn_l(2x)=0$.
+        Poniamo quindi
         \begin{equation*}
-            \frac{d^2\chi_{as}}{dx^2}-x^2\chi_{as}=0
+            \begin{cases}
+                C=En_l(2x)\\
+                D=-Ej_l(2x)
+            \end{cases}
         \end{equation*}
-        che ha come soluzione
+        e la funzione diventa
         \begin{equation*}
-            \chi_{as}(x)\simeq e^{-\frac{x^2}{2}}
+            \chi(r)=
+            \begin{cases}
+                Akrj_l(kr)\quad\quad 0\leq r<\frac{R}{2}\\
+                Ekr\left[n_l(2x)j_l(kr)-j_l(2x)n_l(kr)\right]\quad\quad \frac{R}{2}<r\leq R
+            \end{cases}
         \end{equation*}
-        La soluzione generale sarà un'equazione del tipo
+        Continuità della funzione:
         \begin{equation*}
-            \chi(x)\simeq e^{-\frac{x^2}{2}}H(x)
+            Aj_l(x)=E\left[n_l(2x)j_l(x)-j_l(2x)n_l(x)\right]
         \end{equation*}
-        dove $H(x)$ è determinata dalla
+        Continuità della derivata:
         \begin{equation*}
-            \frac{d^2H}{dx^2}-2x\frac{dH}{dx}+2nH=0
+            Ex\left[n_l(2x)j_l'(x)-j_l(2x)n_l'(x)\right]-Ax\left[j_l'(x)\right]=2\Omega Aj_l(x)
         \end{equation*}
-        ed è quindi un polinomio di Hermite
+        Si ottiene quindi il sistema risolvibile
         \begin{equation*}
-            H_n(x)=(-1)^2e^{x^2}\frac{d^n}{dx^n}e^{-x^2}
+            \begin{cases}
+                Aj_l(x)&=E\left[n_l(2x)j_l(x)-j_l(2x)n_l(x)\right]\\
+                A\left[2\Omega Aj_l(x)+xj_l'(x)\right]&=Ex\left[n_l(2x)j_l'(x)-j_l(2x)n_l'(x)\right]
+            \end{cases}
         \end{equation*}
-        Notiamo ora che la nostra funzione d'onda deve annullarsi in zero, quindi necessariamente si deve avere $n$ dispari.
-        Conviene ora riscalare $n\to 2n+1$ e scrivere le autofunzioni energetiche
-        \begin{equation*}
-            \chi(r)=Ae^{-\frac{r^2}{2l^2}}H_{2n+1}\left(\frac{r}{l}\right)
-        \end{equation*}
-        Gli autovalori dell'energia saranno quindi
-        \begin{equation*}
-            w_{2n+1}=\sqrt{\frac{U_0}{m}}\frac{\hbar}{a}\left(2n+\frac{3}{2}\right)
-        \end{equation*}
+        che fornisce soluzioni $k_n$ ordinate per lo spettro energetico discreto ad autovalori $w_n=\frac{\hbar^2}{2m}k_n^2$.
+
+
 
     \end{document}
