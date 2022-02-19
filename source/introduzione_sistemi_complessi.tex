@@ -71,8 +71,8 @@
 			\begin{definition}
 				\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro, chiamati agenti.
 			\end{definition}
-			Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia ssi studiano prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
-			Un'osservazione importante che va effettuata è che un sistema complesso \textbf{prevede}, non descrive.
+			Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia si studiano prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
+			Un'osservazione importante che va effettuata è che un modello di sistema complesso \textbf{prevede}, non descrive.
 			\begin{definition}
 				Lo spazio degli stati dinamici del sistema è detto spazio delle fasi.
 			\end{definition}
@@ -109,7 +109,7 @@
 			\begin{theorem}
 				$\lambda=\lim_{\delta\to0,t\to\infty}\frac{1}{t}\ln\left\lVert \Phi^{t}(x+\delta)-\Phi^{t}(x) \right\rVert$
 			\end{theorem}
-			Nonostante il calcolo precedente possa spaventare, nella maggior parte dei casi si può utilizzare l'approssimazione $\lambda\simeq\frac{1}{t}\sum_{k}\ln\frac{\delta_{k}}{\delta_{0}}$, dove $k$ indicizza una traslazione temporale $\Delta t$. 
+			Nonostante il limite precendente appaia complicato, nella maggior parte dei casi è possibile utilizzare l'approssimazione $\lambda\simeq\frac{1}{t}\sum_{k}\ln\frac{\delta_{k}}{\delta_{0}}$, dove $k$ indicizza una traslazione temporale $\Delta t$. 
 			Per comprendere i limiti dell'approssimazione precedente si può notare come $\delta_{0}e^{\lambda t}=o(1)$, quindi $\ln\delta_{0}+\lambda t=0$.
 			\begin{definition}
 				$t=-\frac{\ln\delta_{0}}{\lambda}$ tempo di predittività del modello	
@@ -123,7 +123,7 @@
 			\end{itemize}
 			Non è possibile conoscere a priori il segno di $\lambda$.
 			Il \emph{caos deterministico}, ovviamente, si ottiene solo se $\lambda>0$ (l'esponenziale esplode) in un insieme a misura finita.
-			Ne consegue che le orbite debbano espandersi rimanendo limitate, fenomeno noto come \emph{stretching-folding}, e quindi la conservazione di una misura (volume).
+			Ne consegue che le orbite debbano espandersi rimanendo limitate, fenomeno noto come \emph{stretching-folding}, che comporta la conservazione di una misura (volume).
 			\begin{theorem}
 				di Poincarè (del ritorno)
 				\\Un sistema dinamico che conserva i volumi su un compatto ritorna arbitrariamente vicino alle condizioni iniziali (feedback negativo).
@@ -165,7 +165,7 @@
 			\\
 			Si possono distinguere due tipologie di modelli, le quali verranno ora analizzate.
 			\subsection{Modelli ad agente}
-				La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno stduio di tipo bottom-up (dal particolare al generale).
+				La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno studio di tipo bottom-up (dal particolare al generale).
 				Assunzione fondamentale è di avere piena conoscenza sui comportamenti dei singoli agenti e sull'ambiente in cui questi si relazionano.
 				Una volta \emph{formalizzati} matematicamente i comportamenti dei singoli è possibile procedere con una \emph{simulazione}, la quale fornirà una possibile evoluzione del sistema.
 				È essenziale notare come in questo caso il risultato ottenuto sia solamente uno dei tanti possibili: bisognerà quindi effettuare la simulazione numerose volte e mediare sui risultati ottenuti.
@@ -190,7 +190,7 @@
 				Ovviamente, più tempo si farà evolvere il sistema, più rilevante sarà l'effetto delle fluttuazioni e meno preciso sarà il risultato della previsione.
 
 		\section{Distribuzioni}
-		Per l'analisi matematica dei sistemi è utile definire le funzioni di distribuzione, le quali sono indicatori della frequenza di evvnimento di un fenomeno.
+		Per l'analisi matematica dei sistemi è utile definire le funzioni di distribuzione, le quali sono indicatori della frequenza di avvnimento di un fenomeno.
 		\begin{definition}
 			Gaussiana\\$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
 		\end{definition}
