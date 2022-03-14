@@ -278,6 +278,66 @@
 		\end{theorem}
 
 		\section{Esempi}
+			\subsection{Automa cellulare}
+				Un sistema che vuole simulare l'evoluzione di una popolazione in spazi e tempi discreti è detto automa cellulare.
+				Si vuole ora creare un automa cellulare con le seguenti caratteristiche:
+				\begin{itemize}
+					\item effetto di \textbf{riproduzione}: consiste in un aumento del numero di individui che si riflette nell'espansione esponenziale del sistema (effetto comune in natura purchè le risorse siano sufficienti), ossia
+						\begin{equation*}
+							\Delta n(t) \propto n(t)
+						\end{equation*}
+					\item effetto di \textbf{competizione}: limita la crescita della popolazione.
+						Un individuo compete coi suoi simili, quindi il contributo competitivo sarà del tipo
+						\begin{equation*}
+							\Delta n(t) \propto -n^2(t)
+						\end{equation*}
+				\end{itemize}
+				Assunzione fondamentale di questo modello è che ogni individuo possa incontrare tutti quegli altri, irrealistico in quanto in una rete sociale la probabilità di incontri varierebbe da individuo a individuo.
+				In un modello continuo si avrebbe
+				\begin{equation*}
+					n\left(t+\Delta t\right)=n(t)+\left(an(t)-bn^2(t)\right)\Delta t
+				\end{equation*}
+				dove $\Delta t$ rappresenta il tempo in cui la popolazione evolve (teoria del campo medio), $a$ è il tasso di riproduzione e $b$ il tasso di incontri, questi ultimi assunti costanti.
+				Nel limite $\Delta t\to 0$ si ottiene l'\emph{equazione logistica}
+				\begin{equation}
+					\dot{n}(t)=an(t)\left(1-\frac{b}{a}n(t)\right)
+					\label{equation:equazione_logistica}
+				\end{equation}
+				che altro non è che la rappresentazione continua della \emph{mappa logistica}
+				\begin{equation}
+					x_{n+1}=rx_{n}\left(1-x_n\right)
+					\label{equation:mappa_logistica}
+				\end{equation}
+				ossia la rappresentazione dinamica non lineare più semplice che degenera in un moto caotico, resa pubblica nel 1976 dal biologo Robert May.\\
+				La stabilità del sistema si ha ovviamente per $n=\frac{b}{a}$ e la soluzione analitica del problema diventa
+				\begin{equation*}
+					n(t)=\frac{an_{0}}{\left(a-bn_{0}\right)e^{-at}+bn_{0}}
+				\end{equation*}
+				riscrivibile nella forma di \emph{funzione logistica}
+				\begin{equation}
+					f(t)=\tanh\frac{t}{2}
+					\label{equation:funzione_logistica}
+				\end{equation}
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}
+						\begin{axis}[
+							xmin = -7, xmax = 7,
+							ymin = -1.1, ymax = 1.1,
+							samples = 200,
+							smooth,
+							thick,
+							xlabel = {$t$},
+							ylabel = {$f(t)$},]
+							\addplot[
+								domain = -7:7,
+							] {tanh(x/2)};
+						\end{axis}
+					\end{tikzpicture}
+					\caption{\emph{Funzione logistica.}}
+					\label{figure:funzione_logistica}
+				\end{figure}
+				Si può osservare come i limiti $f(t)=\pm 1$ rappresnetino due stati fissi mentre la zona centrale sia di transizione, quindi per $f(t)=0$ si avrà la massima variazione.
 			\subsection{Random Walk 1D}
 				Il modello più basilare di sistema complesso è sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
 				Sia $p=\frac{1}{2}$ la probabilità di muoversi verso destra (quindi anche a sinistra) di un passo $\Delta x$. Si hanno:
@@ -637,8 +697,6 @@
 				\end{itemize}
 	
 	\chapter{Entropia e Informazione} %CAPITOLO 2
-		
-		
 		\section{Probabilità}
 			Data una distribuzione di probabilità $\rho(x)$ normalizzata (integrale sul dominio uguale a $1$) è possibile procedere con le seguenti definizioni:
 			\begin{definition} Probabilità:\\
@@ -1021,6 +1079,63 @@
 			Il dispositivo che gestisce il sistema dinamico è detto \emph{controllore} e va selezionato accuratamente in base alle richieste del sistema da gestire.
 			Formalmente il controllo viene immesso nel sistema attraverso una forzante che, aggiunta alla lagrangiana, permette lo studio e l'ottimizzazione del problema.
 			Per maggiori informazioni sulla meccanica analitica è possibile consultare gli appunti delle lezioni al link \url{https://github.com/Grufoony/Fisica_UNIBO/blob/main/Appunti_meccanica_analitica.pdf}.
+		
+		\section{Applicazioni biologiche}
+			Si supponga ora di voler studiare un sistema biologico quale, ad esempio, il cuore umano.
+			\begin{figure}[H]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin = 0, xmax = 20,
+						ymin = -3, ymax = 3,
+						samples = 200,
+						smooth,
+						thick,
+						xlabel = {$t$},
+						ylabel = {$V(t)$},]
+						\addplot[
+							domain = 0:20,
+						] {sin(2*deg(x+pi))-2*sin(deg(x+pi))};
+					\end{axis}
+				\end{tikzpicture}
+				\caption{\emph{Stilizzazione del battito cardiaco.}}
+				\label{figure:battito_cardiaco}
+			\end{figure}
+			Il battito cardiaco stilizzato in Fig \ref*{figure:battito_cardiaco} suggerisce un modello in cui:
+			\begin{itemize}
+				\item il sistema abbia un equilibrio (al quale ritorna periodicamente)
+				\item esiste una soglia trigger di un'onda 
+			\end{itemize}
+			L'idea è ridurre la cellula cardiaca ad un sistema complesso a due variabile, $x$ per la lunghezza della fibra e $b$ per lo stimolo elettrochimico da associare ad essa (controllo elettrico).
+			Il modello di Zeeman è rappresentato dal sistema
+			\begin{equation}
+				\begin{cases}
+					\epsilon\frac{dx}{dt}=&-\left(x^3-Tx+b\right)\\
+					\frac{db}{dt}=&x-x_{0}
+				\end{cases}
+			\end{equation}
+			in cui la prima equazione ricorda l'equazione logistica (Eq. \ref*{equation:equazione_logistica}).
+			Il fattore infinitesimo $\epsilon$ garantisce una scala di evoluzione rapida.
+			\begin{figure}[H]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-3, xmax=3,
+						ymin=-3, ymax=3,
+						thick,
+						]
+						\draw[black] \pgfextra{
+						\pgfpathellipse{\pgfplotspointaxisxy{0}{0}}
+						{\pgfplotspointaxisdirectionxy{0}{2}}
+						{\pgfplotspointaxisdirectionxy{1}{-1}}
+						};
+						\addplot [only marks,mark=*] coordinates { (-0.6,2.2) };
+						\addplot [only marks,mark=*] coordinates { (0.6,-2.2) };
+						\end{axis}
+				\end{tikzpicture}
+				\caption{\emph{Schema del battito cardiaco.}}
+				\label{figure:schema_battito_cardiaco}
+			\end{figure}
 
 		\section{Esempi}
 			\subsection{Pendolo rovesciato}
