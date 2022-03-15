@@ -1101,7 +1101,7 @@
 				\caption{\emph{Stilizzazione del battito cardiaco.}}
 				\label{figure:battito_cardiaco}
 			\end{figure}
-			Il battito cardiaco stilizzato in Fig \ref*{figure:battito_cardiaco} suggerisce un modello in cui:
+			Il battito cardiaco stilizzato in Fig \ref{figure:battito_cardiaco} suggerisce un modello in cui:
 			\begin{itemize}
 				\item il sistema abbia un equilibrio (al quale ritorna periodicamente)
 				\item esiste una soglia trigger di un'onda 
@@ -1114,8 +1114,31 @@
 					\frac{db}{dt}=&x-x_{0}
 				\end{cases}
 			\end{equation}
-			in cui la prima equazione ricorda l'equazione logistica (Eq. \ref*{equation:equazione_logistica}).
+			in cui la prima equazione ricorda l'equazione logistica (Eq. \ref{equation:equazione_logistica}).
 			Il fattore infinitesimo $\epsilon$ garantisce una scala di evoluzione rapida.
+			\begin{figure}[H]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin = -5, xmax = 5,
+						ymin = -5, ymax = 5,
+						samples = 200,
+						smooth,
+						thick,
+						xlabel = {$x$},
+						ylabel = {$b$},]
+						\addplot[domain = -5:5] {-x^3+3*x};
+						\addplot [only marks,mark=*,nodes near coords=A] coordinates { (-1,-2) };
+						\addplot [only marks,mark=*,nodes near coords=B] coordinates { (1,2) };
+						\end{axis}
+				\end{tikzpicture}
+				\caption{\emph{Nullclina.}}
+				\label{figure:nullcline}
+			\end{figure}
+			L'equilibrio stabile si ha sulla \emph{nullclina} $\frac{dx}{dt}=0$, quindi per $x=x_{0}$ e $b=-x^3+Tx$, il cui grafico è riportato in Fig. \ref{figure:nullcline}
+			I punti $A$ e $B$ sono ovviamente i punti critici del sistema: la parte di curva compresa tra i due punti non è esplorabile in quanto da $B$ è solo possibile ricadere sul ramo di $A$ e viceversa.
+			Questa è l'\emph{idea della catastrofe} di Zeeman, ove per $A<b<B$ perdo l'invertibilità del sistema.
+			Se si è in presenza di uno stimolo ad onda quadra che riesce a spostare il sistema oltre il punto $B$ (facendolo quindi ricadere su $A$) si ha la contrazione (sistole e diastole, vedi Fig. \ref{figure:sistole_diastole})
 			\begin{figure}[H]
 				\centering
 				\begin{tikzpicture}
@@ -1129,13 +1152,58 @@
 						{\pgfplotspointaxisdirectionxy{0}{2}}
 						{\pgfplotspointaxisdirectionxy{1}{-1}}
 						};
-						\addplot [only marks,mark=*] coordinates { (-0.6,2.2) };
-						\addplot [only marks,mark=*] coordinates { (0.6,-2.2) };
+						\addplot [only marks,mark=*,nodes near coords=A] coordinates { (-0.6,2.2) };
+						\addplot [only marks,mark=*,nodes near coords=B] coordinates { (0.6,-2.2) };
 						\end{axis}
 				\end{tikzpicture}
-				\caption{\emph{Schema del battito cardiaco.}}
-				\label{figure:schema_battito_cardiaco}
+				\caption{\emph{Sistole ($A\to B$) e disatole ($B\to A$).}}
+				\label{figure:sistole_diastole}
 			\end{figure}
+			Volendo ora dimostrare formalmente la stabilità del punto di equilibrio $(x_0,b_0)$ è conveniente lavorare in un intorno di esso:
+			\begin{equation*}
+				\begin{split}
+					\Delta x =& x-x_0\\
+					\Delta b =& b-b_0\\
+				\end{split}
+			\end{equation*}
+			Linearizzando il sistema
+			\begin{equation*}
+				\begin{cases}
+					\epsilon\frac{d\Delta x}{dt}=&-\left(3x_0^2-T\right)\Delta x-\Delta b\\
+					\frac{d\Delta b}{dt}=&\Delta x
+				\end{cases}
+			\end{equation*}
+			ei ottiene la matrice
+			\begin{equation*}
+				\left(
+				\begin{matrix}
+					\frac{\left(-3x_0^2+T\right)}{\epsilon} & -\frac{1}{\epsilon}\\
+					1 & 0 
+				\end{matrix}
+				\right)
+			\end{equation*}
+			con determinante $\frac{1}{\epsilon}>0$.
+			Data la presenza di un quadrato la stabilità non dipenderà dal segno di $x_0$ quanto dal suo modulo.
+			Il determinante positivo implica autovalori entrambi positivi o entrambi negativi: si avranno autovalori positivi, quindi un punto instabile, se la traccia è positiva e viceversa.
+			Si assuma ora di voler introdurre una funzione periodica $x^+(t)$ di periodo sufficiente per effettuare il ``salto''.
+			\begin{equation*}
+				\begin{cases}
+					\epsilon\frac{dx}{dt}=&-\left(x^3-Tx+b\right)\\
+					\frac{db}{dt}=&x-x^+(t)
+				\end{cases}
+			\end{equation*}
+			Ora è possibile accoppiare due cellule cardiache come segue
+			\begin{equation*}
+				\begin{cases}
+					\epsilon\frac{dx}{dt}=&-\left(x^3-Tx+b\right)\\
+					\frac{db}{dt}=&x-y\\
+					\epsilon\frac{dy}{dt}=&-\left(y^3-Ty+b'\right)\\
+					\frac{db'}{dt}=&y-x
+				\end{cases}
+			\end{equation*}
+			con $x(0)\simeq x_0$ e $y(0)\simeq x_1$ punti di equilibrio.
+			Per fare in modo che il sistema sostenga l'onda (senza il bisogno di uno stimolo esterno) è necessario un accoppiamento in controfase, ossia quando la cellula $x$ è in contrazione la $y$ è in dilatazione e viceversa.
+			Creando una catena di questi oggetti è possibile quindi generare un fenomeno d'onda.
 
 		\section{Esempi}
 			\subsection{Pendolo rovesciato}
@@ -1357,7 +1425,52 @@
 						In questo caso si lascia andare la relazione senza apportare sufficiente sforzo poi, ad un passo dalla rottura, si rimedia il tutto con un gesto importante (alto costo) per ristabilire l'orbita.
 				\end{itemize}
 				In entrambi i casi bisogna, tuttavia, prestare parecchia attenzione una volta raggiunti i minimi: se lungo la $\gamma_{A}$ si fa una litigata troppo pesante o lungo la $\gamma_{B}$ si trascura troppo la relazione, si rischia di finire fuori orbita (quindi fuori equilibrio) e far così fallire la relazione (il che è \emph{no buono}, n.d.r.).
-
+			\subsection{Modello di Fitzhugh-Nagumo}
+				Un'altra applicazione biologica è rappresentata dal modello per il neurone di Fitzhugh-Nagumo, basato sull'oscillatore di Var der Pol.
+				Definite $x$ potenziale di membrana e $w$ la corrente, il modello consiste nelle equazioni differenziali:
+				\begin{equation}
+					\begin{cases}
+						\frac{dx}{dt}=&-\frac{x^3}{3}+x-w+I\\
+						\frac{dw}{dt}=&\frac{1}{\tau}\left(x-bw+a\right)
+					\end{cases}
+					\label{equation:fitzhugh_nagumo}
+				\end{equation}
+				con $\frac{1}{\tau}<<1$ in modo da avere $x$ variabile veloce e $w$ lenta.
+				Anche in questo caso si ottiene una nullclina simile a quella rappresentata in Fig. \ref{figure:nullcline}.\\
+				La stabilità all'equilibrio è data da:
+				\begin{equation*}
+					\begin{cases}
+						w=&-\frac{x^3}{3}+x+I\\
+						w=&\frac{x+a}{b}
+					\end{cases}
+				\end{equation*}
+				Si può verificare come esiste (e sia unico) un punto di equilibrio stabile $P$ quindi, assumendo di aver trovato la risoluzione al sistema, è possibile linearizzare il campo
+				\begin{equation*}
+					\begin{cases}
+						\delta\dot{x}=&\left(1-x_P^2\right)\delta x - \delta w\\
+						\delta\dot{w}=&\frac{1}{\tau}\delta x -\frac{b}{\tau}\delta w
+					\end{cases}
+				\end{equation*}
+				riscrivibile come matrice
+				\begin{equation*}
+					\left(
+					\begin{matrix}
+						1-x_P^2 & -1\\
+						\frac{1}{\tau} & -\frac{n}{\tau}
+					\end{matrix}
+					\right)
+				\end{equation*}
+				che ha determinante $-\frac{b}{\tau}\left(1-x_P^2\right)+\frac{1}{\tau}$.
+				La stabilità si ha per un modulo sufficientemente grande di $x_P$ (anche se $x_P\to 0$ al crescere di $I$) mentre l'instabilità si ha per $b<1$.
+				Lo stimolo è rappresentato da una variazione della $I$ che, se abbastanza rapida, permette di percorrere la nullclina.\\
+				Il sistema è non caotico ma con derivate di ordine diverso (Stiff).
+				Si assuma $I(t)=\Delta x\delta(t)$, allora $x(0^+)=x_0+\Delta x$ se $x(0^-)=x_0$, quindi se $\Delta x$ supera una determinata soglia si ha una grande fluttuazione.
+				Per $(x,w)$ abbastanza grandi è possibile definire la funzione di Ljapunov
+				\begin{equation}
+					H=\frac{1}{2}\left(w^2+\frac{x^2}{\tau}\right)
+				\end{equation}
+				costante che rappresenta un'ellisse.
+				La derivata della funzione di Ljapunov è negativa quindi la dinamica non è espansiva e il sistema non può esplodere: si arriva così ad una \emph{biforcazione di Hopf}, ossia si parte da una situazione attrattiva rispetto al punto fisso e, passando attraverso una situazione repulsiva (grazie ad un parametro) si arriva ad un ciclo limite, quale traiettoria periodica di un attrattore dinamico.
 
 	\chapter{Altre applicazioni} %CAPITOLO 5
 		\section{Fisica e biologia}
