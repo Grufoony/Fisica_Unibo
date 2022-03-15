@@ -1473,9 +1473,29 @@
 				La derivata della funzione di Ljapunov è negativa quindi la dinamica non è espansiva e il sistema non può esplodere: si arriva così ad una \emph{biforcazione di Hopf}, ossia si parte da una situazione attrattiva rispetto al punto fisso e, passando attraverso una situazione repulsiva (grazie ad un parametro) si arriva ad un ciclo limite, quale traiettoria periodica di un attrattore dinamico.
 
 	\chapter{Altre applicazioni} %CAPITOLO 5
-		\section{Fisica e biologia}
-
 		\section{Fisica della città}
+			Un'applicazione interessante dei sistemi complessi riguarda l'ambito urbano (e sociale).
+			Uno dei primi problemi affrontati storicamente è il problema del traffico.
+			Tante auto si muovono su un network, ognuna delle quali tende a mantenere una velocità ottimale in base alla macchina che la precede: questa dinamica viola la terza legge di Newton in quanto non è detto che la macchina che sta dietro influenzi quella davanti.
+			Le \emph{onde di traffico} si vengono a creare a causa dei tempi di reazione degli automobilisti (mai istantanei).
+			Nonostante la creazione di queste onde, il flusso di auto sulla strada rimane costante.\\
+			Osservando dati sperimentali riguardanti le velocità si nota un appiattimento ad alte densità della curva, dunque il tutto satura ad una velocità media fissa.
+			Posto $j$ come indice di un veicolo, un modello stile Newton obbedisce a:
+			\begin{equation}
+				\begin{cases}
+					\dot{s}_j=&v_j\\
+					\dot{v}_j=&-\beta\left(v_j-v_{opt}\left(s_{j-1}-s_j\right)\right)
+				\end{cases}
+				\label{equation:traffic}
+			\end{equation}
+			La geometria del sistema è fondamentale, in quanto descrive come esso smorzi/sostenga le oscillazioni delle sorgenti.
+			In autostrada, ad esempio, le congestioni si hanno nei punti di immissione, poi si propagano come onde solitone.
+			Sperimentalmente è possibile osservare come aumentando il numero di auto presenti su una strada il flusso stesso aumenti fino ad arrivare ad una situazione di instabilità: esiste quindi un valore critico di densità superato il quale il flusso inizia a diminuire e il sistema non riesce più a rispondere al flusso immesso.
+			Vi è inoltre un'alta sensibilità alle fluttuazioni, in quanto ogni persona guida in modo differente, la cui ampiezza aumenta con la densità seguendo un regime poissoniano (maggiore il valore medio maggiori le fluttuazioni).
+			Per arrivare al flusso ottimale bisogna diminuire la fluttuazioni, quindi \emph{raffreddare} il sistema (auto a guida autonoma).\\
+			Una proposta di Tom Tom utilizza la velocità media come osservabile macroscopico: la velocità media delle auto in città è tuttavia molto bassa, a causa delle soste forzate, mentre la mobilità ciclistica risulta decisamente più alta.
+
+
 
 		\section{Esempi}
 
