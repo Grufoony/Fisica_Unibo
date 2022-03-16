@@ -63,8 +63,9 @@
 		% Information
 		% =================
 		{}
-		Berselli Gregorio \quad Lanzi Samuele
-		\\\url{https://github.com/Grufoony/Fisica_UNIBO}
+		Berselli Gregorio \quad Lanzi Samuele\\
+		Matteo Berbieri \quad Gabriele Farnè\\
+		\url{https://github.com/Grufoony/Fisica_UNIBO}
 		\vfill
 	\end{titlepage}
 	\tableofcontents
@@ -1494,10 +1495,86 @@
 			Vi è inoltre un'alta sensibilità alle fluttuazioni, in quanto ogni persona guida in modo differente, la cui ampiezza aumenta con la densità seguendo un regime poissoniano (maggiore il valore medio maggiori le fluttuazioni).
 			Per arrivare al flusso ottimale bisogna diminuire la fluttuazioni, quindi \emph{raffreddare} il sistema (auto a guida autonoma).\\
 			Una proposta di Tom Tom utilizza la velocità media come osservabile macroscopico: la velocità media delle auto in città è tuttavia molto bassa, a causa delle soste forzate, mentre la mobilità ciclistica risulta decisamente più alta.
-
-
+			\subsection{Modelli di traffico}
+				Si consideri ora un network in cui ogni nodo è o sorgente o destinazione (tipico di aeroporti e stazioni ferroviarie).
+				Senza considerare la dinamica del singolo veicolo, si assuma poi che ogni link riesca a trasportare, quindi che abbia capacità infinita (cosa non assumibile nel caso delle automobili).
+				Cosa accade agli incroci?\\
+				Se si assumono nodi a capacità finita allora la congestione si ha quando un nodo diminuisce la capacità di creare trasporto.
+				Sia $n_i$ il numero di agenti presenti nel nodo $i$.
+				Una volta fornito un peso al link la domanda di mobilità dipenderà da $n$ e dal flusso tra i nodi $i$ e $j$.
+				Si può calcolare la probabilità di transizione $i\to j$ come $\pi_{ij}n_i$: questa risulta proporzionale al numero di agenti, quindi maggiore è $n_i$ maggiore è la probabilità che questi si allontanino dal nodo $i$.
+				Fisicamente questo ricorda un reticolo cristallino con elettroni ai nodi: un elettrone può transire da un nodo ad un altro solo se la destinazione è vuota.\\
+				Fondamentale ora introdurre una legge di continuità (ossia una corrente), in quanto un nodo non può trasmettere oltre la sua popolazione:
+				\begin{equation}
+					\sum_j\pi_{ij}=d_i<1
+				\end{equation}
+				dove $d_i$ indica la capacità di trasmissione (numero di agenti in uscita).
+				Si richiede dunque che i flussi siano sempre positivi e che il numero di particelle sia conservato.\\
+				Si assuma ora che la velocità di percorrenza sia dipendente dal numero di agenti presenti, quindi
+				\begin{equation*}
+					\dot{n}_i=\sum_j\pi_{ij}n_j-d_in_i=-L\sum_jL_{ji}n_j
+				\end{equation*}
+				dove $L_{ji}=d_j\delta_{ji}-\pi_{ji}$ è una matrice laplaciana.
+				Le matrici laplaciane possiedono le seguenti proprietà:
+				\begin{itemize}
+					\item $L_{ji}<0$ se $j\neq i$
+					\item $\sum_iL_{ji}=0$
+					\item $L_{jj}>0$
+				\end{itemize}
+				Si nota facilmente come nella matrice laplaciana gli elementi sulla diagonale principale descrivano la capacità di trasporto del sistema, mentre gli elementi esterni alla diagonale descrivano i link.
+				Le matrici laplaciane rappresentano di fatto leggi di bilancio di massa, ossia descrivono la mobilitazione da un punto ad un altro del network.\\
+				Un sistema di questo tende a rilassare ad un equilibrio: aumentando il numero di agenti in un nodo aumenterà anche la sua capacità di farne uscire.
+				Un sistema lineare infatti è insensibile al numero di particelle inserito ma è sensibile a un flusso in entrata variabile: in questo caso il sistema non può rilassare e la sua soluzione dipende dalla velocità di variazione del flusso in entrata.\\
+				La terza proprietà della matrice laplaciana garantisce l'integrale del moto
+				\begin{equation*}
+					\sum_in_i=N
+				\end{equation*}
+				mentre la seconda garantisce che tutti gli autovalori (eccetto uno che è di certo nullo) siano positivi.
+				La dinamica risulta attrattiva verso lo stato di equilibrio, situato evidentemente nel primo quadrante.
+				Le proprietà spettrali forniscono il tempo impiegato dal sistema per rilassare.\\
+				In generale, si può imporre la congestione con $\pi_{ij}=\pi_{ij}(n_i)$.
+				Un risultato simile è ottenibile anche utilizzando la funzione logistica, vedi eq. \ref{equation:funzione_logistica}, utiizzandola come funzione che lega il numero di particelle al peso: all'aumentare di $n$ il peso deve ridursi.
+				In questo caso la congestione non si avrà inizialmente ma si creerà rapidamente dopo un certo lasso di tempo.\\
+				La congestione in un nodo si propaga facilmente anche ai nodi adiacenti: è dunque possibile creare effetti a cascata che si ripercuotano sul network intero, creando così una dinamica all'indietro.\\
+				Per un sistema non lineare a molti gradi di libertà il carico determina la dinamica, quindi il parametro di controllo è il numero di agenti caricato nel sistema.
+				\begin{equation*}
+					\begin{split}
+						\dot{n}_i=\sum_j\pi_{ij}(n_i)n_j-\sum_j\pi_{ij}(n_j)n_i\\
+						\sum_in_i=N
+					\end{split}
+				\end{equation*}
+				I problemi di un tale sistema sono:
+				\begin{itemize}
+					\item studiarne gli stati di equilibrio, il cui numero aumenta con le dimensioni
+					\item studiare cosa accade per fluttuazioni (ossia $N=N(t)$)
+					\item studiare network $\pi_{ij}$ differenti per evitare le congestioni
+					\item ottimizzare il flusso totale $\Phi=\sum_{ij}\pi(n_{i})n_j$
+				\end{itemize}
+				Tuttavia, per modificare i pesi è necessario trovare dei parametri di controllo, cosa per niente banale.\\
+				Spesso una congestione non può essere evitata quindi si tende a gestirla, ossia si cerca di riportare la rete in una situazione di trasporto.\\
+				Nel caso lineare la soluzione stazionaria è semplicemente il vettore che indica quanti agenti porre nei vari nodi $\vec{n}=(n_1,\ldots,n_N)$ che soddisfi la condizione
+				\begin{equation*}
+					\dot{n}=-Ln
+				\end{equation*}
+				Le fluttuazioni sono inseribili nel sistema sotto forma di random walk, aggiungendo un parametro temperatura.
+				Scelto un passo temporale, la transizione $i\to j$ avrà probabilità $\pi_{ij}\Delta t$ di avvenire.
+				La probabilità di non muoversi in una determinata direzione è data da $1-\sum_j\pi_{ij}\Delta t$.
+				Il passo $\Delta t$ diventa quindi il tempo di evoluzione del sistema (tipicamente piccolo): imporre la linearità rispetto ad esso evita processi non regolari (stocastici).\\
+				Una volta trovato l'autovalore nullo $L\bar{n}=0$, la probabilità di trovare la rete in un determinato stato è data da
+				\begin{equation}
+					P(\vec{n})=\frac{\bar{n}_1^{n_1}\ldots\bar{n}_M^{n_M}}{n_1!\ldots n_M!}M!
+				\end{equation}
 
 		\section{Esempi}
+			\subsection{Optimal Velocity Model}
+				L'OVM è un modello ad agente basato sulle seuguenti equazioni differenziali:
+				\begin{equation}
+					\begin{cases}
+						\dot{x}_i(t)=v_{opt}\left(x_{i+1}(t-\tau)-x_i(t-\tau)\right)\\
+						\ddot{x}_i(t)=-\frac{1}{\tau}\left(\dot{x}_i(t)-v_{opt}(x_{i+1}(t)-x_i(t))\right)
+					\end{cases}
+				\end{equation}
+				dove la seconda equazione deriva da $\dot{x}_i(t+\tau)=\dot{x}_i(t)+\ddot{x}_i(t)\tau+o(\tau^2)$.
 
 
 	% \section{Networks e problemi di trasporto}
