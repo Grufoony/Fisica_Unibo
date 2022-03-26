@@ -22,6 +22,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{pgfplots}
+\usetikzlibrary{intersections}
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{tikz-network}
@@ -1064,7 +1065,259 @@
 					\end{tikzpicture}
 					\caption{}
 			\end{figure}
-		
+
+		\section{Reti neurali di Hopfield}
+			Il problema alla base del modello di Hopfield consiste nel far memorizzare al network un insieme di $p$ patterns $\xi_i^\mu$ in modo tale che se presento un nuovo stato $\zeta_i$ il network mi restituisce il pattern che più si avvicina a $\zeta_i$. Etichettiamo
+			ogni pattern con l'indice $\mu = \{ 1, \dots, p\}$ e le unità del network (neuroni) con l'indice $i=\{1, \dots, N \}$.
+			\begin{definition}(Distanza di Hamming)
+			La distanza di Hamming tra due pattern rappresenta il numero di bit che li differenzia tra loro.
+			\begin{equation*}
+				d = \frac{N}{2} - \frac{1}{2} \sum_i \xi_i \xi_i^\prime
+			\end{equation*}
+			\end{definition}
+			\subsection{La Dinamica Deterministica}
+				Denotiamo lo stato dei neuroni con $S_i=\pm 1$ ($+1$ se il neurone è attivo e $-1$ se è inattivo). La dinamica discreta del network si pu\'o scrivere come
+				\begin{equation}
+					S_i(t) = sign \left( \sum_j w_{ij} S_j(t-1)\right) 
+				\end{equation}
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[scale=0.8]
+					\begin{axis}[
+						width  = 8cm,
+						height = 6cm,
+						axis y line*=center,
+						axis x line*=center, 
+						grid=both
+					]
+					\addplot [
+						domain=0:10,
+						color=blue,
+					] {1};
+					\addplot [
+						domain=-10:0,
+						color=blue,
+					] {-1};
+					\addplot +[mark=none, color = blue] coordinates {(0, -1) (0, 1)};
+					\end{axis}
+					\node at (6.5,2.5) {$x$};
+					\node at (2.3,4.5) {$sign(x)$};
+					\end{tikzpicture}
+					\caption{\textit{La funzione $sign(x)$}}
+				\end{figure}
+				con $\Delta t = 1$. La matrice $w_{ij}$ è la matrice dei pesi delle connessioni  tra neuroni $i\rightarrow j$ ed ha le proprietà di essere una matrice simmetrica ($w_{ij}=w_{ji}$) ed avere gli elementi sulla diagonale tutti nulli ($w_{ii}=0$).
+				Per questo tipo di dinamica i pattern memorizzati risultano essere degli attrattori Fig. 6.
+				\begin{figure}
+					\centering
+					\tikzset{every picture/.style={line width=0.75pt}}
+					\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.7,xscale=0.7]
+					\draw   (151,86.4) .. controls (151,69.61) and (164.61,56) .. (181.4,56) -- (412.6,56) .. controls (429.39,56) and (443,69.61) .. (443,86.4) -- (443,177.6) .. controls (443,194.39) and (429.39,208) .. (412.6,208) -- (181.4,208) .. controls (164.61,208) and (151,194.39) .. (151,177.6) -- cycle ;
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (297,132) -- (296.67,208.67) ;
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (431.45,65.12) -- (297,132) ;
+					\draw  [dash pattern={on 0.84pt off 2.51pt}]  (162.45,64.12) -- (297,132) ;
+					\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (206.33,168.5) .. controls (206.33,167.67) and (205.66,167) .. (204.83,167) .. controls (204,167) and (203.33,167.67) .. (203.33,168.5) .. controls (203.33,169.33) and (204,170) .. (204.83,170) .. controls (205.66,170) and (206.33,169.33) .. (206.33,168.5) -- cycle ;
+					\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (297.33,85.5) .. controls (297.33,84.67) and (296.66,84) .. (295.83,84) .. controls (295,84) and (294.33,84.67) .. (294.33,85.5) .. controls (294.33,86.33) and (295,87) .. (295.83,87) .. controls (296.66,87) and (297.33,86.33) .. (297.33,85.5) -- cycle ;
+					\draw[<-]    (308,88.27) .. controls (337,98.27) and (342,72.27) .. (387,68.27) ;
+					\draw[->]    (201,71.27) .. controls (233,95.27) and (260,72.27) .. (286,80.27) ;
+					\draw[<-]    (301,93.27) .. controls (316,108.27) and (336,110.27) .. (358,94.27) ;
+					\draw[->]    (237,91.27) .. controls (270,112.27) and (269,87.27) .. (288,89.27) ;
+					\draw[<-]    (304.3,78.66) .. controls (321.3,78.66) and (321.3,61.66) .. (342.3,64.66) ;
+					\draw[<-]    (213.3,175.66) .. controls (245.3,199.66) and (258.61,196.06) .. (285.3,184.66) ;
+					\draw[->]    (164.3,114.66) .. controls (166.3,122.66) and (172.3,142.66) .. (196.3,164.66) ;
+					\draw[<-]    (205.3,177.66) .. controls (202.3,200.66) and (168.3,189.66) .. (159.3,160.66) ;
+					\draw[->]    (177.3,87.66) .. controls (189.3,108.66) and (213.3,108.66) .. (206.3,159.66) ;
+					\draw[->]    (266.3,127.66) .. controls (229.3,129.66) and (248.3,168.66) .. (215.3,166.66) ;
+					\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (387.01,169.47) .. controls (387.01,168.64) and (387.71,167.97) .. (388.58,167.97) .. controls (389.45,167.97) and (390.15,168.64) .. (390.15,169.46) .. controls (390.16,170.29) and (389.45,170.96) .. (388.59,170.97) .. controls (387.72,170.97) and (387.01,170.3) .. (387.01,169.47) -- cycle ;
+					\draw[<-]    (379.72,176.65) .. controls (346.24,200.71) and (332.3,197.13) .. (304.3,185.78) ;
+					\draw[->]    (430.94,115.55) .. controls (428.86,123.56) and (422.61,143.57) .. (397.51,165.61) ;
+					\draw[<-]    (388.11,178.63) .. controls (391.3,201.62) and (426.9,190.56) .. (436.27,161.54) ;
+					\draw[->]   (417.26,88.58) .. controls (404.73,109.6) and (379.59,109.65) .. (387.02,160.63) ;
+					\draw[->]    (324.1,128.75) .. controls (362.87,130.68) and (343.04,169.71) .. (377.61,167.65) ;
+					\draw (207.3,185.66) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\xi_i^2$};
+					\draw (375.3,183.66) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\xi_i^3$};
+					\draw (288.3,98.66) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\xi_i^1$};
+					\end{tikzpicture}
+					\caption{\textit{Schema dello spazio delle configurazioni con tre attrattori (patterns memorizzati)}}
+				\end{figure}
+				
+				Per motivare la scelta dei pesi delle connessioni consideriamo un caso semplice in cui abbiamo soltanto un pattern. La condizione per la quale il pattern risulta stabile è
+				\begin{equation}
+					sign \left( \sum_i w_{ij} \xi_j\right) = \xi_i \quad \quad \forall i
+				\end{equation} 
+				che risulta essere vera se definiamo la matrice dei pesi come segue
+				\begin{equation}
+					w_{ij} = \frac{1}{N} \xi_i\xi_j
+				\end{equation}
+				infatti $\xi_j^2=1$.
+				Ne deriva che se considero uno stato di rete $S_i$ che differisce di qualche bit dal pattern che ho inzialmente mostrato al network, lo stato evolverà con la dinamica in equazione (3.1) e rilasserà a $\xi_i$.
+				Tuttavia esiste un altro stato attrattivo: lo stato opposto ($-\xi_i$).\\
+				Il discorso pu\'o essere esteso anche al caso molti pattern? In tal caso possiamo ridefinire la matrice dei pesi come sovrapposizione delle matrici associate ad ogni pattern
+				\begin{equation}
+					w_{ij} = \frac{1}{N} \sum_{\mu = 1}^{p} \xi_{i}^{\mu} \xi_{j}^{\mu}
+				\end{equation} questa è spesso chiamata {\bf regola di Hebb}.
+				Esaminiamo la stabilità di un particolare pattern, la condizione di stabilità generalizzata risulta
+
+				\begin{equation}
+					S_{i}^\prime = sign \left( \sum_{j}w_{ij} S_{j} \right)= sign \left( \frac{1}{N}\sum_{j} \sum_{\mu}\xi_{i}^{\mu}\xi_{j}^{\mu}S_{j} \right)
+				\end{equation} %dividiamo questa somma in due pezzi
+				imponiamo $S_j = \xi_j^\nu$
+				\begin{equation}
+					sign\left[ \frac{1}{N}\sum_\mu \xi_i^\mu \left( \sum_j \xi_j^\mu \xi_j^\nu\right) \right] = \xi_i^\nu \Longleftrightarrow \xi_j^\mu \xi_j^\nu = \delta_\mu^\nu
+				\end{equation} 
+				cioè i patterns devono soddisfare alla condizione di ortogonalità e sotto questa condizione si ha che la distanza di Hamming è massima.
+				Cosa succede se i pattern memorizzati non sono tutti ortogonali tra loro?
+				Consideriamo la quantità
+				\begin{equation}
+					C_i^\nu \equiv -\xi^\nu_i \left( \frac{1}{N} \sum_j \sum_{\mu \neq \nu} \xi_i^\mu \xi_j^\mu \xi_i^\nu \right)
+				\end{equation}
+				l'espressione tra parentesi la chiamiamo termine di crosstak. Se $C_i^\nu$ \'e negativo allora il termine di crosstalk ha lo stesso segno di $\xi^\nu_i$ quidi non abbiamo un cambiamento dello stato, al contrario se $C_i^\nu>0$ abbiamo un flip dello stato del nodo. Ipotizziamo che i pattern siano variabili casuali a media nulla e varianza  unitaria, quindi \'e possibile applicare il teorema del limite centrale e $\sum_{\mu \neq \nu} \xi_i^\mu \xi_j^\mu \xi_i^\nu \rightarrow z$ \'e una variabile gaussiana Fig. (\ref{figure::gauss_hopfield}):
+				\begin{itemize}
+					\item $\left \langle z \right \rangle =0$
+					\item $\left \langle z^2 \right \rangle =Np$
+					\item Allora $\frac{z}{N}$ ha varianza $\sigma = \frac{p}{N}$
+				\end{itemize}
+				\'e anche possibile stimare la probabilit\'a di errore come
+				\begin{equation}
+					P_{error}\{ C_i^\mu > 1\} \simeq \frac{1}{\sqrt{2 \pi} \sigma} \int_1^\infty e^{-\frac{z^2}{2\sigma^2}} dz = \frac{1}{2} \left( 1 - erf\left\{ \sqrt{\frac{N}{2p}}\right\} \right)
+				\end{equation}
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[scale=0.8]
+					\begin{axis}[
+						width  = 8cm,
+						height = 6cm,
+						axis y line*=center,
+						axis x line*=center, 
+						grid=both
+					]
+					\addplot [
+						name path = f,
+						domain=-2:2,
+						color=blue,
+					] {(6 / (2 * 3.14))^0.5 * e^(-3 * x^2)};
+					% \addplot +[mark=none, color = blue] coordinates {(0, -1) (0, 1)};
+					\end{axis}
+					\node at (6,0.8) {$C_i^\nu$};
+					\node at (2.3,4.5) {$P(C_i^\nu)$};
+					\end{tikzpicture}
+					\caption{\textit{La distribuzione gaussiana dei valori del termine di crosstalk dato da $p$ patterns e $N$ unit\'a.}}
+					\label{figure::gauss_hopfield}
+				\end{figure}
+
+			\subsection{La Funzione Energia}
+				\begin{figure}
+				\centering
+				\begin{tikzpicture}[scale = 1.3]
+				\begin{axis}[
+					hide axis,
+					colormap/cool,
+				]
+				\addplot3[
+					mesh,
+					samples=40,
+					domain=-2:4,
+				]
+				{sin(deg(pi*x))* exp(-(y-2)^2) 
+					+ exp(-(x)^2 
+						- (y)^2 - x*(y-1.2))};
+				%\addlegendentry{\(\frac{sin(r)}{r}\)}
+				\end{axis}
+				\end{tikzpicture}
+				\caption{\textit{Un esempio di landscape energetico.}}
+				\label{figure:landscape_energia}
+				\end{figure}
+				Introduciamo anche qui il concetto di funzione energia o hamiltoniana del sistema per analogia con il Modello di Ising, trattato nelle sezioni precedenti. Facendo quindi riferimento all'equazione (1.4):
+				\begin{equation}
+					\mathcal{H} = -\frac{1}{2}\sum_{i,j}w_{ij}S_iS_j
+				\end{equation}
+				un esempio di possibile landscape energetico può essere immaginato come in Fig. (\ref{figure:landscape_energia}).
+				La proprietà principale dell'hamiltoniana (3.9) è quella di essere sempre decrescente (o costante) se il sistema evolve secondo la dinamica deterministica.
+				\'E facile verificare questa affermazione: prendiamo $S^\prime_{i}$ un nuovo valore di $S_i$ 
+				\begin{equation}
+					S^\prime_i=sign \left( \sum_j w_{ij} S_j\right)
+				\end{equation} 
+				se $S^\prime_i = S_i$ l'energia rimane immutata mentre, negli altri casi $S^\prime_i = -S_i$ scegliamo un termine che coinvolge $S_i$ 
+				\begin{equation}
+					\begin{split}
+						\mathcal{H^\prime} - \mathcal{H} &= -\sum_{i\neq j} w_{ij} S^\prime_i S_j + \sum_{j\neq i} w_{ij} S_i S_j \\
+														&= 2S_i \sum_{j\neq i} w_{ij} S_j \\
+														&= 2S_i\sum_{j}w_{ij} S_j -2w_{ii}
+					\end{split}
+				\end{equation} 
+				i due termini risultano essere entrambi negativi.
+
+				\subsubsection{Stati Spuri}
+					Abbiamo mostrato che la regola di Hebb ci fornisce un sistema dinamico discreto che possiede degli attrattori ricercabili anche attraverso i minimi locali della funzione energia.
+					Non abbiamo però mostrato che questi attrattori sono gli unici. Infatti, per ogni attrattore $\xi_i^\mu$ esiste anche l'{\bf inverso}, anch'esso attrattore $-\xi_i^\mu$.
+					È possibile mostrare che esistono degli stati stabili detti {\bf stati misti} $\xi_i^{\text{mix}}$ che non coincidono con nessun pattern ma rappresentano una combinazione lineare di un numero dispari di essi, nel caso più semplice:
+					\begin{equation}
+						\xi_i^{\text{mix}} = sign(\pm \xi_i^{\mu_1} \pm \xi_i^{\mu_2} \pm \xi_i^{\mu_3})
+					\end{equation}
+					Esiste anche un altro tipo di stati stabili che si verificano quando $p$ è abbastanza grande rispetto ad $N$, questi stati non sono correlati in alcun modo con altri patten memorizati e sono chiamati {\bf stati vetro di spin}.
+					Questi ultimi due tipi di stati sono detti stati spuri.
+
+			\subsection{La Dinamica Stocastica}
+				Nel Modello di Hopfield viene introdotto un concetto analogo a quello di temperatura, intesa come disordine termico, per tenere conto delle fluttuazioni dovute a varie cause non controllabili. Si tratta più propriamente di una pseudo-temperatura, in quanto non ha nulla a che fare con le dimensioni fisiche né con il significato fisico di una temperatura. Spesso si lavora con la temperatura inversa $\beta$ definita da
+				\begin{equation}
+					\beta = \frac{1}{T}
+				\end{equation}
+				Come nel Modello di Ising, anche nel Modello di Hopfield l’evoluzione del sistema è quindi governata dalla competizione tra la presenza di un campo esterno, che tende ad allineare gli stati delle unità e prevale per basse temperature, e l’effetto del disordine termico che prevale ad alte temperature. Per tenere conto delle fluttuazioni, occorre introdurre una dinamica stocastica, valida per temperature finite, che si riduce alla di- namica deterministica esposta fin’ora nel limite $T \rightarrow 0$. Ciò può essere fatto mediante la {\bf Dinamica di Glauber}, sostituendo la regola dinamica deterministica (3.1) con la regola dinamica stocastica di Glauber. Ad ogni step temporale verr\'a aggiornata secondo
+				\begin{equation}
+					S_i^\prime = 
+					\begin{cases}
+						+ 1 \quad \text{con probabilit\'a } f_\beta(h_i) \\
+						-1 \quad \text{con probabilit\'a } 1 - f_\beta(h_i)
+					\end{cases}
+				\end{equation}
+				con
+				\begin{equation}
+					f_\beta(h_i) = \frac{1}{2}\left[ 1 - S_i \tanh\left( \beta \sum_j w_{ij} S_j\right) \right]
+				\end{equation}
+				che pu\'o essere riscritta come (Fig. 9)
+				\begin{equation}
+					f_\beta(h_i) = \frac{e^{\beta h_i}}{e^{\beta h_i}+e^{-\beta h_i}} = \frac{1}{1+e^{-2\beta h_i}}
+				\end{equation}
+				\begin{figure}
+					\centering
+					\begin{tikzpicture}[scale=0.8]
+					\begin{axis}[
+						width  = 8cm,
+						height = 6cm,
+						axis y line*=center,
+						axis x line*=center, 
+						grid=both
+					]
+					\addplot [
+						domain=0:10,
+						color=blue,
+					] {1};
+					\addplot [
+						domain=-10:0,
+						color=blue,
+					] {0};
+					\addplot +[mark=none, color = blue] coordinates {(0, 0) (0, 1)};
+					\addplot [
+						domain=-10:10,
+						color=red,
+					] {1/(1+e^(-x))};
+					\addplot [
+						domain=-10:10,
+						color=orange,
+					] {1/(1+e^(- 0.5 * x))};
+					\end{axis}
+					\node at (6.5,0.7) {$h_i$};
+					\node at (2.3,4.5) {$f_\beta(h_i)$};
+					\node at (5, 2.5) {\color{blue}{$\beta \rightarrow \infty$}};
+					\node at (5, 2) {\color{red}{$\beta = 0.5$}};
+					\node at (5, 1.5) {\color{orange}{$\beta = 0.25$}};
+					\end{tikzpicture}
+					\caption{\textit{}}
+				\end{figure}
+				Per $\beta \rightarrow \infty$, ovvero $T \rightarrow 0$, $f_\beta$ tende alla step function che descrive la regola dinamica deterministica, mentre per $\beta \rightarrow 0$, ovvero $T \rightarrow \infty$, $f_\beta \rightarrow \frac{1}{2}$, ovvero gli stati delle unit\'a sono completamente randomici. Notando che $1 - f_\beta(h_i)=f_\beta(-h_i)$, la regola dinamica stocastica pu\'o essere scritta come 
+				\begin{equation}
+					P(S_i^\prime = \pm 1) = f_\beta(h_i) = \frac{1}{1 + e^{\mp 2\beta h_i}}
+				\end{equation}
+
 		\section{Esempi}
 
 		
