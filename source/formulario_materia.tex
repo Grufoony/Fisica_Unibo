@@ -20,6 +20,7 @@
 \usepackage{bookmark}
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 \usepackage{hyperref}
+\usepackage{amsmath}
 
 \begin{document}
 	\title{Formulario Fisica della Materia}
@@ -152,5 +153,28 @@
             \item $\left\langle y(\epsilon) \right\rangle=\int_0^\infty g(\epsilon)y(\epsilon)f(\epsilon)d\epsilon$
             \item $\sum_{n=0}^{k}a^{bn}=\frac{a^{b(k+1)}-1}{a^b-1}$
         \end{itemize}
-
+    \newpage
+    \section{Modello di Bohr}
+        \begin{itemize}
+            \item $v=\left(\alpha c\right)\frac{Z}{n}$
+            \item $r_{n}=\left(\frac{\hbar}{m\alpha c}\right)\frac{n^2}{Z}$
+            \item $E_n=-\frac{1}{2}mc^2\frac{\left(Z\alpha\right)^2}{n^2}$
+        \end{itemize}
+    \section{Teoria di Schroedinger}
+        \begin{itemize}
+            \item $H=-\frac{\hbar^2}{2m}\nabla^2-\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial r^2}+\frac{l(l+1)}{2mr^2}-\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}$
+            \item $\rho_{n,l}=r^2\left\lvert R_{n,l}(r) \right\rvert^2$ densità di probabilità radiale 
+        \end{itemize}
+    \section{Momento angolare e Spin-Orbita}
+        \begin{itemize}
+            \item $\mu_j=-\mu_Bg_j\frac{J}{n}$
+            \item $\mu_B=\frac{e\hbar}{2m}$ magnetone di Bohr
+            \item $\Delta z= \frac{1}{2}\frac{\mu_Bg_j\Delta m_j}{E_k}\frac{\partial B}{\partial z}l\left(\frac{l}{2}+d\right)$ spostamento da Stern-Gerlach
+            \item $E_{SO}=\frac{1}{2m^2c^2}\frac{1}{r}\frac{dV}{dr}S\cdot L$
+        \end{itemize}
+    \section{Struttura fine}
+        \begin{itemize}
+            \item $H_D=\frac{p^2}{2m}+V(r)-\frac{p^4}{8m^3c^2}+\frac{1}{2m^2c^2}\frac{1}{r}\frac{dV}{dr}S\cdot L+\frac{\pi\hbar^2}{2m^2c^2}\left(\frac{Ze^2}{4\pi\epsilon_0}\right)\delta(r)$ hamiltoniana di Dirac per l'idrogeno
+            \item $E_{n,j}=E_n\left[1+\frac{\left(Z\alpha\right)^2}{n^2}\left(\frac{n}{j+\frac{1}{2}}-\frac{3}{4}\right)\right]$ correzione totale
+        \end{itemize}
 \end{document}
