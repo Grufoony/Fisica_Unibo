@@ -1,0 +1,307 @@
+\documentclass[12pt]{book}
+\usepackage{hyperref}
+
+\title{Formulary for Statistical Data Analysis} \author{\url{https://github.com/Grufoony/Physics_Unibo}}
+\date{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{braket}
+\usepackage[margin=3cm]{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{systeme,mathtools}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{calligra}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage[miktex]{gnuplottex}
+\usepackage{epstopdf}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{tikz}
+
+
+\newcommand{\vv}{\vec{v}}
+\newcommand{\vw}{\vec{w}}
+\newcommand{\vo}{\vec{0}}
+\newcommand{\vx}{\vec{x}}
+\newcommand{\R}{\Re}
+\newcommand{\la}{\lambda}
+\newcommand{\bd}{\textbf}
+\newcommand{\lang}{\left\langle}
+\newcommand{\rang}{\right\rangle}
+\newcommand{\lbra}{\left\lbrace}
+\newcommand{\rbra}{\right\rbrace}
+\newcommand{\ih}{\hat{i}}
+\newcommand{\jh}{\hat{j}}
+\newcommand{\kh}{\hat{k}}
+\newcommand{\vr}{\vec{r}}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+
+\chapter{Probability theory}
+\section{Combinatorics}
+Permutations without repetitions:
+\begin{equation}
+	P_{n} = n!
+\end{equation}
+Permutations with repetitions:
+\begin{equation}
+	P^r_{n} = \frac{n!}{\prod k_i!}
+\end{equation}
+Dispositions without repetitions:
+\begin{equation}
+	D_{n,k} = \frac{n!}{(n-k)!}
+\end{equation}
+Dispositions with repetitions:
+\begin{equation}
+	D^r_{n,k} = n^k
+\end{equation}
+Combinations without repetitions:
+\begin{equation}
+	C_{n,k} = \begin{pmatrix}
+		n \\
+		k
+	\end{pmatrix} = \frac{n!}{k!(n-k)!}
+\end{equation}
+Combinations with repetitions:
+\begin{equation}
+	C^r_{n,k} = \begin{pmatrix}
+		n+k-1 \\
+		k
+	\end{pmatrix}
+\end{equation}
+\section{Probability}
+Conditional probability:
+\begin{equation}
+	P(A|B) = \frac{P(A\cap B)}{p(B)}
+\end{equation}
+Probability of intersection for independent events:
+\begin{equation}
+	P(A\cap B) = P(A)P(B)
+\end{equation}
+Bayes' theorem:
+\begin{equation}
+	P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+\end{equation}
+Law of total probability:
+\begin{equation}
+	P(A|B) = \frac{P(B|A)P(A)}{\sum_i P(B|A_i)P(A_i)}
+\end{equation}
+Bayes' theorem in Baeysian thinking:
+\begin{equation}
+	P(H|\vx) = \frac{P(\vx|H)\pi(H)}{\int P(\vx|H)\pi(H)dH}
+\end{equation}
+\section{Random variables and distributions}
+Marginal pdf:
+\begin{equation}
+	f_i(x_i) = \int f(\vx)\prod_j dx_j
+\end{equation}
+Conditional pdfs:
+\begin{equation}
+	f(y|x) = \frac{f(x,y)}{f_x(x)} f(x|y) = \frac{f(x,y)}{f_y(y)}
+\end{equation}
+Bayes' theorem for distributions
+\begin{equation}
+	f(x|y) = \frac{f(y|x)f_x(x)}{f_y(y)}
+\end{equation}
+Condition for independent variables:
+\begin{equation}
+	f(x,y) = f_x(x)f_y(y)
+\end{equation}
+Distribution of a function of a random variable in 1-D:
+\begin{equation}
+	g(a) = f(x(a))\vert\frac{dx}{da}\vert
+\end{equation}
+Distribution of a function of a random variable in N-D:
+\begin{equation}
+	g(\vec{y}) = |J|f(\vx)
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[x] = \int xf(x)dx = \mu_x
+\end{equation}
+Variance:
+\begin{equation}
+	V[x] = E[x^2] - E[x]^2
+\end{equation}
+Covariance:
+\begin{equation}
+	cov[x,y] = E[xy] - E[x]E[y] = E[(x-\mu_x)(y-\mu_y)]
+\end{equation}
+Correlation coefficient:
+\begin{equation}
+	\rho_{xy} = \frac{cov[xy]}{\sigma_x\sigma_y}
+\end{equation}
+Correlation matrix:
+\begin{equation}
+	V_{ij} = cov[x_i,x_j]
+\end{equation}
+Variance of a function of random variables:
+\begin{equation}
+	\sigma^2_y \approx \sum_{i,j} \left[\frac{\partial y}{\partial x_i}\frac{\partial y}{\partial x_j}\right]_{\vx=\vec{\mu}} V_{ij}
+\end{equation}
+Variance of a vector function of random variables:
+\begin{equation}
+	U_{kl} \approx \sum_{i,j} \left[\frac{\partial y_k}{\partial x_i}\frac{\partial y_k}{\partial x_j}\right]_{\vx = \vec{\mu}} V_{ij}
+\end{equation}
+Error propagation for sum of uncorrelated variables:
+\begin{equation}
+	\sigma^2_y = \sigma^2_1 + \sigma^2_2 +2cov[x_1,x_2]
+\end{equation}
+Error propagation for product of uncorrelated variables:
+\begin{equation}
+	\frac{\sigma^2_y}{y^2} = \frac{\sigma^2_1}{x^2_1} + \frac{\sigma^2_2}{x^2_2} + 2\frac{cov[x_1,x_2]}{x_1x_2}
+\end{equation}
+Characteristic function:
+\begin{equation}
+	\phi_x(k) = E[e^{ikx}] = \int_{-\infty}^\infty e^{ikx}f(x)dx
+\end{equation}
+Moments of Characteristic function:
+\begin{equation}
+	\frac{d^m}{dk^m}\phi_z(k) = i^m \mu'_m
+\end{equation}
+\section{Important distributions}
+\subsection{Binomial distribution}
+Characteristic function:
+\begin{equation}
+	\phi_p(k)=p\left[\left(e^{ik}-1\right)+1\right]^N
+\end{equation}
+Distribution:
+\begin{equation}
+	f(n;N,p) = \frac{N!}{n!(N-n)!}p^n(1-p)^{N-n}
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[n] = Np
+\end{equation}
+Variance:
+\begin{equation}
+	V[n] = Np(1-p)
+\end{equation}
+\subsection{Poisson distribution}
+Characteristic function:
+\begin{equation}
+	\phi_\nu(k)=e^{\nu\left(e^{ik}-1\right)}
+\end{equation}
+Distribution:
+\begin{equation}
+	f(n;\nu) = \frac{\nu^n}{n!}e^{\nu}
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[n] = \nu
+\end{equation}
+Variance:
+\begin{equation}
+	V[n] = \nu
+\end{equation}
+\subsection{Uniform distribution}
+Characteristic function:
+\begin{equation}
+	\phi_{\alpha,\beta}(k)=\frac{e^{i\beta k}-e^{i\alpha k}}{\left(\beta-\alpha\right)ik}
+\end{equation}
+Distribution:
+\begin{equation}
+	f(x;\alpha,\beta) = \frac{1}{\beta-\alpha} \ for \ \alpha \leq x \leq \beta 
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[x] = \frac{\alpha + \beta}{2}
+\end{equation}
+Variance:
+\begin{equation}
+	V[x] = \frac{(\beta - \alpha)^2}{12}
+\end{equation}
+\subsection{Exponential distribution}
+Characteristic function:
+\begin{equation}
+	\phi_\xi(k)=\frac{1}{1-ik\xi}
+\end{equation}
+Distribution:
+\begin{equation}
+	f(x;\xi) = \frac{1}{\xi}e^{-x/\xi} \ for \ x \geq 0
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[x] = \xi
+\end{equation}
+Variance:
+\begin{equation}
+	V[x] = \xi^2
+\end{equation}
+\subsection{Gaussian distribution}ù
+Characteristic function:
+\begin{equation}
+	\phi_{\mu,\sigma}(k)=e^{i\mu k-\frac{1}{2}\sigma^2k^2}
+\end{equation}
+Distribution:
+\begin{equation}
+	f(x;\mu,\sigma) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[x] = \mu
+\end{equation}
+Variance:
+\begin{equation}
+	V[x] = \sigma^2
+\end{equation}
+\subsection{Multivariate Gaussian distribution}
+Distribution:
+\begin{equation}
+	f(\vx;\vec{mu},V) = \frac{1}{(2\pi)^{n/2}|V|^{1/2}}\exp\left(-\frac{1}{2}(\vx - \vec{\mu})^tV^{-1}(\vx - \vec{\mu})\right)
+\end{equation}
+\subsection{Chi-square distribution}
+Characteristic function:
+\begin{equation}
+	\phi_n(k)=\left(1-2ik\right)^{-\frac{n}{2}}
+\end{equation}
+Distribution:
+\begin{equation}
+	f(z;n) = \frac{1}{2^{n/2}\Gamma(n/2)}z^{n/2-1}e^{-z/2}
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[z] = n
+\end{equation}
+Variance:
+\begin{equation}
+	V[z] = 2n
+\end{equation}
+\subsection{Cauchy (Breit-Wigner) distribution}
+Characteristic function:
+\begin{equation}
+	\phi_{x_0,\Gamma}(k)=e^{-ikx_0-\left\lvert k\right\rvert \frac{\Gamma}{2}}
+\end{equation}
+Distribution:
+\begin{equation}
+	f(x;\Gamma,x_0) = \frac{1}{\pi}\frac{\Gamma/2}{\Gamma^2/4 + (x-x_0)^2}
+\end{equation}
+\subsection{Student's t distribution}
+Distribution:
+\begin{equation}
+	f(x;\nu) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\sqrt{\nu\pi}\Gamma(\nu/2)}\left(1+ \frac{x^2}{\nu}\right)^{-\left(\frac{\nu+1}{2}\right)}
+\end{equation}
+Expectation value:
+\begin{equation}
+	E[x] = 0
+\end{equation}
+Variance:
+\begin{equation}
+	V[x] = \frac{\nu}{\nu-2}
+\end{equation}
+
+\end{document}
