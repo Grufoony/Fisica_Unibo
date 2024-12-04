@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - name: Switch to gh-pages branch and rebase
         run: |
@@ -22,12 +20,15 @@ jobs:
 
       - name: Download dependencies
         run: |
-          sudo apt install texlive-full dvipng texlive-lang-italian
+          sudo apt install texlive-full dvipng texlive-lang-italian latexmk
       
       - name: Build html files
         run: |
           cd source
-          for i in *.tex; do htlatex $i; done
+          for i in *.tex; do
+              htlatex $i
+              latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf $i
+          done
           cd ..
           htlatex index.tex
 
