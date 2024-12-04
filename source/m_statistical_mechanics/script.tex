@@ -1,0 +1,95 @@
+% For comments blocks
+\usepackage{comment}
+
+% For table of content
+\usepackage{blindtext}
+\usepackage{titlesec}
+
+% For subtitle
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\Large#1\end{center}
+	\vskip0.1em}}%
+
+% For Math things
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+\usepackage{bbm} %for bold 1 (operator)
+%\usepackage{braket}
+
+% For colors
+\usepackage{xcolor}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\newenvironment{Gray}{\par\color{gray}}{\par}
+
+% To make links clickable
+\usepackage{hyperref}   
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% For images
+\usepackage{graphicx}
+\graphicspath{ {./images/}}
+\usepackage{wrapfig}
+\usepackage{tikz}
+% for subfigures
+\usepackage{caption}
+\usepackage{subcaption}
+
+% For enumerate with i,ii,iii...
+\usepackage{enumitem}
+
+% symbols
+\newcommand{\work}{\mathcal{L}}
+\newcommand{\R}{{\rm I\!R}}
+\newcommand{\fock}{\rm I\!H}
+\newcommand{\ps}{\mathcal{M}}
+\newcommand{\ham}{\mathcal{H}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\syst}{\mathcal{S}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\vecP}{\vec{\mathcal{P}}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\proj}{\mathbb{P}}
+\newcommand{\hil}{\mathcal{H}}
+\newcommand{\id}{\mathbb{I}}
+
+\DeclareMathOperator{\hess}{Hess}
+\newcommand{\lrarr}{\leftrightarrow}
+\newcommand{\der}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\Der}[2]{\frac{d#1}{d#2}}
+\newcommand{\angles}[1]{\left<#1\right>}
+
+\newcommand{\bra}[1]{\left\langle#1\right|}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \middle| #2 \right\rangle}
+\newcommand{\brakett}[3]{\left\langle #1 \middle| #2 \middle| #3 \right\rangle}
+% braket command: if the first parameter is passed, shows it in the middle, with an extra middle| 
+%\ExplSyntaxOn
+%\newcommand{\braket}[3][]{ 
+%    \tl_if_empty:nTF {#1} { 
+%        \left\langle #2 \middle| #3 \right\rangle
+%    } { 
+%        \left\langle #2 \middle| #1 \middle| #3 \right\rangle
+%    }    
+%}
+%\ExplSyntaxOff
+
+
+\newcommand{\notedate}[1]{\hspace*{\fill} \textcolor{gray}{#1}\\}
+\newcommand{\Def}{\textsc{Definition: }}
+\newcommand{\Th}{\textsc{Theorem: }}
+%\newcommand{\Pf}{\vspace{5pt}\par\noindent\rule{\textwidth}{0.5pt}\par\textsc{Proof: }}
+\newcommand{\Pf}{\textsc{Proof: }}
+\newcommand{\EndPf}{\par\noindent\rule{\textwidth}{0.5pt}\vspace{10pt}} %end of proof

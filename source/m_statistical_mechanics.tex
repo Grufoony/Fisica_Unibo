@@ -1,0 +1,29 @@
+\documentclass[12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=3cm]{geometry}
+\AddToHook{cmd/section/before}{\clearpage}
+
+\makeatletter
+\def\input@path{{m_statistical_mehcanics/}}
+\makeatother
+
+\input{script}
+
+\begin{document}
+
+\title{Statistical Mechanics}
+\subtitle{Notes from Prof. E. Ercolessi's Lectures}
+\author{\href{https://github.com/puccj}{Daniele Pucci}}
+\date{September 2023}
+
+\maketitle
+\tableofcontents
+
+\chapter{Prerequisites}
+\input{1prerequisites}
+\chapter{Classical Statistical Mechanics}
+\input{2classicalSM}
+\chapter{Quantum Statistical Mechanics}
+\input{3quantumSM}
+
+\end{document}
