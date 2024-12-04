@@ -1,0 +1,43 @@
+name: Build GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Switch to gh-pages branch and rebase
+        run: |
+          git fetch
+          git checkout gh-pages
+          git reset --hard main
+
+      - name: Download dependencies
+        run: |
+          sudo apt install texlive-full dvipng texlive-lang-italian
+      
+      - name: Build documentation
+        run: |
+          cd source
+          for i in *.tex; do htlatex $i; done
+          cd ..
+          htlatex index.tex
+
+      - name: Set up git
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        
+      - name: Commit and Push
+        run: |
+          git add .
+          git commit -m "Auto-deploy documentation"
+          git push --force
