@@ -74,10 +74,10 @@
         \item \colorbox{LightGray}{Add(const *h1, const *h2, c1, c2, "opt")} esegue la somma c1*h1+c2*h2
     \end{itemize}
 \section{Grafici}
-    \colorbox{LightGray}{TGraph(npoints, $\vec{x}$, $\vec{y}$)}\\
-    \colorbox{LightGray}{TGraph(filename, *format="\%lg \%lg", "opt")} da file\\
-    \colorbox{LightGray}{TGraphErrors(n, x, y, ex, ey)} grafico con barre errore\\
-    \colorbox{LightGray}{TGraphErrors(filename, format="\%lg \%lg \%lg \%lg", "opt")}\\
+    \colorbox{LightGray}{TGraph(npoints, $\vec{x}$, $\vec{y}$)} 
+    \colorbox{LightGray}{TGraph(filename, *format="\%lg \%lg", "opt")} da file
+    \colorbox{LightGray}{TGraphErrors(n, x, y, ex, ey)} grafico con barre errore
+    \colorbox{LightGray}{TGraphErrors(filename, format="\%lg \%lg \%lg \%lg", "opt")}
     \begin{itemize}
         \item \colorbox{LightGray}{Draw("opt")} metodo per disegnare (A-disegna gli assi, P-disegna il marker dei punti, E-disegna barre errore)
         \item \colorbox{LightGray}{SetPoint(i, x, y)} inserisce il punto (x,y) nella posizione i
@@ -152,21 +152,21 @@
         \item \colorbox{LightGray}{FillRandom("name", n)} filla l'oggetto con n elementi della funzione "name"
     \end{itemize}
 \section{Canvas}
-    \colorbox{LightGray}{TCanvas("name", "title", "width", "height")}\\
+    \colorbox{LightGray}{TCanvas("name", "title", "width", "height")}
     \begin{itemize}
         \item \colorbox{LightGray}{Divide(i, j)} divide la canvas in i*j pad
         \item \colorbox{LightGray}{cd(i)} seleziona la pad i
         \item \colorbox{LightGray}{Print("name.extension")} stampa la canvas su file
     \end{itemize}
     \subsection{Legenda}
-    \colorbox{LightGray}{TLegend(x1, y1, x2, y2, "name")}\\
+    \colorbox{LightGray}{TLegend(x1, y1, x2, y2, "name")}
     \begin{itemize}
         \item \colorbox{LightGray}{SetFillColor(n)}
         \item \colorbox{LightGray}{AddEntry(obj, "description")} associa a obj una linea con descrizione
         \item \colorbox{LightGray}{Draw("SAME")} disegna la legenda sullo stesso grafico
     \end{itemize}
 \section{List}
-    \colorbox{LightGray}{TList()}\\
+    \colorbox{LightGray}{TList()}
     \begin{itemize}
         \item \colorbox{LightGray}{Add(obj)} con obj qualunque oggetto di root (TH1F, TF1, ...)
         \item \colorbox{LightGray}{At(i)} returna l'elemento i-esimo della lista. NB: returna sempre un TObject, al momento dell'utilizzo specificarne il tipo con un static\textunderscore cast<type>

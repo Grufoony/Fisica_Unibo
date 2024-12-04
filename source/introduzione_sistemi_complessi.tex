@@ -23,9 +23,8 @@
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{pgfplots}
 \usetikzlibrary{intersections}
-\usepackage{tikz}
+\usepackage{tikz, tikz-network}
 \usepackage{caption}
-\usepackage{tikz-network}
 \usepackage{float}
 \floatplacement{figure}{H}
 \pgfplotsset{compat = newest}
@@ -1039,29 +1038,30 @@
 			\begin{figure}[ht!]
 					\centering
 					\begin{tikzpicture}
-					\Vertex[label=$A$, color=white]{A}
-					\Vertex[label=$B$,color=white,x=2.5,y=0]{B}
-					\Edge[Direct, lw=0.5pt, label=$\Phi_{A \rightarrow B}$](A)(B)
-				\end{tikzpicture}
+						\node[draw, circle, fill=white, label=$A$] (A) at (0,0) {};
+						\node[draw, circle, fill=white, label=$B$] (B) at (2.5,0) {};
+						\draw[->, line width=0.5pt] (A) -- (B) node[midway, above] {$\Phi_{A \rightarrow B}$};
+					\end{tikzpicture}
 					\caption{}
 			\end{figure}
 			Definiamo $V_{A/B}$ una certa proprietà del nodo $A/B$, questa proprietà ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
 			\begin{equation*}
 					\Phi_{A \rightarrow B} \ R = V_A - V_B
-			\end{equation*} dove $R$ è una proprietà del link (ad es. la portanza di una strada ma anche la probabilità di transizione).
+			\end{equation*} dove $R$ è una proprietà del link (ad es. \ la portanza di una strada ma anche la probabilità di transizione).
 			Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
 			\begin{figure}[ht!]
 					\centering
 					\begin{tikzpicture}
-						\Vertex[label=$A$, color=white]{A}
-						\Vertex[label=$B$,color=white,x=1,y=1]{B}
-						\Vertex[label=$C$,color=white,x=-1,y=1]{C}
-						\Vertex[label=$D$,color=white,x=0,y=1]{D}
-						\Vertex[label=$S$,color=white,x=0,y=-1]{S}
-						\Edge[Direct, lw=0.5pt](A)(B)
-						\Edge[Direct, lw=0.5pt](A)(C)
-						\Edge[Direct, lw=0.5pt](A)(D)
-						\Edge[Direct, lw=0.5pt](S)(A)
+						\node[draw, circle, fill=white, label=$A$] (A) at (0,0) {};
+						\node[draw, circle, fill=white, label=$B$] (B) at (1,1) {};
+						\node[draw, circle, fill=white, label=$C$] (C) at (-1,1) {};
+						\node[draw, circle, fill=white, label=$D$] (D) at (0,1) {};
+						\node[draw, circle, fill=white, label=$S$] (S) at (0,-1) {};
+					
+						\draw[->, line width=0.5pt] (A) -- (B);
+						\draw[->, line width=0.5pt] (A) -- (C);
+						\draw[->, line width=0.5pt] (A) -- (D);
+						\draw[->, line width=0.5pt] (S) -- (A);
 					\end{tikzpicture}
 					\caption{}
 			\end{figure}
