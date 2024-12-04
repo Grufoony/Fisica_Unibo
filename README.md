@@ -1,21 +1,18 @@
-# Fisica_UNIBO
-## Installazione
-Se siete su windows basta scaricare una release.
-Su ubuntu basta clonare la repository:
+# Open_Physics
+Repository for notes/resumes/formularies pertaining to bachelor's and master's degree programs in physics at the University of Bologna.
 
-    $   git clone https://github.com/Grufoony/Fisica_UNIBO
-
-## Regole base
+## Contributing
+### English
+* you can contribute to the repository by running a fork of it and, subsequently, a pull request with the changes
+* in the formularies try to be as concise as possible since in some exams they may be allowed
+### Italiano
 * è possibile contribuire alla repository eseguendone un fork e, successivamente, una pull request con le modifiche
-* sono richiesti sia i file PDF già compilati e, se si vuole rendere open-source il documento, anche il file .tex
 * nei formulari cercare di essere più sintetici possibili in quanto in alcuni esami potrebbero essere ammessi
 
-## Organizzazione della repository
-Nella pagina principale sono presenti i PDF già compilati.
-Scaricandoli si possono evadere alcuni problemi con la visualizzazione di alcuni contenuti
+## Repository organization
 
 ### source
-Contiene i codici sorgente LaTeX dei PDF in prima pagina.
+Contains the LaTeX source codes of the PDFs on the front page.
 
 ### utils
-Contiene complementi ad alcuni corsi, ad esempio scripts python.
+Contains complements to some courses, e.g. python scripts.
