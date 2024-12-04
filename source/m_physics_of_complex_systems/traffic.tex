@@ -1,0 +1,185 @@
+Imagine that we have many dynamical system, each one with its internal dynamics, each described by a differential equation
+$$
+	\dot{x_k} = a(x_k)
+$$
+We suppose to have some directional coupling between this system. This coupling means that in the differential equations we will have an additional term:
+$$
+	\dot{x_k} = a(x_k) + \varepsilon f(x_{k-1})
+$$
+This is a network structure, because we have the nodes (the systems) and the links. In order to study this kind of system we must introduce a boundary condition. There are two possible boundary conditions:
+\begin{itemize}
+	\item We take a source and we see how the source influences the system	
+	\item We attatch the tail of the chain with its head. In this way, the system can be treated as a closed system
+\end{itemize}
+We can take as an example the case of vehicles. For vehicles we have two dynamical variables, position $x_k$ and velocity $v_k$. The cars have an optimal velocity, we have the equation
+$$
+	v_{opt}(x_{k+1} - x_k) = v_\infty
+$$
+which gives a logistic function. Another possibility is
+$$
+	v_{opt}(x_{k+1} - x_k) = \frac{v_\infty}{1+ \exp(-\frac{x_{k+1} - x_k}{a} + b)}
+$$
+To describe the system we can have the system of differential equations:
+$$
+	\dot{x_k} = v_k
+$$
+$$
+	\dot{v_k} = -\gamma(v_k - v_{opt}(x_{k+1}-x_k))
+$$
+where the variable $\gamma$ represents the time in which we are able to react and change our velocity. \\
+To characterize the system we expect first of all to have
+$$
+	\frac{dv_{opt}}{dx} > 0
+$$
+We define the variables $w_k$ and $z_k$ as
+$$
+	w_k = x_{k+1} - x_k
+$$
+$$
+	\dot{w_k} = z_k
+$$
+$$
+	\dot{z_k} = -\gamma(z_k - (v_{opt}(w_{k+1}) - v_{opt}(w_k)))
+$$
+We have the condition that
+$$
+	\sum_k w_k = L
+$$
+which is obvious, because we are summing the distances of each car with the next one. We have an equilibrium condition, which is $w_{eq} = L/N$. \\
+What happens if we then perturbe the system? So we have the equilibrium value for $w_k$ plus a perturbative term
+$$
+	w_k = \frac{L}{N} + \varepsilon f(w_k t)
+$$
+We can then use the fourier transform and get
+$$
+	\exp(2\pi i \frac{m}{N}k + \la t)
+$$
+where the dependence on $k$ is required by the closed system boundary condition. \\
+If $\Re \la \leq 0$, the system is stable, and if $\Re \la > 0$, the system is unstable. If we the put $\la$ and divide it in real and immaginary part, we find
+$$
+	\la_i^2 = 2\gamma v'_{opt}(\frac{L}{N})\sin^2(\frac{\pi m}{N})
+$$
+$$
+	\la_i = 2 v'_{opt}(\frac{L}{N})\sin(\frac{\pi m}{N})\cos(\frac{\pi m}{N})
+$$
+We can find that the system is unstable if 
+$$
+	\frac{\gamma}{2v'_{opt}(\frac{L}{N})} \leq 1
+$$
+We want to find a function $F$ so that 
+$$
+	F(t + k\tau) = v_{opt}(w_k)
+$$
+where $\tau$ is not known. We also wuant a function $G$ 
+$$
+	z_k(t) = G(t + k\tau)
+$$
+We then get the equations
+$$
+	\dot{F} = \frac{dV_{opt}}{dw}\dot{w_k} = a(F)G
+$$
+$$
+	\dot{G} = -\gamma(G - (F(t + \tau) - F(t)))
+$$
+This are called delay differential equations.
+
+The vehicles are described by two variables, $d_k$ and $w_k$. $d_k$ is the distance between two consecutive cars and $w_k$ is
+$$
+	w_k = v_{k+1} - v_k
+$$
+For this system we have the system of equations:
+$$
+	\dot{d_k} = w_k
+$$
+$$
+	\dot{w_k} = -\beta(w_k -(v_{opt}(d_{k+1}) - v_{opt}(d_k)))
+$$
+If, instead of a chain, we had a network, where each node is connected to more than one node, then in the second differential equation the number of elements would increase accordingly. \\
+We then introduce a new variable $u_k = v_{opt}(d_k)$, for which we have the equations
+$$
+	\dot{u_k} = v_{opt}(u_k)w_k
+$$
+$$
+	\dot{w_k} = -\beta(w_k - (u_{k+1} - u_k))
+$$
+If we take the case where all the cars are moving at the same speed, so $w_k = 0$, then we also have $u_{k+1} = u_k$; so when all the vechicles have the same speed, that must be the optimal speed. \\
+We not express the variables in terms of two functions $F$ and $G$:
+$$
+	u_k(t) = F(t + k\tau)
+$$
+$$
+	w_k(t) = G(t + k\tau)
+$$
+so that the equations become
+$$
+	\dot{F} = a(F)G
+$$
+$$
+	\dot{G} = -\beta(G - (F(t+\tau) - F(t)))
+$$
+The point is that we move from having $N$ degrees of freedom to only having 2, plus a delay. It is useful to use this types of delay differential equations for systems with a lot of degrees of freedom. What this is saying is that, if we know the values of the functions in the time interval of width $\tau$, then we can use this knowledge to get the evolution at subsequent times. \\
+We can express this through integrals
+$$
+	F(t+\tau) - F(t) = \int_t^{t+\tau} \frac{df}{ds}ds
+$$
+Very often in models we need to introduce a delay in the evolution, so we get this kind of equaitons. For example, in the study of an epidemic we need to consider that some time must pass between the encounter of an healthy person with a sick one and the time when the first person gets sick as well. Also in the physiological responses of the immunitary system we have that the body doesn't start fighting infections immediately, so we need to introduce a delay. So delay differential equations are very useful, but they are often hard to study. \\
+Is it possible to study the stability of the stationary solution? $u_k = F^*$ and $w_k = 0$ \\
+Insert 
+$$
+	(F,G) = (v_1^\la, v_2^\la)\exp(\la t)
+$$
+and see in which conditions you get $\Re \la > 0$. \\
+
+If we differentiate we get
+$$
+	\ddot{F} = -\beta\dot{F} + \beta a(F)(F(t+\tau) - F(t))
+$$
+$$
+	\ddot{F} = a(F)\dot{G} + a'(F)\dot{F}G
+$$
+$$
+	\ddot{F} = -a(F)\beta G + \beta a(F)(F(t+\tau) - F(t)) + \frac{a'(F)}{a(F)}\dot{F}^2
+$$
+$$
+	\ddot{F} = -\beta \dot{F} + \beta a(F)(F(t+\tau) - F(t)) + \frac{a'(F)}{a(F)}\dot{F}^2 
+$$
+where we neglect the last term, perche' si. \\
+If $\tau$ is small we can write
+$$
+	F(t+\tau) - F(t) \approx \dot(F)\tau
+$$
+which means that in the previous equation we get
+$$
+	\ddot{F} = -\beta \dot{F} + \beta a(F)\dot{F}\tau = -\beta \dot{F} + \beta \dot{a}(F)
+$$
+where we recognize the second term to be a total derivative with respect to time, which means that we can integrate. \\
+We redefine $F$ as
+$$
+	F(t + k\tau) = H(z + \nu t) 
+$$
+where $H$ represents a wave function, and $\nu$ is the wave function. \\
+The equation now becomes
+$$
+	\nu^2 H'' = -\beta \nu H' + \beta a(H)(H(z + d_0) - H(z))
+$$
+where $d_0$ is the average distance between vehicles. \\
+For the optimal velocity we can have a funcion of the form
+$$
+	v_{opt} = \frac{v_\infty}{2}(1 + \tanh(\al(d-d^*)))
+$$
+and this is the prototype of any sigmoidal function. If we derive the hyperbolic tangent we get
+$$
+	\tanh'(x) = \frac{1}{\cosh^2(x)} = 1 - \tanh^2(x)
+$$
+which is the most symple non linearity that we can introduce in the system. \\
+So going back to the equation we have
+$$
+	H'' = -\frac{\beta}{\nu}H' + \beta{\beta}{\nu}\al^2(1-H^2)d_0H'
+$$
+If we define $P=H'$, and put $-\beta/\nu = 1$, we have
+$$
+	\frac{d}{dz}(\frac{P'}{P}) = -(1-c*(1-H^2)) = -\frac{\partial k}{\partial H}
+$$
+$$
+	\frac{dH}{dz} = 
+$$

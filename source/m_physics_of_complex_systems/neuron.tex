@@ -1,0 +1,20 @@
+In this model we have two variables, $x$ and $w$, and two differential equations to describe their dynamics
+$$
+	\dot{x} = x - \frac{x^3}{3} - w + I(t)
+$$
+$$
+	\dot{w} = \frac{1}{\mu}(x+a-bw)
+$$
+This system is of course not linear, because we have a cubic term in the dynamics of $x$. \\
+We require $\mu$ to be big, so that $w$ is the slow variable, whereas $x$ is the fast variable. \\
+The fact that the two variables have different growth speeds is quite important, because it allows us to study them separately, and this reduces the complexity of the system. \\
+The difference in the speed of the variables makes the system stiff, which means that it's very hard to integrate numberically. \\ \\
+The key to studying this system is in the nullcline. We find the two nullclines by putting the two derivatives equal to zero, so one is a straight line and the other one is a cubic. \\
+The two nullclines intersect, and the point where they intersect is the equilibrium point of the system. Furthermore, the cubic nullcline has two critical points. Since $x$ is the fast variable, the point follows the cubic nullcline in its dynamics. Once it reaches one of the two critical points, during its motion, it jumps to the other branch of the nullcline. So in the end one gets a periodic motion. \\ \\
+Suppose now that $I(t)$ is of the form
+$$
+	I(t) = I_0 + \Delta I \delta(t)
+$$	
+so we give an impulse to the point. \\
+What happens now is that, if $\Delta I$ is small, the point oscillates briefly around the critical point and falls back into it, but if the the impulse is big, the point excapes and makes a very big oscillation. \\
+In this system we have an Hopf bifurcation. \\

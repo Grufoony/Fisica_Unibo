@@ -1,0 +1,36 @@
+Let's consider the portion $[0,1]$ of the axis, which represents a segment (a stick) of length 1. Suppose that we extract randomically a point $x_1$ on that segment, and we cut it in correspondence of that point, thus obtaining the portion $[0,x_1]$ of the axis. \\
+By repeating this process many times, we obtain a system with memory, because of course the length of the segment at a certain iteration depends on all the previous iterations. \\
+This is called the broken stick model. \\
+For this system one expects to have a power law distribution, because if we rescale the variable $x$, the distribution must not change.
+$$
+	p(x) \sim \frac{1}{x^a}
+$$
+$$
+	y = \la x \ \ \longrightarrow \ \ p(y) = \frac{1}{(\la x)^a} \sim \frac{1}{x^a}
+$$
+Since we have:
+$$
+	\lang x_k \rang = \frac{\lang x_{k-1} \rang}{2}
+$$
+$$
+	\rho_N(2x) = \frac{1}{2}\rho_{N-1}(x)
+$$
+Which means that, as $N$ goes to infinity we get
+$$
+	\rho(2x) = \frac{1}{2}\rho(x)
+$$
+$$
+	\rho(x) = \frac{1}{x}
+$$
+Let's now try to implement the system without memory. So we have $N$ independent variables $x_k$ uniformly distributed, and for each variable we define its distance from the previous one, $\Delta x$. \\
+The probability to find $\Delta x$ is the probability of not finding $x$ in any segment, so
+$$
+	p(\Delta x) \approx \left( 1 - \frac{\Delta x}{L} \right)
+$$
+We then take a new variable $y = N\Delta x$ and we obtain the probability distribution
+$$
+	p = \exp(-y/L)
+$$
+as $N$ goes to infinity, which of course is an exponential law. \\ \\
+Suppose that the whole stick is a state, and we want to distribute the population inside of it. If we divide the stick uniformly in portions and diivde the populations in this group, we obtain an exponential law, as we have just seen. \\
+Another way, which contains memory, consists of creating a city and letting it grow, and only then introducing a second one, and repeating the process until all the space is occupied. 

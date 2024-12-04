@@ -1,0 +1,99 @@
+\documentclass[12pt]{book}
+\usepackage{hyperref}
+
+\title{Physics of Complex Systems} \author{\url{https://github.com/Grufoony/Physics_Unibo}}
+\date{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{braket}
+\usepackage[margin=3cm]{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{systeme,mathtools}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{calligra}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage[miktex]{gnuplottex}
+\usepackage{epstopdf}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{tikz}
+
+
+\newcommand{\vv}{\vec{v}}
+\newcommand{\vw}{\vec{w}}
+\newcommand{\vo}{\vec{0}}
+\newcommand{\vx}{\vec{x}}
+\newcommand{\R}{\Re}
+\newcommand{\la}{\lambda}
+\newcommand{\al}{\alpha}
+\newcommand{\bd}{\textbf}
+\newcommand{\lang}{\left\langle}
+\newcommand{\rang}{\right\rangle}
+\newcommand{\lbra}{\left\lbrace}
+\newcommand{\rbra}{\right\rbrace}
+\newcommand{\ih}{\hat{i}}
+\newcommand{\jh}{\hat{j}}
+\newcommand{\kh}{\hat{k}}
+\newcommand{\vr}{\vec{r}}
+
+\newtheorem{prop}{Proposition}
+\newtheorem{definition}{Definition}
+
+\makeatletter
+\def\input@path{{m_physics_of_complex_systems/}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+\chapter{Introduction to Complex Systems}
+Complex systems are interdisciplinary: you have to communicate your results to experts from different science field.
+You need to provide an easy answer to a complex problem, no matter how difficult it's to get this answer.
+\section{Emergence}
+\input{emergence}
+\section{Network's energy}
+\input{energy}
+\section{Broken Stick Model}
+\input{brokenstick}
+\section{Rankings}
+\input{ranking}
+\section{Laplace problem}
+\input{laplace}
+\chapter{Basic models}
+\section{Linear models}
+\input{models}
+\section{The neuron model}
+\input{neuron}
+\subsection{Hopf Bifurcation}
+\input{hopf}
+\chapter{Dynamical Systems}
+\input{dynamicalsystems}
+\section{Malthus model}
+\input{malthus}
+\section{Velhurst model}
+\input{velhurst}
+\section{Expanding map}
+\input{expandingMap}
+\section{Classification of chaotic systems}
+\input{chaoticsystems}
+\chapter{Ergodic theory}
+\input{ergodicTheory}
+\chapter{Dynamical Models}
+\section{Traffic Model}
+\input{traffic}
+\section{Kuramoto Model}
+\input{kuramoto}
+
+\end{document}

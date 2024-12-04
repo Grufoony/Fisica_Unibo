@@ -1,0 +1,29 @@
+Let's suppose that we are tossing a coin, and the probability of gettin head is $p$ and the probability of getting tails is $1-p$. The event $E$ is $x_{n+1}$ outcome, and $H_n$ is $\{x_1,x_2,...\}$, so the first is the future and the second is the past. \\
+Now we ask ourselves what is the probability that the next result of the toss is going to be heads:
+$$
+	p(x_{n+1}=H | H_n) 
+$$
+The most intuitive way to calculate this probability would be to use the frequentistic definition, so to count how many times we have gotten heads over the entire number of tries (we are considering the number of tries to be very big of course)
+$$
+	p = \frac{n_H}{N}
+$$
+Unfortunately, this is not the right way to do it. \\ \\
+The probability of getting a given sequence of heads and tails is
+$$
+	p(\{x_k\}) = p^J(1-p)^{n-J}
+$$
+where $J$ is the number of times that we get heads. \\
+Now if we integrate we get
+$$
+	\int_0^1 p^J(1-p)^{n-J}dp = \frac{J!(n-J)!}{(n+1)!}
+$$
+so
+$$
+	p(x_{n+1}=H|\{\}) = \frac{(n+1)!}{J!(n-J)!}p^J(1-p)^{n-J}
+$$
+which is a binomial distribution. \\
+Now we calculate the average value of the probability
+$$
+\int_0^1 p\frac{(n+1)!}{J!(n-J)!}p^J(1-p)^{n-J}dp = \frac{J+1}{n+2}
+$$
+and we see that it isn't $J/n$, as one would have expected. 

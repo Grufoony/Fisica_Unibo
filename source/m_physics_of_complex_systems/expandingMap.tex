@@ -1,0 +1,65 @@
+Now let's see an example of a chaotic map.
+First of all, we define a map $T$ as \emph{expanding} if $\left\lvert T'\left(x\right)\right\rvert > 1$ $\forall x \in \mathcal{M}$.
+As well, we also give this definition for a generic point:
+\begin{definition}
+    We define a periodic point of the map $x_0 \in \mathcal{M}$ as:
+    \begin{itemize}
+        \item \emph{attractive} if $\left\lvert T'\left(x_0\right)\right\rvert > 1$
+        \item \emph{repelling} if $\left\lvert T'\left(x_0\right)\right\rvert < 1$
+        \item \emph{neutral} if $\left\lvert T'\left(x_0\right)\right\rvert = 0$
+    \end{itemize}
+\end{definition}
+For example, let's take the map $T : \left[0,1\right] \to \left[0,1\right]$ such as $T\left(x\right)=2x \ mod \ 1$.
+This map as two fixed points (intersection with the bisectrice): $p_0 = \left(0,0\right)$ and $p_1 = \left(1,1\right)$.
+We notice immediately that those points are both \emph{repelling} points.
+Another thing we can see with this particular map is that if we start on a slightly different point from the previous one, for example $x \to x + \epsilon$, the difference between the two orbit grows exponentially fast:
+$$
+    T^n\left(x\right)=2^n\left(x-k\left(x\right)\right)-k\left(T\left(x\right)\right)
+$$
+where
+$$
+    k\left(x\right)=
+    \begin{cases}
+        0 \quad 0\leq x \leq \frac{1}{2} \\
+        1 \quad \frac{1}{2} < x \leq 1
+    \end{cases}
+$$
+and in conclusion we have that
+$$
+    T\left(x + \epsilon\right)=2^n\left(x + \epsilon\right) \ mod \ 1
+$$
+so the difference grows $\propto 2^n\epsilon$.
+One last comment to make is that it's true that the two orbit exponentially diverges one from the other but the phase space is limited: from this point of view their distance in phase space will oscillate through time.
+
+
+\begin{prop}
+    If $T : \left[0,1\right] \to \left[0,1\right]$ is an expanding map such as $\left\lvert T'\left(x\right)\right\rvert > 1$ $\forall x \in \left[0,1\right]$ then any point p of $T^j$ ($j \in \mathbb{Z}$) is repelling.
+\end{prop}
+\begin{proof}
+	If we take the derivative of $T^j$ we get
+	$$
+		(T^j)'(x) = T'(T^{j-1}(x))\times T'(T^{j-2}(x))\times...\times T'(x) = \prod_{k=0}^{j-1}T'\left(T^k\left(x\right)\right)
+   $$
+  	and if now we calculate the module of this derivative we get 
+   $$
+       \left\lvert\left(T^j\right)'\left(x\right)\right\rvert = \prod_{k=0}^{j-1}\left\lvert T'\left(T^k\left(x\right)\right)\right\rvert \gg 1
+   $$
+	where, since the map is expanding, each term of the product is larger then one.
+\end{proof}
+\begin{prop}
+    If two points p and q are part of the same periodic orbit then they are both of the same type.
+\end{prop}
+\begin{proof}
+    Let's consider an orbit of period $j$ with $q=T^k\left(p\right)$, $0 < k \leq j-1$.
+    $$
+        \left(T^j\right)'\left(p\right) = T'\left(p_0\right)\ldots T'\left(p_{j-1}\right)
+    $$
+    $$
+        \left(T^j\right)'\left(q\right) = \left(T^j\right)'\left(p_k\right) T'\left(p_k\right)\ldots T'\left(p_{k-1}\right) \ldots T'\left(p_{k+j-1}\right)
+    $$
+    Real numbers always commute, so it's obvious that
+    $$
+        \left(T^j\right)'\left(q\right) = \left(T^j\right)'\left(p\right)
+    $$
+\end{proof}
+We have just shown that the property of a point (local) is also a property of an orbit (global).

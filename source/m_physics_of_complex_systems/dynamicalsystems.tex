@@ -1,0 +1,63 @@
+% chaotic dynamics
+A dynamical system is given by a \emph{phase space} $M \subseteq \mathbb{R}^d$ endowed with a collection of maps $\phi^t:M\rightarrow M$, where $t \in \mathbb{G} = \lbra \mathbb{R}, \mathbb{C}, \mathbb{Z}, \mathbb{N} \rbra$, with the so-called ``group property'':
+$$
+	\phi^{t+s} = \phi^t o \phi^s
+$$
+The maps $\phi^t$ are usually called \emph{flows}. \\ 
+This formalization works for systems whose equations don't depend explicitly on time. \\
+A typical example of a dynamical system is that of the solutions of a differential equation. So if we have a Cauchy problem
+$$
+	\begin{cases}
+		\dot{x} = f(x) \\
+		x\left(0\right) = x_0
+	\end{cases}
+$$
+where the flow is the function that takes the initial condition and returns the correct solution for the differential equation.
+So if this ODE has a global solution $x(t)$ that satisfies the initial condition, then 
+$$
+	\phi^t(x_0) = x(t)
+$$
+We must also assume the uniqueness of the solution, that is, for one initial condition we only have one solution. \\
+Non-autonomous ODEs, where the equation field depends on time
+$$
+	\dot{x} = f(x,t)
+$$
+can be converted into autonomous ODEs in higher dimensions, going back to the previous simpler case. \\
+We consider $\overline{M} = M \times \mathbb{R}$ with $y = (x,t) \in \overline{M}$, and we define
+$$
+	F(x,t) = (f(x,t),1)
+$$
+with $f : M \times \mathbb{R} \rightarrow \mathbb{R}^d$ and $F : M \times R = \overline{M} \rightarrow \mathbb{R}^{d+1}$. At this point we can write the new differential equation:
+$$
+	\dot{y} = F(y)
+$$
+with initial condition $y(0) = (x_0,0)$. For this to be useful, we must show that knowing the solution to this new equation implies knowing the solution for the original one. \\
+Say $y(t) = (x(s),t(s))$ is a solution for the new equation
+$$
+	\left(\begin{matrix}
+		\dot{x}(s) \\ 
+		\dot{t}(s)
+	\end{matrix}\right) = 
+	F
+	\left(\begin{matrix}
+		x(s) \\ 
+		t(s)
+	\end{matrix}\right) =
+	\left(\begin{matrix}
+		f(x(s),t(s)) \\ 
+		1
+	\end{matrix}\right) = 
+$$
+$$
+	\dot{x} = f(x,s) \ \ \ \ \ \dot{t} = 1
+$$
+with initial conditions $x(0) = x_0$ and $t(0) = 0$. For what concerns t, it's the identity function, so $t(s) = s$, which means that I can invert $t$ and $s$, so going back to the first equation we have
+$$
+	\dot{x} = f(x,t)
+$$
+which was our original equation. This means that a solution for the non-autonomous equation is also a solution for the new autonomous one. \\
+So, if we have a theory that treats non-autonomous systems, that theory must also be able to treat autonomous systems. \\ \\
+If the $t$ variable is a natural number, we call it $n$
+$$
+	\phi^n = T^n
+$$

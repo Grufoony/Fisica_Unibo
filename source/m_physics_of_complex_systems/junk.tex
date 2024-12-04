@@ -1,0 +1,26 @@
+We consider a discrete dynamical variable $x_k$. \\
+The probability of a state can then be calculated as
+$$
+	p(x_k) = \frac{1}{T}\sum_t \delta(x(t)-x_k)
+$$
+The observation is $x(t)$, and our model (that we want to validate) is $y(t)$. Then the predictability of the model is
+$$
+	\pi_y = \frac{1}{T}\sum_t \delta(x(t)-y(t))
+$$
+We can also calculate the predictability as the probability of obtaining the obserated dynamics with our model
+$$
+	\pi_y = \left(p_y(x(t))\right)^\frac{1}{T}
+$$
+If we define the probability $p_k$, which is the probability of getting the state $x_k$, we define the probability as
+$$
+	p_y(x(t)) = \left(\Pi_{k=1}^N p_k \right)\frac{1}{T}
+$$
+So the predictability is
+$$
+	\pi_y = \Pi_{k=1}^N p_k^{p_k}
+$$
+and by doing the logarithm we get
+$$
+	\log(\pi_y) = \sum_{k=1}^N p_k\log(p_k) = -S
+$$
+which is Gibbs entropy.

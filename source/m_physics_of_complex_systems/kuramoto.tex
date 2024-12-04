@@ -1,0 +1,97 @@
+Let's take an oscillator described by the set of equations:
+$$
+	\dot{x_k} = \omega p_k 
+$$
+$$
+	\dot{p_k} = -\omega x_k - \sum_j L_{kj} p_j
+$$
+The summation represents friction, and we impose two conditions for $L_{kj}$:
+$$
+	L_{kj} < 0 \ if \ k\neq j
+$$
+$$
+	\sum_k L_{kj} = 0
+$$
+The combination of this two conditions means that the only positive terms are on the diagonal, and the sum of all the terms on the diagonal must be equal to the sum of all the other terms. Matrices like this are called \emph{laplacian matrices}. The form of this matrix means that there is an oscillation. \\
+For this matrix we are assured to have one null eigenvalue, because if we take the vector $v = (1,...,1)$, the fact that the sum of all the elements must be equal to zero assures that applying the vector to the matrix gives zero, thus the eigenvalue is zero. \\
+Why does this kind of matrix appear? \\ 
+In the most basic interaction network, the nodes are linked to others and the link value can be $1$, if there is a link, or $0$, if there isn't a link. This connections are described by the connectivity matrix, also called adjacency matrix, $A_{jk}$. \\
+The degree of a node, $d_k$, is the number of link that the node makes:
+$$
+	d_k = \sum_j A_{kj}
+$$
+The degree of the nodes can be distributed in different ways, like as a poissonian or a power law. In the latter case, the network is called scale-free:
+$$
+	p(D) \sim \frac{1}{D^\al}
+$$
+The laplacian matrix $L$ is given by the relation:
+$$
+	L = D - A
+$$
+where $D$ is the degree matrix, which contains the degree vector on the diagonal and has zeroes everywhere else. The minus sign is needed because of the condition that the elements outside the diagonal, in a laplacian matrix, must be negative. \\ \\
+Now we ask ourselves, for this kind of systems, where we have a certain number of oscillators, does exist a solution where all the oscillators are in phase, i.e. sincronized? \\
+This system is not hamiltonian, because we have dissipation, but it is linear. If we consider a generic linear system of the form:
+$$
+	\dot{z} = A z
+$$
+we know that the solution has an equilibrium limit, $\overline{z}$. We expect then that $\overline{z}$ has null eigenvalue
+$$
+	A \overline{z} = 0
+$$
+and we also expect all the eigenvalues of $A$ to be negative. \\
+If, in particular, we consider a system of the form:
+$$
+	\dot{x} = a(x)
+$$
+we can introduce a function $H(x)$, where we require that
+$$
+	\frac{d}{dt}H(x) = a(x)\frac{\partial H}{\partial x} < 0
+$$
+This functions are called Ljiapounov functions. With this functions we can describe the evolution of the system and its decrease towards equilibrium with just one function. So even if the system had many degrees of freedom, now it is a one-dimensional system. This suggests that finding this functions is of great interest. \\
+For example, in our system a good choice for the Ljiapounov function would be
+$$
+	H = \sum_k \frac{\omega}{2}(x^2_k + p^2_k)
+$$
+If we don't consider the interaction part, then each term is simply the hamiltonian of a single oscillator and the function is the sum of all the hamiltonians, and this is guaranteed to be conserved. This means that the non conservation comes entirely from the dissipation term, so we have
+$$
+	\frac{dH}{dt} = -\sum_{k,j} \omega p_k L_{kj}p_j < 0
+$$
+Now we take the laplacian matrix to be symmetric, and we then impose
+$$
+	\sum_j L_{kj}p_j = 0
+$$
+which means that $p_j = p_0 \ \forall j$. Alternatively we can write
+$$
+	p_j = p_0 \exp(i\omega t + \phi)
+$$
+and
+$$
+	x_j = -i\omega p_0 \exp(i\omega t + \phi)
+$$
+Originally, kuramoto model was:
+$$
+	\dot{\theta_k} = \omega_k + k\sum_j \sin(\theta_k - \theta_j)
+$$
+We introduce some new variables 
+$$
+	x_k = \sqrt{2I_k} \sim \theta_k
+$$
+$$
+	p_k = \sqrt{2I_k} \cos \theta_k
+$$
+We then get
+$$
+	\dot{\theta_k} = \omega + \frac{k}{2}\sum_j \sqrt{\frac{I_i}{I_k}}L_{kj}(\sin(\theta_k - \theta_j) + \sin(\theta_k + \theta_j))
+$$
+
+
+% We apply the average field theory. We try to define a self consistent solution, so that each oscillator becomes representative of the whole system. \\
+% We introduce the order parameter
+% $$
+% 	re^{i\phi} = \frac{1}{N}\sum_j e^{i\theta_j}
+% $$
+% If we think of this sum over all the circle, then by averaging all the randomly distributed theta, the result is zero. If, on the other end, the system is completely synchronize, the reult is 1. That's why it's called the order parameter. \\
+% We also have
+% $$
+% 	r\exp(i(\phi-\theta_k)) = \frac{1}{N}\sum_j\exp(i(\theta_j - \theta_k))
+% $$

@@ -1,0 +1,89 @@
+Shannon entropy is defined as
+$$
+	S = -'sum_k p_k\log p_k
+$$
+We want entropy to have certain characteristics:
+\begin{itemize}
+	\item Continuity with respect to the probability of the microstate (distribution). 
+	\item p_k = \frac{1}{n}.
+	\item S(n) > S(n-1).
+	\item Compositional law: If we have a collective state $w_1 = \{x_1,x_2,...\}$, then its probability is the sum of the probabilities, $p(w_1) = p_1 + p_2 + ...$.
+	\item The entropy of a probability distribution is
+$$
+	S(p) = S(p(w)) + p(w_1)S(p(x|w_1)) + p(w_2)S(p(x|w_2)) + ...
+$$
+\end{itemize}
+
+The number of macrostates is $M=mn$, where each one has probability $p=1/N$. \\
+We let each $w$ contain $n$ microstates and the number of $w$ is $m$. \\
+Then the probability $p(w)$ is
+$$
+	p(w) = \frac{n}{N} = \frac{1}{m}
+$$
+For conditional probability of getting a microstate when we fix $w$ is $p=1/n$. \\
+So we have a distribution of the aggregate states $w$ and and a distribution for each of the states. \\ \\
+For the entropy we must have
+$$
+	S(p=\frac{1}{M}) = S(p=\frac{1}{m}) + \sum_i \frac{1}{m}S(p=\frac{1}{n})
+$$
+If	 we define $A(n)$ as
+$$
+	A(n) = S(p=\frac{1}{n})
+$$
+we have that
+$$
+	A(N) = A(mn) = A(m) + A(n)
+$$
+Of course, there is only one function that converts the product of the arguments into the sum of the images, and that is the logarithm. \\
+So $A(n)$ should be of the form
+$$
+	A(n) = k\log n
+$$
+with $k>0$, because we want the entropy to increase with $n$. \\
+The entropy of an aggregates state is
+$$
+	S(p_1,p_2,...) = k\log N -k\sum_j p_j \log n_j
+						= -k\sum_j p_j \log \frac{n_j}{N}
+						= -k\sum_j p_j \log p_j
+$$	
+
+
+In complex system theory, once we have the probability distribution $p(x)$ of a variable $x$, we calculate the entropy as
+$$
+	S(p) = -\int p(x)\log p(x) dx
+$$
+
+
+In order to maximize the function
+$$
+	-\sum_j p_j \log p_j
+$$
+with the constraint
+$$
+	\sum_j p_j = 1
+$$
+we use the method of lagrange multipliers
+$$
+	F(p) = -\sum_j p_j\log p_j + \la \sum_j p_j
+$$
+Then, we calculate the variation of $F(p)$
+$$
+	\delta F = -\sum_j \delta p_j (-\log p_j + \la) - \sum_j \delta p_j = 0
+$$
+where the second term is null, becuase the variation of the variable can be taken arbitrarily small. \\
+If the variation must be equal to 0, we must have that the logarithm of the probability is equal to $\la$, hence $p_j = constant$. This means that all the outcomes must have the same probability. 
+By using again the method of lagrange multipliers we can, if we have a physical quantity $E$ (for example energy), we can find its distribution, and we obtain
+$$
+	p_j = \frac{1}{\overline{E}} \exp(-E_j/E)
+$$
+The probability distributio can also depend on time, $p(x,t)$:
+$$
+	S(t) = -\int p(x,t)\log p(x,t)dx
+$$
+But, we define entropy in thermodynamics when we are talking about equilibrium, but if $S$ depends on time, we are not at equilibrium. \\
+Is entropy increasing with time? We don't know.
+
+
+
+
+

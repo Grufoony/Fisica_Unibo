@@ -1,0 +1,82 @@
+The most simple model possible is the linear model
+$$
+	\dot{x} = Ax
+$$
+Albeit this model is easy, there are a few complications that have to be taken into account:
+\begin{itemize}
+	\item When the number of dimensions increases it becomes complicated. 
+	\item If we consider the determinant
+$$
+	det(\la I - A) = 0
+$$
+we obtain a polinomial equation, that can be very hard to solve. 
+	\item To further complicate things, $A$ might not be known, but we could have an ensemble of matrices. 
+	\item The point $x=0$ is always a critical point, so we can always linearize the system around this point, but if $A$ has critical points then we get those as well. 
+\end{itemize}
+By solving the determinant equation, we get the eigenvalues $\la$, whose study can tell a lot about the behaviour of the solutions. \\
+If $Re \la \leq 0$, this means that the exponential term of the solution shrinks, so it converges. \\ \\
+Robustness means that if we perturb the system, the solutions don't change too much. A model must be robust, otherwise it can fit any kind of data simply by slightly changing the parameters. \\ \\
+The formal way to write the solution of such a linear system is
+$$
+	x(t) = x_0\exp(At)
+$$
+For coefficients $\la^*$ such that $Re\la^* > 0$, we have that
+$$
+	|\delta x| \approx |e^{\la^* t}||\delta x_0|
+$$
+This is very tipical, and from this rises the chaos theory. In this case, even a small error in the initial condition will increase the error in the model exponentially fast. \\ \\
+We get another interesting model by adding some noise to the linear model
+$$
+	\dot{x} = Ax + \xi(t)
+$$
+We consider a special solution of the form
+$$
+	x = e^{At}y
+$$		
+and we substitute in the equation
+$$
+	\dot{x} = A\exp(At)y + \xi(t) = A\exp(At)y + \exp(At)\dot{y}
+$$	
+$$
+	\dot(y) = \exp(-At)\xi(t)
+$$
+So the complete solution of the problem is
+\begin{equation}
+	x(t) = \exp(At)x_0 + \int_0^t \exp(A(t-s))\xi(s)ds
+\end{equation}
+If the system is stable (negative real part of lambda) and we use a periodic forcing, the solution is still a periodic function with different period. \\ \\
+Now we want to consider the case of a perturbed matrix:
+$$
+	\dot{x} = (A+\varepsilon B)x
+$$
+with $\varepsilon \ll 1$. \\
+The solution is
+$$
+	x(t) = \exp((A+\varepsilon B) t)x_0
+$$
+and to understand the system's sensitivity we calculate the derivative for small perturbations
+$$
+	\frac{d}{d\varepsilon}\exp((A+\varepsilon B)t)
+$$
+but the problem is that usually the two matrices are not commutative. \\
+If we take the special solution $x = \exp(At)x_0$ and we substitute we get
+$$
+	\dot{y} = \varepsilon\exp(-At)B\exp(At)y
+$$
+and, if $A$ and $B$ do not commute, this equation is very difficult to solve. \\
+An approximate solution is
+$$
+	y(t) = y_0 + \varepsilon\int_0^t \exp(-As)B\exp(As)y_0ds + O(\varepsilon^2)
+$$
+and the solution for x is
+\begin{equation}
+	x(t) = \exp(At)x_0 + \varepsilon\int_0^t \exp(A(t-s))B\exp(As)x_0ds + O(\varepsilon^2)
+\end{equation}
+Now, the sensitivity of the system is
+$$
+	\frac{dx}{d\varepsilon} = \int_0^t \exp(A(t-s))B\exp(As)x_0ds 
+$$
+In the particular case where the matrix is diagonal, the sensitivity becomes
+$$
+	\frac{dx}{d\varepsilon} = \int_0^t \exp(\la_i(t-s))B_{ij}\exp(\la_js)x_0ds 
+$$

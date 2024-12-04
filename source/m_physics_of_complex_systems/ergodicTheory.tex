@@ -1,0 +1,145 @@
+Ergodic theory is the study of dynamical systems from the point of view of measure theory, hence of probability. \\
+One first measure comes from analytical mechanics. We consider a measure space $M$, and in this space we have an energetic hypersurface. Then we define the Liouville measure as
+$$
+	d\mu = \frac{d\sigma}{|\nabla H|}
+$$
+where $d\sigma$ is the measure of an infinitesimal portion of the hypersurface and $\nabla H$ is the gradient of the hamiltonian of the system. \\
+We can derive the expression for the Liouville measure by considering the hypersurface with a bit of thickness in the direction of the gradient, forming in this way a volume $A$, and of course the system's dynamics is going to conserve the Lebesgue measure of $A$
+$$
+	Leb(A^t) = Leb(\phi^t(A)) = Leb(A)
+$$
+If we then move in the direction of the gradient by a quantity $h$, we increase the energy by a quantity
+$$
+	\Delta H = |\nabla H|h
+$$
+Then the conservation of the Lebesgue measure implies that
+$$
+	\sigma(B^t)h^t = \sigma(B)h
+$$
+so we are not only on the same energy surface, we are in the same energy shell. We can write this as
+$$
+	\frac{\sigma(B^t)\Delta H}{|\nabla H_f|} = \frac{\sigma(B)\Delta H}{|\nabla H_i|}
+$$
+and we can simplify the delta, so
+$$
+	\frac{\sigma(B^t)}{|\nabla H_f|} = \frac{\sigma(B)}{|\nabla H_i|}
+$$
+and we have thus obtained the expression for the Liouville measure. \\ \\ 
+In ergodic theory we consider the space, along with the measure and the systems flux, $(M,\mu,\phi^t)$, or in discrete time $(M,\mu,T)$. \\
+The first thing that we could ask ourselves is the probability that $\phi^t \in A$. So now we don't consider a single trajectory but all the possible trajectories, and want to find the probability that they are contained in a certain portion of space. This probability is equal to 
+$$
+	P(\phi^t \in A) = \mu(\phi^{-t}(A)) = \mu(\{x\in M \ | \ \phi^t(x) \in A\})
+$$
+A this point we can define the concept of a measure preserved by the dynamics
+\begin{definition}
+	A measure is preserved by the dynamics if 
+	$$
+		\mu(\phi^{-t}(A)) = \mu(A)
+	$$
+	where $A$ must be measurable, so it must belong the the $\sigma-$algebra of the space.
+\end{definition}
+From now on we restrict to measures that preserve the dynamics, which are also called invariant measures. \\ \\
+An example of a measure preserving dynamical system is the doubling map. To see this, if we take the counter image of a set $A$, this is equal to the union of two sets $A_1$ and $A_2$, which are measurable. In this case it is important to consider the counter image of the set, because the image wouldn't preserve the set
+$$
+	\mu(TA) \neq \mu(A)
+$$
+When the two are equal, we have forward preservation. \\
+An observable is any function of the phase space, $f:M \rightarrow R$, that represents any quantity of the system that can be observed and measured, thus giving us information about the system. An observable could the the temperature in a room, the moment of a particle or anything really.
+\begin{definition}
+	An observable $f:M \rightarrow R$ is said to be dynamics invariant (in ergodic theory) if
+	$$
+		f \circ \phi^t(x) = f(x)
+	$$
+\end{definition}
+We notice that this is equivalent to the definition that we had before, but in the study of dynamical systems we asked for the relation to hold for every value of $x$, but we can't do this in ergodic theory, because not all the points in the space are seen by the measure. In ergodic theory we say that a relation holds if it holds almost everywhere, that is, if it doesn't hold only on subsets of the space that have zero measure. \\ \\
+We also define the concept of an invariant set.
+\begin{definition}
+	A set $A$ is invariant if
+	$$
+		\phi^t(A) = A \ mod \ \mu
+	$$
+	We can also write it as
+	$$
+		\mu(\phi^{-t}A \Delta A) = 0
+	$$
+	where 
+	$$
+		A \Delta B = (A\cup B) \ (A \cap B)
+	$$
+\end{definition}
+We then define push-forward measures:
+\begin{definition}
+	We define a push-forward measure as
+	$$
+		\phi^t * \mu(A) = \mu(\phi^{-t}(A))
+	$$
+\end{definition}
+The measure contains the counter image because we are considering the points at an initial time and this allows us to require that they will be in the set at forward times. We can say, in probability terms, that the probability of being in $A$ at time $t$ is the same as the probability of being in $A$ at previous times. \\ \\	
+Now we can note that a measure $\mu$ is preserved by the dynamics if an only if
+$$
+	\phi^t * \mu = \mu
+$$
+Now, if $\phi^t * \mu \rightarrow \nu$, then $\nu$ is called an equilibrium measure.
+\section{Birkhoff's ergodic theorem}
+Given an observable $f:M\rightarrow M$ we define the Birkhoff (time) average as
+$$
+	f^*(x) \ \lim_{t\rightarrow \infty} \frac{1}{T}\int_0^T f\circ \phi^t(x)dt
+$$
+The Birkhoff theorem states that:
+\begin{prop}
+	Given a measure preserving dynamical system $(M,\mu,T)$ with $\mu(M)=1$, if $f\in L^1(M,\mu)$, then 
+	\begin{itemize}
+		\item the limit $f^*$ exists almost everywhere
+		\item 
+			$$
+				\int_M f^* d\mu = \int_M f d\mu
+			$$
+	\end{itemize}
+\end{prop}
+\begin{definition}
+	A measure preserving dynamical system is ergodic if and only if for every $f\in L^1$ exists $c$ such that $f^*(x) = c$ for almost all values of $x$. 
+\end{definition}
+\begin{prop}
+	The following statements are equivalent:
+	\begin{itemize}
+		\item $\forall f\in L^1$, $f^* = const$	
+		\item $\forall f\in L^1$, $f^* = \int f d\mu$
+		\item if $f \in L^1$ is invariant, then it is constant
+		\item if $A \subseteq M$, which we take to be measurable, is invariant, the measure is $\mu(A) \in \{0,1\}$
+	\end{itemize}
+\end{prop}
+\begin{proof}
+	\begin{itemize}
+		\item (1) implies (2) because, if $f^*$ is constant, by Birkhoff's theorem it's integral is equal to the integral of $f$. Since $f^*$ is constant, we can take is cout of the integral, and 
+			$$
+				\int d\mu = 1
+			$$
+			because $\mu$ is a probability measure. So
+			$$
+				f^* = \int f d\mu
+			$$
+		\item (2) implies (3) because, if we take $f$ invariant, so $f\circ T = f$, we can also say that $f\circ T^k = f$ for every $k$, which means that it is invariant at all times. This means that in calculating $f^*$ we are summing $f$ a number of times and then dividing by that number, so it remains $f$. But if $f^* = f$, by (2) we have that
+			$$
+				\int f d\mu = f
+			$$
+			which assures that $f$ is a constant.
+		\item (3) implies (4) because, if we apply (3) to $f=1_A \in L^1$, knowing that $T^{-1}A=A \mod\mu$ it's true that $1_{f^{-1}_A}=1_A$ $\mu$-a.e.
+			$1_{f^{-1}_A} = 1 \circ T$, so by (c) $1_A$ is constant $\mu$-a.e.
+			So if $1_A = 0$, $A=\emptyset\mod\mu$ then $\mu(A)=0$, or if $1_A=1$, $A=M\mod\mu$ then $\mu(A)=1$
+		\item (4) implies (1) because, if we claim that a function $f:M \rightarrow R$ is constant almost everywhere only if exists a constant $l$ such that $\mu(\{x\in M | f(x) \leq l\})\in (0,1)$, this set is increasing as we increase $l$. Now, if $l$ goes to $-\infty$ the measure goes to $0$, and if $l$ goes to $\infty$, the measure goes to $1$. The function can only jump in going from $0$ to $1$, but it can't do it all in one jump, so it must be constant except on the jumps.
+	\end{itemize}	
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

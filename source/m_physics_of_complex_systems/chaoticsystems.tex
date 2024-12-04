@@ -1,0 +1,252 @@
+% classification of chaotic systems
+Let $\pi^1$ be a one-dimensional thorus (a circle). We define the transformations 
+$$
+	R_\alpha : \pi^1 \rightarrow \pi^1, \ R_\alpha(x) = (x + \alpha) \ mod \ 1
+$$
+which are called rotations by an ``angle" $\alpha$. \\
+Now, if $\alpha = p/q$, with $\gcd(p,q)=1$, then:
+\begin{itemize}
+	\item all orbits are periodic with fundamental period $q$. 
+	\item if $\alpha$ is not rational, then all orbits are dense. 
+\end{itemize}
+\begin{proof}
+	\begin{itemize}
+		\item We consider that $R^n_\alpha(x)=x$ is equivalent to $(x + n\alpha) \ mod \ 1 = x$, so 
+		$$ 
+			\left(x + n\frac{p}{q}\right) \ mod \ 1 = x
+		$$
+		which means that, 
+		$$
+			n\frac{p}{q} = k \ \longrightarrow	\ n = \frac{kq}{p}
+		$$
+		and for $n$ to be an integer, p needs to be simplified, but it can't be simplified with $q$, so it simplifies with $k$, which is then equal to $k = mp$. So in the end we get
+		$$
+			n = mq
+		$$
+		\item In order to prove that all orbits are dense, we prove that they are $\varepsilon-dense$ for all $\varepsilon$. \\
+		Since $\alpha$ is not rational, the orbit must be infinite, because it is not periodic. Then, we can say that there is at least one accumulation point in the orbit. \\
+		Now, call $j = n - m$, then we can say that $\{R^{k_j}_\alpha\}_k$ is $\varepsilon-dense$ in $\pi^1$, which means that the orbit is dense.
+	\end{itemize}
+\end{proof}
+\subsection{Topological transitivity}
+\begin{definition}
+	A dynamical system $(M,\phi^t)$ is called topologically transitive (or just transitive) if exists $x\in M$ such that the future orbit
+	$$
+		O^t(x) = \{\phi^t(x)\}
+	$$
+	is dense.
+\end{definition}
+So a transitive system is a system that has at least one dense orbit. Going in that direction, if all the orbits are dense we say that the system is minimal.
+\begin{definition}
+	A system is called minimal if all forward orbits $O^t(x)$ are dense. 
+\end{definition}
+Another very important definition is that of an invariant subset:
+\begin{definition}
+	A subset $A \subseteq M$ is called invariant if $\phi^{-t}(A) = A$ for every $t$. \\
+	Note that if $\phi^t$ is invertible, this statement is equivalent to saying that $\phi^t(A) = A$ for every $t$.
+\end{definition}
+Finding invariant subsets is important because we know that if we have an initial condition in that region, the orbit is going to stay in there. Of course, this doesn't give us the trajectory, but it helps us by restricting the phase space. \\ \\
+A function $f:M\rightarrow R$ (observable) is called invariant if $f\circ\phi^t = f$ for every $t \geq 0$. This is what is called in mechanics a prime integral of motion. \\
+Suppose $f = 1_a$, where $1_a(x) = 1$ if $x\in A$ and $1_a(x) = 0$ if $x \notin A$. Then we have that
+$$
+	1_a \circ \phi^t = 1_a
+$$
+but also 
+$$
+	1_a \circ \phi^t = 1_{\phi^{-t}(A)}
+$$
+So combining the two we get that 
+$$
+	\phi^{-t}(A) = A
+$$
+\begin{prop}
+	If a dynamical system is topologically transitive, there exists no continuous invariant observables other than constant functions.
+\end{prop}
+%proof
+\begin{proof}
+	Say that $O^t(x_0)$ is dense. Now, taking any $y \in M$, we can say that exists a sequence $x_j = \phi^{t_j}(x_0)$ such that $x_j \longrightarrow y$. \\
+	Now, suppose that a function $f$ is continuous, then
+	$$
+		f(x_j) \longrightarrow f(y)
+	$$
+	and suppose that $f$ is invariant, so that
+	$$
+		f(x_j) = f(\phi^{t_j}(x_0)) = f(x_0) = C
+	$$
+	Since we have taken $f$ to be continuous, $f(x_j)$ must converge to $f(y)$, but since it is constant and equal to $C$, it can only converge to $C$, which means that
+	$$
+		f(y) = C
+	$$
+	which is a constant function.
+\end{proof}
+\subsection{Rotation on a d-thorus}
+Now we try to generalize rotations of the circle to translations of a d-thorus. \\
+We define the translation on a d-thorus $T_\gamma$ as:
+$$
+	T_\gamma : \pi^d \rightarrow \pi^d, \ T_\gamma (x) = (x_1 + \gamma_1, x_2 + \gamma_2, ...) \ mod \ 1 = (x + \gamma) \ mod \ 1
+$$
+\begin{definition}
+	A collection of real numbers $\{\la_1,\la_2,...\}$	is said to be \textit{rationally independent} if none of them can be written as a combination of the others with rational coefficients.
+\end{definition}
+Now that we have defined the concept of rational dependence, we can use it to introduce a characteristic of the translations on d-thori in the case where the vector components are rationally independent:
+\begin{prop}
+	Given a translation on a d-thorus $T_\gamma$, it is minimal if and only if $\{1,\gamma_1,\gamma_2,...\}$ are rationally independent. 
+\end{prop}
+% obs
+In this case, topological transitivity (so the fact that the system hase one dense orbit) is equivalent to minimality (so all the system's orbits are dense). \\ 
+This is due to the fact that translations commute. In fact, if we define a translation of the initial point $x_0$
+$$
+	T_{x-x_0}(x_0) = x
+$$
+then we see that translating the orbit of $T_\gamma$ starting from $x_0$ gives an orbit which is identical to the orbit starting from $x$: 
+$$
+	O^t(x_0) = O(x)
+$$
+$$
+	T_{x-x_0} O^t(x_0) = T_{x-x_0}(T^k_\gamma(x_0)) = T^k(T_{x-x_0}(x_0)) = O(x)
+$$
+which means that the translated orbit is dense if and only if the initial one is dense, so translating a dense set we get another dense set. \\ \\
+So we only need to show topological transitivity, instead of minimality. Let's show that topological transitivity implies rational independence: By contradiction, suppose that $1,\gamma_1,\gamma_2,...$ are not rationally independent, which means that exists a set $k_1,k_2,...$, where $k_i$ are not all zero, such that
+$$
+	\sum_i k_i\gamma_i = 0
+$$
+We then define the function $f(x) = e^{2\pi i \lang k,x\rang}$, which is continuous and non constant, because not all $k_i$ are zero (so you have at least one $x_i$ in the exponent). Now we just need to show that $f$ is invariant. To do this we calculate $f(T_\gamma(x))$:
+$$
+	f(T_\gamma(x)) = \exp(2\pi i \lang k, x + \gamma \rang) = \exp(2\pi i \sum_i k_ix_i)\exp(2\pi i \sum_i k_i \gamma_i) 
+$$
+$$
+	= \exp(2\pi i \sum_i k_ix_i) = f(x)
+$$
+and this holds for every $x$ in the thorus. \\ \\
+% poincarre sections
+Let's take a system on a ring, and the dynamics represents rotations on this ring. We can imagine this as a cave tube filled with fluid (marmellade). In this case, the motion of the fluid will be laminar. \\
+In discrete time, we take a surface with codimension 1, which is intersects the trajectory in a point $x$, and we want to find after how many iterations the trajectory intersects the surface again, so in other words, how long it's going to take for the trajectory to intersect the surface again. \\
+A Poincarre section of a continuous dynamical system is a codimension 1 submanifold such that all trajectories cross it transversally (more or less). \\
+In this case, the so called Poincarre map, also known as first return map, is defined as follows:
+$$
+	T_{M_0}: M_0 \rightarrow M_0, \ T_M(x) = \phi^{t_{M_0}(x)}(x) = \min \{t > 0 | \phi^t(x)\in M_0\}
+$$
+where $t_{M_0}$ is the return time to $M_0$.
+
+\subsection{The Kronecker flow}
+Continuous time dynamical system, the Kronecker flow.
+$$
+	\phi^t : \pi^d \rightarrow \pi^d
+$$
+given by the solutions of the ODE
+$$
+	\dot{x} = \omega
+$$
+In this case it's very easy to find the flux, which is simply
+$$
+	\phi^t(x) =  (x + \omega t) \ mod \ 1
+$$
+In general terms, suppose that $\omega = (\omega_1,\omega_2,...,\omega_d)$ with $\omega_d > 0$. Then the bottom side of the thorus $M_0$ is
+$$
+	M_0 = \{(x_1,x_2,...,x_{d-1},0)\in \pi_d \} = \pi_{d-1}
+$$
+and we know that all trajectories must cross this subspace. \\
+The first return map is 
+$$
+	T_{M0}:M_0 \rightarrow M_0, \ T_{M0}(x) = \phi^{t_{M0}(x)}(x) = x + \frac{\omega}{\omega_d} \ mod \ 1
+$$
+This is the same as
+$$
+	T_\gamma : \pi^{d-1} \rightarrow \pi^{d-1}
+$$
+with $\gamma=(\omega_1/\omega_d,\omega_2/\omega_d,...)$. \\
+Now we ask ourselves, when are the orbits of $T_\gamma$ dense? The answer is that they are when $\gamma_1,\gamma_2,...,\gamma_{d-1},1$ are rationally independent. But this condition is met if and only if $\omega_1,...,\omega_d$ are rationally independent. \\
+This means that the trajectories of $\phi^t$ are dense if and only if $\omega_1,...,\omega_d$ are rationally independent.
+
+\subsection{Important map}
+$$
+	T_2(x) = T(x) = 2x \ mod \ 1
+$$
+We can think of this map as either a map that goes from $[0,1]$ to itself, or as a map on a thorus. Alternatively it can be written as
+$$
+	T(x) = 2x, \ 0 \leq x \leq \frac{1}{2}
+$$
+$$
+	T(x) = 2x-1, \ \frac{1}{2} \leq x \leq 1
+$$
+If we consider it as a map on a thorus, it is quite easy to see that this map is continuous. \\
+As we have seen, this map is chaotic. To understand, if we consider two points $x_1$ and $x_2$, positioned at a distance $\varepsilon$, their distance after one iteration becomes $4\varepsilon$. \\
+
+We understand that after a number of iterations these two points diverge pretty quickly, no matter how small we take $\varepsilon$ to be. \\
+We write $x$ as $x = 0.d_1d_2d_3$, where $d_i$ are the digits. It can be written as
+$$
+	x = \sum_i^{\infty} 2^{-i}d_i
+$$
+We define the map $T(x)$ as 
+$$
+	T(x) = T(0.d_1d_2d_3) = 0.d_2d_3
+$$
+\begin{definition}
+	A topological dynamical system (a system for which we care about topological properties) is said to be topologically mixing if $\forall U,V$ non-empty open sets, $\exists N = N(U,V) \in N$ such that 
+	$$
+		\phi^t(U) \cap V \neq \emptyset
+	$$
+	for all $t$.
+\end{definition}
+\begin{prop}
+	$(M,\phi^t)$ is topologically transitive if and only if $\forall U,V$ non-empty open sets $\exists N = N(U,V)$ so that $\phi^N(U)\cap V \neq \emptyset$.
+\end{prop}
+A corollary of this proposotion is that topological mixing implies topologically transitive. \\ \\
+We want to show that this map is topologically mixing. We know that a set, which is the arc connecting two points, expands in length after each iteration, and after a certain point it will fill the whole circle, and at that point it will keep being the whole circle, and in that case it's obvious that the intersection is not null. So we just need to prove that after a certain number of iteration the expanded set will fill the whole circle. \\
+The function after $n$ iterations is
+$$
+	T^n(x) = 2^n(x) \ mod \ 1
+$$
+For any $n$
+$$
+	T^n(\left[\frac{k}{2^n},\frac{k+1}{2^n}\right]) = [0,1] = \pi^1
+$$
+Since $U$ is open, exists an $n$ with $0 < k < 2^n - 1$ such that $\left[\frac{k}{2^n},\frac{k+1}{2^n}\right]) \subset U$ \\ \\
+% non ho capito
+The number of periodic points of period $n$ of this map are $2^n - 1$. 
+
+\subsection{Arnold's cat map}
+$$
+	T : \pi^2 \rightarrow \pi^2, \ T(x) = T(x_1,x_2) = A (x_1,x_2) \ mod \ 1
+$$
+where $A$ is the matrix
+$$
+	A = \begin{pmatrix}
+		2 & 1 \\
+		1 & 1
+	\end{pmatrix}
+$$
+If we look how the points $(1,0)$ and $(0,1)$ transform, we see that they go to $2,1$ and $(1,1)$. \\
+This map preserves the Lebesgue measure $\mu$
+$$
+	\mu(T^{-1}B) = \mu(B)
+$$
+If the system is bijective, this is the same as saying
+$$
+	\mu(TB) = \mu(B)
+$$
+so we can go forward in time. We know that the measure is preserved because $\det A = 1$. \\
+We study the eingenvalues and eigenvectors of this matrix. These are $\la_1 = \la = \frac{3+\sqrt{5}}{2}$ and $\la_2 = \la^{-1} = \frac{3-\sqrt{5}}{2}$, with corresponding eigenvectors $(1,\frac{\sqrt{5}-1}{2})$ and $(1,-\frac{\sqrt{5}+1}{2})$. \\
+The two eigenvectors represent the directions of maximum expansion and of maximum contraction. \\
+If we take a point on the expanding eigenvector, its orbit diverges from the origin, whereas for a point on the contracting eigenvector the orbit is attracted to the origin. If we take a point which is a linear combination of the two directions, after each iteration the point gets closer and closer to the expanding eigenvector, because the component along the contracting eigenvector gets smaller after each iteration, and eventually it will disappear.
+\begin{prop}
+	The cat map $T_A$ is topologically mixing.	
+\end{prop}
+This map is an example of an "hyperbolic dynamical system". Let's call 
+$$
+	W^u(x) = \{y=(y_1,y_2)\in \pi^2| y_2-x_2 = \frac{\sqrt{5}-1}{2}(y_1-x_1) \ mod \ 1\}
+$$
+where $x$ are constants, an unstable manifold. Then we can define the stable manifold as
+$$
+	W^s(x) = \{y=(y_1,y_2)\in \pi^2| y_2-x_2 = -\frac{\sqrt{5}+1}{2}(y_1-x_1) \ mod \ 1\}
+$$
+Why do we expect systems like this to have a lot of periodic orbits?
+Because of the stretching and folding mechanism. To see this, let's consider an hyperbolic rectangle, which is made up of pieces of stable manifolds in some points and unstable manifolds in other points. Now, we apply our dynamics to it, so the unstable manifolds will stretch and the stable ones will contract. \\
+So if we have the rectangle $R$ and the transformed rectangle $R'=T(R)$, $R'$ will cross $R$ ad some point, with the condition that we can't have unstable manifolds crossing other unstable manifolds. Once we have found the intersection of the original rectangle and the transformed rectangle, we have found a fixed point of the transormation, hence we have found a periodic point, which implies the existence of a periodic orbit.
+
+
+
+
+
+
+
