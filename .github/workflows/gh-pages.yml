@@ -24,7 +24,7 @@ jobs:
         run: |
           sudo apt install texlive-full dvipng texlive-lang-italian
       
-      - name: Build documentation
+      - name: Build html files
         run: |
           cd source
           for i in *.tex; do htlatex $i; done
@@ -39,5 +39,5 @@ jobs:
       - name: Commit and Push
         run: |
           git add .
-          git commit -m "Auto-deploy documentation"
+          git commit -m "Auto-deploy html files"
           git push --force
