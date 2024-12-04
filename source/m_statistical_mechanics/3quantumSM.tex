@@ -301,16 +301,18 @@ $$\psi(\sigma(1), \sigma(2), \dots,\sigma(N)) = e^{i\phi_\sigma}\psi(1, 2, \dots
 
 If we then decompose a permutation into transpositions that generate it:
 $$\sigma = \sigma_{\alpha_1}, \sigma_{\alpha_2}, \dots, \sigma_{\alpha_k} $$
-\begin{align*}
-    \psi(1,2,\dots, N) \xmapsto{\sigma_{\alpha_1}}&\ \psi(\sigma_{\alpha_1}(1,\dots N)) = e^{i\phi_{\alpha_1}}\ \psi(1,\dots, N) \\
-    \xmapsto{\sigma_{\alpha_2}}&\ e^{i\phi_{\alpha_2}} \left(e^{i\phi_{\alpha_1}}\ \psi(1,\dots, N)\right) \\
-    \xmapsto{\dots}&\ e^{i(\phi_{\alpha_1} + \phi_{\alpha_2} + \dots + \phi_{\alpha_N})}\ \psi(1,\dots, N) = e^{\phi_\sigma}\psi(1,\dots, N)
-\end{align*}
+\begin{equation*}
+    \begin{aligned}
+        \psi(1,2,\dots, N) \xmapsto{\sigma_{\alpha_1}}&\ \psi(\sigma_{\alpha_1}(1,\dots N)) = e^{i\phi_{\alpha_1}}\ \psi(1,\dots, N) \\
+        \xmapsto{\sigma_{\alpha_2}}&\ e^{i\phi_{\alpha_2}} \left(e^{i\phi_{\alpha_1}}\ \psi(1,\dots, N)\right) \\
+        \xmapsto{\dots}&\ e^{i(\phi_{\alpha_1} + \phi_{\alpha_2} + \dots + \phi_{\alpha_N})}\ \psi(1,\dots, N) = e^{\phi_\sigma}\psi(1,\dots, N)
+    \end{aligned}
+\end{equation*}
 with: $\phi_\sigma = \phi_{\alpha_1} + \phi_{\alpha_2} + \dots + \phi_{\alpha_k}$
 
 Let's now analyze a single transposition: $\sigma_j : \psi(1,\dots, N) \mapsto e^{i\phi_j} \ \psi(1,\dots, N)$, which we will simply write as $\sigma_j \mapsto e^{i\phi_j}$.\\
 This must satisfy the (i),(ii),(iii) relations of a transposition and this leads to some considerations on the phase:
-\begin{enumerate}[label=\roman*)]
+\begin{enumerate}[label=\roman*]
     \item if $|i-j| \ge 2$, then $\sigma_i\sigma_j = \sigma_j\sigma_i$, so:
     \begin{align*}
     \begin{rcases}
@@ -342,18 +344,21 @@ This must satisfy the (i),(ii),(iii) relations of a transposition and this leads
 \end{enumerate}
 
 So there are only 2 possibilities (since $\phi \in [0,2\pi[$): 
-\begin{align*}
-    1. \quad \phi = 0 \qquad &\psi(1,\dots,N) \xmapsto{\sigma_j} \psi(1,\dots,N) \\
-    2. \quad \phi = \pi \qquad &\psi(1,\dots,N) \xmapsto{\sigma_j} -\psi(1,\dots,N) \qquad \small{(e^{i\pi} = -1)}
-\end{align*}
+\begin{equation*}
+    \begin{aligned}
+        1. \quad \phi = 0 \qquad &\psi(1,\dots,N) \xmapsto{\sigma_j} \psi(1,\dots,N) \\
+        2. \quad \phi = \pi \qquad &\psi(1,\dots,N) \xmapsto{\sigma_j} -\psi(1,\dots,N) \qquad \small{(e^{i\pi} = -1)}
+    \end{aligned}
+\end{equation*}
 
 This applies for a single transposition. For the whole permutation $\sigma = \sigma_{\alpha_1}\sigma_{\alpha_2}\dots\sigma_{\alpha_k}$ and $\phi_\sigma = \phi_{\alpha_1} + \phi_{\alpha_2} + \dots + \phi_{\alpha_k}$. So we have:
 
-\begin{align*}
-    1. \quad \phi_{\alpha_j} = 0\quad &\phi_\sigma = 0 \qquad \psi(1,\dots, N) \xmapsto{\forall\sigma \ \in \ \proj_N} \psi(1,\dots,N) &\text{(Bosons)}\\
-    2. \quad \phi_{\alpha_j} = \pi \quad &\phi_\sigma = k\pi \qquad e^{i\phi_\sigma} = e^{ik\pi} = (-1)^k \qquad \begin{array}{l} \text{$k$ even } \psi \mapsto\psi \\ \text{$k$ odd } \psi \mapsto -\psi \end{array} &\text{(Fermions)}
-\end{align*}
-
+\begin{equation*}
+    \begin{aligned}
+        1. \quad \phi_{\alpha_j} = 0\quad &\phi_\sigma = 0 \qquad \psi(1,\dots, N) \xmapsto{\forall\sigma \ \in \ \proj_N} \psi(1,\dots,N) &\text{(Bosons)}\\
+        2. \quad \phi_{\alpha_j} = \pi \quad &\phi_\sigma = k\pi \qquad e^{i\phi_\sigma} = e^{ik\pi} = (-1)^k \qquad \begin{array}{l} \text{$k$ even } \psi \mapsto\psi \\ \text{$k$ odd } \psi \mapsto -\psi \end{array} &\text{(Fermions)}
+    \end{aligned}
+\end{equation*}
 For bosons, the way function is completely symmetric. For fermions it is completely anti-symmetric. \gray{Remark: what we call \textit{bosons} and \textit{fermions} are just due to the statistic and has nothing to do with spin. Only in relativistic quantum mechanics one can prove the spin-statistic theorem.}
 
 
@@ -1322,7 +1327,7 @@ As you can notice in Fig. \ref{fig:n0-nn}, both $n_0(T)$ and $n_n(T)$ are contin
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width = 8cm]{images/n0 and nn.png}
+    \includegraphics[width = 8cm]{n0 and nn.png}
     \caption{$n_n(T)$ and $n_0(T)$. For $T < T_c$ we have a Bose-Einstein condensate.}
     \label{fig:n0-nn}
 \end{figure}
@@ -1354,7 +1359,7 @@ $$
     Recall that classically we had $E = N \frac32 k_BT$, so $c_V = \frac32 k_BT$, which was wrong for low temperatures ($c_V\xrightarrow[T\to 0]{}0$ classically). Now quantum mechanics solves the problem and we can correct it. $c_V(T)$ is plotted in Fig. \ref{fig:cv}, where we can see that it is continuous in $T_c$ but not differentiable (it has a cusp). This is again another signal of a phase transition.
     \begin{figure}[ht]
         \centering
-        \includegraphics[width = 8cm]{images/cv(T).png}
+        \includegraphics[width = 8cm]{cv(T).png}
         \caption{$c_V(T)$ for Bosons (red) and Fermions (green). In the Bose-Einstein distribution, the cusp at $T_c$ indicate a phase transition.}
         \label{fig:cv}
     \end{figure}
