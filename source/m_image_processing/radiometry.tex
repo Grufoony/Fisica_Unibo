@@ -1,0 +1,26 @@
+Radiometry enables us to know what a pixel value implies about surface lighness and illumination. So radiometry links the effective brightness of an object point with the respective image point's pixel value. \\ \\
+The amount of object coming out of an object, $f(x,y)$, can be expressed as 
+$$
+	f(x,y) = i(x,y)r(x,y)
+$$
+with $0 < f(x,y) < \infty$, $0 < i(x,y) < \infty$ and $0 < r(x,y) < 1$, where $i(x,y)$ is the light coming from the source and $r(x,y)$ is the object's reflectance. \\
+$i(x,y)$ is determined by the light source, whereas $r(x,y)$ depends on the surface of the object. \\ \\
+An acquisition device can be describd as a system that, given an input $f(\xi,\eta)$, produces an output $g(x,y)$, which represents the acquired image. \\
+The two functions are usually related by
+$$
+	g(x,y) = \int_{-\infty}^\infty h(x,y,\xi,\eta)f(\xi,\eta)d\xi d\eta
+$$
+where $h(x,y,\xi,\eta)$ is the system's response when presented with the unit impulse as unit, so it defines how a point $(\xi,\eta)$ in the object space contributes to the formation of the image in a particular point $(x,y)$. \\
+In other words, $h$ describes the distorsions introduced by the system. \\ 
+For linear and shift invariant processes, the previous relation can be simplified and written as
+$$
+	g(x,y) = \int_{-\infty}^\infty h(x - \xi,y - \eta)f(\xi,\eta)d\xi d\eta
+$$ 
+Acquiring a series of static images, one would expect that the intensity value $g$ in one point remains the same for all the images, but this doesn't always happen, and we can see fluctuations of the $g$ value around a certain level. \\
+In this cases we say that noise is present and the value's fluctuations are a way to measure its value. \\
+Noise can be defined as the uncertainty or imprecision with which a signal is recorded. \\
+Images can have many sources of noise, like variations in the source's emission, electronic noise, interferences and so on. To take this effects into account in the previous formula we simply add a term representing the noise.
+$$
+	g(x,y) = \int_{-\infty}^\infty h(x - \xi,y - \eta)f(\xi,\eta)d\xi d\eta + n(x,y)
+$$ 
+where in many situations we can model $n(x,y)$ to be gaussian.

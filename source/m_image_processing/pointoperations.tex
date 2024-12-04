@@ -1,0 +1,34 @@
+% grey level operations
+We can have point, local and global grey-level operations. \\
+In point operations, we only change the grey-level of one single point. In local operations we change the grey level of a spot. In global operations, the grey level of a pixel depends on all the values in the input image. \\
+Point operations allow us to fill in a better way the available range of grey-levels. \\
+Point operations can be contrast enhancements, constrast stretching, grey-scale transformations ecc. \\
+Window level operations change contrast and brightness. Changing brightness means shifting all the grey level by the same amount, whereas changing contrast means increasing the distance between the grey levels. \\
+There are then linear point operations. In this type of operations, the output grey level is a linear function of the input grey level
+$$
+	G' = \left(1+\frac{c}{K}\right)G + b
+$$
+where the slope represents the contrast and the intercept represents the brightness. \\
+Contrast stretching transforms the minimum grey level of the image to $0$ and the maximum one to $255$.
+$$
+	I'(x,y) = (I(x,y)+a) + b
+$$
+where $a = -min$ and $b = 255/(max-min)$. This procedure also allows to get rid of the outliers, by choosing the minimum and maximul thresholds. \\
+A very important operation is the negative operation:
+$$
+	I' = 255 - I
+$$
+With this kind of transformations, we can say that the contrast changes or doesn't change depending on the definition. If we define constrast as the difference in grey levels, it doesn't change, but if we define it as
+$$
+	C = \frac{I_1-I_2}{I_1}
+$$
+which is more similar to the way that the human eye perceives contrast, then yes it does change. \\ \\
+There are then non linear operations:
+square root transfer function
+$$
+	I' = \sqrt{255*I}
+$$
+square transfer function
+$$
+	I' = \frac{I^2}{255}
+$$

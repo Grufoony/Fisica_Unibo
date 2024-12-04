@@ -1,0 +1,66 @@
+\documentclass[12pt]{book}
+\usepackage{hyperref}
+
+\title{Image processing} \author{\url{https://github.com/Grufoony/Physics_Unibo}}
+\date{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{braket}
+\usepackage[margin=3cm]{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{systeme,mathtools}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{calligra}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage[miktex]{gnuplottex}
+\usepackage{epstopdf}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{tikz}
+
+
+\newcommand{\vv}{\vec{v}}
+\newcommand{\vw}{\vec{w}}
+\newcommand{\vo}{\vec{0}}
+\newcommand{\vx}{\vec{x}}
+\newcommand{\R}{\Re}
+\newcommand{\la}{\lambda}
+\newcommand{\bd}{\textbf}
+\newcommand{\lang}{\left\langle}
+\newcommand{\rang}{\right\rangle}
+\newcommand{\lbra}{\left\lbrace}
+\newcommand{\rbra}{\right\rbrace}
+\newcommand{\ih}{\hat{i}}
+\newcommand{\jh}{\hat{j}}
+\newcommand{\kh}{\hat{k}}
+\newcommand{\vr}{\vec{r}}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+\chapter{Introduction to images}
+\input{m_image_processing/introduction}
+\chapter{Digital images}
+\input{m_image_processing/digitalimages}
+\section{Radiometry}
+\input{m_image_processing/radiometry}
+\section{Production of images}
+\input{m_image_processing/productionofimages}
+\section{Quality of images}
+\input{m_image_processing/imagequality}
+\chapter{Digital image processing}
+\input{m_image_processing/geometricoperations.tex}
+
+\end{document}

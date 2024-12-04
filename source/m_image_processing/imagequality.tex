@@ -1,0 +1,11 @@
+When we apply a certain operation to an image, we are obviously trying to improve its quality. In order to be able to say if we have managed to do so, we need a criteria for assessing the quality of an image. \\ 
+There are a lot of sources for image degradation, so it is important to find a way to quantify image quality. The quality assessment can be subjective or objective:
+\begin{itemize}
+	\item subjective: involving human observers. The best way to find the quality of an image is to look at it, because the human eye is going to be the final observer of any image.
+	\item objective: the goal of objective evaluation is to develop a quantitative measure that can assess the distortions in the images. A possible way to evaluate objective image quality is through the use of the mean squared error
+	$$
+		E = \frac{\sum_n (g_i(n)-g(n)^2)}{\sum_n g_i(n)^2}
+	$$
+\end{itemize}
+where $g_i$ represents the ideal image and $g$ represents the reconstructed image.
+

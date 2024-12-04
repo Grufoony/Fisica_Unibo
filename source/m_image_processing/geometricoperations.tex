@@ -1,0 +1,24 @@
+Geometric transformations are common in computer graphics, and are often used in image analysis. They basically consist of rearranging pixels in the image plane. \\
+A geometric transform consists of two basic steps:
+\begin{itemize}
+	\item determining the pixel coordinate transformation mapping of the coordinates of the moving image pixel to the point in the fixed image.
+	\item determining the brightness of the points in the digital grid of the transformed image.
+\end{itemize}
+The most common geometric transformations are rotations, reflections, translations and scaling (shrink or zoom). \\ \\ 
+Following a geometric transformation, a point might not fall on the grid points in the new space. This is very likely actually, because the image grid is discrete. So, the point has a certain starting grey level, and we need to decide where that value will fall in the discrete grid. This is called interpolation. The easiest way is to put the point in the nearest neighbour (nearest neighbour grey level interpolation). \\
+Another way is to share the point to 4 pixels, expressing it as a linear combination. \\
+So in nearest neighbour grey level interpolation we are just moving grey-levels, but their values do not change. \\ \\
+The most common applications of geometric operations are:
+\begin{itemize}
+	\item elimination of geometric distortions 
+	\item scaling the image 
+	\item rotating the image
+	\item alignment of images
+\end{itemize}
+
+A great tool for studying the distribution of grey levels in an image are image histograms. \\
+Image histograms show how many times a particular grey-level appears in an image. With this histograms I can see how much I'm using the intensity level, but we don't know where those pixels are, so we are completely losing the spatial information. In addition to this, histograms are not unique: we can have several images all with the same histogram (you can't reconstruct the image starting from the histogram). \\
+When the constrast is low, the number of grey levels used is low, so the histogram must be narrow. \\ 
+On grey-level operation is thresholding, which converts pixel into black or white depending on whether the original color value is within the threshold range. This is very useful when we want to discriminate foreground and background.
+
+

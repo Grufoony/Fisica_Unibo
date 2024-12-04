@@ -1,0 +1,53 @@
+When talking about digital images, we must define the concepts of geometry and radiometry. \\
+Geometry is the relationship between location and size of the objects in the 3D world and their representation in the image plane. \\
+Radiometry is the relationship between the amount of light radiating from a point and the amount of light impinging on the correspondend image point. \\ \\
+The most basic image formation device (and the first one historically) is the pin-hole camera. The pin-hole camera consists of a closed room with a small hole (of the order of the millimiter) in one of the walls. When the light coming from the object reaches the hole, the image is formed upside down in the opposite wall of the chamber. The size of the image in the image plane depends on the object's distance from the pin-hole. \\ \\ 
+If a point $M$ in the 3D space is characterized by 3 coordinates $(x,y,z)$, the image point in the image plane is characterized by 2 coordinates $(u,v)$. The two sets of coordinates are related by the geometrical equations
+$$
+	u = \frac{fx}{z} \ \ \ \ \ \frac{fy}{z}
+$$
+All the light rays are considered to be parallel to the optical axis and orthogonal to the image plane. \\
+We define $\Delta z$ as the size of the object with respect to its distance from the camera, so as its thickness. Then, if $2\Delta z$ is small with respect to $z_0$, we have that
+$$
+	\frac{f}{z_0 + \Delta z} \approx \frac{f}{z_0-\Delta z} \approx \frac{f}{z_0}
+$$
+which means that
+$$
+	u\approx \frac{f}{z_0}x \ \ \ \ \ v \approx \frac{f}{z_0}y
+$$
+This approximation of course is only valid for small objects, or objects that are close to the optical axis. \\
+The quality of the image depends heavily on the size of the hole. 
+\begin{itemize}
+	\item If the hole is too big, we have that a point of the object becomes a spot in the image. This means that the image is going to be blurry. 
+	\item If the hole is too small, we can have diffraction effects, that again, end up blurring the image.
+\end{itemize}
+The solution for balancing the effects of big and small pinholes and settling for a middle ground is in the use of lenses. \\ \\
+Lenses have two main strengths: They allow to gather light coming from a point on the object and focus it into a single point on the image; since the aperture size of the lense is larger than that of a pinhole, the exposure times can be reduced as well. \\
+Lenses solve another problem as well: In a pinhole camera, we have that many points from the object space are mapped into a single in the image plane. So, an image on the image plane can come from several objects in the real space. \\
+On the other hand, a lens brings into focus only those object points that lie within one particular plane parallel to the image plane. \\
+So, when the distance between lens and image plane is equal to $v$, only those points that are at a distance $u$ are brought into focus, with $u$ give by
+$$
+	\frac{1}{u} + \frac{1}{v} = \frac{1}{f} -> u = \frac{vf}{v-f}
+$$
+In other words, if we bring an object into focus at a distance $u$, we must set the distance $v$ between the image plane and the lens to
+$$
+	v = \frac{uf}{u-f}
+$$
+The object points that do not lie within this plane end up being blurred. \\ \\
+In a real camera ther is an object called diaphragm, whose purpose is to control the opening of the lens. By reducing the size of the aperture, it reduces the amount of light that reaches the sensor, and also reduces the size of the circle of confusion, thus increasing the depth of field. \\
+The \textit{field of view} is defined as the portion of space that actually projects onto the camera. It describes then the cone of viewing directions of the device. \\
+The FOV depends of the effective area of the image sensor, the width $w$ and the height $h$:
+$$
+	FOV_v = 2\arctan{\frac{w}{2f}} \ \ \ FOV_h = 2\arctan{\frac{h}{2f}}
+$$
+The \textit{magnification factor} is then defined as 
+$$
+	M = \frac{x}{X} = \frac{v}{u} = \frac{f}{u}
+$$
+where $x$ is the size of the image whereas $X$ is the size of the real object. \\
+We see clearly that the magnification factor is proportional to the focal length. \\ 
+Since the FOV depends on the focal length as well, we can say that the magnification factor and the FOV are linked. In particular:
+\begin{itemize}
+	\item if $f$ is small -> large FOV, small M
+	\item if $f$ is large -> small FOV, large M
+\end{itemize}

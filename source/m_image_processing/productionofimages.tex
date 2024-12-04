@@ -1,0 +1,43 @@
+Acquisition devices register the amount of radiation impinging each point of the system as analog signals, and this produces digital images, which are basically numerical representations of an object. This means that analog signals need to be converted, through a process called digitization, and after that the digital images are made available for computer processing. \\ \\
+So the production of a digital image can be divided into three steps:
+\begin{itemize}
+	\item Measure of the analog signal.
+	\item Sampling, the process of measuring the grey levels for each pixel location. 
+	\item Quantization, the process of dividing the scale into a discrete set. 
+\end{itemize}
+So digitization, that convers an image from its original form into digital form, is the combination of this three step, that convers an image from its original form into digital forms. \\ \\
+The number inserted into the digital image at each pixel location (which is the point's grey level) reflects the brightness of the image at the corresponding point, which as we have just said is sampled and quantizied. \\
+This means that a digital image is basically a matrix, that for each element contains an integer, corresponding to the pixel's grey level. \\
+Digital images are characterized by two resolutions: The spatial resolution (sampling density) and the grey-level resolution. The first is the pixel spacing, so the number of sample points per unit of measure, whereas the grey-level resolution is the number of grey-levels. \\
+Spatial sampling can be described as a multiplication of the function $f(x,y)$ and the function $s(x,y)$, which is defined as
+$$
+	s(x,y) = \sum_i\sum_j\delta(x-i\Delta x,y-j\Delta y)
+$$
+that basically defines the sample grid. \\
+So the sample image can be defined as 
+$$
+	f_c(x,y) = s(x,y)f(x,y) = \sum_i\sum_j f(i\Delta x,j\Delta y)\delta(x-i\Delta x,y-j\Delta y)
+$$
+So what we do is discretize the input, and in the end the sampled image only consists of the samples acquired at each node of the sampling grid. \\ \\
+At this point we can ask ourselves, how many samples and grey levels do we need to represent the object in an acceptable or good way? \\ 
+Intuitively, we can say that the pixel size should be of comparable size with with the smalles detail that we want to perceive from the image. \\
+More quantitatively, the \textit{Nyquist rate} says that the sampling interval must not be greater that half the size of the smallest resolvable feature of the image. \\
+If the sampling interval is too large, we can have aliasing. \\
+If the spatial resolution is too low, what we get is that the image becomes very pixellated, so we aren't able to distinguish small details anymore. On the other hand, if the grey-level resolution is too low, we lose the colour difference of neighbouring points, and this leads again to a loss of detail. \\ \\
+When choosing the resolution, we must balance pros and cons to find the right middle ground. \\
+This is because, while it is true that high resolution images contain more information, all that information might not be needed, but it would still require more storage space and execution time for the various acquisition and processing steps. Furthermore, high definition images require all the acquisition, processing and visualization devices to support that level of definition. And finally, low risolution images are less affected by statistical noise. \\ \\
+A digital image can be described as a matrix 
+$$
+	f(x,y) = \begin{pmatrix}
+		f(0,0) & f(0,1) & ... & f(0,N-1) \\
+		f(1,0) & f(1,1) & ... & f(1,N-1) \\
+		...    & ...    & ... & ...      \\
+		f(M-1,0) & f(M-1,1) & ... & f(M-1,N-1) \\
+
+	\end{pmatrix}
+$$
+or also as a vector.
+
+
+
+
