@@ -28,7 +28,7 @@
 	\author{Russo Alessandro, Antonelli Tommaso, Berselli Gregorio\\\url{https://github.com/Grufoony/Fisica_UNIBO}}
     \maketitle
 \begin{abstract}
-    Le notazioni utilizzate in questo schema sono $\vec{x}$ per rappresntare un generico array x, dim indica sempre una dimensione, xCode indica un codice di root inerente a x, opt indica sempre la stringa di caratteri che ROOT interpreta come opzioni, i indica un indice (o una quantita\' indicizzabile), n indica sempre un intero.
+    Le notazioni utilizzate in questo schema sono $\vec{x}$ per rappresntare un generico array x, dim indica sempre una dimensione, xCode indica un codice di root inerente a x, opt indica sempre la stringa di caratteri che ROOT interpreta come opzioni, i indica un indice (o una quantità indicizzabile), n indica sempre un intero.
 \end{abstract}
 \section{Istogrammi}
     \colorbox{LightGray}{TH1F("name", "title", nBins, xmin, xmax)} Dichiarazione di un istogramma 1D
@@ -114,7 +114,7 @@
         \item \colorbox{LightGray}{Derivative(x)} o \colorbox{LightGray}{Derivative2(x)} o \colorbox{LightGray}{Derivative3(x)} calcola derivate
     \end{itemize}
 \section{Fitting}
-    Metodo \colorbox{LightGray}{Fit("name", "opt")} valido per piu\' classi. Funzioni predefinite "gaus" "expo" "poln"
+    Metodo \colorbox{LightGray}{Fit("name", "opt")} valido per più classi. Funzioni predefinite "gaus" "expo" "poln"
     OptFit:
     \begin{itemize}
         \item "R": usa il range della funzione (di default usa il range dell'istogramma)
@@ -171,13 +171,13 @@
         \item \colorbox{LightGray}{Add(obj)} con obj qualunque oggetto di root (TH1F, TF1, ...)
         \item \colorbox{LightGray}{At(i)} returna l'elemento i-esimo della lista. NB: returna sempre un TObject, al momento dell'utilizzo specificarne il tipo con un static\textunderscore cast<type>
         \item \colorbox{LightGray}{Print()} stampa a schermo la lista
-        \item \colorbox{LightGray}{At(i)->InheritsFrom("type")} restituisce 1 se l'elemento i-esimo e\' di tipo type, 0 altrimenti
+        \item \colorbox{LightGray}{At(i)->InheritsFrom("type")} restituisce 1 se l'elemento i-esimo è di tipo type, 0 altrimenti
     \end{itemize}
 \section{ROOT Files}
     \colorbox{LightGray}{TFile("name", "opt")}
     Options:
     \begin{itemize}
-        \item \colorbox{LightGray}{NEW} o \colorbox{LightGray}{CREATE} crea un nuovo file aperto in lettura, se gia\' esiste non si apre
+        \item \colorbox{LightGray}{NEW} o \colorbox{LightGray}{CREATE} crea un nuovo file aperto in lettura, se già esiste non si apre
         \item \colorbox{LightGray}{RECREATE} come CREATE ma se il file esiste lo sovrascrive
         \item \colorbox{LightGray}{UPDATE} apre un file esistente in scrittura, se non esiste lo crea
         \item \colorbox{LightGray}{READ} apre un file esistente in lettura (default)

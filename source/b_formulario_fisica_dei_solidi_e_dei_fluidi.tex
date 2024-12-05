@@ -36,29 +36,29 @@
 	\item $p = \frac{1}{3} nm v_{rms}^2$
 	\item $v_{rms} = \sqrt{\frac{3k_B T}{m}}$
 	\item $\textit{l} = \frac{1}{\sqrt{2} n \sigma} = \frac{k_B T}{\sqrt{2} \sigma p}$ Libero cammino medio
-	\item $F_v = \frac{1}{f} V_v$ Deformazione pistone ($f$ coefficiente di fluidita\', $V_v$ velocita\' di deformazione)
-	\item $\eta = \frac{n}{3}lmv_{rms} = \sqrt{\frac{mk_BT}{6 \sigma^2}}$  Viscosita\' dinamica [Pa s]
+	\item $F_v = \frac{1}{f} V_v$ Deformazione pistone ($f$ coefficiente di fluidità, $V_v$ velocità di deformazione)
+	\item $\eta = \frac{n}{3}lmv_{rms} = \sqrt{\frac{mk_BT}{6 \sigma^2}}$  Viscosità dinamica [Pa s]
 	\item $\tau = \eta \frac{\partial V_x}{\partial z}$ Sforzo di taglio per fluidi newtoniani (empirica)
 	\item $\overrightarrow{q} = -k_T \nabla T$ Legge di Fourier
 	\item $\overrightarrow{q} = -k_T \nabla T = -\frac{n}{3} v_{rms} l c \nabla T$ Legge Fourier per i gas (c calore specifico per molecola) da cui $k_T = \frac{n}{3} v_{rms}lc =\frac{1}{3 \sqrt{2}} \frac{c}{\sigma} v_{rms} \sim T^{\frac{1}{2}}$
 	\item $\nabla \cdot \overrightarrow{q} = -k_T \nabla^2 T$
-	\item $\frac{dT}{dt}=D_T \nabla^2 T$ con $D_T$ diffusivita\' termica $D_T = \frac{k_T}{\rho c_p}$ con cui stimiamo il tempo caratteristico di conduzione $\tau_{cond} = \frac{L^2}{D_T}$
-	\item $\frac{dT}{dt}=D_T \nabla^2 T = \frac{\partial T}{\partial t} + \overrightarrow{V} \cdot \nabla T$ dove $\overrightarrow{V} \cdot \nabla T$ e\' il termine avvettivo che ci permette di stimare il tempo caratteristico di avvezione $\tau_{avv} = \frac{L}{V}$
+	\item $\frac{dT}{dt}=D_T \nabla^2 T$ con $D_T$ diffusività termica $D_T = \frac{k_T}{\rho c_p}$ con cui stimiamo il tempo caratteristico di conduzione $\tau_{cond} = \frac{L^2}{D_T}$
+	\item $\frac{dT}{dt}=D_T \nabla^2 T = \frac{\partial T}{\partial t} + \overrightarrow{V} \cdot \nabla T$ dove $\overrightarrow{V} \cdot \nabla T$ è il termine avvettivo che ci permette di stimare il tempo caratteristico di avvezione $\tau_{avv} = \frac{L}{V}$
 	\item $\overrightarrow{J} = -D_F \nabla \Phi$ Prima legge di Fick, $J$ flusso di particelle, $\Phi$ concentrazione
 	\item $\overrightarrow{J} = -D_F \nabla \Phi = - \frac{1}{3}v_{rms}l \nabla \Phi$ da cui $D_F = \frac{1}{3}v_{rms}l$ che per il gas perfetto $D_F = \frac{1}{3}v_{rms}l = \frac{k_B^\frac{3}{2}}{\sqrt{6} \sigma} \frac{1}{p} \sqrt{\frac{T^3}{m}}$
 	\item $\frac{d\Phi}{dt}=D_F \nabla^2 \Phi$ Seconda legge di Fick che deriva dalla conservazione del numero di particelle totali diffuse nel volume, da cui stimiamo il tempo caratteristico di diffusione $\tau_F = \frac{L^2}{D_F} $	
 	\item $\gamma = \frac{dW}{dA}$ Tensione superficiale [$Nm^{-1}$]
-	\item $p_{in}-p_{est} = \gamma (\frac{1}{R_1}+\frac{1}{R_2})$ Legge di Laplace sulla curvatura delle superfici in discontinuita\' di pressione
-	\item $\gamma_{SL}+\gamma_{LG}cos\theta_C=\gamma_{SG}$ Equazione di Young della capillarita\'
+	\item $p_{in}-p_{est} = \gamma (\frac{1}{R_1}+\frac{1}{R_2})$ Legge di Laplace sulla curvatura delle superfici in discontinuità di pressione
+	\item $\gamma_{SL}+\gamma_{LG}cos\theta_C=\gamma_{SG}$ Equazione di Young della capillarità
 	\item $h = 2\gamma \frac{cos\theta_C}{\rho g a}$ Legge di Yurin
-	\item $W = -\frac{1}{4\pi\varepsilon_0}\frac{Aq^2}{s}+Be^{-s/\delta}$ Energia reticolare dove il primo termine e\' il termine attrattivo dato dalla forza di Coulomb, A e\' la costante di Madelung determinata dalla geometria, s il passo reticolare	
-	\item $\beta = -\frac{1}{V}\frac{\partial V}{\partial p}$ Compressibilita\'
-	\item $K=\frac{1}{\beta}=-V \frac{\partial p}{\partial V}$ Incompressibilita\' o "Bulk Modulus"
+	\item $W = -\frac{1}{4\pi\varepsilon_0}\frac{Aq^2}{s}+Be^{-s/\delta}$ Energia reticolare dove il primo termine è il termine attrattivo dato dalla forza di Coulomb, A è la costante di Madelung determinata dalla geometria, s il passo reticolare	
+	\item $\beta = -\frac{1}{V}\frac{\partial V}{\partial p}$ Compressibilità
+	\item $K=\frac{1}{\beta}=-V \frac{\partial p}{\partial V}$ Incompressibilità o "Bulk Modulus"
 	
 	\item $K=\frac{1}{\beta}=-V \frac{\partial p}{\partial V} = V\frac{d^2W}{dV^2}$ derivante da $dW=-pdV$
 	\item $W(s)=W_0+\frac{1}{2!}(\frac{d^2W}{ds_0^2})\Delta s^2+\frac{1}{3!}(\frac{d^3W}{ds_0^3}) \Delta s^3+...=W_0+\frac{1}{2}\kappa\Delta s^2-f \Delta s^3+...$ sviluppo dell'energia del reticolo
 	\item $\mathcal{E}_0 =W(s)+ K =W_0+\frac{3}{2}k_BT$ 
-	\item $\mathcal{E} = \frac{3k_BT}{\overline{m}} = \frac{3RT}{N_A \overline{m}}$ Energia totale di un atomo mediata sul reticolo per unita\' di massa
+	\item $\mathcal{E} = \frac{3k_BT}{\overline{m}} = \frac{3RT}{N_A \overline{m}}$ Energia totale di un atomo mediata sul reticolo per unità di massa
 	\item $c_v = 3 \frac{R}{N_A \overline{m}}$ Legge di Dulong Petit dalla definizione di $c_v=\frac{d \mathcal{E}}{dT}$
 	\item $\Delta a = \sqrt{\frac{3k_BT}{\kappa}}$ Passo d'oscillazione dell'atomo approssimando $W(s)$ al secondo ordine, quindi per oscillazione simmetrica
 	\item $\Delta s = \pm \Delta a + \varepsilon, \varepsilon > 0$ Passo d'oscillazione approssimando al terz'ordine
@@ -83,8 +83,8 @@
 	\item $p=\rho R T$ Legge dei gas per gas specifico essendo $R_u$ costante universale dei gas e $R= R_u / \mu$
 	\item $p = \frac{R_u T}{V}\sum_{i}^{}n_i$ Legge di Dalton
 	\item $\alpha = \frac{1}{V}(\frac{\partial V}{\partial T})_p = -\frac{1}{\rho}(\frac{\partial \rho}{\partial T})_p$ Coefficiente di espansione termica (per il gas perfetto $\alpha = \frac{1}{T}$)
-	\item $\beta_T=-\frac{1}{V}(\frac{\partial V}{\partial p})_T=\frac{1}{\rho}(\frac{\partial \rho}{\partial p})_T $ Compressibilita\' isoterma
-	\item $K_T=\frac{1}{\beta_T}=-V(\frac{\partial p}{\partial V})_T=\rho (\frac{\partial p}{\partial \rho})_T$ Incompressibilita\' isoterma o \textit{Bulk Modulus}
+	\item $\beta_T=-\frac{1}{V}(\frac{\partial V}{\partial p})_T=\frac{1}{\rho}(\frac{\partial \rho}{\partial p})_T $ Compressibilità isoterma
+	\item $K_T=\frac{1}{\beta_T}=-V(\frac{\partial p}{\partial V})_T=\rho (\frac{\partial p}{\partial \rho})_T$ Incompressibilità isoterma o \textit{Bulk Modulus}
 	\item $ \frac{V-V_0}{V_0} = -\beta_T (p-p_0)+\alpha(T-T_0) $ Equazione di stato per sostanza qualsiasi (solido soggetto a sforzo isotropo, fluido in condizioni statiche)
 	\item $c_p=T(\frac{\partial S}{\partial T})_p = (\frac{\partial H}{\partial T})_p$ Calore specifico a pressione costante
 	\item $c_v=T(\frac{\partial S}{\partial T})_V = (\frac{\partial E}{\partial T})_V$ Calore specifico a volume costante
@@ -95,8 +95,8 @@
 	\item $dE(T,V)=c_vdT+[\alpha T K_T-p]dV$
 	\item $c_p=c_v+\alpha^2 T K_T V$ Relazione fra i calori specifici per sostanza qualsiasi
 	\item $\rho c_p (\frac{\partial T}{\partial t}+\overrightarrow{v} \cdot \nabla T) = \rho Q + k \nabla^2 T$ Equazione del calore
-	\item $Ra=\frac{\rho \alpha \Delta T g h^3}{\eta D_T} > Ra_{cr}$ Condizione di instabilita\' per fluido viscoso ($\eta$) incomprimibile soggetto a gradiente verticale di temperatura ($\frac{dT}{dz}<0$ condizione necessaria) essendo $Ra=\frac{F_{galleggiamento}}{F_{viscosa}}$
-	\item $\frac{dT}{dz}<\Gamma_a<0$ Condizione necessaria (piu\' stringente) per fluido comprimibile
+	\item $Ra=\frac{\rho \alpha \Delta T g h^3}{\eta D_T} > Ra_{cr}$ Condizione di instabilità per fluido viscoso ($\eta$) incomprimibile soggetto a gradiente verticale di temperatura ($\frac{dT}{dz}<0$ condizione necessaria) essendo $Ra=\frac{F_{galleggiamento}}{F_{viscosa}}$
+	\item $\frac{dT}{dz}<\Gamma_a<0$ Condizione necessaria (più stringente) per fluido comprimibile
 	\item $\Gamma_a=\frac{dT_a}{dz}=-\frac{g}{c_p}$ Gradiente adiabatico per gas perfetto
 	\item $\Gamma_a = \frac{dT_a}{dz} = -\frac{\alpha T g}{c_p}$ Gradiente adiabatico per sostanza generica
 	\item $G_1(p,T)=G_2(p,T)$ Potenziale di Gibbs per transizione di fase in equilibrio
@@ -110,22 +110,22 @@
 	\item $ p_e = C e^{- \frac{L}{RT}}$ Pressione di vapor saturo lontano dalla T critica
 	\item $\frac{dT}{dz} = -\frac{g}{c_p} \frac{(1-\frac{Lp}{R_a T} \frac{\partial w_2}{\partial p})}{(1- \frac{L}{c_p} \frac{\partial w_2}{\partial T})} = -\frac{g}{c_p} \frac{1+c_1}{1+c_2} \approx -5.45K/Km$ Gradiente termico per atmosfera umida dove $R_a = R_u / \bar{\mu}$
 	\item $\Theta (z)=T(z)-\int_{z_0}^{z}\Gamma_adz$ Temperatura potenziale
-	\item $\frac{d \Theta}{dz}=\frac{dT}{dz}-\Gamma_a$ Instabilita\' generica per sostanza compressibile
-	\item $\frac{d \rho_{pot}}{dz}=\frac{d \rho}{dz}-\frac{d \rho_a}{dz}>0 $ Instabilita\' per sostanza compressibile dove $\frac{d \rho_a}{dz}$ e\' il gradiente adiabatico di densita\' e $\rho_{pot}$ e\' la densita\' potenziale
-	\item Per oceano/mantello $\frac{d \rho_a}{dz} = - \frac{g}{K_s}$ dove $K_s=\rho (\frac{\partial p}{\partial \rho})_S$ incompressibilita\' adiabatica
-	\item $p_0(\frac{1}{\rho_theta})^\gamma=p(\frac{1}{\rho})^\gamma$ densita\' potenziale per il gas perfetto $\frac{d \rho_\theta}{dz}=-\frac{\rho_\theta}{\Theta} \frac{d \Theta}{dz}$ \\con condizione di instabilita\' $\frac{d \rho_\theta}{dz}>0 \iff \frac{d\Theta}{dz}<0$
+	\item $\frac{d \Theta}{dz}=\frac{dT}{dz}-\Gamma_a$ Instabilità generica per sostanza compressibile
+	\item $\frac{d \rho_{pot}}{dz}=\frac{d \rho}{dz}-\frac{d \rho_a}{dz}>0 $ Instabilità per sostanza compressibile dove $\frac{d \rho_a}{dz}$ è il gradiente adiabatico di densità e $\rho_{pot}$ è la densità potenziale
+	\item Per oceano/mantello $\frac{d \rho_a}{dz} = - \frac{g}{K_s}$ dove $K_s=\rho (\frac{\partial p}{\partial \rho})_S$ incompressibilità adiabatica
+	\item $p_0(\frac{1}{\rho_theta})^\gamma=p(\frac{1}{\rho})^\gamma$ densità potenziale per il gas perfetto $\frac{d \rho_\theta}{dz}=-\frac{\rho_\theta}{\Theta} \frac{d \Theta}{dz}$ \\con condizione di instabilità $\frac{d \rho_\theta}{dz}>0 \iff \frac{d\Theta}{dz}<0$
 	
 \end{itemize}
 
 \section{Capitolo 3:\\ Conduzione Termica}
 
 \begin{itemize}
-	\item $N(t) = N(0) e^{-\lambda t}$ Legge di decadimento radioattivo (t tempo,$\lambda$ probabilita\' di decadimento dei nuclei nell'intervallo di tempo)
+	\item $N(t) = N(0) e^{-\lambda t}$ Legge di decadimento radioattivo (t tempo,$\lambda$ probabilità di decadimento dei nuclei nell'intervallo di tempo)
 	\item $H(t')= \sum H_i C_i e^{\lambda_i t'} $ Produzione di calore della roccia al tempo t', $C_i$ le concentrazioni dei nuclei radioattivi
 	\item $\frac{F(t)}{S_0}=\frac{F(0)}{S_0}+\frac{G(t)}{S_0}[e^{\lambda t}-1]$ Isocrona di roccia intera
 	\item $y_i=c+x_i[e^{\lambda t}-1]$
-	\item $T(z)=-\frac{\rho}{k_T}H \frac{z^2}{2}+ \frac{q_s}{k_T}z+T_s$ Temperatura in funzione della profondita\' dalla legge di conduzione stazionaria per valori di H costanti
-	\item $T_i(z)=-\frac{\rho_i H_i}{k_i} \frac{(z-z_{i-1})^2}{2} + \frac{q_{i-1}(z-z_{i-1})}{k_i}+T_{i - 1}$ Generalizzazione della precedente per un sistema multistrati dove teniamo in considerazione la continuita\' della temperatura ($T^+=T^-$) e la continuita\' del flusso di calore ($q^+=q^-$) fra gli strati dove gli indici $i-1$ indicano l'ultimo valore assunto dallo strato precedente
+	\item $T(z)=-\frac{\rho}{k_T}H \frac{z^2}{2}+ \frac{q_s}{k_T}z+T_s$ Temperatura in funzione della profondità dalla legge di conduzione stazionaria per valori di H costanti
+	\item $T_i(z)=-\frac{\rho_i H_i}{k_i} \frac{(z-z_{i-1})^2}{2} + \frac{q_{i-1}(z-z_{i-1})}{k_i}+T_{i - 1}$ Generalizzazione della precedente per un sistema multistrati dove teniamo in considerazione la continuità della temperatura ($T^+=T^-$) e la continuità del flusso di calore ($q^+=q^-$) fra gli strati dove gli indici $i-1$ indicano l'ultimo valore assunto dallo strato precedente
 	\item Per crosta terrestre $H(z)=H_0 e^{-z/\delta} $ ovvero $k\frac{dT}{dz}=\rho \delta H_0 e^{-z/\delta}+c_1$ dove avendo assunto $h>>\delta$ possiamo dire che $c_ \approx q_m$ da cui ricaviamo contributo crostale $q_s=q_m+q_c=q_m+[\rho H] \delta$ da cui otteniamo
 	\item $T(z)=T_s+\frac{q_m}{k} z+\frac{\rho H_0 \delta^2}{k} (1-e^{-z/\delta})$ Geoterma continentale
 	\item $q(r)=\frac{\rho H r}{3}$ Flusso alla distanza $r$ dal centro del pianeta per pianeta sferico con r dell'o.d.g del raggio del pianeta
@@ -133,15 +133,15 @@
 	%3.21
 	\item $T(z,t)=\Re \{Z(z)f(t)\} = \Re \{(\Delta T e^{-z/\delta}e^{-iz/\delta})(e^{i \omega t})\} =
 	\Delta T e^{-z/\delta} cos(\omega t - \frac{z}{\delta})$ Riscaldamento periodico di un semispazio da sorgente esterna dove abbiamo definito $\delta = \sqrt{\frac{2D}{\omega}}$ lo spessore di penetrazione
-	\item $T(z,t) = T_s + (T_0 - T_s) \erf(\frac{z}{2 \sqrt{Dt}})$ Raffreddamento istantaneo di un semispazio a Temperatura $T_0$ posto a contatto con un termostato $T_s$ dove $\erf$ e\' la Error function $\erf (\eta)= \frac{2}{\sqrt{\pi}}\int_0^\eta e^{-t^2}\,\mathrm dt$
+	\item $T(z,t) = T_s + (T_0 - T_s) \erf(\frac{z}{2 \sqrt{Dt}})$ Raffreddamento istantaneo di un semispazio a Temperatura $T_0$ posto a contatto con un termostato $T_s$ dove $\erf$ è la Error function $\erf (\eta)= \frac{2}{\sqrt{\pi}}\int_0^\eta e^{-t^2}\,\mathrm dt$
 	\item $q(z,T) = \frac{k}{\sqrt{\pi Dt}} (T_0-T_s) e^{-\eta^2} = \frac{k}{\sqrt{\pi Dt}} (T_0-T_s) e^{-\frac{z^2}{4Dt}}$ Flusso di calore del raffreddamento istantaneo, ottenuto da $q=k \frac{\partial T}{\partial z}= k\frac{\partial T}{\partial \eta} \frac{\partial \eta}{\partial z}$ essendo $\eta = \frac{z}{2 \sqrt{Dt}}$
-	\item $t= \frac{(T_0-T_s)^2}{\pi D (\frac{\partial T}{\partial z})^2} \approx 6 \times 10^6 anni$ Stima dell'eta\' della Terra di Kelvin eguagliando il flusso di calore $q=k\frac{\partial T}{\partial z}$ al flusso del raffreddamento istantaneo
+	\item $t= \frac{(T_0-T_s)^2}{\pi D (\frac{\partial T}{\partial z})^2} \approx 6 \times 10^6 anni$ Stima dell'età della Terra di Kelvin eguagliando il flusso di calore $q=k\frac{\partial T}{\partial z}$ al flusso del raffreddamento istantaneo
 	\item $T(z,t) = T_s + (T_0 - T_s) \erf(\frac{z}{2 \sqrt{Dt}})$ Geoterma oceanica nel sistema di riferimento solidale con la litosfera in movimento (stesso risultato del raffreddamento istantaneo)
-	\item $T(z,x) = T_s + (T_0 - T_s) \erf(\frac{z}{2} \sqrt{\frac{v}{Dx}})$ Geoterma oceanica nel sistema di riferimento fermo rispetto alla dorsale, essendo $v$ la velocita\' di deriva della litosfera rispetto alla dorsale, $x$ la distanza percorsa dall'origine, da cui si puo\' derivare flusso di calore analogo a quello del semispazio
+	\item $T(z,x) = T_s + (T_0 - T_s) \erf(\frac{z}{2} \sqrt{\frac{v}{Dx}})$ Geoterma oceanica nel sistema di riferimento fermo rispetto alla dorsale, essendo $v$ la velocità di deriva della litosfera rispetto alla dorsale, $x$ la distanza percorsa dall'origine, da cui si può derivare flusso di calore analogo a quello del semispazio
 	\item $z_L=2.32 \sqrt{Dt}=2.32 \sqrt{\frac{Dx}{v}}$ Spessore della Litosfera dato dall'aver compiuto il 90\% dell'escursione termica
-	\item $ w = \frac{\rho_0 \alpha (T_0-T_s)}{(\rho_0-\rho_w)} 2 \sqrt{\frac{Dt}{\pi}}  $ Topografia isostatica dei fondali oceanici (essendo $w$ la profondita\' del fondale rispetto alla quota della sommita\' della dorsale), derivata dal principio di isostasia
+	\item $ w = \frac{\rho_0 \alpha (T_0-T_s)}{(\rho_0-\rho_w)} 2 \sqrt{\frac{Dt}{\pi}}  $ Topografia isostatica dei fondali oceanici (essendo $w$ la profondità del fondale rispetto alla quota della sommità della dorsale), derivata dal principio di isostasia
 	\item $h=\frac{k_g(T_0-T_s)}{q_c}$ stima dell'altezza di un ghiacciaio trascurando avvezione e depositi di ghiaccio (stima irrealistica), sono noti $T_0 e T_s$ temperatura alla base e temperatura esterna
-	\item $T(z)=T_s+\frac{\Gamma_g}{2} \sqrt{2 \pi D H}{a}(1-\erf(u(z))) =T_s+\frac{\Gamma_g}{2} \sqrt{2 \pi D H}{a}(1-\erf(\sqrt{\frac{a}{2Dh}z})))$ temperatura in un ghiacciaio a base fredda da cui considerando la bse vicina al punto di fusione\\ $T_f=T_s+\frac{\Gamma_g}{2}\sqrt{2 \pi D h}{a}$ che ci permette di stimare l'altezza del ghiacciaio a $h=(\frac{T_f-T_s}{\Gamma_g})^2\frac{2a}{\pi D}$ piu\' realisticamente
+	\item $T(z)=T_s+\frac{\Gamma_g}{2} \sqrt{2 \pi D H}{a}(1-\erf(u(z))) =T_s+\frac{\Gamma_g}{2} \sqrt{2 \pi D H}{a}(1-\erf(\sqrt{\frac{a}{2Dh}z})))$ temperatura in un ghiacciaio a base fredda da cui considerando la bse vicina al punto di fusione\\ $T_f=T_s+\frac{\Gamma_g}{2}\sqrt{2 \pi D h}{a}$ che ci permette di stimare l'altezza del ghiacciaio a $h=(\frac{T_f-T_s}{\Gamma_g})^2\frac{2a}{\pi D}$ più realisticamente
 \end{itemize}
 
 \section{Capitolo 4:\\ Meccanica dei Continui}
@@ -153,27 +153,27 @@
 	
 	\item $e_{ijk}$ Tensore di Ricci ($e_{ijk}=1$ per permutazioni pari di 123, $-1$ per permutazioni dispari, $0$ altrove)
 	
-	\item $e_{ijk}e_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}$ Identita\' $e-\delta$
+	\item $e_{ijk}e_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}$ Identità $e-\delta$
 	
 	\item $\frac{\partial u_i}{\partial x_j} = \varepsilon_{ij}+\omega_{ij}$ Gradiente dello spostamento diviso in componente simmetrica e antisimmetrica
 	
 	\item $\varepsilon_{ij}=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})$ Tensore infinitesimo di deformazione\\
-	Nel sistema di riferimento degli autovettori normalizzati la variazione relativa lungo la componente $i$ e\' il valore $\varepsilon_{ii} = \frac{dS-ds_0}{dS_0}$, viceversa con $i \neq j$  $\varepsilon_{ij}=\frac{1}{2}(\alpha + \beta)$ angoli di deformazione nel piano
+	Nel sistema di riferimento degli autovettori normalizzati la variazione relativa lungo la componente $i$ è il valore $\varepsilon_{ii} = \frac{dS-ds_0}{dS_0}$, viceversa con $i \neq j$  $\varepsilon_{ij}=\frac{1}{2}(\alpha + \beta)$ angoli di deformazione nel piano
 	
 	\item $\frac{dS-dS_0}{dS_0}=\varepsilon_{ij} \frac{dx_i}{dS_0} \frac{dx_j}{dS_0}$ Variazione relativa di distanza fra due punti distanti $dx_i$
 	
-	\item $ \varepsilon_{kk}=\nabla \cdot \overrightarrow{u} = \frac{\delta V}{V_0}$ Traccia del tensore e\' variazione volumetrica relativa
+	\item $ \varepsilon_{kk}=\nabla \cdot \overrightarrow{u} = \frac{\delta V}{V_0}$ Traccia del tensore è variazione volumetrica relativa
 	
 	\item $\varepsilon^{(I)}_{ij} = \frac{1}{3} \varepsilon_{kk}\delta_{ij}$ Componente isotropa tensore deformazione
 	
 	\item $\varepsilon'_{ij} = \varepsilon_{ij} -\frac{1}{3} \varepsilon_{kk}\delta_{ij}$ Componente deviatorica tensore deformazione
 	
-	\item $\frac{DA}{Dt}=\int_{V(t)} \{ \frac{\partial a(\overrightarrow{x},t)}{\partial t} + \nabla \cdot [a(\overrightarrow{x}, t)\overrightarrow{v}] \} dV$ Derivata di grandezze additive $A$ dove $a(\overrightarrow{x},t)$ e\' la densita\' di $A$ e il prodotto $a \overrightarrow{v}$ il flusso di $A$
+	\item $\frac{DA}{Dt}=\int_{V(t)} \{ \frac{\partial a(\overrightarrow{x},t)}{\partial t} + \nabla \cdot [a(\overrightarrow{x}, t)\overrightarrow{v}] \} dV$ Derivata di grandezze additive $A$ dove $a(\overrightarrow{x},t)$ è la densità di $A$ e il prodotto $a \overrightarrow{v}$ il flusso di $A$
 	
 	\item $\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \overrightarrow{v}) = 0$ \\
-	$\frac{d \rho}{d t} + \rho \nabla \cdot \overrightarrow{v} = 0$  \hspace{0.3cm} Equazione di continuita\' (dalla conservazione della massa)
+	$\frac{d \rho}{d t} + \rho \nabla \cdot \overrightarrow{v} = 0$  \hspace{0.3cm} Equazione di continuità (dalla conservazione della massa)
 	
-	\item $\frac{D \Gamma}{Dt}= \int_{V(t)} \rho \frac{d \gamma}{dt} dV $ Applicazione dell'equazione di continuita\' a grandezze $ \Gamma$ dipendenti dalla massa
+	\item $\frac{D \Gamma}{Dt}= \int_{V(t)} \rho \frac{d \gamma}{dt} dV $ Applicazione dell'equazione di continuità a grandezze $ \Gamma$ dipendenti dalla massa
 	
 	\item $T_i(\hat{\textbf{n}})=n_k \tau_{ki}$ Trazione su una superficie di normale $n$ note le componenti $\tau_{ki}$
 	
@@ -189,7 +189,7 @@
 	
 	\item $S_{max}=\frac{1}{2}(\sigma_{max}-\sigma_{min})$ Sforzo di taglio massimo
 	
-	\item $0=\rho g \delta_{i3}+ \frac{\partial \tau_{ji}}{\partial x_j}$ Stato di sforzo in prossimita\' della superficie della crosta
+	\item $0=\rho g \delta_{i3}+ \frac{\partial \tau_{ji}}{\partial x_j}$ Stato di sforzo in prossimità della superficie della crosta
 	
 	\item $\tau_{ij} = \Delta \tau_{ij}-\overline{p}_{lit} \delta_{ij}$ Ambienti tettonici, $\Delta \tau_{ij}$ fornisce la componente deviatorica\\
 	$\sigma'_i=\sigma_i+\overline{p}$\\
@@ -209,7 +209,7 @@
 
 
 \begin{itemize}
-	\item $\frac{\partial \rho}{\partial t}+\frac{\partial}{\partial x_i}(\rho v_i)=0$ Equazione di continuita\'
+	\item $\frac{\partial \rho}{\partial t}+\frac{\partial}{\partial x_i}(\rho v_i)=0$ Equazione di continuità
 	
 	\item $\rho \frac{d v_i}{dt}=f_i+\frac{\partial \tau_{ki}}{\partial x_k} \hspace{0.4cm} i=1,2,3$ Equazioni del moto
 	
@@ -229,17 +229,17 @@
 	
 	\item $\tau_{ij}=C_{ijkl} \varepsilon_{kl}$ Relazione costitutiva che lega $\tau_{ij}$ ad $\varepsilon_{ij}$ (21 costanti libere)
 	
-	$\tau_{ij}= \lambda \varepsilon_{kk} \delta_{ij}+2 \mu \varepsilon_{ij}$ Relazione costitutiva per materiale isotropo ($\lambda, \mu$ costanti di Lame\')
+	$\tau_{ij}= \lambda \varepsilon_{kk} \delta_{ij}+2 \mu \varepsilon_{ij}$ Relazione costitutiva per materiale isotropo ($\lambda, \mu$ costanti di Lamè)
 	
-	$\frac{1}{3}\tau_{kk} = K \varepsilon_{kk}=-\Delta p$ Legame parti isotrope, $K$ incompressibilita\', \textit{bulk modulus}
+	$\frac{1}{3}\tau_{kk} = K \varepsilon_{kk}=-\Delta p$ Legame parti isotrope, $K$ incompressibilità, \textit{bulk modulus}
 	
-	$\tau'_{ij}=2 \mu \varepsilon'_{ij}$ Legame parti deviatoriche, $\mu$ rigidita\', \textit{shear modulus}
+	$\tau'_{ij}=2 \mu \varepsilon'_{ij}$ Legame parti deviatoriche, $\mu$ rigidità, \textit{shear modulus}
 	
 	$K=\lambda + \frac{2}{3}\mu$
 	
 	$K=\frac{\tau_{kk}}{3\varepsilon_{kk}}=-V\frac{\Delta p}{\Delta V}$\\
-	$K_T=-V(\frac{\partial p}{\partial V})_T$ Incompressibilita\' isoterma\\
-	$K_S=-V(\frac{\partial p}{\partial V})_S$ Incompressibilita\' adiabatica
+	$K_T=-V(\frac{\partial p}{\partial V})_T$ Incompressibilità isoterma\\
+	$K_S=-V(\frac{\partial p}{\partial V})_S$ Incompressibilità adiabatica
 	
 	\item $\varepsilon_{ij}=\frac{1}{2 \mu} (\tau_{ij}-\lambda \varepsilon_{kk} \delta_{ij})$ Relazione costitutiva inversa, deformazione dato lo sforzo	
 	$\varepsilon_{kk}=\tau_{kk}/(3\lambda+2\mu)$\\
@@ -255,23 +255,23 @@
 	
 	\item $\rho_0 \frac{\partial^2 \overrightarrow{u}}{\partial t^2} = \overrightarrow{f}+ (\lambda+\mu) (\nabla(\nabla \cdot \overrightarrow{u}))+\mu \nabla^2 \overrightarrow{u} $ Equazione di Cauchy-Navier per le onde elastiche
 	
-	\item $\frac{\partial^2 \varphi}{\partial t^2}=c^2 \nabla^2 \varphi$ Equazione d'onda di D'Alembert, $c$ velocita\' di propagazione dell'onda
+	\item $\frac{\partial^2 \varphi}{\partial t^2}=c^2 \nabla^2 \varphi$ Equazione d'onda di D'Alembert, $c$ velocità di propagazione dell'onda
 	
 	$\phi=\nabla \cdot \overrightarrow{u} = \varepsilon_{kk}$ Onde P (\textit{Primae}), longitudinali\\
-	$V_P= \sqrt{\frac{\lambda+2\mu}{\rho_0}}$ Velocita\' onde P
+	$V_P= \sqrt{\frac{\lambda+2\mu}{\rho_0}}$ Velocità onde P
 	
 	$\psi = \nabla \times \overrightarrow{u}$ Onde S (\textit{Secundae}), trasversali\\
-	$V_S = \sqrt{\frac{\mu}{\rho_0}}$ Velocita\' onde S
+	$V_S = \sqrt{\frac{\mu}{\rho_0}}$ Velocità onde S
 	
 	\item Fluidi  Viscosi Newtoniani\\
-	$F = \eta \dot{u}$ Pistone, $\dot{u}$ velocita\' del pistone\\
+	$F = \eta \dot{u}$ Pistone, $\dot{u}$ velocità del pistone\\
 	$\varepsilon^{(I)}_{ij}$ Deformazione isotropa limitata\\
 	$\varepsilon'_{ij}$ Deformazione deviatorica illimitata\\
 	$\sigma_{ij}$ Sforzo dovuto al moto del fluido (0 quando fluido in quiete), esclusivamete deviatorico\\
 	$\tau_{ij}=-p \delta_{ij}+\sigma_{ij}$ Fluido in movimento
 	
-	$e_{ij}= \dot{\varepsilon_{ij}}= \frac{1}{2}(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i})$ Velocita\' di deformazione\\
-	$\tau_{ij}=-p \delta_{ij} + 2 \eta (e_{ij}-\frac{1}{3}e_{kk}\delta_{ij})$ Fluido newtoniano di viscosita\' $\eta$
+	$e_{ij}= \dot{\varepsilon_{ij}}= \frac{1}{2}(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i})$ Velocità di deformazione\\
+	$\tau_{ij}=-p \delta_{ij} + 2 \eta (e_{ij}-\frac{1}{3}e_{kk}\delta_{ij})$ Fluido newtoniano di viscosità $\eta$
 	
 	\item $\rho \frac{d \overrightarrow{v}}{dt} = \rho \overrightarrow{g}- \nabla p + \eta[\nabla^2 \overrightarrow{v} + \frac{1}{3}\nabla(\nabla \cdot \overrightarrow{v})]$ \hspace{0.3cm} Equazione di Navier-Stokes
 	
@@ -288,7 +288,7 @@
 	\item $u(z)=\frac{k}{2 \eta} (h^2-z^2) $ Flusso 1-D forzato da un gradiente di pressione($k$)
 	
 	\item $u(z)=\frac{k}{4 \eta} (R^2-r^2) $ Flusso di Poiseuille, Flusso newtoniano in condotti cilindrici, max in $r=0$\\
-	$\overline{u}=\frac{Q}{\pi R^2}=\frac{k}{8\eta}R^2=\frac{1}{2}u_{max}\propto k$ Velocita\' media del flusso in condotto, ($Q$ portata)
+	$\overline{u}=\frac{Q}{\pi R^2}=\frac{k}{8\eta}R^2=\frac{1}{2}u_{max}\propto k$ Velocità media del flusso in condotto, ($Q$ portata)
 	
 	\item Transizione alla turbolenza
 	
@@ -310,11 +310,11 @@
 	
 	Flussi irrotazionali $\overrightarrow{\omega}=\nabla \times \overrightarrow{v}=0$
 	
-	$\overrightarrow{v}=\nabla \phi$ Potenziale di velocita\' $\phi$
+	$\overrightarrow{v}=\nabla \phi$ Potenziale di velocità $\phi$
 	
 	$\frac{\partial \phi}{\partial t}+\frac{1}{2}v^2 + gz + \int \frac{dp}{\rho}=0$ Teorema di Bernoulli per flusso inviscido irrotazionale
 	
-	\item $ \frac{D}{Dt} \oint_\gamma \overrightarrow{v} \cdot d\overrightarrow{l} = 0 $ Teorema di Kelvin, dato un fluido inviscido barotropico in un sistema inerziale la circuitazione di $\overrightarrow{v}$ e\' costante nel tempo (non si formano vortici)
+	\item $ \frac{D}{Dt} \oint_\gamma \overrightarrow{v} \cdot d\overrightarrow{l} = 0 $ Teorema di Kelvin, dato un fluido inviscido barotropico in un sistema inerziale la circuitazione di $\overrightarrow{v}$ è costante nel tempo (non si formano vortici)
 	
 \end{itemize}	
 	

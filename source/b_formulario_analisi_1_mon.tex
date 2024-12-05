@@ -33,13 +33,13 @@
 \renewcommand{\,}{\text{, }}
 
 \title{Analisi 1}
-\author{Nicolo\' Montalti}
+\author{Nicolò Montalti}
 \date{}
 
 \begin{document}
 \maketitle
 \section{Limiti di successioni}
-\teor[Unicita\' del limite]{Sia $\alpha\, \beta \in \Rbar$.
+\teor[Unicità del limite]{Sia $\alpha\, \beta \in \Rbar$.
     \[
         \text{Se } a_n \Lim \alpha, a_n \Lim \beta \implies \alpha = \beta
     \]
@@ -75,13 +75,13 @@
         \text{Se } \lambda < 1 & \implies a_n \Lim 0
     \end{align*}
 }
-\teor[CSE Continuita\' sequenziale dell'esponenziale]{
+\teor[CSE Continuità sequenziale dell'esponenziale]{
     Sia $x_n$ s. in $\R$.
     \[
         \text{Se } x_n \Lim x_0 \in \R \implies e^{x_n} \Lim e^{x_0}
     \]
 }
-\teor[CSL Continuita\' sequenziale del logaritmo]{
+\teor[CSL Continuità sequenziale del logaritmo]{
     Sia $x_n$ s. in $\R$.
     \[
         \text{Se } x_n \Lim x_0 \in \R \implies log_a(x_n) \Lim log_a(x_0)
@@ -95,7 +95,7 @@
 }
 \section{Limiti di funzioni}
 Siano $A \subseteq \R^N \, f:A \rightarrow \R^M \, \alpha \in D(A) \, \lambda\, \mu \in \R^M (\bar{\R} \text{ se } M = 1)$
-\teor[Unicita\' del limite]{
+\teor[Unicità del limite]{
     \[
         \text{Se } f(x) \Lim[x \to \alpha] \lambda\, f(x) \Lim[x \to \alpha] \mu \implies \lambda = \mu
     \]
@@ -122,11 +122,11 @@ Siano $A \subseteq \R^N \, f:A \rightarrow \R^M \, \alpha \in D(A) \, \lambda\, 
     \end{align*}
     dove $A_{x_0}^- := A \text{ }\cap \text{ } \interval[open]{-\infty}{ x_0} \, A_{x_0}^+ := A \text{ }\cap \text{ } \interval[open]{x_0}{ +\infty}$. Un risultato analogo vale per $f \searrow$
 }
-\section{Continuita\'}
-\teor[CSC Caratterizzazione sequenziale della continuita\']{Sia $x_0 \in A$.
+\section{Continuità}
+\teor[CSC Caratterizzazione sequenziale della continuità]{Sia $x_0 \in A$.
     Siano $A \subseteq \R^N \, f:A \to \R^M \, x_0 \in A$.
     \[
-        f \text{ e\' continua in } x_0 \iff f(x_n) \Lim f(x_0) \quad \forall x_n \to x_0
+        f \text{ è continua in } x_0 \iff f(x_n) \Lim f(x_0) \quad \forall x_n \to x_0
     \]
 }
 \teor[Bolzano]{
@@ -140,13 +140,13 @@ Sia $I$ un intervallo di $\R$.
     Sia $f \in C(I,\R)$.
     \begin{align*}
         \text{Dato } y \in \R : f(a) < f(y) < f(b) & \implies \exists x_0 \in I : f(x_0) = y \\
-        f(I)                                       & \text{ e\' un intervallo}
+        f(I)                                       & \text{ è un intervallo}
     \end{align*}
 }
 \teor{
     Sia $f \in C(I, \R)\, f \text{ 1-1}$, posto $J = f(I)$. Allora
     \begin{align*}
-         & J \text{ e\' un intervallo, } f \xrightarrow[\text{su}]{1-1} J \\
+         & J \text{ è un intervallo, } f \xrightarrow[\text{su}]{1-1} J \\
          & f^{-1} \in C(J)
     \end{align*}
 }
@@ -158,7 +158,7 @@ Sia $I$ un intervallo di $\R$.
 \teor[Fermat]{
     Sia $f:A \to \R \, x_0 \in \accentset{\circ}{A}\, f'(x_0) \in \R$.
     \[
-        \text{Se } x_0 \text{ e\' un p.to estremante locale} \implies f'(x_0) = 0
+        \text{Se } x_0 \text{ è un p.to estremante locale} \implies f'(x_0) = 0
     \]
 }
 \teor[Rolle]{
@@ -176,7 +176,7 @@ Sia $I$ un intervallo di $\R$.
 \teor[TM Test monotonia]{
     Sia $I$ un intervallo su $\R$, $f:I \to \R$ derivabile in $I$.
     \begin{align}
-        f'(x) = 0 \quad \forall x \in I             & \iff f \text{ e\' costante in } I \\
+        f'(x) = 0 \quad \forall x \in I             & \iff f \text{ è costante in } I \\
         f'(x) \ge 0 \quad           \forall x \in I & \iff f \nearrow                 \\
         f'(x) > 0 \quad           \forall x \in I   & \implies f \nearrow s.          \\
         f \nearrow s.                               & \iff
@@ -197,7 +197,7 @@ Sia $I$ un intervallo di $\R$.
         f(x) = T_{n-1}(x) + \frac{f^{(n)}(y_x)}{n!}(x-x_0)^{n}
     \]
 }
-\teor[TH De l'Ho\'pital]{
+\teor[TH De l'Hôpital]{
     Siano $I$ intervallo di $\R \, x_0 \in D(I) \, f,g: I \setminus \{x_0\} \to \R $ derivabili in $I \setminus \{ x_0 \}$ con $g'(x) \neq 0$ $ \forall x \in I \setminus \{x_0\}$. $f(x) \, g(x) \Lim[x \to x_0] 0$ o $|g(x)| \Lim[x \to x_0] +\infty$. Allora
     \[
         \text{se } \frac{f'(x)}{g'(x)} \Lim[x \to x_0] \lambda \in \Rbar \implies \frac{f(x)}{g(x)} \Lim[x \to x_0] \lambda
@@ -205,17 +205,17 @@ Sia $I$ un intervallo di $\R$.
 
 }
 \teor{
-    Sia I intervallo non banale di $\R \, f : I \to \R$ derivabile in I. Allora $f$ e\' convessa $\iff f' \nearrow$
+    Sia I intervallo non banale di $\R \, f : I \to \R$ derivabile in I. Allora $f$ è convessa $\iff f' \nearrow$
 }
 \teor{
-    Sia $f : I \to \R$ derivabile due volte in I. Allora $f$ e\' convessa $\iff f''(x) \ge 0 \quad \forall x \in I$
+    Sia $f : I \to \R$ derivabile due volte in I. Allora $f$ è convessa $\iff f''(x) \ge 0 \quad \forall x \in I$
 }
 \teor{
     Sia $f \in C^{n+1}(I, \R)$, $x_0 \in \accentset{\circ}{I}$ con $f^{(k)}(x_0) = 0$ per $k \le n$ e $f^{(n+1)}(x_0) \ne 0$. Allora
     \begin{align*}
-         & x_0 \text{ e\' un punto di massimo locale forte di f se (n+1) e\' pari e } f^{(n+1)}(x_0) < 0 \\
-         & x_0 \text{ e\' un punto di minimo locale forte di f se (n+1) e\' pari e } f^{(n+1)}(x_0) > 0  \\
-         & x_0 \text{ non e\' un punto estremante se (n+1) e\' dispari}
+         & x_0 \text{ è un punto di massimo locale forte di f se (n+1) è pari e } f^{(n+1)}(x_0) < 0 \\
+         & x_0 \text{ è un punto di minimo locale forte di f se (n+1) è pari e } f^{(n+1)}(x_0) > 0  \\
+         & x_0 \text{ non è un punto estremante se (n+1) è dispari}
     \end{align*}
 }
 \section{Integrali}
@@ -223,8 +223,8 @@ Sia $I$ un intervallo di $\R$.
     Sia $f : \interval{a}{b} \to \R$ limitata e $c \in \interval[open]{a}{b}$.
     \begin{align*}
         \text{Se } f \in C(\interval{a}{b}, \R)                                         & \implies f \in R_{\interval{a}{b}} \\
-        \text{Se } f \text{ e\' monotona }                                                & \implies f \in R_{\interval{a}{b}} \\
-        \{ x \in  \interval{a}{b} / f \text{ non e\' continua in } x \} \text{ e\' finito } & \implies f \in R_{\interval{a}{b}} \\
+        \text{Se } f \text{ è monotona }                                                & \implies f \in R_{\interval{a}{b}} \\
+        \{ x \in  \interval{a}{b} / f \text{ non è continua in } x \} \text{ è finito } & \implies f \in R_{\interval{a}{b}} \\
         f \in R_{\interval{a}{c}} \, f \in R_{\interval{c}{b}}                          & \iff f \in R_{\interval{a}{b}}
     \end{align*}
 }
@@ -239,7 +239,7 @@ Sia $I$ un intervallo di $\R$.
     Siano $f \in R_{\interval{a}{b}} \, F(X) = \int_a^x f(t) dt : \interval{a}{b} \to \R$. Allora
     \begin{align*}
         F                              & \in C(\interval{a}{b}, \R) \\
-        \text{Se f e\' continua in } x_0 & \implies f(x_0) = F'(x_0)
+        \text{Se f è continua in } x_0 & \implies f(x_0) = F'(x_0)
     \end{align*}
 }
 \teor[2TFC Secondo teorema fondamentale del calcolo]{
@@ -301,7 +301,7 @@ Sia $f \in C(\mathclose [ a, \beta \mathopen [, \R) : $ f abbia una primitiva li
 \teor[CAD Criterio di Abel-Dirichlet]{
     Siano $a_n$ successione in $\R$, $b_n$ succession in $\C$. Allora
     \[
-        \text{se } a_n \searrow 0 \, \sum_{k=1}^{N} b_k \text{ e\' limitata} \implies \sum_{k=1}^{+\infty} a_k b_k \text{ conv.}\]
+        \text{se } a_n \searrow 0 \, \sum_{k=1}^{N} b_k \text{ è limitata} \implies \sum_{k=1}^{+\infty} a_k b_k \text{ conv.}\]
 }
 \teor[CL Criterio di Leibnitz]{
     Siano $a_n$ successione in $\R \, a_n \searrow 0$. Allora

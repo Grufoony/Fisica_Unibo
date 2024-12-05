@@ -35,15 +35,15 @@
 	\maketitle
 
     \section*{Ricavare Sackur-Tetrode}
-        Per un gas perfetto e\' nota la
+        Per un gas perfetto è nota la
         \begin{equation*}
             F=Nk_BT\left[\ln\left(\frac{n}{n_Q}\right)-1\right]
         \end{equation*}
-        Per calcolare l'entropia e\' sufficiente utilizzare la relazione
+        Per calcolare l'entropia è sufficiente utilizzare la relazione
         \begin{equation*}
             S=-\frac{\partial F}{\partial T}
         \end{equation*}
-        ricordandosi che la concentrazione quantistica e\' definita
+        ricordandosi che la concentrazione quantistica è definita
         \begin{equation*}
             n_Q=\left(\frac{mk_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}
         \end{equation*}
@@ -99,16 +99,16 @@
             Z_1=e^{\beta\mu B}+e^{-\beta\mu B}=2\cosh(\beta\mu B)
         \end{equation*}
         Trovandoci in un solido gli spin sono disposti a reticolo, quindi distinguibili.
-        L'energia libera di Helmholtz e\'
+        L'energia libera di Helmholtz è
         \begin{equation*}
             F=-k_BT\ln(Z_1^N)=-Nk_BT\ln[2\cosh(\beta\mu B)]
         \end{equation*}
         \\
         \\
-        (a) Sapendo che la magnetizzazione si puo\' esprimere come $M=-\frac{1}{\mu}\frac{\partial F}{\partial B}$, trovare la magnetizzazione per spin $m$.
+        (a) Sapendo che la magnetizzazione si può esprimere come $M=-\frac{1}{\mu}\frac{\partial F}{\partial B}$, trovare la magnetizzazione per spin $m$.
         \\
         \\
-        Avendo gia\' l'energia di Helmholtz possiamo procedere con il calcolo
+        Avendo già l'energia di Helmholtz possiamo procedere con il calcolo
         \begin{equation*}
             \begin{split}
                 M&=-\frac{1}{\mu}\frac{\partial F}{\partial B}=\frac{Nk_BT}{\mu}\frac{\partial\ln[2\cosh(\beta\mu B)]}{\partial B}\\
@@ -131,7 +131,7 @@
                 \end{axis}
             \end{tikzpicture}
         \end{center}
-        (b) Trovare la capacita\' termica a campo magnetico costante e verificare la presenza di un'anomalia di Schottky.
+        (b) Trovare la capacità termica a campo magnetico costante e verificare la presenza di un'anomalia di Schottky.
         \\
         \\
         Per il calcolo useremo questa volta la funzione di partizione
@@ -161,27 +161,27 @@
         \end{center}
     
     \section*{Esercizio 5.4 (Kennett)}
-        La pressione sul monte Everest e\' $P_{Ev}=\frac{1}{3}P_{atm}$ con $P_{atm}=101.3kPa$ e la temperatura e\' $T_{Ev}\simeq 243K$.
+        La pressione sul monte Everest è $P_{Ev}=\frac{1}{3}P_{atm}$ con $P_{atm}=101.3kPa$ e la temperatura è $T_{Ev}\simeq 243K$.
         Calcolare il libero cammino medio.
         \\
         \\
-        Dalla teoria e\' nota la formula per il libero cammino medio
+        Dalla teoria è nota la formula per il libero cammino medio
         \begin{equation*}
             l=\frac{1}{n\pi d^2}
         \end{equation*}
-        Dato che sempre di aria si tratta (sia sull'Everest che al livello del mare) e che non sappiamo $d$, risulta piu\' comodo trovare
+        Dato che sempre di aria si tratta (sia sull'Everest che al livello del mare) e che non sappiamo $d$, risulta più comodo trovare
         \begin{equation*}
             \frac{l_{Ev}}{l_{atm}}=\frac{n_{atm}}{n_{Ev}}
         \end{equation*}
-        Essendo l'aria in buona approssimazione un gas perfetto si puo\' scrivere la densita\' come $n=\frac{P}{k_BT}$ e, inserendo il tutto nella relazione precedente (assumendo $T_{atm}\simeq300K$)
+        Essendo l'aria in buona approssimazione un gas perfetto si può scrivere la densità come $n=\frac{P}{k_BT}$ e, inserendo il tutto nella relazione precedente (assumendo $T_{atm}\simeq300K$)
         \begin{equation*}
             \frac{l_{Ev}}{l_{atm}}=\frac{T_{Ev}P_{atm}}{T_{atm}P_{Ev}}=3\frac{T_{Ev}}{T_{atm}}=2.67
         \end{equation*}
-        Dalla teoria e\' noto $l_{atm}\simeq 1\mu m$ quindi $l_{Ev}\simeq 2.67\mu m$
+        Dalla teoria è noto $l_{atm}\simeq 1\mu m$ quindi $l_{Ev}\simeq 2.67\mu m$
 
     \section*{Esercizio 5.5 (Kennett)}
         Nello spazio intersetllare sono presenti giganti nubi di idrogeno molecolare (lunghezza di legame $0.74\times 10^{-10}m$).
-        Sapendo che la massa di una nube e\' $m\sim 4\times 10^{45}kg$, il diametro e\' $D\sim 1.42\times 10^{18}m$ e la temperatura e\' $T\sim 10K$ calcolare il libero cammino medio e il tempo di collisione medio.
+        Sapendo che la massa di una nube è $m\sim 4\times 10^{45}kg$, il diametro è $D\sim 1.42\times 10^{18}m$ e la temperatura è $T\sim 10K$ calcolare il libero cammino medio e il tempo di collisione medio.
         \\
         \\
         Calcolando il volume della nube
@@ -192,7 +192,7 @@
         \begin{equation*}
             l=\frac{V}{N\pi d^2}=\frac{D^3}{3N_Ad^2}=7.24\times 10^{11}m
         \end{equation*}
-        Il tempo di collisione analogamente e\'
+        Il tempo di collisione analogamente è
         \begin{equation*}
             \tau=\sqrt{\frac{m}{3k_BT}}l=l\sqrt{\frac{A}{3N_Ak_BT}}=6.48\times 10^{10}s
         \end{equation*}
@@ -201,7 +201,7 @@
         Calcolare $U$ e $C_V$ per un sistema a due livelli popolato da bosoni.
         \\
         \\
-        Dalla teoria e\' nota la
+        Dalla teoria è nota la
         \begin{equation*}
             \Xi_b=\prod_s\left[\frac{1}{1-e^{\beta(\mu-\epsilon_s)}}\right]
         \end{equation*}
@@ -216,7 +216,7 @@
         \begin{equation*}
             \Xi=\frac{1}{(1-e^{\beta\mu})(1-e^{\beta(\mu-\epsilon)})}
         \end{equation*}
-        Dalla definizione di energia interna si puo\' utilizzare il trucco di Feynman
+        Dalla definizione di energia interna si può utilizzare il trucco di Feynman
         \begin{equation*}
             \begin{split}
                 U&=\frac{1}{\Xi}\sum_{N=0}^\infty\sum_{s}^Ns\epsilon e^{\beta(N\mu-s\epsilon)}=\\
@@ -253,7 +253,7 @@
                 \end{axis}
             \end{tikzpicture}
         \end{center}
-        Per la capacita\' termica e\' sufficiente utilizzare la relazione
+        Per la capacità termica è sufficiente utilizzare la relazione
         \begin{equation*}
             \begin{split}
                 C_V&=\frac{\partial U}{\partial T}=\\
@@ -286,21 +286,21 @@
         \end{equation}
         \\
         \\
-        La radiazione di corpo nero e\' costituita da fotoni, ossia bosoni.
-        Dalla teoria (vista in classe) e\' nota la funzione di partizione gran canonica bosonica:
+        La radiazione di corpo nero è costituita da fotoni, ossia bosoni.
+        Dalla teoria (vista in classe) è nota la funzione di partizione gran canonica bosonica:
         \begin{equation*}
             \Xi_b=\prod_s\frac{1}{1-e^{\beta(\mu-\epsilon_s)}}
         \end{equation*}
         Osservando ora come si possano aggiungere/rimuovere fotoni ad un corpo nero senza alcun costo energetico ($\mu=0$) la \ref{equation:9.5a} diviene ovvia.
         \\
         \\
-        (b) Usando l'equazione \ref{equation:9.5a} oppure in altro modo si dimostri che l'entropia per unita\' di volume della radiazione di corpo nero a temperatura $T$ assume la forma
+        (b) Usando l'equazione \ref{equation:9.5a} oppure in altro modo si dimostri che l'entropia per unità di volume della radiazione di corpo nero a temperatura $T$ assume la forma
         \begin{equation}
             s=\frac{4\pi^2k_B^4T^3}{45\hbar^3c^3}
         \end{equation}
         \\
         \\
-        Richiamiamo ora l'energia per unita\' di volume della radiazione di corpo nero (eq. 9.20 Kennett)
+        Richiamiamo ora l'energia per unità di volume della radiazione di corpo nero (eq. 9.20 Kennett)
         \begin{equation*}
             u=\frac{\pi^2}{15}\frac{(k_BT)^4}{(\hbar c)^3}
         \end{equation*}
@@ -326,7 +326,7 @@
         Calcolare la temperatura critica per un BEC in 2 dimensioni.
         \\
         \\
-        Richiamiamo ora la densita\' degli stati 2D calcolata in precedenza:
+        Richiamiamo ora la densità degli stati 2D calcolata in precedenza:
         \begin{equation*}
             g(\epsilon)=g_s\frac{m}{2\pi\hbar^2}L^2
         \end{equation*}
@@ -338,11 +338,11 @@
         \begin{equation*}
             n=g_s\frac{m}{2\pi\hbar^2}\int_0^\infty \frac{1}{e^{\beta(\epsilon-\mu)}-1}d\epsilon
         \end{equation*}
-        Per la temperatura critica si ha $e^{\beta_0}>>1$ e si puo\' approssimare
+        Per la temperatura critica si ha $e^{\beta_0}>>1$ e si può approssimare
         \begin{equation*}
             n\approx g_s\frac{m}{2\pi\hbar^2}\int_0^\infty e^{-\beta(\epsilon-\mu)}d\epsilon
         \end{equation*}
-        la cui soluzione e\'
+        la cui soluzione è
         \begin{equation*}
             n=g_s\frac{mk_B}{2\pi\hbar^2}T_0
         \end{equation*}
@@ -352,10 +352,10 @@
         \end{equation*}
 
     \section*{Esercizio 1 (esame del 13/01/2022)}
-        (a) Calcolare la capacita\' termica $C_V$ per un sistema di $N$ oscillatori armonici distinguibili, ciascuno con energia $\epsilon_s=\left(n+\frac{1}{2}\right)\hbar\omega$ studiandone i limiti a basse ($k_BT<<\hbar\omega$) e alte ($k_BT>>\hbar\omega$) temperature.
+        (a) Calcolare la capacitá termica $C_V$ per un sistema di $N$ oscillatori armonici distinguibili, ciascuno con energia $\epsilon_s=\left(n+\frac{1}{2}\right)\hbar\omega$ studiandone i limiti a basse ($k_BT<<\hbar\omega$) e alte ($k_BT>>\hbar\omega$) temperature.
         \\
         \\
-        Si puo\' subito calcolare la funzione di partizione dalla definizione
+        Si può subito calcolare la funzione di partizione dalla definizione
         \begin{equation*}
             \begin{split}
                 Z_1&=\sum_se^{-\beta\epsilon_s}=\sum_{n=0}^\infty e^{-\beta\hbar\omega\left(n+\frac{1}{2}\right)}=\\
@@ -373,7 +373,7 @@
                 &=N\hbar\omega\left[\frac{1}{1-e^{-\beta\hbar\omega}}-\frac{1}{2}\right]
             \end{split}
         \end{equation*}
-        Da qui e\' possibile ricavare la capacita\' termica
+        Da qui è possibile ricavare la capacità termica
         \begin{equation*}
             \begin{split}
                 C_V&=\frac{\partial U}{\partial T}=N\hbar\omega\frac{\partial}{\partial T}\left[\frac{1}{1-e^{-\beta\hbar\omega}}-\frac{1}{2}\right]=\\
@@ -409,7 +409,7 @@
         \begin{equation*}
             U=-N\frac{\hbar\omega}{3}\tanh\beta\frac{\hbar\omega}{3}
         \end{equation*}
-        e di conseguenza la capacita\' termica
+        e di conseguenza la capacità termica
         \begin{equation*}
             C_V=Nk_B\frac{\left(\beta\frac{\hbar\omega}{3}\right)^2}{\cosh^2\beta\frac{\hbar\omega}{3}}
         \end{equation*}
@@ -432,10 +432,10 @@
         (c) \emph{Opzionale} Interpretare l'andamento alle alte T attraverso il teorema dell'equipartizione dell'energia.
         \\
         \\
-        Avendo $N$ oscillatori armonici con 2 gradi di liberta\' quadratici ciascuno con contributo $\frac{1}{2}k_BT$ ritroviamo la capacita\' termica a $Nk_B$.
+        Avendo $N$ oscillatori armonici con 2 gradi di libertà quadratici ciascuno con contributo $\frac{1}{2}k_BT$ ritroviamo la capacità termica a $Nk_B$.
 
     \section*{Esercizio 2 (esame del 13/01/2022)}
-        (a) Calcolare l'entropia $S$ per un sistema di $N$ oscillatori armonici distinguibili, spiegando perche\' allo zero assoluto ($T = 0$) $S = 0$ e studiandone l'andamento (e la dipendenza da $T$) alle alte $T$.
+        (a) Calcolare l'entropia $S$ per un sistema di $N$ oscillatori armonici distinguibili, spiegando perché allo zero assoluto ($T = 0$) $S = 0$ e studiandone l'andamento (e la dipendenza da $T$) alle alte $T$.
         \\
         \\
         Dalla teoria usiamo la formula dell'entropia
@@ -471,7 +471,7 @@
         \\
         \\
         Non avendo restrizioni sul numero di oscillatori per livello energetico possiamo considerare questi come bosoni.
-        Dalla teoria l'occupazione dei bosoni e\' data dalla
+        Dalla teoria l'occupazione dei bosoni è data dalla
         \begin{equation*}
             \left\langle n_s \right\rangle_b=\frac{1}{e^{\beta\epsilon_s}-1}
         \end{equation*}
@@ -485,7 +485,7 @@
         \\
         \\
         (c) Paragonare graficamente il risultato ottenuto con il caso di un gas di molecole diatomiche.
-        Per il calcolo dell'entropia del gas di molecole diatomiche considerare solo i contributi dovuti al moto traslazionale ($Z_t$) e rotazionale ($Z_r$), considerando che per temperature superiori alla temperatura caratteristica del moto rotazionale $\theta_r$ la funzione $Z_r$ si puo\' approssimare a $\frac{T}{\theta_r}$.
+        Per il calcolo dell'entropia del gas di molecole diatomiche considerare solo i contributi dovuti al moto traslazionale ($Z_t$) e rotazionale ($Z_r$), considerando che per temperature superiori alla temperatura caratteristica del moto rotazionale $\theta_r$ la funzione $Z_r$ si puó approssimare a $\frac{T}{\theta_r}$.
         \\
         \\
         Ricaviamo innanzitutto la funzione di partizione
