@@ -36,11 +36,11 @@
 	\maketitle
 
     \section*{Esercizio 1 (esame del 09/01/2017)}
-        Una molecola di idrogeno ionizzata può essere descritta come un sistema unidimensionale formato da un singolo elettrone soggetto al potenziale
+        Una molecola di idrogeno ionizzata puo\' essere descritta come un sistema unidimensionale formato da un singolo elettrone soggetto al potenziale
         \begin{equation*}
             U(x)=-\frac{\hbar^2\Omega}{m}\left[\delta(x-a)+\delta(x+a)\right]
         \end{equation*}
-        ove $a>0$ è la semidistanza dei due protoni pensati fissi e $\Omega>0$ ha le dimensioni di una lunghezza inversa.
+        ove $a>0$ e\' la semidistanza dei due protoni pensati fissi e $\Omega>0$ ha le dimensioni di una lunghezza inversa.
         Trovare gli autovalori e le autofunzioni dell'energia dello spettro discreto.
         \begin{figure}[H]
             \centering
@@ -73,7 +73,7 @@
         \begin{equation*}
             \frac{d^2\Phi}{dx^2}+\left\{k^2-2\Omega\left[\delta(x-a)+\delta(x+a)\right]\right\}\Phi=0
         \end{equation*}
-        La soluzione è nota
+        La soluzione e\' nota
         \begin{equation*}
             \Phi^\pm(x)=
             \begin{cases}
@@ -82,7 +82,7 @@
                 E^\pm e^{ikx}+F^\pm e^{-ikx}\quad a<x
             \end{cases}
         \end{equation*}
-        Notiamo che il potenziale ha partità definita $U(-x)=U(x)$ allora possiamo imporre la condizione $\Phi^\pm(-x)=\pm\Phi^\pm(x)$, ottenendo
+        Notiamo che il potenziale ha partita\' definita $U(-x)=U(x)$ allora possiamo imporre la condizione $\Phi^\pm(-x)=\pm\Phi^\pm(x)$, ottenendo
         \begin{equation*}
             \begin{cases}
                 E^\pm=\pm A^\pm\\
@@ -90,7 +90,7 @@
                 D^\pm=\pm C^\pm
             \end{cases}
         \end{equation*}
-        La funzione assume ora la forma più semplice
+        La funzione assume ora la forma piu\' semplice
         \begin{equation*}
             \Phi^\pm(x)=
             \begin{cases}
@@ -106,7 +106,7 @@
                 \pm 1\quad x<0
             \end{cases}
         \end{equation*}
-        Notiamo però che lo spettro discreto si avrà per $w<0$, quindi $k=i\tilde{k}$, ma la funzione d'onda non può esplodere all'infinito, quindi necessariamente si avrà $B^\pm=0$ e, riscalando $A^\pm=A^\pm e^{-ika}$
+        Notiamo pero\' che lo spettro discreto si avra\' per $w<0$, quindi $k=i\tilde{k}$, ma la funzione d'onda non puo\' esplodere all'infinito, quindi necessariamente si avra\' $B^\pm=0$ e, riscalando $A^\pm=A^\pm e^{-ika}$
         \begin{equation*}
             \Phi^\pm(x)=
             \begin{cases}
@@ -114,14 +114,14 @@
                 \sigma_\pm(x)A^\pm e^{-\tilde{k}(\left\lvert x\right\rvert-a)}\quad &a<\left\lvert x\right\rvert
             \end{cases}
         \end{equation*}
-        Ora imponiamo la continuità della funzione e della sua derivata 
+        Ora imponiamo la continuita\' della funzione e della sua derivata 
         \begin{equation*}
             \begin{cases}
                 \sigma_\pm(x)A^\pm=C^\pm \left(e^{-\tilde{k}a}\pm e^{\tilde{k}a}\right)\\
                 -\sigma_\pm(x)A^\pm-C^\pm \left(e^{-\tilde{k}a}\mp e^{\tilde{k}a}\right)=-\frac{2\Omega}{\tilde{k}}\sigma_\pm(x)A^\pm
             \end{cases}
         \end{equation*}
-        Si può riscrivere il tutto nella forma
+        Si puo\' riscrivere il tutto nella forma
         \begin{equation*}
             \begin{cases}
                 \sigma_\pm(x)A^\pm=C^\pm \left(e^{-\tilde{k}a}\pm e^{\tilde{k}a}\right)\\
@@ -194,7 +194,7 @@
                 U_0\quad\quad \frac{a}{2}\leq x \leq a
             \end{cases}
         \end{equation*}
-        ove $U_0\neq 0$ è una costante con le dimensioni dell'energia.
+        ove $U_0\neq 0$ e\' una costante con le dimensioni dell'energia.
         \begin{figure}[H]
             \centering
             \begin{tikzpicture}
@@ -227,7 +227,7 @@
         \begin{equation*}
             \frac{d^2\Phi}{dx^2}+\left[k^2-\frac{2m}{\hbar^2}U(x)\right]\Phi=0
         \end{equation*}
-        la cui soluzione generale è (con $k'^2=k^2-\frac{2m}{\hbar^2}U_0$)
+        la cui soluzione generale e\' (con $k'^2=k^2-\frac{2m}{\hbar^2}U_0$)
         \begin{equation*}
             \Phi(x)=
             \begin{cases}
@@ -252,11 +252,11 @@
                 E\sin[k'(x-a)]\quad \frac{a}{2}\leq x \leq a
             \end{cases}
         \end{equation*}
-        Continuità della funzione (ponendo $x_k=\frac{ka}{2}$ e $x_{k'}=\frac{k'a}{2}$):
+        Continuita\' della funzione (ponendo $x_k=\frac{ka}{2}$ e $x_{k'}=\frac{k'a}{2}$):
         \begin{equation*}
             A\sin(x_k)=-E\sin(x_{k'})
         \end{equation*}
-        Continuità della derivata:
+        Continuita\' della derivata:
         \begin{equation*}
             Ax_k\cos(x_k)=Ex_{k'}\cos(x_{k'})
         \end{equation*}
@@ -265,7 +265,7 @@
             \frac{\tan(x_k)}{x_k}=-\frac{\tan(x_{k'})}{x_{k'}}
         \end{equation*}
         che fornisce valori $k_n$ per lo spettro discreto $w_n=\frac{\hbar^2}{2m}k_n^2$, come previsto dal TSS.
-        La soluzione è quindi (con un $k_n$ qualsiasi)
+        La soluzione e\' quindi (con un $k_n$ qualsiasi)
         \begin{equation*}
             \Phi_n(x)=
             \begin{cases}
@@ -298,11 +298,11 @@
         \begin{equation*}
             \frac{\tan(x_{\tilde{k}})}{x_{\tilde{k}}}=-\frac{\tanh(x_{k'})}{x_{k'}}
         \end{equation*}
-        L'equazione è trascendente e possiamo ordinare le soluzioni $k_n$ anche in questo caso (spettro discreto non degenere).
-        In entrambi i casi si avrà uno spettro continuo non degenere per $E\pm U_0\geq 0$.
+        L'equazione e\' trascendente e possiamo ordinare le soluzioni $k_n$ anche in questo caso (spettro discreto non degenere).
+        In entrambi i casi si avra\' uno spettro continuo non degenere per $E\pm U_0\geq 0$.
 
     \section*{Esercizio 1 (esame del 03/07/2017)}
-    Una particlella è confinata in una regione sferica di raggio $R$ ed è soggetta ad un campo di forza centrale con potenziale
+    Una particlella e\' confinata in una regione sferica di raggio $R$ ed e\' soggetta ad un campo di forza centrale con potenziale
     \begin{equation*}
         U(r)=
         \begin{cases}
@@ -311,7 +311,7 @@
         \end{cases}
         \quad\quad U_0\neq 0
     \end{equation*}
-    ove $U_0 > 0$ è una costante con le dimensioni di un'energia. Calcolare gli autovalori e le autofunzioni dell'energia della particella.
+    ove $U_0 > 0$ e\' una costante con le dimensioni di un'energia. Calcolare gli autovalori e le autofunzioni dell'energia della particella.
     Suggerimento: Derivare ma non tentare di risolvere l'equazione agli autovalori trascendente.
     \\
     \\
@@ -320,7 +320,7 @@
     \begin{equation*}
         \frac{d^2\chi}{dr^2}+\left[k^2-\frac{l(l-1)}{r^2}-\frac{2m}{\hbar^2}U(r)\right]\chi=0
     \end{equation*}
-    la cui soluzione è
+    la cui soluzione e\'
     \begin{equation*}
         \chi(r)=
         \begin{cases}
@@ -330,7 +330,7 @@
     \end{equation*}
     con $k'^2=k^2-\frac{2m}{\hbar^2}U_0$
     Condizione al bordo $\chi(0)=0$ quindi $B=0$.
-    Continuità della funzione
+    Continuita\' della funzione
     \begin{equation*}
         Ak\frac{R}{2}j_l(k\frac{R}{2})=Ck'\frac{R}{2}j_l(k'\frac{R}{2})+Dk'\frac{R}{2}n_l(k'\frac{R}{2})
     \end{equation*}
@@ -342,7 +342,7 @@
             Ek'r\left[n_l(2x_{k'})j_l(k'r)-j_l(2x_{k'})n_l(k'r)\right]\quad\quad \frac{R}{2}<r\leq R
         \end{cases}
     \end{equation*}
-    Continuità della derivata
+    Continuita\' della derivata
     \begin{equation*}
         \begin{split}
             A\left\{x_kj_l(x_k)+x_k^2j_l'(x_k)\right\}&=E\left\{n_l(2x_{k'})\left[x_{k'}j_l(x_{k'})+x_{k'}^2j_l'(x_{k'})\right]-j_l(2x_{k'})\left[x_{k'}n_l(x_{k'})+x_{k'}^2n_l'(x_{k'})\right]\right\}\\
@@ -359,7 +359,7 @@
     quindi gli autovalori dell'energia sono semplicemente $w_n=\frac{\hbar^2}{2m}k_n^2$.
 
     \section*{Esercizio 1 (esame del 15/01/2018)}
-        Una particella di massa $m$ è confinata nello semispazio unidimensionale $x\geq0$ ed è soggetta al potenziale
+        Una particella di massa $m$ e\' confinata nello semispazio unidimensionale $x\geq0$ ed e\' soggetta al potenziale
         \begin{equation*}
             U(x)=\frac{\hbar^2}{m}\Omega\delta(x-a)
         \end{equation*}
@@ -401,7 +401,7 @@
         \begin{equation*}
             \frac{d^2}{dx^2}\Phi+\left\{k^2+2\Omega\delta(x-a)\right\}\Phi=0
         \end{equation*}
-        La soluzione generica è
+        La soluzione generica e\'
         \begin{equation*}
             \Phi(x)=
             \begin{cases}
@@ -410,7 +410,7 @@
             \end{cases}
         \end{equation*}
         Condizioni al bordo $\Phi(0)=0$ quindi $B=0$.
-        Imponiamo ora la continuità
+        Imponiamo ora la continuita\'
         \begin{equation*}
             \begin{cases}
                 A\sin(ka)=Ce^{ika}+De^{-ika}\\
@@ -429,15 +429,15 @@
                 Ce^{ikx}+De^{-ikx}\quad a<x
             \end{cases}
         \end{equation*}
-        Considerando ora il caso in cui $\Omega<0$ notiamo che è possibile avere $w<0$ quindi $k=i\tilde{k}$.
+        Considerando ora il caso in cui $\Omega<0$ notiamo che e\' possibile avere $w<0$ quindi $k=i\tilde{k}$.
         La funzione d'onda deve essere limitata all'infinito quindi necessariamente si deve avere $D=0$.
         L'equazione agli autovalori diviene
         \begin{equation*}
             \tilde{k}\left[\coth(\tilde{k}a)+1\right]=-2\Omega
         \end{equation*}
         trascendente, che fornisce l'unico valore discreto $\tilde{k}$.
-        Lo spettro energetico in questo caso è discreto non degenere per $w<0$ (con un unico livello) e continuo non degenere altrimenti, come previsto dal TSS.\\
-        L'autofunzione energetica nello spettro discreto è
+        Lo spettro energetico in questo caso e\' discreto non degenere per $w<0$ (con un unico livello) e continuo non degenere altrimenti, come previsto dal TSS.\\
+        L'autofunzione energetica nello spettro discreto e\'
         \begin{equation*}
             \Phi_{\tilde{k}}(x)=
             \begin{cases}
@@ -492,21 +492,21 @@
                 t_ke^{ik(x-a)} \quad\quad a<x
             \end{cases}
         \end{equation*}
-        Impongo la continuità della funzione
+        Impongo la continuita\' della funzione
         \begin{equation*}
             \begin{split}
                 1+r_k&=A+B\\
                 Ae^{ika}+Be^{-ika}&=t_k
             \end{split}
         \end{equation*}
-        e la continuità della derivata prima
+        e la continuita\' della derivata prima
         \begin{equation*}
             \begin{split}
                 ik(A-B)-ik(1-r_k)&=2\Omega(1+r_k)\\
                 ikt_k-ik(Ae^{ika}-Be^{-ika})&=-2\Omega t_k
             \end{split}
         \end{equation*}
-        Usando le precedenti relazioni è possibile ricavare i coefficienti
+        Usando le precedenti relazioni e\' possibile ricavare i coefficienti
         \begin{equation*}
             \begin{split}
                 r_k&=\frac{\Omega-ikB}{ik-\Omega}\\
@@ -536,7 +536,7 @@
         \end{center}
 
     \section*{Esercizio 1 (esame del 08/11/2019)}
-        Una particlella è soggetta ad un campo di forza centrale di tipo armonico
+        Una particlella e\' soggetta ad un campo di forza centrale di tipo armonico
         \begin{equation*}
             U(r)=\frac{U_0}{2a^2}r^2
         \end{equation*}
@@ -575,15 +575,15 @@
         \begin{equation*}
             \chi_{as}(x)\simeq e^{-\frac{x^2}{2}}
         \end{equation*}
-        La soluzione generale sarà un'equazione del tipo
+        La soluzione generale sara\' un'equazione del tipo
         \begin{equation*}
             \chi(x)\simeq e^{-\frac{x^2}{2}}H(x)
         \end{equation*}
-        dove $H(x)$ è determinata dalla
+        dove $H(x)$ e\' determinata dalla
         \begin{equation*}
             \frac{d^2H}{dx^2}-2x\frac{dH}{dx}+2nH=0
         \end{equation*}
-        ed è quindi un polinomio di Hermite
+        ed e\' quindi un polinomio di Hermite
         \begin{equation*}
             H_n(x)=(-1)^2e^{x^2}\frac{d^n}{dx^n}e^{-x^2}
         \end{equation*}
@@ -650,7 +650,7 @@
             \end{cases}
         \end{equation*}
         La funzione deve annullarsi nell'origine, quindi $B=0$.
-        Imponiamo ora la continuità della funzione
+        Imponiamo ora la continuita\' della funzione
         \begin{equation*}
             A\sin(k'a)=C+D
         \end{equation*}
@@ -685,11 +685,11 @@
         \end{equation*}
 
     \section*{Esercizio 1 (esame del 14/01/2022)}
-        Una particella è confinata in un intervallo spaziale di raggio $R$ ed è soggetta ad un campo di forza centrale con potenziale
+        Una particella e\' confinata in un intervallo spaziale di raggio $R$ ed e\' soggetta ad un campo di forza centrale con potenziale
         \begin{equation*}
             U(r)=\frac{\hbar^2}{m}\Omega\delta(r-\frac{R}{2})
         \end{equation*}
-        dove $\Omega\neq 0$ è una costante con le dimensioni di una lunghezza inversa.
+        dove $\Omega\neq 0$ e\' una costante con le dimensioni di una lunghezza inversa.
         Calcolare gli autovalori e le autofunzioni dell'energia della particella.
         \\
         \\
@@ -723,11 +723,11 @@
                 Ekr\left[n_l(2x)j_l(kr)-j_l(2x)n_l(kr)\right]\quad\quad \frac{R}{2}<r\leq R
             \end{cases}
         \end{equation*}
-        Continuità della funzione:
+        Continuita\' della funzione:
         \begin{equation*}
             Aj_l(x)=E\left[n_l(2x)j_l(x)-j_l(2x)n_l(x)\right]
         \end{equation*}
-        Continuità della derivata:
+        Continuita\' della derivata:
         \begin{equation*}
             Ex\left[n_l(2x)j_l'(x)-j_l(2x)n_l'(x)\right]-Ax\left[j_l'(x)\right]=2\Omega Aj_l(x)
         \end{equation*}

@@ -64,7 +64,7 @@
 		% =================
 		{}
 		Berselli Gregorio \quad Lanzi Samuele\\
-		Barbieri Matteo \quad Farnè Gabriele\\
+		Barbieri Matteo \quad Farne\' Gabriele\\
 		\url{https://github.com/Grufoony/Fisica_UNIBO}
 		\vfill
 	\end{titlepage}
@@ -72,69 +72,69 @@
 	\chapter{Introduzione} %CAPITOLO 1
 		\section{Sistema Complesso}
 			\begin{definition}
-				\textit{Sistema Complesso} è un sistema dinamico composto da sottosistemi interagenti tra loro, chiamati agenti.
+				\textit{Sistema Complesso} e\' un sistema dinamico composto da sottosistemi interagenti tra loro, chiamati agenti.
 			\end{definition}
-			Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia si studiano prevalentemente le proprietà macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
-			Un'osservazione importante che va effettuata è che un modello di sistema complesso \textbf{prevede}, non descrive.
+			Per lo studio di un sistema complesso si usa solitamente un approccio olistico, ossia si studiano prevalentemente le proprieta\' macroscopiche del sistema totale, senza considerare i singoli sottosistemi.
+			Un'osservazione importante che va effettuata e\' che un modello di sistema complesso \textbf{prevede}, non descrive.
 			\begin{definition}
-				Lo spazio degli stati dinamici del sistema è detto spazio delle fasi.
+				Lo spazio degli stati dinamici del sistema e\' detto spazio delle fasi.
 			\end{definition}
 			\begin{definition}
-				I gradi di libertà di un sistema sono dati da $\# d.o.f.=\frac{dimensione dello spazio}{2}$
+				I gradi di liberta\' di un sistema sono dati da $\# d.o.f.=\frac{dimensione dello spazio}{2}$
 			\end{definition}
-			Per un numero elevato di gradi di libertà è possibile utilizzare l'approccio della meccanica statistica.
-			Alcune delle proprietà principali dei sistemi complessi sono:
+			Per un numero elevato di gradi di liberta\' e\' possibile utilizzare l'approccio della meccanica statistica.
+			Alcune delle proprieta\' principali dei sistemi complessi sono:
 			\begin{itemize}
-				\item \textbf{complessità}: presenza di molti d.o.f. (molti agenti)
-				\item \textbf{proprietà emergenti}: derivano dal grande numero di agenti. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non può essere fluida.
-				\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia metà stocastici e metà deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
+				\item \textbf{complessita\'}: presenza di molti d.o.f. (molti agenti)
+				\item \textbf{proprieta\' emergenti}: derivano dal grande numero di agenti. Ad esempio possiamo definire \textit{fluido} un insieme di molte particelle ma la particella singola non puo\' essere fluida.
+				\item \textbf{autorganizzazione}: i sistemi complessi sono ibridi, ossia meta\' stocastici e meta\' deterministici. Per studiarli devo dare ugual peso a entrambi gli aspetti.
 			\end{itemize}
-			La complessità dei sistemi fa si che per definirne uno stato occorra molta \emph{informazione}.
+			La complessita\' dei sistemi fa si che per definirne uno stato occorra molta \emph{informazione}.
 			Ogni sistema complesso fornisce un \emph{feedback} rispetto alle condizioni inziali che sono fornite.
 			In particolare, si parla di \emph{feedback positivo} se le condizioni iniziali portano il sistema a "esplodere", ossia ad allontanarsi inesorabilmente dall'origine, mentre si parla di \emph{feedback negativo} quando dopo un certo periodo di tempo il sistema ritorna alle condizioni iniziali.
 			\begin{definition}
-				Un sistema a feedback negativo è detto in equilibrio dinamico.
+				Un sistema a feedback negativo e\' detto in equilibrio dinamico.
 			\end{definition}
 		
 		\section{Teoria di Ljapunov}
-			In un sistema classico, una volta scritta la lagrangiana (o hamiltoniana) del sistema e ottenute le \emph{equazioni del moto}, è cosa fatta determinarne l'evoluzione nel tempo (traiettorie).
-			Nei sistemi complessi, tuttavia, non è possibile utilizzare un approccio deterministico: si parla infatti di \emph{caos deterministico}.
-			Questo caos è causato soprattutto dalle fluttuazioni intrinseche dei sistemi complessi, le quali li rendono particolamente sensibili alle condizioni iniziali.
+			In un sistema classico, una volta scritta la lagrangiana (o hamiltoniana) del sistema e ottenute le \emph{equazioni del moto}, e\' cosa fatta determinarne l'evoluzione nel tempo (traiettorie).
+			Nei sistemi complessi, tuttavia, non e\' possibile utilizzare un approccio deterministico: si parla infatti di \emph{caos deterministico}.
+			Questo caos e\' causato soprattutto dalle fluttuazioni intrinseche dei sistemi complessi, le quali li rendono particolamente sensibili alle condizioni iniziali.
 			Si consideri sistema alle condizioni iniziali $x_{0}$.
-			Dopo un tempo $t$, si troverà naturalmente il sistema in una posizione $x(t)$ determinata dalle condizioni iniziali.
-			Si assuma ora la presenza di fluttuazioni sulle condizioni iniziali $x_{0}+\delta_{0}$: il sistema evolverà ora come $x(t)+\delta(t)$.
+			Dopo un tempo $t$, si trovera\' naturalmente il sistema in una posizione $x(t)$ determinata dalle condizioni iniziali.
+			Si assuma ora la presenza di fluttuazioni sulle condizioni iniziali $x_{0}+\delta_{0}$: il sistema evolvera\' ora come $x(t)+\delta(t)$.
 			La teoria vuole che le fluttuazioni seguano l'andamento
 			\begin{equation*}
 				\delta(t)\simeq\delta_{0}e^{\lambda t}
 			\end{equation*}
-			dove il coefficiente $\lambda$ è detto \emph{esponente di Ljapunov}.
-			Il calcolo di questo parametro non è banale, pertanto non verrà dimostrato ma solo riportato.
+			dove il coefficiente $\lambda$ e\' detto \emph{esponente di Ljapunov}.
+			Il calcolo di questo parametro non e\' banale, pertanto non verra\' dimostrato ma solo riportato.
 			\begin{theorem}
 				$\lambda=\lim_{\delta\to0,t\to\infty}\frac{1}{t}\ln\left\lVert \Phi^{t}(x+\delta)-\Phi^{t}(x) \right\rVert$
 			\end{theorem}
-			Nonostante il limite precendente appaia complicato, nella maggior parte dei casi è possibile utilizzare l'approssimazione $\lambda\simeq\frac{1}{t}\sum_{k}\ln\frac{\delta_{k}}{\delta_{0}}$, dove $k$ indicizza una traslazione temporale $\Delta t$. 
-			Per comprendere i limiti dell'approssimazione precedente si può notare come $\delta_{0}e^{\lambda t}=o(1)$, quindi $\ln\delta_{0}+\lambda t=0$.
+			Nonostante il limite precendente appaia complicato, nella maggior parte dei casi e\' possibile utilizzare l'approssimazione $\lambda\simeq\frac{1}{t}\sum_{k}\ln\frac{\delta_{k}}{\delta_{0}}$, dove $k$ indicizza una traslazione temporale $\Delta t$. 
+			Per comprendere i limiti dell'approssimazione precedente si puo\' notare come $\delta_{0}e^{\lambda t}=o(1)$, quindi $\ln\delta_{0}+\lambda t=0$.
 			\begin{definition}
-				$t=-\frac{\ln\delta_{0}}{\lambda}$ tempo di predittività del modello	
+				$t=-\frac{\ln\delta_{0}}{\lambda}$ tempo di predittivita\' del modello	
 			\end{definition}
-			Si può notare come:
+			Si puo\' notare come:
 			\begin{itemize}
-				\item l'esponente di Ljapunov è una proprietà dell'orbita, non del punto, ed è quindi necessario interagire su tempi lunghi;
-				\item un'alta sensibiltà alle condizioni iniziali implica una scarsa predittività;
-				\item per $\lambda>>1$ è possibile utilizzare l'approccio statistico;
-				\item le proprietà sono locali (ma non così tanto locali).
+				\item l'esponente di Ljapunov e\' una proprieta\' dell'orbita, non del punto, ed e\' quindi necessario interagire su tempi lunghi;
+				\item un'alta sensibilta\' alle condizioni iniziali implica una scarsa predittivita\';
+				\item per $\lambda>>1$ e\' possibile utilizzare l'approccio statistico;
+				\item le proprieta\' sono locali (ma non cosi\' tanto locali).
 			\end{itemize}
-			Non è possibile conoscere a priori il segno di $\lambda$.
+			Non e\' possibile conoscere a priori il segno di $\lambda$.
 			Il \emph{caos deterministico}, ovviamente, si ottiene solo se $\lambda>0$ (l'esponenziale esplode) in un insieme a misura finita.
 			Ne consegue che le orbite debbano espandersi rimanendo limitate, fenomeno noto come \emph{stretching-folding}, che comporta la conservazione di una misura (volume).
 			\begin{theorem}
-				di Poincarè (del ritorno)
+				di Poincare\' (del ritorno)
 				\\Un sistema dinamico che conserva i volumi su un compatto ritorna arbitrariamente vicino alle condizioni iniziali (feedback negativo).
 				\label{theorem:poincare}
 			\end{theorem}
 		
 		\section{Costruzione di un modello}
-			Punto fondamentale di un sistema complesso è costruire un modello che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
+			Punto fondamentale di un sistema complesso e\' costruire un modello che riesca a riprodurre le sue caratteristiche fondamentali, per poi studiarlo.
 			Innanzitutto, per prevedere un sistema occorre:
 			\begin{itemize}
 				\item un modello (matematico) per l'evoluzione;
@@ -161,39 +161,39 @@
 				\caption{\emph{Schema operativo}}
 				\label{figure:schema_operativo}
 			\end{figure}
-			In Fig.(\ref{figure:schema_operativo}) è presente lo schema operativo della creazione di un modello.
-			Il punto di partenza è sempre un problema, la cui osservazione sperimentale fornisce i dati sui quali costruire un modello di teoria .
-			Con esso è poi possibile eseguire delle predizioni da confrontare con i dati sperimentale per comprenderne l'affidabilità e gli eventuali scenari incompatibili.
+			In Fig.(\ref{figure:schema_operativo}) e\' presente lo schema operativo della creazione di un modello.
+			Il punto di partenza e\' sempre un problema, la cui osservazione sperimentale fornisce i dati sui quali costruire un modello di teoria .
+			Con esso e\' poi possibile eseguire delle predizioni da confrontare con i dati sperimentale per comprenderne l'affidabilita\' e gli eventuali scenari incompatibili.
 			Ovviamente un buon modello teorico deve avere dei parametri manipolabili (di controllo) e caratteristiche valide universalmente.
 			\\
 			Si possono distinguere due tipologie di modelli, le quali verranno ora analizzate.
 			\subsection{Modelli ad agente}
 				La prima tipologia di modello sono i \emph{modelli ad agente}, ossia quei modelli in cui si effettua uno studio di tipo bottom-up (dal particolare al generale).
-				Assunzione fondamentale è di avere piena conoscenza sui comportamenti dei singoli agenti e sull'ambiente in cui questi si relazionano.
-				Una volta \emph{formalizzati} matematicamente i comportamenti dei singoli è possibile procedere con una \emph{simulazione}, la quale fornirà una possibile evoluzione del sistema.
-				È essenziale notare come in questo caso il risultato ottenuto sia solamente uno dei tanti possibili: bisognerà quindi effettuare la simulazione numerose volte e mediare sui risultati ottenuti.
-				Riguardo la costruzione del modello, la prima cosa da definire è l'\textit{ambiente} in cui ci si trova. 
-				Questo può essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
-				Altro punto fondamentale è definire \textit{spazio e tempo}. 
-				Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi è preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
+				Assunzione fondamentale e\' di avere piena conoscenza sui comportamenti dei singoli agenti e sull'ambiente in cui questi si relazionano.
+				Una volta \emph{formalizzati} matematicamente i comportamenti dei singoli e\' possibile procedere con una \emph{simulazione}, la quale fornira\' una possibile evoluzione del sistema.
+				È essenziale notare come in questo caso il risultato ottenuto sia solamente uno dei tanti possibili: bisognera\' quindi effettuare la simulazione numerose volte e mediare sui risultati ottenuti.
+				Riguardo la costruzione del modello, la prima cosa da definire e\' l'\textit{ambiente} in cui ci si trova. 
+				Questo puo\' essere neutro o avere caratteristiche, ad esempio una distribuzione di nutrimento (per sistemi biologici).
+				Altro punto fondamentale e\' definire \textit{spazio e tempo}. 
+				Spesso non fa differenza la scelta di spazi e tempi discreti rispetto ai continui, quindi e\' preferibile assumere una discretizzazione iniziale per poi passare al continuo successivamente.
 				Una volta definito lo spazio bisogna poi decidere le condizioni al contorno, ossia il comportamento ai bordi. 
 				Si possono avere \textit{barriere} di tre tipi:
 				\begin{itemize}
-					\item \textbf{riflettenti}, dove si ha un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattività delle pareti}.
+					\item \textbf{riflettenti}, dove si ha un bordo \textit{non} oltrepassabile. Si crea quindi un fenomeno di \textbf{attrattivita\' delle pareti}.
 					\item \textbf{periodico}, dove si hanno i bordi coincidenti (esco da una parte e rientro dall'altra). Lo spazio assume in questo caso una forma toroidale.
 					\item \textbf{assorbenti}, dove gli oggetti "uscenti" vengono distrutti. In questo caso bisogna di introdurre delle \textit{sorgenti} nel modello per evitare di perdere tutti gli agenti.
 				\end{itemize}
-				Si nota facilmente come più piccolo sia il modello, più importante sia il contributo degli effetti di bordo.\\
+				Si nota facilmente come piu\' piccolo sia il modello, piu\' importante sia il contributo degli effetti di bordo.\\
 				Nella maggior parte dei sistemi non tutti gli agenti hanno le stesse caratteristiche: si definiscono allora \textbf{classi} di appartenenza, legate tra loro da relazioni matematiche.
 			\subsection{Modelli a equazioni}
-				La seconda ed ultima tipologia di sistema complesso è data dai \emph{modelli a equazioni}, ossia quei modelli in cui si effettua uno stduio di tipo top-down (dal generale al particolare).
+				La seconda ed ultima tipologia di sistema complesso e\' data dai \emph{modelli a equazioni}, ossia quei modelli in cui si effettua uno stduio di tipo top-down (dal generale al particolare).
 				In questo caso si assume di non avere conoscenza sui singoli agenti ma di possedere informazioni di carattere puramente macroscopico, dette \emph{osservabili} del sistema.
 				Tipicamente, gli osservabili sono legati tra di loro tramite equazioni differenziali le quali, una volta integrate, forniscono un'evoluzione del sistema nel tempo.
-				In questo caso il risultato ottenuto rappresenta già una media di tutti i risultati possibili: le fluttuazioni del sistema provocheranno quindi uno scostamento da questo valore.
-				Ovviamente, più tempo si farà evolvere il sistema, più rilevante sarà l'effetto delle fluttuazioni e meno preciso sarà il risultato della previsione.
+				In questo caso il risultato ottenuto rappresenta gia\' una media di tutti i risultati possibili: le fluttuazioni del sistema provocheranno quindi uno scostamento da questo valore.
+				Ovviamente, piu\' tempo si fara\' evolvere il sistema, piu\' rilevante sara\' l'effetto delle fluttuazioni e meno preciso sara\' il risultato della previsione.
 
 		\section{Distribuzioni}
-		Per l'analisi matematica dei sistemi è utile definire le funzioni di distribuzione, le quali sono indicatori della frequenza di avvnimento di un fenomeno.
+		Per l'analisi matematica dei sistemi e\' utile definire le funzioni di distribuzione, le quali sono indicatori della frequenza di avvnimento di un fenomeno.
 		\begin{definition}
 			Gaussiana\\$\rho(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
 		\end{definition}
@@ -216,8 +216,8 @@
 			\caption{\emph{Gaussiana.}}
 			\label{figure:gaussiana}
 		\end{figure}
-		La gaussiana, riportata in Fig. (\ref{figure:gaussiana}), è nota come la distribuzione degli errori ed è tra le più importanti funzioni della fisica.
-		Caratteristica principale è la sua discesa molto veloce superata una distanza pari a $\sigma$ dal valore medio.
+		La gaussiana, riportata in Fig. (\ref{figure:gaussiana}), e\' nota come la distribuzione degli errori ed e\' tra le piu\' importanti funzioni della fisica.
+		Caratteristica principale e\' la sua discesa molto veloce superata una distanza pari a $\sigma$ dal valore medio.
 		\begin{definition}
 			Esponenziale\\$\rho(x)=\frac{1}{k}e^{-\frac{x}{k}}$
 		\end{definition}
@@ -240,7 +240,7 @@
 			\caption{\emph{Esponenziale.}}
 			\label{figure:esponenziale}
 		\end{figure}
-		L'esponenziale, riportato in Fig. (\ref{figure:esponenziale}), è la distribuzione emergente dalla meccanica statistica (fattori di Boltzmann).
+		L'esponenziale, riportato in Fig. (\ref{figure:esponenziale}), e\' la distribuzione emergente dalla meccanica statistica (fattori di Boltzmann).
 		\begin{definition}
 			Potenza\\$\rho(x)\propto\frac{1}{x^a}$, con $a>0$
 		\end{definition}
@@ -263,7 +263,7 @@
 			\caption{\emph{Potenza.}}
 			\label{figure:potenza}
 		\end{figure}
-		La potenza, riportata in Fig. (\ref{figure:potenza}), è una distribuzione che possiede un'importanate proprietà, detta \emph{invarianza di scala}.
+		La potenza, riportata in Fig. (\ref{figure:potenza}), e\' una distribuzione che possiede un'importanate proprieta\', detta \emph{invarianza di scala}.
 		\begin{theorem}
 			Invarianza di scala:\\
 			se $\rho(x)\propto\frac{1}{x^a}$ allora posto $y=\lambda x$ si ha $\rho(y)=\frac{\lambda^a}{x^a}\propto\frac{1}{y^a}$
@@ -280,37 +280,37 @@
 
 		\section{Esempi}
 			\subsection{Automa cellulare}
-				Un sistema che vuole simulare l'evoluzione di una popolazione in spazi e tempi discreti è detto automa cellulare.
+				Un sistema che vuole simulare l'evoluzione di una popolazione in spazi e tempi discreti e\' detto automa cellulare.
 				Si vuole ora creare un automa cellulare con le seguenti caratteristiche:
 				\begin{itemize}
-					\item effetto di \textbf{riproduzione}: consiste in un aumento del numero di individui che si riflette nell'espansione esponenziale del sistema (effetto comune in natura purchè le risorse siano sufficienti), ossia
+					\item effetto di \textbf{riproduzione}: consiste in un aumento del numero di individui che si riflette nell'espansione esponenziale del sistema (effetto comune in natura purche\' le risorse siano sufficienti), ossia
 						\begin{equation*}
 							\Delta n(t) \propto n(t)
 						\end{equation*}
 					\item effetto di \textbf{competizione}: limita la crescita della popolazione.
-						Un individuo compete coi suoi simili, quindi il contributo competitivo sarà del tipo
+						Un individuo compete coi suoi simili, quindi il contributo competitivo sara\' del tipo
 						\begin{equation*}
 							\Delta n(t) \propto -n^2(t)
 						\end{equation*}
 				\end{itemize}
-				Assunzione fondamentale di questo modello è che ogni individuo possa incontrare tutti quegli altri, irrealistico in quanto in una rete sociale la probabilità di incontri varierebbe da individuo a individuo.
+				Assunzione fondamentale di questo modello e\' che ogni individuo possa incontrare tutti quegli altri, irrealistico in quanto in una rete sociale la probabilita\' di incontri varierebbe da individuo a individuo.
 				In un modello continuo si avrebbe
 				\begin{equation*}
 					n\left(t+\Delta t\right)=n(t)+\left(an(t)-bn^2(t)\right)\Delta t
 				\end{equation*}
-				dove $\Delta t$ rappresenta il tempo in cui la popolazione evolve (teoria del campo medio), $a$ è il tasso di riproduzione e $b$ il tasso di incontri, questi ultimi assunti costanti.
+				dove $\Delta t$ rappresenta il tempo in cui la popolazione evolve (teoria del campo medio), $a$ e\' il tasso di riproduzione e $b$ il tasso di incontri, questi ultimi assunti costanti.
 				Nel limite $\Delta t\to 0$ si ottiene l'\emph{equazione logistica}
 				\begin{equation}
 					\dot{n}(t)=an(t)\left(1-\frac{b}{a}n(t)\right)
 					\label{equation:equazione_logistica}
 				\end{equation}
-				che altro non è che la rappresentazione continua della \emph{mappa logistica}
+				che altro non e\' che la rappresentazione continua della \emph{mappa logistica}
 				\begin{equation}
 					x_{n+1}=rx_{n}\left(1-x_n\right)
 					\label{equation:mappa_logistica}
 				\end{equation}
-				ossia la rappresentazione dinamica non lineare più semplice che degenera in un moto caotico, resa pubblica nel 1976 dal biologo Robert May.\\
-				La stabilità del sistema si ha ovviamente per $n=\frac{b}{a}$ e la soluzione analitica del problema diventa
+				ossia la rappresentazione dinamica non lineare piu\' semplice che degenera in un moto caotico, resa pubblica nel 1976 dal biologo Robert May.\\
+				La stabilita\' del sistema si ha ovviamente per $n=\frac{b}{a}$ e la soluzione analitica del problema diventa
 				\begin{equation*}
 					n(t)=\frac{an_{0}}{\left(a-bn_{0}\right)e^{-at}+bn_{0}}
 				\end{equation*}
@@ -338,72 +338,72 @@
 					\caption{\emph{Funzione logistica.}}
 					\label{figure:funzione_logistica}
 				\end{figure}
-				Si può osservare come i limiti $f(t)=\pm 1$ rappresnetino due stati fissi mentre la zona centrale sia di transizione, quindi per $f(t)=0$ si avrà la massima variazione.
+				Si puo\' osservare come i limiti $f(t)=\pm 1$ rappresnetino due stati fissi mentre la zona centrale sia di transizione, quindi per $f(t)=0$ si avra\' la massima variazione.
 			\subsection{Random Walk 1D}
-				Il modello più basilare di sistema complesso è sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
-				Sia $p=\frac{1}{2}$ la probabilità di muoversi verso destra (quindi anche a sinistra) di un passo $\Delta x$. Si hanno:
+				Il modello piu\' basilare di sistema complesso e\' sicuramente la random walk su una retta, ossia un punto che ogni istante di tempo decide in maniera casuale se spostarsi a destra o a sinistra.
+				Sia $p=\frac{1}{2}$ la probabilita\' di muoversi verso destra (quindi anche a sinistra) di un passo $\Delta x$. Si hanno:
 				\begin{itemize}
 					\item \{R\}: $p(t+\Delta t)=x(t)+\Delta x$
 					\item \{L\}: $p(t+\Delta t)=x(t)-\Delta x$
 				\end{itemize}
 				Dopo \textit{n} passi si ha quindi $p(n\Delta t)=x_0+\sum_k\xi_k\Delta x$ con $\xi(t)=\pm 1$.
-				Inoltre si può verificare che $<\xi_k>=0$, $<\xi_k^2>=1$, $<\xi_k\xi_h>=<\xi_k><\xi_h>, k\neq h$.
+				Inoltre si puo\' verificare che $<\xi_k>=0$, $<\xi_k^2>=1$, $<\xi_k\xi_h>=<\xi_k><\xi_h>, k\neq h$.
 				Per il teorema del limite centrale si ha:
 				$\sum_k^n\xi_k\Delta x=\sqrt{n\Delta t}\left(\frac{1}{\sqrt{n}}\sum_k^n\xi_k\right)\frac{\Delta x}{\sqrt{\Delta t}}=\frac{1}{\sqrt{2\pi Dt}}e^{-\frac{z^2}{2Dt}}$, con $z$ variabile gaussiana.
 				Introducendo il concetto di diffusione:\\
 				\begin{definition}
 					Diffusione. $D=\frac{\Delta x^2}{\Delta t}$
 				\end{definition}
-				si può descrivere l'evoluzione del sistema come $x(t)=x_0+z\sqrt{Dt}$
-				Si utilizza $\sqrt{n}$ per normalizzare in quanto è l'unico esponente non divergente.
+				si puo\' descrivere l'evoluzione del sistema come $x(t)=x_0+z\sqrt{Dt}$
+				Si utilizza $\sqrt{n}$ per normalizzare in quanto e\' l'unico esponente non divergente.
 				La varianza della gaussiana cresce nel tempo, infatti calcolando i momenti della distribuzione si trova $<x(t)>=x_0$, $<(x(t)-x_0)^2>=Dt$.
 				Se la topologia del sistema fosse una circonferenza (e non una retta), si avrebbe un rilassamento esponenziale a una situazione stazionaria.
-				\\Definito un intervallo $-L,L$ sulla retta, la probabilità che il punto vi sca dopo un tempo $t$ è data da:
+				\\Definito un intervallo $-L,L$ sulla retta, la probabilita\' che il punto vi sca dopo un tempo $t$ e\' data da:
 				\begin{equation}
 					P(\left\lvert x\right\rvert >L)=1-\int_{-L}^{L}\frac{1}{\sqrt{2\pi Dt}}e^{-\frac{x^2}{2Dt}}dx
 				\end{equation}
-				Si può facilmente notare come raddoppiando la distanza $L$ il tempo $t$ quadruplichi.
+				Si puo\' facilmente notare come raddoppiando la distanza $L$ il tempo $t$ quadruplichi.
 			\subsection{Random Walk 2D}
 				Volendo espandere il modello di random walk ad uno spazio 2D si nota subito come, essendo ogni asse indipendente dall'altro, si possa semplicemente comporre due gaussiane:\\
 				\begin{equation*}
 					(x,y)\simeq\frac{1}{2\pi\Delta t}e^{-\frac{x^2+y^2}{2\Delta t}}=\rho(x,y,t)
 				\end{equation*}
-				Dove la diffusione segue la definizione precedente ed è la stessa in tutte le direzioni.
-				La funzione $\rho(x,y,t)$ rappresnta di fatto la probabilità che la il soggetto in analisi si trovi in un volume $\Delta x\Delta y$.
-				Si può riscrivere la relazione precedente in coorfinate polari ottenendo:
+				Dove la diffusione segue la definizione precedente ed e\' la stessa in tutte le direzioni.
+				La funzione $\rho(x,y,t)$ rappresnta di fatto la probabilita\' che la il soggetto in analisi si trovi in un volume $\Delta x\Delta y$.
+				Si puo\' riscrivere la relazione precedente in coorfinate polari ottenendo:
 				\begin{equation*}
 					\rho(r,\theta,t)=\frac{r}{2\pi\Delta t}e^{-\frac{r^2}{2\Delta t}}
 				\end{equation*}
-				studiando più semplicemente l'allontanamento dall'origine.
+				studiando piu\' semplicemente l'allontanamento dall'origine.
 				In particolare, l'allontanamento medio risulta:
 				\begin{equation*}
 					<r>=\int_0^\infty\rho(r,\theta,t)rdr=\sqrt{\frac{\pi}{2}\Delta t}
 				\end{equation*}
-				e la densità diminuisce quindi esponenzialmente.
+				e la densita\' diminuisce quindi esponenzialmente.
 			\subsection{Random Walk non omogenea}
-			Si consideri ora una random walk 1D con probabilità non uniforme in un reticolo di passo $\Delta x$.
-			Sia $\epsilon$ un parametro e si definiscano le probabilità:
+			Si consideri ora una random walk 1D con probabilita\' non uniforme in un reticolo di passo $\Delta x$.
+			Sia $\epsilon$ un parametro e si definiscano le probabilita\':
 			\begin{equation*}
 				\begin{cases}
 					p_{++}=p_{--}=\frac{1}{4}(1+\epsilon x)\quad x\geq 0\quad\Rightarrow x\rightarrow x\pm 2\Delta x\\
 					p_+=p_-=\frac{1}{4}(1-\epsilon x)\quad x<0\quad\Rightarrow x\rightarrow x\pm \Delta x
 				\end{cases}
 			\end{equation*}
-			Si può verificare facilmente come le probabilità siano ben definite.
-			Il sistema tende a muoversi più velocemente nel verso positivo delle \textit{x} e più lentamente nel verso opposto, assomigliando a una scatola con aria a diversa temperatura: vi è quindi un equilibrio locale (ogni nodo è identico).
-			Si può osservare come:
+			Si puo\' verificare facilmente come le probabilita\' siano ben definite.
+			Il sistema tende a muoversi piu\' velocemente nel verso positivo delle \textit{x} e piu\' lentamente nel verso opposto, assomigliando a una scatola con aria a diversa temperatura: vi e\' quindi un equilibrio locale (ogni nodo e\' identico).
+			Si puo\' osservare come:
 			\begin{equation*}
 				\begin{split}
 					<\Delta x>&=0\\
 					<\Delta x^2>&=(4\Delta x^2)(p_{++}+p_{--})+\Delta x^2(p_++p_-)=\left(\frac{5}{2}+\frac{3}{2}\epsilon x\right)\Delta x^2
 				\end{split}
 			\end{equation*}
-			Ogni passo ho un \textit{enemble} differente, quindi lo spazio non è omogeneo.
+			Ogni passo ho un \textit{enemble} differente, quindi lo spazio non e\' omogeneo.
 			Ponendo $T(x)=<\Delta x^2>$ come funzione corrispondente alla temperatura fisica, si ottiene un gradiente costante:
 			\begin{equation*}
 				\frac{dT}{dx}=\frac{3}{2}\epsilon\Delta x^2
 			\end{equation*}
-			Questo gradiente si ritrova spesso in natura, ad esempio i batteri variano la velocità di movimento (casuale) dei loro flagelli seguendo un gradiente di cibo.
+			Questo gradiente si ritrova spesso in natura, ad esempio i batteri variano la velocita\' di movimento (casuale) dei loro flagelli seguendo un gradiente di cibo.
 			Per essere apprezzabile la variazione di temperatura deve essere tale che $\Delta T=\frac{\partial T}{\partial x}\Delta x\propto\Delta x^3$ e in un limite continuo si ottiene:
 			\begin{equation*}
 				\begin{split}
@@ -423,7 +423,7 @@
 				Consideriamo di avrere $n_{0}$ individui iniziali su una griglia (spazio discretizzato) che si muovono seguendo una Random Walk 2D e soggetti alle seguenti restrizioni:
 				\begin{itemize}
 					\item se un individuo ha spazio sufficiente, si riproduce in un tempo $\Delta t$, allora si deve avere $\Delta n(t)\propto n(t)$;
-					\item se due individui competono per lo stesso spazio, uno dei due soccombe con una certa probabilità $p$, il che implica $\Delta n(t)\propto -n^{2}(t)$;
+					\item se due individui competono per lo stesso spazio, uno dei due soccombe con una certa probabilita\' $p$, il che implica $\Delta n(t)\propto -n^{2}(t)$;
 				\end{itemize}
 				Si osservi come il termine $n^{2}(t)$ conti il numero di coppie.
 				Definita la scala di tempo $\Delta t$, in un modello continuo si deve avere (teoria del campo medio):
@@ -436,11 +436,11 @@
 					\dot{n}(t)=an(t)\left(1-\frac{b}{a}n(t)\right)=0
 				\end{equation*}
 				si ottengono i punti critici $n=0$, instabile, e $n=\frac{a}{b}$ stabile.
-				La soluzione al sistema è quindi del tipo
+				La soluzione al sistema e\' quindi del tipo
 				\begin{equation}
 					n(t)=\frac{an_{0}}{\left(a-bn_{0}\right)e^{-at}+bn_{0}}
 				\end{equation}
-				e la funzione logistica del sistema è
+				e la funzione logistica del sistema e\'
 				\begin{equation}
 					f(t)=\frac{1-e^{-t}}{1+e^{-t}}=\tanh\frac{t}{2}
 				\end{equation}
@@ -495,7 +495,7 @@
 					\end{cases}
 				\end{equation*}
 				Il sistema dilata densamente lungo la direzione $v_{+}$ dell'autovettore $\lambda_{+}>1$.
-				Dato un vettore iniziale $x_{0}$, $(x_{0}\cdot v_{t})\lambda_{t}^{n} \Rightarrow \ln\lambda_{t}$ è l'esponenziale di Ljapunov.
+				Dato un vettore iniziale $x_{0}$, $(x_{0}\cdot v_{t})\lambda_{t}^{n} \Rightarrow \ln\lambda_{t}$ e\' l'esponenziale di Ljapunov.
 				\begin{figure}[H]
 					\centering
 					\begin{tikzpicture}
@@ -515,13 +515,13 @@
 					\caption{\emph{Catmap.}}
 					\label{figure:catmap}
 				\end{figure}
-				In Fig.(\ref{figure:catmap}) è rappresentata un'applicazione della catmap su un insieme di punti.
-				Si può notare come una volta fatto evolvere il sistema partendo dall'area nera, questo non ritorni nella condizione iniziale applicando la trasformazione inversa (area verde).
+				In Fig.(\ref{figure:catmap}) e\' rappresentata un'applicazione della catmap su un insieme di punti.
+				Si puo\' notare come una volta fatto evolvere il sistema partendo dall'area nera, questo non ritorni nella condizione iniziale applicando la trasformazione inversa (area verde).
 				\\
 				Problema: data una distribuzione di punti $\rho_{0}$, cosa succede a $\rho_{0}(T^{n}x)$?
 				\\
 				Per definizione, data una distribuzione $\rho(x)$, questa deve essere normalizzata $\int_{\Pi^{2}}\rho(x)dx=1$.
-				L'equazione di continuità permette di imporre la conservazione del numero di particelle:
+				L'equazione di continuita\' permette di imporre la conservazione del numero di particelle:
 				\begin{equation*}
 					\rho(x,n)=\rho_{0}\left(T^{-n}x\right)\left\lvert\frac{\partial T^{-n}}{\partial x}\right\rvert 
 				\end{equation*}
@@ -533,7 +533,7 @@
 						1 & 1 
 					\end{matrix}
 				\right)=1$, quindi $\rho_{0}\left(T^{n}x\right)$ evolve in una distribuzione di particelle.
-				Si può ora constatare che, se $I(x)$ è un osservabile del sistema, vale la relazione:
+				Si puo\' ora constatare che, se $I(x)$ e\' un osservabile del sistema, vale la relazione:
 				\begin{equation*}
 					<I>(n)=\int I(x)\rho(x,n)dx
 				\end{equation*}
@@ -547,12 +547,12 @@
 						m(B)&=\int\chi_{B}(x)\rho_{s}(x)dx
 					\end{split}
 				\end{equation}
-				e si è così dimostrato il teorema \ref{theorem:poincare}.
+				e si e\' cosi\' dimostrato il teorema \ref{theorem:poincare}.
 			\subsection{Modello economico}
-				Si vuole ora costruire un primo modello legato alla realtà simulando, per quanto grossolanamente, l'economia globale.\\
+				Si vuole ora costruire un primo modello legato alla realta\' simulando, per quanto grossolanamente, l'economia globale.\\
 				Supponiamo di avere \textit{M} individui con \textit{n} soldi ciascuno, che si muovono su una griglia secondo una Random Walk 2D.
-				Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilità $p=\frac{1}{2}$.\\
-				\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla povertà.
+				Ogni qualvolta due individui si trovino sulla stessa cella questi si scambiano 1 soldo con probabilita\' $p=\frac{1}{2}$.\\
+				\textbf{Caso limite}: se si incontra un povero ($n=0$), si gioca lo stesso (gioco scorretto) per permettere a tutti di uscire dalla poverta\'.
 				Il sistema ha quindi i seguenti limiti:
 				\begin{equation*}
 					\begin{cases}
@@ -561,15 +561,15 @@
 					\end{cases}
 				\end{equation*}
 				con \textit{N} costante, quindi non si ha creazione/distruzione di denaro.
-				La probabilità di trovare un individuo con n soldi è:
+				La probabilita\' di trovare un individuo con n soldi e\':
 				\begin{equation*}
 					p(n)=\frac{\binom{M+N-2-n}{M-2}}{\binom{M+N-1}{N-1}}
 				\end{equation*}
-				e, ponendo $\overline{n}=\frac{N}{M}$, si può calcolare:
+				e, ponendo $\overline{n}=\frac{N}{M}$, si puo\' calcolare:
 				\begin{equation}
 					\lim_{M\to\infty}\frac{1}{\overline{n}}\left( 1-\frac{n}{M}\right)^M=\frac{1}{\overline{n}}e^{-\frac{n}{\bar{n}}}
 				\end{equation}
-				quindi la probabilità decresce esponenzialmente.\\
+				quindi la probabilita\' decresce esponenzialmente.\\
 				\begin{figure}[H]
 					\centering
 					\begin{tikzpicture}
@@ -594,14 +594,14 @@
 					\item molti poveri e pochi ricchi (ma praticamente nessun super-ricco)
 					\item esiste un tempo in cui un povero diventa ricco (e viceversa)
 					\item simile alla distribuzione di energia di Maxwell-Boltzmann
-					\item se chi è ricco pagasse di più si otterrebbe una curva a campana
+					\item se chi e\' ricco pagasse di piu\' si otterrebbe una curva a campana
 				\end{itemize}
-				Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realtà la probabilità sembra seguire una legge a potenza piuttosto che esponenziale.
-				Pur non trovando riscontro nella realtà, si è appena dimostrato stocasticamente il fattore di Boltzmann $e^{-\beta\epsilon}$.
-				Si può quindi pensare il denaro come un'\emph{energia interna} al singolo mentre la probabilità di scambio rappresenta la \emph{temperatura statistica} del sistema.
+				Tuttavia osservando i dati sperimentali si nota una discrepanza: nella realta\' la probabilita\' sembra seguire una legge a potenza piuttosto che esponenziale.
+				Pur non trovando riscontro nella realta\', si e\' appena dimostrato stocasticamente il fattore di Boltzmann $e^{-\beta\epsilon}$.
+				Si puo\' quindi pensare il denaro come un'\emph{energia interna} al singolo mentre la probabilita\' di scambio rappresenta la \emph{temperatura statistica} del sistema.
 			\subsection{Modello economico evoluto}
-				Per adattare il modello precedente alla realtà si introduce una microdinamica sugli scambi di denaro.\\
-				Sia $\pi_\pm$ la probabilità di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. Il sistema possiede una \textit{struttura di catena}:
+				Per adattare il modello precedente alla realta\' si introduce una microdinamica sugli scambi di denaro.\\
+				Sia $\pi_\pm$ la probabilita\' di guadagnare $\pm 1$ soldi se un soggetto ne possiede \textit{n}. Il sistema possiede una \textit{struttura di catena}:
 				\begin{definition}
 					Struttura di catena.\\
 					Un modello ha struttura di catena quando il flusso in una direzione implica un secondo flusso nella direzione opposta.
@@ -610,15 +610,15 @@
 				\begin{equation*}
 					\pi_+(n-1)p(n-1)+\pi_-(n+1)p(n+1)=\pi_+(n)p(n)+\pi_-(n)p(n)
 				\end{equation*}
-				e in particolare è verificato il \textit{bilancio dettagliato}:
+				e in particolare e\' verificato il \textit{bilancio dettagliato}:
 				\begin{equation}
 					\pi_+(n-1)p(n-1)=\pi_-(n)p(n)\quad \forall n\geq 1
 				\end{equation}
-				Normalizzata la distribuzione è possibile iterare il tutto:
+				Normalizzata la distribuzione e\' possibile iterare il tutto:
 				\begin{equation*}
 					p(n)=\prod_{k=1}^n\frac{\pi_+(k-1)}{\pi_-(k)}p(0)
 				\end{equation*}
-				Riscrivendo un maniera più comoda il bilancio dettagliato, si può poi procedere:
+				Riscrivendo un maniera piu\' comoda il bilancio dettagliato, si puo\' poi procedere:
 				\begin{equation*}
 					\pi_+(n-\frac{1}{2})p(n-\frac{1}{2})=\pi_-(n+\frac{1}{2})p(n+\frac{1}{2})
 				\end{equation*}
@@ -667,7 +667,7 @@
 			\subsection{La rovina di un giocatore}
 				Si consideri un giocatore d'azzardo con a disposizione un capitale \textit{k} e che vuole arrivare ad un capitale \textit{M}.
 				Il gioco finisce ai ``bordi'' (barriera assorbente) per $k=0$ (giocatore rovinato) o per $k=M$ (giocatore felice).
-				Siano $p$ la probabilità di guadagnare, $q=1-p$ la probabilità di perdere, $P_M(k)$ la probabilità di arrivare al capitale \textit{M} partendo da \textit{k}.
+				Siano $p$ la probabilita\' di guadagnare, $q=1-p$ la probabilita\' di perdere, $P_M(k)$ la probabilita\' di arrivare al capitale \textit{M} partendo da \textit{k}.
 				Come nel modello economico evoluto si ha:
 				\begin{equation*}
 					P_M(k)=pP_M(k+1)+qP_M(k-1)
@@ -690,25 +690,25 @@
 				\begin{equation}
 					P_\infty(k)=1-\left(\frac{q}{p}\right)^k
 				\end{equation}
-				In particolare, considerando un gioco equo, si può notare come $P_M(k)=\frac{k}{M}$ e quindi:
+				In particolare, considerando un gioco equo, si puo\' notare come $P_M(k)=\frac{k}{M}$ e quindi:
 				\begin{itemize}
-					\item il gioco è alla pari solo se $k\simeq M$
-					\item la probabilità di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
-					\item contro un casinò ($M\to\infty$) la probabilità di vincita è evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
+					\item il gioco e\' alla pari solo se $k\simeq M$
+					\item la probabilita\' di vincita aumenta all'aumentare del proprio capitale rispetto a quello avversario
+					\item contro un casino\' ($M\to\infty$) la probabilita\' di vincita e\' evidentemente nulla anche in caso di gioco equo (assunzione oltretutto inverosimile)
 				\end{itemize}
 	
 	\chapter{Entropia e Informazione} %CAPITOLO 2
-		\section{Probabilità}
-			Data una distribuzione di probabilità $\rho(x)$ normalizzata (integrale sul dominio uguale a $1$) è possibile procedere con le seguenti definizioni:
-			\begin{definition} Probabilità:\\
+		\section{Probabilita\'}
+			Data una distribuzione di probabilita\' $\rho(x)$ normalizzata (integrale sul dominio uguale a $1$) e\' possibile procedere con le seguenti definizioni:
+			\begin{definition} Probabilita\':\\
 				$p(x\in[a,b])=\int_{a}^{b}\rho(x)dx$
 			\end{definition}
-			\begin{definition} Probabilità cumulata:\\
+			\begin{definition} Probabilita\' cumulata:\\
 				$p(x\leq a)=\int_{-\infty}^{a}\rho(x)dx$
 			\end{definition}
 			\begin{definition}
-				Probabilità stazionaria\\
-				La probabilità stazionaria è il numero di volte che un evento accade in una sequenza.
+				Probabilita\' stazionaria\\
+				La probabilita\' stazionaria e\' il numero di volte che un evento accade in una sequenza.
 			\end{definition}
 			\begin{theorem}
 				legge dei grandi numeri\\
@@ -718,36 +718,36 @@
 			\subsection{Ranking distribution}
 				\begin{definition}
 					Sia $x$ una variabile aleatoria con un sample $\{x_{1},\ldots,x_{n}\}$ di osservazioni ordinate tali che $x_{1}\geq x_{2}\geq\ldots$.
-					Allora $x_{j}=f(j)$ è detta ranking distribution.
+					Allora $x_{j}=f(j)$ e\' detta ranking distribution.
 				\end{definition}
-				Solitamente tale distribuzione è normalizzata in modo che $y_{j}=\frac{x_{j}}{x_{1}}$.
-				Per definizione la frequenza di un evento è $\frac{j}{n}$, quindi la distribuzione cumulata risulta
+				Solitamente tale distribuzione e\' normalizzata in modo che $y_{j}=\frac{x_{j}}{x_{1}}$.
+				Per definizione la frequenza di un evento e\' $\frac{j}{n}$, quindi la distribuzione cumulata risulta
 				\begin{equation}
 					F(x_{j})=1-\frac{j}{n}=1-\frac{J(x_{j})}{n}
 				\end{equation}
 				con $J(x_{j}$ inverso del ranking.
-				La funzione di distribuzione sarà quindi
+				La funzione di distribuzione sara\' quindi
 				\begin{equation}
 					p(x)=-\frac{1}{n}\frac{dJ}{dx}
 				\end{equation}
 		
 		\section{Entropia}
-			Si supponga di voler calcolare l'incertezza di una distribuzione di probabilità $p_{1},\ldots,p_{n}$ per gli eventi $\{x_{1},\ldots,x_{n}\}$.
+			Si supponga di voler calcolare l'incertezza di una distribuzione di probabilita\' $p_{1},\ldots,p_{n}$ per gli eventi $\{x_{1},\ldots,x_{n}\}$.
 			Si assuma:
 			\begin{itemize}
 				\item $H(p_{1},\ldots,p_{n})$ continua;
-				\item se $p_{j}=\frac{1}{n}$ allora $H(\frac{1}{n},\ldots,\frac{1}{n})$ è monotona crescente;
-				\item Dati gli eventi composti $y_{1}=\{x_{1},\ldots,x_{m}\}$, $y_{2}=\{x_{m+1},\ldots,x_{m+k}\}$ con probabilità $P(y_{i}/x_{i})=\frac{p_{i}}{w_{i}}$, allora 
+				\item se $p_{j}=\frac{1}{n}$ allora $H(\frac{1}{n},\ldots,\frac{1}{n})$ e\' monotona crescente;
+				\item Dati gli eventi composti $y_{1}=\{x_{1},\ldots,x_{m}\}$, $y_{2}=\{x_{m+1},\ldots,x_{m+k}\}$ con probabilita\' $P(y_{i}/x_{i})=\frac{p_{i}}{w_{i}}$, allora 
 					\\$H(p_{1},\ldots,p_{n})=H(w_{1},\ldots,w_{n})+w_{1}H\left(\frac{p_{1}}{w_{1}},\ldots,\frac{p_{m}}{w_{1}}\right)+w_{2}H\left(\frac{p_{2}}{w_{2}},\ldots,\frac{p_{m}}{w_{2}}\right)+\ldots$;
 			\end{itemize}
-			La soluzione è del tipo $H(p_{1},\ldots,p_{n})=-k_{s}\sum_{i}p_{i}\ln(p_{i})$ dove si definisce
+			La soluzione e\' del tipo $H(p_{1},\ldots,p_{n})=-k_{s}\sum_{i}p_{i}\ln(p_{i})$ dove si definisce
 			\begin{definition}
 				$S=-k_{s}\sum_{i}p(x_i)\ln p(x_i)$ entropia di informazione (di Shannon)
 				\label{equation:entropia}
 			\end{definition}
 			con $k_{s}=\frac{1}{\ln2}$ costante di Shannon.
-			Si può notare come $H(p_{1},\ldots,p_{n})$ sia massima per $p_{j}=\frac{1}{n}$.
-			Fissato $\bar{x}=\sum_{j}x_{j}p_{j}$, l'entropia è massimizzabile utilizzando i moltiplicatori di lagrange:
+			Si puo\' notare come $H(p_{1},\ldots,p_{n})$ sia massima per $p_{j}=\frac{1}{n}$.
+			Fissato $\bar{x}=\sum_{j}x_{j}p_{j}$, l'entropia e\' massimizzabile utilizzando i moltiplicatori di lagrange:
 			\begin{equation*}
 				\delta H=-\sum_{i}\delta p(x_i)\ln p(x_i)+\lambda\sum_{j}x_{j}\delta p_{j}=0
 			\end{equation*}
@@ -756,22 +756,22 @@
 				p_{j}=\frac{e^{\lambda x_{j}}}{\sum_{j}e^{\lambda x_{j}}}
 			\end{equation}
 			con $\lambda\simeq -\frac{1}{\bar{x}}$ (risultato fondamentale della meccanica statistica).
-			La distribuzione è quindi esponenziale, con $p_{j}\propto e^{-\frac{x_{j}}{\bar{x}}}$.
+			La distribuzione e\' quindi esponenziale, con $p_{j}\propto e^{-\frac{x_{j}}{\bar{x}}}$.
 		
 		\section{Informazione}
 			\begin{definition}
-				Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ è detta variabile di CODING
+				Una variabile $x$ a valori discreti $\{x_0,x_1,...\}$ e\' detta variabile di CODING
 			\end{definition}
-			Si consideri una sequenza (\textit{codifica}) $\{x_k\}_1^N$: si può assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
-			Una codifica è detta \textbf{ottimale} se può descrivere in maniera univoca un'orbita.
+			Si consideri una sequenza (\textit{codifica}) $\{x_k\}_1^N$: si puo\' assumere $P(\{x_k\})=p(x_1)...p(x_N)$.
+			Una codifica e\' detta \textbf{ottimale} se puo\' descrivere in maniera univoca un'orbita.
 			\begin{definition}
 				Data una codifica, si definisce $-\ln(x)$ l'informazione portata dal carattere $x$
 			\end{definition}
-			Si nota subito come più un valore della variabile di coding è probabile, minor informazione questo porti.
-			Informaticamente, la misura è circa il numero di bit necessari per memorizzare la sequenza (da qui il fattore $\ln2$ dell'entropia di Shannon).
+			Si nota subito come piu\' un valore della variabile di coding e\' probabile, minor informazione questo porti.
+			Informaticamente, la misura e\' circa il numero di bit necessari per memorizzare la sequenza (da qui il fattore $\ln2$ dell'entropia di Shannon).
 			L'equazione \ref{equation:entropia} rappresenta quindi l'informazione media portata da un singolo carattere.
 			Non bisogna confondere entropia con informazione: la variabile deve avere un significato!
-			Data l'indipendenza dei caratteri, si può scrivere l'entropia di una coppia come
+			Data l'indipendenza dei caratteri, si puo\' scrivere l'entropia di una coppia come
 			\begin{equation*}
 				\begin{split}
 					S\left(P_{2}\left(\{x_{k_{1}},x_{k_{2}}\}\right)\right)&=-\sum_{k_{1},k_{2}}P_{2}\left(\{x_{k_{1}},x_{k_{2}}\}\right)\ln{P_{2}\left(\{x_{k_{1}},x_{k_{2}}\}\right)}=\\
@@ -780,22 +780,22 @@
 			\end{equation*}
 			Iterando il ragionamento si giunge alla conclusione che l'entropia di Shannon misura l'aumento di informazione data dall'aggiunta di un carattere.
 			\subsection{Matrice stocastica}
-				Si è analizzato finora il caso di caratteri indipendenti gli uni dagli altri.
+				Si e\' analizzato finora il caso di caratteri indipendenti gli uni dagli altri.
 				Tuttavia, per comprendere una sequenza bisogna, in generale, conoscerne la \textit{memoria}, ossia tutte le dipendenze di un evento dagli altri.
-				Formalmente, ciò vorrebbe dire che, dati due eventi A e B, $P\left(\{AB\}\right)=P\left(B/A\right)P(A)\neq P(A)P(B)$.
-				Si può facilmente osservare come $\lim_{N\to\infty}\frac{P\left(\{AB\}\right)}{P(A)}=P\left(B/A\right)$, dove $N$ rappresenta il numero totale di eventi.
-				L'\textit{irreversibilità} di un evento si ha quando la coppia di eventi $AB$ è diversa dalla coppia di eventi $BA$.
+				Formalmente, cio\' vorrebbe dire che, dati due eventi A e B, $P\left(\{AB\}\right)=P\left(B/A\right)P(A)\neq P(A)P(B)$.
+				Si puo\' facilmente osservare come $\lim_{N\to\infty}\frac{P\left(\{AB\}\right)}{P(A)}=P\left(B/A\right)$, dove $N$ rappresenta il numero totale di eventi.
+				L'\textit{irreversibilita\'} di un evento si ha quando la coppia di eventi $AB$ e\' diversa dalla coppia di eventi $BA$.
 				\begin{definition}
 					$p_{ij}=p(x_j/x_i)$ matrice stocastica
 				\end{definition}
-				La matrice stocastica ha per definizione le seguenti proprietà:
+				La matrice stocastica ha per definizione le seguenti proprieta\':
 				\begin{itemize}
 					\item $0\leq p_{ij}\leq 1$
 					\item $\sum_jp_{ij}=1$
 				\end{itemize}
-				Questa matrice è molto importante, essento intrinsecamente legata alla probabilità condizionata, ed è alla base di ogni problema di trasporto.
-				Si consideri ora una sequenza infinita e sia $p_i$ la probabilità di avere l'elemento $x_i$ in quella posizione.
-				Qual è la probabilità $p_j$ di avere l'elemento successivo?
+				Questa matrice e\' molto importante, essento intrinsecamente legata alla probabilita\' condizionata, ed e\' alla base di ogni problema di trasporto.
+				Si consideri ora una sequenza infinita e sia $p_i$ la probabilita\' di avere l'elemento $x_i$ in quella posizione.
+				Qual e\' la probabilita\' $p_j$ di avere l'elemento successivo?
 				Sia \textit{n} il numero di passi per arrivare in posizione \textit{i}, allora:
 				\begin{equation}
 					p_j^{n+1}=\sum_ip_{ij}p_j^n
@@ -807,18 +807,18 @@
 				\end{theorem}
 				Corollari:
 				\begin{itemize}
-					\item $p_j^s$ è un vettore stazionario situato nel primo quadrante
+					\item $p_j^s$ e\' un vettore stazionario situato nel primo quadrante
 					\item l'iperpiano $\sum_{i,j}p_{ij}v_i=\sum_iv_i=0$ sono invarianti per $p_{ij}$
 					\item $\lambda_i<1\quad\forall i\neq 0$
 					\item $p_j^{n+1}=\sum_ip_{ij}p_j^n=1\Leftrightarrow\sum_ip_i^n=1$
 				\end{itemize}
 			\subsection{Teoria di Markov}
-				A questo punto si può calcolare come cambi quantitativamente l'informazione di una catena aggiungendo un carattere.
+				A questo punto si puo\' calcolare come cambi quantitativamente l'informazione di una catena aggiungendo un carattere.
 				\begin{definition}
-					Proprietà di Markov (di tempo presente)\\
+					Proprieta\' di Markov (di tempo presente)\\
 					$P(\{x_1,...,x_{n+1}\})=P(x_{n+1}/Px_n)P(\{x_1,...,x_{n}\})$
 				\end{definition}
-				Si può quindi calcolare l'entropia dell'(N+1)esimo passo
+				Si puo\' quindi calcolare l'entropia dell'(N+1)esimo passo
 				\begin{equation*}
 					\begin{split}
 						S_{N+1}&=-\sum P\left(\{x_{1}\ldots x_{N+1}\}\right)\ln P\left(\{x_{1}\ldots x_{N+1}\}\right)=\\
@@ -831,11 +831,11 @@
 					S_{N+1}=S_N-\sum_{ij}p_j^sp_{ij}\ln p_j
 				\end{equation}
 				Nei linguaggi l'aggiunta di un carattere non cambia di molto l'entropia (per fortuna, altrimenti sarebbe molto difficile parlarsi, ndr).
-				Questa entropia fornisce tuttavia un'importante risultato sulla reversibilità del processo:
-				se invertendo il tempo non ho differenza di entropia, allora il processo è \textit{reversibile}, altrimenti no.
+				Questa entropia fornisce tuttavia un'importante risultato sulla reversibilita\' del processo:
+				se invertendo il tempo non ho differenza di entropia, allora il processo e\' \textit{reversibile}, altrimenti no.
 				Le \textbf{fluttuazioni} di un sistema \textbf{all'equilibrio} sono sempre un processo \textbf{reversibile}, infatti osservando tale sistema non si riesce a distinguere tra passato e futuro.
-				Come esempio per giustificare la precedente affermazione si può prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto browniano}.
-				Un esempio grafico puoò essere rappresentato dalla Fig.(\ref{figure:esempio_markov}).
+				Come esempio per giustificare la precedente affermazione si puo\' prendere un pendolo fisico in assenza di attriti/forse esterne, oppure un \textit{moto browniano}.
+				Un esempio grafico puoo\' essere rappresentato dalla Fig.(\ref{figure:esempio_markov}).
 				\begin{figure}[H]
 					\centering
 					\begin{tikzpicture}[>=latex,every node/.style={draw,circle,minimum width={3em},node distance=6em}]
@@ -846,7 +846,7 @@
 					\draw [<->] (b) -- (c);
 					\draw [<->] (c) -- (a);
 					\end{tikzpicture}
-					\caption{\emph{Grafo di esempio reversibilità.}}
+					\caption{\emph{Grafo di esempio reversibilita\'.}}
 					\label{figure:esempio_markov}
 				\end{figure}
 				Associando la matrice
@@ -858,12 +858,12 @@
 							\frac{1}{2} & \frac{1}{2} & 0 
 						\end{pmatrix}
 				\end{equation*}
-				si ha eguale probabilità di transizione in ogni direzione ammessa dal grafo.
-				L'evoluzione temporale è data da
+				si ha eguale probabilita\' di transizione in ogni direzione ammessa dal grafo.
+				L'evoluzione temporale e\' data da
 				\begin{equation*}
 					p_i^{n+1}=\sum_j\Pi_{ij}p_j^n
 				\end{equation*}
-				e si verifica facilmente che il sistema è reversibile con distribuzione stazionaria
+				e si verifica facilmente che il sistema e\' reversibile con distribuzione stazionaria
 				\begin{equation*}
 					\lim_{n\to\infty}p^n=\left(\frac{1}{3},\frac{1}{3},\frac{1}{3}\right)
 				\end{equation*}
@@ -876,21 +876,21 @@
 							\frac{1}{3} & \frac{2}{3} & 0 
 						\end{pmatrix}
 				\end{equation*}
-				si aumenta la probabilità di percorrere il triangolo in senso antiorario.
-				Essendo la distrubuzione stazionaria identica al caso precedente si può studiare la reversibilità con il bilancio dettagliato:
+				si aumenta la probabilita\' di percorrere il triangolo in senso antiorario.
+				Essendo la distrubuzione stazionaria identica al caso precedente si puo\' studiare la reversibilita\' con il bilancio dettagliato:
 				\begin{equation*}
 					\pi_{13}p_3^s = \frac{2}{3} \frac{1}{3} \neq \frac{1}{3}\frac{1}{3} = \pi_{31}p_1^s
 				\end{equation*}
-				Secondo Onsager, la distribuzione stazionaria corrisponde all'equilibrio quindi, analizzando le fluttuazioni è possibile capire se il sistema sia reversibile o meno.
-				Nell'esempio riportato in Fig. (\ref{figure:esempio_markov}) è evidente come la rimozione del punto A non influenzi il sottosistema BC: è questo l'equilibrio dettato dal bilancio dettagliato.
+				Secondo Onsager, la distribuzione stazionaria corrisponde all'equilibrio quindi, analizzando le fluttuazioni e\' possibile capire se il sistema sia reversibile o meno.
+				Nell'esempio riportato in Fig. (\ref{figure:esempio_markov}) e\' evidente come la rimozione del punto A non influenzi il sottosistema BC: e\' questo l'equilibrio dettato dal bilancio dettagliato.
 				\\
-				In conclusione, la teoria dell'informazione è applicabile quasi in ogni ambito.
-				Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue più entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
+				In conclusione, la teoria dell'informazione e\' applicabile quasi in ogni ambito.
+				Sono stati effettuati studi sui linguaggi, premiando finlandese e tedesco come lingue piu\' entropiche, e studi sulla musica, che vedono Bach meno entropico di Hindemith.
 		
 		\section{Esempi}
 			\subsection{Utilizzo della misura invariante}
 				Sia $x_{n}=2^{n}$ un numero, con $n \geq 1$.
-				Qual è la probabilità che esso abbia un $7$ come prima cifra?
+				Qual e\' la probabilita\' che esso abbia un $7$ come prima cifra?
 				\\Supponendo $2^{n}=7.\cdots\times 10^{k}$, allora $\log{2^{n}}=\log{7.\cdots}+k$.
 				Si consideri ora la dinamica
 				\begin{equation}
@@ -898,22 +898,22 @@
 					\label{equation:cifre}
 				\end{equation}
 				che rappresenta sostanzialmente una traslazione nell'intervallo $[0,1]$.
-				In questo caso l'esponente di Ljapunov è nullo in quanto non vi è espansione.
+				In questo caso l'esponente di Ljapunov e\' nullo in quanto non vi e\' espansione.
 				Iterando la \ref{equation:cifre} si ottiene
 				\begin{equation*}
 					y_{n}=y_{0}+n\log2\mod1
 				\end{equation*}
 				e la misura invariante risulta quindi una distribuzione uniforme nell'intervallo $[0,1]$.
-				Da qui la probabilità $\lim_{n\to\infty}P(7)=\log8-\log7$.
+				Da qui la probabilita\' $\lim_{n\to\infty}P(7)=\log8-\log7$.
 			\subsection{Entropia di una mano di carte}
 				Supponiamo di possedere un mazzo di $N$ carte differenti e di pescare da esso $k\leq N$ carte.
-				Per calcolare l'entropia di informazione associata alla mano pescata, bisogna innanzitutto calcolare la probabilità di una mano singola.
+				Per calcolare l'entropia di informazione associata alla mano pescata, bisogna innanzitutto calcolare la probabilita\' di una mano singola.
 				Le combinazioni di $k$ carte di un mazzo di $N$ carte sono date dal coefficiente binomiale:
 				\begin{equation}
 					C=\binom{N}{k}=\frac{N!}{k!(N-k)!}
 				\end{equation}
-				Assumendo che il mazzo non sia truccato, quindi che ogni estrazione sia equiprobabile, la probabilità di ogni singola mano è $p_{i}=\frac{1}{C}$.
-				L'entropia di informazione (o di Shannon) associata ad essa è quindi 
+				Assumendo che il mazzo non sia truccato, quindi che ogni estrazione sia equiprobabile, la probabilita\' di ogni singola mano e\' $p_{i}=\frac{1}{C}$.
+				L'entropia di informazione (o di Shannon) associata ad essa e\' quindi 
 				\begin{equation*}
 					S=-k_{S}\sum_{i=1}^{C}p_{i}\ln{p_{i}}=-k_{S}C\left(\frac{1}{C}\ln{\frac{1}{C}}\right)=k_{S}\ln{\frac{N!}{k!(N-k)!}}
 				\end{equation*}
@@ -921,22 +921,22 @@
 			\subsection{Broken Stick Model/Modello di Markov}
 				Si consideri un segmento di lunghezza unitaria nel quale viene inserito casualmente un punto $x_1\in[0,1]$ secondo una distribuzione uniforme.
 				Si scarti ora il segmeno $[0,x_1]$ e si iteri il processo per \textit{N} volte: si tratta di un processo ricorsivo con memoria del passato.
-				Essendo la distribuzione di probabilità uniforme risulta ovvio come $<x>=\frac{1}{2}$ quindi è possibile riscalare il tutto con una variabile $y\rightarrow\frac{y}{2}$
-				Definita la densità $\rho$ del sistema si può scrivere:
+				Essendo la distribuzione di probabilita\' uniforme risulta ovvio come $<x>=\frac{1}{2}$ quindi e\' possibile riscalare il tutto con una variabile $y\rightarrow\frac{y}{2}$
+				Definita la densita\' $\rho$ del sistema si puo\' scrivere:
 				\begin{equation*}
 					\begin{split}
 						\rho_{N+1}\left(\frac{y}{2}\right)\frac{dy}{2}&=\rho_N(y)dy\\
 						\Rightarrow\lim_{N\to\infty}\rho_N(y)&\propto\frac{1}{y}
 					\end{split}
 				\end{equation*}
-				Il risultato è una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
-				Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non è possibile riattaccarlo.
+				Il risultato e\' una legge a potenza con $\alpha=-1$, quindi \textit{non normalizzabile} in quanto l'integrale diverge.
+				Il sistema ha un effetto di memoria assoluta: una volta tagliato il segmento non e\' possibile riattaccarlo.
 				Se il segmento non venisse tagliato si otterrebbe un andamento a potenza con $\alpha\geq 1$ e risulterebbe pertanto normalizzabile.
 				Un'utile applicazione dei modelli di Markov si trova nel linguaggio (verbi) e in biologia (DNA).
 			\subsection{Penney's game}
 				Si prenda una moneta e la si lanci all'infinito.
-				Si vuole scommettere con un'altra persona su una terna di uscite consecutive dai lanci e ci si chiede come si possa vincere più facilmente.
-				Analizzando attentamente il problema si può notare come l'uscita delle sequenze non sia casuale ma segua un percorso ben preciso: l'unica sequenza casuale è quella data dalle prime tre uscite.
+				Si vuole scommettere con un'altra persona su una terna di uscite consecutive dai lanci e ci si chiede come si possa vincere piu\' facilmente.
+				Analizzando attentamente il problema si puo\' notare come l'uscita delle sequenze non sia casuale ma segua un percorso ben preciso: l'unica sequenza casuale e\' quella data dalle prime tre uscite.
 							
 				\begin{figure}
 					\centering
@@ -1008,9 +1008,9 @@
 					\caption{Schema del gioco di Penney}
 					\label{Penney's scheme}
 				\end{figure}
-				In questo modo risulta abbastanza semplice fregare l' avversario: facendolo scegliere per primo, è sempre possibile scegliere una sequenza più probabile della sua.\\
-				Eseguendo i calcoli si nota subito come la probabilità stazionaria del sistema sia data da $\left(\frac{1}{2}\right)^3=\frac{1}{8}=12.5\%$.
-				Scegliendo per secondi si vince sempre a meno che la sequenza dell'avversario non esca dai primi tre lanci, quindi eseguendo i calcoli sulle probabilità si ottiene la seguente tabella:
+				In questo modo risulta abbastanza semplice fregare l' avversario: facendolo scegliere per primo, e\' sempre possibile scegliere una sequenza piu\' probabile della sua.\\
+				Eseguendo i calcoli si nota subito come la probabilita\' stazionaria del sistema sia data da $\left(\frac{1}{2}\right)^3=\frac{1}{8}=12.5\%$.
+				Scegliendo per secondi si vince sempre a meno che la sequenza dell'avversario non esca dai primi tre lanci, quindi eseguendo i calcoli sulle probabilita\' si ottiene la seguente tabella:
 				\begin{center}
 					\begin{tabular}{ |c|c|c|c| } 
 						\hline
@@ -1028,13 +1028,13 @@
 					\end{tabular}
 				\end{center}
 				Nel primo e nell'ultimo caso si nota facilmente come la vittoria sia certa ammesso che non esca la tripletta scelta dal giocatore 1.
-				Essendo la probabilità stazionaria $\frac{1}{2}$, $P_{1,8}=1-\left(\frac{1}{2}\right)^3=\frac{7}{8}$.\\
-				Nel secondo e nel penutlimo caso si può ragionare in modo analogo al caso precedente, ottenendo $P_{2,7}=1-\left(\frac{1}{2}\right)^2=\frac{3}{4}$.\\
-				In tutti gli altri casi la probabilità è data da $P_{3,4,5,6}=\frac{1}{2}+\frac{1}{2}P(player1)\ldots=\frac{1}{2}\sum_{n=0}^\infty\left(\frac{1}{4}\right)^n=\frac{2}{3}$.
+				Essendo la probabilita\' stazionaria $\frac{1}{2}$, $P_{1,8}=1-\left(\frac{1}{2}\right)^3=\frac{7}{8}$.\\
+				Nel secondo e nel penutlimo caso si puo\' ragionare in modo analogo al caso precedente, ottenendo $P_{2,7}=1-\left(\frac{1}{2}\right)^2=\frac{3}{4}$.\\
+				In tutti gli altri casi la probabilita\' e\' data da $P_{3,4,5,6}=\frac{1}{2}+\frac{1}{2}P(player1)\ldots=\frac{1}{2}\sum_{n=0}^\infty\left(\frac{1}{4}\right)^n=\frac{2}{3}$.
 
 	\chapter{Modelli di trasporto} %CAPITOLO 3
 		\section{Teoria}
-			Consideriamo due punti ($A$ e $B$) di un generico spazio e colleghiamoli con un canale immaginario, facendo riferimento alla Fig.1, possiamo definire il flusso $\Phi_{A \rightarrow B}$ di una quantità fisica trasportata nell'unità di tempo tra i due punti.
+			Consideriamo due punti ($A$ e $B$) di un generico spazio e colleghiamoli con un canale immaginario, facendo riferimento alla Fig.1, possiamo definire il flusso $\Phi_{A \rightarrow B}$ di una quantita\' fisica trasportata nell'unita\' di tempo tra i due punti.
 			\begin{figure}[ht!]
 					\centering
 					\begin{tikzpicture}
@@ -1044,11 +1044,11 @@
 					\end{tikzpicture}
 					\caption{}
 			\end{figure}
-			Definiamo $V_{A/B}$ una certa proprietà del nodo $A/B$, questa proprietà ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
+			Definiamo $V_{A/B}$ una certa proprieta\' del nodo $A/B$, questa proprieta\' ne definisce lo stato. Possiamo quindi scrivere una sorta di legge di Ohm per la situazione descritta 
 			\begin{equation*}
 					\Phi_{A \rightarrow B} \ R = V_A - V_B
-			\end{equation*} dove $R$ è una proprietà del link (ad es. \ la portanza di una strada ma anche la probabilità di transizione).
-			Osserviamo che è di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacità del sistema di trasporto richiede $\Phi L$ di “veicoli".			
+			\end{equation*} dove $R$ e\' una proprieta\' del link (ad es. \ la portanza di una strada ma anche la probabilita\' di transizione).
+			Osserviamo che e\' di notevole importanza la dimensione del link ($L$) in quanto se attraversiamo il link abbiamo un flusso $\Phi$, di conseguenza la capacita\' del sistema di trasporto richiede $\Phi L$ di “veicoli".			
 			\begin{figure}[ht!]
 					\centering
 					\begin{tikzpicture}
@@ -1067,8 +1067,8 @@
 			\end{figure}
 
 		\section{Reti neurali di Hopfield}
-			Il problema alla base del modello di Hopfield consiste nel far memorizzare al network un insieme di $p$ patterns $\xi_i^\mu$ in modo tale che se presento un nuovo stato $\zeta_i$ il network mi restituisce il pattern che più si avvicina a $\zeta_i$. Etichettiamo
-			ogni pattern con l'indice $\mu = \{ 1, \dots, p\}$ e le unità del network (neuroni) con l'indice $i=\{1, \dots, N \}$.
+			Il problema alla base del modello di Hopfield consiste nel far memorizzare al network un insieme di $p$ patterns $\xi_i^\mu$ in modo tale che se presento un nuovo stato $\zeta_i$ il network mi restituisce il pattern che piu\' si avvicina a $\zeta_i$. Etichettiamo
+			ogni pattern con l'indice $\mu = \{ 1, \dots, p\}$ e le unita\' del network (neuroni) con l'indice $i=\{1, \dots, N \}$.
 			\begin{definition}(Distanza di Hamming)
 			La distanza di Hamming tra due pattern rappresenta il numero di bit che li differenzia tra loro.
 			\begin{equation*}
@@ -1076,7 +1076,7 @@
 			\end{equation*}
 			\end{definition}
 			\subsection{La Dinamica Deterministica}
-				Denotiamo lo stato dei neuroni con $S_i=\pm 1$ ($+1$ se il neurone è attivo e $-1$ se è inattivo). La dinamica discreta del network si pu\'o scrivere come
+				Denotiamo lo stato dei neuroni con $S_i=\pm 1$ ($+1$ se il neurone e\' attivo e $-1$ se e\' inattivo). La dinamica discreta del network si pu\'o scrivere come
 				\begin{equation}
 					S_i(t) = sign \left( \sum_j w_{ij} S_j(t-1)\right) 
 				\end{equation}
@@ -1105,7 +1105,7 @@
 					\end{tikzpicture}
 					\caption{\textit{La funzione $sign(x)$}}
 				\end{figure}
-				con $\Delta t = 1$. La matrice $w_{ij}$ è la matrice dei pesi delle connessioni  tra neuroni $i\rightarrow j$ ed ha le proprietà di essere una matrice simmetrica ($w_{ij}=w_{ji}$) ed avere gli elementi sulla diagonale tutti nulli ($w_{ii}=0$).
+				con $\Delta t = 1$. La matrice $w_{ij}$ e\' la matrice dei pesi delle connessioni  tra neuroni $i\rightarrow j$ ed ha le proprieta\' di essere una matrice simmetrica ($w_{ij}=w_{ji}$) ed avere gli elementi sulla diagonale tutti nulli ($w_{ii}=0$).
 				Per questo tipo di dinamica i pattern memorizzati risultano essere degli attrattori Fig. 6.
 				\begin{figure}
 					\centering
@@ -1140,7 +1140,7 @@
 					\caption{\textit{Schema dello spazio delle configurazioni con tre attrattori (patterns memorizzati)}}
 				\end{figure}
 				
-				Per motivare la scelta dei pesi delle connessioni consideriamo un caso semplice in cui abbiamo soltanto un pattern. La condizione per la quale il pattern risulta stabile è
+				Per motivare la scelta dei pesi delle connessioni consideriamo un caso semplice in cui abbiamo soltanto un pattern. La condizione per la quale il pattern risulta stabile e\'
 				\begin{equation}
 					sign \left( \sum_i w_{ij} \xi_j\right) = \xi_i \quad \quad \forall i
 				\end{equation} 
@@ -1149,13 +1149,13 @@
 					w_{ij} = \frac{1}{N} \xi_i\xi_j
 				\end{equation}
 				infatti $\xi_j^2=1$.
-				Ne deriva che se considero uno stato di rete $S_i$ che differisce di qualche bit dal pattern che ho inzialmente mostrato al network, lo stato evolverà con la dinamica in equazione (3.1) e rilasserà a $\xi_i$.
+				Ne deriva che se considero uno stato di rete $S_i$ che differisce di qualche bit dal pattern che ho inzialmente mostrato al network, lo stato evolvera\' con la dinamica in equazione (3.1) e rilassera\' a $\xi_i$.
 				Tuttavia esiste un altro stato attrattivo: lo stato opposto ($-\xi_i$).\\
 				Il discorso pu\'o essere esteso anche al caso molti pattern? In tal caso possiamo ridefinire la matrice dei pesi come sovrapposizione delle matrici associate ad ogni pattern
 				\begin{equation}
 					w_{ij} = \frac{1}{N} \sum_{\mu = 1}^{p} \xi_{i}^{\mu} \xi_{j}^{\mu}
-				\end{equation} questa è spesso chiamata {\bf regola di Hebb}.
-				Esaminiamo la stabilità di un particolare pattern, la condizione di stabilità generalizzata risulta
+				\end{equation} questa e\' spesso chiamata {\bf regola di Hebb}.
+				Esaminiamo la stabilita\' di un particolare pattern, la condizione di stabilita\' generalizzata risulta
 
 				\begin{equation}
 					S_{i}^\prime = sign \left( \sum_{j}w_{ij} S_{j} \right)= sign \left( \frac{1}{N}\sum_{j} \sum_{\mu}\xi_{i}^{\mu}\xi_{j}^{\mu}S_{j} \right)
@@ -1164,9 +1164,9 @@
 				\begin{equation}
 					sign\left[ \frac{1}{N}\sum_\mu \xi_i^\mu \left( \sum_j \xi_j^\mu \xi_j^\nu\right) \right] = \xi_i^\nu \Longleftrightarrow \xi_j^\mu \xi_j^\nu = \delta_\mu^\nu
 				\end{equation} 
-				cioè i patterns devono soddisfare alla condizione di ortogonalità e sotto questa condizione si ha che la distanza di Hamming è massima.
+				cioe\' i patterns devono soddisfare alla condizione di ortogonalita\' e sotto questa condizione si ha che la distanza di Hamming e\' massima.
 				Cosa succede se i pattern memorizzati non sono tutti ortogonali tra loro?
-				Consideriamo la quantità
+				Consideriamo la quantita\'
 				\begin{equation}
 					C_i^\nu \equiv -\xi^\nu_i \left( \frac{1}{N} \sum_j \sum_{\mu \neq \nu} \xi_i^\mu \xi_j^\mu \xi_i^\nu \right)
 				\end{equation}
@@ -1230,8 +1230,8 @@
 				\begin{equation}
 					\mathcal{H} = -\frac{1}{2}\sum_{i,j}w_{ij}S_iS_j
 				\end{equation}
-				un esempio di possibile landscape energetico può essere immaginato come in Fig. (\ref{figure:landscape_energia}).
-				La proprietà principale dell'hamiltoniana (3.9) è quella di essere sempre decrescente (o costante) se il sistema evolve secondo la dinamica deterministica.
+				un esempio di possibile landscape energetico puo\' essere immaginato come in Fig. (\ref{figure:landscape_energia}).
+				La proprieta\' principale dell'hamiltoniana (3.9) e\' quella di essere sempre decrescente (o costante) se il sistema evolve secondo la dinamica deterministica.
 				\'E facile verificare questa affermazione: prendiamo $S^\prime_{i}$ un nuovo valore di $S_i$ 
 				\begin{equation}
 					S^\prime_i=sign \left( \sum_j w_{ij} S_j\right)
@@ -1248,20 +1248,20 @@
 
 				\subsubsection{Stati Spuri}
 					Abbiamo mostrato che la regola di Hebb ci fornisce un sistema dinamico discreto che possiede degli attrattori ricercabili anche attraverso i minimi locali della funzione energia.
-					Non abbiamo però mostrato che questi attrattori sono gli unici. Infatti, per ogni attrattore $\xi_i^\mu$ esiste anche l'{\bf inverso}, anch'esso attrattore $-\xi_i^\mu$.
-					È possibile mostrare che esistono degli stati stabili detti {\bf stati misti} $\xi_i^{\text{mix}}$ che non coincidono con nessun pattern ma rappresentano una combinazione lineare di un numero dispari di essi, nel caso più semplice:
+					Non abbiamo pero\' mostrato che questi attrattori sono gli unici. Infatti, per ogni attrattore $\xi_i^\mu$ esiste anche l'{\bf inverso}, anch'esso attrattore $-\xi_i^\mu$.
+					È possibile mostrare che esistono degli stati stabili detti {\bf stati misti} $\xi_i^{\text{mix}}$ che non coincidono con nessun pattern ma rappresentano una combinazione lineare di un numero dispari di essi, nel caso piu\' semplice:
 					\begin{equation}
 						\xi_i^{\text{mix}} = sign(\pm \xi_i^{\mu_1} \pm \xi_i^{\mu_2} \pm \xi_i^{\mu_3})
 					\end{equation}
-					Esiste anche un altro tipo di stati stabili che si verificano quando $p$ è abbastanza grande rispetto ad $N$, questi stati non sono correlati in alcun modo con altri patten memorizati e sono chiamati {\bf stati vetro di spin}.
+					Esiste anche un altro tipo di stati stabili che si verificano quando $p$ e\' abbastanza grande rispetto ad $N$, questi stati non sono correlati in alcun modo con altri patten memorizati e sono chiamati {\bf stati vetro di spin}.
 					Questi ultimi due tipi di stati sono detti stati spuri.
 
 			\subsection{La Dinamica Stocastica}
-				Nel Modello di Hopfield viene introdotto un concetto analogo a quello di temperatura, intesa come disordine termico, per tenere conto delle fluttuazioni dovute a varie cause non controllabili. Si tratta più propriamente di una pseudo-temperatura, in quanto non ha nulla a che fare con le dimensioni fisiche né con il significato fisico di una temperatura. Spesso si lavora con la temperatura inversa $\beta$ definita da
+				Nel Modello di Hopfield viene introdotto un concetto analogo a quello di temperatura, intesa come disordine termico, per tenere conto delle fluttuazioni dovute a varie cause non controllabili. Si tratta piu\' propriamente di una pseudo-temperatura, in quanto non ha nulla a che fare con le dimensioni fisiche ne\' con il significato fisico di una temperatura. Spesso si lavora con la temperatura inversa $\beta$ definita da
 				\begin{equation}
 					\beta = \frac{1}{T}
 				\end{equation}
-				Come nel Modello di Ising, anche nel Modello di Hopfield l’evoluzione del sistema è quindi governata dalla competizione tra la presenza di un campo esterno, che tende ad allineare gli stati delle unità e prevale per basse temperature, e l’effetto del disordine termico che prevale ad alte temperature. Per tenere conto delle fluttuazioni, occorre introdurre una dinamica stocastica, valida per temperature finite, che si riduce alla di- namica deterministica esposta fin’ora nel limite $T \rightarrow 0$. Ciò può essere fatto mediante la {\bf Dinamica di Glauber}, sostituendo la regola dinamica deterministica (3.1) con la regola dinamica stocastica di Glauber. Ad ogni step temporale verr\'a aggiornata secondo
+				Come nel Modello di Ising, anche nel Modello di Hopfield l’evoluzione del sistema e\' quindi governata dalla competizione tra la presenza di un campo esterno, che tende ad allineare gli stati delle unita\' e prevale per basse temperature, e l’effetto del disordine termico che prevale ad alte temperature. Per tenere conto delle fluttuazioni, occorre introdurre una dinamica stocastica, valida per temperature finite, che si riduce alla di- namica deterministica esposta fin’ora nel limite $T \rightarrow 0$. Cio\' puo\' essere fatto mediante la {\bf Dinamica di Glauber}, sostituendo la regola dinamica deterministica (3.1) con la regola dinamica stocastica di Glauber. Ad ogni step temporale verr\'a aggiornata secondo
 				\begin{equation}
 					S_i^\prime = 
 					\begin{cases}
@@ -1325,14 +1325,14 @@
 	
 	\chapter{Teoria del controllo} %CAPITOLO 4
 		\section{Approccio generale}
-			La \emph{teoria del controllo} è quella branca della fisica che studia come controllare i sistemi dinamici.
-			L'obiettivo principale è quello di creare un \emph{controllo}, ossia un modello/algoritmo, in grado di portare un sistema dinamico in un determinato stato dato uno stato iniziale (in input).
+			La \emph{teoria del controllo} e\' quella branca della fisica che studia come controllare i sistemi dinamici.
+			L'obiettivo principale e\' quello di creare un \emph{controllo}, ossia un modello/algoritmo, in grado di portare un sistema dinamico in un determinato stato dato uno stato iniziale (in input).
 			\begin{definition}
-				Il modello è detto ottimale quando si è raggiunto un buon livello di stabilità, minimizzando i riratdi e gli errori.
+				Il modello e\' detto ottimale quando si e\' raggiunto un buon livello di stabilita\', minimizzando i riratdi e gli errori.
 			\end{definition}
-			Il dispositivo che gestisce il sistema dinamico è detto \emph{controllore} e va selezionato accuratamente in base alle richieste del sistema da gestire.
+			Il dispositivo che gestisce il sistema dinamico e\' detto \emph{controllore} e va selezionato accuratamente in base alle richieste del sistema da gestire.
 			Formalmente il controllo viene immesso nel sistema attraverso una forzante che, aggiunta alla lagrangiana, permette lo studio e l'ottimizzazione del problema.
-			Per maggiori informazioni sulla meccanica analitica è possibile consultare gli appunti delle lezioni al link \url{https://github.com/Grufoony/Fisica_UNIBO/blob/main/Appunti_meccanica_analitica.pdf}.
+			Per maggiori informazioni sulla meccanica analitica e\' possibile consultare gli appunti delle lezioni al link \url{https://github.com/Grufoony/Fisica_UNIBO/blob/main/Appunti_meccanica_analitica.pdf}.
 		
 		\section{Applicazioni biologiche}
 			Si supponga ora di voler studiare un sistema biologico quale, ad esempio, il cuore umano.
@@ -1360,8 +1360,8 @@
 				\item il sistema abbia un equilibrio (al quale ritorna periodicamente)
 				\item esiste una soglia trigger di un'onda 
 			\end{itemize}
-			L'idea è ridurre la cellula cardiaca ad un sistema complesso a due variabile, $x$ per la lunghezza della fibra e $b$ per lo stimolo elettrochimico da associare ad essa (controllo elettrico).
-			Il modello di Zeeman è rappresentato dal sistema
+			L'idea e\' ridurre la cellula cardiaca ad un sistema complesso a due variabile, $x$ per la lunghezza della fibra e $b$ per lo stimolo elettrochimico da associare ad essa (controllo elettrico).
+			Il modello di Zeeman e\' rappresentato dal sistema
 			\begin{equation}
 				\begin{cases}
 					\epsilon\frac{dx}{dt}=&-\left(x^3-Tx+b\right)\\
@@ -1389,10 +1389,10 @@
 				\caption{\emph{Nullclina.}}
 				\label{figure:nullcline}
 			\end{figure}
-			L'equilibrio stabile si ha sulla \emph{nullclina} $\frac{dx}{dt}=0$, quindi per $x=x_{0}$ e $b=-x^3+Tx$, il cui grafico è riportato in Fig. \ref{figure:nullcline}
-			I punti $A$ e $B$ sono ovviamente i punti critici del sistema: la parte di curva compresa tra i due punti non è esplorabile in quanto da $B$ è solo possibile ricadere sul ramo di $A$ e viceversa.
-			Questa è l'\emph{idea della catastrofe} di Zeeman, ove per $A<b<B$ perdo l'invertibilità del sistema.
-			Se si è in presenza di uno stimolo ad onda quadra che riesce a spostare il sistema oltre il punto $B$ (facendolo quindi ricadere su $A$) si ha la contrazione (sistole e diastole, vedi Fig. \ref{figure:sistole_diastole})
+			L'equilibrio stabile si ha sulla \emph{nullclina} $\frac{dx}{dt}=0$, quindi per $x=x_{0}$ e $b=-x^3+Tx$, il cui grafico e\' riportato in Fig. \ref{figure:nullcline}
+			I punti $A$ e $B$ sono ovviamente i punti critici del sistema: la parte di curva compresa tra i due punti non e\' esplorabile in quanto da $B$ e\' solo possibile ricadere sul ramo di $A$ e viceversa.
+			Questa e\' l'\emph{idea della catastrofe} di Zeeman, ove per $A<b<B$ perdo l'invertibilita\' del sistema.
+			Se si e\' in presenza di uno stimolo ad onda quadra che riesce a spostare il sistema oltre il punto $B$ (facendolo quindi ricadere su $A$) si ha la contrazione (sistole e diastole, vedi Fig. \ref{figure:sistole_diastole})
 			\begin{figure}[H]
 				\centering
 				\begin{tikzpicture}
@@ -1413,7 +1413,7 @@
 				\caption{\emph{Sistole ($A\to B$) e disatole ($B\to A$).}}
 				\label{figure:sistole_diastole}
 			\end{figure}
-			Volendo ora dimostrare formalmente la stabilità del punto di equilibrio $(x_0,b_0)$ è conveniente lavorare in un intorno di esso:
+			Volendo ora dimostrare formalmente la stabilita\' del punto di equilibrio $(x_0,b_0)$ e\' conveniente lavorare in un intorno di esso:
 			\begin{equation*}
 				\begin{split}
 					\Delta x =& x-x_0\\
@@ -1437,8 +1437,8 @@
 				\right)
 			\end{equation*}
 			con determinante $\frac{1}{\epsilon}>0$.
-			Data la presenza di un quadrato la stabilità non dipenderà dal segno di $x_0$ quanto dal suo modulo.
-			Il determinante positivo implica autovalori entrambi positivi o entrambi negativi: si avranno autovalori positivi, quindi un punto instabile, se la traccia è positiva e viceversa.
+			Data la presenza di un quadrato la stabilita\' non dipendera\' dal segno di $x_0$ quanto dal suo modulo.
+			Il determinante positivo implica autovalori entrambi positivi o entrambi negativi: si avranno autovalori positivi, quindi un punto instabile, se la traccia e\' positiva e viceversa.
 			Si assuma ora di voler introdurre una funzione periodica $x^+(t)$ di periodo sufficiente per effettuare il ``salto''.
 			\begin{equation*}
 				\begin{cases}
@@ -1446,7 +1446,7 @@
 					\frac{db}{dt}=&x-x^+(t)
 				\end{cases}
 			\end{equation*}
-			Ora è possibile accoppiare due cellule cardiache come segue
+			Ora e\' possibile accoppiare due cellule cardiache come segue
 			\begin{equation*}
 				\begin{cases}
 					\epsilon\frac{dx}{dt}=&-\left(x^3-Tx+b\right)\\
@@ -1456,12 +1456,12 @@
 				\end{cases}
 			\end{equation*}
 			con $x(0)\simeq x_0$ e $y(0)\simeq x_1$ punti di equilibrio.
-			Per fare in modo che il sistema sostenga l'onda (senza il bisogno di uno stimolo esterno) è necessario un accoppiamento in controfase, ossia quando la cellula $x$ è in contrazione la $y$ è in dilatazione e viceversa.
-			Creando una catena di questi oggetti è possibile quindi generare un fenomeno d'onda.
+			Per fare in modo che il sistema sostenga l'onda (senza il bisogno di uno stimolo esterno) e\' necessario un accoppiamento in controfase, ossia quando la cellula $x$ e\' in contrazione la $y$ e\' in dilatazione e viceversa.
+			Creando una catena di questi oggetti e\' possibile quindi generare un fenomeno d'onda.
 
 		\section{Esempi}
 			\subsection{Pendolo rovesciato}
-				L'esempio più classico di sistema controllabile è dato dal pendolo rovesciato.
+				L'esempio piu\' classico di sistema controllabile e\' dato dal pendolo rovesciato.
 				\begin{figure}
 					\centering
 						\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -1508,7 +1508,7 @@
 						\dot{y}_{O}=l\dot{\theta}\sin\theta
 					\end{cases}
 				\end{equation*}
-				La lagrangiana del sistema si può scrivere come:
+				La lagrangiana del sistema si puo\' scrivere come:
 				\begin{equation*}
 					\mathcal{L}=\frac{m}{2}\left( \left( \dot{x}_{C}+l\dot{\theta}\cos\theta \right)^2 + l^2\dot{\theta}^2\sin^2\theta \right) - mgl\cos\theta \simeq \frac{m}{2}\left( l^2\dot{\theta}^2 + 2\dot{x}_{C}l\dot{\theta}\cos\theta \right) - mgl\cos\theta
 				\end{equation*}
@@ -1520,8 +1520,8 @@
 				\begin{equation}
 					\ddot{\theta}=\frac{g}{l}\theta - \frac{\ddot{x}_C}{l}
 				\end{equation}
-				Riconosciuta la forzante, per semplicità si pone $\ddot{x}_C=\pm a(t)$ costante.
-				La soluzione non è omogenea:
+				Riconosciuta la forzante, per semplicita\' si pone $\ddot{x}_C=\pm a(t)$ costante.
+				La soluzione non e\' omogenea:
 				\begin{equation*}
 					\theta(t)=\left( \theta_{0} -\frac{a(t)}{g} \right)\cosh\omega t + \frac{\dot{\theta}_0}{\omega}\sinh\omega t +\frac{a(t)}{g}
 				\end{equation*}
@@ -1529,7 +1529,7 @@
 				\begin{equation*}
 					\theta(T)=C\cosh\omega T + C\sinh\omega T \simeq Ce^{-\omega T}
 				\end{equation*}
-				Si può ora ricavare la condizione richiesta:
+				Si puo\' ora ricavare la condizione richiesta:
 				\begin{equation}
 					C=\theta(T)=-\frac{\dot{\theta}(T)}{\omega}
 				\end{equation}
@@ -1537,30 +1537,30 @@
 				\begin{equation*}
 					-\frac{a}{g}\cosh\omega T + \frac{\dot{\theta}(T)}{\omega}\sinh\omega T + \frac{a}{g} = \frac{a}{g}\sinh\omega T - \frac{\dot{\theta}(T)}{\omega}\cosh\omega T
 				\end{equation*}
-				Da cui si può ricavare il periodo di stabilità:
+				Da cui si puo\' ricavare il periodo di stabilita\':
 				\begin{equation}
 					T=\frac{1}{\omega}\ln\frac{\frac{a}{g}}{\frac{a}{g}-\frac{\dot{\theta}(T)}{\omega}}
 				\end{equation}
-				Un'osservazione importante riguarda la \emph{condizione critica} del sistema, ove esso non risulta più controllabile, che si ha quando $\dot{\theta}_0=\frac{a\omega}{g}$.
+				Un'osservazione importante riguarda la \emph{condizione critica} del sistema, ove esso non risulta piu\' controllabile, che si ha quando $\dot{\theta}_0=\frac{a\omega}{g}$.
 			\subsection{Marriage Model/Modello relazionale}
 				Si supponga ora di voler controllare una relazione con un'altra persona, che tipo di relazione conviene studiare?
-				La scrittrice Anna Karenina sembra fornire una soluzione al problema, constatando che \emph{tutte le relazioni felici sono uguali ma ogni relazione infelice lo è a modo suo}.
-				Sia ora $x(t)$ il grado di felicità nella relazione che, per semplicità si assume positivo ($x(t)\in\mathbb{R}^{+}$) in accordo con l'ipotesi della Karenina.
-				L'equazione che descrive la relazione sarà del tipo:
+				La scrittrice Anna Karenina sembra fornire una soluzione al problema, constatando che \emph{tutte le relazioni felici sono uguali ma ogni relazione infelice lo e\' a modo suo}.
+				Sia ora $x(t)$ il grado di felicita\' nella relazione che, per semplicita\' si assume positivo ($x(t)\in\mathbb{R}^{+}$) in accordo con l'ipotesi della Karenina.
+				L'equazione che descrive la relazione sara\' del tipo:
 				\begin{equation}
 					\dot{x}=-rx(t)+ac(t)
 				\end{equation}
-				in cui riconosciamo la funzione \emph{costo} $c(t)$ della relazione (ove per costo si intende uscire a cena, fare un regalo, ecc...),il parametro $r$ (quanto la felicità tenda a diminuire) e il parametro $a$ (amplificazione del costo).
-				La relazione giungerà al termine una volta arrivati ad un valore minimo della felicità, che verrà denotato come $x_{m}$.
+				in cui riconosciamo la funzione \emph{costo} $c(t)$ della relazione (ove per costo si intende uscire a cena, fare un regalo, ecc...),il parametro $r$ (quanto la felicita\' tenda a diminuire) e il parametro $a$ (amplificazione del costo).
+				La relazione giungera\' al termine una volta arrivati ad un valore minimo della felicita\', che verra\' denotato come $x_{m}$.
 				\\Per rafforzare il modello si introducono ora due potenziali:
 				\begin{itemize}
 					\item $U(x)$, \emph{utility potential}, il quale indica quanto funziona la coppia.
-						Esso deve essere tale che $U'(x)>0$ ma $U''(x)<0$, in quanto troppa felicità tende a saturare la relazione;
+						Esso deve essere tale che $U'(x)>0$ ma $U''(x)<0$, in quanto troppa felicita\' tende a saturare la relazione;
 					\item $D(c)$, \emph{disutility potential}, il quale tiene conto dello sforzo eseguito.
-						Più il costo del mantenimento della relazione aumenta, più essa tende a fallire (non ne vale la pena).
+						Piu\' il costo del mantenimento della relazione aumenta, piu\' essa tende a fallire (non ne vale la pena).
 						Ovviamente $D(c)$ deve avere un minimo, dato che esiste uno sforzo considerato accettabile per mantenere la relazione;
 				\end{itemize}
-				Si può ora definire il funzionale di soddisfazione come:
+				Si puo\' ora definire il funzionale di soddisfazione come:
 				\begin{equation*}
 					W(c)=\int_{0}^{\infty}e^{-\lambda t}\left[U\left(x(t)\right)-D\left(c(t)\right)\right]dt
 				\end{equation*}
@@ -1648,7 +1648,7 @@
 					% Text Node
 					\draw (44,169) node [anchor=north west][inner sep=0.75pt]  [rotate=-270] [align=left] {costo};
 					% Text Node
-					\draw (203,285) node [anchor=north west][inner sep=0.75pt]   [align=left] {felicità};
+					\draw (203,285) node [anchor=north west][inner sep=0.75pt]   [align=left] {felicita\'};
 					% Text Node
 					\draw (47,29) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle c_{m}{}_{a}{}_{x}$};
 					% Text Node
@@ -1678,9 +1678,9 @@
 					\item STRATEGIA B: si segue un'orbita $\gamma_{B}$ dai punti $B\rightarrow B'$ poi si fa una crescita discontinua lungo una $c(t)$ da $B'\rightarrow B$.
 						In questo caso si lascia andare la relazione senza apportare sufficiente sforzo poi, ad un passo dalla rottura, si rimedia il tutto con un gesto importante (alto costo) per ristabilire l'orbita.
 				\end{itemize}
-				In entrambi i casi bisogna, tuttavia, prestare parecchia attenzione una volta raggiunti i minimi: se lungo la $\gamma_{A}$ si fa una litigata troppo pesante o lungo la $\gamma_{B}$ si trascura troppo la relazione, si rischia di finire fuori orbita (quindi fuori equilibrio) e far così fallire la relazione (il che è \emph{no buono}, n.d.r.).
+				In entrambi i casi bisogna, tuttavia, prestare parecchia attenzione una volta raggiunti i minimi: se lungo la $\gamma_{A}$ si fa una litigata troppo pesante o lungo la $\gamma_{B}$ si trascura troppo la relazione, si rischia di finire fuori orbita (quindi fuori equilibrio) e far cosi\' fallire la relazione (il che e\' \emph{no buono}, n.d.r.).
 			\subsection{Modello di Fitzhugh-Nagumo}
-				Un'altra applicazione biologica è rappresentata dal modello per il neurone di Fitzhugh-Nagumo, basato sull'oscillatore di Var der Pol.
+				Un'altra applicazione biologica e\' rappresentata dal modello per il neurone di Fitzhugh-Nagumo, basato sull'oscillatore di Var der Pol.
 				Definite $x$ potenziale di membrana e $w$ la corrente, il modello consiste nelle equazioni differenziali:
 				\begin{equation}
 					\begin{cases}
@@ -1691,14 +1691,14 @@
 				\end{equation}
 				con $\frac{1}{\tau}<<1$ in modo da avere $x$ variabile veloce e $w$ lenta.
 				Anche in questo caso si ottiene una nullclina simile a quella rappresentata in Fig. \ref{figure:nullcline}.\\
-				La stabilità all'equilibrio è data da:
+				La stabilita\' all'equilibrio e\' data da:
 				\begin{equation*}
 					\begin{cases}
 						w=&-\frac{x^3}{3}+x+I\\
 						w=&\frac{x+a}{b}
 					\end{cases}
 				\end{equation*}
-				Si può verificare come esiste (e sia unico) un punto di equilibrio stabile $P$ quindi, assumendo di aver trovato la risoluzione al sistema, è possibile linearizzare il campo
+				Si puo\' verificare come esiste (e sia unico) un punto di equilibrio stabile $P$ quindi, assumendo di aver trovato la risoluzione al sistema, e\' possibile linearizzare il campo
 				\begin{equation*}
 					\begin{cases}
 						\delta\dot{x}=&\left(1-x_P^2\right)\delta x - \delta w\\
@@ -1715,25 +1715,25 @@
 					\right)
 				\end{equation*}
 				che ha determinante $-\frac{b}{\tau}\left(1-x_P^2\right)+\frac{1}{\tau}$.
-				La stabilità si ha per un modulo sufficientemente grande di $x_P$ (anche se $x_P\to 0$ al crescere di $I$) mentre l'instabilità si ha per $b<1$.
-				Lo stimolo è rappresentato da una variazione della $I$ che, se abbastanza rapida, permette di percorrere la nullclina.\\
-				Il sistema è non caotico ma con derivate di ordine diverso (Stiff).
+				La stabilita\' si ha per un modulo sufficientemente grande di $x_P$ (anche se $x_P\to 0$ al crescere di $I$) mentre l'instabilita\' si ha per $b<1$.
+				Lo stimolo e\' rappresentato da una variazione della $I$ che, se abbastanza rapida, permette di percorrere la nullclina.\\
+				Il sistema e\' non caotico ma con derivate di ordine diverso (Stiff).
 				Si assuma $I(t)=\Delta x\delta(t)$, allora $x(0^+)=x_0+\Delta x$ se $x(0^-)=x_0$, quindi se $\Delta x$ supera una determinata soglia si ha una grande fluttuazione.
-				Per $(x,w)$ abbastanza grandi è possibile definire la funzione di Ljapunov
+				Per $(x,w)$ abbastanza grandi e\' possibile definire la funzione di Ljapunov
 				\begin{equation}
 					H=\frac{1}{2}\left(w^2+\frac{x^2}{\tau}\right)
 				\end{equation}
 				costante che rappresenta un'ellisse.
-				La derivata della funzione di Ljapunov è negativa quindi la dinamica non è espansiva e il sistema non può esplodere: si arriva così ad una \emph{biforcazione di Hopf}, ossia si parte da una situazione attrattiva rispetto al punto fisso e, passando attraverso una situazione repulsiva (grazie ad un parametro) si arriva ad un ciclo limite, quale traiettoria periodica di un attrattore dinamico.
+				La derivata della funzione di Ljapunov e\' negativa quindi la dinamica non e\' espansiva e il sistema non puo\' esplodere: si arriva cosi\' ad una \emph{biforcazione di Hopf}, ossia si parte da una situazione attrattiva rispetto al punto fisso e, passando attraverso una situazione repulsiva (grazie ad un parametro) si arriva ad un ciclo limite, quale traiettoria periodica di un attrattore dinamico.
 
 	\chapter{Altre applicazioni} %CAPITOLO 5
-		\section{Fisica della città}
+		\section{Fisica della citta\'}
 			Un'applicazione interessante dei sistemi complessi riguarda l'ambito urbano (e sociale).
-			Uno dei primi problemi affrontati storicamente è il problema del traffico.
-			Tante auto si muovono su un network, ognuna delle quali tende a mantenere una velocità ottimale in base alla macchina che la precede: questa dinamica viola la terza legge di Newton in quanto non è detto che la macchina che sta dietro influenzi quella davanti.
+			Uno dei primi problemi affrontati storicamente e\' il problema del traffico.
+			Tante auto si muovono su un network, ognuna delle quali tende a mantenere una velocita\' ottimale in base alla macchina che la precede: questa dinamica viola la terza legge di Newton in quanto non e\' detto che la macchina che sta dietro influenzi quella davanti.
 			Le \emph{onde di traffico} si vengono a creare a causa dei tempi di reazione degli automobilisti (mai istantanei).
 			Nonostante la creazione di queste onde, il flusso di auto sulla strada rimane costante.\\
-			Osservando dati sperimentali riguardanti le velocità si nota un appiattimento ad alte densità della curva, dunque il tutto satura ad una velocità media fissa.
+			Osservando dati sperimentali riguardanti le velocita\' si nota un appiattimento ad alte densita\' della curva, dunque il tutto satura ad una velocita\' media fissa.
 			Posto $j$ come indice di un veicolo, un modello stile Newton obbedisce a:
 			\begin{equation}
 				\begin{cases}
@@ -1742,60 +1742,60 @@
 				\end{cases}
 				\label{equation:traffic}
 			\end{equation}
-			Il parametro $\beta$ è proporzionale all'accelerazione ma l'equazione di secondo ordine implica un'equazione di prim'ordine con ritardo (tempo di reazione).
-			Se $\beta$ è molto basso allora si creano onde solitoniche  e ogni plateau dell'onda corrisponde ad un equilibrio del sistema.
-			Questo sistema statistico crea un equilibrio dinamico, perchè dinamicamente si ha qualcosa che si propaga nel sistema, che contiene un equilibrio dove le auto vanno veloce e uno dove le auto vanno lente.
+			Il parametro $\beta$ e\' proporzionale all'accelerazione ma l'equazione di secondo ordine implica un'equazione di prim'ordine con ritardo (tempo di reazione).
+			Se $\beta$ e\' molto basso allora si creano onde solitoniche  e ogni plateau dell'onda corrisponde ad un equilibrio del sistema.
+			Questo sistema statistico crea un equilibrio dinamico, perche\' dinamicamente si ha qualcosa che si propaga nel sistema, che contiene un equilibrio dove le auto vanno veloce e uno dove le auto vanno lente.
 			Quando il sistema non riesce a mantenere l'equilibrio globale, si formano degli equilibri a livello locale.
-			Normalmente, infatti, si osserva che aumentando il numero di auto in una strada il flusso stesso aumenti fino ad arrivare ad una situazione di instabilità: esiste quindi un valore critico di densità superato il quale il flusso inizia a diminuire e il sistema non riesce più a rispondere al flusso immesso, dando luogo al flusso stop\&go e creando l'onda solitonica.\\
-			Un \emph{fundamental diagram} è un concetto molto utilizzato nelle reti di trasporto: in questo il punto critico di densità risulta un massimo.
+			Normalmente, infatti, si osserva che aumentando il numero di auto in una strada il flusso stesso aumenti fino ad arrivare ad una situazione di instabilita\': esiste quindi un valore critico di densita\' superato il quale il flusso inizia a diminuire e il sistema non riesce piu\' a rispondere al flusso immesso, dando luogo al flusso stop\&go e creando l'onda solitonica.\\
+			Un \emph{fundamental diagram} e\' un concetto molto utilizzato nelle reti di trasporto: in questo il punto critico di densita\' risulta un massimo.
 			Tuttavia, il meccanismo di stop\&go si innesca molto prima che il sistema giunga a questo massimo
-			La geometria del sistema è fondamentale, in quanto descrive come esso smorzi/sostenga le oscillazioni delle sorgenti.
-			In autostrada, ad esempio, le congestioni (variazioni della velocità media) si hanno nei punti di immissione, poi si propagano come onde solitone.
-			Vi è inoltre un'alta sensibilità alle fluttuazioni, in quanto ogni persona guida in modo differente, la cui ampiezza aumenta con la densità seguendo un regime poissoniano (maggiore il valore medio maggiori le fluttuazioni).
+			La geometria del sistema e\' fondamentale, in quanto descrive come esso smorzi/sostenga le oscillazioni delle sorgenti.
+			In autostrada, ad esempio, le congestioni (variazioni della velocita\' media) si hanno nei punti di immissione, poi si propagano come onde solitone.
+			Vi e\' inoltre un'alta sensibilita\' alle fluttuazioni, in quanto ogni persona guida in modo differente, la cui ampiezza aumenta con la densita\' seguendo un regime poissoniano (maggiore il valore medio maggiori le fluttuazioni).
 			Per arrivare al flusso ottimale bisogna diminuire la fluttuazioni, quindi \emph{raffreddare} il sistema (auto a guida autonoma).\\
-			Una proposta di Tom Tom utilizza la velocità media come osservabile macroscopico: la velocità media delle auto in città è tuttavia molto bassa, a causa delle soste forzate, mentre la mobilità ciclistica risulta decisamente più alta.
+			Una proposta di Tom Tom utilizza la velocita\' media come osservabile macroscopico: la velocita\' media delle auto in citta\' e\' tuttavia molto bassa, a causa delle soste forzate, mentre la mobilita\' ciclistica risulta decisamente piu\' alta.
 			\subsection{Modelli di traffico}
-				Si consideri ora un network in cui ogni nodo è o sorgente o destinazione (tipico di aeroporti e stazioni ferroviarie).
-				Senza considerare la dinamica del singolo veicolo, si assuma poi che ogni link riesca a trasportare, quindi che abbia capacità infinita (cosa non assumibile nel caso delle automobili).
+				Si consideri ora un network in cui ogni nodo e\' o sorgente o destinazione (tipico di aeroporti e stazioni ferroviarie).
+				Senza considerare la dinamica del singolo veicolo, si assuma poi che ogni link riesca a trasportare, quindi che abbia capacita\' infinita (cosa non assumibile nel caso delle automobili).
 				Cosa accade agli incroci?\\
-				Se si assumono nodi a capacità finita allora la congestione si ha quando un nodo diminuisce la capacità di creare trasporto.
+				Se si assumono nodi a capacita\' finita allora la congestione si ha quando un nodo diminuisce la capacita\' di creare trasporto.
 				Sia $n_i$ il numero di agenti presenti nel nodo $i$.
-				Una volta fornito un peso al link la domanda di mobilità dipenderà da $n$ e dal flusso tra i nodi $i$ e $j$.
-				Si può calcolare la probabilità di transizione $i\to j$ come $\pi_{ij}n_i$: questa risulta proporzionale al numero di agenti, quindi maggiore è $n_i$ maggiore è la probabilità che questi si allontanino dal nodo $i$.
-				Fisicamente questo ricorda un reticolo cristallino con elettroni ai nodi: un elettrone può transire da un nodo ad un altro solo se la destinazione è vuota.\\
-				Fondamentale ora introdurre una legge di continuità (ossia una corrente), in quanto un nodo non può trasmettere oltre la sua popolazione:
+				Una volta fornito un peso al link la domanda di mobilita\' dipendera\' da $n$ e dal flusso tra i nodi $i$ e $j$.
+				Si puo\' calcolare la probabilita\' di transizione $i\to j$ come $\pi_{ij}n_i$: questa risulta proporzionale al numero di agenti, quindi maggiore e\' $n_i$ maggiore e\' la probabilita\' che questi si allontanino dal nodo $i$.
+				Fisicamente questo ricorda un reticolo cristallino con elettroni ai nodi: un elettrone puo\' transire da un nodo ad un altro solo se la destinazione e\' vuota.\\
+				Fondamentale ora introdurre una legge di continuita\' (ossia una corrente), in quanto un nodo non puo\' trasmettere oltre la sua popolazione:
 				\begin{equation}
 					\sum_j\pi_{ij}=d_i<1
 				\end{equation}
-				dove $d_i$ indica la capacità di trasmissione (numero di agenti in uscita).
+				dove $d_i$ indica la capacita\' di trasmissione (numero di agenti in uscita).
 				Si richiede dunque che i flussi siano sempre positivi e che il numero di particelle sia conservato.\\
-				Si assuma ora che la velocità di percorrenza sia dipendente dal numero di agenti presenti, quindi
+				Si assuma ora che la velocita\' di percorrenza sia dipendente dal numero di agenti presenti, quindi
 				\begin{equation*}
 					\dot{n}_i=\sum_j\pi_{ij}n_j-d_in_i=-L\sum_jL_{ji}n_j
 				\end{equation*}
-				dove $L_{ji}=d_j\delta_{ji}-\pi_{ji}$ è una matrice laplaciana.
-				Le matrici laplaciane possiedono le seguenti proprietà:
+				dove $L_{ji}=d_j\delta_{ji}-\pi_{ji}$ e\' una matrice laplaciana.
+				Le matrici laplaciane possiedono le seguenti proprieta\':
 				\begin{itemize}
 					\item $L_{ji}<0$ se $j\neq i$
 					\item $\sum_iL_{ji}=0$
 					\item $L_{jj}>0$
 				\end{itemize}
-				Si nota facilmente come nella matrice laplaciana gli elementi sulla diagonale principale descrivano la capacità di trasporto del sistema, mentre gli elementi esterni alla diagonale descrivano i link.
+				Si nota facilmente come nella matrice laplaciana gli elementi sulla diagonale principale descrivano la capacita\' di trasporto del sistema, mentre gli elementi esterni alla diagonale descrivano i link.
 				Le matrici laplaciane rappresentano di fatto leggi di bilancio di massa, ossia descrivono la mobilitazione da un punto ad un altro del network.\\
-				Un sistema di questo tende a rilassare ad un equilibrio: aumentando il numero di agenti in un nodo aumenterà anche la sua capacità di farne uscire.
-				Un sistema lineare infatti è insensibile al numero di particelle inserito ma è sensibile a un flusso in entrata variabile: in questo caso il sistema non può rilassare e la sua soluzione dipende dalla velocità di variazione del flusso in entrata.\\
-				La terza proprietà della matrice laplaciana garantisce l'integrale del moto
+				Un sistema di questo tende a rilassare ad un equilibrio: aumentando il numero di agenti in un nodo aumentera\' anche la sua capacita\' di farne uscire.
+				Un sistema lineare infatti e\' insensibile al numero di particelle inserito ma e\' sensibile a un flusso in entrata variabile: in questo caso il sistema non puo\' rilassare e la sua soluzione dipende dalla velocita\' di variazione del flusso in entrata.\\
+				La terza proprieta\' della matrice laplaciana garantisce l'integrale del moto
 				\begin{equation*}
 					\sum_in_i=N
 				\end{equation*}
-				mentre la seconda garantisce che tutti gli autovalori (eccetto uno che è di certo nullo) siano positivi.
+				mentre la seconda garantisce che tutti gli autovalori (eccetto uno che e\' di certo nullo) siano positivi.
 				La dinamica risulta attrattiva verso lo stato di equilibrio, situato evidentemente nel primo quadrante.
-				Le proprietà spettrali forniscono il tempo impiegato dal sistema per rilassare.\\
-				In generale, si può imporre la congestione con $\pi_{ij}=\pi_{ij}(n_i)$.
-				Un risultato simile è ottenibile anche utilizzando la funzione logistica, vedi eq. \ref{equation:funzione_logistica}, utiizzandola come funzione che lega il numero di particelle al peso: all'aumentare di $n$ il peso deve ridursi.
-				In questo caso la congestione non si avrà inizialmente ma si creerà rapidamente dopo un certo lasso di tempo.\\
-				La congestione in un nodo si propaga facilmente anche ai nodi adiacenti: è dunque possibile creare effetti a cascata che si ripercuotano sul network intero, creando così una dinamica all'indietro.\\
-				Per un sistema non lineare a molti gradi di libertà il carico determina la dinamica, quindi il parametro di controllo è il numero di agenti caricato nel sistema.
+				Le proprieta\' spettrali forniscono il tempo impiegato dal sistema per rilassare.\\
+				In generale, si puo\' imporre la congestione con $\pi_{ij}=\pi_{ij}(n_i)$.
+				Un risultato simile e\' ottenibile anche utilizzando la funzione logistica, vedi eq. \ref{equation:funzione_logistica}, utiizzandola come funzione che lega il numero di particelle al peso: all'aumentare di $n$ il peso deve ridursi.
+				In questo caso la congestione non si avra\' inizialmente ma si creera\' rapidamente dopo un certo lasso di tempo.\\
+				La congestione in un nodo si propaga facilmente anche ai nodi adiacenti: e\' dunque possibile creare effetti a cascata che si ripercuotano sul network intero, creando cosi\' una dinamica all'indietro.\\
+				Per un sistema non lineare a molti gradi di liberta\' il carico determina la dinamica, quindi il parametro di controllo e\' il numero di agenti caricato nel sistema.
 				\begin{equation*}
 					\begin{split}
 						\dot{n}_i=\sum_j\pi_{ij}(n_i)n_j-\sum_j\pi_{ij}(n_j)n_i\\
@@ -1809,24 +1809,24 @@
 					\item studiare network $\pi_{ij}$ differenti per evitare le congestioni
 					\item ottimizzare il flusso totale $\Phi=\sum_{ij}\pi(n_{i})n_j$
 				\end{itemize}
-				Tuttavia, per modificare i pesi è necessario trovare dei parametri di controllo, cosa per niente banale.\\
-				Spesso una congestione non può essere evitata quindi si tende a gestirla, ossia si cerca di riportare la rete in una situazione di trasporto.\\
-				Nel caso lineare la soluzione stazionaria è semplicemente il vettore che indica quanti agenti porre nei vari nodi $\vec{n}=(n_1,\ldots,n_N)$ che soddisfi la condizione
+				Tuttavia, per modificare i pesi e\' necessario trovare dei parametri di controllo, cosa per niente banale.\\
+				Spesso una congestione non puo\' essere evitata quindi si tende a gestirla, ossia si cerca di riportare la rete in una situazione di trasporto.\\
+				Nel caso lineare la soluzione stazionaria e\' semplicemente il vettore che indica quanti agenti porre nei vari nodi $\vec{n}=(n_1,\ldots,n_N)$ che soddisfi la condizione
 				\begin{equation*}
 					\dot{n}=-Ln
 				\end{equation*}
 				Le fluttuazioni sono inseribili nel sistema sotto forma di random walk, aggiungendo un parametro temperatura.
-				Scelto un passo temporale, la transizione $i\to j$ avrà probabilità $\pi_{ij}\Delta t$ di avvenire.
-				La probabilità di non muoversi in una determinata direzione è data da $1-\sum_j\pi_{ij}\Delta t$.
-				Il passo $\Delta t$ diventa quindi il tempo di evoluzione del sistema (tipicamente piccolo): imporre la linearità rispetto ad esso evita processi non regolari (stocastici).\\
-				Una volta trovato l'autovalore nullo $L\bar{n}=0$, la probabilità di trovare la rete in un determinato stato è data da
+				Scelto un passo temporale, la transizione $i\to j$ avra\' probabilita\' $\pi_{ij}\Delta t$ di avvenire.
+				La probabilita\' di non muoversi in una determinata direzione e\' data da $1-\sum_j\pi_{ij}\Delta t$.
+				Il passo $\Delta t$ diventa quindi il tempo di evoluzione del sistema (tipicamente piccolo): imporre la linearita\' rispetto ad esso evita processi non regolari (stocastici).\\
+				Una volta trovato l'autovalore nullo $L\bar{n}=0$, la probabilita\' di trovare la rete in un determinato stato e\' data da
 				\begin{equation}
 					P(\vec{n})=\frac{\bar{n}_1^{n_1}\ldots\bar{n}_M^{n_M}}{n_1!\ldots n_M!}M!
 				\end{equation}
 
 		\section{Esempi}
 			\subsection{Optimal Velocity Model}
-				L'OVM è un modello ad agente basato sulle seuguenti equazioni differenziali:
+				L'OVM e\' un modello ad agente basato sulle seuguenti equazioni differenziali:
 				\begin{equation}
 					\begin{cases}
 						\dot{x}_i(t)=v_{opt}\left(x_{i+1}(t-\tau)-x_i(t-\tau)\right)\\
