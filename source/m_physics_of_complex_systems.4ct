@@ -1,0 +1,28 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Introduction to Complex Systems}}{5}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-30001.1}{QQ2-1-3}{Emergence}}{5}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-40001.2}{QQ2-1-4}{Network's energy}}{8}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-50001.3}{QQ2-1-5}{Broken Stick Model}}{13}\relax 
+\doTocEntry\tocsection{1.4}{\csname a:TocLink\endcsname{1}{x1-60001.4}{QQ2-1-6}{Rankings}}{15}\relax 
+\doTocEntry\tocsection{1.5}{\csname a:TocLink\endcsname{1}{x1-70001.5}{QQ2-1-7}{Laplace problem}}{17}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-80002}{QQ2-1-8}{Basic models}}{21}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-90002.1}{QQ2-1-9}{Linear models}}{21}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-100002.2}{QQ2-1-10}{The neuron model}}{26}\relax 
+\doTocEntry\tocsubsection{2.2.1}{\csname a:TocLink\endcsname{1}{x1-110002.2.1}{QQ2-1-11}{Hopf Bifurcation}}{28}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-120003}{QQ2-1-12}{Dynamical Systems}}{29}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-130003.1}{QQ2-1-13}{Malthus model}}{32}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-140003.2}{QQ2-1-14}{Velhurst model}}{32}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-150003.3}{QQ2-1-15}{Expanding map}}{34}\relax 
+\doTocEntry\tocsection{3.4}{\csname a:TocLink\endcsname{1}{x1-160003.4}{QQ2-1-16}{Classification of chaotic systems}}{38}\relax 
+\doTocEntry\tocsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-170003.4.1}{QQ2-1-17}{Topological transitivity}}{40}\relax 
+\doTocEntry\tocsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-180003.4.2}{QQ2-1-18}{Rotation on a d-thorus}}{43}\relax 
+\doTocEntry\tocsubsection{3.4.3}{\csname a:TocLink\endcsname{1}{x1-190003.4.3}{QQ2-1-19}{The Kronecker flow}}{46}\relax 
+\doTocEntry\tocsubsection{3.4.4}{\csname a:TocLink\endcsname{1}{x1-200003.4.4}{QQ2-1-20}{Important map}}{48}\relax 
+\doTocEntry\tocsubsection{3.4.5}{\csname a:TocLink\endcsname{1}{x1-210003.4.5}{QQ2-1-21}{Arnold's cat map}}{51}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{1}{x1-220004}{QQ2-1-22}{Ergodic theory}}{55}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{1}{x1-230004.1}{QQ2-1-23}{Birkhoff's ergodic theorem}}{60}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{1}{x1-240005}{QQ2-1-24}{Dynamical Models}}{65}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{1}{x1-250005.1}{QQ2-1-25}{Traffic Model}}{65}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{1}{x1-260005.2}{QQ2-1-26}{Kuramoto Model}}{78}\relax 
+\par 

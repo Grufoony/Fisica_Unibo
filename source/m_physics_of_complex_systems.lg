@@ -1,0 +1,429 @@
+htfcss: cmti  font-style: italic;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: cmtt font-family: monospace,monospace;
+File: m_physics_of_complex_systems.html
+File: m_physics_of_complex_systems.css
+File: m_physics_of_complex_systems.tmp
+Font_Class(1,"1"): <img  src="" alt="" class="%s-%dx-x-%x" />
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Font_Size: 12
+Css: h1.partHead{text-align: center}
+Css:  .chapterToc, .likechapterToc {margin-left:0em;}
+Css:  .likesectionToc, .sectionToc {margin-left:1em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:2em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:2em;}
+Css:  .likesubsubsectionToc, .subsubsectionToc {margin-left:3em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:4em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:5em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
+Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+Css: td.align-label { width:5%; text-align:center; }
+Css: td.align-odd { text-align:right; padding-right:0.3em;}
+Css: td.align-even { text-align:left; padding-right:0.6em;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: .rotatebox{display: inline-block;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: div.array {text-align:center;}
+Css: table.boxedverbatim {width:100%;}
+Css:  pre.boxedverbatim{border:solid 1px; padding-right:1em;} 
+Css: table.boxedverbatim {text-align:center;}
+Css: .listinginput p{ margin-bottom:0em; margin-top:0em; }
+Css: div.verbatiminput {font-family: monospace,monospace; white-space: nowrap; }
+--- needs --- m_physics_of_complex_systems.idv[2] ==> m_physics_of_complex_systems0x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[3] ==> m_physics_of_complex_systems1x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[4] ==> m_physics_of_complex_systems2x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[6] ==> m_physics_of_complex_systems3x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[8] ==> m_physics_of_complex_systems4x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[9] ==> m_physics_of_complex_systems5x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[10] ==> m_physics_of_complex_systems6x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[12] ==> m_physics_of_complex_systems7x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[14] ==> m_physics_of_complex_systems8x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[16] ==> m_physics_of_complex_systems9x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[17] ==> m_physics_of_complex_systems10x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[19] ==> m_physics_of_complex_systems11x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[20] ==> m_physics_of_complex_systems12x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[21] ==> m_physics_of_complex_systems13x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[23] ==> m_physics_of_complex_systems14x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[24] ==> m_physics_of_complex_systems15x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[25] ==> m_physics_of_complex_systems16x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[27] ==> m_physics_of_complex_systems17x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[28] ==> m_physics_of_complex_systems18x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[29] ==> m_physics_of_complex_systems19x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[30] ==> m_physics_of_complex_systems20x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[32] ==> m_physics_of_complex_systems21x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[33] ==> m_physics_of_complex_systems22x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[35] ==> m_physics_of_complex_systems23x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[36] ==> m_physics_of_complex_systems24x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[37] ==> m_physics_of_complex_systems25x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[38] ==> m_physics_of_complex_systems26x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[40] ==> m_physics_of_complex_systems27x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[41] ==> m_physics_of_complex_systems28x.svg ---
+File: m_physics_of_complex_systems/cities_ranking.jpg
+--- needs --- m_physics_of_complex_systems.idv[43] ==> m_physics_of_complex_systems29x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[45] ==> m_physics_of_complex_systems30x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[46] ==> m_physics_of_complex_systems31x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[48] ==> m_physics_of_complex_systems32x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[49] ==> m_physics_of_complex_systems33x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[50] ==> m_physics_of_complex_systems34x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[51] ==> m_physics_of_complex_systems35x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[53] ==> m_physics_of_complex_systems36x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[55] ==> m_physics_of_complex_systems37x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[56] ==> m_physics_of_complex_systems38x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[58] ==> m_physics_of_complex_systems39x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[59] ==> m_physics_of_complex_systems40x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[61] ==> m_physics_of_complex_systems41x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[62] ==> m_physics_of_complex_systems42x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[63] ==> m_physics_of_complex_systems43x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[64] ==> m_physics_of_complex_systems44x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[66] ==> m_physics_of_complex_systems45x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[68] ==> m_physics_of_complex_systems46x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[69] ==> m_physics_of_complex_systems47x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[71] ==> m_physics_of_complex_systems48x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[72] ==> m_physics_of_complex_systems49x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[73] ==> m_physics_of_complex_systems50x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[75] ==> m_physics_of_complex_systems51x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[77] ==> m_physics_of_complex_systems52x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[78] ==> m_physics_of_complex_systems53x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[80] ==> m_physics_of_complex_systems54x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[81] ==> m_physics_of_complex_systems55x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[83] ==> m_physics_of_complex_systems56x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[84] ==> m_physics_of_complex_systems57x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[86] ==> m_physics_of_complex_systems58x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[87] ==> m_physics_of_complex_systems59x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[88] ==> m_physics_of_complex_systems60x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[89] ==> m_physics_of_complex_systems61x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[91] ==> m_physics_of_complex_systems62x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[92] ==> m_physics_of_complex_systems63x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[93] ==> m_physics_of_complex_systems64x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[95] ==> m_physics_of_complex_systems65x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[96] ==> m_physics_of_complex_systems66x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[97] ==> m_physics_of_complex_systems67x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[99] ==> m_physics_of_complex_systems68x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[100] ==> m_physics_of_complex_systems69x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[101] ==> m_physics_of_complex_systems70x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[103] ==> m_physics_of_complex_systems71x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[104] ==> m_physics_of_complex_systems72x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[105] ==> m_physics_of_complex_systems73x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[106] ==> m_physics_of_complex_systems74x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[108] ==> m_physics_of_complex_systems75x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[109] ==> m_physics_of_complex_systems76x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[110] ==> m_physics_of_complex_systems77x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[111] ==> m_physics_of_complex_systems78x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[112] ==> m_physics_of_complex_systems79x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[113] ==> m_physics_of_complex_systems80x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[114] ==> m_physics_of_complex_systems81x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[115] ==> m_physics_of_complex_systems82x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[116] ==> m_physics_of_complex_systems83x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[117] ==> m_physics_of_complex_systems84x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[118] ==> m_physics_of_complex_systems85x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[119] ==> m_physics_of_complex_systems86x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[120] ==> m_physics_of_complex_systems87x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[122] ==> m_physics_of_complex_systems88x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[123] ==> m_physics_of_complex_systems89x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[124] ==> m_physics_of_complex_systems90x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[125] ==> m_physics_of_complex_systems91x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[126] ==> m_physics_of_complex_systems92x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[127] ==> m_physics_of_complex_systems93x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[128] ==> m_physics_of_complex_systems94x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[130] ==> m_physics_of_complex_systems95x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[131] ==> m_physics_of_complex_systems96x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[133] ==> m_physics_of_complex_systems97x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[134] ==> m_physics_of_complex_systems98x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[135] ==> m_physics_of_complex_systems99x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[136] ==> m_physics_of_complex_systems100x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[138] ==> m_physics_of_complex_systems101x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[139] ==> m_physics_of_complex_systems102x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[141] ==> m_physics_of_complex_systems103x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[142] ==> m_physics_of_complex_systems104x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[144] ==> m_physics_of_complex_systems105x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[146] ==> m_physics_of_complex_systems106x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[147] ==> m_physics_of_complex_systems107x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[148] ==> m_physics_of_complex_systems108x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[149] ==> m_physics_of_complex_systems109x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[151] ==> m_physics_of_complex_systems110x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[152] ==> m_physics_of_complex_systems111x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[154] ==> m_physics_of_complex_systems112x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[155] ==> m_physics_of_complex_systems113x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[157] ==> m_physics_of_complex_systems114x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[158] ==> m_physics_of_complex_systems115x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[159] ==> m_physics_of_complex_systems116x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[161] ==> m_physics_of_complex_systems117x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[162] ==> m_physics_of_complex_systems118x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[163] ==> m_physics_of_complex_systems119x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[165] ==> m_physics_of_complex_systems120x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[166] ==> m_physics_of_complex_systems121x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[167] ==> m_physics_of_complex_systems122x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[169] ==> m_physics_of_complex_systems123x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[170] ==> m_physics_of_complex_systems124x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[171] ==> m_physics_of_complex_systems125x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[173] ==> m_physics_of_complex_systems126x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[174] ==> m_physics_of_complex_systems127x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[175] ==> m_physics_of_complex_systems128x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[177] ==> m_physics_of_complex_systems129x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[178] ==> m_physics_of_complex_systems130x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[179] ==> m_physics_of_complex_systems131x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[181] ==> m_physics_of_complex_systems132x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[182] ==> m_physics_of_complex_systems133x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[184] ==> m_physics_of_complex_systems134x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[185] ==> m_physics_of_complex_systems135x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[186] ==> m_physics_of_complex_systems136x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[188] ==> m_physics_of_complex_systems137x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[189] ==> m_physics_of_complex_systems138x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[190] ==> m_physics_of_complex_systems139x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[191] ==> m_physics_of_complex_systems140x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[192] ==> m_physics_of_complex_systems141x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[193] ==> m_physics_of_complex_systems142x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[194] ==> m_physics_of_complex_systems143x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[195] ==> m_physics_of_complex_systems144x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[197] ==> m_physics_of_complex_systems145x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[198] ==> m_physics_of_complex_systems146x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[200] ==> m_physics_of_complex_systems147x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[201] ==> m_physics_of_complex_systems148x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[203] ==> m_physics_of_complex_systems149x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[204] ==> m_physics_of_complex_systems150x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[205] ==> m_physics_of_complex_systems151x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[206] ==> m_physics_of_complex_systems152x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[208] ==> m_physics_of_complex_systems153x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[209] ==> m_physics_of_complex_systems154x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[211] ==> m_physics_of_complex_systems155x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[212] ==> m_physics_of_complex_systems156x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[214] ==> m_physics_of_complex_systems157x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[215] ==> m_physics_of_complex_systems158x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[216] ==> m_physics_of_complex_systems159x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[218] ==> m_physics_of_complex_systems160x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[219] ==> m_physics_of_complex_systems161x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[221] ==> m_physics_of_complex_systems162x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[222] ==> m_physics_of_complex_systems163x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[224] ==> m_physics_of_complex_systems164x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[225] ==> m_physics_of_complex_systems165x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[226] ==> m_physics_of_complex_systems166x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[228] ==> m_physics_of_complex_systems167x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[229] ==> m_physics_of_complex_systems168x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[231] ==> m_physics_of_complex_systems169x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[232] ==> m_physics_of_complex_systems170x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[233] ==> m_physics_of_complex_systems171x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[234] ==> m_physics_of_complex_systems172x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[236] ==> m_physics_of_complex_systems173x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[237] ==> m_physics_of_complex_systems174x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[238] ==> m_physics_of_complex_systems175x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[240] ==> m_physics_of_complex_systems176x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[241] ==> m_physics_of_complex_systems177x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[242] ==> m_physics_of_complex_systems178x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[243] ==> m_physics_of_complex_systems179x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[245] ==> m_physics_of_complex_systems180x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[246] ==> m_physics_of_complex_systems181x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[247] ==> m_physics_of_complex_systems182x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[249] ==> m_physics_of_complex_systems183x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[250] ==> m_physics_of_complex_systems184x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[251] ==> m_physics_of_complex_systems185x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[252] ==> m_physics_of_complex_systems186x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[254] ==> m_physics_of_complex_systems187x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[255] ==> m_physics_of_complex_systems188x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[256] ==> m_physics_of_complex_systems189x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[258] ==> m_physics_of_complex_systems190x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[259] ==> m_physics_of_complex_systems191x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[260] ==> m_physics_of_complex_systems192x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[261] ==> m_physics_of_complex_systems193x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[263] ==> m_physics_of_complex_systems194x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[264] ==> m_physics_of_complex_systems195x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[265] ==> m_physics_of_complex_systems196x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[267] ==> m_physics_of_complex_systems197x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[268] ==> m_physics_of_complex_systems198x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[269] ==> m_physics_of_complex_systems199x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[271] ==> m_physics_of_complex_systems200x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[272] ==> m_physics_of_complex_systems201x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[273] ==> m_physics_of_complex_systems202x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[274] ==> m_physics_of_complex_systems203x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[276] ==> m_physics_of_complex_systems204x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[277] ==> m_physics_of_complex_systems205x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[278] ==> m_physics_of_complex_systems206x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[280] ==> m_physics_of_complex_systems207x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[281] ==> m_physics_of_complex_systems208x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[282] ==> m_physics_of_complex_systems209x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[284] ==> m_physics_of_complex_systems210x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[285] ==> m_physics_of_complex_systems211x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[286] ==> m_physics_of_complex_systems212x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[287] ==> m_physics_of_complex_systems213x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[289] ==> m_physics_of_complex_systems214x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[290] ==> m_physics_of_complex_systems215x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[292] ==> m_physics_of_complex_systems216x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[293] ==> m_physics_of_complex_systems217x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[294] ==> m_physics_of_complex_systems218x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[296] ==> m_physics_of_complex_systems219x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[297] ==> m_physics_of_complex_systems220x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[298] ==> m_physics_of_complex_systems221x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[299] ==> m_physics_of_complex_systems222x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[301] ==> m_physics_of_complex_systems223x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[302] ==> m_physics_of_complex_systems224x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[303] ==> m_physics_of_complex_systems225x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[305] ==> m_physics_of_complex_systems226x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[306] ==> m_physics_of_complex_systems227x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[307] ==> m_physics_of_complex_systems228x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[308] ==> m_physics_of_complex_systems229x.svg ---
+--- needs --- m_physics_of_complex_systems.idv[310] ==> m_physics_of_complex_systems230x.svg ---
+--- characters ---
+Font("cmr","12","12","100")
+Font("cmr","17","17","120")
+Font("cmtt","12","12","120")
+Font("cmr","8","8","100")
+Font("cmr","6","6","100")
+Font("cmmi","12","12","100")
+Font("cmmi","8","8","100")
+Font("cmmi","6","6","100")
+Font("cmsy","10","10","120")
+--- needs --- m_physics_of_complex_systems.idv[312] ==> cmsy10-c-4d.png ---
+Font("cmsy","8","8","100")
+Font("cmsy","6","6","100")
+Font("cmex","10","10","120")
+Font("msbm","10","10","120")
+Font("msbm","10","10","80")
+Font("cmbx","12","12","100")
+Font("cmti","12","12","100")

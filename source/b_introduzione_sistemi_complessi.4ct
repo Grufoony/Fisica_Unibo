@@ -1,0 +1,74 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Indice}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Introduzione}}{5}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-30001.1}{QQ2-1-3}{Sistema Complesso}}{5}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-40001.2}{QQ2-1-4}{Teoria di Ljapunov}}{6}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-50001.3}{QQ2-1-5}{Costruzione di un modello}}{8}\relax 
+\doTocEntry\toclof{1.1}{\csname a:TocLink\endcsname{1}{x1-5001r1}{}{\ignorespaces \emph  {Schema operativo}}}{figure}\relax 
+\doTocEntry\tocsubsection{1.3.1}{\csname a:TocLink\endcsname{1}{x1-60001.3.1}{QQ2-1-7}{Modelli ad agente}}{9}\relax 
+\doTocEntry\tocsubsection{1.3.2}{\csname a:TocLink\endcsname{1}{x1-70001.3.2}{QQ2-1-8}{Modelli a equazioni}}{10}\relax 
+\doTocEntry\tocsection{1.4}{\csname a:TocLink\endcsname{1}{x1-80001.4}{QQ2-1-9}{Distribuzioni}}{10}\relax 
+\doTocEntry\toclof{1.2}{\csname a:TocLink\endcsname{1}{x1-8002r2}{}{\ignorespaces \emph  {Gaussiana.}}}{figure}\relax 
+\doTocEntry\toclof{1.3}{\csname a:TocLink\endcsname{1}{x1-8004r3}{}{\ignorespaces \emph  {Esponenziale.}}}{figure}\relax 
+\doTocEntry\toclof{1.4}{\csname a:TocLink\endcsname{1}{x1-8006r4}{}{\ignorespaces \emph  {Potenza.}}}{figure}\relax 
+\doTocEntry\tocsection{1.5}{\csname a:TocLink\endcsname{1}{x1-90001.5}{QQ2-1-13}{Esempi}}{19}\relax 
+\doTocEntry\tocsubsection{1.5.1}{\csname a:TocLink\endcsname{1}{x1-100001.5.1}{QQ2-1-14}{Automa cellulare}}{19}\relax 
+\doTocEntry\toclof{1.5}{\csname a:TocLink\endcsname{1}{x1-10004r5}{}{\ignorespaces \emph  {Funzione logistica.}}}{figure}\relax 
+\doTocEntry\tocsubsection{1.5.2}{\csname a:TocLink\endcsname{1}{x1-110001.5.2}{QQ2-1-16}{Random Walk 1D}}{23}\relax 
+\doTocEntry\tocsubsection{1.5.3}{\csname a:TocLink\endcsname{1}{x1-120001.5.3}{QQ2-1-17}{Random Walk 2D}}{24}\relax 
+\doTocEntry\tocsubsection{1.5.4}{\csname a:TocLink\endcsname{1}{x1-130001.5.4}{QQ2-1-18}{Random Walk non omogenea}}{25}\relax 
+\doTocEntry\tocsubsection{1.5.5}{\csname a:TocLink\endcsname{1}{x1-140001.5.5}{QQ2-1-19}{Dinamica generica di interazione}}{27}\relax 
+\doTocEntry\tocsubsection{1.5.6}{\csname a:TocLink\endcsname{1}{x1-150001.5.6}{QQ2-1-20}{Catmap}}{29}\relax 
+\doTocEntry\toclof{1.6}{\csname a:TocLink\endcsname{1}{x1-15001r6}{}{\ignorespaces \emph  {Catmap.}}}{figure}\relax 
+\doTocEntry\tocsubsection{1.5.7}{\csname a:TocLink\endcsname{1}{x1-160001.5.7}{QQ2-1-22}{Modello economico}}{34}\relax 
+\doTocEntry\toclof{1.7}{\csname a:TocLink\endcsname{1}{x1-16002r7}{}{\ignorespaces \emph  {Andamento esponenziale.}}}{figure}\relax 
+\doTocEntry\tocsubsection{1.5.8}{\csname a:TocLink\endcsname{1}{x1-170001.5.8}{QQ2-1-24}{Modello economico evoluto}}{38}\relax 
+\doTocEntry\toclof{1.8}{\csname a:TocLink\endcsname{1}{x1-17004r8}{}{\ignorespaces \emph  {Andamento a potenza.}}}{figure}\relax 
+\doTocEntry\tocsubsection{1.5.9}{\csname a:TocLink\endcsname{1}{x1-180001.5.9}{QQ2-1-26}{La rovina di un giocatore}}{44}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-190002}{QQ2-1-27}{Entropia e Informazione}}{47}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-200002.1}{QQ2-1-28}{Probabilit\'a}}{47}\relax 
+\doTocEntry\tocsubsection{2.1.1}{\csname a:TocLink\endcsname{1}{x1-210002.1.1}{QQ2-1-29}{Ranking distribution}}{48}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-220002.2}{QQ2-1-30}{Entropia}}{49}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{1}{x1-230002.3}{QQ2-1-31}{Informazione}}{50}\relax 
+\doTocEntry\tocsubsection{2.3.1}{\csname a:TocLink\endcsname{1}{x1-240002.3.1}{QQ2-1-32}{Matrice stocastica}}{51}\relax 
+\doTocEntry\tocsubsection{2.3.2}{\csname a:TocLink\endcsname{1}{x1-250002.3.2}{QQ2-1-33}{Teoria di Markov}}{53}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{1}{x1-25003r1}{}{\ignorespaces \emph  {Grafo di esempio reversibilit\'a.}}}{figure}\relax 
+\doTocEntry\tocsection{2.4}{\csname a:TocLink\endcsname{1}{x1-260002.4}{QQ2-1-35}{Esempi}}{58}\relax 
+\doTocEntry\tocsubsection{2.4.1}{\csname a:TocLink\endcsname{1}{x1-270002.4.1}{QQ2-1-36}{Utilizzo della misura invariante}}{59}\relax 
+\doTocEntry\tocsubsection{2.4.2}{\csname a:TocLink\endcsname{1}{x1-280002.4.2}{QQ2-1-37}{Entropia di una mano di carte}}{59}\relax 
+\doTocEntry\tocsubsection{2.4.3}{\csname a:TocLink\endcsname{1}{x1-290002.4.3}{QQ2-1-38}{Broken Stick Model/Modello di Markov}}{60}\relax 
+\doTocEntry\tocsubsection{2.4.4}{\csname a:TocLink\endcsname{1}{x1-300002.4.4}{QQ2-1-39}{Penney's game}}{61}\relax 
+\doTocEntry\toclof{2.2}{\csname a:TocLink\endcsname{1}{x1-30001r2}{}{\ignorespaces Schema del gioco di Penney}}{figure}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-310003}{QQ2-1-41}{Modelli di trasporto}}{65}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-320003.1}{QQ2-1-42}{Teoria}}{65}\relax 
+\doTocEntry\toclof{3.1}{\csname a:TocLink\endcsname{1}{x1-32001r1}{}{\ignorespaces \relax }}{figure}\relax 
+\doTocEntry\toclof{3.2}{\csname a:TocLink\endcsname{1}{x1-32002r2}{}{\ignorespaces \relax }}{figure}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-330003.2}{QQ2-1-45}{Reti neurali di Hopfield}}{71}\relax 
+\doTocEntry\tocsubsection{3.2.1}{\csname a:TocLink\endcsname{1}{x1-340003.2.1}{QQ2-1-46}{La Dinamica Deterministica}}{71}\relax 
+\doTocEntry\toclof{3.3}{\csname a:TocLink\endcsname{1}{x1-34002r3}{}{\ignorespaces \textit  {La funzione $sign(x)$}}}{figure}\relax 
+\doTocEntry\toclof{3.4}{\csname a:TocLink\endcsname{1}{x1-34003r4}{}{\ignorespaces \textit  {Schema dello spazio delle configurazioni con tre attrattori (patterns memorizzati)}}}{figure}\relax 
+\doTocEntry\toclof{3.5}{\csname a:TocLink\endcsname{1}{x1-34011r5}{}{\ignorespaces \textit  {La distribuzione gaussiana dei valori del termine di crosstalk dato da $p$ patterns e $N$ unit\'a.}}}{figure}\relax 
+\doTocEntry\tocsubsection{3.2.2}{\csname a:TocLink\endcsname{1}{x1-350003.2.2}{QQ2-1-50}{La Funzione Energia}}{81}\relax 
+\doTocEntry\toclof{3.6}{\csname a:TocLink\endcsname{1}{x1-35001r6}{}{\ignorespaces \textit  {Un esempio di landscape energetico.}}}{figure}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-36000}{QQ2-1-52}{Stati Spuri}}{85}\relax 
+\doTocEntry\tocsubsection{3.2.3}{\csname a:TocLink\endcsname{1}{x1-370003.2.3}{QQ2-1-53}{La Dinamica Stocastica}}{85}\relax 
+\doTocEntry\toclof{3.7}{\csname a:TocLink\endcsname{1}{x1-37005r7}{}{\ignorespaces \textit  {}}}{figure}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-380003.3}{QQ2-1-55}{Esempi}}{90}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{1}{x1-390004}{QQ2-1-56}{Teoria del controllo}}{91}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{1}{x1-400004.1}{QQ2-1-57}{Approccio generale}}{91}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{1}{x1-410004.2}{QQ2-1-58}{Applicazioni biologiche}}{91}\relax 
+\doTocEntry\toclof{4.1}{\csname a:TocLink\endcsname{1}{x1-41001r1}{}{\ignorespaces \emph  {Stilizzazione del battito cardiaco.}}}{figure}\relax 
+\doTocEntry\toclof{4.2}{\csname a:TocLink\endcsname{1}{x1-41003r2}{}{\ignorespaces \emph  {Nullclina.}}}{figure}\relax 
+\doTocEntry\toclof{4.3}{\csname a:TocLink\endcsname{1}{x1-41004r3}{}{\ignorespaces \emph  {Sistole ($A\to B$) e disatole ($B\to A$).}}}{figure}\relax 
+\doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{1}{x1-420004.3}{QQ2-1-62}{Esempi}}{100}\relax 
+\doTocEntry\tocsubsection{4.3.1}{\csname a:TocLink\endcsname{1}{x1-430004.3.1}{QQ2-1-63}{Pendolo rovesciato}}{100}\relax 
+\doTocEntry\toclof{4.4}{\csname a:TocLink\endcsname{1}{x1-43001r4}{}{\ignorespaces Pendolo rovesciato}}{figure}\relax 
+\doTocEntry\tocsubsection{4.3.2}{\csname a:TocLink\endcsname{1}{x1-440004.3.2}{QQ2-1-65}{Marriage Model/Modello relazionale}}{106}\relax 
+\doTocEntry\toclof{4.5}{\csname a:TocLink\endcsname{1}{x1-44004r5}{}{\ignorespaces Orbite relazionali.}}{figure}\relax 
+\doTocEntry\tocsubsection{4.3.3}{\csname a:TocLink\endcsname{1}{x1-450004.3.3}{QQ2-1-67}{Modello di Fitzhugh-Nagumo}}{110}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{1}{x1-460005}{QQ2-1-68}{Altre applicazioni}}{115}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{1}{x1-470005.1}{QQ2-1-69}{Fisica della citt\'a}}{115}\relax 
+\doTocEntry\tocsubsection{5.1.1}{\csname a:TocLink\endcsname{1}{x1-480005.1.1}{QQ2-1-70}{Modelli di traffico}}{116}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{1}{x1-490005.2}{QQ2-1-71}{Esempi}}{120}\relax 
+\doTocEntry\tocsubsection{5.2.1}{\csname a:TocLink\endcsname{1}{x1-500005.2.1}{QQ2-1-72}{Optimal Velocity Model}}{120}\relax 
+\par 

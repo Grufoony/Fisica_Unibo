@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Formulary for Statistical Data Analysis</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="m_formulary_statistical_data_analysis.tex"> 
+<link rel="stylesheet" type="text/css" href="m_formulary_statistical_data_analysis.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+
+<h2 class="titleHead">Formulary for Statistical Data Analysis</h2>
+ <div class="author" ><a 
+href="https://github.com/Grufoony/Physics_Unibo" class="url" ><span 
+class="cmtt-12x-x-120">https://github.com/Grufoony/Physics_Unibo</span></a></div><br />
+<div class="date" ></div>
+                                                                                    
+                                                                                    
+   </div>
+                                                                                    
+                                                                                    
+   <h2 class="likechapterHead"><a 
+ id="x1-1000"></a>Contents</h2>
+   <div class="tableofcontents">
+   <span class="chapterToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Probability theory</a></span>
+<br />   <span class="sectionToc" >1.1 <a 
+href="#x1-30001.1" id="QQ2-1-3">Combinatorics</a></span>
+<br />   <span class="sectionToc" >1.2 <a 
+href="#x1-40001.2" id="QQ2-1-4">Probability</a></span>
+<br />   <span class="sectionToc" >1.3 <a 
+href="#x1-50001.3" id="QQ2-1-5">Random variables and distributions</a></span>
+<br />   <span class="sectionToc" >1.4 <a 
+href="#x1-60001.4" id="QQ2-1-6">Important distributions</a></span>
+<br />   <span class="subsectionToc" >1.4.1 <a 
+href="#x1-70001.4.1" id="QQ2-1-7">Binomial distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.2 <a 
+href="#x1-80001.4.2" id="QQ2-1-8">Poisson distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.3 <a 
+href="#x1-90001.4.3" id="QQ2-1-9">Uniform distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.4 <a 
+href="#x1-100001.4.4" id="QQ2-1-10">Exponential distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.5 <a 
+href="#x1-110001.4.5" id="QQ2-1-11">Gaussian distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.6 <a 
+href="#x1-120001.4.6" id="QQ2-1-12">Multivariate Gaussian distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.7 <a 
+href="#x1-130001.4.7" id="QQ2-1-13">Chi-square distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.8 <a 
+href="#x1-140001.4.8" id="QQ2-1-14">Cauchy (Breit-Wigner) distribution</a></span>
+<br />   <span class="subsectionToc" >1.4.9 <a 
+href="#x1-150001.4.9" id="QQ2-1-15">Student&#8217;s t distribution</a></span>
+   </div>
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;1</span><br /><a 
+ id="x1-20001"></a>Probability theory</h2>
+   <h3 class="sectionHead"><span class="titlemark">1.1   </span> <a 
+ id="x1-30001.1"></a>Combinatorics</h3>
+<!--l. 56--><p class="noindent" >Permutations without repetitions:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis0x.svg" alt="Pn  = n!
+" class="math-display" ><a 
+ id="x1-3001r1"></a></div>
+   </td><td class="equation-label">(1.1)</td></tr></table>
+<!--l. 59--><p class="nopar" >Permutations with repetitions:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis1x.svg" alt="Pr = &#x220F;-n!-
+ n      ki!
+" class="math-display" ><a 
+ id="x1-3002r2"></a></div>
+   </td><td class="equation-label">(1.2)</td></tr></table>
+<!--l. 63--><p class="nopar" >Dispositions without repetitions:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis2x.svg" alt="           n!
+Dn,k =  --------
+        (n - k)!
+" class="math-display" ><a 
+ id="x1-3003r3"></a></div>
+                                                                                    
+                                                                                    
+   </td><td class="equation-label">(1.3)</td></tr></table>
+<!--l. 67--><p class="nopar" >Dispositions with repetitions:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis3x.svg" alt="Drn,k = nk
+" class="math-display" ><a 
+ id="x1-3004r4"></a></div>
+   </td><td class="equation-label">(1.4)</td></tr></table>
+<!--l. 71--><p class="nopar" >Combinations without repetitions:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis4x.svg" alt="       (  )
+        n      ----n!----
+Cn,k =  k   =  k!(n -  k)!
+" class="math-display" ><a 
+ id="x1-3005r5"></a></div>
+   </td><td class="equation-label">(1.5)</td></tr></table>
+<!--l. 78--><p class="nopar" >Combinations with repetitions:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis5x.svg" alt="       (          )
+Cr   =   n + k - 1
+  n,k         k
+" class="math-display" ><a 
+ id="x1-3006r6"></a></div>
+   </td><td class="equation-label">(1.6)</td></tr></table>
+<!--l. 85--><p class="nopar" >
+                                                                                    
+                                                                                    
+   <h3 class="sectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x1-40001.2"></a>Probability</h3>
+<!--l. 87--><p class="noindent" >Conditional probability:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis6x.svg" alt="           P(A &#x2229;  B)
+P (A |B ) = ----------
+             p(B )
+" class="math-display" ><a 
+ id="x1-4001r7"></a></div>
+   </td><td class="equation-label">(1.7)</td></tr></table>
+<!--l. 90--><p class="nopar" >Probability of intersection for independent events:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis7x.svg" alt="P(A &#x2229; B ) = P (A)P (B )
+" class="math-display" ><a 
+ id="x1-4002r8"></a></div>
+   </td><td class="equation-label">(1.8)</td></tr></table>
+<!--l. 94--><p class="nopar" >Bayes&#8217; theorem:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis8x.svg" alt="P (A|B ) = P-(B|A-)P(A-)
+               P (B )
+" class="math-display" ><a 
+ id="x1-4003r9"></a></div>
+   </td><td class="equation-label">(1.9)</td></tr></table>
+<!--l. 98--><p class="nopar" >Law of total probability:
+                                                                                    
+                                                                                    
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis9x.svg" alt="           --P-(B|A-)P(A-)---
+P (A |B ) = &#x2211;  P (B |Ai )P (Ai)
+             i
+" class="math-display" ><a 
+ id="x1-4004r10"></a></div>
+   </td><td class="equation-label">(1.10)</td></tr></table>
+<!--l. 102--><p class="nopar" >Bayes&#8217; theorem in Baeysian thinking:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis10x.svg" alt="             P (&#x20D7;x|H )&#x03C0; (H )
+P (H |&#x20D7;x) =  &#x222B;-----------------
+            P (&#x20D7;x|H )&#x03C0;(H )dH
+" class="math-display" ><a 
+ id="x1-4005r11"></a></div>
+   </td><td class="equation-label">(1.11)</td></tr></table>
+<!--l. 106--><p class="nopar" >
+   <h3 class="sectionHead"><span class="titlemark">1.3   </span> <a 
+ id="x1-50001.3"></a>Random variables and distributions</h3>
+<!--l. 108--><p class="noindent" >Marginal pdf:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis11x.svg" alt="        &#x222B;       &#x220F;
+fi(xi) =    f(&#x20D7;x)    dxj
+                 j
+                                                                                    
+                                                                                    
+" class="math-display" ><a 
+ id="x1-5001r12"></a></div>
+   </td><td class="equation-label">(1.12)</td></tr></table>
+<!--l. 111--><p class="nopar" >Conditional pdfs:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis12x.svg" alt="         f (x,y)          f(x,y)
+f(y|x) = -------f(x |y) =  -------
+          fx(x)           fy(y)
+" class="math-display" ><a 
+ id="x1-5002r13"></a></div>
+   </td><td class="equation-label">(1.13)</td></tr></table>
+<!--l. 115--><p class="nopar" >Bayes&#8217; theorem for distributions
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis13x.svg" alt="f(x|y) = f(y|x)fx(x)-
+            fy(y)
+" class="math-display" ><a 
+ id="x1-5003r14"></a></div>
+   </td><td class="equation-label">(1.14)</td></tr></table>
+<!--l. 119--><p class="nopar" >Condition for independent variables:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis14x.svg" alt="f (x,y) = f (x)f (y)
+           x    y
+" class="math-display" ><a 
+ id="x1-5004r15"></a></div>
+   </td><td class="equation-label">(1.15)</td></tr></table>
+<!--l. 123--><p class="nopar" >Distribution of a function of a random variable in 1-D:
+                                                                                    
+                                                                                    
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis15x.svg" alt="               dx
+g(a) = f(x(a))|---|
+               da
+" class="math-display" ><a 
+ id="x1-5005r16"></a></div>
+   </td><td class="equation-label">(1.16)</td></tr></table>
+<!--l. 127--><p class="nopar" >Distribution of a function of a random variable in N-D:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis16x.svg" alt="g(&#x20D7;y) = |J|f(&#x20D7;x)
+" class="math-display" ><a 
+ id="x1-5006r17"></a></div>
+   </td><td class="equation-label">(1.17)</td></tr></table>
+<!--l. 131--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis17x.svg" alt="        &#x222B;
+E [x] =   xf (x)dx = &#x03BC;x
+" class="math-display" ><a 
+ id="x1-5007r18"></a></div>
+   </td><td class="equation-label">(1.18)</td></tr></table>
+<!--l. 135--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis18x.svg" alt="           2       2
+V [x ] = E [x ] - E [x]
+" class="math-display" ><a 
+ id="x1-5008r19"></a></div>
+   </td><td class="equation-label">(1.19)</td></tr></table>
+<!--l. 139--><p class="nopar" >Covariance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis19x.svg" alt="cov[x,y] = E [xy ] - E [x]E[y] = E [(x - &#x03BC;x )(y - &#x03BC;y )]
+" class="math-display" ><a 
+ id="x1-5009r20"></a></div>
+   </td><td class="equation-label">(1.20)</td></tr></table>
+<!--l. 143--><p class="nopar" >Correlation coefficient:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis20x.svg" alt="       cov[xy]
+&#x03C1;xy =  -------
+        &#x03C3;x&#x03C3;y
+" class="math-display" ><a 
+ id="x1-5010r21"></a></div>
+   </td><td class="equation-label">(1.21)</td></tr></table>
+<!--l. 147--><p class="nopar" >Correlation matrix:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis21x.svg" alt="V  = cov[x ,x ]
+ ij        i  j
+" class="math-display" ><a 
+ id="x1-5011r22"></a></div>
+   </td><td class="equation-label">(1.22)</td></tr></table>
+<!--l. 151--><p class="nopar" >Variance of a function of random variables:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis22x.svg" alt="      &#x2211;  [ &#x2202;y  &#x2202;y ]
+&#x03C3;2y &#x2248;      --------    Vij
+       i,j  &#x2202;xi &#x2202;xj &#x20D7;x= &#x20D7;&#x03BC;
+" class="math-display" ><a 
+ id="x1-5012r23"></a></div>
+   </td><td class="equation-label">(1.23)</td></tr></table>
+<!--l. 155--><p class="nopar" >Variance of a vector function of random variables:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis23x.svg" alt="          [        ]
+      &#x2211;    &#x2202;yk-&#x2202;yk-
+Ukl &#x2248;      &#x2202;xi &#x2202;xj      Vij
+       i,j           &#x20D7;x=&#x20D7;&#x03BC;
+" class="math-display" ><a 
+ id="x1-5013r24"></a></div>
+   </td><td class="equation-label">(1.24)</td></tr></table>
+<!--l. 159--><p class="nopar" >Error propagation for sum of uncorrelated variables:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis24x.svg" alt=" 2     2    2
+&#x03C3;y = &#x03C3; 1 + &#x03C3; 2 + 2cov [x1,x2 ]
+" class="math-display" ><a 
+ id="x1-5014r25"></a></div>
+   </td><td class="equation-label">(1.25)</td></tr></table>
+<!--l. 163--><p class="nopar" >Error propagation for product of uncorrelated variables:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis25x.svg" alt="  2    2     2
+&#x03C3;-y=  &#x03C3;1-+  &#x03C3;2-+ 2cov[x1,x2]
+y2    x21    x22       x1x2
+" class="math-display" ><a 
+ id="x1-5015r26"></a></div>
+   </td><td class="equation-label">(1.26)</td></tr></table>
+<!--l. 167--><p class="nopar" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis26x.svg" alt="            ikx    &#x222B; &#x221E;  ikx
+&#x03D5;x(k) = E [e   ] =     e   f(x)dx
+                   -&#x221E;
+" class="math-display" ><a 
+ id="x1-5016r27"></a></div>
+   </td><td class="equation-label">(1.27)</td></tr></table>
+<!--l. 171--><p class="nopar" >Moments of Characteristic function:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis27x.svg" alt=" dm
+---m &#x03D5;z(k) = im&#x03BC;&#x2032;m
+dk
+" class="math-display" ><a 
+ id="x1-5017r28"></a></div>
+   </td><td class="equation-label">(1.28)</td></tr></table>
+<!--l. 175--><p class="nopar" >
+   <h3 class="sectionHead"><span class="titlemark">1.4   </span> <a 
+ id="x1-60001.4"></a>Important distributions</h3>
+<!--l. 177--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.1   </span> <a 
+ id="x1-70001.4.1"></a>Binomial distribution</h4>
+<!--l. 178--><p class="noindent" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis28x.svg" alt="          [( ik    )   ]N
+&#x03D5;p (k ) = p  e  - 1  + 1
+" class="math-display" ><a 
+ id="x1-7001r29"></a></div>
+   </td><td class="equation-label">(1.29)</td></tr></table>
+<!--l. 181--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis29x.svg" alt="             ----N-!---- n      N -n
+f(n; N,p ) = n!(N - n )!p  (1 - p )
+" class="math-display" ><a 
+ id="x1-7002r30"></a></div>
+   </td><td class="equation-label">(1.30)</td></tr></table>
+<!--l. 185--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis30x.svg" alt="E [n ] = N p
+" class="math-display" ><a 
+ id="x1-7003r31"></a></div>
+   </td><td class="equation-label">(1.31)</td></tr></table>
+<!--l. 189--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis31x.svg" alt="V [n] = N p(1 - p)
+" class="math-display" ><a 
+ id="x1-7004r32"></a></div>
+   </td><td class="equation-label">(1.32)</td></tr></table>
+<!--l. 193--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.2   </span> <a 
+ id="x1-80001.4.2"></a>Poisson distribution</h4>
+<!--l. 195--><p class="noindent" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+                                                                                    
+                                                                                    
+<img 
+src="m_formulary_statistical_data_analysis32x.svg" alt="         &#x03BD;(eik-1)
+&#x03D5;&#x03BD;(k) = e
+" class="math-display" ><a 
+ id="x1-8001r33"></a></div>
+   </td><td class="equation-label">(1.33)</td></tr></table>
+<!--l. 198--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis33x.svg" alt="          &#x03BD;n-&#x03BD;
+f(n;&#x03BD; ) = n!e
+" class="math-display" ><a 
+ id="x1-8002r34"></a></div>
+   </td><td class="equation-label">(1.34)</td></tr></table>
+<!--l. 202--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis34x.svg" alt="E [n ] = &#x03BD;
+" class="math-display" ><a 
+ id="x1-8003r35"></a></div>
+   </td><td class="equation-label">(1.35)</td></tr></table>
+<!--l. 206--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis35x.svg" alt="V [n ] = &#x03BD;
+" class="math-display" ><a 
+ id="x1-8004r36"></a></div>
+   </td><td class="equation-label">(1.36)</td></tr></table>
+<!--l. 210--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.3   </span> <a 
+ id="x1-90001.4.3"></a>Uniform distribution</h4>
+<!--l. 212--><p class="noindent" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis36x.svg" alt="          ei&#x03B2;k - ei&#x03B1;k
+&#x03D5;&#x03B1;,&#x03B2;(k) = (&#x03B2;---&#x03B1;-)ik
+" class="math-display" ><a 
+ id="x1-9001r37"></a></div>
+   </td><td class="equation-label">(1.37)</td></tr></table>
+<!--l. 215--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis37x.svg" alt="               1
+f (x;&#x03B1;,&#x03B2; ) = ------f or &#x03B1; &#x2264; x &#x2264; &#x03B2;
+             &#x03B2; - &#x03B1;
+" class="math-display" ><a 
+ id="x1-9002r38"></a></div>
+   </td><td class="equation-label">(1.38)</td></tr></table>
+<!--l. 219--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis38x.svg" alt="        &#x03B1; + &#x03B2;
+E [x] = --2---
+" class="math-display" ><a 
+ id="x1-9003r39"></a></div>
+   </td><td class="equation-label">(1.39)</td></tr></table>
+<!--l. 223--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis39x.svg" alt="               2
+V [x] = (&#x03B2; --&#x03B1;)--
+           12
+" class="math-display" ><a 
+ id="x1-9004r40"></a></div>
+   </td><td class="equation-label">(1.40)</td></tr></table>
+<!--l. 227--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.4   </span> <a 
+ id="x1-100001.4.4"></a>Exponential distribution</h4>
+<!--l. 229--><p class="noindent" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis40x.svg" alt="            1
+&#x03D5; &#x03BE;(k ) = --------
+         1 - ik &#x03BE;
+" class="math-display" ><a 
+ id="x1-10001r41"></a></div>
+   </td><td class="equation-label">(1.41)</td></tr></table>
+<!--l. 232--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis41x.svg" alt="          1 -x&#x2215;&#x03BE;
+f(x;&#x03BE; ) = -e     for x &#x2265; 0
+          &#x03BE;
+" class="math-display" ><a 
+ id="x1-10002r42"></a></div>
+   </td><td class="equation-label">(1.42)</td></tr></table>
+<!--l. 236--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis42x.svg" alt="E [x ] = &#x03BE;
+" class="math-display" ><a 
+ id="x1-10003r43"></a></div>
+   </td><td class="equation-label">(1.43)</td></tr></table>
+<!--l. 240--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis43x.svg" alt="         2
+V [x] = &#x03BE;
+" class="math-display" ><a 
+ id="x1-10004r44"></a></div>
+   </td><td class="equation-label">(1.44)</td></tr></table>
+<!--l. 244--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.5   </span> <a 
+ id="x1-110001.4.5"></a>Gaussian distribution</h4>
+<!--l. 245--><p class="noindent" >ú Characteristic function:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis44x.svg" alt="          i&#x03BC;k- 12&#x03C3;2k2
+&#x03D5;&#x03BC;,&#x03C3;(k) = e
+" class="math-display" ><a 
+ id="x1-11001r45"></a></div>
+   </td><td class="equation-label">(1.45)</td></tr></table>
+<!--l. 249--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis45x.svg" alt="                       (         2)
+f(x; &#x03BC;,&#x03C3;) = &#x221A;--1-- exp  - (x---&#x03BC;)--
+              2&#x03C0; &#x03C3;           2&#x03C3;2
+" class="math-display" ><a 
+ id="x1-11002r46"></a></div>
+   </td><td class="equation-label">(1.46)</td></tr></table>
+<!--l. 253--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis46x.svg" alt="E [x] = &#x03BC;
+" class="math-display" ><a 
+ id="x1-11003r47"></a></div>
+   </td><td class="equation-label">(1.47)</td></tr></table>
+<!--l. 257--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis47x.svg" alt="V [x] = &#x03C3;2
+" class="math-display" ><a 
+ id="x1-11004r48"></a></div>
+   </td><td class="equation-label">(1.48)</td></tr></table>
+<!--l. 261--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.6   </span> <a 
+ id="x1-120001.4.6"></a>Multivariate Gaussian distribution</h4>
+<!--l. 263--><p class="noindent" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis48x.svg" alt="                    1          (   1                   )
+f(&#x20D7;x;m&#x20D7;u, V ) = ----n&#x2215;2---1&#x2215;2 exp  - -(&#x20D7;x - &#x20D7;&#x03BC;)tV -1(&#x20D7;x - &#x20D7;&#x03BC;)
+              (2&#x03C0;)   |V|           2
+" class="math-display" ><a 
+ id="x1-12001r49"></a></div>
+   </td><td class="equation-label">(1.49)</td></tr></table>
+<!--l. 266--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.7   </span> <a 
+ id="x1-130001.4.7"></a>Chi-square distribution</h4>
+<!--l. 268--><p class="noindent" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis49x.svg" alt="&#x03D5;  (k ) = (1 - 2ik)- n2
+  n
+                                                                                    
+                                                                                    
+" class="math-display" ><a 
+ id="x1-13001r50"></a></div>
+   </td><td class="equation-label">(1.50)</td></tr></table>
+<!--l. 271--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis50x.svg" alt="               1
+f (z;n) = -----------zn&#x2215;2-1e-z&#x2215;2
+          2n&#x2215;2&#x0393; (n &#x2215;2)
+" class="math-display" ><a 
+ id="x1-13002r51"></a></div>
+   </td><td class="equation-label">(1.51)</td></tr></table>
+<!--l. 275--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis51x.svg" alt="E [z] = n
+" class="math-display" ><a 
+ id="x1-13003r52"></a></div>
+   </td><td class="equation-label">(1.52)</td></tr></table>
+<!--l. 279--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis52x.svg" alt="V [z] = 2n
+" class="math-display" ><a 
+ id="x1-13004r53"></a></div>
+   </td><td class="equation-label">(1.53)</td></tr></table>
+<!--l. 283--><p class="nopar" >
+                                                                                    
+                                                                                    
+   <h4 class="subsectionHead"><span class="titlemark">1.4.8   </span> <a 
+ id="x1-140001.4.8"></a>Cauchy (Breit-Wigner) distribution</h4>
+<!--l. 285--><p class="noindent" >Characteristic function:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis53x.svg" alt="                   &#x0393;
+&#x03D5;x0,&#x0393; (k ) = e- ikx0-|k|2
+" class="math-display" ><a 
+ id="x1-14001r54"></a></div>
+   </td><td class="equation-label">(1.54)</td></tr></table>
+<!--l. 288--><p class="nopar" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis54x.svg" alt="              1-------&#x0393; &#x2215;2------
+f (x;&#x0393; ,x0) = &#x03C0;&#x0393; 2&#x2215;4 + (x - x )2
+                             0
+" class="math-display" ><a 
+ id="x1-14002r55"></a></div>
+   </td><td class="equation-label">(1.55)</td></tr></table>
+<!--l. 292--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">1.4.9   </span> <a 
+ id="x1-150001.4.9"></a>Student&#8217;s t distribution</h4>
+<!--l. 294--><p class="noindent" >Distribution:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis55x.svg" alt="              (   )
+            &#x0393;  &#x03BD;+1    (     x2) -(&#x03BD;+21)
+f (x;&#x03BD;) = &#x221A;-----2-----  1 + ---
+            &#x03BD;&#x03C0; &#x0393; (&#x03BD;&#x2215;2)      &#x03BD;
+" class="math-display" ><a 
+ id="x1-15001r56"></a></div>
+   </td><td class="equation-label">(1.56)</td></tr></table>
+<!--l. 297--><p class="nopar" >Expectation value:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis56x.svg" alt="E [x ] = 0
+" class="math-display" ><a 
+ id="x1-15002r57"></a></div>
+   </td><td class="equation-label">(1.57)</td></tr></table>
+<!--l. 301--><p class="nopar" >Variance:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_formulary_statistical_data_analysis57x.svg" alt="         &#x03BD;
+V[x] = ------
+       &#x03BD; - 2
+" class="math-display" ><a 
+ id="x1-15003r58"></a></div>
+   </td><td class="equation-label">(1.58)</td></tr></table>
+<!--l. 305--><p class="nopar" >
+    
+</body></html> 
+
+                                                                                    
+
+

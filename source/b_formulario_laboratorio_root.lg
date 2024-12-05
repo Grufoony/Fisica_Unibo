@@ -1,0 +1,313 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+File: b_formulario_laboratorio_root.html
+File: b_formulario_laboratorio_root.css
+File: b_formulario_laboratorio_root.tmp
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css: .subsectionToc, .likesubsectionToc {margin-left:1em;}
+Css: .subsubsectionToc, .likesubsubsectionToc {margin-left:2em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:3em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:4em;}
+--- needs --- b_formulario_laboratorio_root.idv[2] ==> b_formulario_laboratorio_root0x.png ---
+Css: div#colorbox1{background-color:#D9D9D9;}
+Css: span#colorbox2{background-color:#D9D9D9;}
+Css: span#colorbox3{background-color:#D9D9D9;}
+Css: span#colorbox4{background-color:#D9D9D9;}
+Css: span#colorbox5{background-color:#D9D9D9;}
+Css: span#colorbox6{background-color:#D9D9D9;}
+Css: span#colorbox7{background-color:#D9D9D9;}
+Css: span#colorbox8{background-color:#D9D9D9;}
+Css: span#colorbox9{background-color:#D9D9D9;}
+Css: span#colorbox10{background-color:#D9D9D9;}
+Css: span#colorbox11{background-color:#D9D9D9;}
+Css: span#colorbox12{background-color:#D9D9D9;}
+Css: span#colorbox13{background-color:#D9D9D9;}
+Css: span#colorbox14{background-color:#D9D9D9;}
+Css: span#colorbox15{background-color:#D9D9D9;}
+Css: span#colorbox16{background-color:#D9D9D9;}
+Css: span#colorbox17{background-color:#D9D9D9;}
+Css: span#colorbox18{background-color:#D9D9D9;}
+Css: span#colorbox19{background-color:#D9D9D9;}
+Css: span#colorbox20{background-color:#D9D9D9;}
+Css: span#colorbox21{background-color:#D9D9D9;}
+Css: span#colorbox22{background-color:#D9D9D9;}
+Css: span#colorbox23{background-color:#D9D9D9;}
+Css: span#colorbox24{background-color:#D9D9D9;}
+Css: span#colorbox25{background-color:#D9D9D9;}
+Css: span#colorbox26{background-color:#D9D9D9;}
+Css: span#colorbox27{background-color:#D9D9D9;}
+Css: span#colorbox28{background-color:#D9D9D9;}
+Css: span#colorbox29{background-color:#D9D9D9;}
+Css: span#colorbox30{background-color:#D9D9D9;}
+Css: span#colorbox31{background-color:#D9D9D9;}
+Css: span#colorbox32{background-color:#D9D9D9;}
+Css: span#colorbox33{background-color:#D9D9D9;}
+Css: div#colorbox34{background-color:#D9D9D9;}
+--- needs --- b_formulario_laboratorio_root.idv[4] ==> b_formulario_laboratorio_root1x.png ---
+--- needs --- b_formulario_laboratorio_root.idv[5] ==> b_formulario_laboratorio_root2x.png ---
+Css: div#colorbox35{background-color:#D9D9D9;}
+Css: span#colorbox36{background-color:#D9D9D9;}
+Css: span#colorbox37{background-color:#D9D9D9;}
+Css: span#colorbox38{background-color:#D9D9D9;}
+Css: span#colorbox39{background-color:#D9D9D9;}
+Css: span#colorbox40{background-color:#D9D9D9;}
+Css: span#colorbox41{background-color:#D9D9D9;}
+--- needs --- b_formulario_laboratorio_root.idv[7] ==> b_formulario_laboratorio_root3x.png ---
+Css: span#colorbox42{background-color:#D9D9D9;}
+Css: span#colorbox43{background-color:#D9D9D9;}
+Css: span#colorbox44{background-color:#D9D9D9;}
+Css: span#colorbox45{background-color:#D9D9D9;}
+Css: span#colorbox46{background-color:#D9D9D9;}
+Css: span#colorbox47{background-color:#D9D9D9;}
+Css: span#colorbox48{background-color:#D9D9D9;}
+Css: span#colorbox49{background-color:#D9D9D9;}
+Css: span#colorbox50{background-color:#D9D9D9;}
+Css: div#colorbox51{background-color:#D9D9D9;}
+Css: span#colorbox52{background-color:#D9D9D9;}
+Css: span#colorbox53{background-color:#D9D9D9;}
+Css: span#colorbox54{background-color:#D9D9D9;}
+Css: span#colorbox55{background-color:#D9D9D9;}
+Css: span#colorbox56{background-color:#D9D9D9;}
+Css: span#colorbox57{background-color:#D9D9D9;}
+Css: span#colorbox58{background-color:#D9D9D9;}
+Css: span#colorbox59{background-color:#D9D9D9;}
+Css: span#colorbox60{background-color:#D9D9D9;}
+Css: span#colorbox61{background-color:#D9D9D9;}
+Css: span#colorbox62{background-color:#D9D9D9;}
+Css: span#colorbox63{background-color:#D9D9D9;}
+Css: span#colorbox64{background-color:#D9D9D9;}
+Css: span#colorbox65{background-color:#D9D9D9;}
+Css: span#colorbox66{background-color:#D9D9D9;}
+Css: span#colorbox67{background-color:#D9D9D9;}
+Css: span#colorbox68{background-color:#D9D9D9;}
+Css: span#colorbox69{background-color:#D9D9D9;}
+Css: span#colorbox70{background-color:#D9D9D9;}
+--- needs --- b_formulario_laboratorio_root.idv[9] ==> b_formulario_laboratorio_root4x.png ---
+--- needs --- b_formulario_laboratorio_root.idv[11] ==> b_formulario_laboratorio_root5x.png ---
+Css: span#colorbox71{background-color:#D9D9D9;}
+--- needs --- b_formulario_laboratorio_root.idv[13] ==> b_formulario_laboratorio_root6x.png ---
+Css: span#colorbox72{background-color:#D9D9D9;}
+Css: span#colorbox73{background-color:#D9D9D9;}
+Css: div#colorbox74{background-color:#D9D9D9;}
+Css: span#colorbox75{background-color:#D9D9D9;}
+Css: span#colorbox76{background-color:#D9D9D9;}
+Css: span#colorbox77{background-color:#D9D9D9;}
+Css: span#colorbox78{background-color:#D9D9D9;}
+Css: span#colorbox79{background-color:#D9D9D9;}
+Css: span#colorbox80{background-color:#D9D9D9;}
+Css: span#colorbox81{background-color:#D9D9D9;}
+Css: span#colorbox82{background-color:#D9D9D9;}
+Css: span#colorbox83{background-color:#D9D9D9;}
+Css: span#colorbox84{background-color:#D9D9D9;}
+Css: div#colorbox85{background-color:#D9D9D9;}
+Css: span#colorbox86{background-color:#D9D9D9;}
+Css: span#colorbox87{background-color:#D9D9D9;}
+Css: span#colorbox88{background-color:#D9D9D9;}
+Css: div#colorbox89{background-color:#D9D9D9;}
+Css: span#colorbox90{background-color:#D9D9D9;}
+Css: span#colorbox91{background-color:#D9D9D9;}
+Css: span#colorbox92{background-color:#D9D9D9;}
+Css: div#colorbox93{background-color:#D9D9D9;}
+Css: span#colorbox94{background-color:#D9D9D9;}
+Css: span#colorbox95{background-color:#D9D9D9;}
+Css: span#colorbox96{background-color:#D9D9D9;}
+Css: span#colorbox97{background-color:#D9D9D9;}
+Css: div#colorbox98{background-color:#D9D9D9;}
+Css: span#colorbox99{background-color:#D9D9D9;}
+Css: span#colorbox100{background-color:#D9D9D9;}
+Css: span#colorbox101{background-color:#D9D9D9;}
+Css: span#colorbox102{background-color:#D9D9D9;}
+Css: span#colorbox103{background-color:#D9D9D9;}
+Css: span#colorbox104{background-color:#D9D9D9;}
+Css: span#colorbox105{background-color:#D9D9D9;}
+Css: span#colorbox106{background-color:#D9D9D9;}
+Css: span#colorbox107{background-color:#D9D9D9;}
+Css: span#colorbox108{background-color:#D9D9D9;}
+Css: span#colorbox109{background-color:#D9D9D9;}
+Css: span#colorbox110{background-color:#D9D9D9;}
+--- characters ---
+Font("cmmi","10","10","100")
+Font("ecrm","1000","10","100")
+Font("ecrm","1728","17","100")
+Font("ecrm","1200","12","100")
+Font("ectt","1200","12","100")
+Font("ecrm","0900","9","100")
+Font("ecbx","0900","9","100")
+Font("cmmi","9","9","100")
+Font("ectt","1000","10","100")

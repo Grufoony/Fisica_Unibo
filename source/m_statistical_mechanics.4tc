@@ -1,0 +1,61 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Prerequisites}}{5}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-30001.1}{QQ2-1-3}{Prerequisites of Thermodynamics}}{6}\relax 
+\doTocEntry\tocsubsection{1.1.1}{\csname a:TocLink\endcsname{1}{x1-40001.1.1}{QQ2-1-4}{The laws of thermodynamics}}{6}\relax 
+\doTocEntry\tocsubsection{1.1.2}{\csname a:TocLink\endcsname{1}{x1-50001.1.2}{QQ2-1-5}{Thermodynamic potentials (for reversible processes)}}{8}\relax 
+\doTocEntry\tocsubsection{1.1.3}{\csname a:TocLink\endcsname{1}{x1-60001.1.3}{QQ2-1-6}{Thermodynamic limit}}{10}\relax 
+\doTocEntry\tocsubsection{1.1.4}{\csname a:TocLink\endcsname{1}{x1-70001.1.4}{QQ2-1-7}{Equation of state - $\mu $-$n$ relation}}{10}\relax 
+\doTocEntry\tocsubsection{1.1.5}{\csname a:TocLink\endcsname{1}{x1-80001.1.5}{QQ2-1-8}{Variational principles}}{11}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-90001.2}{QQ2-1-9}{Prerequisites of Classical Mechanics}}{13}\relax 
+\doTocEntry\tocsubsection{1.2.1}{\csname a:TocLink\endcsname{1}{x1-100001.2.1}{QQ2-1-10}{On the notion of "state"}}{14}\relax 
+\doTocEntry\tocsubsection{1.2.2}{\csname a:TocLink\endcsname{1}{x1-110001.2.2}{QQ2-1-11}{Probability distribution}}{15}\relax 
+\doTocEntry\tocsubsection{1.2.3}{\csname a:TocLink\endcsname{1}{x1-120001.2.3}{QQ2-1-12}{Liouville's theorem}}{16}\relax 
+\doTocEntry\tocsubsection{1.2.4}{\csname a:TocLink\endcsname{1}{x1-130001.2.4}{QQ2-1-13}{Time-Independent Hamiltonians}}{18}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-140002}{QQ2-1-14}{Classical Statistical Mechanics}}{21}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-150002.1}{QQ2-1-15}{Microcanonical Ensemble}}{22}\relax 
+\doTocEntry\tocsubsection{2.1.1}{\csname a:TocLink\endcsname{1}{x1-160002.1.1}{QQ2-1-16}{Microcanonical entropy $S_{mc}$}}{24}\relax 
+\doTocEntry\tocsubsection{2.1.2}{\csname a:TocLink\endcsname{1}{x1-170002.1.2}{QQ2-1-17}{One example/exercise (1.1, 1.2): Perfect gas}}{31}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-180002.2}{QQ2-1-18}{Canonical Ensemble}}{39}\relax 
+\doTocEntry\tocsubsection{2.2.1}{\csname a:TocLink\endcsname{1}{x1-190002.2.1}{QQ2-1-19}{Thermodynamic quantities}}{44}\relax 
+\doTocEntry\tocsubsection{2.2.2}{\csname a:TocLink\endcsname{1}{x1-200002.2.2}{QQ2-1-20}{Equipartition theorem}}{47}\relax 
+\doTocEntry\tocsubsection{2.2.3}{\csname a:TocLink\endcsname{1}{x1-210002.2.3}{QQ2-1-21}{Exercise (2.1): Find the partition function of a (classical) perfect gas in 3D}}{51}\relax 
+\doTocEntry\tocsubsection{2.2.4}{\csname a:TocLink\endcsname{1}{x1-220002.2.4}{QQ2-1-22}{Magnetic systems}}{57}\relax 
+\doTocEntry\tocsubsection{2.2.5}{\csname a:TocLink\endcsname{1}{x1-230002.2.5}{QQ2-1-23}{Exercise (2.5): Thermodynamics of a magnetic solid}}{62}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{1}{x1-240002.3}{QQ2-1-24}{Grancanonical Ensemble}}{64}\relax 
+\doTocEntry\tocsubsection{2.3.1}{\csname a:TocLink\endcsname{1}{x1-250002.3.1}{QQ2-1-25}{Thermodynamical quantities}}{71}\relax 
+\doTocEntry\tocsubsection{2.3.2}{\csname a:TocLink\endcsname{1}{x1-260002.3.2}{QQ2-1-26}{Virial expansion (van der Waals gases)}}{74}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{1}{x1-26003r1}{}{\ignorespaces Van der Waals potential. It is repulsive when $U(r) > 0$ (in the image indicated as $V(r)$}}{figure}\relax 
+\doTocEntry\tocsection{2.4}{\csname a:TocLink\endcsname{1}{x1-270002.4}{QQ2-1-28}{State counting and Entropy}}{85}\relax 
+\doTocEntry\tocsubsection{2.4.1}{\csname a:TocLink\endcsname{1}{x1-280002.4.1}{QQ2-1-29}{Probability distribution from maximum entropy principle}}{87}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-290003}{QQ2-1-30}{Quantum Statistical Mechanics}}{93}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-300003.1}{QQ2-1-31}{Review on Quantum Mechanics and Statistics}}{94}\relax 
+\doTocEntry\tocsubsection{3.1.1}{\csname a:TocLink\endcsname{1}{x1-310003.1.1}{QQ2-1-32}{Quantum System}}{94}\relax 
+\doTocEntry\tocsubsection{3.1.2}{\csname a:TocLink\endcsname{1}{x1-320003.1.2}{QQ2-1-33}{Density matrix}}{100}\relax 
+\doTocEntry\tocsubsection{3.1.3}{\csname a:TocLink\endcsname{1}{x1-330003.1.3}{QQ2-1-34}{Identical particles - Permutation group}}{111}\relax 
+\doTocEntry\toclof{3.1}{\csname a:TocLink\endcsname{1}{x1-33004r1}{}{\ignorespaces Visual proofs of identities between the transpositions}}{figure}\relax 
+\doTocEntry\tocsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-340003.1.4}{QQ2-1-36}{Quantum statistic}}{116}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-350003.2}{QQ2-1-37}{Second quantization}}{125}\relax 
+\doTocEntry\tocsubsection{3.2.1}{\csname a:TocLink\endcsname{1}{x1-360003.2.1}{QQ2-1-38}{Creation/Annihilation operators}}{125}\relax 
+\doTocEntry\toclof{3.2}{\csname a:TocLink\endcsname{1}{x1-36001r2}{}{\ignorespaces Creation/annihilation "ladder" for bosons.}}{figure}\relax 
+\doTocEntry\toclof{3.3}{\csname a:TocLink\endcsname{1}{x1-36002r3}{}{\ignorespaces Creation/annihilation "ladder" for fermions.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.2.2}{\csname a:TocLink\endcsname{1}{x1-370003.2.2}{QQ2-1-41}{Fock Space}}{129}\relax 
+\doTocEntry\tocsubsection{3.2.3}{\csname a:TocLink\endcsname{1}{x1-380003.2.3}{QQ2-1-42}{Field operator}}{136}\relax 
+\doTocEntry\tocsubsection{3.2.4}{\csname a:TocLink\endcsname{1}{x1-390003.2.4}{QQ2-1-43}{Observable operators}}{143}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-400003.3}{QQ2-1-44}{Quantum ensembles}}{157}\relax 
+\doTocEntry\tocsubsection{3.3.1}{\csname a:TocLink\endcsname{1}{x1-410003.3.1}{QQ2-1-45}{Microcanonical ensembles}}{157}\relax 
+\doTocEntry\tocsubsection{3.3.2}{\csname a:TocLink\endcsname{1}{x1-420003.3.2}{QQ2-1-46}{Canonical ensemble}}{159}\relax 
+\doTocEntry\tocsubsection{3.3.3}{\csname a:TocLink\endcsname{1}{x1-430003.3.3}{QQ2-1-47}{Grancanonical ensemble}}{163}\relax 
+\doTocEntry\tocsubsection{3.3.4}{\csname a:TocLink\endcsname{1}{x1-440003.3.4}{QQ2-1-48}{Exercise (1.1): Quantum magnetic dipoles}}{167}\relax 
+\doTocEntry\tocsubsection{3.3.5}{\csname a:TocLink\endcsname{1}{x1-450003.3.5}{QQ2-1-49}{Exercise (1.2): Quantum harmonic oscillators}}{167}\relax 
+\doTocEntry\tocsection{3.4}{\csname a:TocLink\endcsname{1}{x1-460003.4}{QQ2-1-50}{Quantum gases}}{168}\relax 
+\doTocEntry\toclof{3.4}{\csname a:TocLink\endcsname{1}{x1-46002r4}{}{\ignorespaces Maxwell-Boltzmann, Fermi-Dirac and Bose-Einstein distributions. We can see that for high temperature (on the right of the graph), the distributions converges. (in the figure the subscript $_k$ is instead denoted with $_\beta $)}}{figure}\relax 
+\doTocEntry\tocsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-470003.4.1}{QQ2-1-52}{Fundamental equations}}{180}\relax 
+\doTocEntry\tocsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-480003.4.2}{QQ2-1-53}{Semi-classical limit (exercise 2.1)}}{185}\relax 
+\doTocEntry\tocsubsection{3.4.3}{\csname a:TocLink\endcsname{1}{x1-490003.4.3}{QQ2-1-54}{Fermions at T=0}}{187}\relax 
+\doTocEntry\toclof{3.5}{\csname a:TocLink\endcsname{1}{x1-49001r5}{}{\ignorespaces Fermions distribution at different temperatures}}{figure}\relax 
+\doTocEntry\tocsubsection{3.4.4}{\csname a:TocLink\endcsname{1}{x1-500003.4.4}{QQ2-1-56}{Bosons at T=0}}{192}\relax 
+\doTocEntry\toclof{3.6}{\csname a:TocLink\endcsname{1}{x1-50003r6}{}{\ignorespaces $\mu (T)$ for 2D (left) and 3D non-relativistic Bose gas}}{figure}\relax 
+\doTocEntry\toclof{3.7}{\csname a:TocLink\endcsname{1}{x1-50004r7}{}{\ignorespaces $n_n(T)$ and $n_0(T)$. For $T < T_c$ we have a Bose-Einstein condensate.}}{figure}\relax 
+\doTocEntry\toclof{3.8}{\csname a:TocLink\endcsname{1}{x1-50005r8}{}{\ignorespaces $c_V(T)$ for Bosons (red) and Fermions (green). In the Bose-Einstein distribution, the cusp at $T_c$ indicate a phase transition.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.4.5}{\csname a:TocLink\endcsname{1}{x1-510003.4.5}{QQ2-1-60}{Exercise (2.5): Gas of photons}}{205}\relax 

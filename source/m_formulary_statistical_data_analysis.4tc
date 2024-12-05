@@ -1,0 +1,16 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Probability theory}}{5}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-30001.1}{QQ2-1-3}{Combinatorics}}{5}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-40001.2}{QQ2-1-4}{Probability}}{7}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-50001.3}{QQ2-1-5}{Random variables and distributions}}{8}\relax 
+\doTocEntry\tocsection{1.4}{\csname a:TocLink\endcsname{1}{x1-60001.4}{QQ2-1-6}{Important distributions}}{14}\relax 
+\doTocEntry\tocsubsection{1.4.1}{\csname a:TocLink\endcsname{1}{x1-70001.4.1}{QQ2-1-7}{Binomial distribution}}{14}\relax 
+\doTocEntry\tocsubsection{1.4.2}{\csname a:TocLink\endcsname{1}{x1-80001.4.2}{QQ2-1-8}{Poisson distribution}}{15}\relax 
+\doTocEntry\tocsubsection{1.4.3}{\csname a:TocLink\endcsname{1}{x1-90001.4.3}{QQ2-1-9}{Uniform distribution}}{17}\relax 
+\doTocEntry\tocsubsection{1.4.4}{\csname a:TocLink\endcsname{1}{x1-100001.4.4}{QQ2-1-10}{Exponential distribution}}{18}\relax 
+\doTocEntry\tocsubsection{1.4.5}{\csname a:TocLink\endcsname{1}{x1-110001.4.5}{QQ2-1-11}{Gaussian distribution}}{19}\relax 
+\doTocEntry\tocsubsection{1.4.6}{\csname a:TocLink\endcsname{1}{x1-120001.4.6}{QQ2-1-12}{Multivariate Gaussian distribution}}{21}\relax 
+\doTocEntry\tocsubsection{1.4.7}{\csname a:TocLink\endcsname{1}{x1-130001.4.7}{QQ2-1-13}{Chi-square distribution}}{21}\relax 
+\doTocEntry\tocsubsection{1.4.8}{\csname a:TocLink\endcsname{1}{x1-140001.4.8}{QQ2-1-14}{Cauchy (Breit-Wigner) distribution}}{23}\relax 
+\doTocEntry\tocsubsection{1.4.9}{\csname a:TocLink\endcsname{1}{x1-150001.4.9}{QQ2-1-15}{Student's t distribution}}{23}\relax 

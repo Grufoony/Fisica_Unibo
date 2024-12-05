@@ -1,0 +1,452 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: eccc1000 font-variant: small-caps;
+htfcss: eccc1000 font-variant: small-caps;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+File: b_introduzione_sistemi_complessi.html
+File: b_introduzione_sistemi_complessi.css
+File: b_introduzione_sistemi_complessi.tmp
+Font_Class(4,"4"): <span  class="small-caps"></span>
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Font_Size: 12
+Css: h1.partHead{text-align: center}
+Css:  .chapterToc, .likechapterToc {margin-left:0em;}
+Css:  .likesectionToc, .sectionToc {margin-left:1em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:2em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:2em;}
+Css:  .likesubsubsectionToc, .subsubsectionToc {margin-left:3em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:4em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:5em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
+Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+Css: td.align-label { width:5%; text-align:center; }
+Css: td.align-odd { text-align:right; padding-right:0.3em;}
+Css: td.align-even { text-align:left; padding-right:0.6em;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: .rotatebox{display: inline-block;}
+--- needs --- b_introduzione_sistemi_complessi.idv[2] ==> b_introduzione_sistemi_complessi0x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[4] ==> b_introduzione_sistemi_complessi1x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[6] ==> b_introduzione_sistemi_complessi2x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[7] ==> b_introduzione_sistemi_complessi3x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[8] ==> b_introduzione_sistemi_complessi4x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[9] ==> b_introduzione_sistemi_complessi5x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[10] ==> b_introduzione_sistemi_complessi6x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[12] ==> b_introduzione_sistemi_complessi7x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[14] ==> b_introduzione_sistemi_complessi8x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[15] ==> b_introduzione_sistemi_complessi9x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[17] ==> b_introduzione_sistemi_complessi10x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[19] ==> b_introduzione_sistemi_complessi11x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[20] ==> b_introduzione_sistemi_complessi12x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[22] ==> b_introduzione_sistemi_complessi13x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[24] ==> b_introduzione_sistemi_complessi14x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[26] ==> b_introduzione_sistemi_complessi15x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[28] ==> b_introduzione_sistemi_complessi16x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[29] ==> b_introduzione_sistemi_complessi17x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[30] ==> b_introduzione_sistemi_complessi18x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[31] ==> b_introduzione_sistemi_complessi19x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[32] ==> b_introduzione_sistemi_complessi20x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[33] ==> b_introduzione_sistemi_complessi21x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[35] ==> b_introduzione_sistemi_complessi22x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[36] ==> b_introduzione_sistemi_complessi23x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[38] ==> b_introduzione_sistemi_complessi24x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[39] ==> b_introduzione_sistemi_complessi25x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[41] ==> b_introduzione_sistemi_complessi26x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[43] ==> b_introduzione_sistemi_complessi27x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[45] ==> b_introduzione_sistemi_complessi28x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[46] ==> b_introduzione_sistemi_complessi29x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[48] ==> b_introduzione_sistemi_complessi30x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[50] ==> b_introduzione_sistemi_complessi31x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[51] ==> b_introduzione_sistemi_complessi32x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[52] ==> b_introduzione_sistemi_complessi33x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[53] ==> b_introduzione_sistemi_complessi34x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[54] ==> b_introduzione_sistemi_complessi35x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[55] ==> b_introduzione_sistemi_complessi36x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[56] ==> b_introduzione_sistemi_complessi37x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[57] ==> b_introduzione_sistemi_complessi38x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[58] ==> b_introduzione_sistemi_complessi39x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[60] ==> b_introduzione_sistemi_complessi40x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[62] ==> b_introduzione_sistemi_complessi41x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[63] ==> b_introduzione_sistemi_complessi42x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[65] ==> b_introduzione_sistemi_complessi43x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[66] ==> b_introduzione_sistemi_complessi44x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[68] ==> b_introduzione_sistemi_complessi45x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[69] ==> b_introduzione_sistemi_complessi46x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[70] ==> b_introduzione_sistemi_complessi47x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[71] ==> b_introduzione_sistemi_complessi48x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[73] ==> b_introduzione_sistemi_complessi49x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[74] ==> b_introduzione_sistemi_complessi50x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[76] ==> b_introduzione_sistemi_complessi51x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[77] ==> b_introduzione_sistemi_complessi52x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[78] ==> b_introduzione_sistemi_complessi53x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[79] ==> b_introduzione_sistemi_complessi54x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[81] ==> b_introduzione_sistemi_complessi55x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[83] ==> b_introduzione_sistemi_complessi56x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[84] ==> b_introduzione_sistemi_complessi57x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[85] ==> b_introduzione_sistemi_complessi58x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[87] ==> b_introduzione_sistemi_complessi59x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[89] ==> b_introduzione_sistemi_complessi60x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[91] ==> b_introduzione_sistemi_complessi61x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[92] ==> b_introduzione_sistemi_complessi62x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[93] ==> b_introduzione_sistemi_complessi63x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[94] ==> b_introduzione_sistemi_complessi64x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[95] ==> b_introduzione_sistemi_complessi65x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[96] ==> b_introduzione_sistemi_complessi66x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[97] ==> b_introduzione_sistemi_complessi67x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[99] ==> b_introduzione_sistemi_complessi68x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[101] ==> b_introduzione_sistemi_complessi69x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[102] ==> b_introduzione_sistemi_complessi70x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[104] ==> b_introduzione_sistemi_complessi71x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[105] ==> b_introduzione_sistemi_complessi72x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[106] ==> b_introduzione_sistemi_complessi73x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[108] ==> b_introduzione_sistemi_complessi74x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[110] ==> b_introduzione_sistemi_complessi75x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[111] ==> b_introduzione_sistemi_complessi76x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[113] ==> b_introduzione_sistemi_complessi77x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[115] ==> b_introduzione_sistemi_complessi78x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[116] ==> b_introduzione_sistemi_complessi79x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[117] ==> b_introduzione_sistemi_complessi80x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[119] ==> b_introduzione_sistemi_complessi81x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[121] ==> b_introduzione_sistemi_complessi82x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[123] ==> b_introduzione_sistemi_complessi83x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[124] ==> b_introduzione_sistemi_complessi84x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[126] ==> b_introduzione_sistemi_complessi85x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[127] ==> b_introduzione_sistemi_complessi86x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[129] ==> b_introduzione_sistemi_complessi87x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[131] ==> b_introduzione_sistemi_complessi88x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[133] ==> b_introduzione_sistemi_complessi89x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[135] ==> b_introduzione_sistemi_complessi90x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[136] ==> b_introduzione_sistemi_complessi91x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[137] ==> b_introduzione_sistemi_complessi92x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[139] ==> b_introduzione_sistemi_complessi93x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[141] ==> b_introduzione_sistemi_complessi94x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[142] ==> b_introduzione_sistemi_complessi95x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[143] ==> b_introduzione_sistemi_complessi96x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[144] ==> b_introduzione_sistemi_complessi97x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[145] ==> b_introduzione_sistemi_complessi98x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[146] ==> b_introduzione_sistemi_complessi99x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[147] ==> b_introduzione_sistemi_complessi100x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[148] ==> b_introduzione_sistemi_complessi101x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[149] ==> b_introduzione_sistemi_complessi102x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[151] ==> b_introduzione_sistemi_complessi103x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[153] ==> b_introduzione_sistemi_complessi104x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[154] ==> b_introduzione_sistemi_complessi105x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[156] ==> b_introduzione_sistemi_complessi106x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[157] ==> b_introduzione_sistemi_complessi107x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[158] ==> b_introduzione_sistemi_complessi108x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[159] ==> b_introduzione_sistemi_complessi109x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[160] ==> b_introduzione_sistemi_complessi110x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[162] ==> b_introduzione_sistemi_complessi111x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[164] ==> b_introduzione_sistemi_complessi112x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[166] ==> b_introduzione_sistemi_complessi113x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[168] ==> b_introduzione_sistemi_complessi114x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[170] ==> b_introduzione_sistemi_complessi115x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[171] ==> b_introduzione_sistemi_complessi116x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[172] ==> b_introduzione_sistemi_complessi117x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[174] ==> b_introduzione_sistemi_complessi118x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[175] ==> b_introduzione_sistemi_complessi119x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[177] ==> b_introduzione_sistemi_complessi120x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[178] ==> b_introduzione_sistemi_complessi121x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[179] ==> b_introduzione_sistemi_complessi122x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[181] ==> b_introduzione_sistemi_complessi123x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[183] ==> b_introduzione_sistemi_complessi124x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[185] ==> b_introduzione_sistemi_complessi125x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[186] ==> b_introduzione_sistemi_complessi126x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[187] ==> b_introduzione_sistemi_complessi127x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[188] ==> b_introduzione_sistemi_complessi128x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[189] ==> b_introduzione_sistemi_complessi129x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[191] ==> b_introduzione_sistemi_complessi130x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[193] ==> b_introduzione_sistemi_complessi131x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[195] ==> b_introduzione_sistemi_complessi132x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[196] ==> b_introduzione_sistemi_complessi133x.svg ---
+Css: #TBL-1-1{border-left: 1px solid black;}
+Css: #TBL-1-1{border-right:1px solid black;}
+Css: #TBL-1-2{border-right:1px solid black;}
+Css: #TBL-1-3{border-right:1px solid black;}
+Css: #TBL-1-4{border-right:1px solid black;}
+--- needs --- b_introduzione_sistemi_complessi.idv[197] ==> b_introduzione_sistemi_complessi134x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[198] ==> b_introduzione_sistemi_complessi135x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[199] ==> b_introduzione_sistemi_complessi136x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[200] ==> b_introduzione_sistemi_complessi137x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[201] ==> b_introduzione_sistemi_complessi138x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[202] ==> b_introduzione_sistemi_complessi139x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[203] ==> b_introduzione_sistemi_complessi140x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[204] ==> b_introduzione_sistemi_complessi141x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[205] ==> b_introduzione_sistemi_complessi142x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[206] ==> b_introduzione_sistemi_complessi143x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[208] ==> b_introduzione_sistemi_complessi144x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[210] ==> b_introduzione_sistemi_complessi145x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[212] ==> b_introduzione_sistemi_complessi146x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[214] ==> b_introduzione_sistemi_complessi147x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[216] ==> b_introduzione_sistemi_complessi148x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[218] ==> b_introduzione_sistemi_complessi149x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[220] ==> b_introduzione_sistemi_complessi150x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[222] ==> b_introduzione_sistemi_complessi151x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[224] ==> b_introduzione_sistemi_complessi152x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[226] ==> b_introduzione_sistemi_complessi153x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[228] ==> b_introduzione_sistemi_complessi154x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[230] ==> b_introduzione_sistemi_complessi155x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[232] ==> b_introduzione_sistemi_complessi156x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[234] ==> b_introduzione_sistemi_complessi157x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[235] ==> b_introduzione_sistemi_complessi158x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[236] ==> b_introduzione_sistemi_complessi159x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[237] ==> b_introduzione_sistemi_complessi160x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[238] ==> b_introduzione_sistemi_complessi161x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[240] ==> b_introduzione_sistemi_complessi162x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[242] ==> b_introduzione_sistemi_complessi163x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[244] ==> b_introduzione_sistemi_complessi164x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[246] ==> b_introduzione_sistemi_complessi165x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[248] ==> b_introduzione_sistemi_complessi166x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[250] ==> b_introduzione_sistemi_complessi167x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[252] ==> b_introduzione_sistemi_complessi168x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[254] ==> b_introduzione_sistemi_complessi169x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[256] ==> b_introduzione_sistemi_complessi170x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[258] ==> b_introduzione_sistemi_complessi171x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[260] ==> b_introduzione_sistemi_complessi172x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[262] ==> b_introduzione_sistemi_complessi173x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[263] ==> b_introduzione_sistemi_complessi174x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[265] ==> b_introduzione_sistemi_complessi175x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[267] ==> b_introduzione_sistemi_complessi176x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[269] ==> b_introduzione_sistemi_complessi177x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[271] ==> b_introduzione_sistemi_complessi178x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[273] ==> b_introduzione_sistemi_complessi179x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[275] ==> b_introduzione_sistemi_complessi180x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[276] ==> b_introduzione_sistemi_complessi181x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[278] ==> b_introduzione_sistemi_complessi182x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[279] ==> b_introduzione_sistemi_complessi183x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[280] ==> b_introduzione_sistemi_complessi184x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[281] ==> b_introduzione_sistemi_complessi185x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[283] ==> b_introduzione_sistemi_complessi186x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[285] ==> b_introduzione_sistemi_complessi187x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[286] ==> b_introduzione_sistemi_complessi188x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[287] ==> b_introduzione_sistemi_complessi189x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[289] ==> b_introduzione_sistemi_complessi190x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[290] ==> b_introduzione_sistemi_complessi191x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[291] ==> b_introduzione_sistemi_complessi192x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[293] ==> b_introduzione_sistemi_complessi193x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[295] ==> b_introduzione_sistemi_complessi194x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[296] ==> b_introduzione_sistemi_complessi195x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[297] ==> b_introduzione_sistemi_complessi196x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[299] ==> b_introduzione_sistemi_complessi197x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[301] ==> b_introduzione_sistemi_complessi198x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[303] ==> b_introduzione_sistemi_complessi199x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[304] ==> b_introduzione_sistemi_complessi200x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[305] ==> b_introduzione_sistemi_complessi201x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[307] ==> b_introduzione_sistemi_complessi202x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[308] ==> b_introduzione_sistemi_complessi203x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[310] ==> b_introduzione_sistemi_complessi204x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[311] ==> b_introduzione_sistemi_complessi205x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[312] ==> b_introduzione_sistemi_complessi206x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[314] ==> b_introduzione_sistemi_complessi207x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[315] ==> b_introduzione_sistemi_complessi208x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[317] ==> b_introduzione_sistemi_complessi209x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[319] ==> b_introduzione_sistemi_complessi210x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[321] ==> b_introduzione_sistemi_complessi211x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[323] ==> b_introduzione_sistemi_complessi212x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[324] ==> b_introduzione_sistemi_complessi213x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[326] ==> b_introduzione_sistemi_complessi214x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[327] ==> b_introduzione_sistemi_complessi215x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[328] ==> b_introduzione_sistemi_complessi216x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[329] ==> b_introduzione_sistemi_complessi217x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[330] ==> b_introduzione_sistemi_complessi218x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[331] ==> b_introduzione_sistemi_complessi219x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[333] ==> b_introduzione_sistemi_complessi220x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[335] ==> b_introduzione_sistemi_complessi221x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[337] ==> b_introduzione_sistemi_complessi222x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[339] ==> b_introduzione_sistemi_complessi223x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[340] ==> b_introduzione_sistemi_complessi224x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[342] ==> b_introduzione_sistemi_complessi225x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[343] ==> b_introduzione_sistemi_complessi226x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[344] ==> b_introduzione_sistemi_complessi227x.svg ---
+--- needs --- b_introduzione_sistemi_complessi.idv[346] ==> b_introduzione_sistemi_complessi228x.svg ---
+--- characters ---
+Font("cmr","12","12","100")
+Font("ecrm","1200","12","100")
+Font("eccc1200","","12","100")
+Font("eccc2488","","24","100")
+Font("ectc","1200","12","100")
+Font("cmr","8","8","100")
+Font("cmr","6","6","100")
+Font("cmmi","12","12","100")
+Font("cmmi","8","8","100")
+Font("cmmi","6","6","100")
+Font("cmsy","10","10","120")
+Font("cmsy","8","8","100")
+Font("cmsy","6","6","100")
+Font("cmex","10","10","120")
+Font("msbm","10","10","120")
+Font("ectt","1200","12","100")
+Font("ecti","1200","12","100")
+Font("ecbx","1200","12","100")
+Font("ecrm","0800","8","100")

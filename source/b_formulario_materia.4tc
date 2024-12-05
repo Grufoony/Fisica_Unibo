@@ -1,0 +1,16 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Insieme microcanonico}}{3}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Insieme canonico}}{3}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{Insieme gran canonico}}{4}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-40004}{QQ2-1-4}{Gas ideale}}{4}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-50005}{QQ2-1-5}{Teoria di Boltzmann}}{5}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-60006}{QQ2-1-6}{Cose quantistiche}}{5}\relax 
+\doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-70007}{QQ2-1-7}{Gas di Fermi}}{6}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-80008}{QQ2-1-8}{Gas di Bose}}{7}\relax 
+\doTocEntry\tocsection{9}{\csname a:TocLink\endcsname{1}{x1-90009}{QQ2-1-9}{Corpo nero}}{7}\relax 
+\doTocEntry\tocsection{10}{\csname a:TocLink\endcsname{1}{x1-1000010}{QQ2-1-10}{Cose termodinamiche}}{8}\relax 
+\doTocEntry\tocsection{11}{\csname a:TocLink\endcsname{1}{x1-1100011}{QQ2-1-11}{Cose matematiche}}{9}\relax 
+\doTocEntry\tocsection{12}{\csname a:TocLink\endcsname{1}{x1-1200012}{QQ2-1-12}{Modello di Bohr}}{11}\relax 
+\doTocEntry\tocsection{13}{\csname a:TocLink\endcsname{1}{x1-1300013}{QQ2-1-13}{Teoria di Schroedinger}}{11}\relax 
+\doTocEntry\tocsection{14}{\csname a:TocLink\endcsname{1}{x1-1400014}{QQ2-1-14}{Momento angolare e Spin-Orbita}}{11}\relax 
+\doTocEntry\tocsection{15}{\csname a:TocLink\endcsname{1}{x1-1500015}{QQ2-1-15}{Struttura fine}}{12}\relax 

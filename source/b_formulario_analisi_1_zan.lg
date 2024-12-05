@@ -1,0 +1,308 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+File: b_formulario_analisi_1_zan.html
+File: b_formulario_analisi_1_zan.css
+File: b_formulario_analisi_1_zan.tmp
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: h1.partHead{text-align: center}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css:  .chapterToc, .likechapterToc {margin-left:0em;}
+Css:  .likesectionToc, .sectionToc {margin-left:1em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:2em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:2em;}
+Css:  .likesubsubsectionToc, .subsubsectionToc {margin-left:3em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:4em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:5em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
+Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+Css: td.align-label { width:5%; text-align:center; }
+Css: td.align-odd { text-align:right; padding-right:0.3em;}
+Css: td.align-even { text-align:left; padding-right:0.6em;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: .rotatebox{display: inline-block;}
+Css: .caption span.id{font-weight: bold;}
+Css:  .wrapfig-r, .wrapfig-ri, .wrapfig-ir, .wrapfig-ro, .wrapfig-or {float:right; text-align:left; margin-left:auto; margin-top:0.5em;} 
+Css:  .wrapfig-l, .wrapfig-li, .wrapfig-il, .wrapfig-lo, .wrapfig-ol {float:left; text-align:left; margin-right:auto; margin-top:0.5em;} 
+Css: .wrapfig-r .caption td.content, .wrapfig-ri .caption td.content, .wrapfig-ir .caption td.content, .wrapfig-ro .caption td.content, .wrapfig-or .caption td.content, .wrapfig-l .caption td.content, .wrapfig-li .caption td.content, .wrapfig-il .caption td.content, .wrapfig-lo .caption td.content, .wrapfig-ol .caption td.content {white-space: normal; }
+Css: .wrapfig-r .caption, .wrapfig-ri .caption, .wrapfig-ir .caption, .wrapfig-ro .caption, .wrapfig-or .caption, .wrapfig-l .caption, .wrapfig-li .caption, .wrapfig-il .caption, .wrapfig-lo .caption, .wrapfig-ol .caption {width:30%; }
+--- needs --- b_formulario_analisi_1_zan.idv[2] ==> b_formulario_analisi_1_zan0x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[3] ==> b_formulario_analisi_1_zan1x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[4] ==> b_formulario_analisi_1_zan2x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[5] ==> b_formulario_analisi_1_zan3x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[6] ==> b_formulario_analisi_1_zan4x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[8] ==> b_formulario_analisi_1_zan5x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[9] ==> b_formulario_analisi_1_zan6x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[10] ==> b_formulario_analisi_1_zan7x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[12] ==> b_formulario_analisi_1_zan8x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[13] ==> b_formulario_analisi_1_zan9x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[14] ==> b_formulario_analisi_1_zan10x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[16] ==> b_formulario_analisi_1_zan11x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[17] ==> b_formulario_analisi_1_zan12x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[18] ==> b_formulario_analisi_1_zan13x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[20] ==> b_formulario_analisi_1_zan14x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[21] ==> b_formulario_analisi_1_zan15x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[22] ==> b_formulario_analisi_1_zan16x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[23] ==> b_formulario_analisi_1_zan17x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[24] ==> b_formulario_analisi_1_zan18x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[25] ==> b_formulario_analisi_1_zan19x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[27] ==> b_formulario_analisi_1_zan20x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[28] ==> b_formulario_analisi_1_zan21x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[29] ==> b_formulario_analisi_1_zan22x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[31] ==> b_formulario_analisi_1_zan23x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[32] ==> b_formulario_analisi_1_zan24x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[33] ==> b_formulario_analisi_1_zan25x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[34] ==> b_formulario_analisi_1_zan26x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[36] ==> b_formulario_analisi_1_zan27x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[37] ==> b_formulario_analisi_1_zan28x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[38] ==> b_formulario_analisi_1_zan29x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[39] ==> b_formulario_analisi_1_zan30x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[41] ==> b_formulario_analisi_1_zan31x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[42] ==> b_formulario_analisi_1_zan32x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[43] ==> b_formulario_analisi_1_zan33x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[44] ==> b_formulario_analisi_1_zan34x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[46] ==> b_formulario_analisi_1_zan35x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[47] ==> b_formulario_analisi_1_zan36x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[48] ==> b_formulario_analisi_1_zan37x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[49] ==> b_formulario_analisi_1_zan38x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[51] ==> b_formulario_analisi_1_zan39x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[52] ==> b_formulario_analisi_1_zan40x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[53] ==> b_formulario_analisi_1_zan41x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[54] ==> b_formulario_analisi_1_zan42x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[55] ==> b_formulario_analisi_1_zan43x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[57] ==> b_formulario_analisi_1_zan44x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[58] ==> b_formulario_analisi_1_zan45x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[59] ==> b_formulario_analisi_1_zan46x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[60] ==> b_formulario_analisi_1_zan47x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[62] ==> b_formulario_analisi_1_zan48x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[63] ==> b_formulario_analisi_1_zan49x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[64] ==> b_formulario_analisi_1_zan50x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[65] ==> b_formulario_analisi_1_zan51x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[67] ==> b_formulario_analisi_1_zan52x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[68] ==> b_formulario_analisi_1_zan53x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[69] ==> b_formulario_analisi_1_zan54x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[71] ==> b_formulario_analisi_1_zan55x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[72] ==> b_formulario_analisi_1_zan56x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[73] ==> b_formulario_analisi_1_zan57x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[74] ==> b_formulario_analisi_1_zan58x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[75] ==> b_formulario_analisi_1_zan59x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[77] ==> b_formulario_analisi_1_zan60x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[78] ==> b_formulario_analisi_1_zan61x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[79] ==> b_formulario_analisi_1_zan62x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[80] ==> b_formulario_analisi_1_zan63x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[82] ==> b_formulario_analisi_1_zan64x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[83] ==> b_formulario_analisi_1_zan65x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[84] ==> b_formulario_analisi_1_zan66x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[86] ==> b_formulario_analisi_1_zan67x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[87] ==> b_formulario_analisi_1_zan68x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[88] ==> b_formulario_analisi_1_zan69x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[89] ==> b_formulario_analisi_1_zan70x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[91] ==> b_formulario_analisi_1_zan71x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[92] ==> b_formulario_analisi_1_zan72x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[93] ==> b_formulario_analisi_1_zan73x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[94] ==> b_formulario_analisi_1_zan74x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[96] ==> b_formulario_analisi_1_zan75x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[97] ==> b_formulario_analisi_1_zan76x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[98] ==> b_formulario_analisi_1_zan77x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[100] ==> b_formulario_analisi_1_zan78x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[101] ==> b_formulario_analisi_1_zan79x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[102] ==> b_formulario_analisi_1_zan80x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[103] ==> b_formulario_analisi_1_zan81x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[105] ==> b_formulario_analisi_1_zan82x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[106] ==> b_formulario_analisi_1_zan83x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[107] ==> b_formulario_analisi_1_zan84x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[108] ==> b_formulario_analisi_1_zan85x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[110] ==> b_formulario_analisi_1_zan86x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[111] ==> b_formulario_analisi_1_zan87x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[112] ==> b_formulario_analisi_1_zan88x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[113] ==> b_formulario_analisi_1_zan89x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[115] ==> b_formulario_analisi_1_zan90x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[116] ==> b_formulario_analisi_1_zan91x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[117] ==> b_formulario_analisi_1_zan92x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[119] ==> b_formulario_analisi_1_zan93x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[120] ==> b_formulario_analisi_1_zan94x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[121] ==> b_formulario_analisi_1_zan95x.png ---
+--- needs --- b_formulario_analisi_1_zan.idv[122] ==> b_formulario_analisi_1_zan96x.png ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","5","5","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("ecrm","1000","10","100")
+Font("ecrm","1728","17","100")
+Font("ecrm","1200","12","100")
+Font("msbm","10","10","100")
+Font("ecti","1000","10","100")
+Font("ecbx","1000","10","100")
+Font("tcrm","1000","10","100")

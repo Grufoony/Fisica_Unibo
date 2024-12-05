@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Guida esame ROOT</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="b_formulario_laboratorio_root.tex"> 
+<link rel="stylesheet" type="text/css" href="b_formulario_laboratorio_root.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+
+<h2 class="titleHead">Guida esame ROOT</h2>
+ <div class="author" ><span 
+class="ecrm-1200">Russo Alessandro, Antonelli Tommaso, Berselli Gregorio</span>
+<br />    <a 
+href="https://github.com/Grufoony/Fisica_UNIBO" class="url" ><span 
+class="ectt-1200">https://github.com/Grufoony/Fisica_UNIBO</span></a></div><br />
+<div class="date" ><span 
+class="ecrm-1200">5</span><span 
+class="ecrm-1200">&#x00A0;dicembre 2024</span></div>
+   </div><div 
+class="abstract" 
+>
+   <h3 class="abstracttitle">
+<span 
+class="ecbx-0900">Sommario</span>
+</h3>
+     <!--l. 31--><p class="noindent" ><span 
+class="ecrm-0900">Le notazioni utilizzate in questo schema sono</span> <img 
+src="b_formulario_laboratorio_root0x.png" alt="&#x20D7;x"  class="vec" > <span 
+class="ecrm-0900">per rappresntare un generico array x, dim indica</span>
+     <span 
+class="ecrm-0900">sempre una dimensione, xCode indica un codice di root inerente a x, opt indica sempre la stringa</span>
+     <span 
+class="ecrm-0900">di caratteri che ROOT interpreta come opzioni, i indica un indice (o una quantit</span><span 
+class="ecrm-0900">á indicizzabile),</span>
+     <span 
+class="ecrm-0900">n indica sempre un intero.</span>
+</div>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Istogrammi</h3>
+   <div 
+class="colorbox" id="colorbox1">TH1F("name", "title", nBins, xmin, xmax)</div>
+<!--l. 34--><p class="indent" >   Dichiarazione di un istogramma 1D
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 36--><p class="noindent" ><span 
+class="colorbox" id="colorbox2">Fill(x)</span> o <span 
+class="colorbox" id="colorbox3">Fill(x, noccorrenze)</span> fill del bin x
+     </li>
+     <li class="itemize">
+     <!--l. 37--><p class="noindent" ><span 
+class="colorbox" id="colorbox4">Draw("opt")</span>  per  disegnare  il  grafico  (E-barre  errore,  P-solo  punti,  SAME-sul  grafico
+     precedente)
+     </li>
+     <li class="itemize">
+     <!--l. 38--><p class="noindent" ><span 
+class="colorbox" id="colorbox5">GetMean()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 39--><p class="noindent" ><span 
+class="colorbox" id="colorbox6">GetMeanError()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 40--><p class="noindent" ><span 
+class="colorbox" id="colorbox7">GetRMS()</span> radice della varianza
+                                                                                   
+                                                                                   
+     </li>
+     <li class="itemize">
+     <!--l. 41--><p class="noindent" ><span 
+class="colorbox" id="colorbox8">GetRMSError()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 42--><p class="noindent" ><span 
+class="colorbox" id="colorbox9">GetMaximum()</span> o <span 
+class="colorbox" id="colorbox10">GetMinimum()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 43--><p class="noindent" ><span 
+class="colorbox" id="colorbox11">GetEntries()</span> numero di ingressi inseriti
+     </li>
+     <li class="itemize">
+     <!--l. 44--><p class="noindent" ><span 
+class="colorbox" id="colorbox12">Integral()</span> come GetEntries ma non tiene conto dei pesi assegnati
+     </li>
+     <li class="itemize">
+     <!--l. 45--><p class="noindent" ><span 
+class="colorbox" id="colorbox13">Integral(bin1, bin2)</span> integrale tra bin1 e bin2
+     </li>
+     <li class="itemize">
+     <!--l. 46--><p class="noindent" ><span 
+class="colorbox" id="colorbox14">GetIntegral()</span> l&#8217;array dei conteggi cumulativi
+     </li>
+     <li class="itemize">
+     <!--l. 47--><p class="noindent" ><span 
+class="colorbox" id="colorbox15">Sumw2()</span> imposta la somma in quadratura degli errori</li></ul>
+<!--l. 49--><p class="noindent" >Metodi dei bin:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 51--><p class="noindent" ><span 
+class="colorbox" id="colorbox16">GetMaximumBin()</span> indice del bin contenente il valore massimo
+     </li>
+     <li class="itemize">
+     <!--l. 52--><p class="noindent" ><span 
+class="colorbox" id="colorbox17">GetBinCenter(ibin)</span> centro del bin
+     </li>
+     <li class="itemize">
+     <!--l. 53--><p class="noindent" ><span 
+class="colorbox" id="colorbox18">GetBinContent(ibin)</span> numero di elementi contenuti nel bin
+     </li>
+     <li class="itemize">
+     <!--l. 54--><p class="noindent" ><span 
+class="colorbox" id="colorbox19">GetBinContent(0)</span> numero di UNDERFLOW
+     </li>
+     <li class="itemize">
+     <!--l. 55--><p class="noindent" ><span 
+class="colorbox" id="colorbox20">GetBinContent(nbin+1)</span> numero di OVERFLOW
+     </li>
+     <li class="itemize">
+     <!--l. 56--><p class="noindent" ><span 
+class="colorbox" id="colorbox21">GetBinError(ibin)</span>
+                                                                                   
+                                                                                   
+     </li>
+     <li class="itemize">
+     <!--l. 57--><p class="noindent" ><span 
+class="colorbox" id="colorbox22">SetBinContent(ibin, val)</span> in y prende il valore val</li></ul>
+<!--l. 59--><p class="noindent" >Estetica:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 61--><p class="noindent" ><span 
+class="colorbox" id="colorbox23">SetMarkerStyle(markerCode)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 62--><p class="noindent" ><span 
+class="colorbox" id="colorbox24">SetMarkerSize(dim)</span> setta la dimensione del marker a dim
+     </li>
+     <li class="itemize">
+     <!--l. 63--><p class="noindent" ><span 
+class="colorbox" id="colorbox25">SetFillColor(colorCode)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 64--><p class="noindent" ><span 
+class="colorbox" id="colorbox26">SetLineColor(colorCode)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 65--><p class="noindent" ><span 
+class="colorbox" id="colorbox27">GetXaxis()-&#x003E;SetTitle("name")</span> setta il titolo dell&#8217;asse x (analogo per y)
+     </li>
+     <li class="itemize">
+     <!--l. 66--><p class="noindent" ><span 
+class="colorbox" id="colorbox28">GetYaxis()-&#x003E;SetTitleOffset(dim)</span> offset del titolo
+     </li>
+     <li class="itemize">
+     <!--l. 67--><p class="noindent" ><span 
+class="colorbox" id="colorbox29">GetYaxis()-&#x003E;SetTitleSize(dim)</span> dimensione carattere titolo
+     </li>
+     <li class="itemize">
+     <!--l. 68--><p class="noindent" ><span 
+class="colorbox" id="colorbox30">SetLineWidth(dim)</span> spessore linea</li></ul>
+<!--l. 70--><p class="noindent" >Operazioni (sia h1 un istogramma):
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 72--><p class="noindent" ><span 
+class="colorbox" id="colorbox31">n*h1</span> prodotto per lo scalare n
+     </li>
+     <li class="itemize">
+     <!--l. 73--><p class="noindent" ><span 
+class="colorbox" id="colorbox32">Divide(const *h1, const *h2, c1, c2, "opt")</span> esegue la divisione (c1*h1)/(c2*h2). Di solito si
+     richiede l&#8217;opzione "B"
+     </li>
+     <li class="itemize">
+     <!--l. 74--><p class="noindent" ><span 
+class="colorbox" id="colorbox33">Add(const *h1, const *h2, c1, c2, "opt")</span> esegue la somma c1*h1+c2*h2</li></ul>
+                                                                                   
+                                                                                   
+<!--l. 76--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Grafici</h3>
+   <div 
+class="colorbox" id="colorbox34">TGraph(npoints, <img 
+src="b_formulario_laboratorio_root1x.png" alt="&#x20D7;x"  class="vec" >, <img 
+src="b_formulario_laboratorio_root2x.png" alt="&#x20D7;y"  class="vec" >)</div>
+   <div 
+class="colorbox" id="colorbox35">TGraph(filename, *format="%lg %lg", "opt")</div>
+<!--l. 78--><p class="indent" >   da file <span 
+class="colorbox" id="colorbox36">TGraphErrors(n, x, y, ex, ey)</span> grafico con barre errore <span 
+class="colorbox" id="colorbox37">TGraphErrors(filename, format="%lg %lg
+%lg %lg", "opt")</span>
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 82--><p class="noindent" ><span 
+class="colorbox" id="colorbox38">Draw("opt")</span> metodo per disegnare (A-disegna gli assi, P-disegna il marker dei punti, E-disegna
+     barre errore)
+     </li>
+     <li class="itemize">
+     <!--l. 83--><p class="noindent" ><span 
+class="colorbox" id="colorbox39">SetPoint(i, x, y)</span> inserisce il punto (x,y) nella posizione i
+     </li>
+     <li class="itemize">
+     <!--l. 84--><p class="noindent" ><span 
+class="colorbox" id="colorbox40">GetPoint(i, x, y)</span> assegna alle variabili (x,y) i valori del punto i
+     </li>
+     <li class="itemize">
+     <!--l. 85--><p class="noindent" ><span 
+class="colorbox" id="colorbox41">GetX()</span> returna <img 
+src="b_formulario_laboratorio_root3x.png" alt="&#x20D7;x"  class="vec" > (analogo per y)
+     </li>
+     <li class="itemize">
+     <!--l. 86--><p class="noindent" ><span 
+class="colorbox" id="colorbox42">GetN()</span> returna il numero dei punti
+     </li>
+     <li class="itemize">
+     <!--l. 87--><p class="noindent" ><span 
+class="colorbox" id="colorbox43">Integral()</span> returna l&#8217;area sotto il grafico
+     </li>
+     <li class="itemize">
+     <!--l. 88--><p class="noindent" ><span 
+class="colorbox" id="colorbox44">GetCorrelationFactor()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 89--><p class="noindent" ><span 
+class="colorbox" id="colorbox45">GetCovariance()</span></li></ul>
+<!--l. 91--><p class="noindent" >Estetica:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 93--><p class="noindent" ><span 
+class="colorbox" id="colorbox46">SetTitle("title", "titleXaxis", "titleYaxis")</span>
+     </li>
+     <li class="itemize">
+     <!--l. 94--><p class="noindent" ><span 
+class="colorbox" id="colorbox47">SetMarkerStyle(markerCode)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 95--><p class="noindent" ><span 
+class="colorbox" id="colorbox48">SetMarkerColor(colorCode)</span>
+                                                                                   
+                                                                                   
+     </li>
+     <li class="itemize">
+     <!--l. 96--><p class="noindent" ><span 
+class="colorbox" id="colorbox49">SetLineColor(colorCode)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 97--><p class="noindent" ><span 
+class="colorbox" id="colorbox50">SetFillColor(colorCode)</span></li></ul>
+<!--l. 99--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Funzioni</h3>
+   <div 
+class="colorbox" id="colorbox51">TF1("name", "function", xmin, xmax)</div>
+<!--l. 100--><p class="indent" >   nella funzione i parametri vanno indicati con [i]<br 
+class="newline" />NB: per funzioni definite a tratti, siano f(x) e g(x) funzioni generiche
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-1">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;"function"&#x00A0;=&#x00A0;"f(x)*(x&#x003E;=a&#x00A0;&amp;&amp;&#x00A0;x&#x003C;b)&#x00A0;+&#x00A0;g(x)*(x&#x003E;=b&#x00A0;&amp;&amp;&#x00A0;x&#x003C;c)&#x00A0;+&#x00A0;..."
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 104--><p class="nopar" >
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 106--><p class="noindent" ><span 
+class="colorbox" id="colorbox52">Draw()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 107--><p class="noindent" ><span 
+class="colorbox" id="colorbox53">SetParameter(i, value)</span> setta il valore value al parametro iesimo
+     </li>
+     <li class="itemize">
+     <!--l. 108--><p class="noindent" ><span 
+class="colorbox" id="colorbox54">SetParameters(value1, value2, ..., valuen)</span> setta il valore value i al parametro i
+     </li>
+     <li class="itemize">
+     <!--l. 109--><p class="noindent" ><span 
+class="colorbox" id="colorbox55">SetParLimits(i, xmin, xmax)</span> definisce il range del parametro i
+     </li>
+     <li class="itemize">
+     <!--l. 110--><p class="noindent" ><span 
+class="colorbox" id="colorbox56">Eval(x)</span> returna f(x)
+     </li>
+     <li class="itemize">
+     <!--l. 111--><p class="noindent" ><span 
+class="colorbox" id="colorbox57">Integral(a, b)</span> integrale della funzione nel range [a,b]
+     </li>
+     <li class="itemize">
+     <!--l. 112--><p class="noindent" ><span 
+class="colorbox" id="colorbox58">DrawDerivative()</span> grafica la derivata prima
+     </li>
+     <li class="itemize">
+     <!--l. 113--><p class="noindent" ><span 
+class="colorbox" id="colorbox59">DrawIntegral()</span> grafica l&#8217;integrale
+     </li>
+     <li class="itemize">
+     <!--l. 114--><p class="noindent" ><span 
+class="colorbox" id="colorbox60">Derivative(x)</span> o <span 
+class="colorbox" id="colorbox61">Derivative2(x)</span> o <span 
+class="colorbox" id="colorbox62">Derivative3(x)</span> calcola derivate</li></ul>
+<!--l. 116--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-40004"></a>Fitting</h3>
+<!--l. 117--><p class="noindent" >Metodo <span 
+class="colorbox" id="colorbox63">Fit("name", "opt")</span> valido per piú classi. Funzioni predefinite "gaus" "expo" "poln"
+OptFit:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 120--><p class="noindent" >"R": usa il range della funzione (di default usa il range dell&#8217;istogramma)
+                                                                                   
+                                                                                   
+     </li>
+     <li class="itemize">
+     <!--l. 121--><p class="noindent" >"L": usa il metodo della massima verosimiglianza (default con chi-quadro)
+     </li>
+     <li class="itemize">
+     <!--l. 122--><p class="noindent" >"Q": stampa il minimo necessario dei risultati del fit
+     </li>
+     <li class="itemize">
+     <!--l. 123--><p class="noindent" >"V": stampa tutto quello che riesce dei risultati del fit
+     </li>
+     <li class="itemize">
+     <!--l. 124--><p class="noindent" >"S": ritorna risultati utili del fit</li></ul>
+<!--l. 126--><p class="noindent" >Metodi:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 128--><p class="noindent" ><span 
+class="colorbox" id="colorbox64">gStyle-&#x003E;SetOptFit(optCode)</span> visualizza le info del fit
+     </li>
+     <li class="itemize">
+     <!--l. 129--><p class="noindent" ><span 
+class="colorbox" id="colorbox65">GetFunction(&#8220;f&#8221;)</span> restituisce la funzione utilizzata nel fit (va utilizzata su un oggetto fittato)
+     </li>
+     <li class="itemize">
+     <!--l. 130--><p class="noindent" ><span 
+class="colorbox" id="colorbox66">GetChisquare()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 131--><p class="noindent" ><span 
+class="colorbox" id="colorbox67">GetNDF()</span>
+     </li>
+     <li class="itemize">
+     <!--l. 132--><p class="noindent" ><span 
+class="colorbox" id="colorbox68">GetParameter(i)</span> valore del parametro i-esimo
+     </li>
+     <li class="itemize">
+     <!--l. 133--><p class="noindent" ><span 
+class="colorbox" id="colorbox69">GetParError(i)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 134--><p class="noindent" ><span 
+class="colorbox" id="colorbox70">GetParameters(<img 
+src="b_formulario_laboratorio_root4x.png" alt="p&#x20D7;ar"  class="vec" >)</span> mette in <img 
+src="b_formulario_laboratorio_root5x.png" alt="p&#x20D7;ar"  class="vec" > i parametri
+     </li>
+     <li class="itemize">
+     <!--l. 135--><p class="noindent" ><span 
+class="colorbox" id="colorbox71">GetParErrors(<img 
+src="b_formulario_laboratorio_root6x.png" alt="e&#x20D7;par"  class="vec" >)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 136--><p class="noindent" ><span 
+class="colorbox" id="colorbox72">GetCorrelationMatrix()</span> stampabile tramite Print()
+     </li>
+     <li class="itemize">
+     <!--l. 137--><p class="noindent" ><span 
+class="colorbox" id="colorbox73">GetCovarianceMatrix()</span> stampabile tramite Print()</li></ul>
+                                                                                   
+                                                                                   
+<!--l. 139--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-50005"></a>Random</h3>
+   <div 
+class="colorbox" id="colorbox74">gRandom-&#x003E;SetSeed()</div>
+<!--l. 140--><p class="indent" >   per inizializzare la generazione Distribuzioni predefinite:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 143--><p class="noindent" ><span 
+class="colorbox" id="colorbox75">Uniform(a, b)</span> uniforme in [a, b]
+     </li>
+     <li class="itemize">
+     <!--l. 144--><p class="noindent" ><span 
+class="colorbox" id="colorbox76">Rndm()</span> uniforme in [0, 1]
+     </li>
+     <li class="itemize">
+     <!--l. 145--><p class="noindent" ><span 
+class="colorbox" id="colorbox77">Gaus(<span 
+class="cmmi-10">&#x03BC;</span>, <span 
+class="cmmi-10">&#x03C3;</span>)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 146--><p class="noindent" ><span 
+class="colorbox" id="colorbox78">Poisson(<span 
+class="cmmi-10">&#x03BC;</span>)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 147--><p class="noindent" ><span 
+class="colorbox" id="colorbox79">Binomial(ntot, prob)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 148--><p class="noindent" ><span 
+class="colorbox" id="colorbox80">Exp(<span 
+class="cmmi-10">&#x03C4;</span>)</span> esponenziale decrescente
+     </li>
+     <li class="itemize">
+     <!--l. 149--><p class="noindent" ><span 
+class="colorbox" id="colorbox81">Integer(i)</span> uniforme intera in [0, i-1]
+     </li>
+     <li class="itemize">
+     <!--l. 150--><p class="noindent" ><span 
+class="colorbox" id="colorbox82">Landau(moda, <span 
+class="cmmi-10">&#x03C3;</span>)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 151--><p class="noindent" ><span 
+class="colorbox" id="colorbox83">f1-&#x003E;GetRandom()</span> genera un valore casuale dalla funzione f1
+     </li>
+     <li class="itemize">
+     <!--l. 152--><p class="noindent" ><span 
+class="colorbox" id="colorbox84">FillRandom("name", n)</span> filla l&#8217;oggetto con n elementi della funzione "name"</li></ul>
+<!--l. 154--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-60006"></a>Canvas</h3>
+   <div 
+class="colorbox" id="colorbox85">TCanvas("name", "title", "width", "height")</div>
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 157--><p class="noindent" ><span 
+class="colorbox" id="colorbox86">Divide(i, j)</span> divide la canvas in i*j pad
+                                                                                   
+                                                                                   
+     </li>
+     <li class="itemize">
+     <!--l. 158--><p class="noindent" ><span 
+class="colorbox" id="colorbox87">cd(i)</span> seleziona la pad i
+     </li>
+     <li class="itemize">
+     <!--l. 159--><p class="noindent" ><span 
+class="colorbox" id="colorbox88">Print("name.extension")</span> stampa la canvas su file</li></ul>
+<!--l. 161--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">6.1   </span> <a 
+ id="x1-70006.1"></a>Legenda</h4>
+   <div 
+class="colorbox" id="colorbox89">TLegend(x1, y1, x2, y2, "name")</div>
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 164--><p class="noindent" ><span 
+class="colorbox" id="colorbox90">SetFillColor(n)</span>
+     </li>
+     <li class="itemize">
+     <!--l. 165--><p class="noindent" ><span 
+class="colorbox" id="colorbox91">AddEntry(obj, "description")</span> associa a obj una linea con descrizione
+     </li>
+     <li class="itemize">
+     <!--l. 166--><p class="noindent" ><span 
+class="colorbox" id="colorbox92">Draw("SAME")</span> disegna la legenda sullo stesso grafico</li></ul>
+<!--l. 168--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">7   </span> <a 
+ id="x1-80007"></a>List</h3>
+   <div 
+class="colorbox" id="colorbox93">TList()</div>
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 171--><p class="noindent" ><span 
+class="colorbox" id="colorbox94">Add(obj)</span> con obj qualunque oggetto di root (TH1F, TF1, ...)
+     </li>
+     <li class="itemize">
+     <!--l. 172--><p class="noindent" ><span 
+class="colorbox" id="colorbox95">At(i)</span> returna l&#8217;elemento i-esimo della lista. NB: returna sempre un TObject, al momento
+     dell&#8217;utilizzo specificarne il tipo con un static_cast&#x003C;type&#x003E;
+     </li>
+     <li class="itemize">
+     <!--l. 173--><p class="noindent" ><span 
+class="colorbox" id="colorbox96">Print()</span> stampa a schermo la lista
+     </li>
+     <li class="itemize">
+     <!--l. 174--><p class="noindent" ><span 
+class="colorbox" id="colorbox97">At(i)-&#x003E;InheritsFrom("type")</span> restituisce 1 se l&#8217;elemento i-esimo é di tipo type, 0 altrimenti</li></ul>
+                                                                                   
+                                                                                   
+<!--l. 176--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">8   </span> <a 
+ id="x1-90008"></a>ROOT Files</h3>
+   <div 
+class="colorbox" id="colorbox98">TFile("name", "opt")</div>
+<!--l. 178--><p class="indent" >   Options:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 180--><p class="noindent" ><span 
+class="colorbox" id="colorbox99">NEW</span> o <span 
+class="colorbox" id="colorbox100">CREATE</span> crea un nuovo file aperto in lettura, se giá esiste non si apre
+     </li>
+     <li class="itemize">
+     <!--l. 181--><p class="noindent" ><span 
+class="colorbox" id="colorbox101">RECREATE</span> come CREATE ma se il file esiste lo sovrascrive
+     </li>
+     <li class="itemize">
+     <!--l. 182--><p class="noindent" ><span 
+class="colorbox" id="colorbox102">UPDATE</span> apre un file esistente in scrittura, se non esiste lo crea
+     </li>
+     <li class="itemize">
+     <!--l. 183--><p class="noindent" ><span 
+class="colorbox" id="colorbox103">READ</span> apre un file esistente in lettura (default)</li></ul>
+<!--l. 185--><p class="noindent" >Metodi:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 187--><p class="noindent" ><span 
+class="colorbox" id="colorbox104">TObject-&#x003E;Write()</span> scrive sul file il TObject
+     </li>
+     <li class="itemize">
+     <!--l. 188--><p class="noindent" ><span 
+class="colorbox" id="colorbox105">Get("name")</span> returna l&#8217;oggetto salvato di nome "name"
+     </li>
+     <li class="itemize">
+     <!--l. 189--><p class="noindent" ><span 
+class="colorbox" id="colorbox106">Close()</span> chiude il file. Fondamentale inserirlo per evitare problemi</li></ul>
+<!--l. 191--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">9   </span> <a 
+ id="x1-100009"></a>Benchmark</h3>
+<!--l. 192--><p class="noindent" >Metodi:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 194--><p class="noindent" ><span 
+class="colorbox" id="colorbox107">gBenchmark-&#x003E;Start("name")</span> inizia un processo "name"
+     </li>
+     <li class="itemize">
+     <!--l. 195--><p class="noindent" ><span 
+class="colorbox" id="colorbox108">gBenchmark-&#x003E;Print("name")</span> stampa le tempistiche in quel momento
+     </li>
+     <li class="itemize">
+     <!--l. 196--><p class="noindent" ><span 
+class="colorbox" id="colorbox109">gBenchmark-&#x003E;Show("name")</span> interrompe il processo e ne stampa le tempistiche
+     </li>
+     <li class="itemize">
+     <!--l. 197--><p class="noindent" ><span 
+class="colorbox" id="colorbox110">gBenchmark-&#x003E;Stop("name")</span> interrompe il processo "name"</li></ul>
+                                                                                   
+                                                                                   
+<!--l. 199--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">10   </span> <a 
+ id="x1-1100010"></a>Esempi</h3>
+<!--l. 200--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">10.1   </span> <a 
+ id="x1-1200010.1"></a>Lettura da file</h4>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-2">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;ifstream&#x00A0;in;
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;in.open("maxwell.dat");&#x00A0;//nome&#x00A0;del&#x00A0;file
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;Float_t&#x00A0;x,y;
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;while&#x00A0;(1)&#x00A0;{
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;in&#x00A0;&#x003E;&#x003E;&#x00A0;x&#x00A0;&#x003E;&#x003E;&#x00A0;y;
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;if&#x00A0;(!in.good())&#x00A0;break;
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;h1-&#x003E;Fill(y);
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;in.close();
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 211--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">10.2   </span> <a 
+ id="x1-1300010.2"></a>Scrivere una classe su un ROOT File</h4>
+<!--l. 213--><p class="noindent" >In "MyClass.h"<br 
+class="newline" />Mettere inheritance: public TObject<br 
+class="newline" />Chiamare macro in fondo (prima della chiusura delle parentesi: ClassDef(MyClass, 1))<br 
+class="newline" />
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-3">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;class&#x00A0;MyClass:&#x00A0;public&#x00A0;TObject&#x00A0;{
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;...
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;ClassDef(MyClass,&#x00A0;1)&#x00A0;//rende&#x00A0;la&#x00A0;classe&#x00A0;scrivibile&#x00A0;sul&#x00A0;file&#x00A0;ROOT
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;};
+
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;In&#x00A0;"MyClass.cxx"
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;Chiamare&#x00A0;macro&#x00A0;in&#x00A0;fondo:&#x00A0;ClassImp(MyClass)
+
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;Se&#x00A0;hai&#x00A0;fatto&#x00A0;questo&#x00A0;poi&#x00A0;per&#x00A0;scriverla&#x00A0;sul&#x00A0;file:&#x00A0;//con&#x00A0;A&#x00A0;oggetto&#x00A0;di&#x00A0;MyClass
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;1)&#x00A0;TFile&#x00A0;*file&#x00A0;=&#x00A0;new&#x00A0;TFile("test.root","recreate");
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;2)&#x00A0;A.Write("A");
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;3)&#x00A0;file-&#x003E;Close();
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 230--><p class="nopar" > NB: per usare una classe esterna da ROOT:<br 
+class="newline" />
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-4">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;gROOT-&#x003E;LoadMacro("MyClass.cxx++");&#x00A0;//compiling&#x00A0;MyClass
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 234--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">10.3   </span> <a 
+ id="x1-1400010.3"></a>Risoluzione o Smearing</h4>
+<!--l. 236--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.3.1   </span> <a 
+ id="x1-1500010.3.1"></a>A valore fisso</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-5">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;for(Int_t&#x00A0;i=0;i&#x003C;nGen;i++){
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;h[0]-&#x003E;Fill(gRandom-&#x003E;Gaus(fixedValue,&#x00A0;res));
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 241--><p class="nopar" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.3.2   </span> <a 
+ id="x1-1600010.3.2"></a>Con una distribuzione</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-6">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;for(Int_t&#x00A0;i=0;i&#x003C;nGen;i++){
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;h[1]-&#x003E;Fill(gRandom-&#x003E;Gaus(distribution,&#x00A0;res));
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 247--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">10.4   </span> <a 
+ id="x1-1700010.4"></a>Efficienza</h4>
+<!--l. 249--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.4.1   </span> <a 
+ id="x1-1800010.4.1"></a>Costante</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-7">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;(efficenza&#x00A0;del&#x00A0;70%)
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;x=gRandom-&#x003E;Gaus(mean,&#x00A0;sigma);
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;y=gRandom-&#x003E;Rndm();
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;if(y&#x003C;0.7){h1-&#x003E;Fill(x)}
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 255--><p class="nopar" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.4.2   </span> <a 
+ id="x1-1900010.4.2"></a>Variabile</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-8">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;TF1&#x00A0;*eff&#x00A0;=&#x00A0;new&#x00A0;TF1(&#8220;eff&#8221;,&#x00A0;"function",&#x00A0;min,&#x00A0;max);
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;x=gRandom-&#x003E;Gaus(mean,&#x00A0;sigma);
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;y=gRandom-&#x003E;Rndm();
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;if(y&#x00A0;&#x003C;&#x00A0;eff-&#x003E;Eval(x))&#x00A0;{
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;h1-&#x003E;Fill(x)
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 264--><p class="nopar" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.4.3   </span> <a 
+ id="x1-2000010.4.3"></a>Istogramma dell&#8217;efficienza</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-9">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;TH1F&#x00A0;*hEff=new&#x00A0;Th1F(*hTot);&#x00A0;//hTot&#x00A0;istogramma&#x00A0;con&#x00A0;tutte&#x00A0;le&#x00A0;x(non&#x00A0;solo&#x00A0;quelle&#x00A0;scartate)
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;hEff-&#x003E;Divide(h1,&#x00A0;hTot,&#x00A0;1,&#x00A0;1,&#x00A0;&#8220;B&#8221;);&#x00A0;//h1&#x00A0;istogramma&#x00A0;con&#x00A0;solo&#x00A0;le&#x00A0;x&#x00A0;accettate
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 269--><p class="nopar" >
+   <h4 class="subsectionHead"><span class="titlemark">10.5   </span> <a 
+ id="x1-2100010.5"></a>Compilazione</h4>
+<!--l. 271--><p class="noindent" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.5.1   </span> <a 
+ id="x1-2200010.5.1"></a>da ROOT</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-10">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;.L&#x00A0;macro.cpp&#x00A0;oppure&#x00A0;root&#x00A0;[0]&#x00A0;gROOT-&#x003E;LoadMacro(&#8220;macro.cpp&#8221;)
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;macro()&#x00A0;[per&#x00A0;eseguire]
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 275--><p class="nopar" >
+   <h5 class="subsubsectionHead"><span class="titlemark">10.5.2   </span> <a 
+ id="x1-2300010.5.2"></a>da SHELL</h5>
+                                                                                   
+                                                                                   
+   <pre class="verbatim" id="verbatim-11">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;g++&#x00A0;-o&#x00A0;ExampleMacro&#x00A0;.exe&#x00A0;macro.cpp&#x00A0;&#8216;root-config&#x00A0;--cflags&#x00A0;--libs&#8216;
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;./macro.exe&#x00A0;[per&#x00A0;eseguire]&#x00A0;&#x00A0;//IMPORTANTE:&#x00A0;la&#x00A0;macro&#x00A0;deve&#x00A0;contenere&#x00A0;un&#x00A0;main()
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+</pre>
+<!--l. 280--><p class="nopar" >
+    
+</body></html> 
+
+                                                                                   
+
+

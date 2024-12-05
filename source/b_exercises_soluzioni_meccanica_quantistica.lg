@@ -1,0 +1,296 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+File: b_exercises_soluzioni_meccanica_quantistica.html
+File: b_exercises_soluzioni_meccanica_quantistica.css
+File: b_exercises_soluzioni_meccanica_quantistica.tmp
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css: .subsectionToc, .likesubsectionToc {margin-left:1em;}
+Css: .subsubsectionToc, .likesubsubsectionToc {margin-left:2em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:3em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:4em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
+Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+Css: td.align-label { width:5%; text-align:center; }
+Css: td.align-odd { text-align:right; padding-right:0.3em;}
+Css: td.align-even { text-align:left; padding-right:0.6em;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: .rotatebox{display: inline-block;}
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[2] ==> b_exercises_soluzioni_meccanica_quantistica0x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[4] ==> b_exercises_soluzioni_meccanica_quantistica1x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[6] ==> b_exercises_soluzioni_meccanica_quantistica2x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[7] ==> b_exercises_soluzioni_meccanica_quantistica3x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[8] ==> b_exercises_soluzioni_meccanica_quantistica4x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[10] ==> b_exercises_soluzioni_meccanica_quantistica5x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[11] ==> b_exercises_soluzioni_meccanica_quantistica6x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[12] ==> b_exercises_soluzioni_meccanica_quantistica7x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[13] ==> b_exercises_soluzioni_meccanica_quantistica8x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[15] ==> b_exercises_soluzioni_meccanica_quantistica9x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[16] ==> b_exercises_soluzioni_meccanica_quantistica10x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[17] ==> b_exercises_soluzioni_meccanica_quantistica11x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[18] ==> b_exercises_soluzioni_meccanica_quantistica12x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[19] ==> b_exercises_soluzioni_meccanica_quantistica13x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[21] ==> b_exercises_soluzioni_meccanica_quantistica14x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[22] ==> b_exercises_soluzioni_meccanica_quantistica15x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[24] ==> b_exercises_soluzioni_meccanica_quantistica16x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[26] ==> b_exercises_soluzioni_meccanica_quantistica17x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[28] ==> b_exercises_soluzioni_meccanica_quantistica18x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[29] ==> b_exercises_soluzioni_meccanica_quantistica19x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[30] ==> b_exercises_soluzioni_meccanica_quantistica20x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[31] ==> b_exercises_soluzioni_meccanica_quantistica21x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[33] ==> b_exercises_soluzioni_meccanica_quantistica22x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[34] ==> b_exercises_soluzioni_meccanica_quantistica23x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[35] ==> b_exercises_soluzioni_meccanica_quantistica24x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[36] ==> b_exercises_soluzioni_meccanica_quantistica25x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[37] ==> b_exercises_soluzioni_meccanica_quantistica26x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[38] ==> b_exercises_soluzioni_meccanica_quantistica27x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[40] ==> b_exercises_soluzioni_meccanica_quantistica28x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[41] ==> b_exercises_soluzioni_meccanica_quantistica29x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[43] ==> b_exercises_soluzioni_meccanica_quantistica30x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[45] ==> b_exercises_soluzioni_meccanica_quantistica31x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[46] ==> b_exercises_soluzioni_meccanica_quantistica32x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[47] ==> b_exercises_soluzioni_meccanica_quantistica33x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[48] ==> b_exercises_soluzioni_meccanica_quantistica34x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[50] ==> b_exercises_soluzioni_meccanica_quantistica35x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[51] ==> b_exercises_soluzioni_meccanica_quantistica36x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[52] ==> b_exercises_soluzioni_meccanica_quantistica37x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[53] ==> b_exercises_soluzioni_meccanica_quantistica38x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[54] ==> b_exercises_soluzioni_meccanica_quantistica39x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[55] ==> b_exercises_soluzioni_meccanica_quantistica40x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[56] ==> b_exercises_soluzioni_meccanica_quantistica41x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[58] ==> b_exercises_soluzioni_meccanica_quantistica42x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[59] ==> b_exercises_soluzioni_meccanica_quantistica43x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[60] ==> b_exercises_soluzioni_meccanica_quantistica44x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[61] ==> b_exercises_soluzioni_meccanica_quantistica45x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[63] ==> b_exercises_soluzioni_meccanica_quantistica46x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[65] ==> b_exercises_soluzioni_meccanica_quantistica47x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[66] ==> b_exercises_soluzioni_meccanica_quantistica48x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[67] ==> b_exercises_soluzioni_meccanica_quantistica49x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[69] ==> b_exercises_soluzioni_meccanica_quantistica50x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[70] ==> b_exercises_soluzioni_meccanica_quantistica51x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[71] ==> b_exercises_soluzioni_meccanica_quantistica52x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[72] ==> b_exercises_soluzioni_meccanica_quantistica53x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[73] ==> b_exercises_soluzioni_meccanica_quantistica54x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[75] ==> b_exercises_soluzioni_meccanica_quantistica55x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[76] ==> b_exercises_soluzioni_meccanica_quantistica56x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[77] ==> b_exercises_soluzioni_meccanica_quantistica57x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[78] ==> b_exercises_soluzioni_meccanica_quantistica58x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[79] ==> b_exercises_soluzioni_meccanica_quantistica59x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[81] ==> b_exercises_soluzioni_meccanica_quantistica60x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[83] ==> b_exercises_soluzioni_meccanica_quantistica61x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[84] ==> b_exercises_soluzioni_meccanica_quantistica62x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[85] ==> b_exercises_soluzioni_meccanica_quantistica63x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[87] ==> b_exercises_soluzioni_meccanica_quantistica64x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[88] ==> b_exercises_soluzioni_meccanica_quantistica65x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[89] ==> b_exercises_soluzioni_meccanica_quantistica66x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[91] ==> b_exercises_soluzioni_meccanica_quantistica67x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[93] ==> b_exercises_soluzioni_meccanica_quantistica68x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[94] ==> b_exercises_soluzioni_meccanica_quantistica69x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[95] ==> b_exercises_soluzioni_meccanica_quantistica70x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[96] ==> b_exercises_soluzioni_meccanica_quantistica71x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[97] ==> b_exercises_soluzioni_meccanica_quantistica72x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[99] ==> b_exercises_soluzioni_meccanica_quantistica73x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[100] ==> b_exercises_soluzioni_meccanica_quantistica74x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[101] ==> b_exercises_soluzioni_meccanica_quantistica75x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[102] ==> b_exercises_soluzioni_meccanica_quantistica76x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[104] ==> b_exercises_soluzioni_meccanica_quantistica77x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[105] ==> b_exercises_soluzioni_meccanica_quantistica78x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[106] ==> b_exercises_soluzioni_meccanica_quantistica79x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[108] ==> b_exercises_soluzioni_meccanica_quantistica80x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[110] ==> b_exercises_soluzioni_meccanica_quantistica81x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[112] ==> b_exercises_soluzioni_meccanica_quantistica82x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[113] ==> b_exercises_soluzioni_meccanica_quantistica83x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[114] ==> b_exercises_soluzioni_meccanica_quantistica84x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[115] ==> b_exercises_soluzioni_meccanica_quantistica85x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[117] ==> b_exercises_soluzioni_meccanica_quantistica86x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[118] ==> b_exercises_soluzioni_meccanica_quantistica87x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[119] ==> b_exercises_soluzioni_meccanica_quantistica88x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[120] ==> b_exercises_soluzioni_meccanica_quantistica89x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[121] ==> b_exercises_soluzioni_meccanica_quantistica90x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[122] ==> b_exercises_soluzioni_meccanica_quantistica91x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[124] ==> b_exercises_soluzioni_meccanica_quantistica92x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[125] ==> b_exercises_soluzioni_meccanica_quantistica93x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[126] ==> b_exercises_soluzioni_meccanica_quantistica94x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[128] ==> b_exercises_soluzioni_meccanica_quantistica95x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[129] ==> b_exercises_soluzioni_meccanica_quantistica96x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[130] ==> b_exercises_soluzioni_meccanica_quantistica97x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[131] ==> b_exercises_soluzioni_meccanica_quantistica98x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[132] ==> b_exercises_soluzioni_meccanica_quantistica99x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[134] ==> b_exercises_soluzioni_meccanica_quantistica100x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[135] ==> b_exercises_soluzioni_meccanica_quantistica101x.svg ---
+--- needs --- b_exercises_soluzioni_meccanica_quantistica.idv[136] ==> b_exercises_soluzioni_meccanica_quantistica102x.svg ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","5","5","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","5","5","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("ecrm","1000","10","100")
+Font("ecrm","1728","17","100")
+Font("ecrm","1200","12","100")
+Font("ectt","1200","12","100")
+Font("msbm","10","10","100")
+Font("msbm","7","7","100")

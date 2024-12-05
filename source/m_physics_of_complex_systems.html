@@ -1,0 +1,3293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Physics of Complex Systems</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="m_physics_of_complex_systems.tex"> 
+<link rel="stylesheet" type="text/css" href="m_physics_of_complex_systems.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+
+<h2 class="titleHead">Physics of Complex Systems</h2>
+ <div class="author" ><a 
+href="https://github.com/Grufoony/Physics_Unibo" class="url" ><span 
+class="cmtt-12x-x-120">https://github.com/Grufoony/Physics_Unibo</span></a></div><br />
+<div class="date" ></div>
+                                                                                    
+                                                                                    
+   </div>
+                                                                                    
+                                                                                    
+   <h2 class="likechapterHead"><a 
+ id="x1-1000"></a>Contents</h2>
+   <div class="tableofcontents">
+   <span class="chapterToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction to Complex Systems</a></span>
+<br />   <span class="sectionToc" >1.1 <a 
+href="#x1-30001.1" id="QQ2-1-3">Emergence</a></span>
+<br />   <span class="sectionToc" >1.2 <a 
+href="#x1-40001.2" id="QQ2-1-4">Network&#8217;s energy</a></span>
+<br />   <span class="sectionToc" >1.3 <a 
+href="#x1-50001.3" id="QQ2-1-5">Broken Stick Model</a></span>
+<br />   <span class="sectionToc" >1.4 <a 
+href="#x1-60001.4" id="QQ2-1-6">Rankings</a></span>
+<br />   <span class="sectionToc" >1.5 <a 
+href="#x1-70001.5" id="QQ2-1-7">Laplace problem</a></span>
+<br />   <span class="chapterToc" >2 <a 
+href="#x1-80002" id="QQ2-1-8">Basic models</a></span>
+<br />   <span class="sectionToc" >2.1 <a 
+href="#x1-90002.1" id="QQ2-1-9">Linear models</a></span>
+<br />   <span class="sectionToc" >2.2 <a 
+href="#x1-100002.2" id="QQ2-1-10">The neuron model</a></span>
+<br />   <span class="subsectionToc" >2.2.1 <a 
+href="#x1-110002.2.1" id="QQ2-1-11">Hopf Bifurcation</a></span>
+<br />   <span class="chapterToc" >3 <a 
+href="#x1-120003" id="QQ2-1-12">Dynamical Systems</a></span>
+<br />   <span class="sectionToc" >3.1 <a 
+href="#x1-130003.1" id="QQ2-1-13">Malthus model</a></span>
+<br />   <span class="sectionToc" >3.2 <a 
+href="#x1-140003.2" id="QQ2-1-14">Velhurst model</a></span>
+<br />   <span class="sectionToc" >3.3 <a 
+href="#x1-150003.3" id="QQ2-1-15">Expanding map</a></span>
+<br />   <span class="sectionToc" >3.4 <a 
+href="#x1-160003.4" id="QQ2-1-16">Classification of chaotic systems</a></span>
+<br />   <span class="subsectionToc" >3.4.1 <a 
+href="#x1-170003.4.1" id="QQ2-1-17">Topological transitivity</a></span>
+<br />   <span class="subsectionToc" >3.4.2 <a 
+href="#x1-180003.4.2" id="QQ2-1-18">Rotation on a d-thorus</a></span>
+<br />   <span class="subsectionToc" >3.4.3 <a 
+href="#x1-190003.4.3" id="QQ2-1-19">The Kronecker flow</a></span>
+<br />   <span class="subsectionToc" >3.4.4 <a 
+href="#x1-200003.4.4" id="QQ2-1-20">Important map</a></span>
+<br />   <span class="subsectionToc" >3.4.5 <a 
+href="#x1-210003.4.5" id="QQ2-1-21">Arnold&#8217;s cat map</a></span>
+<br />   <span class="chapterToc" >4 <a 
+href="#x1-220004" id="QQ2-1-22">Ergodic theory</a></span>
+<br />   <span class="sectionToc" >4.1 <a 
+href="#x1-230004.1" id="QQ2-1-23">Birkhoff&#8217;s ergodic theorem</a></span>
+<br />   <span class="chapterToc" >5 <a 
+href="#x1-240005" id="QQ2-1-24">Dynamical Models</a></span>
+<br />   <span class="sectionToc" >5.1 <a 
+href="#x1-250005.1" id="QQ2-1-25">Traffic Model</a></span>
+<br />   <span class="sectionToc" >5.2 <a 
+href="#x1-260005.2" id="QQ2-1-26">Kuramoto Model</a></span>
+   </div>
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;1</span><br /><a 
+ id="x1-20001"></a>Introduction to Complex Systems</h2>
+<!--l. 62--><p class="noindent" >Complex systems are interdisciplinary: you have to communicate your results to experts from
+different science field. You need to provide an easy answer to a complex problem, no matter
+how difficult it&#8217;s to get this answer.
+   <h3 class="sectionHead"><span class="titlemark">1.1   </span> <a 
+ id="x1-30001.1"></a>Emergence</h3>
+<!--l. 1--><p class="noindent" >One of the main ideas in complex systems is emergence. Emergence means that the structure
+of the particles is simple and they are not so important like interactions bettween them.
+<br 
+class="newline" />An example of this is the Central limit theorem, which comes from mathematics.
+<br 
+class="newline" /><br 
+class="newline" />If you have a random variable <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">k</span></sub>, with average value <img 
+src="m_physics_of_complex_systems0x.svg" alt="&#x27E8;xk&#x27E9;"  class="left" align="middle"> = 0 and finite variance <span 
+class="cmmi-12">&#x03C3;</span><sup><span 
+class="cmr-8">2</span></sup>,
+then the central limit theorem says that, if the variables are independent (and in
+physics this is usally a fair assumption) for every value of <span 
+class="cmmi-12">k</span>, then the normalized
+sum
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems1x.svg" alt="       1  &#x2211;N
+zn =  &#x221A;---    xk
+       N  k=0
+" class="math-display" ></div>
+<!--l. 7--><p class="indent" >   then the distribution of this variable <span 
+class="cmmi-12">z</span><sub><span 
+class="cmmi-8">n</span></sub> is known, and it is gaussian, for a big enough
+value of <span 
+class="cmmi-12">N</span>.
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems2x.svg" alt="            (   z2 )
+&#x03C1;(zn) ~ exp  - ---2
+               2&#x03C3;
+" class="math-display" ></div>
+<!--l. 11--><p class="indent" >   Despite the fact that we, as humans, need a cause-effect relationship to describe a
+phenomenon, nature loves independent events, like DNA mutations. The gaussian describes
+                                                                                    
+                                                                                    
+the fluctuations of a system at equilibrium, not the complexity. You cannot extract work
+from fluctuations at equilibrium, otherwise you violate thermodynamics (and that&#8217;s no good).
+<br 
+class="newline" />The gaussian function is not a physical function, because it implies non zero probabilities to
+events which are impossible. For example, if we take a particle in a basin of attraction of a
+potential, the non zero probability given by the gaussian fluctuations allows the
+particle to jump out of the pit. But this violates the second law of thermodynamics.
+<br 
+class="newline" /><br 
+class="newline" />A way to defy the gaussian properties is to allow a system to have memory, so to remove the
+independence of the variable.
+<div class="center" 
+>
+<!--l. 15--><p class="noindent" >
+<!--l. 16--><p class="noindent" ><img 
+src="m_physics_of_complex_systems3x.svg" alt="1020312101310102
+" ></div>
+<!--l. 59--><p class="noindent" >One example of this is the sand pile model. You have a lattice, and each point is connected to its
+four neighbors. At this point one particle is put in a randomly chosen point. Each node can
+have four possible states, 0<span 
+class="cmmi-12">, </span>1<span 
+class="cmmi-12">, </span>2<span 
+class="cmmi-12">, </span>3, that is four possible numbers of particles. If a
+node reaches 4 particles, the 4 particles are distributed to the 4 neightbouring
+nodes.
+<div class="center" 
+>
+<!--l. 60--><p class="noindent" >
+<!--l. 61--><p class="noindent" ><img 
+src="m_physics_of_complex_systems4x.svg" alt="1020312101410102++++1111
+" ></div>
+<div class="center" 
+>
+<!--l. 104--><p class="noindent" >
+<!--l. 105--><p class="noindent" ><img 
+src="m_physics_of_complex_systems5x.svg" alt="1020313102020112
+" ></div>
+<!--l. 148--><p class="noindent" >For the nodes in the border, what happens is that 2 of the particles are redistributed and the
+other 2 are released in the enviroment, so they are lost. <br 
+class="newline" /><br 
+class="newline" />So this system has memory, and this means that the states of all the nodes are not
+independent. This memory turns the gaussian distribution into a power law
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems6x.svg" alt="p(n) &#x221D; n-&#x03B1;
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 153--><p class="indent" >   with <span 
+class="cmmi-12">&#x03B1; &#x003E; </span>1. <br 
+class="newline" />The decay of the power low is much slower than that of the gaussian, which means that the
+probability to have events in the extremes is significantly higher with the power low
+distribution. Memory is related to power laws, but vice versa is not guaranteed. We can also
+have power laws in physics, for example in the Ising model. In physics, power laws
+typically represent a phase transition for a dynamic system in a non-equilibrium state.
+<br 
+class="newline" />In the sand pile model, we notice a self-organized criticality: the system naturally goes into a
+critical state and does a phase transition. <br 
+class="newline" />Another example of a natural power law is the Kleiber law which relates the metabolic rate
+(amount of energy you need to survive) to the mass.
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems7x.svg" alt="           4
+E (m ) &#x221D; m 3
+" class="math-display" ><a 
+ id="x1-3001r1"></a></div>
+   </td><td class="equation-label">(1.1)</td></tr></table>
+<!--l. 162--><p class="nopar" >We can also observe that heartbeat rate decreases with mass and lifetime increases.
+   <h3 class="sectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x1-40001.2"></a>Network&#8217;s energy</h3>
+<!--l. 1--><p class="noindent" >Let&#8217;s take a region of space containing a number <span 
+class="cmmi-12">N </span>of nodes. This system can represent, for
+example, the hydraulic network of a city. For a node we define its &#8220;energy&#8221; flow <span 
+class="cmmi-12">&#x03C6; </span>(in the
+case of the hydraulic network, what is flowing between the nodes is water). How much
+&#8220;energy&#8221; do we need to insert in the system? <br 
+class="newline" />If we have to distribute something to all the nodes, the most basic way to do it is to connect
+one on one all the nodes, as to form a long chain. <br 
+class="newline" />
+<div class="center" 
+>
+<!--l. 4--><p class="noindent" >
+<!--l. 5--><p class="noindent" ><img 
+src="m_physics_of_complex_systems8x.svg" alt="1S234567
+" ></div>
+                                                                                    
+                                                                                    
+<!--l. 23--><p class="noindent" >If the flow out of the source <span 
+class="cmmi-12">S </span>is <span 
+class="cmmi-12">&#x03D5;</span>, the flow after the first node is <span 
+class="cmmi-12">&#x03D5; </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">&#x03C6;</span>, and so on, and we
+expect that the flow arriving to the final node will be <span 
+class="cmmi-12">&#x03C6;</span>. <br 
+class="newline" />So the total energy is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems9x.svg" alt="       N&#x2211;- 1              N&#x2211;-1
+ET &#x2248;  l   (&#x03D5; - k &#x03C6;) = l&#x03C6;    k &#8216;
+       k=0               k=0
+" class="math-display" ></div>
+<!--l. 28--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems10x.svg" alt="          2
+ET &#x221D;  l&#x03C6;N
+" class="math-display" ></div>
+<!--l. 31--><p class="indent" >   So the totaly energy that is required to provide for all the nodes, with this configuration,
+is proportional to the square of the total number of nodes. So with this configuration we
+have a network that is very easy to implement, but the network is very inefficient.
+<br 
+class="newline" /><br 
+class="newline" />Another possible connection of the nodes is the following one:
+<div class="center" 
+>
+<!--l. 33--><p class="noindent" >
+<!--l. 34--><p class="noindent" ><img 
+src="m_physics_of_complex_systems11x.svg" alt="1S234567
+" ></div>
+<!--l. 52--><p class="noindent" >So each node is linked to two mode nodes. This is what is called a tree structure.
+<br 
+class="newline" />The main problem with such a structure is that the path between the nodes is always the
+same, but it is impossible to design a city in such a way. <br 
+class="newline" />The number of nodes is <span 
+class="cmmi-12">N </span>= 2<sup><span 
+class="cmmi-8">m</span><span 
+class="cmr-8">+1</span></sup>, where <span 
+class="cmmi-12">m </span>is the number of levels. <br 
+class="newline" />The relation for the flow in each level is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems12x.svg" alt="2&#x03D5;k + &#x03C6; = &#x03D5;k- 1
+" class="math-display" ></div>
+<!--l. 59--><p class="indent" >   where we assume again that the flow in the final level is <span 
+class="cmmi-12">&#x03C6;</span>. <br 
+class="newline" /><span 
+class="cmmi-12">&#x03D5;</span><sub><span 
+class="cmmi-8">k</span></sub> then is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems13x.svg" alt="&#x03D5;k =  (2m+1- k - 1)&#x03C6;
+" class="math-display" ></div>
+<!--l. 64--><p class="indent" >   Then:
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems14x.svg" alt="         &#x2211;m
+ET  = d&#x03C6;     2k(2m+1 -k - 1) &#x2248; d&#x03C6;m2m+1
+         k=1
+" class="math-display" ></div>
+<!--l. 68--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems15x.svg" alt="ET = d &#x03C6;N log2 N
+" class="math-display" ></div>
+<!--l. 71--><p class="indent" >   This configuration is much more efficient than the previous alternative, although it is
+impossible to put to practice. <br 
+class="newline" /><br 
+class="newline" />So we need to find a solution that is in the middle of these two. <br 
+class="newline" /><br 
+class="newline" />Another possible structure consists of connecting all the nodes to the source, making a star
+network: also this model is of course impossible to put in practice. <br 
+class="newline" />However, in this case the total energy required is proportional to <span 
+class="cmmi-12">NL</span>, where <span 
+class="cmmi-12">L </span>is the scale
+length of the system.
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems16x.svg" alt="ET  &#x221D; N L
+" class="math-display" ></div>
+<!--l. 78--><p class="indent" >   The proportionality to <span 
+class="cmmi-12">L </span>is due to the fact that the average length of the links is
+proportional to the size of the space. <br 
+class="newline" />Since
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems17x.svg" alt="     ( L )D
+N  =   --
+        l
+" class="math-display" ></div>
+<!--l. 83--><p class="indent" >   where <span 
+class="cmmi-12">D </span>is the system dimension (e.g. 1D, 2D...). We have that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems18x.svg" alt="        --     1+1 &#x2215;D      D+1
+ET  &#x221D; N L &#x2248;  N      =  V  D
+" class="math-display" ></div>
+<!--l. 88--><p class="indent" >   We notice that:
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 90--><p class="noindent" >for a 2D system, like a city, <span 
+class="cmmi-12">E </span><span 
+class="cmsy-10x-x-120">&#x221D; </span><span 
+class="cmmi-12">V</span> <sup><img 
+src="m_physics_of_complex_systems19x.svg" alt="32"  class="frac" align="middle">
+   </sup>
+      </li>
+      <li class="itemize">
+      <!--l. 91--><p class="noindent" >for a 3D system, like biological systems, <span 
+class="cmmi-12">E </span><span 
+class="cmsy-10x-x-120">&#x221D; </span><span 
+class="cmmi-12">V</span> <sup><img 
+src="m_physics_of_complex_systems20x.svg" alt="43"  class="frac" align="middle">
+   </sup></li></ul>
+<!--l. 93--><p class="noindent" >In any case the exponent is greater than one so, soon or later, the system will collapse. The
+problem is also logistic, because in a real transportation line there is also waste, that has to
+be disposed of. <br 
+class="newline" /><br 
+class="newline" />If we consider our system to be an animal&#8217;s body, this would mean that in order to survive
+the amount of blood in its body must grow with the size by an amount of 4<span 
+class="cmmi-12">&#x2215;</span>3. This would
+mean that very big animals can&#8217;t survive, but they do, and the solution is in Kleiber&#8217;s law.
+<br 
+class="newline" />As animals get bigger, their demand of energy goes down, so their metabolism slows
+down.
+<!--l. 99--><p class="indent" >   Once we have a model (which hopefully is a good one), the model is deterministic, so if we
+know the initial conditions os the system, we know exactly what state the system will have at
+any future time. <br 
+class="newline" />The problem with this is that we don&#8217;t know the initial conditions with absolute certainty. So
+                                                                                    
+                                                                                    
+at this point the question, that will be answered later, is: <br 
+class="newline" />How much error in the initial conditions is acceptable before that the previsions of our model
+start to diverge from the real evolution in an unacceptable way?
+   <h3 class="sectionHead"><span class="titlemark">1.3   </span> <a 
+ id="x1-50001.3"></a>Broken Stick Model</h3>
+<!--l. 1--><p class="noindent" >Let&#8217;s consider the portion [0<span 
+class="cmmi-12">, </span>1] of the axis, which represents a segment (a stick) of length 1.
+Suppose that we extract randomically a point <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">1</span></sub> on that segment, and we cut
+it in correspondence of that point, thus obtaining the portion [0<span 
+class="cmmi-12">,x</span><sub><span 
+class="cmr-8">1</span></sub>] of the axis.
+<br 
+class="newline" />By repeating this process many times, we obtain a system with memory, because of course
+the length of the segment at a certain iteration depends on all the previous iterations.
+<br 
+class="newline" />This is called the broken stick model. <br 
+class="newline" />For this system one expects to have a power law distribution, because if we rescale the
+variable <span 
+class="cmmi-12">x</span>, the distribution must not change.
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems21x.svg" alt="        1--
+p(x) ~  xa
+" class="math-display" ></div>
+<!--l. 8--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems22x.svg" alt="y = &#x03BB;x  - &#x2192;   p(y) = ---1-- ~ -1-
+                     (&#x03BB;x )a   xa
+" class="math-display" ></div>
+<!--l. 11--><p class="indent" >   Since we have:
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems23x.svg" alt="        &#x27E8;xk -1&#x27E9;
+&#x27E8;xk&#x27E9; =  -------
+          2
+" class="math-display" ></div>
+<!--l. 15--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems24x.svg" alt="          1
+&#x03C1;N(2x) =  -&#x03C1;N -1(x)
+          2
+" class="math-display" ></div>
+<!--l. 18--><p class="indent" >   Which means that, as <span 
+class="cmmi-12">N </span>goes to infinity we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems25x.svg" alt="         1
+&#x03C1;(2x ) = -&#x03C1;(x)
+         2
+" class="math-display" ></div>
+<!--l. 22--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems26x.svg" alt="       1
+&#x03C1;(x) = x-
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 25--><p class="indent" >   Let&#8217;s now try to implement the system without memory. So we have <span 
+class="cmmi-12">N </span>independent
+variables <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">k</span></sub> uniformly distributed, and for each variable we define its distance from the
+previous one, &#x0394;<span 
+class="cmmi-12">x</span>. <br 
+class="newline" />The probability to find &#x0394;<span 
+class="cmmi-12">x </span>is the probability of not finding <span 
+class="cmmi-12">x </span>in any segment, so
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems27x.svg" alt="         (        )
+               &#x0394;x--
+p(&#x0394;x ) &#x2248;   1 -  L
+" class="math-display" ></div>
+<!--l. 30--><p class="indent" >   We then take a new variable <span 
+class="cmmi-12">y </span>= <span 
+class="cmmi-12">N</span>&#x0394;<span 
+class="cmmi-12">x </span>and we obtain the probability distribution
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems28x.svg" alt="p = exp(- y&#x2215;L )
+" class="math-display" ></div>
+<!--l. 34--><p class="indent" >   as <span 
+class="cmmi-12">N </span>goes to infinity, which of course is an exponential law. <br 
+class="newline" /><br 
+class="newline" />Suppose that the whole stick is a state, and we want to distribute the population inside of it.
+If we divide the stick uniformly in portions and diivde the populations in this group, we
+obtain an exponential law, as we have just seen. <br 
+class="newline" />Another way, which contains memory, consists of creating a city and letting it grow, and only
+then introducing a second one, and repeating the process until all the space is
+occupied.
+   <h3 class="sectionHead"><span class="titlemark">1.4   </span> <a 
+ id="x1-60001.4"></a>Rankings</h3>
+<!--l. 1--><p class="noindent" >A ranking is an ordered subset of measures of the same quantity, between which exists an
+order relation. Rankings allow us to obtain complex informations with the use
+of very little data, since the information is contained in the order of the values.
+<br 
+class="newline" />An example of the use of rankings can be found in web pages, where the search engine shows
+                                                                                    
+                                                                                    
+to the user the results of the search, and the results are ordered depending on their
+relevance, so to allow them to find the desired information as quickly as possible.
+<br 
+class="newline" />In this example, the quantity is the relevance of a result to the search. <br 
+class="newline" /><br 
+class="newline" />Another example is the population of cities. The graph below shows the population of the 300
+bigges cities in Europe. The graph is in log-log scale, and since it shows a straight line, it
+means that the distribution is a power law distribution. <br 
+class="newline" />
+<div class="center" 
+>
+<!--l. 5--><p class="noindent" >
+<!--l. 6--><p class="noindent" ><img 
+src="m_physics_of_complex_systems/cities_ranking.jpg" alt="PIC"  
+width="46" height="46" ></div>
+<!--l. 8--><p class="noindent" >This can be explained considering the fact that, storically, the population used to
+migrate towards the biggest cities of the country, because there were more job
+opportunities. Thus one can say that big cities have a preferential attatchment.
+<br 
+class="newline" /><br 
+class="newline" />Let <span 
+class="cmmi-12">x </span>be a random variable and <span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,x</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...,x</span><sub><span 
+class="cmmi-8">N</span></sub><span 
+class="cmsy-10x-x-120">} </span>a sample of experimental observations of the
+variable, ordered in such a way that <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">1</span></sub> <span 
+class="cmsy-10x-x-120">&#x2265; </span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">2</span></sub> <span 
+class="cmsy-10x-x-120">&#x2265; </span><span 
+class="cmmi-12">.</span><span 
+class="cmmi-12">&#x00A0;.</span><span 
+class="cmmi-12">&#x00A0;.</span><span 
+class="cmmi-12">&#x00A0; </span><span 
+class="cmsy-10x-x-120">&#x2265; </span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">N</span></sub>. <br 
+class="newline" />Then, the ranking distribution is created by assigning to the position <span 
+class="cmmi-12">j </span>in the order the
+corresponding value in the sampe, which is given by the map <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub> = <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">j</span>). Also, usually the
+elements are normalized like <span 
+class="cmmi-12">y</span><sub><span 
+class="cmmi-8">j</span></sub> = <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-12">&#x2215;x</span><sub><span 
+class="cmr-8">1</span></sub>. <br 
+class="newline" />By definition, <span 
+class="cmmi-12">j&#x2215;N </span>is the frequency of the event <span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">x</span><span 
+class="cmmi-12">&#x00A0;</span><span 
+class="cmsy-10x-x-120">|</span><span 
+class="cmmi-12">&#x00A0;x </span><span 
+class="cmsy-10x-x-120">&#x2265; </span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmsy-10x-x-120">}</span>, that is, the probability that
+the variable <span 
+class="cmmi-12">x </span>has a value larger that <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub> for larger values of <span 
+class="cmmi-12">j</span>. <br 
+class="newline" /><br 
+class="newline" />The cumulative distribution is defined as <span 
+class="cmmi-12">F</span>(<span 
+class="cmmi-12">x</span>) = <span 
+class="cmmi-12">P</span><span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">u</span><span 
+class="cmmi-12">&#x00A0;</span><span 
+class="cmsy-10x-x-120">|</span><span 
+class="cmmi-12">&#x00A0;u </span><span 
+class="cmsy-10x-x-120">&#x2264; </span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmsy-10x-x-120">}</span>, that is, the probability that
+the value <span 
+class="cmmi-12">u </span>is smaller that <span 
+class="cmmi-12">x</span>. Of course, this probability is equal to the integral of the
+distribution in the range [<span 
+class="cmsy-10x-x-120">-&#x221E;</span><span 
+class="cmmi-12">,x</span>]. <br 
+class="newline" />The relation between the frequency <span 
+class="cmmi-12">j&#x2215;N </span>and the cumulative distribution is given
+by:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems29x.svg" alt="              j       J (xj)
+F (xj) = 1 - N--= 1 - --N---
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 17--><p class="indent" >   where <span 
+class="cmmi-12">J</span>(<span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub>) is the inverse of the ranking, so it&#8217;s the function that returns the position of a
+certain value of <span 
+class="cmmi-12">x </span>in the sample&#8217;s order. <br 
+class="newline" />Since the cumulative distribution is the integral of the probability distribution, the latter can
+be obtained by differentiating the first:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems30x.svg" alt="       dF                   1 dJ
+p(x) = ---  - &#x2192;   p(x) = - ------
+       dx                  N  dx
+" class="math-display" ></div>
+<!--l. 72--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">1.5   </span> <a 
+ id="x1-70001.5"></a>Laplace problem</h3>
+<!--l. 1--><p class="noindent" >Let&#8217;s suppose that we are tossing a coin, and the probability of gettin head is <span 
+class="cmmi-12">p </span>and the
+probability of getting tails is 1 <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">p</span>. The event <span 
+class="cmmi-12">E </span>is <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">n</span><span 
+class="cmr-8">+1</span></sub> outcome, and <span 
+class="cmmi-12">H</span><sub><span 
+class="cmmi-8">n</span></sub> is <span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,x</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...</span><span 
+class="cmsy-10x-x-120">}</span>, so
+the first is the future and the second is the past. <br 
+class="newline" />Now we ask ourselves what is the probability that the next result of the toss is going to be
+heads:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems31x.svg" alt="p(xn+1 =  H |Hn )
+" class="math-display" ></div>
+<!--l. 6--><p class="indent" >   The most intuitive way to calculate this probability would be to use the frequentistic
+definition, so to count how many times we have gotten heads over the entire number of tries
+(we are considering the number of tries to be very big of course)
+   <div class="math-display" >
+                                                                                    
+                                                                                    
+<img 
+src="m_physics_of_complex_systems32x.svg" alt="     nH-
+p =  N
+" class="math-display" ></div>
+<!--l. 10--><p class="indent" >   Unfortunately, this is not the right way to do it. <br 
+class="newline" /><br 
+class="newline" />The probability of getting a given sequence of heads and tails is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems33x.svg" alt="p({xk}) = pJ(1 - p)n-J
+" class="math-display" ></div>
+<!--l. 15--><p class="indent" >   where <span 
+class="cmmi-12">J </span>is the number of times that we get heads. <br 
+class="newline" />Now if we integrate we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems34x.svg" alt="&#x222B;
+   1 J       n-J      J!(n---J)!-
+    p (1 - p)   dp =   (n + 1)!
+  0
+" class="math-display" ></div>
+<!--l. 20--><p class="indent" >   so
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems35x.svg" alt="                  -(n-+-1)!--J       n- J
+p(xn+1 = H |{}) = J!(n - J )!p  (1 - p)
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 24--><p class="indent" >   which is a binomial distribution. <br 
+class="newline" />Now we calculate the average value of the probability
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems36x.svg" alt="&#x222B;
+  1  -(n-+-1)!--J       n-J      J-+-1-
+   p J!(n - J)!p (1 - p)   dp =  n + 2
+ 0
+" class="math-display" ></div>
+<!--l. 29--><p class="indent" >   and we see that it isn&#8217;t <span 
+class="cmmi-12">J&#x2215;n</span>, as one would have expected.
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;2</span><br /><a 
+ id="x1-80002"></a>Basic models</h2>
+   <h3 class="sectionHead"><span class="titlemark">2.1   </span> <a 
+ id="x1-90002.1"></a>Linear models</h3>
+<!--l. 1--><p class="noindent" >The most simple model possible is the linear model
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems37x.svg" alt="&#x02D9;x = Ax
+" class="math-display" ></div>
+<!--l. 5--><p class="indent" >   Albeit this model is easy, there are a few complications that have to be taken into
+account:
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 7--><p class="noindent" >When the number of dimensions increases it becomes complicated.
+      </li>
+      <li class="itemize">
+      <!--l. 8--><p class="noindent" >If we consider the determinant
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems38x.svg" alt="det(&#x03BB;I - A ) = 0
+" class="math-display" ></div>
+      <!--l. 12--><p class="noindent" >we obtain a polinomial equation, that can be very hard to solve.
+      </li>
+      <li class="itemize">
+      <!--l. 13--><p class="noindent" >To  further  complicate  things,  <span 
+class="cmmi-12">A </span>might  not  be  known,  but  we  could  have  an
+      ensemble of matrices.
+                                                                                    
+                                                                                    
+      </li>
+      <li class="itemize">
+      <!--l. 14--><p class="noindent" >The point <span 
+class="cmmi-12">x </span>= 0 is always a critical point, so we can always linearize the system
+      around this point, but if <span 
+class="cmmi-12">A </span>has critical points then we get those as well.</li></ul>
+<!--l. 16--><p class="noindent" >By solving the determinant equation, we get the eigenvalues <span 
+class="cmmi-12">&#x03BB;</span>, whose study can tell a lot about
+the behaviour of the solutions. <br 
+class="newline" />If <span 
+class="cmmi-12">Re&#x03BB; </span><span 
+class="cmsy-10x-x-120">&#x2264; </span>0, this means that the exponential term of the solution shrinks, so it converges.
+<br 
+class="newline" /><br 
+class="newline" />Robustness means that if we perturb the system, the solutions don&#8217;t change too much. A
+model must be robust, otherwise it can fit any kind of data simply by slightly changing the
+parameters. <br 
+class="newline" /><br 
+class="newline" />The formal way to write the solution of such a linear system is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems39x.svg" alt="x(t) = x0 exp(At )
+" class="math-display" ></div>
+<!--l. 23--><p class="indent" >   For coefficients <span 
+class="cmmi-12">&#x03BB;</span><sup><span 
+class="cmsy-8">*</span></sup> such that <span 
+class="cmmi-12">Re&#x03BB;</span><sup><span 
+class="cmsy-8">*</span></sup> <span 
+class="cmmi-12">&#x003E; </span>0, we have that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems40x.svg" alt="         *
+|&#x03B4;x| &#x2248; |e&#x03BB; t||&#x03B4;x0|
+" class="math-display" ></div>
+<!--l. 27--><p class="indent" >   This is very tipical, and from this rises the chaos theory. In this case, even a small
+error in the initial condition will increase the error in the model exponentially fast.
+<br 
+class="newline" /><br 
+class="newline" />We get another interesting model by adding some noise to the linear model
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems41x.svg" alt="x&#x02D9;=  Ax + &#x03BE;(t)
+" class="math-display" ></div>
+<!--l. 32--><p class="indent" >   We consider a special solution of the form
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems42x.svg" alt="x = eAty
+" class="math-display" ></div>
+<!--l. 36--><p class="indent" >   and we substitute in the equation
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems43x.svg" alt="&#x02D9;x = A exp(At )y + &#x03BE;(t) = A exp (At)y + exp(At )y&#x02D9;
+" class="math-display" ></div>
+<!--l. 40--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems44x.svg" alt="&#x02D9;
+(y ) = exp(- At)&#x03BE;(t)
+" class="math-display" ></div>
+<!--l. 43--><p class="indent" >   So the complete solution of the problem is
+   <table 
+class="equation"><tr><td>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems45x.svg" alt="                   &#x222B;  t
+x(t) = exp(At )x0 +    exp(A (t - s))&#x03BE;(s)ds
+                     0
+" class="math-display" ><a 
+ id="x1-9001r1"></a></div>
+   </td><td class="equation-label">(2.1)</td></tr></table>
+<!--l. 46--><p class="nopar" >If the system is stable (negative real part of lambda) and we use a periodic forcing, the
+solution is still a periodic function with different period. <br 
+class="newline" /><br 
+class="newline" />Now we want to consider the case of a perturbed matrix:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems46x.svg" alt="&#x02D9;x = (A + &#x03B5;B )x
+" class="math-display" ></div>
+<!--l. 52--><p class="indent" >   with <span 
+class="cmmi-12">&#x03B5; </span><span 
+class="cmsy-10x-x-120">&#x226A; </span>1. <br 
+class="newline" />The solution is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems47x.svg" alt="x(t) = exp((A +  &#x03B5;B)t)x0
+" class="math-display" ></div>
+<!--l. 57--><p class="indent" >   and to understand the system&#8217;s sensitivity we calculate the derivative for small
+perturbations
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems48x.svg" alt=" d
+---exp ((A +  &#x03B5;B )t)
+d&#x03B5;
+" class="math-display" ></div>
+<!--l. 61--><p class="indent" >   but the problem is that usually the two matrices are not commutative. <br 
+class="newline" />If we take the special solution <span 
+class="cmmi-12">x </span>= exp(<span 
+class="cmmi-12">At</span>)<span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub> and we substitute we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems49x.svg" alt="&#x02D9;y = &#x03B5; exp(- At)B exp (At)y
+" class="math-display" ></div>
+<!--l. 66--><p class="indent" >   and, if <span 
+class="cmmi-12">A </span>and <span 
+class="cmmi-12">B </span>do not commute, this equation is very difficult to solve. <br 
+class="newline" />An approximate solution is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems50x.svg" alt="             &#x222B; t
+y(t) = y0 + &#x03B5;   exp (- As )B exp(As )y0ds + O (&#x03B5;2)
+              0
+" class="math-display" ></div>
+<!--l. 71--><p class="indent" >   and the solution for x is
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems51x.svg" alt="                     &#x222B;
+                       t                                  2
+x(t) = exp(At )x0 + &#x03B5;   exp (A(t - s))B  exp(As )x0ds + O(&#x03B5; )
+                      0
+" class="math-display" ><a 
+ id="x1-9002r2"></a></div>
+   </td><td class="equation-label">(2.2)</td></tr></table>
+<!--l. 74--><p class="nopar" >Now, the sensitivity of the system is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems52x.svg" alt="      &#x222B; t
+dx-=     exp(A (t - s))B exp (As)x ds
+d&#x03B5;     0                         0
+" class="math-display" ></div>
+<!--l. 79--><p class="indent" >   In the particular case where the matrix is diagonal, the sensitivity becomes
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems53x.svg" alt="dx    &#x222B; t
+---=     exp(&#x03BB;i(t - s))Bij exp(&#x03BB;js)x0ds
+d&#x03B5;     0
+" class="math-display" ></div>
+<!--l. 77--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2.2   </span> <a 
+ id="x1-100002.2"></a>The neuron model</h3>
+<!--l. 1--><p class="noindent" >In this model we have two variables, <span 
+class="cmmi-12">x </span>and <span 
+class="cmmi-12">w</span>, and two differential equations to describe their
+dynamics
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems54x.svg" alt="         x3-
+x&#x02D9;= x -  3  - w + I (t)
+" class="math-display" ></div>
+<!--l. 5--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems55x.svg" alt="     1
+&#x02D9;w =  -(x + a - bw )
+     &#x03BC;
+" class="math-display" ></div>
+<!--l. 8--><p class="indent" >   This system is of course not linear, because we have a cubic term in the dynamics of <span 
+class="cmmi-12">x</span>.
+<br 
+class="newline" />We require <span 
+class="cmmi-12">&#x03BC; </span>to be big, so that <span 
+class="cmmi-12">w </span>is the slow variable, whereas <span 
+class="cmmi-12">x </span>is the fast variable.
+<br 
+class="newline" />The fact that the two variables have different growth speeds is quite important, because it
+allows us to study them separately, and this reduces the complexity of the system.
+<br 
+class="newline" />The difference in the speed of the variables makes the system stiff, which means that it&#8217;s very
+hard to integrate numberically. <br 
+class="newline" /><br 
+class="newline" />The key to studying this system is in the nullcline. We find the two nullclines by putting the
+two derivatives equal to zero, so one is a straight line and the other one is a cubic.
+<br 
+class="newline" />The two nullclines intersect, and the point where they intersect is the equilibrium point of the
+system. Furthermore, the cubic nullcline has two critical points. Since <span 
+class="cmmi-12">x </span>is the fast variable,
+the point follows the cubic nullcline in its dynamics. Once it reaches one of the two critical
+points, during its motion, it jumps to the other branch of the nullcline. So in the end one gets
+a periodic motion. <br 
+class="newline" /><br 
+class="newline" />Suppose now that <span 
+class="cmmi-12">I</span>(<span 
+class="cmmi-12">t</span>) is of the form
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems56x.svg" alt="I(t) = I0 + &#x0394;I &#x03B4;(t)
+" class="math-display" ></div>
+<!--l. 18--><p class="indent" >   so we give an impulse to the point. <br 
+class="newline" />What happens now is that, if &#x0394;<span 
+class="cmmi-12">I </span>is small, the point oscillates briefly around the critical point
+and falls back into it, but if the the impulse is big, the point excapes and makes a very big
+oscillation. <br 
+class="newline" />In this system we have an Hopf bifurcation. <br 
+class="newline" />
+   <h4 class="subsectionHead"><span class="titlemark">2.2.1   </span> <a 
+ id="x1-110002.2.1"></a>Hopf Bifurcation</h4>
+<!--l. 1--><p class="noindent" >Sometimes the orbits of a dynamical system converge not in a single point but in
+limit circle near the stable point. This is called <span 
+class="cmti-12">Hopf Bifurcation</span>. That type of
+phenomena is recurrent in nature: one example may be the Ising&#8217;s model in which the
+system passes from a one stable point state to a two stable points state with a
+phase transition. In that specific case we observe a bifurcation of the system&#8217;s free
+energy.<br 
+class="newline" />We have to see the Hopf bifurcation as a new dynamical state that has a periodic orbit as a
+solution. However, it&#8217;s important to observe that a Hopf bifurcation is not an equilibrium
+state for the system.<br 
+class="newline" />For example, consider a circular network of identical neurons characterized by a function <span 
+class="cmmi-12">&#x1E8B;</span><sub><span 
+class="cmmi-8">k</span></sub>.
+The dynamic is described by a simple law
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems57x.svg" alt="&#x02D9;xk = F (xk) + &#x03F5;xk- 1
+" class="math-display" ></div>
+<!--l. 12--><p class="indent" >   in which the function F() is taken from the Fitzhug-Nagumo model and the other term
+represents the system dynamic.<br 
+class="newline" />If <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">P</span> </sub> is an equilibrium point for all neurons then we can verify that exists an <span 
+class="cmmi-12">&#x03F5; </span>= <span 
+class="cmmi-12">&#x03F5;</span><sub><span 
+class="cmmi-8">C</span></sub> that
+produces a non-trivial solution. In particular, with that value of <span 
+class="cmmi-12">&#x03F5; </span>we can create a
+stationary periodic state with a periodic signal (moving wave): that&#8217;s a self-solution
+for the system. Obviously, this example do not conserve the total energy of the
+system.
+                                                                                    
+                                                                                    
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;3</span><br /><a 
+ id="x1-120003"></a>Dynamical Systems</h2>
+<!--l. 2--><p class="noindent" >A dynamical system is given by a <span 
+class="cmti-12">phase space </span><span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2286;</span><span 
+class="msbm-10x-x-120">&#x211D;</span><sup><span 
+class="cmmi-8">d</span></sup> endowed with a collection of maps
+<span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> : <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">M</span>, where <span 
+class="cmmi-12">t </span><span 
+class="cmsy-10x-x-120">&#x2208;</span><span 
+class="msbm-10x-x-120">G </span>= <img 
+src="m_physics_of_complex_systems58x.svg" alt="{&#x211D;, &#x2102;, &#x2124;,&#x2115; }"  class="left" align="middle">, with the so-called &#8220;group property&#8221;:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems59x.svg" alt="&#x03D5;t+s = &#x03D5;to&#x03D5;s
+" class="math-display" ></div>
+<!--l. 6--><p class="indent" >   The maps <span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> are usually called <span 
+class="cmti-12">flows</span>. <br 
+class="newline" />This formalization works for systems whose equations don&#8217;t depend explicitly on time.
+<br 
+class="newline" />A typical example of a dynamical system is that of the solutions of a differential equation. So
+if we have a Cauchy problem
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems60x.svg" alt="{
+  &#x02D9;x = f (x )
+
+  x (0 ) = x0
+" class="math-display" ></div>
+<!--l. 15--><p class="indent" >   where the flow is the function that takes the initial condition and returns the correct
+solution for the differential equation. So if this ODE has a global solution <span 
+class="cmmi-12">x</span>(<span 
+class="cmmi-12">t</span>) that satisfies
+the initial condition, then
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems61x.svg" alt="&#x03D5;t(x0) = x(t)
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 20--><p class="indent" >   We must also assume the uniqueness of the solution, that is, for one initial condition we
+only have one solution. <br 
+class="newline" />Non-autonomous ODEs, where the equation field depends on time
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems62x.svg" alt="&#x02D9;x = f (x, t)
+" class="math-display" ></div>
+<!--l. 25--><p class="indent" >   can be converted into autonomous ODEs in higher dimensions, going back to the previous
+simpler case. <br 
+class="newline" />We consider <span class="overline"><span 
+class="cmmi-12">M</span></span> = <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x00D7;</span><span 
+class="msbm-10x-x-120">&#x211D; </span>with <span 
+class="cmmi-12">y </span>= (<span 
+class="cmmi-12">x,t</span>) <span 
+class="cmsy-10x-x-120">&#x2208;</span><span class="overline"><span 
+class="cmmi-12">M</span></span>, and we define
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems63x.svg" alt="F (x,t) = (f(x,t),1)
+" class="math-display" ></div>
+<!--l. 30--><p class="indent" >   with <span 
+class="cmmi-12">f </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x00D7;</span><span 
+class="msbm-10x-x-120">&#x211D; </span><span 
+class="cmsy-10x-x-120">&#x2192;</span><span 
+class="msbm-10x-x-120">&#x211D;</span><sup><span 
+class="cmmi-8">d</span></sup> and <span 
+class="cmmi-12">F </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x00D7; </span><span 
+class="cmmi-12">R </span>=<span class="overline"> <span 
+class="cmmi-12">M</span></span> <span 
+class="cmsy-10x-x-120">&#x2192;</span><span 
+class="msbm-10x-x-120">&#x211D;</span><sup><span 
+class="cmmi-8">d</span><span 
+class="cmr-8">+1</span></sup>. At this point we can write the new
+differential equation:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems64x.svg" alt="&#x02D9;y = F (y)
+" class="math-display" ></div>
+<!--l. 34--><p class="indent" >   with initial condition <span 
+class="cmmi-12">y</span>(0) = (<span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub><span 
+class="cmmi-12">, </span>0). For this to be useful, we must show that knowing the
+solution to this new equation implies knowing the solution for the original one.
+<br 
+class="newline" />Say <span 
+class="cmmi-12">y</span>(<span 
+class="cmmi-12">t</span>) = (<span 
+class="cmmi-12">x</span>(<span 
+class="cmmi-12">s</span>)<span 
+class="cmmi-12">,t</span>(<span 
+class="cmmi-12">s</span>)) is a solution for the new equation
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems65x.svg" alt="(     )     (     )    (            )
+  &#x02D9;x(s)        x(s)       f(x(s),t(s))
+  &#x02D9;     = F          =                 =
+  t(s )        t(s)            1
+" class="math-display" ></div>
+<!--l. 51--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems66x.svg" alt="x&#x02D9;=  f(x,s)    &#x02D9;t = 1
+" class="math-display" ></div>
+<!--l. 54--><p class="indent" >   with initial conditions <span 
+class="cmmi-12">x</span>(0) = <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub> and <span 
+class="cmmi-12">t</span>(0) = 0. For what concerns t, it&#8217;s the identity
+function, so <span 
+class="cmmi-12">t</span>(<span 
+class="cmmi-12">s</span>) = <span 
+class="cmmi-12">s</span>, which means that I can invert <span 
+class="cmmi-12">t </span>and <span 
+class="cmmi-12">s</span>, so going back to the first
+equation we have
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems67x.svg" alt="&#x02D9;x = f (x, t)
+" class="math-display" ></div>
+<!--l. 58--><p class="indent" >   which was our original equation. This means that a solution for the non-autonomous
+equation is also a solution for the new autonomous one. <br 
+class="newline" />So, if we have a theory that treats non-autonomous systems, that theory must also be able to
+treat autonomous systems. <br 
+class="newline" /><br 
+class="newline" />If the <span 
+class="cmmi-12">t </span>variable is a natural number, we call it <span 
+class="cmmi-12">n</span>
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems68x.svg" alt=" n     n
+&#x03D5;  = T
+" class="math-display" ></div>
+   <h3 class="sectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-130003.1"></a>Malthus model</h3>
+<!--l. 1--><p class="noindent" >Let&#8217;s take the expression
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems69x.svg" alt="x    = &#x03B1;x
+ n+1      n
+" class="math-display" ></div>
+<!--l. 5--><p class="indent" >   where <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">n</span></sub> represents the population in year <span 
+class="cmmi-12">n</span>. For <span 
+class="cmmi-12">&#x03B1; &#x003E; </span>1, we have population growth and
+for <span 
+class="cmmi-12">&#x03B1; &#x003C; </span>1 the population decreases. <br 
+class="newline" />If at time <span 
+class="cmmi-12">t </span>= 0 the population is <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub>, at a given time we have
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems70x.svg" alt="                 n
+xn =  Tn(x0) = &#x03B1;  x0
+" class="math-display" ></div>
+<!--l. 85--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3.2   </span> <a 
+ id="x1-140003.2"></a>Velhurst model</h3>
+<!--l. 1--><p class="noindent" >This model takes into account the fact that the higher the population is, the more resources
+are needed, so there should be a limit that can&#8217;t be surpassed, because the environment
+wouldn&#8217;t be able to sustain it
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems71x.svg" alt="x    =  &#x03B1;x (A  - x )
+  n+1      n       n
+" class="math-display" ></div>
+<!--l. 5--><p class="indent" >   Now we change variable, defining <span 
+class="cmmi-12">y </span>= <span 
+class="cmmi-12">x&#x2215;A</span>, and we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems72x.svg" alt="xn+1-      xn(     xn-)
+ A   = A &#x03B1; A   1 - A
+" class="math-display" ></div>
+<!--l. 9--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems73x.svg" alt="yn+1 = ryn(1 - yn)
+" class="math-display" ></div>
+<!--l. 12--><p class="indent" >   which is the logistic map:
+   <table 
+class="equation"><tr><td>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems74x.svg" alt="T(x) = rx (1 - x )
+" class="math-display" ><a 
+ id="x1-14001r1"></a></div>
+   </td><td class="equation-label">(3.1)</td></tr></table>
+                                                                                    
+                                                                                    
+<!--l. 15--><p class="nopar" >We take 0 <span 
+class="cmmi-12">&#x003C; x &#x003C; </span>1 and 1 <span 
+class="cmmi-12">&#x003C; r &#x003C; </span>4. The graph is a parabola upside down, with the maximum
+at <img 
+src="m_physics_of_complex_systems75x.svg" alt="(    )
+  x, r
+  2 4"  class="left" align="middle">. It may happen that <span 
+class="cmmi-12">T</span><img 
+src="m_physics_of_complex_systems76x.svg" alt="(x)"  class="left" align="middle"> <sup><span 
+class="cmmi-8">n</span></sup> = <span 
+class="cmmi-12">x</span>: in this case the orbit <span 
+class="cmmi-12">O</span><img 
+src="m_physics_of_complex_systems77x.svg" alt="(x)"  class="left" align="middle"> = <img 
+src="m_physics_of_complex_systems78x.svg" alt="{&#x03A6;t (x )}"  class="left" align="middle"><sub>
+<span 
+class="cmmi-8">x</span><span 
+class="cmsy-8">&#x2208;</span><span 
+class="msbm-10x-x-80">G</span></sub>  is called
+<span 
+class="cmti-12">periodic orbit</span>. We also observe that getting closer to an orbit is not the same as getting closer
+to a limit.
+   <h3 class="sectionHead"><span class="titlemark">3.3   </span> <a 
+ id="x1-150003.3"></a>Expanding map</h3>
+<!--l. 1--><p class="noindent" >Now let&#8217;s see an example of a chaotic map. First of all, we define a map <span 
+class="cmmi-12">T </span>as <span 
+class="cmti-12">expanding </span>if
+<img 
+src="m_physics_of_complex_systems79x.svg" alt="  &#x2032;
+|T  (x)|"  class="left" align="middle"> <span 
+class="cmmi-12">&#x003E; </span>1 <span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">x </span><span 
+class="cmsy-10x-x-120">&#x2208;<img 
+src="cmsy10-c-4d.png" alt="M" class="10-120x-x-4d" /></span>. As well, we also give this definition for a generic point:
+   <div class="newtheorem">
+<!--l. 4--><p class="noindent" ><span class="head">
+<a 
+ id="x1-15001r1"></a>
+<span 
+class="cmbx-12">Definition 1.</span>  </span><span 
+class="cmti-12">We define a periodic point of the map </span><span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub> <span 
+class="cmsy-10x-x-120">&#x2208;<img 
+src="cmsy10-c-4d.png" alt="M" class="10-120x-x-4d" /></span><span 
+class="cmti-12">as:</span>
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 7--><p class="noindent" >attractive <span 
+class="cmti-12">if </span><img 
+src="m_physics_of_complex_systems80x.svg" alt="  &#x2032;
+|T  (x0)|"  class="left" align="middle"> <span 
+class="cmmi-12">&#x003E; </span>1
+      </li>
+      <li class="itemize">
+      <!--l. 8--><p class="noindent" >repelling <span 
+class="cmti-12">if </span><img 
+src="m_physics_of_complex_systems81x.svg" alt="  &#x2032;
+|T  (x0)|"  class="left" align="middle"> <span 
+class="cmmi-12">&#x003C; </span>1
+      </li>
+      <li class="itemize">
+      <!--l. 9--><p class="noindent" >neutral <span 
+class="cmti-12">if </span><img 
+src="m_physics_of_complex_systems82x.svg" alt="|T&#x2032;(x )|
+     0"  class="left" align="middle"> = 0</li></ul>
+   </div>
+<!--l. 11--><p class="indent" >    For example, let&#8217;s take the map <span 
+class="cmmi-12">T </span>: <img 
+src="m_physics_of_complex_systems83x.svg" alt="[0, 1]"  class="left" align="middle"> <span 
+class="cmsy-10x-x-120">&#x2192;</span><img 
+src="m_physics_of_complex_systems84x.svg" alt="[0,1]"  class="left" align="middle"> such as <span 
+class="cmmi-12">T</span><img 
+src="m_physics_of_complex_systems85x.svg" alt="(x)"  class="left" align="middle"> = 2<span 
+class="cmmi-12">x</span><span 
+class="cmmi-12">&#x00A0;mod</span><span 
+class="cmmi-12">&#x00A0;</span>1. This map
+as two fixed points (intersection with the bisectrice): <span 
+class="cmmi-12">p</span><sub><span 
+class="cmr-8">0</span></sub> = <img 
+src="m_physics_of_complex_systems86x.svg" alt="(0,0)"  class="left" align="middle"> and <span 
+class="cmmi-12">p</span><sub><span 
+class="cmr-8">1</span></sub> = <img 
+src="m_physics_of_complex_systems87x.svg" alt="(1,1)"  class="left" align="middle">. We notice
+immediately that those points are both <span 
+class="cmti-12">repelling </span>points. Another thing we can see with this
+particular map is that if we start on a slightly different point from the previous one,
+for example <span 
+class="cmmi-12">x </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">x </span>+ <span 
+class="cmmi-12">&#x03F5;</span>, the difference between the two orbit grows exponentially
+fast:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems88x.svg" alt="T n (x ) = 2n(x - k (x)) - k (T (x))
+" class="math-display" ></div>
+<!--l. 19--><p class="indent" >   where
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems89x.svg" alt="       {             1
+k(x) =   0  0 &#x2264;  x &#x2264; 2
+         1   12 &#x003C; x &#x2264; 1
+" class="math-display" ></div>
+<!--l. 27--><p class="indent" >   and in conclusion we have that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems90x.svg" alt="             n
+T (x + &#x03F5;) = 2 (x + &#x03F5;) mod  1
+" class="math-display" ></div>
+<!--l. 31--><p class="indent" >   so the difference grows <span 
+class="cmsy-10x-x-120">&#x221D; </span>2<sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-12">&#x03F5;</span>. One last comment to make is that it&#8217;s true that
+the two orbit exponentially diverges one from the other but the phase space is
+limited: from this point of view their distance in phase space will oscillate through
+time.
+   <div class="newtheorem">
+<!--l. 35--><p class="noindent" ><span class="head">
+<a 
+ id="x1-15002r1"></a>
+<span 
+class="cmbx-12">Proposition 1.</span>  </span><span 
+class="cmti-12">If </span><span 
+class="cmmi-12">T  </span>:  <img 
+src="m_physics_of_complex_systems91x.svg" alt="[0,1]"  class="left" align="middle">  <span 
+class="cmsy-10x-x-120">&#x2192; </span><img 
+src="m_physics_of_complex_systems92x.svg" alt="[0,1]"  class="left" align="middle">  <span 
+class="cmti-12">is an expanding map such as </span><img 
+src="m_physics_of_complex_systems93x.svg" alt="|T &#x2032;(x )|"  class="left" align="middle"> <span 
+class="cmmi-12">&#x003E;  </span>1
+<span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">x </span><span 
+class="cmsy-10x-x-120">&#x2208;</span><img 
+src="m_physics_of_complex_systems94x.svg" alt="[0,1]"  class="left" align="middle"> <span 
+class="cmti-12">then any point p of </span><span 
+class="cmmi-12">T</span><sup><span 
+class="cmmi-8">j</span></sup> <span 
+class="cmti-12">(</span><span 
+class="cmmi-12">j </span><span 
+class="cmsy-10x-x-120">&#x2208;</span><span 
+class="msbm-10x-x-120">&#x2124;</span><span 
+class="cmti-12">) is repelling.</span>
+   </div>
+<!--l. 37--><p class="indent" >
+   <div class="proof">
+<!--l. 39--><p class="indent" >   <span class="head">
+                                                                                    
+                                                                                    
+<span 
+class="cmti-12">Proof.</span> </span>If we take the derivative of <span 
+class="cmmi-12">T</span><sup><span 
+class="cmmi-8">j</span></sup> we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems95x.svg" alt="                                                    j&#x220F;-1   (      )
+(T j)&#x2032;(x) = T&#x2032;(T j- 1(x )) &#x00D7; T &#x2032;(T j- 2(x)) &#x00D7; ...&#x00D7; T &#x2032;(x) =    T&#x2032; T k (x)
+                                                    k=0
+" class="math-display" ></div>
+<!--l. 43--><p class="indent" >   and if now we calculate the module of this derivative we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems96x.svg" alt="             j- 1
+||(  j)&#x2032;   ||   &#x220F;  || &#x2032;(  k   )||
+|T    (x)| =     T  T  (x)   &#x226B;  1
+             k=0
+" class="math-display" ></div>
+<!--l. 47--><p class="indent" >   where, since the map is expanding, each term of the product is larger then one.   __
+   </div>
+   <div class="newtheorem">
+<!--l. 49--><p class="noindent" ><span class="head">
+<a 
+ id="x1-15003r2"></a>
+<span 
+class="cmbx-12">Proposition 2.</span>  </span><span 
+class="cmti-12">If two points p and q are part of the same periodic orbit then they are</span>
+<span 
+class="cmti-12">both of the same type.</span>
+   </div>
+<!--l. 51--><p class="indent" >
+   <div class="proof">
+<!--l. 53--><p class="indent" >   <span class="head">
+                                                                                    
+                                                                                    
+<span 
+class="cmti-12">Proof.</span> </span>Let&#8217;s consider an orbit of period <span 
+class="cmmi-12">j </span>with <span 
+class="cmmi-12">q </span>= <span 
+class="cmmi-12">T</span><sup><span 
+class="cmmi-8">k</span></sup><img 
+src="m_physics_of_complex_systems97x.svg" alt="(p )"  class="left" align="middle">, 0 <span 
+class="cmmi-12">&#x003C; k </span><span 
+class="cmsy-10x-x-120">&#x2264; </span><span 
+class="cmmi-12">j </span><span 
+class="cmsy-10x-x-120">- </span>1.
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems98x.svg" alt="(   )&#x2032;
+ T j  (p) = T&#x2032;(p0)...T &#x2032;(pj-1)
+" class="math-display" ></div>
+<!--l. 57--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems99x.svg" alt="(  )&#x2032;      (  )&#x2032;
+ Tj  (q) =  T j (pk) T&#x2032;(pk)...T &#x2032;(pk-1)...T &#x2032;(pk+j-1)
+" class="math-display" ></div>
+<!--l. 60--><p class="indent" >   Real numbers always commute, so it&#8217;s obvious that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems100x.svg" alt="(   )&#x2032;      (  )&#x2032;
+ T j  (q) =  Tj  (p)
+" class="math-display" ></div>
+                                                                                   __
+   </div>
+<!--l. 65--><p class="indent" >   We have just shown that the property of a point (local) is also a property of an orbit
+(global).
+                                                                                    
+                                                                                    
+   <h3 class="sectionHead"><span class="titlemark">3.4   </span> <a 
+ id="x1-160003.4"></a>Classification of chaotic systems</h3>
+<!--l. 2--><p class="noindent" >Let <span 
+class="cmmi-12">&#x03C0;</span><sup><span 
+class="cmr-8">1</span></sup> be a one-dimensional thorus (a circle). We define the transformations
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems101x.svg" alt="      1     1
+R &#x03B1; : &#x03C0; &#x2192;  &#x03C0; , R &#x03B1;(x) = (x + &#x03B1;) mod  1
+" class="math-display" ></div>
+<!--l. 6--><p class="indent" >   which are called rotations by an &#8220;angle&#8221; <span 
+class="cmmi-12">&#x03B1;</span>. <br 
+class="newline" />Now, if <span 
+class="cmmi-12">&#x03B1; </span>= <span 
+class="cmmi-12">p&#x2215;q</span>, with gcd(<span 
+class="cmmi-12">p,q</span>) = 1, then:
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 9--><p class="noindent" >all orbits are periodic with fundamental period <span 
+class="cmmi-12">q</span>.
+      </li>
+      <li class="itemize">
+      <!--l. 10--><p class="noindent" >if <span 
+class="cmmi-12">&#x03B1; </span>is not rational, then all orbits are dense.</li></ul>
+   <div class="proof">
+<!--l. 13--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 14--><p class="noindent" >We consider that <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub><sup><span 
+class="cmmi-8">n</span></sup>(<span 
+class="cmmi-12">x</span>) = <span 
+class="cmmi-12">x </span>is equivalent to (<span 
+class="cmmi-12">x </span>+ <span 
+class="cmmi-12">n&#x03B1;</span>)<span 
+class="cmmi-12">&#x00A0;mod</span><span 
+class="cmmi-12">&#x00A0;</span>1 = <span 
+class="cmmi-12">x</span>, so
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems102x.svg" alt="(        )
+        p-
+  x + n q   mod  1 = x
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+      <!--l. 18--><p class="noindent" >which means that,
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems103x.svg" alt=" p                kq
+n--=  k - &#x2192;  n =  ---
+ q                 p
+" class="math-display" ></div>
+      <!--l. 22--><p class="noindent" >and for <span 
+class="cmmi-12">n </span>to be an integer, p needs to be simplified, but it can&#8217;t be simplified with
+      <span 
+class="cmmi-12">q</span>, so it simplifies with <span 
+class="cmmi-12">k</span>, which is then equal to <span 
+class="cmmi-12">k </span>= <span 
+class="cmmi-12">mp</span>. So in the end we get
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems104x.svg" alt="n =  mq
+" class="math-display" ></div>
+      </li>
+      <li class="itemize">
+      <!--l. 26--><p class="noindent" >In order to prove that all orbits are dense, we prove that they are <span 
+class="cmmi-12">&#x03B5; </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">dense </span>for
+      all <span 
+class="cmmi-12">&#x03B5;</span>. <br 
+class="newline" />Since <span 
+class="cmmi-12">&#x03B1; </span>is not rational, the orbit must be infinite, because it is not periodic. Then,
+      we can say that there is at least one accumulation point in the orbit. <br 
+class="newline" />Now, call <span 
+class="cmmi-12">j </span>= <span 
+class="cmmi-12">n </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">m</span>, then we can say that <span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub><sup><span 
+class="cmmi-8">k</span><sub><span 
+class="cmmi-6">j</span></sub></sup><span 
+class="cmsy-10x-x-120">}</span><sub>
+<span 
+class="cmmi-8">k</span></sub> is <span 
+class="cmmi-12">&#x03B5; </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">dense </span>in <span 
+class="cmmi-12">&#x03C0;</span><sup><span 
+class="cmr-8">1</span></sup>, which
+      means that the orbit is dense.</li></ul>
+                                                                                   __
+   </div>
+                                                                                    
+                                                                                    
+<!--l. 31--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.4.1   </span> <a 
+ id="x1-170003.4.1"></a>Topological transitivity</h4>
+   <div class="newtheorem">
+<!--l. 32--><p class="noindent" ><span class="head">
+<a 
+ id="x1-17001r2"></a>
+<span 
+class="cmbx-12">Definition 2.</span>  </span><span 
+class="cmti-12">A dynamical system </span>(<span 
+class="cmmi-12">M,&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup>)  <span 
+class="cmti-12">is called topologically transitive (or just</span>
+<span 
+class="cmti-12">transitive) if exists </span><span 
+class="cmmi-12">x </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">M </span><span 
+class="cmti-12">such that the future orbit</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems105x.svg" alt="  t        t
+O  (x) = {&#x03D5; (x)}
+" class="math-display" ></div>
+<!--l. 37--><p class="indent" >   <span 
+class="cmti-12">is dense.</span>
+   </div>
+<!--l. 38--><p class="indent" >   So a transitive system is a system that has at least one dense orbit. Going in that
+direction, if all the orbits are dense we say that the system is minimal.
+   <div class="newtheorem">
+<!--l. 40--><p class="noindent" ><span class="head">
+<a 
+ id="x1-17002r3"></a>
+<span 
+class="cmbx-12">Definition 3.</span>  </span><span 
+class="cmti-12">A system is called minimal if all forward orbits </span><span 
+class="cmmi-12">O</span><sup><span 
+class="cmmi-8">t</span></sup>(<span 
+class="cmmi-12">x</span>) <span 
+class="cmti-12">are dense.</span>
+   </div>
+<!--l. 42--><p class="indent" >    Another very important definition is that of an invariant subset:
+   <div class="newtheorem">
+<!--l. 44--><p class="noindent" ><span class="head">
+<a 
+ id="x1-17003r4"></a>
+<span 
+class="cmbx-12">Definition 4.</span>  </span><span 
+class="cmti-12">A subset </span><span 
+class="cmmi-12">A </span><span 
+class="cmsy-10x-x-120">&#x2286; </span><span 
+class="cmmi-12">M </span><span 
+class="cmti-12">is called invariant if </span><span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmsy-8">-</span><span 
+class="cmmi-8">t</span></sup>(<span 
+class="cmmi-12">A</span>) = <span 
+class="cmmi-12">A </span><span 
+class="cmti-12">for every </span><span 
+class="cmmi-12">t</span><span 
+class="cmti-12">. </span><br 
+class="newline" /><span 
+class="cmti-12">Note that if </span><span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> <span 
+class="cmti-12">is invertible, this statement is equivalent to saying that </span><span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup>(<span 
+class="cmmi-12">A</span>) = <span 
+class="cmmi-12">A </span><span 
+class="cmti-12">for</span>
+<span 
+class="cmti-12">every </span><span 
+class="cmmi-12">t</span><span 
+class="cmti-12">.</span>
+                                                                                    
+                                                                                    
+   </div>
+<!--l. 47--><p class="indent" >    Finding invariant subsets is important because we know that if we have an initial
+condition in that region, the orbit is going to stay in there. Of course, this doesn&#8217;t give us the
+trajectory, but it helps us by restricting the phase space. <br 
+class="newline" /><br 
+class="newline" />A function <span 
+class="cmmi-12">f </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">R </span>(observable) is called invariant if <span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2218; </span><span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> = <span 
+class="cmmi-12">f </span>for every <span 
+class="cmmi-12">t </span><span 
+class="cmsy-10x-x-120">&#x2265; </span>0. This is
+what is called in mechanics a prime integral of motion. <br 
+class="newline" />Suppose <span 
+class="cmmi-12">f </span>= 1<sub><span 
+class="cmmi-8">a</span></sub>, where 1<sub><span 
+class="cmmi-8">a</span></sub>(<span 
+class="cmmi-12">x</span>) = 1 if <span 
+class="cmmi-12">x </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">A </span>and 1<sub><span 
+class="cmmi-8">a</span></sub>(<span 
+class="cmmi-12">x</span>) = 0 if <span 
+class="cmmi-12">x</span><img 
+src="m_physics_of_complex_systems106x.svg" alt="&#x2215;&#x2208;"  class="notin" ><span 
+class="cmmi-12">A</span>. Then we have
+that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems107x.svg" alt="1a &#x2218; &#x03D5;t = 1a
+" class="math-display" ></div>
+<!--l. 54--><p class="indent" >   but also
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems108x.svg" alt="1  &#x2218; &#x03D5;t = 1 -t
+ a         &#x03D5; (A)
+" class="math-display" ></div>
+<!--l. 58--><p class="indent" >   So combining the two we get that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems109x.svg" alt="  -t
+&#x03D5;   (A) = A
+" class="math-display" ></div>
+   <div class="newtheorem">
+<!--l. 62--><p class="noindent" ><span class="head">
+                                                                                    
+                                                                                    
+<a 
+ id="x1-17004r3"></a>
+<span 
+class="cmbx-12">Proposition 3.</span>  </span><span 
+class="cmti-12">If  a  dynamical  system  is  topologically  transitive,  there  exists  no</span>
+<span 
+class="cmti-12">continuous invariant observables other than constant functions.</span>
+   </div>
+<!--l. 64--><p class="indent" >
+   <div class="proof">
+<!--l. 67--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>Say that <span 
+class="cmmi-12">O</span><sup><span 
+class="cmmi-8">t</span></sup>(<span 
+class="cmmi-12">x</span><sub>
+<span 
+class="cmr-8">0</span></sub>) is dense. Now, taking any <span 
+class="cmmi-12">y </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">M</span>, we can say that exists a
+sequence <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub> = <span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span><sub><span 
+class="cmmi-6">j</span></sub></sup>(<span 
+class="cmmi-12">x</span><sub>
+<span 
+class="cmr-8">0</span></sub>) such that <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmsy-10x-x-120">-&#x2192;</span><span 
+class="cmmi-12">y</span>. <br 
+class="newline" />Now, suppose that a function <span 
+class="cmmi-12">f </span>is continuous, then
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems110x.svg" alt="f(xj) -&#x2192;  f(y)
+" class="math-display" ></div>
+<!--l. 72--><p class="indent" >   and suppose that <span 
+class="cmmi-12">f </span>is invariant, so that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems111x.svg" alt="           tj
+f(xj) = f(&#x03D5;  (x0)) = f(x0) = C
+" class="math-display" ></div>
+<!--l. 76--><p class="indent" >   Since we have taken <span 
+class="cmmi-12">f </span>to be continuous, <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">j</span></sub>) must converge to <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">y</span>), but since it
+is constant and equal to <span 
+class="cmmi-12">C</span>, it can only converge to <span 
+class="cmmi-12">C</span>, which means that
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems112x.svg" alt="f(y) = C
+" class="math-display" ></div>
+<!--l. 80--><p class="indent" >   which is a constant function.                                                                     __
+   </div>
+<!--l. 82--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.4.2   </span> <a 
+ id="x1-180003.4.2"></a>Rotation on a d-thorus</h4>
+<!--l. 83--><p class="noindent" >Now we try to generalize rotations of the circle to translations of a d-thorus. <br 
+class="newline" />We define the translation on a d-thorus <span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">&#x03B3;</span></sub> as:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems113x.svg" alt="T &#x03B3; : &#x03C0;d &#x2192; &#x03C0;d, T &#x03B3;(x) = (x1 + &#x03B3;1, x2 + &#x03B3;2, ...) mod 1 = (x + &#x03B3;) mod 1
+" class="math-display" ></div>
+   <div class="newtheorem">
+<!--l. 88--><p class="noindent" ><span class="head">
+<a 
+ id="x1-18001r5"></a>
+<span 
+class="cmbx-12">Definition 5.</span>  </span><span 
+class="cmti-12">A  collection  of  real  numbers  </span><span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">&#x03BB;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,&#x03BB;</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...</span><span 
+class="cmsy-10x-x-120">} </span><span 
+class="cmti-12">is  said  to  be  rationally</span>
+<span 
+class="cmti-12">independent if none of them can be written as a combination of the others with rational</span>
+<span 
+class="cmti-12">coefficients.</span>
+   </div>
+<!--l. 90--><p class="indent" >    Now that we have defined the concept of rational dependence, we can use it to introduce
+a characteristic of the translations on d-thori in the case where the vector components are
+rationally independent:
+   <div class="newtheorem">
+<!--l. 92--><p class="noindent" ><span class="head">
+<a 
+ id="x1-18002r4"></a>
+                                                                                    
+                                                                                    
+<span 
+class="cmbx-12">Proposition 4.</span>  </span><span 
+class="cmti-12">Given a translation on a d-thorus </span><span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">&#x03B3;</span></sub><span 
+class="cmti-12">, it is minimal if and only if</span>
+<span 
+class="cmsy-10x-x-120">{</span>1<span 
+class="cmmi-12">,&#x03B3;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,&#x03B3;</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...</span><span 
+class="cmsy-10x-x-120">}</span><span 
+class="cmti-12">are rationally independent.</span>
+   </div>
+<!--l. 94--><p class="indent" >    In this case, topological transitivity (so the fact that the system hase one dense orbit) is
+equivalent to minimality (so all the system&#8217;s orbits are dense). <br 
+class="newline" />This is due to the fact that translations commute. In fact, if we define a translation of the
+initial point <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems114x.svg" alt="Tx -x (x0) = x
+     0
+" class="math-display" ></div>
+<!--l. 101--><p class="indent" >   then we see that translating the orbit of <span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">&#x03B3;</span></sub> starting from <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">0</span></sub> gives an orbit which is
+identical to the orbit starting from <span 
+class="cmmi-12">x</span>:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems115x.svg" alt="Ot(x0 ) = O (x)
+" class="math-display" ></div>
+<!--l. 105--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems116x.svg" alt="Tx-x0Ot (x0 ) = Tx-x0(Tk&#x03B3;(x0)) = T k(Tx-x0(x0)) = O(x )
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 108--><p class="indent" >   which means that the translated orbit is dense if and only if the initial one is dense, so
+translating a dense set we get another dense set. <br 
+class="newline" /><br 
+class="newline" />So we only need to show topological transitivity, instead of minimality. Let&#8217;s show that
+topological transitivity implies rational independence: By contradiction, suppose that
+1<span 
+class="cmmi-12">,&#x03B3;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,&#x03B3;</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,... </span>are not rationally independent, which means that exists a set <span 
+class="cmmi-12">k</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,k</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...</span>, where <span 
+class="cmmi-12">k</span><sub><span 
+class="cmmi-8">i</span></sub>
+are not all zero, such that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems117x.svg" alt="&#x2211;
+    ki&#x03B3;i = 0
+  i
+" class="math-display" ></div>
+<!--l. 113--><p class="indent" >   We then define the function <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) = <span 
+class="cmmi-12">e</span><sup><span 
+class="cmr-8">2</span><span 
+class="cmmi-8">&#x03C0;i</span><img 
+src="m_physics_of_complex_systems118x.svg" alt="&#x27E8;k,x&#x27E9;"  class="left" align="middle"></sup>, which is continuous and non constant,
+because not all <span 
+class="cmmi-12">k</span><sub><span 
+class="cmmi-8">i</span></sub> are zero (so you have at least one <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">i</span></sub> in the exponent). Now we just need to
+show that <span 
+class="cmmi-12">f </span>is invariant. To do this we calculate <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">&#x03B3;</span></sub>(<span 
+class="cmmi-12">x</span>)):
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems119x.svg" alt="                                    (           )     (            )
+                                         &#x2211;                 &#x2211;
+f(T&#x03B3;(x)) = exp(2&#x03C0;i &#x27E8;k,x + &#x03B3;&#x27E9;) = exp  2 &#x03C0;i    kixi  exp  2&#x03C0;i    ki&#x03B3;i
+                                          i                  i
+" class="math-display" ></div>
+<!--l. 117--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems120x.svg" alt="      (            )
+           &#x2211;
+=  exp  2&#x03C0;i    kixi  =  f(x)
+             i
+" class="math-display" ></div>
+<!--l. 120--><p class="indent" >   and this holds for every <span 
+class="cmmi-12">x </span>in the thorus. <br 
+class="newline" /><br 
+class="newline" />Let&#8217;s take a system on a ring, and the dynamics represents rotations on this ring. We can
+imagine this as a cave tube filled with fluid (marmellade). In this case, the motion of the fluid
+will be laminar. <br 
+class="newline" />In discrete time, we take a surface with codimension 1, which is intersects the trajectory in a
+point <span 
+class="cmmi-12">x</span>, and we want to find after how many iterations the trajectory intersects the surface
+again, so in other words, how long it&#8217;s going to take for the trajectory to intersect the surface
+again. <br 
+class="newline" />A Poincarre section of a continuous dynamical system is a codimension 1 submanifold such
+that all trajectories cross it transversally (more or less). <br 
+class="newline" />In this case, the so called Poincarre map, also known as first return map, is defined as
+follows:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems121x.svg" alt="                           tM0(x)                  t
+TM0 : M0 &#x2192;  M0,  TM (x) = &#x03D5;     (x) = min {t &#x003E; 0|&#x03D5; (x) &#x2208; M0 }
+" class="math-display" ></div>
+<!--l. 129--><p class="indent" >   where <span 
+class="cmmi-12">t</span><sub><span 
+class="cmmi-8">M</span><sub><span 
+class="cmr-6">0</span></sub></sub>  is the return time to <span 
+class="cmmi-12">M</span><sub><span 
+class="cmr-8">0</span></sub>.
+<!--l. 131--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.4.3   </span> <a 
+ id="x1-190003.4.3"></a>The Kronecker flow</h4>
+<!--l. 132--><p class="noindent" >Continuous time dynamical system, the Kronecker flow.
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems122x.svg" alt="&#x03D5;t : &#x03C0;d &#x2192; &#x03C0;d
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 136--><p class="indent" >   given by the solutions of the ODE
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems123x.svg" alt="x&#x02D9;=  &#x03C9;
+" class="math-display" ></div>
+<!--l. 140--><p class="indent" >   In this case it&#8217;s very easy to find the flux, which is simply
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems124x.svg" alt="&#x03D5;t(x) = (x + &#x03C9;t) mod 1
+" class="math-display" ></div>
+<!--l. 144--><p class="indent" >   In general terms, suppose that <span 
+class="cmmi-12">&#x03C9; </span>= (<span 
+class="cmmi-12">&#x03C9;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,&#x03C9;</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...,&#x03C9;</span><sub><span 
+class="cmmi-8">d</span></sub>) with <span 
+class="cmmi-12">&#x03C9;</span><sub><span 
+class="cmmi-8">d</span></sub> <span 
+class="cmmi-12">&#x003E; </span>0. Then the bottom side of
+the thorus <span 
+class="cmmi-12">M</span><sub><span 
+class="cmr-8">0</span></sub> is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems125x.svg" alt="M0  = {(x1,x2, ...,xd -1,0) &#x2208; &#x03C0;d } = &#x03C0;d-1
+" class="math-display" ></div>
+<!--l. 148--><p class="indent" >   and we know that all trajectories must cross this subspace. <br 
+class="newline" />The first return map is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems126x.svg" alt="TM0  : M0 &#x2192;  M0,  TM0 (x) = &#x03D5;tM0(x)(x) = x + -&#x03C9;- mod  1
+                                            &#x03C9;d
+" class="math-display" ></div>
+<!--l. 153--><p class="indent" >   This is the same as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems127x.svg" alt="     d- 1    d-1
+T&#x03B3; : &#x03C0;   &#x2192;  &#x03C0;
+" class="math-display" ></div>
+<!--l. 157--><p class="indent" >   with <span 
+class="cmmi-12">&#x03B3; </span>= (<span 
+class="cmmi-12">&#x03C9;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">&#x2215;&#x03C9;</span><sub><span 
+class="cmmi-8">d</span></sub><span 
+class="cmmi-12">,&#x03C9;</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">&#x2215;&#x03C9;</span><sub><span 
+class="cmmi-8">d</span></sub><span 
+class="cmmi-12">,...</span>). <br 
+class="newline" />Now we ask ourselves, when are the orbits of <span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">&#x03B3;</span></sub> dense? The answer is that they are when
+<span 
+class="cmmi-12">&#x03B3;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,&#x03B3;</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">,...,&#x03B3;</span><sub><span 
+class="cmmi-8">d</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">, </span>1 are rationally independent. But this condition is met if and only if <span 
+class="cmmi-12">&#x03C9;</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,...,&#x03C9;</span><sub><span 
+class="cmmi-8">d</span></sub>
+are rationally independent. <br 
+class="newline" />This means that the trajectories of <span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> are dense if and only if <span 
+class="cmmi-12">&#x03C9;</span><sub>
+<span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">,...,&#x03C9;</span><sub><span 
+class="cmmi-8">d</span></sub> are rationally
+independent.
+<!--l. 161--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.4.4   </span> <a 
+ id="x1-200003.4.4"></a>Important map</h4>
+<!--l. 162--><p class="noindent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems128x.svg" alt="T2(x) = T(x ) = 2x mod  1
+" class="math-display" ></div>
+<!--l. 165--><p class="indent" >   We can think of this map as either a map that goes from [0<span 
+class="cmmi-12">, </span>1] to itself, or as a map on a
+thorus. Alternatively it can be written as
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems129x.svg" alt="T (x) = 2x, 0 &#x2264; x &#x2264;  1-
+                     2
+" class="math-display" ></div>
+<!--l. 169--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems130x.svg" alt="                1
+T (x) = 2x - 1, --&#x2264;  x &#x2264; 1
+                2
+" class="math-display" ></div>
+<!--l. 172--><p class="indent" >   If we consider it as a map on a thorus, it is quite easy to see that this map is continuous.
+<br 
+class="newline" />As we have seen, this map is chaotic. To understand, if we consider two points <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">1</span></sub>
+and <span 
+class="cmmi-12">x</span><sub><span 
+class="cmr-8">2</span></sub>, positioned at a distance <span 
+class="cmmi-12">&#x03B5;</span>, their distance after one iteration becomes 4<span 
+class="cmmi-12">&#x03B5;</span>.
+<br 
+class="newline" />
+<!--l. 175--><p class="indent" >   We understand that after a number of iterations these two points diverge pretty quickly,
+no matter how small we take <span 
+class="cmmi-12">&#x03B5; </span>to be. <br 
+class="newline" />We write <span 
+class="cmmi-12">x </span>as <span 
+class="cmmi-12">x </span>= 0<span 
+class="cmmi-12">.d</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-12">d</span><sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">d</span><sub><span 
+class="cmr-8">3</span></sub>, where <span 
+class="cmmi-12">d</span><sub><span 
+class="cmmi-8">i</span></sub> are the digits. It can be written as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems131x.svg" alt="    &#x2211;&#x221E;
+x =     2-idi
+     i
+" class="math-display" ></div>
+<!--l. 180--><p class="indent" >   We define the map <span 
+class="cmmi-12">T</span>(<span 
+class="cmmi-12">x</span>) as
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems132x.svg" alt="T (x) = T(0.d d d ) = 0.d d
+             1 2 3       2 3
+" class="math-display" ></div>
+   <div class="newtheorem">
+<!--l. 184--><p class="noindent" ><span class="head">
+<a 
+ id="x1-20001r6"></a>
+<span 
+class="cmbx-12">Definition 6.</span>  </span><span 
+class="cmti-12">A  topological  dynamical  system  (a  system  for  which  we  care  about</span>
+<span 
+class="cmti-12">topological properties) is said to be topologically mixing if </span><span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">U,V  </span><span 
+class="cmti-12">non-empty open sets,</span>
+<span 
+class="cmsy-10x-x-120">&#x2203;</span><span 
+class="cmmi-12">N </span>= <span 
+class="cmmi-12">N</span>(<span 
+class="cmmi-12">U,V </span>) <span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">N </span><span 
+class="cmti-12">such that</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems133x.svg" alt="&#x03D5;t(U ) &#x2229; V &#x2044;= &#x2205;
+" class="math-display" ></div>
+<!--l. 189--><p class="indent" >   <span 
+class="cmti-12">for all </span><span 
+class="cmmi-12">t</span><span 
+class="cmti-12">.</span>
+   </div>
+<!--l. 190--><p class="indent" >
+   <div class="newtheorem">
+<!--l. 191--><p class="noindent" ><span class="head">
+<a 
+ id="x1-20002r5"></a>
+<span 
+class="cmbx-12">Proposition 5.</span>  </span>(<span 
+class="cmmi-12">M,&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup>) <span 
+class="cmti-12">is topologically transitive if and only if </span><span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">U,V </span><span 
+class="cmti-12">non-empty open</span>
+<span 
+class="cmti-12">sets </span><span 
+class="cmsy-10x-x-120">&#x2203;</span><span 
+class="cmmi-12">N </span>= <span 
+class="cmmi-12">N</span>(<span 
+class="cmmi-12">U,V </span>) <span 
+class="cmti-12">so that </span><span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">N</span></sup>(<span 
+class="cmmi-12">U</span>) <span 
+class="cmsy-10x-x-120">&#x2229; </span><span 
+class="cmmi-12">V</span> <span 
+class="cmmi-12">&#x2260;</span><span 
+class="cmsy-10x-x-120">&#x2205;</span><span 
+class="cmti-12">.</span>
+   </div>
+<!--l. 193--><p class="indent" >    A corollary of this proposotion is that topological mixing implies topologically transitive.
+<br 
+class="newline" /><br 
+class="newline" />We want to show that this map is topologically mixing. We know that a set, which is the arc
+connecting two points, expands in length after each iteration, and after a certain point it will
+                                                                                    
+                                                                                    
+fill the whole circle, and at that point it will keep being the whole circle, and in
+that case it&#8217;s obvious that the intersection is not null. So we just need to prove
+that after a certain number of iteration the expanded set will fill the whole circle.
+<br 
+class="newline" />The function after <span 
+class="cmmi-12">n </span>iterations is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems134x.svg" alt="Tn(x ) = 2n (x) mod 1
+" class="math-display" ></div>
+<!--l. 200--><p class="indent" >   For any <span 
+class="cmmi-12">n</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems135x.svg" alt="   [          ]
+Tn(  k-, k-+-1 ) = [0, 1] = &#x03C0;1
+     2n   2n
+" class="math-display" ></div>
+<!--l. 204--><p class="indent" >   Since <span 
+class="cmmi-12">U </span>is open, exists an <span 
+class="cmmi-12">n </span>with 0 <span 
+class="cmmi-12">&#x003C; k &#x003C; </span>2<sup><span 
+class="cmmi-8">n</span></sup> <span 
+class="cmsy-10x-x-120">- </span>1 such that <img 
+src="m_physics_of_complex_systems136x.svg" alt="[       ]
+  kn-, k+n1
+  2  2"  class="left" align="middle">) <span 
+class="cmsy-10x-x-120">&#x2282; </span><span 
+class="cmmi-12">U</span>
+<br 
+class="newline" /><br 
+class="newline" />The number of periodic points of period <span 
+class="cmmi-12">n </span>of this map are 2<sup><span 
+class="cmmi-8">n</span></sup> <span 
+class="cmsy-10x-x-120">- </span>1.
+<!--l. 208--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.4.5   </span> <a 
+ id="x1-210003.4.5"></a>Arnold&#8217;s cat map</h4>
+<!--l. 209--><p class="noindent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems137x.svg" alt="T : &#x03C0;2 &#x2192; &#x03C0;2, T (x) = T (x1, x2) = A(x1,x2 ) mod 1
+" class="math-display" ></div>
+<!--l. 212--><p class="indent" >   where <span 
+class="cmmi-12">A </span>is the matrix
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems138x.svg" alt="     (2  1 )
+A =
+      1  1
+" class="math-display" ></div>
+<!--l. 219--><p class="indent" >   If we look how the points (1<span 
+class="cmmi-12">, </span>0) and (0<span 
+class="cmmi-12">, </span>1) transform, we see that they go to 2<span 
+class="cmmi-12">, </span>1 and (1<span 
+class="cmmi-12">, </span>1).
+<br 
+class="newline" />This map preserves the Lebesgue measure <span 
+class="cmmi-12">&#x03BC;</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems139x.svg" alt="    -1
+&#x03BC;(T   B ) = &#x03BC;(B )
+" class="math-display" ></div>
+<!--l. 224--><p class="indent" >   If the system is bijective, this is the same as saying
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems140x.svg" alt="&#x03BC;(T B ) = &#x03BC; (B)
+" class="math-display" ></div>
+<!--l. 228--><p class="indent" >   so we can go forward in time. We know that the measure is preserved because det <span 
+class="cmmi-12">A </span>= 1.
+<br 
+class="newline" />We study the eingenvalues and eigenvectors of this matrix. These are <span 
+class="cmmi-12">&#x03BB;</span><sub><span 
+class="cmr-8">1</span></sub> = <span 
+class="cmmi-12">&#x03BB; </span>= <img 
+src="m_physics_of_complex_systems141x.svg" alt="3+&#x221A;5-
+  2"  class="frac" align="middle">
+and <span 
+class="cmmi-12">&#x03BB;</span><sub><span 
+class="cmr-8">2</span></sub> = <span 
+class="cmmi-12">&#x03BB;</span><sup><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup> = <img 
+src="m_physics_of_complex_systems142x.svg" alt="  &#x221A;-
+3-25-"  class="frac" align="middle">, with corresponding eigenvectors (1<span 
+class="cmmi-12">,</span><img 
+src="m_physics_of_complex_systems143x.svg" alt="&#x221A;-
+-5-2-1"  class="frac" align="middle">) and (1<span 
+class="cmmi-12">,</span><span 
+class="cmsy-10x-x-120">-</span><img 
+src="m_physics_of_complex_systems144x.svg" alt="&#x221A;-
+-52+1-"  class="frac" align="middle">).
+                                                                                    
+                                                                                    
+<br 
+class="newline" />The two eigenvectors represent the directions of maximum expansion and of maximum
+contraction. <br 
+class="newline" />If we take a point on the expanding eigenvector, its orbit diverges from the origin, whereas
+for a point on the contracting eigenvector the orbit is attracted to the origin. If we take a
+point which is a linear combination of the two directions, after each iteration the point
+gets closer and closer to the expanding eigenvector, because the component along
+the contracting eigenvector gets smaller after each iteration, and eventually it will
+disappear.
+   <div class="newtheorem">
+<!--l. 232--><p class="noindent" ><span class="head">
+<a 
+ id="x1-21001r6"></a>
+<span 
+class="cmbx-12">Proposition 6.</span>  </span><span 
+class="cmti-12">The cat map </span><span 
+class="cmmi-12">T</span><sub><span 
+class="cmmi-8">A</span></sub> <span 
+class="cmti-12">is topologically mixing.</span>
+   </div>
+<!--l. 234--><p class="indent" >    This map is an example of an &#8221;hyperbolic dynamical system&#8221;. Let&#8217;s call
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems145x.svg" alt="                                      &#x221A; --
+   u                      2           --5 --1
+W   (x) = {y = (y1,y2) &#x2208; &#x03C0; |y2 - x2 =    2   (y1 - x1) mod 1 }
+" class="math-display" ></div>
+<!--l. 239--><p class="indent" >   where <span 
+class="cmmi-12">x </span>are constants, an unstable manifold. Then we can define the stable manifold
+as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems146x.svg" alt="                                       &#x221A; --
+  s                      2               5 + 1
+W  (x) = {y = (y1,y2) &#x2208; &#x03C0; |y2 - x2 = - ---2---(y1 - x1) mod 1}
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 243--><p class="indent" >   Why do we expect systems like this to have a lot of periodic orbits? Because of the
+stretching and folding mechanism. To see this, let&#8217;s consider an hyperbolic rectangle, which is
+made up of pieces of stable manifolds in some points and unstable manifolds in other points.
+Now, we apply our dynamics to it, so the unstable manifolds will stretch and the stable ones
+will contract. <br 
+class="newline" />So if we have the rectangle <span 
+class="cmmi-12">R </span>and the transformed rectangle <span 
+class="cmmi-12">R</span><span 
+class="cmsy-10x-x-120">&#x2032; </span>= <span 
+class="cmmi-12">T</span>(<span 
+class="cmmi-12">R</span>), <span 
+class="cmmi-12">R</span><span 
+class="cmsy-10x-x-120">&#x2032; </span>will cross <span 
+class="cmmi-12">R </span>ad
+some point, with the condition that we can&#8217;t have unstable manifolds crossing other
+unstable manifolds. Once we have found the intersection of the original rectangle
+and the transformed rectangle, we have found a fixed point of the transormation,
+hence we have found a periodic point, which implies the existence of a periodic
+orbit.
+                                                                                    
+                                                                                    
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;4</span><br /><a 
+ id="x1-220004"></a>Ergodic theory</h2>
+<!--l. 1--><p class="noindent" >Ergodic theory is the study of dynamical systems from the point of view of measure theory,
+hence of probability. <br 
+class="newline" />One first measure comes from analytical mechanics. We consider a measure space <span 
+class="cmmi-12">M</span>, and in
+this space we have an energetic hypersurface. Then we define the Liouville measure
+as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems147x.svg" alt="       d&#x03C3;
+d&#x03BC; = ------
+     |&#x2207;H  |
+" class="math-display" ></div>
+<!--l. 6--><p class="indent" >   where <span 
+class="cmmi-12">d&#x03C3; </span>is the measure of an infinitesimal portion of the hypersurface and <span 
+class="cmsy-10x-x-120">&#x2207;</span><span 
+class="cmmi-12">H </span>is the
+gradient of the hamiltonian of the system. <br 
+class="newline" />We can derive the expression for the Liouville measure by considering the hypersurface with a
+bit of thickness in the direction of the gradient, forming in this way a volume <span 
+class="cmmi-12">A</span>,
+and of course the system&#8217;s dynamics is going to conserve the Lebesgue measure of
+<span 
+class="cmmi-12">A</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems148x.svg" alt="       t         t
+Leb (A ) = Leb (&#x03D5; (A )) = Leb(A )
+" class="math-display" ></div>
+<!--l. 11--><p class="indent" >   If we then move in the direction of the gradient by a quantity <span 
+class="cmmi-12">h</span>, we increase the energy by
+a quantity
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems149x.svg" alt="&#x0394;H   = |&#x2207;H  |h
+" class="math-display" ></div>
+<!--l. 15--><p class="indent" >   Then the conservation of the Lebesgue measure implies that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems150x.svg" alt="    t  t
+&#x03C3;(B )h  = &#x03C3; (B)h
+" class="math-display" ></div>
+<!--l. 19--><p class="indent" >   so we are not only on the same energy surface, we are in the same energy shell. We can
+write this as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems151x.svg" alt="    t
+&#x03C3;-(B--)&#x0394;H-- = &#x03C3;-(B-)&#x0394;H--
+  |&#x2207;Hf |       |&#x2207;Hi  |
+" class="math-display" ></div>
+<!--l. 23--><p class="indent" >   and we can simplify the delta, so
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems152x.svg" alt="    t
+&#x03C3;(B-)-=  &#x03C3;-(B)-
+|&#x2207;Hf  |   |&#x2207;Hi |
+" class="math-display" ></div>
+<!--l. 27--><p class="indent" >   and we have thus obtained the expression for the Liouville measure. <br 
+class="newline" /><br 
+class="newline" />In ergodic theory we consider the space, along with the measure and the systems flux,
+(<span 
+class="cmmi-12">M,&#x03BC;,&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup>), or in discrete time (<span 
+class="cmmi-12">M,&#x03BC;,T</span>). <br 
+class="newline" />The first thing that we could ask ourselves is the probability that <span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> <span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">A</span>. So now we don&#8217;t
+                                                                                    
+                                                                                    
+consider a single trajectory but all the possible trajectories, and want to find the probability
+that they are contained in a certain portion of space. This probability is equal
+to
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems153x.svg" alt="   t            -t                     t
+P(&#x03D5;  &#x2208; A ) = &#x03BC; (&#x03D5; (A )) = &#x03BC; ({x  &#x2208; M  | &#x03D5; (x) &#x2208; A })
+" class="math-display" ></div>
+<!--l. 33--><p class="indent" >   A this point we can define the concept of a measure preserved by the dynamics
+   <div class="newtheorem">
+<!--l. 34--><p class="noindent" ><span class="head">
+<a 
+ id="x1-22001r7"></a>
+<span 
+class="cmbx-12">Definition 7.</span>  </span><span 
+class="cmti-12">A measure is preserved by the dynamics if</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems154x.svg" alt="    -t
+&#x03BC; (&#x03D5;  (A)) = &#x03BC; (A )
+" class="math-display" ></div>
+<!--l. 39--><p class="indent" >   <span 
+class="cmti-12">where </span><span 
+class="cmmi-12">A </span><span 
+class="cmti-12">must be measurable, so it must belong the the </span><span 
+class="cmmi-12">&#x03C3;</span><span 
+class="cmsy-10x-x-120">-</span><span 
+class="cmti-12">algebra of the space.</span>
+   </div>
+<!--l. 40--><p class="indent" >    From now on we restrict to measures that preserve the dynamics, which are also called
+invariant measures. <br 
+class="newline" /><br 
+class="newline" />An example of a measure preserving dynamical system is the doubling map. To see this, if we
+take the counter image of a set <span 
+class="cmmi-12">A</span>, this is equal to the union of two sets <span 
+class="cmmi-12">A</span><sub><span 
+class="cmr-8">1</span></sub> and <span 
+class="cmmi-12">A</span><sub><span 
+class="cmr-8">2</span></sub>, which are
+measurable. In this case it is important to consider the counter image of the set, because the
+image wouldn&#8217;t preserve the set
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems155x.svg" alt="&#x03BC;(T A ) &#x2044;= &#x03BC; (A)
+" class="math-display" ></div>
+<!--l. 46--><p class="indent" >   When the two are equal, we have forward preservation. <br 
+class="newline" />An observable is any function of the phase space, <span 
+class="cmmi-12">f </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">R</span>, that represents any quantity of
+the system that can be observed and measured, thus giving us information about the system.
+An observable could the the temperature in a room, the moment of a particle or anything
+really.
+   <div class="newtheorem">
+<!--l. 48--><p class="noindent" ><span class="head">
+<a 
+ id="x1-22002r8"></a>
+<span 
+class="cmbx-12">Definition 8.</span>  </span><span 
+class="cmti-12">An observable </span><span 
+class="cmmi-12">f </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">R </span><span 
+class="cmti-12">is said to be dynamics invariant (in ergodic</span>
+<span 
+class="cmti-12">theory) if</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems156x.svg" alt="f &#x2218; &#x03D5;t(x) = f(x)
+" class="math-display" ></div>
+   </div>
+<!--l. 53--><p class="indent" >   We notice that this is equivalent to the definition that we had before, but in the study of
+dynamical systems we asked for the relation to hold for every value of <span 
+class="cmmi-12">x</span>, but we
+can&#8217;t do this in ergodic theory, because not all the points in the space are seen
+by the measure. In ergodic theory we say that a relation holds if it holds almost
+everywhere, that is, if it doesn&#8217;t hold only on subsets of the space that have zero measure.
+<br 
+class="newline" /><br 
+class="newline" />We also define the concept of an invariant set.
+   <div class="newtheorem">
+<!--l. 56--><p class="noindent" ><span class="head">
+<a 
+ id="x1-22003r9"></a>
+                                                                                    
+                                                                                    
+<span 
+class="cmbx-12">Definition 9.</span>  </span><span 
+class="cmti-12">A set </span><span 
+class="cmmi-12">A </span><span 
+class="cmti-12">is invariant if</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems157x.svg" alt="&#x03D5;t(A ) = A mod  &#x03BC;
+" class="math-display" ></div>
+<!--l. 61--><p class="indent" >   <span 
+class="cmti-12">We can also write it as</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems158x.svg" alt="    -t
+&#x03BC; (&#x03D5;  A&#x0394;A  ) = 0
+" class="math-display" ></div>
+<!--l. 65--><p class="indent" >   <span 
+class="cmti-12">where</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems159x.svg" alt="A &#x0394;B  = (A &#x222A; B ) (A &#x2229; B )
+" class="math-display" ></div>
+   </div>
+<!--l. 69--><p class="indent" >   We then define push-forward measures:
+   <div class="newtheorem">
+<!--l. 71--><p class="noindent" ><span class="head">
+<a 
+ id="x1-22004r10"></a>
+                                                                                    
+                                                                                    
+<span 
+class="cmbx-12">Definition 10.</span>  </span><span 
+class="cmti-12">We define a push-forward measure as</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems160x.svg" alt="  t             -t
+&#x03D5;  * &#x03BC; (A) = &#x03BC; (&#x03D5;  (A))
+" class="math-display" ></div>
+   </div>
+<!--l. 76--><p class="indent" >   The measure contains the counter image because we are considering the points at an
+initial time and this allows us to require that they will be in the set at forward times. We can
+say, in probability terms, that the probability of being in <span 
+class="cmmi-12">A </span>at time <span 
+class="cmmi-12">t </span>is the same as the
+probability of being in <span 
+class="cmmi-12">A </span>at previous times. <br 
+class="newline" /><br 
+class="newline" />Now we can note that a measure <span 
+class="cmmi-12">&#x03BC; </span>is preserved by the dynamics if an only if
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems161x.svg" alt="&#x03D5;t * &#x03BC; = &#x03BC;
+" class="math-display" ></div>
+<!--l. 82--><p class="indent" >   Now, if <span 
+class="cmmi-12">&#x03D5;</span><sup><span 
+class="cmmi-8">t</span></sup> <span 
+class="cmsy-10x-x-120">* </span><span 
+class="cmmi-12">&#x03BC; </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">&#x03BD;</span>, then <span 
+class="cmmi-12">&#x03BD; </span>is called an equilibrium measure.
+   <h3 class="sectionHead"><span class="titlemark">4.1   </span> <a 
+ id="x1-230004.1"></a>Birkhoff&#8217;s ergodic theorem</h3>
+<!--l. 84--><p class="noindent" >Given an observable <span 
+class="cmmi-12">f </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">M </span>we define the Birkhoff (time) average as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems162x.svg" alt="             &#x222B;
+  *        1-   T     t
+f  (x) lt&#x2192;im&#x221E; T     f &#x2218; &#x03D5; (x)dt
+               0
+" class="math-display" ></div>
+<!--l. 88--><p class="indent" >   The Birkhoff theorem states that:
+   <div class="newtheorem">
+<!--l. 89--><p class="noindent" ><span class="head">
+<a 
+ id="x1-23001r7"></a>
+<span 
+class="cmbx-12">Proposition 7.</span>  </span><span 
+class="cmti-12">Given a measure preserving dynamical system </span>(<span 
+class="cmmi-12">M,&#x03BC;,T</span>) <span 
+class="cmti-12">with </span><span 
+class="cmmi-12">&#x03BC;</span>(<span 
+class="cmmi-12">M</span>) = 1<span 
+class="cmti-12">, if</span>
+<span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">L</span><sup><span 
+class="cmr-8">1</span></sup>(<span 
+class="cmmi-12">M,&#x03BC;</span>)<span 
+class="cmti-12">, then</span>
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 92--><p class="noindent" ><span 
+class="cmti-12">the limit </span><span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> <span 
+class="cmti-12">exists almost everywhere</span>
+      </li>
+      <li class="itemize">
+      <!--l. 94--><p class="noindent" >
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems163x.svg" alt="&#x222B;          &#x222B;
+   f *d&#x03BC; =     fd&#x03BC;
+ M          M
+" class="math-display" ></div>
+      </li></ul>
+   </div>
+<!--l. 98--><p class="indent" >
+   <div class="newtheorem">
+<!--l. 99--><p class="noindent" ><span class="head">
+<a 
+ id="x1-23002r11"></a>
+<span 
+class="cmbx-12">Definition 11.</span>  </span><span 
+class="cmti-12">A measure preserving dynamical system is ergodic if and only if for</span>
+<span 
+class="cmti-12">every </span><span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">L</span><sup><span 
+class="cmr-8">1</span></sup> <span 
+class="cmti-12">exists </span><span 
+class="cmmi-12">c </span><span 
+class="cmti-12">such that </span><span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-12">x</span>) = <span 
+class="cmmi-12">c </span><span 
+class="cmti-12">for almost all values of </span><span 
+class="cmmi-12">x</span><span 
+class="cmti-12">.</span>
+                                                                                    
+                                                                                    
+   </div>
+<!--l. 101--><p class="indent" >
+   <div class="newtheorem">
+<!--l. 102--><p class="noindent" ><span class="head">
+<a 
+ id="x1-23003r8"></a>
+<span 
+class="cmbx-12">Proposition 8.</span>  </span><span 
+class="cmti-12">The following statements are equivalent:</span>
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 105--><p class="noindent" ><span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">L</span><sup><span 
+class="cmr-8">1</span></sup><span 
+class="cmti-12">, </span><span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> = <span 
+class="cmmi-12">const</span>
+      </li>
+      <li class="itemize">
+      <!--l. 106--><p class="noindent" ><span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">L</span><sup><span 
+class="cmr-8">1</span></sup><span 
+class="cmti-12">, </span><span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> = <span 
+class="cmex-10x-x-120">&#x222B;</span> <span 
+class="cmmi-12">fd&#x03BC;</span>
+      </li>
+      <li class="itemize">
+      <!--l. 107--><p class="noindent" ><span 
+class="cmti-12">if </span><span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">L</span><sup><span 
+class="cmr-8">1</span></sup> <span 
+class="cmti-12">is invariant, then it is constant</span>
+      </li>
+      <li class="itemize">
+      <!--l. 108--><p class="noindent" ><span 
+class="cmti-12">if </span><span 
+class="cmmi-12">A </span><span 
+class="cmsy-10x-x-120">&#x2286; </span><span 
+class="cmmi-12">M</span><span 
+class="cmti-12">, which we take to be measurable, is invariant, the measure is </span><span 
+class="cmmi-12">&#x03BC;</span>(<span 
+class="cmmi-12">A</span>) <span 
+class="cmsy-10x-x-120">&#x2208;</span>
+      <span 
+class="cmsy-10x-x-120">{</span>0<span 
+class="cmmi-12">, </span>1<span 
+class="cmsy-10x-x-120">}</span></li></ul>
+   </div>
+<!--l. 110--><p class="indent" >
+   <div class="proof">
+<!--l. 112--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 113--><p class="noindent" >(1) implies (2) because, if <span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> is constant, by Birkhoff&#8217;s theorem it&#8217;s integral is
+      equal to the integral of <span 
+class="cmmi-12">f</span>. Since <span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> is constant, we can take is cout of the integral,
+      and
+                                                                                    
+                                                                                    
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems164x.svg" alt="&#x222B;
+
+   d&#x03BC; =  1
+" class="math-display" ></div>
+      <!--l. 117--><p class="noindent" >because <span 
+class="cmmi-12">&#x03BC; </span>is a probability measure. So
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems165x.svg" alt="     &#x222B;
+  *
+f  =    f d&#x03BC;
+" class="math-display" ></div>
+      </li>
+      <li class="itemize">
+      <!--l. 121--><p class="noindent" >(2) implies (3) because, if we take <span 
+class="cmmi-12">f </span>invariant, so <span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2218; </span><span 
+class="cmmi-12">T </span>= <span 
+class="cmmi-12">f</span>, we can also say that
+      <span 
+class="cmmi-12">f </span><span 
+class="cmsy-10x-x-120">&#x2218; </span><span 
+class="cmmi-12">T</span><sup><span 
+class="cmmi-8">k</span></sup> = <span 
+class="cmmi-12">f </span>for every <span 
+class="cmmi-12">k</span>, which means that it is invariant at all times. This means
+      that in calculating <span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> we are summing <span 
+class="cmmi-12">f </span>a number of times and then dividing by
+      that number, so it remains <span 
+class="cmmi-12">f</span>. But if <span 
+class="cmmi-12">f</span><sup><span 
+class="cmsy-8">*</span></sup> = <span 
+class="cmmi-12">f</span>, by (2) we have that
+<div class="math-display" >
+<img 
+src="m_physics_of_complex_systems166x.svg" alt="&#x222B;
+  f d&#x03BC; = f
+" class="math-display" ></div>
+      <!--l. 125--><p class="noindent" >which assures that <span 
+class="cmmi-12">f </span>is a constant.
+                                                                                    
+                                                                                    
+      </li>
+      <li class="itemize">
+      <!--l. 126--><p class="noindent" >(3) implies (4) because, if we apply (3) to <span 
+class="cmmi-12">f </span>= 1<sub><span 
+class="cmmi-8">A</span></sub> <span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">L</span><sup><span 
+class="cmr-8">1</span></sup>, knowing that <span 
+class="cmmi-12">T</span><sup><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">A </span>= <span 
+class="cmmi-12">A</span>
+      mod <span 
+class="cmmi-12">&#x03BC; </span>it&#8217;s true that 1<sub><span 
+class="cmmi-8">f</span><sub><span 
+class="cmmi-6">A</span></sub><sup><span 
+class="cmsy-6">-</span><span 
+class="cmr-6">1</span></sup></sub>  = 1<sub><span 
+class="cmmi-8">A</span></sub> <span 
+class="cmmi-12">&#x03BC;</span>-a.e. 1<sub><span 
+class="cmmi-8">f</span><sub><span 
+class="cmmi-6">A</span></sub><sup><span 
+class="cmsy-6">-</span><span 
+class="cmr-6">1</span></sup></sub>  = 1 <span 
+class="cmsy-10x-x-120">&#x2218; </span><span 
+class="cmmi-12">T</span>, so by (c) 1<sub><span 
+class="cmmi-8">A</span></sub> is constant
+      <span 
+class="cmmi-12">&#x03BC;</span>-a.e. So if 1<sub><span 
+class="cmmi-8">A</span></sub> = 0, <span 
+class="cmmi-12">A </span>= <span 
+class="cmsy-10x-x-120">&#x2205;</span> mod <span 
+class="cmmi-12">&#x03BC; </span>then <span 
+class="cmmi-12">&#x03BC;</span>(<span 
+class="cmmi-12">A</span>) = 0, or if 1<sub><span 
+class="cmmi-8">A</span></sub> = 1, <span 
+class="cmmi-12">A </span>= <span 
+class="cmmi-12">M</span>  mod <span 
+class="cmmi-12">&#x03BC;</span>
+      then <span 
+class="cmmi-12">&#x03BC;</span>(<span 
+class="cmmi-12">A</span>) = 1
+      </li>
+      <li class="itemize">
+      <!--l. 129--><p class="noindent" >(4) implies (1) because, if we claim that a function <span 
+class="cmmi-12">f </span>: <span 
+class="cmmi-12">M </span><span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="cmmi-12">R </span>is constant almost
+      everywhere only if exists a constant <span 
+class="cmmi-12">l </span>such that <span 
+class="cmmi-12">&#x03BC;</span>(<span 
+class="cmsy-10x-x-120">{</span><span 
+class="cmmi-12">x </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="cmmi-12">M</span><span 
+class="cmsy-10x-x-120">|</span><span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) <span 
+class="cmsy-10x-x-120">&#x2264; </span><span 
+class="cmmi-12">l</span><span 
+class="cmsy-10x-x-120">}</span>) <span 
+class="cmsy-10x-x-120">&#x2208; </span>(0<span 
+class="cmmi-12">, </span>1),
+      this set is increasing as we increase <span 
+class="cmmi-12">l</span>. Now, if <span 
+class="cmmi-12">l </span>goes to <span 
+class="cmsy-10x-x-120">-&#x221E; </span>the measure goes to
+      0, and if <span 
+class="cmmi-12">l </span>goes to <span 
+class="cmsy-10x-x-120">&#x221E;</span>, the measure goes to 1. The function can only jump in going
+      from 0 to 1, but it can&#8217;t do it all in one jump, so it must be constant except on
+      the jumps.</li></ul>
+                                                                                   __
+   </div>
+                                                                                    
+                                                                                    
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;5</span><br /><a 
+ id="x1-240005"></a>Dynamical Models</h2>
+   <h3 class="sectionHead"><span class="titlemark">5.1   </span> <a 
+ id="x1-250005.1"></a>Traffic Model</h3>
+<!--l. 1--><p class="noindent" >Imagine that we have many dynamical system, each one with its internal dynamics, each
+described by a differential equation
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems167x.svg" alt="x&#x02D9;k = a(xk)
+" class="math-display" ></div>
+<!--l. 5--><p class="indent" >   We suppose to have some directional coupling between this system. This coupling means
+that in the differential equations we will have an additional term:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems168x.svg" alt="x&#x02D9;k =  a(xk) + &#x03B5;f (xk-1)
+" class="math-display" ></div>
+<!--l. 9--><p class="indent" >   This is a network structure, because we have the nodes (the systems) and the links. In
+order to study this kind of system we must introduce a boundary condition. There are two
+possible boundary conditions:
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 11--><p class="noindent" >We take a source and we see how the source influences the system
+      </li>
+      <li class="itemize">
+      <!--l. 12--><p class="noindent" >We attatch the tail of the chain with its head. In this way, the system can be
+      treated as a closed system</li></ul>
+<!--l. 14--><p class="noindent" >We can take as an example the case of vehicles. For vehicles we have two dynamical
+variables, position <span 
+class="cmmi-12">x</span><sub><span 
+class="cmmi-8">k</span></sub> and velocity <span 
+class="cmmi-12">v</span><sub><span 
+class="cmmi-8">k</span></sub>. The cars have an optimal velocity, we have the
+equation
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems169x.svg" alt="vopt(xk+1 - xk ) = v &#x221E;
+" class="math-display" ></div>
+<!--l. 18--><p class="indent" >   which gives a logistic function. Another possibility is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems170x.svg" alt="                  ---------v-&#x221E;----------
+vopt(xk+1 -  xk) = 1 + exp(- xk+1-xk + b)
+                               a
+" class="math-display" ></div>
+<!--l. 22--><p class="indent" >   To describe the system we can have the system of differential equations:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems171x.svg" alt="x&#x02D9; =  v
+  k    k
+" class="math-display" ></div>
+<!--l. 26--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems172x.svg" alt="&#x02D9;vk = - &#x03B3; (vk - vopt(xk+1 - xk))
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 29--><p class="indent" >   where the variable <span 
+class="cmmi-12">&#x03B3; </span>represents the time in which we are able to react and change our
+velocity. <br 
+class="newline" />To characterize the system we expect first of all to have
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems173x.svg" alt="dvopt
+-dx--&#x003E;  0
+" class="math-display" ></div>
+<!--l. 34--><p class="indent" >   We define the variables <span 
+class="cmmi-12">w</span><sub><span 
+class="cmmi-8">k</span></sub> and <span 
+class="cmmi-12">z</span><sub><span 
+class="cmmi-8">k</span></sub> as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems174x.svg" alt="w  = x    - x
+ k     k+1     k
+" class="math-display" ></div>
+<!--l. 38--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems175x.svg" alt="w&#x02D9;  = z
+  k    k
+" class="math-display" ></div>
+<!--l. 41--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems176x.svg" alt="z&#x02D9;k = - &#x03B3;(zk - (vopt(wk+1) - vopt(wk )))
+" class="math-display" ></div>
+<!--l. 44--><p class="indent" >   We have the condition that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems177x.svg" alt="&#x2211;
+   wk  = L
+ k
+" class="math-display" ></div>
+<!--l. 48--><p class="indent" >   which is obvious, because we are summing the distances of each car with the next one. We
+have an equilibrium condition, which is <span 
+class="cmmi-12">w</span><sub><span 
+class="cmmi-8">eq</span></sub> = <span 
+class="cmmi-12">L&#x2215;N</span>. <br 
+class="newline" />What happens if we then perturbe the system? So we have the equilibrium value for <span 
+class="cmmi-12">w</span><sub><span 
+class="cmmi-8">k</span></sub> plus
+a perturbative term
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems178x.svg" alt="      L
+wk =  ---+ &#x03B5;f(wkt)
+      N
+" class="math-display" ></div>
+<!--l. 53--><p class="indent" >   We can then use the fourier transform and get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems179x.svg" alt="    (   m        )
+exp  2&#x03C0;iN--k + &#x03BB;t
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 57--><p class="indent" >   where the dependence on <span 
+class="cmmi-12">k </span>is required by the closed system boundary condition.
+<br 
+class="newline" />If Re <span 
+class="cmmi-12">&#x03BB; </span><span 
+class="cmsy-10x-x-120">&#x2264; </span>0, the system is stable, and if Re <span 
+class="cmmi-12">&#x03BB; &#x003E; </span>0, the system is unstable. If we the put <span 
+class="cmmi-12">&#x03BB; </span>and
+divide it in real and immaginary part, we find
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems180x.svg" alt=" 2       &#x2032;  L     2 &#x03C0;m
+&#x03BB;i = 2&#x03B3;vopt(--)sin (----)
+            N        N
+" class="math-display" ></div>
+<!--l. 62--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems181x.svg" alt="                (    )    (    )
+       &#x2032;  L--     &#x03C0;m--      &#x03C0;m--
+&#x03BB;i = 2v opt(N ) sin  N   cos  N
+" class="math-display" ></div>
+<!--l. 65--><p class="indent" >   We can find that the system is unstable if
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems182x.svg" alt="   &#x03B3;
+--&#x2032;---L--&#x2264; 1
+2vopt( N)
+" class="math-display" ></div>
+<!--l. 69--><p class="indent" >   We want to find a function <span 
+class="cmmi-12">F </span>so that
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems183x.svg" alt="F (t + k&#x03C4; ) = vopt(wk)
+" class="math-display" ></div>
+<!--l. 73--><p class="indent" >   where <span 
+class="cmmi-12">&#x03C4; </span>is not known. We also wuant a function <span 
+class="cmmi-12">G</span>
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems184x.svg" alt="zk(t) = G (t + k &#x03C4;)
+" class="math-display" ></div>
+<!--l. 77--><p class="indent" >   We then get the equations
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems185x.svg" alt="     dVopt
+F&#x02D9; = -----w&#x02D9;k =  a(F)G
+      dw
+" class="math-display" ></div>
+<!--l. 81--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems186x.svg" alt="G&#x02D9; = - &#x03B3;(G -  (F(t + &#x03C4;) - F(t)))
+" class="math-display" ></div>
+<!--l. 84--><p class="indent" >   This are called delay differential equations.
+                                                                                    
+                                                                                    
+<!--l. 86--><p class="indent" >   The vehicles are described by two variables, <span 
+class="cmmi-12">d</span><sub><span 
+class="cmmi-8">k</span></sub> and <span 
+class="cmmi-12">w</span><sub><span 
+class="cmmi-8">k</span></sub>. <span 
+class="cmmi-12">d</span><sub><span 
+class="cmmi-8">k</span></sub> is the distance between two
+consecutive cars and <span 
+class="cmmi-12">w</span><sub><span 
+class="cmmi-8">k</span></sub> is
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems187x.svg" alt="wk = vk+1 - vk
+" class="math-display" ></div>
+<!--l. 90--><p class="indent" >   For this system we have the system of equations:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems188x.svg" alt="d&#x02D9;k = wk
+" class="math-display" ></div>
+<!--l. 94--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems189x.svg" alt="w&#x02D9;k = - &#x03B2;(wk -  (vopt(dk+1) - vopt(dk)))
+" class="math-display" ></div>
+<!--l. 97--><p class="indent" >   If, instead of a chain, we had a network, where each node is connected to more than one
+node, then in the second differential equation the number of elements would increase
+accordingly. <br 
+class="newline" />We then introduce a new variable <span 
+class="cmmi-12">u</span><sub><span 
+class="cmmi-8">k</span></sub> = <span 
+class="cmmi-12">v</span><sub><span 
+class="cmmi-8">opt</span></sub>(<span 
+class="cmmi-12">d</span><sub><span 
+class="cmmi-8">k</span></sub>), for which we have the equations
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems190x.svg" alt="&#x02D9;u =  v  (u )w
+ k    opt  k   k
+" class="math-display" ></div>
+<!--l. 102--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems191x.svg" alt="w&#x02D9;k = - &#x03B2;(wk -  (uk+1 -  uk))
+" class="math-display" ></div>
+<!--l. 105--><p class="indent" >   If we take the case where all the cars are moving at the same speed, so <span 
+class="cmmi-12">w</span><sub><span 
+class="cmmi-8">k</span></sub> = 0, then we
+also have <span 
+class="cmmi-12">u</span><sub><span 
+class="cmmi-8">k</span><span 
+class="cmr-8">+1</span></sub> = <span 
+class="cmmi-12">u</span><sub><span 
+class="cmmi-8">k</span></sub>; so when all the vechicles have the same speed, that must be the optimal
+speed. <br 
+class="newline" />We not express the variables in terms of two functions <span 
+class="cmmi-12">F </span>and <span 
+class="cmmi-12">G</span>:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems192x.svg" alt="uk (t) = F (t + k &#x03C4;)
+" class="math-display" ></div>
+<!--l. 110--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems193x.svg" alt="wk (t) = G (t + k&#x03C4;)
+                                                                                    
+                                                                                    
+" class="math-display" ></div>
+<!--l. 113--><p class="indent" >   so that the equations become
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems194x.svg" alt="&#x02D9;
+F = a(F )G
+" class="math-display" ></div>
+<!--l. 117--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems195x.svg" alt="G&#x02D9; = - &#x03B2;(G  - (F(t + &#x03C4;) - F (t)))
+" class="math-display" ></div>
+<!--l. 120--><p class="indent" >   The point is that we move from having <span 
+class="cmmi-12">N </span>degrees of freedom to only having 2, plus a
+delay. It is useful to use this types of delay differential equations for systems with a lot of
+degrees of freedom. What this is saying is that, if we know the values of the functions in the
+time interval of width <span 
+class="cmmi-12">&#x03C4;</span>, then we can use this knowledge to get the evolution at subsequent
+times. <br 
+class="newline" />We can express this through integrals
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems196x.svg" alt="                  &#x222B; t+&#x03C4; df
+F(t + &#x03C4;) - F (t) =       --ds
+                   t    ds
+" class="math-display" ></div>
+<!--l. 125--><p class="indent" >   Very often in models we need to introduce a delay in the evolution, so we get this kind of
+equaitons. For example, in the study of an epidemic we need to consider that some time must
+pass between the encounter of an healthy person with a sick one and the time when the first
+                                                                                    
+                                                                                    
+person gets sick as well. Also in the physiological responses of the immunitary system we
+have that the body doesn&#8217;t start fighting infections immediately, so we need to introduce a
+delay. So delay differential equations are very useful, but they are often hard to study.
+<br 
+class="newline" />Is it possible to study the stability of the stationary solution? <span 
+class="cmmi-12">u</span><sub><span 
+class="cmmi-8">k</span></sub> = <span 
+class="cmmi-12">F</span><sup><span 
+class="cmsy-8">*</span></sup> and <span 
+class="cmmi-12">w</span><sub>
+<span 
+class="cmmi-8">k</span></sub> = 0
+<br 
+class="newline" />Insert
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems197x.svg" alt="(F, G) = (v&#x03BB;1,v&#x03BB;2 )exp(&#x03BB;t)
+" class="math-display" ></div>
+<!--l. 131--><p class="indent" >   and see in which conditions you get Re <span 
+class="cmmi-12">&#x03BB; &#x003E; </span>0. <br 
+class="newline" />
+<!--l. 133--><p class="indent" >   If we differentiate we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems198x.svg" alt="F¨ = - &#x03B2;F&#x02D9;+  &#x03B2;a(F )(F(t + &#x03C4;) - F (t))
+" class="math-display" ></div>
+<!--l. 137--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems199x.svg" alt="¨F =  a(F)G&#x02D9;+  a&#x2032;(F )F&#x02D9;G
+" class="math-display" ></div>
+<!--l. 140--><p class="indent" >
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems200x.svg" alt="                                            a&#x2032;(F-)- 2
+F¨ = - a(F )&#x03B2;G +  &#x03B2;a(F )(F (t + &#x03C4;) - F(t)) + a(F )F&#x02D9;
+" class="math-display" ></div>
+<!--l. 143--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems201x.svg" alt="                                      a &#x2032;(F )
+¨F =  - &#x03B2; &#x02D9;F + &#x03B2;a (F)(F (t + &#x03C4; ) - F (t)) +---F&#x02D9;2
+                                       a(F)
+" class="math-display" ></div>
+<!--l. 146--><p class="indent" >   where we neglect the last term, perche&#8217; si. <br 
+class="newline" />If <span 
+class="cmmi-12">&#x03C4; </span>is small we can write
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems202x.svg" alt="F(t + &#x03C4;) - F(t) &#x2248; &#x02D9;(F )&#x03C4;
+" class="math-display" ></div>
+<!--l. 151--><p class="indent" >   which means that in the previous equation we get
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems203x.svg" alt="¨F =  - &#x03B2;F&#x02D9;+ &#x03B2;a (F ) &#x02D9;F&#x03C4; = - &#x03B2; &#x02D9;F + &#x03B2; &#x02D9;a(F)
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 155--><p class="indent" >   where we recognize the second term to be a total derivative with respect to time, which
+means that we can integrate. <br 
+class="newline" />We redefine <span 
+class="cmmi-12">F </span>as
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems204x.svg" alt="F (t + k&#x03C4; ) = H (z + &#x03BD;t)
+" class="math-display" ></div>
+<!--l. 160--><p class="indent" >   where <span 
+class="cmmi-12">H </span>represents a wave function, and <span 
+class="cmmi-12">&#x03BD; </span>is the wave function. <br 
+class="newline" />The equation now becomes
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems205x.svg" alt="&#x03BD;2H  &#x2032;&#x2032; = - &#x03B2; &#x03BD;H &#x2032; + &#x03B2;a (H )(H (z + d0) - H (z))
+" class="math-display" ></div>
+<!--l. 165--><p class="indent" >   where <span 
+class="cmmi-12">d</span><sub><span 
+class="cmr-8">0</span></sub> is the average distance between vehicles. <br 
+class="newline" />For the optimal velocity we can have a funcion of the form
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems206x.svg" alt="vopt = v&#x221E;-(1 + tanh (&#x03B1;(d - d*)))
+       2
+" class="math-display" ></div>
+<!--l. 170--><p class="indent" >   and this is the prototype of any sigmoidal function. If we derive the hyperbolic tangent we
+get
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems207x.svg" alt="    &#x2032;         1                2
+tanh (x) = ----2----= 1 - tanh  (x )
+           cosh (x)
+" class="math-display" ></div>
+<!--l. 174--><p class="indent" >   which is the most symple non linearity that we can introduce in the system.
+<br 
+class="newline" />So going back to the equation we have
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems208x.svg" alt="        &#x03B2;
+H &#x2032;&#x2032; = - -H  &#x2032; + &#x03B2;&#x03B2; &#x03BD;&#x03B1;2(1 - H2 )d0H &#x2032;
+        &#x03BD;
+" class="math-display" ></div>
+<!--l. 179--><p class="indent" >   If we define <span 
+class="cmmi-12">P </span>= <span 
+class="cmmi-12">H</span><span 
+class="cmsy-10x-x-120">&#x2032;</span>, and put <span 
+class="cmsy-10x-x-120">-</span><span 
+class="cmmi-12">&#x03B2;&#x2215;&#x03BD; </span>= 1, we have
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems209x.svg" alt="      &#x2032;
+-d-(P--) = - (1 - c * (1 - H2 )) = - &#x2202;k
+dz  P                              &#x2202;H
+" class="math-display" ></div>
+<!--l. 183--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems210x.svg" alt="dH--
+ dz =
+" class="math-display" ></div>
+<!--l. 96--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">5.2   </span> <a 
+ id="x1-260005.2"></a>Kuramoto Model</h3>
+<!--l. 1--><p class="noindent" >Let&#8217;s take an oscillator described by the set of equations:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems211x.svg" alt="x&#x02D9;k = &#x03C9;pk
+" class="math-display" ></div>
+<!--l. 5--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems212x.svg" alt="p&#x02D9; = - &#x03C9;x  - &#x2211;   L  p
+ k        k        kj j
+               j
+" class="math-display" ></div>
+<!--l. 8--><p class="indent" >   The summation represents friction, and we impose two conditions for <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">kj</span></sub>:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems213x.svg" alt="Lkj &#x003C; 0 if k &#x2044;= j
+" class="math-display" ></div>
+<!--l. 12--><p class="indent" >
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems214x.svg" alt="&#x2211;
+   Lkj =  0
+ k
+" class="math-display" ></div>
+<!--l. 15--><p class="indent" >   The combination of this two conditions means that the only positive terms are on the
+diagonal, and the sum of all the terms on the diagonal must be equal to the sum of all the
+other terms. Matrices like this are called <span 
+class="cmti-12">laplacian matrices</span>. The form of this matrix means
+that there is an oscillation. <br 
+class="newline" />For this matrix we are assured to have one null eigenvalue, because if we take the
+vector <span 
+class="cmmi-12">v </span>= (1<span 
+class="cmmi-12">,..., </span>1), the fact that the sum of all the elements must be equal to zero
+assures that applying the vector to the matrix gives zero, thus the eigenvalue is zero.
+<br 
+class="newline" />Why does this kind of matrix appear? <br 
+class="newline" />In the most basic interaction network, the nodes are linked to others and the link value can
+be 1, if there is a link, or 0, if there isn&#8217;t a link. This connections are described by the
+connectivity matrix, also called adjacency matrix, <span 
+class="cmmi-12">A</span><sub><span 
+class="cmmi-8">jk</span></sub>. <br 
+class="newline" />The degree of a node, <span 
+class="cmmi-12">d</span><sub><span 
+class="cmmi-8">k</span></sub>, is the number of link that the node makes:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems215x.svg" alt="     &#x2211;
+dk =     Akj
+      j
+" class="math-display" ></div>
+<!--l. 23--><p class="indent" >   The degree of the nodes can be distributed in different ways, like as a poissonian or a
+power law. In the latter case, the network is called scale-free:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems216x.svg" alt="p (D ) ~  1---
+         D&#x03B1;
+" class="math-display" ></div>
+<!--l. 27--><p class="indent" >   The laplacian matrix <span 
+class="cmmi-12">L </span>is given by the relation:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems217x.svg" alt="L = D  - A
+" class="math-display" ></div>
+<!--l. 31--><p class="indent" >   where <span 
+class="cmmi-12">D </span>is the degree matrix, which contains the degree vector on the diagonal
+and has zeroes everywhere else. The minus sign is needed because of the condition
+that the elements outside the diagonal, in a laplacian matrix, must be negative.
+<br 
+class="newline" /><br 
+class="newline" />Now we ask ourselves, for this kind of systems, where we have a certain number of
+oscillators, does exist a solution where all the oscillators are in phase, i.e. sincronized?
+<br 
+class="newline" />This system is not hamiltonian, because we have dissipation, but it is linear. If we consider a
+generic linear system of the form:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems218x.svg" alt="&#x02D9;z = Az
+" class="math-display" ></div>
+<!--l. 37--><p class="indent" >   we know that the solution has an equilibrium limit, <span class="overline"><span 
+class="cmmi-12">z</span></span>. We expect then that <span class="overline"><span 
+class="cmmi-12">z</span></span> has null
+eigenvalue
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems219x.svg" alt="Az-= 0
+" class="math-display" ></div>
+<!--l. 41--><p class="indent" >   and we also expect all the eigenvalues of <span 
+class="cmmi-12">A </span>to be negative. <br 
+class="newline" />If, in particular, we consider a system of the form:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems220x.svg" alt="&#x02D9;x = a(x)
+" class="math-display" ></div>
+<!--l. 46--><p class="indent" >   we can introduce a function <span 
+class="cmmi-12">H</span>(<span 
+class="cmmi-12">x</span>), where we require that
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems221x.svg" alt="d-H (x) = a(x )&#x2202;H--&#x003C; 0
+dt             &#x2202;x
+" class="math-display" ></div>
+<!--l. 50--><p class="indent" >   This functions are called Ljiapounov functions. With this functions we can
+describe the evolution of the system and its decrease towards equilibrium with
+just one function. So even if the system had many degrees of freedom, now it is a
+one-dimensional system. This suggests that finding this functions is of great interest.
+<br 
+class="newline" />For example, in our system a good choice for the Ljiapounov function would be
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems222x.svg" alt="     &#x2211;
+H  =     &#x03C9;-(x2k + p2k)
+       k 2
+" class="math-display" ></div>
+                                                                                    
+                                                                                    
+<!--l. 55--><p class="indent" >   If we don&#8217;t consider the interaction part, then each term is simply the hamiltonian of a
+single oscillator and the function is the sum of all the hamiltonians, and this is guaranteed to
+be conserved. This means that the non conservation comes entirely from the dissipation term,
+so we have
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems223x.svg" alt="dH--    &#x2211;
+dt  = -     &#x03C9;pkLkjpj &#x003C;  0
+         k,j
+" class="math-display" ></div>
+<!--l. 59--><p class="indent" >   Now we take the laplacian matrix to be symmetric, and we then impose
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems224x.svg" alt="&#x2211;
+   Lkjpj =  0
+ j
+" class="math-display" ></div>
+<!--l. 63--><p class="indent" >   which means that <span 
+class="cmmi-12">p</span><sub><span 
+class="cmmi-8">j</span></sub> = <span 
+class="cmmi-12">p</span><sub><span 
+class="cmr-8">0</span></sub><span 
+class="cmmi-12">&#x00A0;</span><span 
+class="cmsy-10x-x-120">&#x2200;</span><span 
+class="cmmi-12">j</span>. Alternatively we can write
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems225x.svg" alt="pj = p0 exp(i&#x03C9;t + &#x03D5;)
+" class="math-display" ></div>
+<!--l. 67--><p class="indent" >   and
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems226x.svg" alt="xj = - i&#x03C9;p0 exp(i&#x03C9;t + &#x03D5;)
+" class="math-display" ></div>
+<!--l. 71--><p class="indent" >   Originally, kuramoto model was:
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems227x.svg" alt="            &#x2211;
+&#x02D9;&#x03B8;k = &#x03C9;k + k    sin(&#x03B8;k - &#x03B8;j)
+             j
+" class="math-display" ></div>
+<!--l. 75--><p class="indent" >   We introduce some new variables
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems228x.svg" alt="      &#x2218; ----
+xk =    2Ik ~ &#x03B8;k
+" class="math-display" ></div>
+<!--l. 79--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems229x.svg" alt="     &#x2218; ----
+pk =   2Ik cos&#x03B8;k
+" class="math-display" ></div>
+<!--l. 82--><p class="indent" >   We then get
+                                                                                    
+                                                                                    
+   <div class="math-display" >
+<img 
+src="m_physics_of_complex_systems230x.svg" alt="               &#x2218;  ---
+          k &#x2211;     Ii
+&#x03B8;&#x02D9;k = &#x03C9; +  --      --Lkj(sin(&#x03B8;k - &#x03B8;j) + sin(&#x03B8;k + &#x03B8;j))
+          2  j    Ik
+" class="math-display" ></div>
+    
+</body></html> 
+
+                                                                                    
+
+

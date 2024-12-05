@@ -1,0 +1,14 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Spazi metrici}}{2}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Spazi metrici completi}}{2}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{Spazi di Banach e di Hilbert}}{3}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-40003.1}{QQ2-1-4}{Spazi di Banach}}{3}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-50003.2}{QQ2-1-5}{Spazi di Hilbert}}{3}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-60004}{QQ2-1-6}{Differenziabilit\'a}}{3}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-70005}{QQ2-1-7}{Variet\'a}}{4}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-80006}{QQ2-1-8}{Misura e integrazione}}{4}\relax 
+\doTocEntry\tocsubsection{6.1}{\csname a:TocLink\endcsname{1}{x1-90006.1}{QQ2-1-9}{Misura di Peano-Jordan}}{4}\relax 
+\doTocEntry\tocsubsection{6.2}{\csname a:TocLink\endcsname{1}{x1-100006.2}{QQ2-1-10}{Integrale secondo Riemann}}{4}\relax 
+\doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-110007}{QQ2-1-11}{Curve e integrali curvilinei}}{5}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-120008}{QQ2-1-12}{Superfici e integrali di superficie}}{6}\relax 
+\par 

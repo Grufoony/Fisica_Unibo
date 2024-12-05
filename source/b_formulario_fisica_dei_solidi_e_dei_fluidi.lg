@@ -1,0 +1,509 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+File: b_formulario_fisica_dei_solidi_e_dei_fluidi.html
+File: b_formulario_fisica_dei_solidi_e_dei_fluidi.css
+File: b_formulario_fisica_dei_solidi_e_dei_fluidi.tmp
+Font_Class(1,"1"): <img  src="" alt="" class="%s-%dx-x-%x" />
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css: .subsectionToc, .likesubsectionToc {margin-left:1em;}
+Css: .subsubsectionToc, .likesubsubsectionToc {margin-left:2em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:3em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:4em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
+Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+Css: td.align-label { width:5%; text-align:center; }
+Css: td.align-odd { text-align:right; padding-right:0.3em;}
+Css: td.align-even { text-align:left; padding-right:0.6em;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[2] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi0x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[3] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi1x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[4] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi2x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[5] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi3x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[6] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi4x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[7] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi5x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[8] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi6x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[9] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi7x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[10] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi8x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[12] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi9x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[13] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi10x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[14] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi11x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[15] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi12x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[16] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi13x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[17] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi14x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[18] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi15x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[19] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi16x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[20] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi17x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[21] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi18x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[22] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi19x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[23] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi20x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[24] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi21x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[25] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi22x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[26] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi23x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[27] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi24x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[28] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi25x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[29] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi26x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[30] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi27x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[31] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi28x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[32] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi29x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[33] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi30x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[34] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi31x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[35] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi32x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[36] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi33x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[37] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi34x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[38] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi35x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[39] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi36x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[40] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi37x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[41] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi38x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[43] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi39x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[44] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi40x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[45] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi41x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[46] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi42x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[47] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi43x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[48] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi44x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[49] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi45x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[50] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi46x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[51] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi47x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[52] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi48x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[53] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi49x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[54] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi50x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[55] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi51x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[56] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi52x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[57] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi53x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[58] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi54x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[59] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi55x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[60] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi56x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[61] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi57x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[62] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi58x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[63] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi59x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[64] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi60x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[65] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi61x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[66] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi62x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[67] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi63x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[68] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi64x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[69] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi65x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[71] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi66x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[72] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi67x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[74] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi68x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[75] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi69x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[76] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi70x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[77] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi71x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[78] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi72x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[79] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi73x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[80] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi74x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[81] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi75x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[82] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi76x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[83] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi77x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[84] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi78x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[85] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi79x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[86] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi80x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[87] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi81x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[88] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi82x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[89] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi83x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[90] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi84x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[91] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi85x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[92] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi86x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[93] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi87x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[94] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi88x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[95] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi89x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[97] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi90x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[98] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi91x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[99] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi92x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[100] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi93x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[101] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi94x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[102] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi95x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[103] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi96x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[104] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi97x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[105] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi98x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[106] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi99x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[107] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi100x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[108] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi101x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[109] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi102x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[110] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi103x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[111] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi104x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[112] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi105x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[113] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi106x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[114] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi107x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[115] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi108x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[116] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi109x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[117] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi110x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[118] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi111x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[120] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi112x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[121] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi113x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[122] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi114x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[123] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi115x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[124] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi116x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[125] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi117x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[126] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi118x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[127] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi119x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[128] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi120x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[129] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi121x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[130] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi122x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[131] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi123x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[132] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi124x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[133] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi125x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[134] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi126x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[135] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi127x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[136] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi128x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[137] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi129x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[138] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi130x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[139] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi131x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[140] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi132x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[141] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi133x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[142] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi134x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[143] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi135x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[144] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi136x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[146] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi137x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[147] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi138x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[148] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi139x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[149] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi140x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[150] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi141x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[151] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi142x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[152] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi143x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[153] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi144x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[154] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi145x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[155] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi146x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[156] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi147x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[157] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi148x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[158] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi149x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[159] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi150x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[160] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi151x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[161] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi152x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[162] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi153x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[163] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi154x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[164] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi155x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[165] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi156x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[166] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi157x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[167] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi158x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[169] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi159x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[170] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi160x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[171] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi161x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[172] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi162x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[173] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi163x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[174] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi164x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[175] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi165x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[176] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi166x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[177] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi167x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[178] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi168x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[179] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi169x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[180] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi170x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[181] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi171x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[182] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi172x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[183] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi173x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[184] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi174x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[185] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi175x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[186] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi176x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[187] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi177x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[189] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi178x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[190] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi179x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[191] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi180x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[192] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi181x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[193] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi182x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[194] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi183x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[195] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi184x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[196] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi185x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[197] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi186x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[198] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi187x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[199] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi188x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[200] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi189x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[201] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi190x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[202] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi191x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[203] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi192x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[204] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi193x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[205] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi194x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[206] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi195x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[207] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi196x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[208] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi197x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[209] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi198x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[210] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi199x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[211] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi200x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[212] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi201x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[213] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi202x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[214] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi203x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[216] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi204x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[217] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi205x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[218] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi206x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[219] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi207x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[220] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi208x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[221] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi209x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[222] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi210x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[223] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi211x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[224] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi212x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[226] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi213x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[227] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi214x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[228] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi215x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[229] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi216x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[230] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi217x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[231] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi218x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[232] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi219x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[233] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi220x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[234] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi221x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[235] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi222x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[236] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi223x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[237] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi224x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[238] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi225x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[239] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi226x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[240] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi227x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[241] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi228x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[242] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi229x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[243] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi230x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[244] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi231x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[245] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi232x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[246] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi233x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[247] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi234x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[248] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi235x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[249] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi236x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[250] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi237x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[251] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi238x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[252] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi239x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[253] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi240x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[255] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi241x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[256] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi242x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[257] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi243x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[258] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi244x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[259] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi245x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[260] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi246x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[261] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi247x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[262] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi248x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[263] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi249x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[264] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi250x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[265] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi251x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[266] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi252x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[267] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi253x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[268] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi254x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[269] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi255x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[270] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi256x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[271] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi257x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[272] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi258x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[273] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi259x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[274] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi260x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[275] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi261x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[276] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi262x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[277] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi263x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[278] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi264x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[279] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi265x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[280] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi266x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[281] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi267x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[282] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi268x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[283] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi269x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[284] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi270x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[285] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi271x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[286] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi272x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[287] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi273x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[288] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi274x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[289] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi275x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[290] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi276x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[291] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi277x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[292] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi278x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[293] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi279x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[294] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi280x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[295] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi281x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[296] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi282x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[297] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi283x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[298] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi284x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[299] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi285x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[300] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi286x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[302] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi287x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[303] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi288x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[304] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi289x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[305] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi290x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[306] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi291x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[307] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi292x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[308] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi293x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[309] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi294x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[310] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi295x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[311] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi296x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[312] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi297x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[313] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi298x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[314] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi299x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[315] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi300x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[316] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi301x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[317] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi302x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[318] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi303x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[319] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi304x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[320] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi305x.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[321] ==> b_formulario_fisica_dei_solidi_e_dei_fluidi306x.png ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","5","5","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","5","5","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[323] ==> cmsy10-4c.png ---
+--- needs --- b_formulario_fisica_dei_solidi_e_dei_fluidi.idv[324] ==> cmsy10-45.png ---
+Font("ecrm","1000","10","100")
+Font("ecrm","1728","17","100")
+Font("ecrm","1200","12","100")
+Font("ecti","1000","10","100")
+Font("ecbx","1000","10","100")

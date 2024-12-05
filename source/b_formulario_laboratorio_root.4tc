@@ -1,0 +1,24 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Istogrammi}}{3}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Grafici}}{6}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{Funzioni}}{7}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-40004}{QQ2-1-4}{Fitting}}{8}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-50005}{QQ2-1-5}{Random}}{10}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-60006}{QQ2-1-6}{Canvas}}{10}\relax 
+\doTocEntry\tocsubsection{6.1}{\csname a:TocLink\endcsname{1}{x1-70006.1}{QQ2-1-7}{Legenda}}{11}\relax 
+\doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-80007}{QQ2-1-8}{List}}{11}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-90008}{QQ2-1-9}{ROOT Files}}{12}\relax 
+\doTocEntry\tocsection{9}{\csname a:TocLink\endcsname{1}{x1-100009}{QQ2-1-10}{Benchmark}}{12}\relax 
+\doTocEntry\tocsection{10}{\csname a:TocLink\endcsname{1}{x1-1100010}{QQ2-1-11}{Esempi}}{13}\relax 
+\doTocEntry\tocsubsection{10.1}{\csname a:TocLink\endcsname{1}{x1-1200010.1}{QQ2-1-12}{Lettura da file}}{13}\relax 
+\doTocEntry\tocsubsection{10.2}{\csname a:TocLink\endcsname{1}{x1-1300010.2}{QQ2-1-13}{Scrivere una classe su un ROOT File}}{14}\relax 
+\doTocEntry\tocsubsection{10.3}{\csname a:TocLink\endcsname{1}{x1-1400010.3}{QQ2-1-14}{Risoluzione o Smearing}}{16}\relax 
+\doTocEntry\tocsubsubsection{10.3.1}{\csname a:TocLink\endcsname{1}{x1-1500010.3.1}{QQ2-1-15}{A valore fisso}}{16}\relax 
+\doTocEntry\tocsubsubsection{10.3.2}{\csname a:TocLink\endcsname{1}{x1-1600010.3.2}{QQ2-1-16}{Con una distribuzione}}{17}\relax 
+\doTocEntry\tocsubsection{10.4}{\csname a:TocLink\endcsname{1}{x1-1700010.4}{QQ2-1-17}{Efficienza}}{18}\relax 
+\doTocEntry\tocsubsubsection{10.4.1}{\csname a:TocLink\endcsname{1}{x1-1800010.4.1}{QQ2-1-18}{Costante}}{18}\relax 
+\doTocEntry\tocsubsubsection{10.4.2}{\csname a:TocLink\endcsname{1}{x1-1900010.4.2}{QQ2-1-19}{Variabile}}{19}\relax 
+\doTocEntry\tocsubsubsection{10.4.3}{\csname a:TocLink\endcsname{1}{x1-2000010.4.3}{QQ2-1-20}{Istogramma dell'efficienza}}{20}\relax 
+\doTocEntry\tocsubsection{10.5}{\csname a:TocLink\endcsname{1}{x1-2100010.5}{QQ2-1-21}{Compilazione}}{21}\relax 
+\doTocEntry\tocsubsubsection{10.5.1}{\csname a:TocLink\endcsname{1}{x1-2200010.5.1}{QQ2-1-22}{da ROOT}}{21}\relax 
+\doTocEntry\tocsubsubsection{10.5.2}{\csname a:TocLink\endcsname{1}{x1-2300010.5.2}{QQ2-1-23}{da SHELL}}{22}\relax 
