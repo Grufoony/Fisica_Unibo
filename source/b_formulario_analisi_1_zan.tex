@@ -18,7 +18,7 @@
 \documentclass[a4paper, titlepage]{report}%definizione obbligatoria tipo di documento con opzioni a scelta
 \usepackage[T1]{fontenc}                %codifica caratteri e font utilizzati
 \usepackage[utf8]{inputenc}             %codifica del protocollo
-\usepackage[english, italian]{babel}    %lingue utilizzate, italiano quella principale perchè l'ultima delle elencate
+\usepackage[english, italian]{babel}    %lingue utilizzate, italiano quella principale perch\'e l'ultima delle elencate
 
 \usepackage{esvect}
 \usepackage{mathtools}
@@ -75,7 +75,7 @@
 \begin{document}
 
     \title{Foglio per esame scritto di Analisi 1}
-    \author{Niccolò Zanotti}
+    \author{Niccol\'o Zanotti}
     \maketitle
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,11 +265,11 @@ Allora:
 
     Sia $\sum_{}^{}(-1)^na_n$ una serie a termini di segno alterno. Allora se
   \begin{enumerate}
-    \item $a_{n+1}<a_n$ ($a_n $ è definitivamente decrescente);
-    \item $a_n \rightarrow 0$ ($a_n$ è infinitesima);
+    \item $a_{n+1}<a_n$ ($a_n $ \'e definitivamente decrescente);
+    \item $a_n \rightarrow 0$ ($a_n$ \'e infinitesima);
   \end{enumerate}
     
-  la serie è convergente.
+  la serie \'e convergente.
 \end{criterio}
 %%%%%%%%%%%%%%%%%%
 %%%%%%CAUCHY%%%%%
@@ -278,8 +278,8 @@ Allora:
 
     Sia $\{a_n\}$ una successione a termini in $\mathbb{R}^+$.Allora se
   \begin{enumerate}
-    \item $a_{n+1}<a_n$ ($a_n $ è definitivamente decrescente);
-    \item $a_n \rightarrow 0$ ($a_n$ è infinitesima);
+    \item $a_{n+1}<a_n$ ($a_n $ \'e definitivamente decrescente);
+    \item $a_n \rightarrow 0$ ($a_n$ \'e infinitesima);
   \end{enumerate}
 \[
     \sum_{}^{}a_n \quad \text{converge}  \Longleftrightarrow \sum_{}^{}2^na_{2^n} 
@@ -295,8 +295,8 @@ Allora:
     esista $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = \lambda$.
     Allora se 
     \begin{enumerate}
-        \item $\lambda>1 \Longrightarrow $ la serie non è convergente;
-        \item $\lambda<1 \Longrightarrow $ la serie è convergente.
+        \item $\lambda>1 \Longrightarrow $ la serie non \'e convergente;
+        \item $\lambda<1 \Longrightarrow $ la serie \'e convergente.
     \end{enumerate}
 \end{criterio}
 %%%%%%%%%%%%%%%%%%
@@ -312,8 +312,8 @@ Allora:
 
     Allora se 
     \begin{enumerate}
-        \item $\alpha>1 \Longrightarrow $ la serie è convergente;
-        \item $\alpha<1 \Longrightarrow $ la serie non è convergente.
+        \item $\alpha>1 \Longrightarrow $ la serie \'e convergente;
+        \item $\alpha<1 \Longrightarrow $ la serie non \'e convergente.
     \end{enumerate}
 \end{criterio}
 %%%%%%%%%%%%%%%
@@ -323,11 +323,11 @@ Allora:
     
     Siano $\{\alpha_n\}$ una successione in $\mathbb{C}$ e $\{ \beta_n\}$ una successione in $\mathbb{R}^+$ tali che
     \begin{enumerate}
-        \item $\sum_{}^{}\alpha_n$ è limitata;
-        \item $\{ \beta_n\}$ è monotona descrescente ed infinitesima.
+        \item $\sum_{}^{}\alpha_n$ \'e limitata;
+        \item $\{ \beta_n\}$ \'e monotona descrescente ed infinitesima.
     \end{enumerate}
 
-    Allora la serie $\sum_{}^{}\alpha_n\beta_n$ è convergente.
+    Allora la serie $\sum_{}^{}\alpha_n\beta_n$ \'e convergente.
 \end{criterio}
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -617,11 +617,11 @@ si razionalizzano con la sostituzione $e^{ax} = t$.
         (\frac{ax+b}{cx+d})^{r_n}) \,dx  
         \qquad r_1,r_2,...,r_n \in \mathbb{Q}      
     \]
-dove R è una funzione razionale, si integrano tramite la sostituzione
+dove R \'e una funzione razionale, si integrano tramite la sostituzione
 \[
    t^N = \frac{ax+b}{cx+d}    
 \]
-dove N è il minimo comune multiplo dei denominatori dei numeri
+dove N \'e il minimo comune multiplo dei denominatori dei numeri
  $r_1,r_2,...,r_n$. \\
 Esempio:
 \[
@@ -638,7 +638,7 @@ Esempio:
     \[
         \int_{}^{} R(x,(\sqrt{ax^2+bx+c}) \, dx      
     \]
-dove R è una funzione razionale. Le sostituzioni dipendono dai tre casi:
+dove R \'e una funzione razionale. Le sostituzioni dipendono dai tre casi:
 \begin{description}
     \item[$a>0$] 
     \[
@@ -701,13 +701,13 @@ Equazioni nella forma:
 \[
      x'(t) + a(t)x(t) =  f(t) 
 \]
-dove se $a(t) = 0$ l'equazioni differenziale è lineare, hanno una
+dove se $a(t) = 0$ l'equazioni differenziale \'e lineare, hanno una
 soluzione particolare $x_p$
 \[
        x_p = e^{-A(t)}(\int_{}^{}e^{A(t)}f(t)dt)
        \quad dove \ A(t) = \int_{}^{}a(t)dt
 \]
-per cui l'integrale generale è
+per cui l'integrale generale \'e
 \[
     x(t)= ce^{-A(t)} + e^{-A(t)}(\int_{}^{}e^{A(t)}f(t)dt) =
     e^{-A(t)}(c + (\int_{}^{}e^{A(t)}f(t)dt))
@@ -731,8 +731,8 @@ Equazioni nella forma:
 \[
      ax''(t) + bx'(t) + cx(t)= 0
 \]
-L'insieme delle soluzioni è uno spazio vettoriale di dimensione
-2. Per cui la soluzione generale sarà
+L'insieme delle soluzioni \'e uno spazio vettoriale di dimensione
+2. Per cui la soluzione generale sar\'a
 \[
      x(t)= c_1 x_1(t) + c_2x_2(t)    
 \]
@@ -781,7 +781,7 @@ per poi trovare $c_1(t), c_2(t)$ integrando:
 \[
     c_1(t) = \int_{}^{} c'_1(t) \, dt \qquad c_2(t) = \int_{}^{} c'_2(t) \,dt
 \]
-3)La soluzione generale è
+3)La soluzione generale \'e
 \[
       x(t)= x_0(t) + x_p(t)    
 \]
